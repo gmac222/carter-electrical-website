@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://carterelec.co.uk/sitemap.xml

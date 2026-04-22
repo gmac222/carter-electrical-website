@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Blog | Carter Electrical Contracting</title>
+  <meta name="description" content="Read the latest news, insights, and electrical safety advice from Carter Electrical Contracting."/>
+  <link rel="canonical" href="https://carterelec.co.uk/blog/" />
+  
+  <meta property="og:title" content="Blog | Carter Electrical Contracting" />
+  <meta property="og:description" content="Read the latest news, insights, and electrical safety advice from Carter Electrical Contracting." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://carterelec.co.uk/blog/" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"/>
+  <link rel="stylesheet" href="/styles.css"/>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+  <script src="/shared.js"></script>
+  
+  <script>
+    window.BLOG_POSTS = [{"title":"The Importance of EICR Testing for Commercial Properties","date":"2026-04-22","author":"Carter Electrical Contracting","category":"Compliance","tags":["EICR","Commercial","Safety"],"excerpt":"Understanding the legal requirements and safety benefits of regular Electrical Installation Condition Reports (EICR) for businesses.","image":"","slug":"the-importance-of-eicr-testing"}];
+  </script>
+
+  <script type="text/babel" src="/shell.jsx"></script>
+  <script type="text/babel" src="/tweaks.jsx"></script>
+  <script type="text/babel" src="/blog.jsx"></script>
+  <script type="text/babel">ReactDOM.createRoot(document.getElementById('root')).render(<BlogIndex />);</script>
+</body>
+</html>
