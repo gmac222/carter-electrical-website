@@ -153,36 +153,63 @@ function Intro() {
   return /*#__PURE__*/React.createElement("section", {
     className: "intro reveal",
     style: {
-      padding: '80px 0 40px'
+      padding: '120px 0 80px'
     }
   }, /*#__PURE__*/React.createElement("div", {
-    className: "wrap",
-    style: {
-      maxWidth: '900px'
-    }
+    className: "wrap"
   }, /*#__PURE__*/React.createElement("div", {
+    className: "intro-grid"
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "eyebrow",
     style: {
       marginBottom: '24px'
     }
   }, "Electrician in Chester"), /*#__PURE__*/React.createElement("h2", {
-    className: "h-1",
+    className: "h-2",
     style: {
-      marginBottom: '28px'
+      marginBottom: '28px',
+      maxWidth: '18ch'
     }
-  }, "NICEIC approved electrical contractor", /*#__PURE__*/React.createElement("br", null), "serving Cheshire West."), /*#__PURE__*/React.createElement("p", {
+  }, "NICEIC approved electrical contractor serving Cheshire West."), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      gap: '16px',
+      alignItems: 'flex-start',
+      marginTop: '32px'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      width: '32px',
+      height: '2px',
+      background: 'var(--accent)',
+      marginTop: '8px',
+      flexShrink: 0
+    }
+  }), /*#__PURE__*/React.createElement("p", {
+    className: "label-mono",
+    style: {
+      color: 'var(--muted)',
+      maxWidth: '280px',
+      textTransform: 'none',
+      letterSpacing: '0',
+      fontSize: '13px'
+    }
+  }, "Fully certified, documented, and handed over on schedule."))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '20px'
+    }
+  }, /*#__PURE__*/React.createElement("p", {
     className: "lede",
     style: {
-      marginBottom: '20px'
+      color: 'var(--ink)'
     }
-  }, "Carter Electrical is an NICEIC approved electrical contractor serving Cheshire West and the wider Cheshire area. Our electrical services cover domestic, commercial and industrial electrical work across the local area. An electrician in Chester who is Part P qualified delivers every job to current building regulations and BS 7671."), /*#__PURE__*/React.createElement("p", {
-    className: "lede",
-    style: {
-      marginBottom: '20px'
-    }
+  }, /*#__PURE__*/React.createElement("strong", null, "Carter Electrical"), " is an NICEIC approved electrical contractor serving Cheshire West and the wider Cheshire area. Our electrical services cover domestic, commercial and industrial electrical work across the local area. An electrician in Chester who is Part P qualified delivers every job to current building regulations and BS 7671."), /*#__PURE__*/React.createElement("p", {
+    className: "lede"
   }, "Typical projects include a full rewire, consumer unit replacement, socket and light fitting installation, and electrical repairs. We handle single sockets, a full commercial electrical fit-out, or a fault repair with the same certified standard. Every job must comply with current regulations and is tested and signed off."), /*#__PURE__*/React.createElement("p", {
     className: "lede"
-  }, "Our team also covers portable appliance testing, EICR inspections, fuse board upgrades and emergency call-outs. Proper qualification and electrical wiring compliance on every installation.")));
+  }, "Our team also covers portable appliance testing, EICR inspections, fuse board upgrades and emergency call-outs. Proper qualification and electrical wiring compliance on every installation.")))));
 }
 function Services() {
   return /*#__PURE__*/React.createElement("section", {

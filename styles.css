@@ -445,6 +445,17 @@ section { position: relative; }
   .hero-strip .cell:nth-child(2) { border-bottom: 1px solid rgba(255,255,255,0.08); }
 }
 
+/* ---------- Intro Section ---------- */
+.intro-grid {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 80px;
+  align-items: flex-start;
+}
+@media (max-width: 900px) {
+  .intro-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+
 /* ---------- Trust bar ---------- */
 .trust-bar {
   padding: 28px 0;

@@ -106,22 +106,38 @@ function Hero() {
 
 function Intro() {
   return (
-    <section className="intro reveal" style={{ padding: '80px 0 40px' }}>
-      <div className="wrap" style={{ maxWidth: '900px' }}>
-        <div className="eyebrow" style={{ marginBottom: '24px' }}>Electrician in Chester</div>
-        <h2 className="h-1" style={{ marginBottom: '28px' }}>
-          NICEIC approved electrical contractor<br/>
-          serving Cheshire West.
-        </h2>
-        <p className="lede" style={{ marginBottom: '20px' }}>
-          Carter Electrical is an NICEIC approved electrical contractor serving Cheshire West and the wider Cheshire area. Our electrical services cover domestic, commercial and industrial electrical work across the local area. An electrician in Chester who is Part P qualified delivers every job to current building regulations and BS 7671.
-        </p>
-        <p className="lede" style={{ marginBottom: '20px' }}>
-          Typical projects include a full rewire, consumer unit replacement, socket and light fitting installation, and electrical repairs. We handle single sockets, a full commercial electrical fit-out, or a fault repair with the same certified standard. Every job must comply with current regulations and is tested and signed off.
-        </p>
-        <p className="lede">
-          Our team also covers portable appliance testing, EICR inspections, fuse board upgrades and emergency call-outs. Proper qualification and electrical wiring compliance on every installation.
-        </p>
+    <section className="intro reveal" style={{ padding: '120px 0 80px' }}>
+      <div className="wrap">
+        <div className="intro-grid">
+          
+          {/* Left Column: Heading */}
+          <div>
+            <div className="eyebrow" style={{ marginBottom: '24px' }}>Electrician in Chester</div>
+            <h2 className="h-2" style={{ marginBottom: '28px', maxWidth: '18ch' }}>
+              NICEIC approved electrical contractor serving Cheshire West.
+            </h2>
+            <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start', marginTop: '32px' }}>
+              <div style={{ width: '32px', height: '2px', background: 'var(--accent)', marginTop: '8px', flexShrink: 0 }}></div>
+              <p className="label-mono" style={{ color: 'var(--muted)', maxWidth: '280px', textTransform: 'none', letterSpacing: '0', fontSize: '13px' }}>
+                Fully certified, documented, and handed over on schedule.
+              </p>
+            </div>
+          </div>
+
+          {/* Right Column: Content */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+            <p className="lede" style={{ color: 'var(--ink)' }}>
+              <strong>Carter Electrical</strong> is an NICEIC approved electrical contractor serving Cheshire West and the wider Cheshire area. Our electrical services cover domestic, commercial and industrial electrical work across the local area. An electrician in Chester who is Part P qualified delivers every job to current building regulations and BS 7671.
+            </p>
+            <p className="lede">
+              Typical projects include a full rewire, consumer unit replacement, socket and light fitting installation, and electrical repairs. We handle single sockets, a full commercial electrical fit-out, or a fault repair with the same certified standard. Every job must comply with current regulations and is tested and signed off.
+            </p>
+            <p className="lede">
+              Our team also covers portable appliance testing, EICR inspections, fuse board upgrades and emergency call-outs. Proper qualification and electrical wiring compliance on every installation.
+            </p>
+          </div>
+
+        </div>
       </div>
     </section>
   );
