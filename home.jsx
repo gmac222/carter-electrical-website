@@ -7,12 +7,12 @@ const HERO_HEADLINES = {
     eyebrow: 'NICEIC · Chester · 24/7',
     h1: (
       <>
-        Electricians<br />
-        Chester trusts.<br />
-        <span className="accent">Commercial. Industrial. Domestic.</span>
+        Electrician in Chester.<br />
+        Electrical services<br />
+        <span className="accent">you can trust.</span>
       </>
     ),
-    sub: 'NICEIC-approved electricians in Chester, delivering fit-outs, maintenance and compliance across Chester, North Wales, Wirral and Merseyside.',
+    sub: 'Commercial, industrial and domestic electrical services across Cheshire West, North Wales, Wirral and Merseyside. Local electricians covering the full electrics scope from first fix to sign-off.',
   },
   credential: {
     eyebrow: 'NICEIC Approved · Est. 2008',
@@ -99,6 +99,29 @@ function Hero() {
   );
 }
 
+function Intro() {
+  return (
+    <section className="intro reveal" style={{ padding: '80px 0 40px' }}>
+      <div className="wrap" style={{ maxWidth: '900px' }}>
+        <div className="eyebrow" style={{ marginBottom: '24px' }}>Electrician in Chester</div>
+        <h2 className="h-1" style={{ marginBottom: '28px' }}>
+          NICEIC approved electrical contractor<br/>
+          serving Cheshire West.
+        </h2>
+        <p className="lede" style={{ marginBottom: '20px' }}>
+          Carter Electrical is an NICEIC approved electrical contractor serving Cheshire West and the wider Cheshire area. Our electrical services cover domestic, commercial and industrial electrical work across the local area. An electrician in Chester who is Part P qualified delivers every job to current building regulations and BS 7671.
+        </p>
+        <p className="lede" style={{ marginBottom: '20px' }}>
+          Typical projects include a full rewire, consumer unit replacement, socket and light fitting installation, and electrical repairs. We handle single sockets, a full commercial electrical fit-out, or a fault repair with the same certified standard. Every job must comply with current regulations and is tested and signed off.
+        </p>
+        <p className="lede">
+          Our team also covers portable appliance testing, EICR inspections, fuse board upgrades and emergency call-outs. Proper qualification and electrical wiring compliance on every installation.
+        </p>
+      </div>
+    </section>
+  );
+}
+
 function Services() {
   return (
     <section className="services" id="services">
@@ -169,7 +192,7 @@ function Stats() {
         <div className="stats-grid">
           <div className="stat">
             <StatNumber target={17} unit="+" />
-            <span className="l">Years trading in Chester</span>
+            <span className="l">Years in business</span>
           </div>
           <div className="stat">
             <StatNumber target={640} suffix="" />
@@ -404,6 +427,7 @@ function Home() {
       <Header current="home" theme="dark" />
       <Hero />
       <TrustBar />
+      <Intro />
       <Services />
       <Stats />
       <Cases />

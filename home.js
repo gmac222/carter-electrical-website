@@ -12,10 +12,10 @@ const {
 const HERO_HEADLINES = {
   outcome: {
     eyebrow: 'NICEIC · Chester · 24/7',
-    h1: /*#__PURE__*/React.createElement(React.Fragment, null, "Electricians", /*#__PURE__*/React.createElement("br", null), "Chester trusts.", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("span", {
+    h1: /*#__PURE__*/React.createElement(React.Fragment, null, "Electrician in Chester.", /*#__PURE__*/React.createElement("br", null), "Electrical services", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("span", {
       className: "accent"
-    }, "Commercial. Industrial. Domestic.")),
-    sub: 'NICEIC-approved electricians in Chester, delivering fit-outs, maintenance and compliance across Chester, North Wales, Wirral and Merseyside.'
+    }, "you can trust.")),
+    sub: 'Commercial, industrial and domestic electrical services across Cheshire West, North Wales, Wirral and Merseyside. Local electricians covering the full electrics scope from first fix to sign-off.'
   },
   credential: {
     eyebrow: 'NICEIC Approved · Est. 2008',
@@ -126,6 +126,41 @@ function Hero() {
   }, "24/7 \xB7 ", /*#__PURE__*/React.createElement("span", {
     className: "accent"
   }, "emergency call-out")))))));
+}
+function Intro() {
+  return /*#__PURE__*/React.createElement("section", {
+    className: "intro reveal",
+    style: {
+      padding: '80px 0 40px'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "wrap",
+    style: {
+      maxWidth: '900px'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "eyebrow",
+    style: {
+      marginBottom: '24px'
+    }
+  }, "Electrician in Chester"), /*#__PURE__*/React.createElement("h2", {
+    className: "h-1",
+    style: {
+      marginBottom: '28px'
+    }
+  }, "NICEIC approved electrical contractor", /*#__PURE__*/React.createElement("br", null), "serving Cheshire West."), /*#__PURE__*/React.createElement("p", {
+    className: "lede",
+    style: {
+      marginBottom: '20px'
+    }
+  }, "Carter Electrical is an NICEIC approved electrical contractor serving Cheshire West and the wider Cheshire area. Our electrical services cover domestic, commercial and industrial electrical work across the local area. An electrician in Chester who is Part P qualified delivers every job to current building regulations and BS 7671."), /*#__PURE__*/React.createElement("p", {
+    className: "lede",
+    style: {
+      marginBottom: '20px'
+    }
+  }, "Typical projects include a full rewire, consumer unit replacement, socket and light fitting installation, and electrical repairs. We handle single sockets, a full commercial electrical fit-out, or a fault repair with the same certified standard. Every job must comply with current regulations and is tested and signed off."), /*#__PURE__*/React.createElement("p", {
+    className: "lede"
+  }, "Our team also covers portable appliance testing, EICR inspections, fuse board upgrades and emergency call-outs. Proper qualification and electrical wiring compliance on every installation.")));
 }
 function Services() {
   return /*#__PURE__*/React.createElement("section", {
@@ -253,7 +288,7 @@ function Stats() {
     unit: "+"
   }), /*#__PURE__*/React.createElement("span", {
     className: "l"
-  }, "Years trading in Chester")), /*#__PURE__*/React.createElement("div", {
+  }, "Years in business")), /*#__PURE__*/React.createElement("div", {
     className: "stat"
   }, /*#__PURE__*/React.createElement(StatNumber, {
     target: 640,
@@ -509,6 +544,6 @@ function Home() {
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Header, {
     current: "home",
     theme: "dark"
-  }), /*#__PURE__*/React.createElement(Hero, null), /*#__PURE__*/React.createElement(TrustBar, null), /*#__PURE__*/React.createElement(Services, null), /*#__PURE__*/React.createElement(Stats, null), /*#__PURE__*/React.createElement(Cases, null), /*#__PURE__*/React.createElement(Testimonials, null), /*#__PURE__*/React.createElement(Areas, null), /*#__PURE__*/React.createElement(CTABand, null), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
+  }), /*#__PURE__*/React.createElement(Hero, null), /*#__PURE__*/React.createElement(TrustBar, null), /*#__PURE__*/React.createElement(Intro, null), /*#__PURE__*/React.createElement(Services, null), /*#__PURE__*/React.createElement(Stats, null), /*#__PURE__*/React.createElement(Cases, null), /*#__PURE__*/React.createElement(Testimonials, null), /*#__PURE__*/React.createElement(Areas, null), /*#__PURE__*/React.createElement(CTABand, null), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
 }
 ReactDOM.hydrateRoot(document.getElementById('root'), /*#__PURE__*/React.createElement(Home, null));
