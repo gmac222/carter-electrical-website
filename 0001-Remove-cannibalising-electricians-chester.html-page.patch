@@ -1,0 +1,450 @@
+From 1de27630e886235a46bd155e97272e41ae579815 Mon Sep 17 00:00:00 2001
+From: "Claude (via Graham)" <claude@anthropic.com>
+Date: Thu, 23 Apr 2026 05:55:43 +0000
+Subject: [PATCH] Remove cannibalising electricians-chester.html page
+
+- Homepage (/) is the canonical Chester page per generate-seo.js intent
+- 7 location pages now link 'Electricians in Chester' to / instead
+- vercel.json 301 redirect /electricians-chester.html -> /
+- Kills homepage vs chester-page title-tag cannibalisation
+---
+ electricians-chester.html        | 311 -------------------------------
+ electricians-deeside.html        |   2 +-
+ electricians-ellesmere-port.html |   2 +-
+ electricians-frodsham.html       |   2 +-
+ electricians-mold.html           |   2 +-
+ electricians-northwich.html      |   2 +-
+ electricians-tarporley.html      |   2 +-
+ electricians-wrexham.html        |   2 +-
+ vercel.json                      |   9 +
+ 9 files changed, 16 insertions(+), 318 deletions(-)
+ delete mode 100644 electricians-chester.html
+ create mode 100644 vercel.json
+
+diff --git a/electricians-chester.html b/electricians-chester.html
+deleted file mode 100644
+index a453c58..0000000
+--- a/electricians-chester.html
++++ /dev/null
+@@ -1,311 +0,0 @@
+-<!DOCTYPE html><html lang="en-GB"><head>
+-  <meta charset="utf-8">
+-  <meta name="viewport" content="width=device-width, initial-scale=1">
+-  <title>Electricians in Chester | NICEIC-approved | Carter Electrical Contracting</title>
+-  <meta name="description" content="NICEIC-approved electricians in Chester (CH1–CH4). Commercial fit-outs, industrial three-phase, domestic rewires, EICRs and EV chargers across Hoole, Saltney, Upton, Handbridge, Boughton and the city centre. On-site within the hour.">
+-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+-  <link rel="canonical" href="https://carterelec.co.uk/electricians-chester.html">
+-
+-  <meta property="og:title" content="Electricians in Chester | NICEIC-approved | Carter Electrical Contracting">
+-  <meta property="og:description" content="NICEIC-approved electricians in Chester (CH1–CH4). Commercial fit-outs, industrial three-phase, domestic rewires, EICRs and EV chargers across Hoole, Saltney, Upton, Handbridge, Boughton and the city centre. On-site within the hour.">
+-  <meta property="og:type" content="website">
+-  <meta property="og:url" content="https://carterelec.co.uk/electricians-chester.html">
+-  <meta property="og:site_name" content="Carter Electrical Contracting">
+-  <meta property="og:locale" content="en_GB">
+-
+-  <meta name="twitter:card" content="summary_large_image">
+-  <meta name="twitter:title" content="Electricians in Chester | NICEIC-approved | Carter Electrical Contracting">
+-  <meta name="twitter:description" content="NICEIC-approved electricians in Chester (CH1–CH4). Commercial fit-outs, industrial three-phase, domestic rewires, EICRs and EV chargers across Hoole, Saltney, Upton, Handbridge, Boughton and the city centre. On-site within the hour.">
+-
+-  <link rel="preconnect" href="https://fonts.googleapis.com">
+-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+-  <link rel="stylesheet" href="styles.css">
+-
+-  <script type="application/ld+json">
+-{
+-  "@context": "https://schema.org",
+-  "@graph": [
+-    {
+-      "@type": "BreadcrumbList",
+-      "itemListElement": [
+-        {
+-          "@type": "ListItem",
+-          "position": 1,
+-          "name": "Home",
+-          "item": "https://carterelec.co.uk/"
+-        },
+-        {
+-          "@type": "ListItem",
+-          "position": 2,
+-          "name": "Areas We Cover",
+-          "item": "https://carterelec.co.uk/areas.html"
+-        },
+-        {
+-          "@type": "ListItem",
+-          "position": 3,
+-          "name": "Electricians in Chester",
+-          "item": "https://carterelec.co.uk/electricians-chester.html"
+-        }
+-      ]
+-    },
+-    {
+-      "@type": [
+-        "LocalBusiness",
+-        "ElectricalContractor"
+-      ],
+-      "@id": "https://carterelec.co.uk/electricians-chester.html#business",
+-      "name": "Carter Electrical Contracting",
+-      "url": "https://carterelec.co.uk/electricians-chester.html",
+-      "telephone": "01244 738493",
+-      "priceRange": "££",
+-      "address": {
+-        "@type": "PostalAddress",
+-        "streetAddress": "Unit 5, White Lane Depot, White Lane, Christleton",
+-        "addressLocality": "Chester",
+-        "postalCode": "CH3 6AH",
+-        "addressRegion": "Cheshire",
+-        "addressCountry": "GB"
+-      },
+-      "areaServed": [
+-        {
+-          "@type": "City",
+-          "name": "Chester"
+-        },
+-        {
+-          "@type": "Place",
+-          "name": "Hoole, Chester"
+-        },
+-        {
+-          "@type": "Place",
+-          "name": "Saltney, Chester"
+-        },
+-        {
+-          "@type": "Place",
+-          "name": "Upton, Chester"
+-        },
+-        {
+-          "@type": "Place",
+-          "name": "Blacon, Chester"
+-        },
+-        {
+-          "@type": "Place",
+-          "name": "Boughton, Chester"
+-        },
+-        {
+-          "@type": "Place",
+-          "name": "Handbridge, Chester"
+-        },
+-        {
+-          "@type": "Place",
+-          "name": "Vicars Cross, Chester"
+-        },
+-        {
+-          "@type": "Place",
+-          "name": "Christleton, Chester"
+-        },
+-        {
+-          "@type": "Place",
+-          "name": "Newton, Chester"
+-        },
+-        {
+-          "@type": "Place",
+-          "name": "Mickle Trafford, Chester"
+-        },
+-        {
+-          "@type": "Place",
+-          "name": "Waverton, Chester"
+-        }
+-      ],
+-      "makesOffer": [
+-        {
+-          "@type": "Offer",
+-          "itemOffered": {
+-            "@type": "Service",
+-            "name": "Commercial electrical services in Chester"
+-          }
+-        },
+-        {
+-          "@type": "Offer",
+-          "itemOffered": {
+-            "@type": "Service",
+-            "name": "Industrial electrical services in Chester"
+-          }
+-        },
+-        {
+-          "@type": "Offer",
+-          "itemOffered": {
+-            "@type": "Service",
+-            "name": "Domestic electrical services in Chester"
+-          }
+-        },
+-        {
+-          "@type": "Offer",
+-          "itemOffered": {
+-            "@type": "Service",
+-            "name": "EICR testing and inspection in Chester"
+-          }
+-        },
+-        {
+-          "@type": "Offer",
+-          "itemOffered": {
+-            "@type": "Service",
+-            "name": "OZEV-approved EV charger installation in Chester"
+-          }
+-        }
+-      ],
+-      "hasCredential": [
+-        {
+-          "@type": "EducationalOccupationalCredential",
+-          "credentialCategory": "NICEIC Approved Contractor"
+-        },
+-        {
+-          "@type": "EducationalOccupationalCredential",
+-          "credentialCategory": "OZEV-approved EV installer"
+-        }
+-      ]
+-    },
+-    {
+-      "@type": "FAQPage",
+-      "mainEntity": [
+-        {
+-          "@type": "Question",
+-          "name": "Are your electricians NICEIC-approved and qualified to work in Chester?",
+-          "acceptedAnswer": {
+-            "@type": "Answer",
+-            "text": "Yes. Carter Electrical Contracting is a fully NICEIC-approved contractor, and every electrician dispatched to Chester works to BS 7671 (18th Edition, including the latest amendments). Certification is issued at handover on every job — EIC, minor works or EICR as appropriate — and logged against the property address so it's straightforward to retrieve if you need it for insurance, a landlord pack or a future sale."
+-          }
+-        },
+-        {
+-          "@type": "Question",
+-          "name": "How quickly can you respond to an emergency call-out in Chester?",
+-          "acceptedAnswer": {
+-            "@type": "Answer",
+-            "text": "From our Christleton base we typically reach Chester in 30–60 minutes for genuine emergencies — loss of power, a burning-plastic smell, water ingress near a consumer unit, or tripped main breakers that won't reset. Our phone line is answered during working hours by the same team that schedules the engineers, so you'll get an honest answer on timings rather than a call-handler promise."
+-          }
+-        },
+-        {
+-          "@type": "Question",
+-          "name": "Which Chester postcodes and neighbourhoods do you cover?",
+-          "acceptedAnswer": {
+-            "@type": "Answer",
+-            "text": "We cover every postcode inside Chester and its surrounding villages — primarily CH1, CH2, CH3, CH4. That includes Hoole, Saltney, Upton, Blacon, Boughton and the rest of the Cheshire West area. If you're unsure whether your address is in our usual radius, call us with the postcode and we'll confirm before scheduling."
+-          }
+-        },
+-        {
+-          "@type": "Question",
+-          "name": "Do you carry out EICRs and landlord electrical-safety reports in Chester?",
+-          "acceptedAnswer": {
+-            "@type": "Answer",
+-            "text": "Yes. We're a go-to contractor for EICRs across Chester — both for commercial landlords ahead of lease renewals and for residential landlords meeting the five-yearly Electrical Safety Standards in the Private Rented Sector (England) Regulations 2020, or the equivalent Welsh legislation where applicable. Reports are issued as a signed PDF within 48 hours of the test, with remedial quotes broken out clearly so you can decide what's urgent."
+-          }
+-        },
+-        {
+-          "@type": "Question",
+-          "name": "Can you install an OZEV-approved EV charger at a home or business in Chester?",
+-          "acceptedAnswer": {
+-            "@type": "Answer",
+-            "text": "Yes — we're OZEV-approved and install 7 kW single-phase and 22 kW three-phase chargers throughout Chester. For domestic installs we handle the DNO notification, load management (so your main supply doesn't get overloaded) and OLEV/EV-chargepoint grant paperwork where you're eligible. For workplace installs we can scope multi-bay back-office systems with RFID authorisation and billing integration."
+-          }
+-        },
+-        {
+-          "@type": "Question",
+-          "name": "Do you work on heritage, listed or conservation-area properties in Chester?",
+-          "acceptedAnswer": {
+-            "@type": "Answer",
+-            "text": "Yes, and we do it often. Chester's older property stock needs a different hand — surface-clipped cable runs on stone walls, concealed containment through plasterwork, period-sympathetic switch and socket plates, and documentation that will satisfy both a conservation officer and the NICEIC."
+-          }
+-        }
+-      ]
+-    }
+-  ]
+-}
+-  </script>
+-<link rel="preload" as="image" href="uploads/commercial_electrical_work.png"><link rel="preload" as="image" href="uploads/industrial_electrical_work.png"><link rel="preload" as="image" href="uploads/domestic_electrical_work.png"><link rel="preload" as="image" href="uploads/testing_electrical_work.png"><link rel="preload" as="image" href="uploads/renewables-1.jpg"><link rel="preload" as="image" href="uploads/commercial_electrical_work.png"><link rel="preload" as="image" href="uploads/industrial_electrical_work.png"><link rel="preload" as="image" href="uploads/domestic_electrical_work.png"><link rel="preload" as="image" href="uploads/testing_electrical_work.png"><link rel="preload" as="image" href="uploads/renewables-1.jpg"><link rel="preload" as="image" href="uploads/commercial_electrical_work.png"><link rel="preload" as="image" href="uploads/industrial_electrical_work.png"><link rel="preload" as="image" href="uploads/domestic_electrical_work.png"><link rel="preload" as="image" href="uploads/testing_electrical_work.png"><link rel="preload" as="image" href="uploads/renewables-1.jpg"></head>
+-<body>
+-  <div id="root"><header class="site-header  "><div class="wrap"><div class="header-inner"><a href="index.html" class="logo" aria-label="Carter Electrical home"><span><svg class="logo-mark" viewBox="0 0 40 40" fill="none" stroke-width="3.2" stroke-linecap="round"><path d="M28 9a12 12 0 1 0 0 22" stroke="#ffffff"></path><path d="M12 31a12 12 0 1 0 0-22" stroke="#7AC143"></path><circle cx="20" cy="20" r="2.4" fill="#7AC143"></circle></svg></span><span class="logo-word"><span class="logo-name" style="color:#ffffff">CARTER</span><span class="logo-sub">Electrical Contracting</span></span></a><nav class="nav "><a href="commercial.html" class="">Commercial</a><a href="services.html" class="">Services</a><a href="case-studies.html" class="">Case Studies</a><a href="areas.html" class="active">Areas</a><a href="about.html" class="">About</a><a href="contact.html" class="">Contact</a></nav><div class="header-cta"><div class="header-phone" aria-label="24/7 call-out"><span class="dot"></span><span>24/7 · <!-- -->01244 738493</span></div><a href="contact.html" class="btn btn-primary btn-sm">Discuss Project<span><svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span></a><button class="menu-toggle" aria-label="Menu"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7h16M3 15h16"></path></svg></button></div></div></div></header><section class="hero"><div class="hero-grid-bg"></div><div class="hero-glow"></div><div class="wrap hero-inner"><div class="hero-meta"><span><span class="dot-green"></span> <!-- -->Electricians in Chester</span><span>03.1 / Location</span><span>Ref · carterelec.co.uk</span></div><h1 class="h-display">Local electricians covering Chester<br><span class="accent">— on-site in 30–60 minutes.</span></h1><p class="hero-sub">NICEIC-approved commercial, industrial, domestic and renewables electricians serving Chester (CH1, CH2, CH3, CH4) and the surrounding Cheshire West. Emergency call-outs, EICR testing, EV chargers, full rewires and commercial fit-outs — delivered by our in-house team from our Christleton base, 0 miles (HQ) Chester.</p></div></section><section class="section-y light reveal"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Local Electricians in <!-- -->Chester</div><h2 class="h-1">Electrical work in <!-- -->Chester<!-- -->, done properly the first time.</h2></div><p class="lede">Carter Electrical is headquartered in Christleton, on the eastern edge of Chester — our vans are typically on-site within an hour across all four main CH postcodes. Chester's mix of listed Georgian city-centre stock, Victorian terraces in Hoole and Boughton, out-of-town business parks and a dense hospitality trade means we rotate daily between heritage rewires, EICRs for landlords, fit-outs on Bridge Street and Watergate Street, and compliance work for the city's offices and hotels. Working in a city with this much listed-building stock demands a careful hand — surface-clipped cable runs, concealed containment, and sign-off documentation that satisfies both NICEIC and conservation officers.</p></div><div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:40px"><div style="background:var(--white);padding:24px 22px"><div class="mono" style="font-size:11px;letter-spacing:0.16em;color:var(--muted);text-transform:uppercase">Coverage</div><div class="display" style="font-size:16px;font-weight:500;margin-top:6px">CH1, CH2, CH3, CH4</div></div><div style="background:var(--white);padding:24px 22px"><div class="mono" style="font-size:11px;letter-spacing:0.16em;color:var(--muted);text-transform:uppercase">Response time</div><div class="display" style="font-size:16px;font-weight:500;margin-top:6px">30–60 minutes</div></div><div style="background:var(--white);padding:24px 22px"><div class="mono" style="font-size:11px;letter-spacing:0.16em;color:var(--muted);text-transform:uppercase">Distance from HQ</div><div class="display" style="font-size:16px;font-weight:500;margin-top:6px">0 miles (HQ)</div></div><div style="background:var(--white);padding:24px 22px"><div class="mono" style="font-size:11px;letter-spacing:0.16em;color:var(--muted);text-transform:uppercase">Accreditation</div><div class="display" style="font-size:16px;font-weight:500;margin-top:6px">NICEIC + OZEV</div></div><div style="background:var(--white);padding:24px 22px"><div class="mono" style="font-size:11px;letter-spacing:0.16em;color:var(--muted);text-transform:uppercase">Documented projects</div><div class="display" style="font-size:16px;font-weight:500;margin-top:6px">14 in Chester</div></div></div></div></section><section class="section-y reveal"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Services</div><h2 class="h-1">The full electrical scope for <!-- -->Chester<!-- -->.</h2></div><p class="lede">Five service lines, one in-house team. Here's how each applies to the <!-- -->Chester<!-- --> market — and what our <!-- -->Chester<!-- --> clients most often call us about.</p></div><div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:20px;margin-top:40px"><div style="background:var(--white);border:1px solid var(--rule);overflow:hidden"><div style="height:200px;position:relative"><div class="case-photo-placeholder " style="background:#000"><img src="uploads/commercial_electrical_work.png" alt="Commercial in Chester" class="placeholder-img"><div class="vignette"></div><div class="glow" style="right:10%;top:12%"></div><div class="caption"><span>Commercial in Chester</span><span></span></div></div></div><div style="padding:32px"><div class="sc-glyph" style="width:40px;height:40px;color:var(--accent);margin-bottom:20px"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="12" width="16" height="30"></rect><rect x="22" y="6" width="20" height="36"></rect><path d="M10 18h8M10 24h8M10 30h8M10 36h8M26 12h4M34 12h4M26 20h4M34 20h4M26 28h4M34 28h4M26 36h4M34 36h4"></path></svg></div><h3 class="h-3" style="margin-bottom:12px">Commercial<!-- --> electricians in <!-- -->Chester</h3><p style="color:var(--muted-2);line-height:1.6;margin-bottom:16px">Design and install for offices, hospitality, retail and light commercial.</p><ul class="bullets" style="margin:0;padding:0;list-style:none"><li style="display:flex;gap:10px;margin-bottom:8px;font-size:0.9rem;color:var(--muted-1)"><span style="color:var(--accent)"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8.5l3 3 7-7"></path></svg></span>Full distribution &amp; sub-mains</li><li style="display:flex;gap:10px;margin-bottom:8px;font-size:0.9rem;color:var(--muted-1)"><span style="color:var(--accent)"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8.5l3 3 7-7"></path></svg></span>Lighting design &amp; controls</li><li style="display:flex;gap:10px;margin-bottom:8px;font-size:0.9rem;color:var(--muted-1)"><span style="color:var(--accent)"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8.5l3 3 7-7"></path></svg></span>Emergency lighting &amp; fire alarm</li><li style="display:flex;gap:10px;margin-bottom:8px;font-size:0.9rem;color:var(--muted-1)"><span style="color:var(--accent)"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8.5l3 3 7-7"></path></svg></span>Data &amp; containment</li></ul></div></div><div style="background:var(--white);border:1px solid var(--rule);overflow:hidden"><div style="height:200px;position:relative"><div class="case-photo-placeholder " style="background:#000"><img src="uploads/industrial_electrical_work.png" alt="Industrial in Chester" class="placeholder-img"><div class="vignette"></div><div class="glow" style="right:10%;top:12%"></div><div class="caption"><span>Industrial in Chester</span><span></span></div></div></div><div style="padding:32px"><div class="sc-glyph" style="width:40px;height:40px;color:var(--accent);margin-bottom:20px"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 42V20l10 6V20l10 6V14l10 6V14l10 6v22z"></path><path d="M4 42h40"></path><rect x="10" y="32" width="4" height="6"></rect><rect x="20" y="32" width="4" height="6"></rect><rect x="30" y="32" width="4" height="6"></rect></svg></div><h3 class="h-3" style="margin-bottom:12px">Industrial<!-- --> electricians in <!-- -->Chester</h3><p style="color:var(--muted-2);line-height:1.6;margin-bottom:16px">Three-phase power, machinery wiring and maintenance contracts.</p><ul class="bullets" style="margin:0;padding:0;list-style:none"><li style="display:flex;gap:10px;margin-bottom:8px;font-size:0.9rem;color:var(--muted-1)"><span style="color:var(--accent)"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8.5l3 3 7-7"></path></svg></span>Three-phase &amp; motor control</li><li style="display:flex;gap:10px;margin-bottom:8px;font-size:0.9rem;color:var(--muted-1)"><span style="color:var(--accent)"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8.5l3 3 7-7"></path></svg></span>Machinery install &amp; relocation</li><li style="display:flex;gap:10px;margin-bottom:8px;font-size:0.9rem;color:var(--muted-1)"><span style="color:var(--accent)"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8.5l3 3 7-7"></path></svg></span>Preventative maintenance</li><li style="display:flex;gap:10px;margin-bottom:8px;font-size:0.9rem;color:var(--muted-1)"><span style="color:var(--accent)"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8.5l3 3 7-7"></path></svg></span>Thermal imaging surveys</li></ul></div></div><div style="background:var(--white);border:1px solid var(--rule);overflow:hidden"><div style="height:200px;position:relative"><div class="case-photo-placeholder " style="background:#000"><img src="uploads/domestic_electrical_work.png" alt="Domestic in Chester" class="placeholder-img"><div class="vignette"></div><div class="glow" style="right:10%;top:12%"></div><div class="caption"><span>Domestic in Chester</span><span></span></div></div></div><div style="padding:32px"><div class="sc-glyph" style="width:40px;height:40px;color:var(--accent);margin-bottom:20px"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 22L24 6l18 16v20H6z"></path><path d="M18 42V28h12v14"></path></svg></div><h3 class="h-3" style="margin-bottom:12px">Domestic<!-- --> electricians in <!-- -->Chester</h3><p style="color:var(--muted-2);line-height:1.6;margin-bottom:16px">Rewires, extensions and smart-home work across Chester and the North West.</p><ul class="bullets" style="margin:0;padding:0;list-style:none"><li style="display:flex;gap:10px;margin-bottom:8px;font-size:0.9rem;color:var(--muted-1)"><span style="color:var(--accent)"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8.5l3 3 7-7"></path></svg></span>Full &amp; partial rewires</li><li style="display:flex;gap:10px;margin-bottom:8px;font-size:0.9rem;color:var(--muted-1)"><span style="color:var(--accent)"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8.5l3 3 7-7"></path></svg></span>Consumer unit upgrades</li><li style="display:flex;gap:10px;margin-bottom:8px;font-size:0.9rem;color:var(--muted-1)"><span style="color:var(--accent)"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8.5l3 3 7-7"></path></svg></span>Extensions &amp; loft conversions</li><li style="display:flex;gap:10px;margin-bottom:8px;font-size:0.9rem;color:var(--muted-1)"><span style="color:var(--accent)"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8.5l3 3 7-7"></path></svg></span>Smart lighting &amp; heating</li></ul></div></div><div style="background:var(--white);border:1px solid var(--rule);overflow:hidden"><div style="height:200px;position:relative"><div class="case-photo-placeholder " style="background:#000"><img src="uploads/testing_electrical_work.png" alt="Testing &amp; Inspection in Chester" class="placeholder-img"><div class="vignette"></div><div class="glow" style="right:10%;top:12%"></div><div class="caption"><span>Testing &amp; Inspection in Chester</span><span></span></div></div></div><div style="padding:32px"><div class="sc-glyph" style="width:40px;height:40px;color:var(--accent);margin-bottom:20px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l9 4v6c0 5-4 9-9 10-5-1-9-5-9-10V6l9-4z"></path></svg></div><h3 class="h-3" style="margin-bottom:12px">Testing &amp; Inspection<!-- --> electricians in <!-- -->Chester</h3><p style="color:var(--muted-2);line-height:1.6;margin-bottom:16px">EICRs, landlord reports and PAT testing. NICEIC-approved.</p><ul class="bullets" style="margin:0;padding:0;list-style:none"><li style="display:flex;gap:10px;margin-bottom:8px;font-size:0.9rem;color:var(--muted-1)"><span style="color:var(--accent)"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8.5l3 3 7-7"></path></svg></span>EICR reports (commercial &amp; domestic)</li><li style="display:flex;gap:10px;margin-bottom:8px;font-size:0.9rem;color:var(--muted-1)"><span style="color:var(--accent)"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8.5l3 3 7-7"></path></svg></span>Landlord electrical safety</li><li style="display:flex;gap:10px;margin-bottom:8px;font-size:0.9rem;color:var(--muted-1)"><span style="color:var(--accent)"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8.5l3 3 7-7"></path></svg></span>PAT testing</li><li style="display:flex;gap:10px;margin-bottom:8px;font-size:0.9rem;color:var(--muted-1)"><span style="color:var(--accent)"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8.5l3 3 7-7"></path></svg></span>New-install certification</li></ul></div></div><div style="background:var(--white);border:1px solid var(--rule);overflow:hidden"><div style="height:200px;position:relative"><div class="case-photo-placeholder " style="background:#000"><img src="uploads/renewables-1.jpg" alt="Renewables &amp; EV in Chester" class="placeholder-img"><div class="vignette"></div><div class="glow" style="right:10%;top:12%"></div><div class="caption"><span>Renewables &amp; EV in Chester</span><span></span></div></div></div><div style="padding:32px"><div class="sc-glyph" style="width:40px;height:40px;color:var(--accent);margin-bottom:20px"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M26 4L10 26h10l-4 18 20-26H26z"></path></svg></div><h3 class="h-3" style="margin-bottom:12px">Renewables &amp; EV<!-- --> electricians in <!-- -->Chester</h3><p style="color:var(--muted-2);line-height:1.6;margin-bottom:16px">EV chargers, solar PV and battery storage. OZEV-approved installer.</p><ul class="bullets" style="margin:0;padding:0;list-style:none"><li style="display:flex;gap:10px;margin-bottom:8px;font-size:0.9rem;color:var(--muted-1)"><span style="color:var(--accent)"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8.5l3 3 7-7"></path></svg></span>EV chargers (domestic &amp; commercial)</li><li style="display:flex;gap:10px;margin-bottom:8px;font-size:0.9rem;color:var(--muted-1)"><span style="color:var(--accent)"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8.5l3 3 7-7"></path></svg></span>Solar PV &amp; battery</li><li style="display:flex;gap:10px;margin-bottom:8px;font-size:0.9rem;color:var(--muted-1)"><span style="color:var(--accent)"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8.5l3 3 7-7"></path></svg></span>Load management</li><li style="display:flex;gap:10px;margin-bottom:8px;font-size:0.9rem;color:var(--muted-1)"><span style="color:var(--accent)"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8.5l3 3 7-7"></path></svg></span>Grid application support</li></ul></div></div></div></div></section><section class="section-y light reveal"><div class="wrap" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:40px"><div><div class="eyebrow">Commercial in <!-- -->Chester</div><h3 class="h-2" style="margin-top:10px">Commercial electricians in <!-- -->Chester</h3><p style="color:var(--muted-2);line-height:1.7;margin-top:16px">Chester's retail and hospitality trade — from the Rows to the Northgate development — leans heavily on overnight shutdowns and Sunday-morning energisations so that fit-outs can open on schedule. We also carry out planned lighting upgrades, EICR programmes and emergency-lighting certification for the city's office estates.</p><p style="color:var(--muted-2);line-height:1.7;margin-top:14px">Typical scopes we quote for in <!-- -->Chester<!-- -->: full distribution and sub-mains replacements, emergency-lighting upgrades to BS 5266, BS 5839-1 fire detection, retail and restaurant fit-outs, data containment and structured cabling, EICR remedials following a failed report, and scheduled shutdowns timed around the business's trading hours.</p></div><div><div class="eyebrow">Domestic in <!-- -->Chester</div><h3 class="h-2" style="margin-top:10px">Domestic electricians in <!-- -->Chester</h3><p style="color:var(--muted-2);line-height:1.7;margin-top:16px">Chester homeowners are often dealing with period properties: sensitive rewires around original plasterwork and panelling, consumer-unit upgrades on listed buildings, and smart-lighting retrofits where the wiring chases need hiding with care. We've also done volume EV-charger installs across Hoole and Upton as the CH2 and CH3 postcodes picked up uptake.</p><p style="color:var(--muted-2);line-height:1.7;margin-top:14px">Common domestic jobs across <!-- -->Chester<!-- -->: full and partial rewires, consumer-unit (fuseboard) upgrades, OZEV-approved EV charger installs with load management, smart-lighting and smart-heating retrofits, extensions, loft conversions and garage conversions, external lighting and outbuilding supplies, and emergency call-outs when a main breaker keeps tripping.</p></div></div></section><section class="section-y reveal"><div class="wrap"><div style="max-width:800px"><div class="eyebrow">Neighbourhoods served</div><h2 class="h-2" style="margin-top:10px">Areas of <!-- -->Chester<!-- --> we cover</h2><p class="lede" style="margin-top:16px">Our electricians work across every part of <!-- -->Chester<!-- --> — covering CH1, CH2, CH3, CH4<!-- -->. If your address is inside any of the following neighbourhoods, you're well inside our core coverage zone:</p></div><div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:30px"><div style="background:var(--white);padding:18px 20px;display:flex;align-items:center;gap:10px"><span style="color:var(--accent)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s-8-7.5-8-13a8 8 0 1116 0c0 5.5-8 13-8 13z"></path><circle cx="12" cy="9" r="2.5"></circle></svg></span><span class="display" style="font-size:15px;font-weight:500">Hoole</span></div><div style="background:var(--white);padding:18px 20px;display:flex;align-items:center;gap:10px"><span style="color:var(--accent)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s-8-7.5-8-13a8 8 0 1116 0c0 5.5-8 13-8 13z"></path><circle cx="12" cy="9" r="2.5"></circle></svg></span><span class="display" style="font-size:15px;font-weight:500">Saltney</span></div><div style="background:var(--white);padding:18px 20px;display:flex;align-items:center;gap:10px"><span style="color:var(--accent)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s-8-7.5-8-13a8 8 0 1116 0c0 5.5-8 13-8 13z"></path><circle cx="12" cy="9" r="2.5"></circle></svg></span><span class="display" style="font-size:15px;font-weight:500">Upton</span></div><div style="background:var(--white);padding:18px 20px;display:flex;align-items:center;gap:10px"><span style="color:var(--accent)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s-8-7.5-8-13a8 8 0 1116 0c0 5.5-8 13-8 13z"></path><circle cx="12" cy="9" r="2.5"></circle></svg></span><span class="display" style="font-size:15px;font-weight:500">Blacon</span></div><div style="background:var(--white);padding:18px 20px;display:flex;align-items:center;gap:10px"><span style="color:var(--accent)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s-8-7.5-8-13a8 8 0 1116 0c0 5.5-8 13-8 13z"></path><circle cx="12" cy="9" r="2.5"></circle></svg></span><span class="display" style="font-size:15px;font-weight:500">Boughton</span></div><div style="background:var(--white);padding:18px 20px;display:flex;align-items:center;gap:10px"><span style="color:var(--accent)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s-8-7.5-8-13a8 8 0 1116 0c0 5.5-8 13-8 13z"></path><circle cx="12" cy="9" r="2.5"></circle></svg></span><span class="display" style="font-size:15px;font-weight:500">Handbridge</span></div><div style="background:var(--white);padding:18px 20px;display:flex;align-items:center;gap:10px"><span style="color:var(--accent)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s-8-7.5-8-13a8 8 0 1116 0c0 5.5-8 13-8 13z"></path><circle cx="12" cy="9" r="2.5"></circle></svg></span><span class="display" style="font-size:15px;font-weight:500">Vicars Cross</span></div><div style="background:var(--white);padding:18px 20px;display:flex;align-items:center;gap:10px"><span style="color:var(--accent)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s-8-7.5-8-13a8 8 0 1116 0c0 5.5-8 13-8 13z"></path><circle cx="12" cy="9" r="2.5"></circle></svg></span><span class="display" style="font-size:15px;font-weight:500">Christleton</span></div><div style="background:var(--white);padding:18px 20px;display:flex;align-items:center;gap:10px"><span style="color:var(--accent)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s-8-7.5-8-13a8 8 0 1116 0c0 5.5-8 13-8 13z"></path><circle cx="12" cy="9" r="2.5"></circle></svg></span><span class="display" style="font-size:15px;font-weight:500">Newton</span></div><div style="background:var(--white);padding:18px 20px;display:flex;align-items:center;gap:10px"><span style="color:var(--accent)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s-8-7.5-8-13a8 8 0 1116 0c0 5.5-8 13-8 13z"></path><circle cx="12" cy="9" r="2.5"></circle></svg></span><span class="display" style="font-size:15px;font-weight:500">Mickle Trafford</span></div><div style="background:var(--white);padding:18px 20px;display:flex;align-items:center;gap:10px"><span style="color:var(--accent)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s-8-7.5-8-13a8 8 0 1116 0c0 5.5-8 13-8 13z"></path><circle cx="12" cy="9" r="2.5"></circle></svg></span><span class="display" style="font-size:15px;font-weight:500">Waverton</span></div></div><p style="color:var(--muted-2);line-height:1.7;margin-top:28px;max-width:70ch">We also work around key <!-- -->Chester<!-- --> locations including <!-- -->Chester Business Park, Sealand Industrial Estate, Chester city centre (Rows, Eastgate, Watergate), Countess of Chester Hospital, University of Chester<!-- -->. If you're scoping electrical work at one of these or on a nearby site, we've likely been on-site in the area recently — ask us for a reference.</p></div></section><section class="section-y light reveal"><div class="wrap"><div style="max-width:800px"><div class="eyebrow">Recent work in <!-- -->Chester</div><h2 class="h-2" style="margin-top:10px">A <!-- -->Chester<!-- --> project we delivered</h2><p class="lede" style="margin-top:16px">Old Dukes, a full electrical design-and-install on a two-floor Chester-centre tea-room-to-sports-bar conversion, delivered ahead of opening week with distribution, AV power, emergency lighting and fire alarm all scoped in-house.</p><p style="color:var(--muted-2);line-height:1.7;margin-top:16px">We've completed <!-- -->14<!-- --> documented electrical installations or compliance programmes in and around <!-- -->Chester<!-- -->. Our work is built on reliability, transparent pricing (the number on the quote is the number on the invoice), and rigorous NICEIC-standard safety.</p><div style="margin-top:24px"><a href="case-studies.html" class="btn btn-ghost-dark">See related case studies <span><svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span></a></div></div></div></section><section class="section-y reveal"><div class="wrap"><div style="max-width:800px"><div class="eyebrow">Questions we get from <!-- -->Chester</div><h2 class="h-2" style="margin-top:10px">Frequently asked questions</h2></div><div style="margin-top:30px;display:grid;gap:1px;background:var(--rule);border:1px solid var(--rule)"><details style="background:var(--white);padding:22px 24px"><summary class="display" style="font-size:17px;font-weight:500;cursor:pointer;list-style:none">Are your electricians NICEIC-approved and qualified to work in Chester?</summary><p style="color:var(--muted-2);line-height:1.7;margin-top:14px">Yes. Carter Electrical Contracting is a fully NICEIC-approved contractor, and every electrician dispatched to Chester works to BS 7671 (18th Edition, including the latest amendments). Certification is issued at handover on every job — EIC, minor works or EICR as appropriate — and logged against the property address so it's straightforward to retrieve if you need it for insurance, a landlord pack or a future sale.</p></details><details style="background:var(--white);padding:22px 24px"><summary class="display" style="font-size:17px;font-weight:500;cursor:pointer;list-style:none">How quickly can you respond to an emergency call-out in Chester?</summary><p style="color:var(--muted-2);line-height:1.7;margin-top:14px">From our Christleton base we typically reach Chester in 30–60 minutes for genuine emergencies — loss of power, a burning-plastic smell, water ingress near a consumer unit, or tripped main breakers that won't reset. Our phone line is answered during working hours by the same team that schedules the engineers, so you'll get an honest answer on timings rather than a call-handler promise.</p></details><details style="background:var(--white);padding:22px 24px"><summary class="display" style="font-size:17px;font-weight:500;cursor:pointer;list-style:none">Which Chester postcodes and neighbourhoods do you cover?</summary><p style="color:var(--muted-2);line-height:1.7;margin-top:14px">We cover every postcode inside Chester and its surrounding villages — primarily CH1, CH2, CH3, CH4. That includes Hoole, Saltney, Upton, Blacon, Boughton and the rest of the Cheshire West area. If you're unsure whether your address is in our usual radius, call us with the postcode and we'll confirm before scheduling.</p></details><details style="background:var(--white);padding:22px 24px"><summary class="display" style="font-size:17px;font-weight:500;cursor:pointer;list-style:none">Do you carry out EICRs and landlord electrical-safety reports in Chester?</summary><p style="color:var(--muted-2);line-height:1.7;margin-top:14px">Yes. We're a go-to contractor for EICRs across Chester — both for commercial landlords ahead of lease renewals and for residential landlords meeting the five-yearly Electrical Safety Standards in the Private Rented Sector (England) Regulations 2020, or the equivalent Welsh legislation where applicable. Reports are issued as a signed PDF within 48 hours of the test, with remedial quotes broken out clearly so you can decide what's urgent.</p></details><details style="background:var(--white);padding:22px 24px"><summary class="display" style="font-size:17px;font-weight:500;cursor:pointer;list-style:none">Can you install an OZEV-approved EV charger at a home or business in Chester?</summary><p style="color:var(--muted-2);line-height:1.7;margin-top:14px">Yes — we're OZEV-approved and install 7 kW single-phase and 22 kW three-phase chargers throughout Chester. For domestic installs we handle the DNO notification, load management (so your main supply doesn't get overloaded) and OLEV/EV-chargepoint grant paperwork where you're eligible. For workplace installs we can scope multi-bay back-office systems with RFID authorisation and billing integration.</p></details><details style="background:var(--white);padding:22px 24px"><summary class="display" style="font-size:17px;font-weight:500;cursor:pointer;list-style:none">Do you work on heritage, listed or conservation-area properties in Chester?</summary><p style="color:var(--muted-2);line-height:1.7;margin-top:14px">Yes, and we do it often. Chester's older property stock needs a different hand — surface-clipped cable runs on stone walls, concealed containment through plasterwork, period-sympathetic switch and socket plates, and documentation that will satisfy both a conservation officer and the NICEIC. We scope heritage work slowly on the first visit so you know exactly what's going where before anything is cut or chased.</p></details></div></div></section><section class="section-y light reveal"><div class="wrap"><div style="max-width:800px"><div class="eyebrow">Also covering</div><h2 class="h-2" style="margin-top:10px">Other areas near <!-- -->Chester</h2><p class="lede" style="margin-top:16px">We cover the wider <!-- -->Cheshire West<!-- --> region from our Chester base. If you're scoping work outside <!-- -->Chester<!-- --> proper, the following are also in our core patch:</p></div><div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:12px;margin-top:24px"><a href="electricians-ellesmere-port.html" style="background:var(--white);border:1px solid var(--rule);padding:18px 20px;text-decoration:none;color:inherit;display:flex;justify-content:space-between;align-items:center"><span class="display" style="font-weight:500;font-size:15px">Electricians in <!-- -->Ellesmere Port</span><span style="color:var(--accent)"><svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span></a><a href="electricians-wrexham.html" style="background:var(--white);border:1px solid var(--rule);padding:18px 20px;text-decoration:none;color:inherit;display:flex;justify-content:space-between;align-items:center"><span class="display" style="font-weight:500;font-size:15px">Electricians in <!-- -->Wrexham</span><span style="color:var(--accent)"><svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span></a><a href="electricians-northwich.html" style="background:var(--white);border:1px solid var(--rule);padding:18px 20px;text-decoration:none;color:inherit;display:flex;justify-content:space-between;align-items:center"><span class="display" style="font-weight:500;font-size:15px">Electricians in <!-- -->Northwich</span><span style="color:var(--accent)"><svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span></a><a href="electricians-frodsham.html" style="background:var(--white);border:1px solid var(--rule);padding:18px 20px;text-decoration:none;color:inherit;display:flex;justify-content:space-between;align-items:center"><span class="display" style="font-weight:500;font-size:15px">Electricians in <!-- -->Frodsham</span><span style="color:var(--accent)"><svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span></a><a href="electricians-tarporley.html" style="background:var(--white);border:1px solid var(--rule);padding:18px 20px;text-decoration:none;color:inherit;display:flex;justify-content:space-between;align-items:center"><span class="display" style="font-weight:500;font-size:15px">Electricians in <!-- -->Tarporley</span><span style="color:var(--accent)"><svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span></a><a href="electricians-mold.html" style="background:var(--white);border:1px solid var(--rule);padding:18px 20px;text-decoration:none;color:inherit;display:flex;justify-content:space-between;align-items:center"><span class="display" style="font-weight:500;font-size:15px">Electricians in <!-- -->Mold</span><span style="color:var(--accent)"><svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span></a></div></div></section><section class="cta-band reveal"><div class="wrap"><div><div class="eyebrow">Start a conversation</div><h2 style="margin-top:20px">Need an electrician in <!-- -->Chester<!-- -->?<br>Let's scope it properly.</h2><p class="lede" style="margin-top:18px;max-width:54ch">Brief the scope in three steps. You'll hear back within one working day — or inside the hour for emergency call-outs in <!-- -->Chester<!-- -->.</p></div><div class="cta-aside"><div class="label-mono">Direct line</div><a href="tel:+441244738493" class="phone-big"><span class="accent">·</span> <!-- -->01244 738493</a><div style="display:flex;gap:12px;margin-top:14px"><a href="contact.html" class="btn btn-primary">Discuss your <!-- -->Chester<!-- --> project <span><svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span></a></div></div></div></section><footer class="site-footer"><div class="wrap"><div class="footer-top"><div><a href="index.html" class="logo" aria-label="Carter Electrical home"><span><svg class="logo-mark" viewBox="0 0 40 40" fill="none" stroke-width="3.2" stroke-linecap="round"><path d="M28 9a12 12 0 1 0 0 22" stroke="#ffffff"></path><path d="M12 31a12 12 0 1 0 0-22" stroke="#7AC143"></path><circle cx="20" cy="20" r="2.4" fill="#7AC143"></circle></svg></span><span class="logo-word"><span class="logo-name" style="color:#ffffff">CARTER</span><span class="logo-sub">Electrical Contracting</span></span></a><p style="color:rgba(255,255,255,0.6);margin-top:20px;max-width:36ch;font-size:14.5px;line-height:1.55">NICEIC-approved electrical contractors. Commercial, industrial, domestic and renewables across Chester, North Wales, Wirral and Merseyside.</p><div class="circuit-rule" style="margin:28px 0 20px;color:rgba(255,255,255,0.4)"></div><div class="mono" style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.4)">NICEIC · 24/7 · Est. <!-- -->2008</div></div><div><h4>Services</h4><ul><li><a href="commercial.html">Commercial</a></li><li><a href="services.html#industrial">Industrial</a></li><li><a href="services.html#domestic">Domestic</a></li><li><a href="services.html#renewables">Renewables &amp; EV</a></li><li><a href="services.html#testing">Inspection &amp; Testing</a></li></ul></div><div><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="areas.html">Areas We Cover</a></li><li><a href="contact.html">Contact</a></li><li><a href="https://facebook.com/carter.electrical.chester">Facebook</a></li></ul></div><div><h4>Contact</h4><address class="footer-address"><div>Unit 5, White Lane Depot</div><div>White Lane, Christleton</div><div>Chester, CH3 6AH</div><div style="margin-top:14px"><a href="tel:+441244738493">01244 738493</a></div><div><a href="mailto:info@carterelectricalcontracting.co.uk">info@carterelectricalcontracting.co.uk</a></div></address></div></div><div class="footer-bottom"><div>© <!-- -->2026<!-- --> Carter Electrical Contracting Ltd</div><div>carterelec.co.uk</div></div></div></footer><div class="tweaks-panel "><div class="tweaks-header"><span class="title">Tweaks</span><button aria-label="Close" style="color:rgba(255,255,255,0.5)"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3l8 8M11 3l-8 8"></path></svg></button></div><div class="tweaks-body"><div class="tweak-group"><label>Accent hue</label><div class="tweak-swatches"><button class="active" style="background:oklch(0.74 0.16 131)" aria-label="Hue 131"></button><button class="" style="background:oklch(0.74 0.16 95)" aria-label="Hue 95"></button><button class="" style="background:oklch(0.74 0.16 60)" aria-label="Hue 60"></button><button class="" style="background:oklch(0.74 0.16 25)" aria-label="Hue 25"></button><button class="" style="background:oklch(0.74 0.16 12)" aria-label="Hue 12"></button><button class="" style="background:oklch(0.74 0.16 210)" aria-label="Hue 210"></button></div><input type="range" min="0" max="360" step="1" class="tweak-range" value="131"></div><div class="tweak-group"><label>Accent aggression</label><div class="tweak-seg"><button class="">restrained</button><button class="active">balanced</button><button class="">bold</button></div></div><div class="tweak-group"><label>Hero headline</label><div class="tweak-seg"><button class="active">Outcome</button><button class="">Credential</button><button class="">Regional</button></div></div><div class="tweak-group"><label>Density · <!-- -->6</label><input type="range" min="3" max="9" step="1" class="tweak-range" value="6"></div></div></div></div>
+-
+-  <noscript>
+-    <header>
+-      <p><a href="https://carterelec.co.uk">Carter Electrical Contracting</a> · <a href="tel:+441244738493">01244 738493</a></p>
+-    </header>
+-    <main>
+-      <nav aria-label="Breadcrumb">
+-        <a href="/">Home</a> › <a href="/areas.html">Areas We Cover</a> › Electricians in Chester
+-      </nav>
+-      <h1>Electricians in Chester — NICEIC-approved</h1>
+-      <p>Carter Electrical is headquartered in Christleton, on the eastern edge of Chester — our vans are typically on-site within an hour across all four main CH postcodes. Chester's mix of listed Georgian city-centre stock, Victorian terraces in Hoole and Boughton, out-of-town business parks and a dense hospitality trade means we rotate daily between heritage rewires, EICRs for landlords, fit-outs on Bridge Street and Watergate Street, and compliance work for the city's offices and hotels.</p>
+-
+-      <h2>Coverage</h2>
+-      <ul>
+-        <li><strong>Postcodes:</strong> CH1, CH2, CH3, CH4</li>
+-        <li><strong>Response time:</strong> 30–60 minutes</li>
+-        <li><strong>Distance from Chester HQ:</strong> 0 miles (HQ)</li>
+-        <li><strong>County:</strong> Cheshire West</li>
+-      </ul>
+-
+-      <h2>Commercial electricians in Chester</h2>
+-      <p>Chester's retail and hospitality trade — from the Rows to the Northgate development — leans heavily on overnight shutdowns and Sunday-morning energisations so that fit-outs can open on schedule.</p>
+-
+-      <h2>Domestic electricians in Chester</h2>
+-      <p>Chester homeowners are often dealing with period properties: sensitive rewires around original plasterwork, consumer-unit upgrades on listed buildings, and smart-lighting retrofits where wiring chases need hiding with care.</p>
+-
+-      <h2>Neighbourhoods of Chester we cover</h2>
+-      <ul>
+-        <li>Hoole</li>
+-        <li>Saltney</li>
+-        <li>Upton</li>
+-        <li>Blacon</li>
+-        <li>Boughton</li>
+-        <li>Handbridge</li>
+-        <li>Vicars Cross</li>
+-        <li>Christleton</li>
+-        <li>Newton</li>
+-        <li>Mickle Trafford</li>
+-        <li>Waverton</li>
+-      </ul>
+-
+-      <h2>Services in Chester</h2>
+-      <ul>
+-        <li>Commercial fit-outs, distribution, emergency lighting and fire alarm</li>
+-        <li>Industrial three-phase, motor control and factory shutdowns</li>
+-        <li>Full and partial domestic rewires, consumer-unit upgrades</li>
+-        <li>EICR testing, landlord safety reports and PAT testing</li>
+-        <li>OZEV-approved EV charger installation and solar-PV integration</li>
+-      </ul>
+-
+-      <h2>Frequently asked questions</h2>
+-      <h3>Are your electricians NICEIC-approved and qualified to work in Chester?</h3><p>Yes. Carter Electrical Contracting is a fully NICEIC-approved contractor, and every electrician dispatched to Chester works to BS 7671 (18th Edition, including the latest amendments). Certification is issued at handover on every job — EIC, minor works or EICR as appropriate — and logged against the property address so it's straightforward to retrieve if you need it for insurance, a landlord pack or a future sale.</p>
+-      <h3>How quickly can you respond to an emergency call-out in Chester?</h3><p>From our Christleton base we typically reach Chester in 30–60 minutes for genuine emergencies — loss of power, a burning-plastic smell, water ingress near a consumer unit, or tripped main breakers that won't reset. Our phone line is answered during working hours by the same team that schedules the engineers, so you'll get an honest answer on timings rather than a call-handler promise.</p>
+-      <h3>Which Chester postcodes and neighbourhoods do you cover?</h3><p>We cover every postcode inside Chester and its surrounding villages — primarily CH1, CH2, CH3, CH4. That includes Hoole, Saltney, Upton, Blacon, Boughton and the rest of the Cheshire West area. If you're unsure whether your address is in our usual radius, call us with the postcode and we'll confirm before scheduling.</p>
+-      <h3>Do you carry out EICRs and landlord electrical-safety reports in Chester?</h3><p>Yes. We're a go-to contractor for EICRs across Chester — both for commercial landlords ahead of lease renewals and for residential landlords meeting the five-yearly Electrical Safety Standards in the Private Rented Sector (England) Regulations 2020, or the equivalent Welsh legislation where applicable. Reports are issued as a signed PDF within 48 hours of the test, with remedial quotes broken out clearly so you can decide what's urgent.</p>
+-      <h3>Can you install an OZEV-approved EV charger at a home or business in Chester?</h3><p>Yes — we're OZEV-approved and install 7 kW single-phase and 22 kW three-phase chargers throughout Chester. For domestic installs we handle the DNO notification, load management (so your main supply doesn't get overloaded) and OLEV/EV-chargepoint grant paperwork where you're eligible. For workplace installs we can scope multi-bay back-office systems with RFID authorisation and billing integration.</p>
+-      <h3>Do you work on heritage, listed or conservation-area properties in Chester?</h3><p>Yes, and we do it often. Chester's older property stock needs a different hand — surface-clipped cable runs on stone walls, concealed containment through plasterwork, period-sympathetic switch and socket plates, and documentation that will satisfy both a conservation officer and the NICEIC.</p>
+-
+-      <h2>Other areas we cover</h2>
+-      <ul>
+-        <li><a href="/electricians-ellesmere-port.html">Electricians in Ellesmere Port</a></li>
+-        <li><a href="/electricians-wrexham.html">Electricians in Wrexham</a></li>
+-        <li><a href="/electricians-northwich.html">Electricians in Northwich</a></li>
+-        <li><a href="/electricians-frodsham.html">Electricians in Frodsham</a></li>
+-        <li><a href="/electricians-tarporley.html">Electricians in Tarporley</a></li>
+-        <li><a href="/electricians-mold.html">Electricians in Mold</a></li>
+-        <li><a href="/electricians-deeside.html">Electricians in Deeside</a></li>
+-      </ul>
+-
+-      <p><a href="/contact.html">Discuss your Chester project</a> · <a href="tel:+441244738493">Call 01244 738493</a></p>
+-    </main>
+-  </noscript>
+-
+-  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin="anonymous"></script>
+-  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin="anonymous"></script>
+-  
+-  <script src="shared.js"></script>
+-  <script src="shell.js"></script>
+-  <script src="tweaks.js"></script>
+-  <script src="locations.js"></script>
+-  <script type="text/javascript">ReactDOM.hydrateRoot(document.getElementById('root'), /*#__PURE__*/React.createElement(LocationPage, {
+-  locationName: "Chester"
+-}));</script>
+-
+-</body></html>
+\ No newline at end of file
+diff --git a/electricians-deeside.html b/electricians-deeside.html
+index cce486b..7ce8282 100644
+--- a/electricians-deeside.html
++++ b/electricians-deeside.html
+@@ -274,7 +274,7 @@
+ 
+       <h2>Other areas we cover</h2>
+       <ul>
+-        <li><a href="/electricians-chester.html">Electricians in Chester</a></li>
++        <li><a href="/">Electricians in Chester</a></li>
+         <li><a href="/electricians-ellesmere-port.html">Electricians in Ellesmere Port</a></li>
+         <li><a href="/electricians-wrexham.html">Electricians in Wrexham</a></li>
+         <li><a href="/electricians-northwich.html">Electricians in Northwich</a></li>
+diff --git a/electricians-ellesmere-port.html b/electricians-ellesmere-port.html
+index dea65a8..298d0ca 100644
+--- a/electricians-ellesmere-port.html
++++ b/electricians-ellesmere-port.html
+@@ -269,7 +269,7 @@
+ 
+       <h2>Other areas we cover</h2>
+       <ul>
+-        <li><a href="/electricians-chester.html">Electricians in Chester</a></li>
++        <li><a href="/">Electricians in Chester</a></li>
+         <li><a href="/electricians-wrexham.html">Electricians in Wrexham</a></li>
+         <li><a href="/electricians-northwich.html">Electricians in Northwich</a></li>
+         <li><a href="/electricians-frodsham.html">Electricians in Frodsham</a></li>
+diff --git a/electricians-frodsham.html b/electricians-frodsham.html
+index 3bde582..a81c972 100644
+--- a/electricians-frodsham.html
++++ b/electricians-frodsham.html
+@@ -269,7 +269,7 @@
+ 
+       <h2>Other areas we cover</h2>
+       <ul>
+-        <li><a href="/electricians-chester.html">Electricians in Chester</a></li>
++        <li><a href="/">Electricians in Chester</a></li>
+         <li><a href="/electricians-ellesmere-port.html">Electricians in Ellesmere Port</a></li>
+         <li><a href="/electricians-wrexham.html">Electricians in Wrexham</a></li>
+         <li><a href="/electricians-northwich.html">Electricians in Northwich</a></li>
+diff --git a/electricians-mold.html b/electricians-mold.html
+index a4cf251..e282cd2 100644
+--- a/electricians-mold.html
++++ b/electricians-mold.html
+@@ -274,7 +274,7 @@
+ 
+       <h2>Other areas we cover</h2>
+       <ul>
+-        <li><a href="/electricians-chester.html">Electricians in Chester</a></li>
++        <li><a href="/">Electricians in Chester</a></li>
+         <li><a href="/electricians-ellesmere-port.html">Electricians in Ellesmere Port</a></li>
+         <li><a href="/electricians-wrexham.html">Electricians in Wrexham</a></li>
+         <li><a href="/electricians-northwich.html">Electricians in Northwich</a></li>
+diff --git a/electricians-northwich.html b/electricians-northwich.html
+index f5755f8..ca4a841 100644
+--- a/electricians-northwich.html
++++ b/electricians-northwich.html
+@@ -284,7 +284,7 @@
+ 
+       <h2>Other areas we cover</h2>
+       <ul>
+-        <li><a href="/electricians-chester.html">Electricians in Chester</a></li>
++        <li><a href="/">Electricians in Chester</a></li>
+         <li><a href="/electricians-ellesmere-port.html">Electricians in Ellesmere Port</a></li>
+         <li><a href="/electricians-wrexham.html">Electricians in Wrexham</a></li>
+         <li><a href="/electricians-frodsham.html">Electricians in Frodsham</a></li>
+diff --git a/electricians-tarporley.html b/electricians-tarporley.html
+index 0517c88..ae9170c 100644
+--- a/electricians-tarporley.html
++++ b/electricians-tarporley.html
+@@ -274,7 +274,7 @@
+ 
+       <h2>Other areas we cover</h2>
+       <ul>
+-        <li><a href="/electricians-chester.html">Electricians in Chester</a></li>
++        <li><a href="/">Electricians in Chester</a></li>
+         <li><a href="/electricians-ellesmere-port.html">Electricians in Ellesmere Port</a></li>
+         <li><a href="/electricians-wrexham.html">Electricians in Wrexham</a></li>
+         <li><a href="/electricians-northwich.html">Electricians in Northwich</a></li>
+diff --git a/electricians-wrexham.html b/electricians-wrexham.html
+index 96c51ea..38a140a 100644
+--- a/electricians-wrexham.html
++++ b/electricians-wrexham.html
+@@ -284,7 +284,7 @@
+ 
+       <h2>Other areas we cover</h2>
+       <ul>
+-        <li><a href="/electricians-chester.html">Electricians in Chester</a></li>
++        <li><a href="/">Electricians in Chester</a></li>
+         <li><a href="/electricians-ellesmere-port.html">Electricians in Ellesmere Port</a></li>
+         <li><a href="/electricians-northwich.html">Electricians in Northwich</a></li>
+         <li><a href="/electricians-frodsham.html">Electricians in Frodsham</a></li>
+diff --git a/vercel.json b/vercel.json
+new file mode 100644
+index 0000000..6ac521c
+--- /dev/null
++++ b/vercel.json
+@@ -0,0 +1,9 @@
++{
++  "redirects": [
++    {
++      "source": "/electricians-chester.html",
++      "destination": "/",
++      "permanent": true
++    }
++  ]
++}
+-- 
+2.43.0
+

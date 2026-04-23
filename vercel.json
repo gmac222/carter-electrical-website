@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/electricians-chester.html",
+      "destination": "/",
+      "permanent": true
+    }
+  ]
+}
