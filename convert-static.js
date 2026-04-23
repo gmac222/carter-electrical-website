@@ -33,7 +33,8 @@ const jsxFilesToCompile = [
   'pages.jsx',
   'commercial.jsx',
   'contact.jsx',
-  'cases.jsx'
+  'cases.jsx',
+  'locations.jsx'
 ];
 
 console.log("Compiling JSX files...");
@@ -188,6 +189,36 @@ htmlFiles.forEach(htmlFile => {
   
   // 4. Save the modified HTML
   let finalHtml = dom.serialize();
+  
+  // Post-process: fix script tags that JSDOM didn't rewrite properly
+  // Replace type="text/babel" src="*.jsx" with src="*.js" (no type attr needed)
+  finalHtml = finalHtml.replace(
+    /<script\s+type="text\/babel"\s+src="([^"]+)\.jsx">\s*<\/script>/g,
+    '<script src="$1.js"></script>'
+  );
+  // Also handle the reverse attribute order: src before type
+  finalHtml = finalHtml.replace(
+    /<script\s+src="([^"]+)\.jsx"\s+type="text\/babel">\s*<\/script>/g,
+    '<script src="$1.js"></script>'
+  );
+  // Handle inline text/babel scripts (convert createRoot to hydrateRoot and compile JSX)
+  finalHtml = finalHtml.replace(
+    /<script\s+type="text\/babel">([^<]+)<\/script>/g,
+    (match, code) => {
+      let compiled = code;
+      try {
+        compiled = babel.transformSync(code, { presets: ['@babel/preset-react'] }).code;
+        compiled = compiled.replace(
+          /ReactDOM\.createRoot\((document\.getElementById\('[^']+'\))\)\.render\(([\s\S]+)\);?/,
+          'ReactDOM.hydrateRoot($1, $2);'
+        );
+      } catch(e) {
+        console.error('Error compiling inline script:', e.message);
+      }
+      return `<script>${compiled}</script>`;
+    }
+  );
+  
   fs.writeFileSync(htmlPath, finalHtml);
   console.log(`Saved ${htmlFile}`);
 });
