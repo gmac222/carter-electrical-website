@@ -453,6 +453,7 @@ function Home() {
       <Areas />
       <CTABand />
       <Footer />
+      <MobileStickyCTA />
       <TweaksPanel />
     </>
   );

@@ -5,7 +5,8 @@ const {
   Footer,
   TweaksPanel,
   useScrollReveal,
-  PageHero
+  PageHero,
+  MobileStickyCTA
 } = window;
 const {
   useState,
@@ -86,6 +87,6 @@ function BlogIndex() {
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Header, {
     current: "blog",
     theme: "dark"
-  }), /*#__PURE__*/React.createElement(BlogHero, null), /*#__PURE__*/React.createElement(BlogList, null), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
+  }), /*#__PURE__*/React.createElement(BlogHero, null), /*#__PURE__*/React.createElement(BlogList, null), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(MobileStickyCTA, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
 }
 window.BlogIndex = BlogIndex;

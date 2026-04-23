@@ -7,7 +7,8 @@ const {
   TweaksPanel,
   useScrollReveal,
   StatNumber,
-  PageHero
+  PageHero,
+  MobileStickyCTA
 } = window;
 function CommercialHero() {
   return /*#__PURE__*/React.createElement(PageHero, {
@@ -366,6 +367,6 @@ function Commercial() {
       marginRight: 6,
       verticalAlign: 'middle'
     }
-  }), "100% Secure. Zero obligation. Your data is strictly protected."))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
+  }), "100% Secure. Zero obligation. Your data is strictly protected."))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(MobileStickyCTA, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
 }
 ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/React.createElement(Commercial, null));

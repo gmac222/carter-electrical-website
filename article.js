@@ -4,7 +4,8 @@ const {
   Header,
   Footer,
   TweaksPanel,
-  useScrollReveal
+  useScrollReveal,
+  MobileStickyCTA
 } = window;
 const {
   useState,
@@ -190,6 +191,6 @@ function ArticlePage() {
     post: post
   }), /*#__PURE__*/React.createElement(ArticleContent, {
     post: post
-  })), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
+  })), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(MobileStickyCTA, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
 }
 window.ArticlePage = ArticlePage;

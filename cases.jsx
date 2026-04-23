@@ -1,6 +1,6 @@
 // Case studies index + Old Dukes detail + other pages
 
-const { Header, Footer, TrustBar, TweaksPanel, useScrollReveal, PageHero } = window;
+const { Header, Footer, TrustBar, TweaksPanel, useScrollReveal, PageHero, MobileStickyCTA } = window;
 
 // ----- Case Studies Index -----
 function CaseIndex() {
@@ -49,6 +49,7 @@ function CaseIndex() {
         </div>
       </section>
       <Footer />
+      <MobileStickyCTA />
       <TweaksPanel />
     </>
   );
@@ -143,6 +144,7 @@ function OldDukes() {
         </div>
       </section>
       <Footer />
+      <MobileStickyCTA />
       <TweaksPanel />
     </>
   );

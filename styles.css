@@ -1901,3 +1901,102 @@ details + details { border-top: none; }
 @media (min-width: 1024px) {
   .toc-container { display: block !important; }
 }
+
+/* =====================================================
+   MOBILE STICKY CTA BAR
+   ===================================================== */
+.mobile-sticky-cta {
+  display: none; /* desktop: hidden */
+}
+
+@media (max-width: 768px) {
+  .mobile-sticky-cta {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    height: 62px;
+    /* Safe area for notched phones */
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    /* Start off-screen */
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+                opacity 0.3s ease;
+    opacity: 0;
+    /* Subtle top border + shadow */
+    border-top: 1px solid rgba(122, 193, 67, 0.25);
+    box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.18);
+  }
+
+  .mobile-sticky-cta.is-visible {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  /* Slide back down when footer is in view */
+  .mobile-sticky-cta.is-hidden {
+    transform: translateY(110%);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* Quote button — primary green */
+  .mobile-sticky-cta__quote {
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: var(--accent);
+    color: var(--ink);
+    font-family: var(--font-display);
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    text-decoration: none;
+    padding: 0 20px;
+    transition: background 0.2s ease, filter 0.2s ease;
+  }
+  .mobile-sticky-cta__quote svg,
+  .mobile-sticky-cta__quote span svg {
+    width: 14px;
+    height: 14px;
+  }
+  .mobile-sticky-cta__quote:active {
+    filter: brightness(0.9);
+  }
+
+  /* Call button — dark with accent text */
+  .mobile-sticky-cta__call {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: var(--ink);
+    color: var(--white);
+    font-family: var(--font-display);
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0 20px;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background 0.2s ease;
+  }
+  .mobile-sticky-cta__call svg,
+  .mobile-sticky-cta__call span svg {
+    width: 15px;
+    height: 15px;
+    opacity: 0.85;
+  }
+  .mobile-sticky-cta__call:active {
+    background: #1a2436;
+  }
+
+  /* Push page content up so bar doesn't cover footer CTA buttons */
+  body {
+    padding-bottom: calc(62px + env(safe-area-inset-bottom, 0px));
+  }
+}

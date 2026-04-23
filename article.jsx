@@ -1,6 +1,7 @@
 // Single Article Page
 
-const { Header, Footer, TweaksPanel, useScrollReveal } = window;
+const { Header, Footer, TweaksPanel, useScrollReveal, MobileStickyCTA } = window;
+
 const { useState, useEffect } = React;
 
 function ArticleHeader({ post }) {
@@ -115,6 +116,7 @@ function ArticlePage() {
         <ArticleContent post={post} />
       </main>
       <Footer />
+      <MobileStickyCTA />
       <TweaksPanel />
     </>
   );

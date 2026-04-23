@@ -1,6 +1,7 @@
 // Blog Index Page
 
-const { Header, Footer, TweaksPanel, useScrollReveal, PageHero } = window;
+const { Header, Footer, TweaksPanel, useScrollReveal, PageHero, MobileStickyCTA } = window;
+
 const { useState, useEffect } = React;
 
 function BlogHero() {
@@ -70,6 +71,7 @@ function BlogIndex() {
       <BlogHero />
       <BlogList />
       <Footer />
+      <MobileStickyCTA />
       <TweaksPanel />
     </>
   );

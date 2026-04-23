@@ -6,7 +6,8 @@ const {
   TrustBar,
   TweaksPanel,
   useScrollReveal,
-  PageHero
+  PageHero,
+  MobileStickyCTA
 } = window;
 
 // ----- Case Studies Index -----
@@ -67,7 +68,7 @@ function CaseIndex() {
     dangerouslySetInnerHTML: {
       __html: CARTER.svg.arrow
     }
-  })))))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
+  })))))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(MobileStickyCTA, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
 }
 
 // ----- Old Dukes Detail -----
@@ -278,7 +279,7 @@ function OldDukes() {
     dangerouslySetInnerHTML: {
       __html: CARTER.svg.arrow
     }
-  })))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
+  })))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(MobileStickyCTA, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
 }
 function MetaTile({
   k,

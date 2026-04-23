@@ -302,6 +302,7 @@ function LocationPage({ locationName }) {
       </section>
 
       <Footer />
+      <MobileStickyCTA />
       <TweaksPanel />
     </>
   );

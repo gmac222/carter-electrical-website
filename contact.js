@@ -5,7 +5,8 @@ const {
   Footer,
   TrustBar,
   TweaksPanel,
-  useScrollReveal
+  useScrollReveal,
+  MobileStickyCTA
 } = window;
 function ContactForm() {
   const [step, setStep] = useState(0);
@@ -390,6 +391,6 @@ function ContactPage() {
       padding: '6px 10px',
       pointerEvents: 'none'
     }
-  }, "CHRISTLETON \xB7 CHESTER \xB7 53\xB011\u2032N \xB7 02\xB050\u2032W")))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
+  }, "CHRISTLETON \xB7 CHESTER \xB7 53\xB011\u2032N \xB7 02\xB050\u2032W")))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(MobileStickyCTA, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
 }
 ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/React.createElement(ContactPage, null));

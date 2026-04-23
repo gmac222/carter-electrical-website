@@ -208,6 +208,48 @@ window.PageHero = function PageHero({ section, sectionNum, title, titleAccent, s
   );
 };
 
+// Mobile sticky CTA bar — visible only on mobile, hides near footer
+window.MobileStickyCTA = function MobileStickyCTA() {
+  const [visible, setVisible] = useState(false);
+  const [hidden, setHidden] = useState(false);
+
+  useEffect(() => {
+    // Show after 1.5s or on first scroll past 200px
+    const showTimer = setTimeout(() => setVisible(true), 1500);
+
+    const onScroll = () => {
+      // Show on scroll
+      if (window.scrollY > 200) setVisible(true);
+
+      // Hide when footer is visible
+      const footer = document.querySelector('.site-footer');
+      if (footer) {
+        const rect = footer.getBoundingClientRect();
+        setHidden(rect.top < window.innerHeight + 80);
+      }
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => {
+      clearTimeout(showTimer);
+      window.removeEventListener('scroll', onScroll);
+    };
+  }, []);
+
+  return (
+    <div className={`mobile-sticky-cta ${visible ? 'is-visible' : ''} ${hidden ? 'is-hidden' : ''}`} role="navigation" aria-label="Quick contact">
+      <a href="contact.html" className="mobile-sticky-cta__quote">
+        Get a Free Quote
+        <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }} />
+      </a>
+      <a href={CARTER.company.phoneHref} className="mobile-sticky-cta__call">
+        <span dangerouslySetInnerHTML={{ __html: CARTER.svg.phone }} />
+        Call Us
+      </a>
+    </div>
+  );
+};
+
 // Animated stat counter
 window.StatNumber = function StatNumber({ target, unit = '', suffix = '', duration = 1400 }) {
   const [n, setN] = useState(0);
