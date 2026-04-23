@@ -25,14 +25,9 @@ const { useState, useEffect, useRef } = React;
 })();
 
 window.Logo = function Logo({ light = true }) {
-  const white = light ? '#ffffff' : '#111111';
   return (
     <a href="index.html" className="logo" aria-label="Carter Electrical home">
-      <span dangerouslySetInnerHTML={{ __html: CARTER.logoMark('#7AC143', white) }} />
-      <span className="logo-word">
-        <span className="logo-name" style={{ color: white }}>CARTER</span>
-        <span className="logo-sub">Electrical Contracting</span>
-      </span>
+      <img src="uploads/logo-original.png" alt="Carter Electrical Contracting" style={{ height: '54px', width: 'auto' }} />
     </a>
   );
 };

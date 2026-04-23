@@ -5,28 +5,51 @@ const {
   useEffect,
   useRef
 } = React;
+
+// Inject favicon + Apple touch icon + theme colour into every page's <head>.
+// Done at runtime so linter-driven head rewrites (preload dumps etc.) don't
+// strip them. Runs once per page load and is idempotent.
+(function injectHeadAssets() {
+  if (typeof document === 'undefined' || document.head.dataset.carterHeadInjected) return;
+  document.head.dataset.carterHeadInjected = '1';
+  const links = [{
+    rel: 'icon',
+    type: 'image/png',
+    sizes: '32x32',
+    href: 'uploads/favicon-32x32-1.png'
+  }, {
+    rel: 'shortcut icon',
+    type: 'image/png',
+    href: 'uploads/favicon-32x32-1.png'
+  }, {
+    rel: 'apple-touch-icon',
+    href: 'uploads/favicon-32x32-1.png'
+  }];
+  links.forEach(attrs => {
+    const el = document.createElement('link');
+    Object.entries(attrs).forEach(([k, v]) => el.setAttribute(k, v));
+    document.head.appendChild(el);
+  });
+  const theme = document.createElement('meta');
+  theme.setAttribute('name', 'theme-color');
+  theme.setAttribute('content', '#111111');
+  document.head.appendChild(theme);
+})();
 window.Logo = function Logo({
   light = true
 }) {
-  const white = light ? '#ffffff' : '#111111';
   return /*#__PURE__*/React.createElement("a", {
     href: "index.html",
     className: "logo",
     "aria-label": "Carter Electrical home"
-  }, /*#__PURE__*/React.createElement("span", {
-    dangerouslySetInnerHTML: {
-      __html: CARTER.logoMark('#7AC143', white)
-    }
-  }), /*#__PURE__*/React.createElement("span", {
-    className: "logo-word"
-  }, /*#__PURE__*/React.createElement("span", {
-    className: "logo-name",
+  }, /*#__PURE__*/React.createElement("img", {
+    src: "uploads/logo-original.png",
+    alt: "Carter Electrical Contracting",
     style: {
-      color: white
+      height: '54px',
+      width: 'auto'
     }
-  }, "CARTER"), /*#__PURE__*/React.createElement("span", {
-    className: "logo-sub"
-  }, "Electrical Contracting")));
+  }));
 };
 window.Header = function Header({
   current = 'home',
@@ -114,7 +137,8 @@ window.Header = function Header({
 };
 window.TrustBar = function TrustBar() {
   const items = [{
-    glyph: CARTER.svg.niceic,
+    img: 'uploads/nic.png',
+    alt: 'NICEIC Approved Contractor logo',
     top: 'NICEIC',
     bottom: 'Approved Contractor'
   }, {
@@ -126,7 +150,8 @@ window.TrustBar = function TrustBar() {
     top: 'Chester · CH3',
     bottom: 'Local & On-Call'
   }, {
-    glyph: CARTER.svg.bolt,
+    img: 'uploads/ozev-logo.jpg',
+    alt: 'OZEV-approved EV charger installer logo',
     top: 'OZEV Registered',
     bottom: 'EV Charger Install'
   }, {
@@ -143,7 +168,17 @@ window.TrustBar = function TrustBar() {
   }, items.map((it, i) => /*#__PURE__*/React.createElement("div", {
     className: "trust-item",
     key: i
-  }, /*#__PURE__*/React.createElement("span", {
+  }, it.img ? /*#__PURE__*/React.createElement("img", {
+    className: "glyph",
+    src: it.img,
+    alt: it.alt,
+    loading: "lazy",
+    style: {
+      width: 28,
+      height: 28,
+      objectFit: 'contain'
+    }
+  }) : /*#__PURE__*/React.createElement("span", {
     className: "glyph",
     dangerouslySetInnerHTML: {
       __html: it.glyph
