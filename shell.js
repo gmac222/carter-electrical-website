@@ -277,7 +277,8 @@ window.PageHero = function PageHero({
   title,
   titleAccent,
   subtext,
-  ctas
+  ctas,
+  children
 }) {
   return /*#__PURE__*/React.createElement("section", {
     className: "hero"
@@ -299,7 +300,7 @@ window.PageHero = function PageHero({
     className: "hero-sub"
   }, subtext), ctas && /*#__PURE__*/React.createElement("div", {
     className: "hero-ctas"
-  }, ctas)));
+  }, ctas)), children);
 };
 
 // Animated stat counter

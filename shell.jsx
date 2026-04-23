@@ -180,7 +180,7 @@ window.useScrollReveal = function useScrollReveal() {
   });
 };
 
-window.PageHero = function PageHero({ section, sectionNum, title, titleAccent, subtext, ctas }) {
+window.PageHero = function PageHero({ section, sectionNum, title, titleAccent, subtext, ctas, children }) {
   return (
     <section className="hero">
       <div className="hero-grid-bg" />
@@ -203,6 +203,7 @@ window.PageHero = function PageHero({ section, sectionNum, title, titleAccent, s
           </div>
         )}
       </div>
+      {children}
     </section>
   );
 };

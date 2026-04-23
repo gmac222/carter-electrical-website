@@ -359,46 +359,25 @@ function ContactPage() {
   }, "OZEV"), /*#__PURE__*/React.createElement("span", {
     className: "v"
   }, "EV Installer"))), /*#__PURE__*/React.createElement("div", {
-    className: "static-map"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "map-bg"
-  }), /*#__PURE__*/React.createElement("div", {
     className: "static-map",
     style: {
-      position: 'absolute',
-      inset: 0,
+      overflow: 'hidden',
+      position: 'relative'
+    }
+  }, /*#__PURE__*/React.createElement("iframe", {
+    title: "Carter Electrical Contracting \u2014 White Lane Depot, Christleton, Chester CH3 6AH",
+    src: "https://www.google.com/maps?q=Unit%205%20White%20Lane%20Depot%2C%20White%20Lane%2C%20Christleton%2C%20Chester%20CH3%206AH&output=embed",
+    width: "100%",
+    height: "100%",
+    style: {
       border: 0,
-      background: 'transparent'
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
       position: 'absolute',
-      left: '5%',
-      top: '40%',
-      right: '95%',
-      height: 3,
-      background: 'rgba(255,255,255,0.1)',
-      width: '90%'
-    }
+      inset: 0
+    },
+    loading: "lazy",
+    referrerPolicy: "no-referrer-when-downgrade",
+    allowFullScreen: true
   }), /*#__PURE__*/React.createElement("div", {
-    style: {
-      position: 'absolute',
-      left: '48%',
-      top: '0%',
-      bottom: '0%',
-      width: 3,
-      background: 'rgba(255,255,255,0.08)',
-      height: '100%'
-    }
-  })), /*#__PURE__*/React.createElement("div", {
-    className: "hq-pin"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "pulse"
-  }), /*#__PURE__*/React.createElement("div", {
-    className: "pin-core"
-  }), /*#__PURE__*/React.createElement("div", {
-    className: "pin-addr"
-  }, /*#__PURE__*/React.createElement("strong", null, "HQ"), "White Lane Depot \xB7 CH3 6AH")), /*#__PURE__*/React.createElement("div", {
     style: {
       position: 'absolute',
       bottom: 14,
@@ -406,7 +385,10 @@ function ContactPage() {
       fontFamily: 'var(--font-mono)',
       fontSize: 10,
       letterSpacing: '0.14em',
-      color: 'rgba(255,255,255,0.4)'
+      color: 'rgba(255,255,255,0.8)',
+      background: 'rgba(0,0,0,0.55)',
+      padding: '6px 10px',
+      pointerEvents: 'none'
     }
   }, "CHRISTLETON \xB7 CHESTER \xB7 53\xB011\u2032N \xB7 02\xB050\u2032W")))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
 }

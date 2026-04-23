@@ -31,25 +31,78 @@ function LocationPage({ locationName }) {
         titleAccent={`— on-site in ${area.responseTime || 'the same working day'}.`}
         subtext={`NICEIC-approved commercial, industrial, domestic and renewables electricians serving ${locationName}${area.postcodes && area.postcodes.length ? ' (' + area.postcodes.join(', ') + ')' : ''} and the surrounding ${area.county || 'area'}. Emergency call-outs, EICR testing, EV chargers, full rewires and commercial fit-outs — delivered by our in-house team from our Christleton base, ${area.distance || 'a short drive from'} ${locationName}.`}
         ctas={
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 10 }}>
-            <div style={{ display: 'flex', gap: 16 }}>
-              <a href="contact.html" className="btn btn-primary">Get Your Free Quote <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }}/></a>
-              <a href={CARTER.company.phoneHref} className="btn btn-ghost">{CARTER.company.phone}</a>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            <div style={{ display: 'flex', gap: '12px' }}>
+              <a href="contact.html" className="btn btn-primary">
+                Get Your Free Quote
+                <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }} />
+              </a>
+              <a href={CARTER.company.phoneHref} className="btn btn-ghost-light">
+                <span dangerouslySetInnerHTML={{ __html: CARTER.svg.phone }} style={{ width: 14, height: 14 }} />
+                Call {CARTER.company.phone}
+              </a>
             </div>
-            <div style={{ fontSize: '0.85rem', color: 'var(--muted-2)' }}>Takes 60 seconds • Receive a proposal within 24 hours.</div>
+            <div className="label-mono" style={{ color: 'rgba(255,255,255,0.6)', marginTop: '4px' }}>
+              Takes 60 seconds • Receive a proposal within 24 hours
+            </div>
           </div>
         }
-      />
+      >
+        <div className="hero-strip wrap" style={{ maxWidth: '100%', padding: 0 }}>
+          <div className="wrap" style={{ display: 'contents' }}>
+            <div className="hero-strip" style={{ gridColumn: '1 / -1' }}>
+              <div className="cell">
+                <span className="k">Coverage</span>
+                <span className="v">{locationName} &amp; {area.county || 'Surrounds'}</span>
+              </div>
+              <div className="cell">
+                <span className="k">Response Time</span>
+                <span className="v"><span className="accent">{area.responseTime || 'Same-day'}</span> on-site</span>
+              </div>
+              <div className="cell">
+                <span className="k">Accreditation</span>
+                <span className="v">NICEIC <span className="accent">Approved</span></span>
+              </div>
+              <div className="cell">
+                <span className="k">Sectors</span>
+                <span className="v">Commercial · Domestic · Industrial</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </PageHero>
 
       {/* Intro / local context — unique per city */}
       <section className="section-y light reveal">
         <div className="wrap">
-          <div className="section-head">
-            <div>
-              <div className="eyebrow">Local Electricians in {locationName}</div>
-              <h2 className="h-1">Electrical work in {locationName}, done properly the first time.</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '60px', alignItems: 'stretch' }}>
+            <div className="section-head" style={{ marginBottom: 0, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+              <div>
+                <div className="eyebrow">Local Electricians in {locationName}</div>
+                <h2 className="h-1">Electrical work in {locationName}, done properly the first time.</h2>
+              </div>
+              <p className="lede" style={{ marginTop: 'auto' }}>{area.intro}</p>
             </div>
-            <p className="lede">{area.intro}</p>
+            
+            <div className="area-map" style={{ height: '100%', minHeight: '360px', width: '100%', position: 'relative', background: 'var(--ink)', borderRadius: '2px', overflow: 'hidden' }}>
+              <div className="map-grid" />
+              <svg viewBox="0 0 100 100" preserveAspectRatio="none" style={{ position: 'absolute', inset: 0 }}>
+                <path d="M5,35 Q15,20 30,18 L45,10 Q60,12 70,22 Q82,28 88,42 Q92,58 84,72 Q74,84 60,86 Q42,90 28,82 Q14,74 8,58 Q2,48 5,35Z"
+                      fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.12)" strokeWidth="0.25"/>
+                <path d="M20,45 L80,45 M50,15 L50,80" stroke="rgba(255,255,255,0.05)" strokeWidth="0.2" strokeDasharray="1 1"/>
+              </svg>
+              <div className="map-crosshair">Coverage zone · {locationName}</div>
+              {CARTER.areas.map((p) => (
+                <div
+                  key={p.name}
+                  className={`pin ${p.hq ? 'hq' : ''} ${locationName === p.name ? 'active' : ''}`}
+                  style={{ left: `${p.x}%`, top: `${p.y}%` }}
+                >
+                  <span className="dot" />
+                  <span className="pin-label">{p.name}</span>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Local facts strip */}

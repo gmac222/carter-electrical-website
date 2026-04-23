@@ -290,6 +290,7 @@ ${JSON.stringify(schema, null, 2)}
   <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
   <script src="shared.js"></script>
+  <script type="text/babel" src="hero-bg.jsx"></script>
   <script type="text/babel" src="shell.jsx"></script>
   <script type="text/babel" src="tweaks.jsx"></script>
   <script type="text/babel" src="locations.jsx"></script>

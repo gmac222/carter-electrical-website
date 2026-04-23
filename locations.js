@@ -44,36 +44,98 @@ function LocationPage({
       style: {
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'flex-start',
-        gap: 10
+        gap: '12px'
       }
     }, /*#__PURE__*/React.createElement("div", {
       style: {
         display: 'flex',
-        gap: 16
+        gap: '12px'
       }
     }, /*#__PURE__*/React.createElement("a", {
       href: "contact.html",
       className: "btn btn-primary"
-    }, "Get Your Free Quote ", /*#__PURE__*/React.createElement("span", {
+    }, "Get Your Free Quote", /*#__PURE__*/React.createElement("span", {
       dangerouslySetInnerHTML: {
         __html: CARTER.svg.arrow
       }
     })), /*#__PURE__*/React.createElement("a", {
       href: CARTER.company.phoneHref,
-      className: "btn btn-ghost"
-    }, CARTER.company.phone)), /*#__PURE__*/React.createElement("div", {
+      className: "btn btn-ghost-light"
+    }, /*#__PURE__*/React.createElement("span", {
+      dangerouslySetInnerHTML: {
+        __html: CARTER.svg.phone
+      },
       style: {
-        fontSize: '0.85rem',
-        color: 'var(--muted-2)'
+        width: 14,
+        height: 14
       }
-    }, "Takes 60 seconds \u2022 Receive a proposal within 24 hours."))
-  }), /*#__PURE__*/React.createElement("section", {
+    }), "Call ", CARTER.company.phone)), /*#__PURE__*/React.createElement("div", {
+      className: "label-mono",
+      style: {
+        color: 'rgba(255,255,255,0.6)',
+        marginTop: '4px'
+      }
+    }, "Takes 60 seconds \u2022 Receive a proposal within 24 hours"))
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "hero-strip wrap",
+    style: {
+      maxWidth: '100%',
+      padding: 0
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "wrap",
+    style: {
+      display: 'contents'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "hero-strip",
+    style: {
+      gridColumn: '1 / -1'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "cell"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "k"
+  }, "Coverage"), /*#__PURE__*/React.createElement("span", {
+    className: "v"
+  }, locationName, " & ", area.county || 'Surrounds')), /*#__PURE__*/React.createElement("div", {
+    className: "cell"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "k"
+  }, "Response Time"), /*#__PURE__*/React.createElement("span", {
+    className: "v"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "accent"
+  }, area.responseTime || 'Same-day'), " on-site")), /*#__PURE__*/React.createElement("div", {
+    className: "cell"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "k"
+  }, "Accreditation"), /*#__PURE__*/React.createElement("span", {
+    className: "v"
+  }, "NICEIC ", /*#__PURE__*/React.createElement("span", {
+    className: "accent"
+  }, "Approved"))), /*#__PURE__*/React.createElement("div", {
+    className: "cell"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "k"
+  }, "Sectors"), /*#__PURE__*/React.createElement("span", {
+    className: "v"
+  }, "Commercial \xB7 Domestic \xB7 Industrial")))))), /*#__PURE__*/React.createElement("section", {
     className: "section-y light reveal"
   }, /*#__PURE__*/React.createElement("div", {
     className: "wrap"
   }, /*#__PURE__*/React.createElement("div", {
-    className: "section-head"
+    style: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+      gap: '60px',
+      alignItems: 'center'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "section-head",
+    style: {
+      marginBottom: 0
+    }
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "eyebrow"
   }, "Local Electricians in ", locationName), /*#__PURE__*/React.createElement("h2", {
@@ -81,6 +143,48 @@ function LocationPage({
   }, "Electrical work in ", locationName, ", done properly the first time.")), /*#__PURE__*/React.createElement("p", {
     className: "lede"
   }, area.intro)), /*#__PURE__*/React.createElement("div", {
+    className: "area-map",
+    style: {
+      height: '360px',
+      width: '100%',
+      position: 'relative',
+      background: 'var(--ink)',
+      borderRadius: '2px',
+      overflow: 'hidden'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "map-grid"
+  }), /*#__PURE__*/React.createElement("svg", {
+    viewBox: "0 0 100 100",
+    preserveAspectRatio: "none",
+    style: {
+      position: 'absolute',
+      inset: 0
+    }
+  }, /*#__PURE__*/React.createElement("path", {
+    d: "M5,35 Q15,20 30,18 L45,10 Q60,12 70,22 Q82,28 88,42 Q92,58 84,72 Q74,84 60,86 Q42,90 28,82 Q14,74 8,58 Q2,48 5,35Z",
+    fill: "rgba(255,255,255,0.03)",
+    stroke: "rgba(255,255,255,0.12)",
+    strokeWidth: "0.25"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M20,45 L80,45 M50,15 L50,80",
+    stroke: "rgba(255,255,255,0.05)",
+    strokeWidth: "0.2",
+    strokeDasharray: "1 1"
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "map-crosshair"
+  }, "Coverage zone \xB7 ", locationName), CARTER.areas.map(p => /*#__PURE__*/React.createElement("div", {
+    key: p.name,
+    className: `pin ${p.hq ? 'hq' : ''} ${locationName === p.name ? 'active' : ''}`,
+    style: {
+      left: `${p.x}%`,
+      top: `${p.y}%`
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "dot"
+  }), /*#__PURE__*/React.createElement("span", {
+    className: "pin-label"
+  }, p.name))))), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'grid',
       gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
