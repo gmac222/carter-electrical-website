@@ -1,0 +1,18 @@
+# Carter Electrical — Apache directives
+
+# ---------------------------------------------------------------------------
+# 301 redirects (SEO)
+# ---------------------------------------------------------------------------
+# electricians-chester.html was consolidated into the homepage on 2026-04-23
+# to resolve keyword cannibalisation on "electricians in Chester". Preserve
+# any existing ranking signal / inbound links by 301-ing to /.
+Redirect 301 /electricians-chester.html /
+
+# ---------------------------------------------------------------------------
+# Canonicalise /index.html -> / (prevents duplicate-content split)
+# ---------------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{THE_REQUEST} \s/index\.html[\s?] [NC]
+  RewriteRule ^index\.html$ / [R=301,L]
+</IfModule>

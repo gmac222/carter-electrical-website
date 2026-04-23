@@ -22,17 +22,11 @@ const COMPANY = {
   country: 'GB'
 };
 
+// Chester is intentionally NOT in this list — the homepage (/) is the Chester
+// service+location page, so we don't generate electricians-chester.html (would
+// cannibalise the homepage keyword). Cross-links to Chester from the 7 city
+// pages below go to "/" instead of a separate Chester page.
 const areas = [
-  {
-    name: 'Chester', slug: 'chester',
-    county: 'Cheshire West', distance: '0 miles (HQ)', responseTime: '30–60 minutes',
-    postcodes: ['CH1', 'CH2', 'CH3', 'CH4'],
-    neighbourhoods: ['Hoole', 'Saltney', 'Upton', 'Blacon', 'Boughton', 'Handbridge', 'Vicars Cross', 'Christleton', 'Newton', 'Mickle Trafford', 'Waverton'],
-    metaDesc: 'NICEIC-approved electricians in Chester (CH1–CH4). Commercial fit-outs, industrial three-phase, domestic rewires, EICRs and EV chargers across Hoole, Saltney, Upton, Handbridge, Boughton and the city centre. On-site within the hour.',
-    intro: "Carter Electrical is headquartered in Christleton, on the eastern edge of Chester — our vans are typically on-site within an hour across all four main CH postcodes. Chester's mix of listed Georgian city-centre stock, Victorian terraces in Hoole and Boughton, out-of-town business parks and a dense hospitality trade means we rotate daily between heritage rewires, EICRs for landlords, fit-outs on Bridge Street and Watergate Street, and compliance work for the city's offices and hotels.",
-    commercialAngle: "Chester's retail and hospitality trade — from the Rows to the Northgate development — leans heavily on overnight shutdowns and Sunday-morning energisations so that fit-outs can open on schedule.",
-    domesticAngle: "Chester homeowners are often dealing with period properties: sensitive rewires around original plasterwork, consumer-unit upgrades on listed buildings, and smart-lighting retrofits where wiring chases need hiding with care."
-  },
   {
     name: 'Ellesmere Port', slug: 'ellesmere-port',
     county: 'Cheshire West', distance: '9 miles', responseTime: '45–75 minutes',
@@ -146,7 +140,9 @@ function buildHtml(area) {
   const url = `${COMPANY.site}/electricians-${area.slug}.html`;
   const title = `Electricians in ${area.name} | NICEIC-approved | ${COMPANY.name}`;
   const faqs = buildFaqs(area);
+  // Cross-link to the 7 other city pages plus back to the Chester/homepage.
   const otherAreas = areas.filter(a => a.slug !== area.slug);
+  const chesterLink = { name: 'Chester', href: '/' };
 
   // Schema: BreadcrumbList + LocalBusiness (ElectricalContractor) + FAQPage + Service
   const schema = {
@@ -247,6 +243,7 @@ function buildHtml(area) {
 
       <h2>Other areas we cover</h2>
       <ul>
+        <li><a href="${chesterLink.href}">Electricians in ${esc(chesterLink.name)}</a></li>
         ${otherAreas.map(a => '<li><a href="/electricians-' + a.slug + '.html">Electricians in ' + esc(a.name) + '</a></li>').join('\n        ')}
       </ul>
 

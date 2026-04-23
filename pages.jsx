@@ -181,7 +181,7 @@ function AreasPage() {
                 <h3 className="h-2" style={{ margin: '10px 0 10px' }}>{active}</h3>
                 <p style={{ color: 'rgba(255,255,255,0.7)', maxWidth: '42ch' }}>NICEIC electrical services in {active}. Commercial fit-outs, domestic rewires, EV chargers and compliance testing.</p>
                 <div style={{ marginTop: 24 }}>
-                  <a href={`electricians-${active.toLowerCase().replace(/ /g, '-')}.html`} className="btn btn-ghost-light" style={{ padding: '14px 24px', fontSize: 14 }}>
+                  <a href={active === 'Chester' ? '/' : `electricians-${active.toLowerCase().replace(/ /g, '-')}.html`} className="btn btn-ghost-light" style={{ padding: '14px 24px', fontSize: 14 }}>
                     View {active} services <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }}/>
                   </a>
                 </div>
