@@ -12,7 +12,9 @@ const {
 const HERO_HEADLINES = {
   outcome: {
     eyebrow: 'NICEIC · Chester · 24/7',
-    h1: 'Electricians in Chester.',
+    h1: /*#__PURE__*/React.createElement(React.Fragment, null, "Electricians in Chester", /*#__PURE__*/React.createElement("span", {
+      className: "accent"
+    }, ".")),
     strapline: /*#__PURE__*/React.createElement(React.Fragment, null, "Electrical services ", /*#__PURE__*/React.createElement("span", {
       className: "accent"
     }, "you can trust.")),
@@ -20,7 +22,9 @@ const HERO_HEADLINES = {
   },
   credential: {
     eyebrow: 'NICEIC Approved · Est. 2008',
-    h1: 'NICEIC-approved electricians in Chester.',
+    h1: /*#__PURE__*/React.createElement(React.Fragment, null, "NICEIC-approved electricians in Chester", /*#__PURE__*/React.createElement("span", {
+      className: "accent"
+    }, ".")),
     strapline: /*#__PURE__*/React.createElement(React.Fragment, null, "Built to ", /*#__PURE__*/React.createElement("span", {
       className: "accent"
     }, "last.")),
@@ -28,8 +32,12 @@ const HERO_HEADLINES = {
   },
   regional: {
     eyebrow: 'Christleton · CH3 6AH',
-    h1: 'Chester&rsquo;s electricians.',
-    strapline: /*#__PURE__*/React.createElement(React.Fragment, null, "Commercial-grade. ", /*#__PURE__*/React.createElement("span", {
+    h1: /*#__PURE__*/React.createElement(React.Fragment, null, "Chester\u2019s electricians", /*#__PURE__*/React.createElement("span", {
+      className: "accent"
+    }, ".")),
+    strapline: /*#__PURE__*/React.createElement(React.Fragment, null, "Commercial-grade", /*#__PURE__*/React.createElement("span", {
+      className: "accent"
+    }, "."), " ", /*#__PURE__*/React.createElement("span", {
       className: "accent"
     }, "Local accountability.")),
     sub: 'Based in Christleton. On-call across Chester, Wrexham, Wirral, Merseyside and North Wales. The same team, owning the work from first fix to sign-off.'
@@ -170,7 +178,9 @@ function Intro() {
       marginBottom: '28px',
       maxWidth: '18ch'
     }
-  }, "NICEIC approved electrical contractor serving Cheshire West."), /*#__PURE__*/React.createElement("div", {
+  }, "NICEIC approved electrical contractor serving Cheshire West", /*#__PURE__*/React.createElement("span", {
+    className: "accent"
+  }, ".")), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       gap: '16px',
@@ -223,7 +233,11 @@ function Services() {
     className: "eyebrow"
   }, "02 \xB7 Services"), /*#__PURE__*/React.createElement("h2", {
     className: "h-1"
-  }, "One contractor.", /*#__PURE__*/React.createElement("br", null), "The full electrical scope."), /*#__PURE__*/React.createElement("p", {
+  }, "One contractor", /*#__PURE__*/React.createElement("span", {
+    className: "accent"
+  }, "."), /*#__PURE__*/React.createElement("br", null), "The full electrical scope", /*#__PURE__*/React.createElement("span", {
+    className: "accent"
+  }, ".")), /*#__PURE__*/React.createElement("p", {
     className: "lede"
   }, "From a single board upgrade to a full commercial fit-out. Certified, compliant and delivered by an in-house team that owns the job end to end."))), /*#__PURE__*/React.createElement("div", {
     className: "services-grid"
@@ -296,7 +310,9 @@ function Stats() {
     }
   }, "03 \xB7 By the numbers"), /*#__PURE__*/React.createElement("h2", {
     className: "h-1"
-  }, "Years of on-site", /*#__PURE__*/React.createElement("br", null), "accountability.")), /*#__PURE__*/React.createElement("p", {
+  }, "Years of on-site", /*#__PURE__*/React.createElement("br", null), "accountability", /*#__PURE__*/React.createElement("span", {
+    className: "accent"
+  }, "."))), /*#__PURE__*/React.createElement("p", {
     className: "lede",
     style: {
       color: 'rgba(255,255,255,0.7)'
@@ -352,7 +368,11 @@ function Cases() {
     className: "eyebrow"
   }, "04 \xB7 Selected work"), /*#__PURE__*/React.createElement("h2", {
     className: "h-1"
-  }, "Real projects.", /*#__PURE__*/React.createElement("br", null), "Real sign-offs.")), /*#__PURE__*/React.createElement("p", {
+  }, "Real projects", /*#__PURE__*/React.createElement("span", {
+    className: "accent"
+  }, "."), /*#__PURE__*/React.createElement("br", null), "Real sign-offs", /*#__PURE__*/React.createElement("span", {
+    className: "accent"
+  }, "."))), /*#__PURE__*/React.createElement("p", {
     className: "lede"
   }, "A cross-section of recent installations. Commercial fit-outs, hospitality refits, period rewires and new-build renewables.")), /*#__PURE__*/React.createElement("div", {
     className: "case-filter",
@@ -405,7 +425,9 @@ function Testimonials() {
     className: "eyebrow"
   }, "05 \xB7 In their words"), /*#__PURE__*/React.createElement("h2", {
     className: "h-1"
-  }, "Clients who came", /*#__PURE__*/React.createElement("br", null), "back for the next one.")), /*#__PURE__*/React.createElement("p", {
+  }, "Clients who came", /*#__PURE__*/React.createElement("br", null), "back for the next one", /*#__PURE__*/React.createElement("span", {
+    className: "accent"
+  }, "."))), /*#__PURE__*/React.createElement("p", {
     className: "lede"
   }, "Representative feedback from recent commercial and domestic clients, attributed to the projects shown above.")), /*#__PURE__*/React.createElement("div", {
     className: "testimonial-grid"
@@ -442,7 +464,9 @@ function Areas() {
     }
   }, "06 \xB7 Areas we cover"), /*#__PURE__*/React.createElement("h2", {
     className: "h-1"
-  }, "Local enough", /*#__PURE__*/React.createElement("br", null), "to be on-site by lunch.")), /*#__PURE__*/React.createElement("p", {
+  }, "Local enough", /*#__PURE__*/React.createElement("br", null), "to be on-site by lunch", /*#__PURE__*/React.createElement("span", {
+    className: "accent"
+  }, "."))), /*#__PURE__*/React.createElement("p", {
     className: "lede",
     style: {
       color: 'rgba(255,255,255,0.7)'
@@ -523,7 +547,11 @@ function CTABand() {
     style: {
       marginTop: 20
     }
-  }, "Get Your Free Quote.", /*#__PURE__*/React.createElement("br", null), "Quick, transparent, zero obligation."), /*#__PURE__*/React.createElement("p", {
+  }, "Get Your Free Quote", /*#__PURE__*/React.createElement("span", {
+    className: "accent"
+  }, "."), /*#__PURE__*/React.createElement("br", null), "Quick, transparent, zero obligation", /*#__PURE__*/React.createElement("span", {
+    className: "accent"
+  }, ".")), /*#__PURE__*/React.createElement("p", {
     className: "lede",
     style: {
       marginTop: 18,

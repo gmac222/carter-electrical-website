@@ -5,7 +5,7 @@ const { Header, Footer, TrustBar, Logo, useScrollReveal, StatNumber, TweaksPanel
 const HERO_HEADLINES = {
   outcome: {
     eyebrow: 'NICEIC · Chester · 24/7',
-    h1: 'Electricians in Chester.',
+    h1: <>Electricians in Chester<span className="accent">.</span></>,
     strapline: (
       <>
         Electrical services <span className="accent">you can trust.</span>
@@ -15,7 +15,7 @@ const HERO_HEADLINES = {
   },
   credential: {
     eyebrow: 'NICEIC Approved · Est. 2008',
-    h1: 'NICEIC-approved electricians in Chester.',
+    h1: <>NICEIC-approved electricians in Chester<span className="accent">.</span></>,
     strapline: (
       <>
         Built to <span className="accent">last.</span>
@@ -25,10 +25,10 @@ const HERO_HEADLINES = {
   },
   regional: {
     eyebrow: 'Christleton · CH3 6AH',
-    h1: 'Chester&rsquo;s electricians.',
+    h1: <>Chester&rsquo;s electricians<span className="accent">.</span></>,
     strapline: (
       <>
-        Commercial-grade. <span className="accent">Local accountability.</span>
+        Commercial-grade<span className="accent">.</span> <span className="accent">Local accountability.</span>
       </>
     ),
     sub: 'Based in Christleton. On-call across Chester, Wrexham, Wirral, Merseyside and North Wales. The same team, owning the work from first fix to sign-off.',
@@ -114,7 +114,7 @@ function Intro() {
           <div>
             <div className="eyebrow" style={{ marginBottom: '24px' }}>Electrician in Chester</div>
             <h2 className="h-2" style={{ marginBottom: '28px', maxWidth: '18ch' }}>
-              NICEIC approved electrical contractor serving Cheshire West.
+              NICEIC approved electrical contractor serving Cheshire West<span className="accent">.</span>
             </h2>
             <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start', marginTop: '32px' }}>
               <div style={{ width: '32px', height: '2px', background: 'var(--accent)', marginTop: '8px', flexShrink: 0 }}></div>
@@ -150,7 +150,7 @@ function Services() {
         <div className="section-head reveal">
           <div>
             <div className="eyebrow">02 · Services</div>
-            <h2 className="h-1">One contractor.<br/>The full electrical scope.</h2>
+            <h2 className="h-1">One contractor<span className="accent">.</span><br/>The full electrical scope<span className="accent">.</span></h2>
             <p className="lede">
               From a single board upgrade to a full commercial fit-out. Certified,
               compliant and delivered by an in-house team that owns the job end
@@ -196,7 +196,7 @@ function Stats() {
         <div className="section-head" style={{ marginBottom: 60 }}>
           <div>
             <div className="eyebrow" style={{ color: '#8a8a85' }}>03 · By the numbers</div>
-            <h2 className="h-1">Years of on-site<br/>accountability.</h2>
+            <h2 className="h-1">Years of on-site<br/>accountability<span className="accent">.</span></h2>
           </div>
           <p className="lede" style={{ color: 'rgba(255,255,255,0.7)' }}>
             A regional firm, built up one referral at a time. Indicative figures
@@ -241,7 +241,7 @@ function Cases() {
         <div className="section-head">
           <div>
             <div className="eyebrow">04 · Selected work</div>
-            <h2 className="h-1">Real projects.<br/>Real sign-offs.</h2>
+            <h2 className="h-1">Real projects<span className="accent">.</span><br/>Real sign-offs<span className="accent">.</span></h2>
           </div>
           <p className="lede">
             A cross-section of recent installations. Commercial fit-outs,
@@ -304,7 +304,7 @@ function Testimonials() {
         <div className="section-head">
           <div>
             <div className="eyebrow">05 · In their words</div>
-            <h2 className="h-1">Clients who came<br/>back for the next one.</h2>
+            <h2 className="h-1">Clients who came<br/>back for the next one<span className="accent">.</span></h2>
           </div>
           <p className="lede">
             Representative feedback from recent commercial and domestic clients,
@@ -340,7 +340,7 @@ function Areas() {
         <div className="section-head" style={{ marginBottom: 50 }}>
           <div>
             <div className="eyebrow" style={{ color: '#8a8a85' }}>06 · Areas we cover</div>
-            <h2 className="h-1">Local enough<br/>to be on-site by lunch.</h2>
+            <h2 className="h-1">Local enough<br/>to be on-site by lunch<span className="accent">.</span></h2>
           </div>
           <p className="lede" style={{ color: 'rgba(255,255,255,0.7)' }}>
             Unit 5, White Lane Depot in Christleton. Main coverage within 25 miles,
@@ -407,7 +407,7 @@ function CTABand() {
         <div>
           <div className="eyebrow">07 · Start a conversation</div>
           <h2 style={{ marginTop: 20 }}>
-            Get Your Free Quote.<br/>Quick, transparent, zero obligation.
+            Get Your Free Quote<span className="accent">.</span><br/>Quick, transparent, zero obligation<span className="accent">.</span>
           </h2>
           <p className="lede" style={{ marginTop: 18, maxWidth: '54ch' }}>
             Share the scope, the site and the timescale. You&rsquo;ll hear back within
