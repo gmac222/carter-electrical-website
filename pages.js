@@ -270,7 +270,7 @@ function ServicesPage() {
   })) : /*#__PURE__*/React.createElement("a", {
     href: "contact.html",
     className: "btn btn-ghost-dark"
-  }, "Discuss ", s.title.toLowerCase(), " ", /*#__PURE__*/React.createElement("span", {
+  }, "Get your free quote ", /*#__PURE__*/React.createElement("span", {
     dangerouslySetInnerHTML: {
       __html: CARTER.svg.arrow
     }
@@ -299,17 +299,40 @@ function ServicesPage() {
     className: "phone-big"
   }, /*#__PURE__*/React.createElement("span", {
     className: "accent"
-  }, "\xB7"), " ", CARTER.company.phone), /*#__PURE__*/React.createElement("a", {
+  }, "\xB7"), " ", CARTER.company.phone), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 12,
+      marginTop: 14
+    }
+  }, /*#__PURE__*/React.createElement("a", {
     href: "contact.html",
     className: "btn btn-primary",
     style: {
-      marginTop: 14
+      marginTop: 0
     }
-  }, "Discuss Your Project ", /*#__PURE__*/React.createElement("span", {
+  }, "Get Your Free Quote ", /*#__PURE__*/React.createElement("span", {
     dangerouslySetInnerHTML: {
       __html: CARTER.svg.arrow
     }
-  }))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
+  })), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: '0.85rem',
+      color: 'var(--muted-2)',
+      textAlign: 'center'
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    dangerouslySetInnerHTML: {
+      __html: CARTER.svg.lock || '&#128274;'
+    },
+    style: {
+      display: 'inline-block',
+      width: 12,
+      marginRight: 6,
+      verticalAlign: 'middle'
+    }
+  }), "100% Secure. Zero obligation. Your data is strictly protected."))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
 }
 
 // ----- Areas -----

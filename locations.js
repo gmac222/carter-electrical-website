@@ -39,7 +39,35 @@ function LocationPage({
     sectionNum: "03.1 / Location",
     title: `Local electricians covering ${locationName}`,
     titleAccent: `— on-site in ${area.responseTime || 'the same working day'}.`,
-    subtext: `NICEIC-approved commercial, industrial, domestic and renewables electricians serving ${locationName}${area.postcodes && area.postcodes.length ? ' (' + area.postcodes.join(', ') + ')' : ''} and the surrounding ${area.county || 'area'}. Emergency call-outs, EICR testing, EV chargers, full rewires and commercial fit-outs — delivered by our in-house team from our Christleton base, ${area.distance || 'a short drive from'} ${locationName}.`
+    subtext: `NICEIC-approved commercial, industrial, domestic and renewables electricians serving ${locationName}${area.postcodes && area.postcodes.length ? ' (' + area.postcodes.join(', ') + ')' : ''} and the surrounding ${area.county || 'area'}. Emergency call-outs, EICR testing, EV chargers, full rewires and commercial fit-outs — delivered by our in-house team from our Christleton base, ${area.distance || 'a short drive from'} ${locationName}.`,
+    ctas: /*#__PURE__*/React.createElement("div", {
+      style: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'flex-start',
+        gap: 10
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      style: {
+        display: 'flex',
+        gap: 16
+      }
+    }, /*#__PURE__*/React.createElement("a", {
+      href: "contact.html",
+      className: "btn btn-primary"
+    }, "Get Your Free Quote ", /*#__PURE__*/React.createElement("span", {
+      dangerouslySetInnerHTML: {
+        __html: CARTER.svg.arrow
+      }
+    })), /*#__PURE__*/React.createElement("a", {
+      href: CARTER.company.phoneHref,
+      className: "btn btn-ghost"
+    }, CARTER.company.phone)), /*#__PURE__*/React.createElement("div", {
+      style: {
+        fontSize: '0.85rem',
+        color: 'var(--muted-2)'
+      }
+    }, "Takes 60 seconds \u2022 Receive a proposal within 24 hours."))
   }), /*#__PURE__*/React.createElement("section", {
     className: "section-y light reveal"
   }, /*#__PURE__*/React.createElement("div", {
@@ -446,16 +474,33 @@ function LocationPage({
   }, "\xB7"), " ", CARTER.company.phone), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
+      flexDirection: 'column',
       gap: 12,
       marginTop: 14
     }
   }, /*#__PURE__*/React.createElement("a", {
     href: "contact.html",
     className: "btn btn-primary"
-  }, "Discuss your ", locationName, " project ", /*#__PURE__*/React.createElement("span", {
+  }, "Get Your Free Quote ", /*#__PURE__*/React.createElement("span", {
     dangerouslySetInnerHTML: {
       __html: CARTER.svg.arrow
     }
-  })))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
+  })), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: '0.85rem',
+      color: 'var(--muted-2)',
+      textAlign: 'center'
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    dangerouslySetInnerHTML: {
+      __html: CARTER.svg.lock || '&#128274;'
+    },
+    style: {
+      display: 'inline-block',
+      width: 12,
+      marginRight: 6,
+      verticalAlign: 'middle'
+    }
+  }), "100% Secure. Zero obligation. Your data is strictly protected."))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
 }
 window.LocationPage = LocationPage;

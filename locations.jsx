@@ -30,6 +30,15 @@ function LocationPage({ locationName }) {
         title={`Local electricians covering ${locationName}`}
         titleAccent={`— on-site in ${area.responseTime || 'the same working day'}.`}
         subtext={`NICEIC-approved commercial, industrial, domestic and renewables electricians serving ${locationName}${area.postcodes && area.postcodes.length ? ' (' + area.postcodes.join(', ') + ')' : ''} and the surrounding ${area.county || 'area'}. Emergency call-outs, EICR testing, EV chargers, full rewires and commercial fit-outs — delivered by our in-house team from our Christleton base, ${area.distance || 'a short drive from'} ${locationName}.`}
+        ctas={
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 10 }}>
+            <div style={{ display: 'flex', gap: 16 }}>
+              <a href="contact.html" className="btn btn-primary">Get Your Free Quote <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }}/></a>
+              <a href={CARTER.company.phoneHref} className="btn btn-ghost">{CARTER.company.phone}</a>
+            </div>
+            <div style={{ fontSize: '0.85rem', color: 'var(--muted-2)' }}>Takes 60 seconds • Receive a proposal within 24 hours.</div>
+          </div>
+        }
       />
 
       {/* Intro / local context — unique per city */}
@@ -238,8 +247,12 @@ function LocationPage({ locationName }) {
             <a href={CARTER.company.phoneHref} className="phone-big">
               <span className="accent">·</span> {CARTER.company.phone}
             </a>
-            <div style={{ display: 'flex', gap: 12, marginTop: 14 }}>
-              <a href="contact.html" className="btn btn-primary">Discuss your {locationName} project <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }}/></a>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginTop: 14 }}>
+              <a href="contact.html" className="btn btn-primary">Get Your Free Quote <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }}/></a>
+              <div style={{ fontSize: '0.85rem', color: 'var(--muted-2)', textAlign: 'center' }}>
+                <span dangerouslySetInnerHTML={{ __html: CARTER.svg.lock || '&#128274;' }} style={{ display: 'inline-block', width: 12, marginRight: 6, verticalAlign: 'middle' }} />
+                100% Secure. Zero obligation. Your data is strictly protected.
+              </div>
             </div>
           </div>
         </div>

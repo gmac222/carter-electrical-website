@@ -63,14 +63,21 @@ function Hero() {
         <h1 className="h-display">{copy.h1}</h1>
         <p className="hero-sub">{copy.sub}</p>
         <div className="hero-ctas">
-          <a href="contact.html" className="btn btn-primary">
-            Discuss Your Project
-            <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }} />
-          </a>
-          <a href={CARTER.company.phoneHref} className="btn btn-ghost-light">
-            <span dangerouslySetInnerHTML={{ __html: CARTER.svg.phone }} style={{ width: 14, height: 14 }} />
-            Call {CARTER.company.phone}
-          </a>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            <div style={{ display: 'flex', gap: '12px' }}>
+              <a href="contact.html" className="btn btn-primary">
+                Get Your Free Quote
+                <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }} />
+              </a>
+              <a href={CARTER.company.phoneHref} className="btn btn-ghost-light">
+                <span dangerouslySetInnerHTML={{ __html: CARTER.svg.phone }} style={{ width: 14, height: 14 }} />
+                Call {CARTER.company.phone}
+              </a>
+            </div>
+            <div className="label-mono" style={{ color: 'rgba(255,255,255,0.6)', marginTop: '4px' }}>
+              Takes 60 seconds • Receive a proposal within 24 hours
+            </div>
+          </div>
         </div>
       </div>
       <div className="hero-strip wrap" style={{ maxWidth: '100%', padding: 0 }}>
@@ -126,8 +133,8 @@ function Services() {
   return (
     <section className="services" id="services">
       <div className="wrap">
-        <div className="section-head reveal" style={{ display: 'flex', gap: '4rem', alignItems: 'center', flexWrap: 'wrap' }}>
-          <div style={{ flex: '1 1 500px' }}>
+        <div className="section-head reveal">
+          <div>
             <div className="eyebrow">02 · Services</div>
             <h2 className="h-1">One contractor.<br/>The full electrical scope.</h2>
             <p className="lede">
@@ -135,13 +142,6 @@ function Services() {
               compliant and delivered by an in-house team that owns the job end
               to end.
             </p>
-          </div>
-          <div style={{ flex: '1 1 400px', display: 'flex', justifyContent: 'flex-end' }}>
-            <img 
-              src="uploads/carbonara-1-scaled.jpg" 
-              alt="Modern commercial electrical distribution panel" 
-              style={{ width: '100%', maxWidth: '500px', borderRadius: '12px', boxShadow: '0 20px 40px rgba(0,0,0,0.4)', objectFit: 'cover', aspectRatio: '4/3' }} 
-            />
           </div>
         </div>
         <div className="services-grid">
@@ -163,7 +163,7 @@ function Services() {
                   </ul>
                 </div>
                 <div className="sc-footer">
-                  <span>Explore</span>
+                  <span>Get A Quote</span>
                   <span className="arrow" dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }} />
                 </div>
               </div>
@@ -393,7 +393,7 @@ function CTABand() {
         <div>
           <div className="eyebrow">07 · Start a conversation</div>
           <h2 style={{ marginTop: 20 }}>
-            Tell us about the project.<br/>We&rsquo;ll tell you what it takes.
+            Get Your Free Quote.<br/>Quick, transparent, zero obligation.
           </h2>
           <p className="lede" style={{ marginTop: 18, maxWidth: '54ch' }}>
             Share the scope, the site and the timescale. You&rsquo;ll hear back within
@@ -407,12 +407,18 @@ function CTABand() {
             <span className="accent">·</span> {CARTER.company.phone}
           </a>
           <div className="label-mono" style={{ color: 'var(--muted-2)' }}>Mon–Fri 07:30–17:30 · 24/7 emergency</div>
-          <div style={{ display: 'flex', gap: 12, marginTop: 14 }}>
-            <a href="contact.html" className="btn btn-primary">
-              Discuss Your Project
-              <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }} />
-            </a>
-            <a href={`mailto:${CARTER.company.email}`} className="btn btn-ghost-dark">Email us</a>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginTop: '14px' }}>
+            <div style={{ display: 'flex', gap: 12 }}>
+              <a href="contact.html" className="btn btn-primary">
+                Get Your Free Quote
+                <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }} />
+              </a>
+              <a href={`mailto:${CARTER.company.email}`} className="btn btn-ghost-dark">Email us</a>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--muted-2)', fontSize: '13px' }}>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+              100% Secure. No obligation. Your data is strictly protected.
+            </div>
           </div>
         </div>
       </div>

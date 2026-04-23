@@ -11,13 +11,16 @@ function CommercialHero() {
       titleAccent="Chester businesses trust."
       subtext="Fit-outs, maintenance contracts and compliance for offices, retail, hospitality, leisure and multi-tenant buildings. One contractor owning distribution, lighting, fire, emergency and data containment from first fix to sign-off."
       ctas={
-        <>
-          <a href="contact.html" className="btn btn-primary">
-            Discuss Your Project
-            <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }} />
-          </a>
-          <a href="case-studies.html" className="btn btn-ghost-light">See commercial work</a>
-        </>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 10 }}>
+          <div style={{ display: 'flex', gap: 16 }}>
+            <a href="contact.html" className="btn btn-primary">
+              Get Your Free Quote
+              <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }} />
+            </a>
+            <a href="case-studies.html" className="btn btn-ghost-light">See commercial work</a>
+          </div>
+          <div style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.7)' }}>Takes 60 seconds • Receive a proposal within 24 hours.</div>
+        </div>
       }
     />
   );
@@ -206,8 +209,12 @@ function Commercial() {
             <a href={CARTER.company.phoneHref} className="phone-big">
               <span className="accent">·</span> {CARTER.company.phone}
             </a>
-            <div style={{ display: 'flex', gap: 12, marginTop: 14 }}>
-              <a href="contact.html" className="btn btn-primary">Discuss Your Project <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }}/></a>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginTop: 14 }}>
+              <a href="contact.html" className="btn btn-primary">Get Your Free Quote <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }}/></a>
+              <div style={{ fontSize: '0.85rem', color: 'var(--muted-2)', textAlign: 'center' }}>
+                <span dangerouslySetInnerHTML={{ __html: CARTER.svg.lock || '&#128274;' }} style={{ display: 'inline-block', width: 12, marginRight: 6, verticalAlign: 'middle' }} />
+                100% Secure. Zero obligation. Your data is strictly protected.
+              </div>
             </div>
           </div>
         </div>

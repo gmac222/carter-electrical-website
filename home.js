@@ -63,10 +63,21 @@ function Hero() {
     className: "hero-sub"
   }, copy.sub), /*#__PURE__*/React.createElement("div", {
     className: "hero-ctas"
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '12px'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      gap: '12px'
+    }
   }, /*#__PURE__*/React.createElement("a", {
     href: "contact.html",
     className: "btn btn-primary"
-  }, "Discuss Your Project", /*#__PURE__*/React.createElement("span", {
+  }, "Get Your Free Quote", /*#__PURE__*/React.createElement("span", {
     dangerouslySetInnerHTML: {
       __html: CARTER.svg.arrow
     }
@@ -81,7 +92,13 @@ function Hero() {
       width: 14,
       height: 14
     }
-  }), "Call ", CARTER.company.phone))), /*#__PURE__*/React.createElement("div", {
+  }), "Call ", CARTER.company.phone)), /*#__PURE__*/React.createElement("div", {
+    className: "label-mono",
+    style: {
+      color: 'rgba(255,255,255,0.6)',
+      marginTop: '4px'
+    }
+  }, "Takes 60 seconds \u2022 Receive a proposal within 24 hours")))), /*#__PURE__*/React.createElement("div", {
     className: "hero-strip wrap",
     style: {
       maxWidth: '100%',
@@ -169,41 +186,14 @@ function Services() {
   }, /*#__PURE__*/React.createElement("div", {
     className: "wrap"
   }, /*#__PURE__*/React.createElement("div", {
-    className: "section-head reveal",
-    style: {
-      display: 'flex',
-      gap: '4rem',
-      alignItems: 'center',
-      flexWrap: 'wrap'
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      flex: '1 1 500px'
-    }
-  }, /*#__PURE__*/React.createElement("div", {
+    className: "section-head reveal"
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "eyebrow"
   }, "02 \xB7 Services"), /*#__PURE__*/React.createElement("h2", {
     className: "h-1"
   }, "One contractor.", /*#__PURE__*/React.createElement("br", null), "The full electrical scope."), /*#__PURE__*/React.createElement("p", {
     className: "lede"
-  }, "From a single board upgrade to a full commercial fit-out. Certified, compliant and delivered by an in-house team that owns the job end to end.")), /*#__PURE__*/React.createElement("div", {
-    style: {
-      flex: '1 1 400px',
-      display: 'flex',
-      justifyContent: 'flex-end'
-    }
-  }, /*#__PURE__*/React.createElement("img", {
-    src: "uploads/carbonara-1-scaled.jpg",
-    alt: "Modern commercial electrical distribution panel",
-    style: {
-      width: '100%',
-      maxWidth: '500px',
-      borderRadius: '12px',
-      boxShadow: '0 20px 40px rgba(0,0,0,0.4)',
-      objectFit: 'cover',
-      aspectRatio: '4/3'
-    }
-  }))), /*#__PURE__*/React.createElement("div", {
+  }, "From a single board upgrade to a full commercial fit-out. Certified, compliant and delivered by an in-house team that owns the job end to end."))), /*#__PURE__*/React.createElement("div", {
     className: "services-grid"
   }, CARTER.services.map((s, idx) => {
     const num = String(idx + 1).padStart(2, '0');
@@ -249,7 +239,7 @@ function Services() {
       key: i
     }, c)))), /*#__PURE__*/React.createElement("div", {
       className: "sc-footer"
-    }, /*#__PURE__*/React.createElement("span", null, "Explore"), /*#__PURE__*/React.createElement("span", {
+    }, /*#__PURE__*/React.createElement("span", null, "Get A Quote"), /*#__PURE__*/React.createElement("span", {
       className: "arrow",
       dangerouslySetInnerHTML: {
         __html: CARTER.svg.arrow
@@ -501,7 +491,7 @@ function CTABand() {
     style: {
       marginTop: 20
     }
-  }, "Tell us about the project.", /*#__PURE__*/React.createElement("br", null), "We\u2019ll tell you what it takes."), /*#__PURE__*/React.createElement("p", {
+  }, "Get Your Free Quote.", /*#__PURE__*/React.createElement("br", null), "Quick, transparent, zero obligation."), /*#__PURE__*/React.createElement("p", {
     className: "lede",
     style: {
       marginTop: 18,
@@ -524,20 +514,52 @@ function CTABand() {
   }, "Mon\u2013Fri 07:30\u201317:30 \xB7 24/7 emergency"), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
-      gap: 12,
-      marginTop: 14
+      flexDirection: 'column',
+      gap: '16px',
+      marginTop: '14px'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      gap: 12
     }
   }, /*#__PURE__*/React.createElement("a", {
     href: "contact.html",
     className: "btn btn-primary"
-  }, "Discuss Your Project", /*#__PURE__*/React.createElement("span", {
+  }, "Get Your Free Quote", /*#__PURE__*/React.createElement("span", {
     dangerouslySetInnerHTML: {
       __html: CARTER.svg.arrow
     }
   })), /*#__PURE__*/React.createElement("a", {
     href: `mailto:${CARTER.company.email}`,
     className: "btn btn-ghost-dark"
-  }, "Email us")))));
+  }, "Email us")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: '8px',
+      color: 'var(--muted-2)',
+      fontSize: '13px'
+    }
+  }, /*#__PURE__*/React.createElement("svg", {
+    width: "14",
+    height: "14",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: "2",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }, /*#__PURE__*/React.createElement("rect", {
+    x: "3",
+    y: "11",
+    width: "18",
+    height: "11",
+    rx: "2",
+    ry: "2"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M7 11V7a5 5 0 0 1 10 0v4"
+  })), "100% Secure. No obligation. Your data is strictly protected.")))));
 }
 function Home() {
   useScrollReveal();

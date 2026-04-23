@@ -16,17 +16,34 @@ function CommercialHero() {
     title: "Commercial electricians",
     titleAccent: "Chester businesses trust.",
     subtext: "Fit-outs, maintenance contracts and compliance for offices, retail, hospitality, leisure and multi-tenant buildings. One contractor owning distribution, lighting, fire, emergency and data containment from first fix to sign-off.",
-    ctas: /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("a", {
+    ctas: /*#__PURE__*/React.createElement("div", {
+      style: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'flex-start',
+        gap: 10
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      style: {
+        display: 'flex',
+        gap: 16
+      }
+    }, /*#__PURE__*/React.createElement("a", {
       href: "contact.html",
       className: "btn btn-primary"
-    }, "Discuss Your Project", /*#__PURE__*/React.createElement("span", {
+    }, "Get Your Free Quote", /*#__PURE__*/React.createElement("span", {
       dangerouslySetInnerHTML: {
         __html: CARTER.svg.arrow
       }
     })), /*#__PURE__*/React.createElement("a", {
       href: "case-studies.html",
       className: "btn btn-ghost-light"
-    }, "See commercial work"))
+    }, "See commercial work")), /*#__PURE__*/React.createElement("div", {
+      style: {
+        fontSize: '0.85rem',
+        color: 'rgba(255,255,255,0.7)'
+      }
+    }, "Takes 60 seconds \u2022 Receive a proposal within 24 hours."))
   });
 }
 const CAPABILITIES = [{
@@ -322,16 +339,33 @@ function Commercial() {
   }, "\xB7"), " ", CARTER.company.phone), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
+      flexDirection: 'column',
       gap: 12,
       marginTop: 14
     }
   }, /*#__PURE__*/React.createElement("a", {
     href: "contact.html",
     className: "btn btn-primary"
-  }, "Discuss Your Project ", /*#__PURE__*/React.createElement("span", {
+  }, "Get Your Free Quote ", /*#__PURE__*/React.createElement("span", {
     dangerouslySetInnerHTML: {
       __html: CARTER.svg.arrow
     }
-  })))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
+  })), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: '0.85rem',
+      color: 'var(--muted-2)',
+      textAlign: 'center'
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    dangerouslySetInnerHTML: {
+      __html: CARTER.svg.lock || '&#128274;'
+    },
+    style: {
+      display: 'inline-block',
+      width: 12,
+      marginRight: 6,
+      verticalAlign: 'middle'
+    }
+  }), "100% Secure. Zero obligation. Your data is strictly protected."))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
 }
 ReactDOM.hydrateRoot(document.getElementById('root'), /*#__PURE__*/React.createElement(Commercial, null));

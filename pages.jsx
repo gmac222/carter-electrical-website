@@ -117,7 +117,7 @@ function ServicesPage() {
                 <div style={{ marginTop: 28 }}>
                   {s.slug === 'commercial'
                     ? <a href="commercial.html" className="btn btn-ghost-dark">Commercial deep-dive <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }}/></a>
-                    : <a href="contact.html" className="btn btn-ghost-dark">Discuss {s.title.toLowerCase()} <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }}/></a>}
+                    : <a href="contact.html" className="btn btn-ghost-dark">Get your free quote <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }}/></a>}
                 </div>
               </div>
             </div>
@@ -135,7 +135,13 @@ function ServicesPage() {
           <div className="cta-aside">
             <div className="label-mono">Direct line</div>
             <a href={CARTER.company.phoneHref} className="phone-big"><span className="accent">·</span> {CARTER.company.phone}</a>
-            <a href="contact.html" className="btn btn-primary" style={{ marginTop: 14 }}>Discuss Your Project <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }}/></a>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginTop: 14 }}>
+              <a href="contact.html" className="btn btn-primary" style={{ marginTop: 0 }}>Get Your Free Quote <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }}/></a>
+              <div style={{ fontSize: '0.85rem', color: 'var(--muted-2)', textAlign: 'center' }}>
+                <span dangerouslySetInnerHTML={{ __html: CARTER.svg.lock || '&#128274;' }} style={{ display: 'inline-block', width: 12, marginRight: 6, verticalAlign: 'middle' }} />
+                100% Secure. Zero obligation. Your data is strictly protected.
+              </div>
+            </div>
           </div>
         </div>
       </section>
