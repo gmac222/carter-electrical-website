@@ -219,18 +219,18 @@ function ContactPage() {
                 <div className="contact-row"><span className="k">NICEIC</span><span className="v">Approved Contractor</span></div>
                 <div className="contact-row"><span className="k">OZEV</span><span className="v">EV Installer</span></div>
               </div>
-              <div className="static-map">
-                <div className="map-bg"/>
-                <div className="static-map" style={{ position: 'absolute', inset: 0, border: 0, background: 'transparent' }}>
-                  <div style={{ position: 'absolute', left: '5%', top: '40%', right: '95%', height: 3, background: 'rgba(255,255,255,0.1)', width: '90%' }}/>
-                  <div style={{ position: 'absolute', left: '48%', top: '0%', bottom: '0%', width: 3, background: 'rgba(255,255,255,0.08)', height: '100%' }}/>
-                </div>
-                <div className="hq-pin">
-                  <div className="pulse"/>
-                  <div className="pin-core"/>
-                  <div className="pin-addr"><strong>HQ</strong>White Lane Depot · CH3 6AH</div>
-                </div>
-                <div style={{ position: 'absolute', bottom: 14, left: 14, fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.14em', color: 'rgba(255,255,255,0.4)' }}>CHRISTLETON · CHESTER · 53°11′N · 02°50′W</div>
+              <div className="static-map" style={{ overflow: 'hidden', position: 'relative' }}>
+                <iframe
+                  title="Carter Electrical Contracting — White Lane Depot, Christleton, Chester CH3 6AH"
+                  src="https://www.google.com/maps?q=Unit%205%20White%20Lane%20Depot%2C%20White%20Lane%2C%20Christleton%2C%20Chester%20CH3%206AH&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0, position: 'absolute', inset: 0 }}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  allowFullScreen
+                />
+                <div style={{ position: 'absolute', bottom: 14, left: 14, fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.14em', color: 'rgba(255,255,255,0.8)', background: 'rgba(0,0,0,0.55)', padding: '6px 10px', pointerEvents: 'none' }}>CHRISTLETON · CHESTER · 53°11′N · 02°50′W</div>
               </div>
             </div>
           </div>

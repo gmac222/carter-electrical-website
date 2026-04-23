@@ -2,6 +2,28 @@
 
 const { useState, useEffect, useRef } = React;
 
+// Inject favicon + Apple touch icon + theme colour into every page's <head>.
+// Done at runtime so linter-driven head rewrites (preload dumps etc.) don't
+// strip them. Runs once per page load and is idempotent.
+(function injectHeadAssets() {
+  if (typeof document === 'undefined' || document.head.dataset.carterHeadInjected) return;
+  document.head.dataset.carterHeadInjected = '1';
+  const links = [
+    { rel: 'icon',             type: 'image/png', sizes: '32x32', href: 'uploads/favicon-32x32-1.png' },
+    { rel: 'shortcut icon',    type: 'image/png',                 href: 'uploads/favicon-32x32-1.png' },
+    { rel: 'apple-touch-icon',                                    href: 'uploads/favicon-32x32-1.png' },
+  ];
+  links.forEach(attrs => {
+    const el = document.createElement('link');
+    Object.entries(attrs).forEach(([k, v]) => el.setAttribute(k, v));
+    document.head.appendChild(el);
+  });
+  const theme = document.createElement('meta');
+  theme.setAttribute('name', 'theme-color');
+  theme.setAttribute('content', '#111111');
+  document.head.appendChild(theme);
+})();
+
 window.Logo = function Logo({ light = true }) {
   const white = light ? '#ffffff' : '#111111';
   return (
@@ -69,11 +91,11 @@ window.Header = function Header({ current = 'home', theme = 'dark' }) {
 
 window.TrustBar = function TrustBar() {
   const items = [
-    { glyph: CARTER.svg.niceic, top: 'NICEIC', bottom: 'Approved Contractor' },
-    { glyph: CARTER.svg.clock,  top: '24 / 7', bottom: 'Emergency Call-out' },
-    { glyph: CARTER.svg.pin,    top: 'Chester · CH3', bottom: 'Local & On-Call' },
-    { glyph: CARTER.svg.bolt,   top: 'OZEV Registered', bottom: 'EV Charger Install' },
-    { glyph: CARTER.svg.shield, top: '18th Edition', bottom: 'BS 7671 Compliant' },
+    { img: 'uploads/nic.png',       alt: 'NICEIC Approved Contractor logo', top: 'NICEIC',          bottom: 'Approved Contractor' },
+    { glyph: CARTER.svg.clock,                                             top: '24 / 7',          bottom: 'Emergency Call-out' },
+    { glyph: CARTER.svg.pin,                                               top: 'Chester · CH3',   bottom: 'Local & On-Call' },
+    { img: 'uploads/ozev-logo.jpg', alt: 'OZEV-approved EV charger installer logo', top: 'OZEV Registered', bottom: 'EV Charger Install' },
+    { glyph: CARTER.svg.shield,                                            top: '18th Edition',    bottom: 'BS 7671 Compliant' },
   ];
   return (
     <div className="trust-bar">
@@ -81,7 +103,9 @@ window.TrustBar = function TrustBar() {
         <div className="trust-row">
           {items.map((it, i) => (
             <div className="trust-item" key={i}>
-              <span className="glyph" dangerouslySetInnerHTML={{ __html: it.glyph }} />
+              {it.img
+                ? <img className="glyph" src={it.img} alt={it.alt} loading="lazy" style={{ width: 28, height: 28, objectFit: 'contain' }} />
+                : <span className="glyph" dangerouslySetInnerHTML={{ __html: it.glyph }} />}
               <span>
                 <strong>{it.top}</strong>
                 <small>{it.bottom}</small>
