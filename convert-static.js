@@ -45,7 +45,12 @@ jsxFilesToCompile.forEach(file => {
       presets: ['@babel/preset-react']
     });
     const outPath = filePath.replace('.jsx', '.js');
-    fs.writeFileSync(outPath, result.code);
+    let outCode = result.code;
+    outCode = outCode.replace(
+      /ReactDOM\.createRoot\((document\.getElementById\('[^']+'\))\)\.render\(([\s\S]+)\);?/,
+      'ReactDOM.hydrateRoot($1, $2);'
+    );
+    fs.writeFileSync(outPath, outCode);
     console.log(`Compiled ${file} to ${outPath}`);
   }
 });
@@ -57,9 +62,7 @@ htmlFiles.forEach(htmlFile => {
   console.log(`Processing ${htmlFile}...`);
   let htmlContent = fs.readFileSync(htmlPath, 'utf8');
   
-  // Create a JSDOM instance with runScripts enabled so we can use window.eval
   const dom = new JSDOM(htmlContent, {
-    url: "https://carterelec.co.uk/" + htmlFile,
     runScripts: "outside-only"
   });
   
@@ -145,7 +148,7 @@ htmlFiles.forEach(htmlFile => {
         script.setAttribute('type', 'text/javascript');
         // Replace createRoot with hydrateRoot
         let browserCode = script.textContent.replace(
-          /ReactDOM\.createRoot\(([^)]+)\)\.render\(([\s\S]+)\);?/,
+          /ReactDOM\.createRoot\((document\.getElementById\('[^']+'\))\)\.render\(([\s\S]+)\);?/,
           'ReactDOM.hydrateRoot($1, $2);'
         );
         script.textContent = babel.transformSync(browserCode, { presets: ['@babel/preset-react'] }).code;
@@ -160,7 +163,7 @@ htmlFiles.forEach(htmlFile => {
         }
         
         let browserCode = script.textContent.replace(
-          /ReactDOM\.createRoot\(([^)]+)\)\.render\(([\s\S]+)\);?/,
+          /ReactDOM\.createRoot\((document\.getElementById\('[^']+'\))\)\.render\(([\s\S]+)\);?/,
           'ReactDOM.hydrateRoot($1, $2);'
         );
         script.textContent = browserCode;
@@ -173,6 +176,11 @@ htmlFiles.forEach(htmlFile => {
     const rootDiv = dom.window.document.getElementById('root');
     if (rootDiv) {
       rootDiv.innerHTML = renderedHtml;
+      
+      const hoistedTags = rootDiv.querySelectorAll('link, meta, title, style');
+      hoistedTags.forEach(tag => {
+        dom.window.document.head.appendChild(tag);
+      });
     }
   } else {
     console.warn(`No component captured for ${htmlFile}`);

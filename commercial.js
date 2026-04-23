@@ -334,4 +334,4 @@ function Commercial() {
     }
   })))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
 }
-ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/React.createElement(Commercial, null));
+ReactDOM.hydrateRoot(document.getElementById('root'), /*#__PURE__*/React.createElement(Commercial, null));
