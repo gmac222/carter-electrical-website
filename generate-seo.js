@@ -257,7 +257,7 @@ function buildHtml(area) {
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>${esc(title)}</title>
   <meta name="description" content="${esc(area.metaDesc)}"/>
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
+  <meta name="robots" content="noindex, nofollow"/>
   <link rel="canonical" href="${url}" />
 
   <meta property="og:title" content="${esc(title)}" />
