@@ -106,37 +106,50 @@ function Hero() {
 
 function Intro() {
   return (
-    <section className="intro reveal" style={{ padding: '120px 0 80px' }}>
+    <section className="section-y light reveal">
       <div className="wrap">
-        <div className="intro-grid">
-          
-          {/* Left Column: Heading */}
-          <div>
-            <div className="eyebrow" style={{ marginBottom: '24px' }}>Electrician in Chester</div>
-            <h2 className="h-2" style={{ marginBottom: '28px', maxWidth: '18ch' }}>
-              NICEIC approved electrical contractor serving Cheshire West<span className="accent">.</span>
-            </h2>
-            <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start', marginTop: '32px' }}>
-              <div style={{ width: '32px', height: '2px', background: 'var(--accent)', marginTop: '8px', flexShrink: 0 }}></div>
-              <p className="label-mono" style={{ color: 'var(--muted)', maxWidth: '280px', textTransform: 'none', letterSpacing: '0', fontSize: '13px' }}>
-                Fully certified, documented, and handed over on schedule.
-              </p>
-            </div>
-            </div>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '60px', alignItems: 'stretch' }}>
 
-          {/* Right Column: Content */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-            <p className="lede" style={{ color: 'var(--ink)' }}>
-              <strong>Carter Electrical</strong> is an NICEIC approved electrical contractor serving Cheshire West and the wider Cheshire area. Our electrical services cover domestic, commercial and industrial electrical work across the local area. An electrician in Chester who is Part P qualified delivers every job to current building regulations and BS 7671.
+          {/* Left: heading + body text */}
+          <div className="section-head" style={{ marginBottom: 0, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+            <div>
+              <div className="eyebrow">Electrician in Chester</div>
+              <h2 className="h-1" style={{ marginTop: '12px' }}>
+                NICEIC approved electrical contractor serving Cheshire West<span className="accent">.</span>
+              </h2>
+            </div>
+            <p className="lede" style={{ marginTop: '28px' }}>
+              <strong>Carter Electrical</strong> is an NICEIC approved electrical contractor serving Cheshire West and the wider Cheshire area. Our electrical services cover domestic, commercial and industrial electrical work across the local area. Every job is Part P qualified, compliant with current building regulations and BS&nbsp;7671, and signed off with full documentation.
             </p>
-            <p className="lede">
-              Typical projects include a full rewire, consumer unit replacement, socket and light fitting installation, and electrical repairs. We handle single sockets, a full commercial electrical fit-out, or a fault repair with the same certified standard. Every job must comply with current regulations and is tested and signed off.
-            </p>
-            <p className="lede">
-              Our team also covers portable appliance testing, EICR inspections and fuse board upgrades. Proper qualification and electrical wiring compliance on every installation.
+            <p className="lede" style={{ marginTop: '16px' }}>
+              Typical projects include full rewires, consumer unit replacements, socket and light fitting installation, and electrical repairs — from a single socket to a full commercial electrical fit-out or fault repair, all delivered to the same certified standard.
             </p>
           </div>
 
+          {/* Right: image */}
+          <div className="area-image" style={{ height: '100%', width: '100%', position: 'relative', minHeight: '300px' }}>
+            <img
+              src="Home - Carter Electrical Contractors man with clipboard.jpg"
+              alt="Carter Electrical Contractors — NICEIC approved electrician in Chester"
+              style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', borderRadius: '4px', boxShadow: '0 8px 32px rgba(0,0,0,0.12)' }}
+            />
+          </div>
+        </div>
+
+        {/* Facts strip */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 1, background: 'var(--rule)', border: '1px solid var(--rule)', marginTop: 40 }}>
+          {[
+            { k: 'Coverage', v: 'Chester & Cheshire West' },
+            { k: 'Response time', v: 'Same working day' },
+            { k: 'Distance from HQ', v: 'Christleton, CH3 6AH' },
+            { k: 'Accreditation', v: 'NICEIC + OZEV' },
+            { k: 'Est.', v: '2008 · 17+ years' },
+          ].map((r, i) => (
+            <div key={i} style={{ background: 'var(--white)', padding: '24px 22px' }}>
+              <div className="mono" style={{ fontSize: 11, letterSpacing: '0.16em', color: 'var(--muted)', textTransform: 'uppercase' }}>{r.k}</div>
+              <div className="display" style={{ fontSize: 16, fontWeight: 500, marginTop: 6 }}>{r.v}</div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -432,8 +445,8 @@ function Home() {
       <Header current="home" theme="dark" />
       <Hero />
       <TrustBar />
-      <Intro />
       <Services />
+      <Intro />
       <Stats />
       <Cases />
       <Testimonials />

@@ -171,67 +171,109 @@ function Hero() {
 }
 function Intro() {
   return /*#__PURE__*/React.createElement("section", {
-    className: "intro reveal",
-    style: {
-      padding: '120px 0 80px'
-    }
+    className: "section-y light reveal"
   }, /*#__PURE__*/React.createElement("div", {
     className: "wrap"
   }, /*#__PURE__*/React.createElement("div", {
-    className: "intro-grid"
-  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
-    className: "eyebrow",
     style: {
-      marginBottom: '24px'
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+      gap: '60px',
+      alignItems: 'stretch'
     }
-  }, "Electrician in Chester"), /*#__PURE__*/React.createElement("h2", {
-    className: "h-2",
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "section-head",
     style: {
-      marginBottom: '28px',
-      maxWidth: '18ch'
+      marginBottom: 0,
+      height: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center'
+    }
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    className: "eyebrow"
+  }, "Electrician in Chester"), /*#__PURE__*/React.createElement("h2", {
+    className: "h-1",
+    style: {
+      marginTop: '12px'
     }
   }, "NICEIC approved electrical contractor serving Cheshire West", /*#__PURE__*/React.createElement("span", {
     className: "accent"
-  }, ".")), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'flex',
-      gap: '16px',
-      alignItems: 'flex-start',
-      marginTop: '32px'
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      width: '32px',
-      height: '2px',
-      background: 'var(--accent)',
-      marginTop: '8px',
-      flexShrink: 0
-    }
-  }), /*#__PURE__*/React.createElement("p", {
-    className: "label-mono",
-    style: {
-      color: 'var(--muted)',
-      maxWidth: '280px',
-      textTransform: 'none',
-      letterSpacing: '0',
-      fontSize: '13px'
-    }
-  }, "Fully certified, documented, and handed over on schedule."))), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'flex',
-      flexDirection: 'column',
-      gap: '20px'
-    }
-  }, /*#__PURE__*/React.createElement("p", {
+  }, "."))), /*#__PURE__*/React.createElement("p", {
     className: "lede",
     style: {
-      color: 'var(--ink)'
+      marginTop: '28px'
     }
-  }, /*#__PURE__*/React.createElement("strong", null, "Carter Electrical"), " is an NICEIC approved electrical contractor serving Cheshire West and the wider Cheshire area. Our electrical services cover domestic, commercial and industrial electrical work across the local area. An electrician in Chester who is Part P qualified delivers every job to current building regulations and BS 7671."), /*#__PURE__*/React.createElement("p", {
-    className: "lede"
-  }, "Typical projects include a full rewire, consumer unit replacement, socket and light fitting installation, and electrical repairs. We handle single sockets, a full commercial electrical fit-out, or a fault repair with the same certified standard. Every job must comply with current regulations and is tested and signed off."), /*#__PURE__*/React.createElement("p", {
-    className: "lede"
-  }, "Our team also covers portable appliance testing, EICR inspections and fuse board upgrades. Proper qualification and electrical wiring compliance on every installation.")))));
+  }, /*#__PURE__*/React.createElement("strong", null, "Carter Electrical"), " is an NICEIC approved electrical contractor serving Cheshire West and the wider Cheshire area. Our electrical services cover domestic, commercial and industrial electrical work across the local area. Every job is Part P qualified, compliant with current building regulations and BS\xA07671, and signed off with full documentation."), /*#__PURE__*/React.createElement("p", {
+    className: "lede",
+    style: {
+      marginTop: '16px'
+    }
+  }, "Typical projects include full rewires, consumer unit replacements, socket and light fitting installation, and electrical repairs \u2014 from a single socket to a full commercial electrical fit-out or fault repair, all delivered to the same certified standard.")), /*#__PURE__*/React.createElement("div", {
+    className: "area-image",
+    style: {
+      height: '100%',
+      width: '100%',
+      position: 'relative',
+      minHeight: '300px'
+    }
+  }, /*#__PURE__*/React.createElement("img", {
+    src: "Home - Carter Electrical Contractors man with clipboard.jpg",
+    alt: "Carter Electrical Contractors \u2014 NICEIC approved electrician in Chester",
+    style: {
+      width: '100%',
+      height: '100%',
+      objectFit: 'cover',
+      display: 'block',
+      borderRadius: '4px',
+      boxShadow: '0 8px 32px rgba(0,0,0,0.12)'
+    }
+  }))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+      gap: 1,
+      background: 'var(--rule)',
+      border: '1px solid var(--rule)',
+      marginTop: 40
+    }
+  }, [{
+    k: 'Coverage',
+    v: 'Chester & Cheshire West'
+  }, {
+    k: 'Response time',
+    v: 'Same working day'
+  }, {
+    k: 'Distance from HQ',
+    v: 'Christleton, CH3 6AH'
+  }, {
+    k: 'Accreditation',
+    v: 'NICEIC + OZEV'
+  }, {
+    k: 'Est.',
+    v: '2008 · 17+ years'
+  }].map((r, i) => /*#__PURE__*/React.createElement("div", {
+    key: i,
+    style: {
+      background: 'var(--white)',
+      padding: '24px 22px'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "mono",
+    style: {
+      fontSize: 11,
+      letterSpacing: '0.16em',
+      color: 'var(--muted)',
+      textTransform: 'uppercase'
+    }
+  }, r.k), /*#__PURE__*/React.createElement("div", {
+    className: "display",
+    style: {
+      fontSize: 16,
+      fontWeight: 500,
+      marginTop: 6
+    }
+  }, r.v))))));
 }
 function Services() {
   return /*#__PURE__*/React.createElement("section", {
@@ -618,6 +660,6 @@ function Home() {
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Header, {
     current: "home",
     theme: "dark"
-  }), /*#__PURE__*/React.createElement(Hero, null), /*#__PURE__*/React.createElement(TrustBar, null), /*#__PURE__*/React.createElement(Intro, null), /*#__PURE__*/React.createElement(Services, null), /*#__PURE__*/React.createElement(Stats, null), /*#__PURE__*/React.createElement(Cases, null), /*#__PURE__*/React.createElement(Testimonials, null), /*#__PURE__*/React.createElement(Areas, null), /*#__PURE__*/React.createElement(CTABand, null), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
+  }), /*#__PURE__*/React.createElement(Hero, null), /*#__PURE__*/React.createElement(TrustBar, null), /*#__PURE__*/React.createElement(Services, null), /*#__PURE__*/React.createElement(Intro, null), /*#__PURE__*/React.createElement(Stats, null), /*#__PURE__*/React.createElement(Cases, null), /*#__PURE__*/React.createElement(Testimonials, null), /*#__PURE__*/React.createElement(Areas, null), /*#__PURE__*/React.createElement(CTABand, null), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
 }
 ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/React.createElement(Home, null));
