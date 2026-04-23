@@ -38,9 +38,9 @@ function ContactForm() {
     delete n[key];
     return n;
   });
-  const services = ['Commercial', 'Industrial', 'Domestic', 'Renewables / EV', 'Testing / EICR', 'Emergency'];
+  const services = ['Commercial', 'Industrial', 'Domestic', 'Renewables / EV', 'Testing / EICR', 'Maintenance'];
   const sectors = ['Office', 'Retail', 'Hospitality', 'Healthcare', 'Warehouse', 'Residential', 'Other'];
-  const timings = ['Emergency · now', 'This week', 'Within a month', '1–3 months', '3+ months / scoping'];
+  const timings = ['ASAP', 'This week', 'Within a month', '1–3 months', '3+ months / scoping'];
   const validateStep = () => {
     const errs = {};
     if (step === 0) {
@@ -76,7 +76,7 @@ function ContactForm() {
       dangerouslySetInnerHTML: {
         __html: CARTER.svg.check.replace('width=\"16\"', '')
       }
-    }), /*#__PURE__*/React.createElement("h3", null, "Thanks, ", data.name.split(' ')[0], ". Your enquiry is in."), /*#__PURE__*/React.createElement("p", null, "You'll hear from one of the team within one working day on ", /*#__PURE__*/React.createElement("strong", null, data.email), " or ", /*#__PURE__*/React.createElement("strong", null, data.phone), ". For emergencies, please call us directly."), /*#__PURE__*/React.createElement("div", {
+    }), /*#__PURE__*/React.createElement("h3", null, "Thanks, ", data.name.split(' ')[0], ". Your enquiry is in."), /*#__PURE__*/React.createElement("p", null, "You'll hear from one of the team within one working day on ", /*#__PURE__*/React.createElement("strong", null, data.email), " or ", /*#__PURE__*/React.createElement("strong", null, data.phone), "."), /*#__PURE__*/React.createElement("div", {
       className: "ref"
     }, "Reference \xB7 ", refNum), /*#__PURE__*/React.createElement("div", {
       style: {
@@ -167,7 +167,7 @@ function ContactForm() {
       });
       if (errors.scope) clearErr('scope');
     },
-    placeholder: "e.g. Office fit-out, ~1,200 sq ft, new distribution, LED lighting, emergency, fire alarm integration."
+    placeholder: "e.g. Office fit-out, ~1,200 sq ft, new distribution, LED lighting, fire alarm integration."
   }), errors.scope && /*#__PURE__*/React.createElement("span", {
     className: "err-msg"
   }, errors.scope)), /*#__PURE__*/React.createElement("div", {
@@ -392,4 +392,4 @@ function ContactPage() {
     }
   }, "CHRISTLETON \xB7 CHESTER \xB7 53\xB011\u2032N \xB7 02\xB050\u2032W")))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
 }
-ReactDOM.hydrateRoot(document.getElementById('root'), /*#__PURE__*/React.createElement(ContactPage, null));
+ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/React.createElement(ContactPage, null));

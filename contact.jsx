@@ -23,9 +23,9 @@ function ContactForm() {
   const setErr = (key, msg) => setErrors(e => ({ ...e, [key]: msg }));
   const clearErr = (key) => setErrors(e => { const n = { ...e }; delete n[key]; return n; });
 
-  const services = ['Commercial', 'Industrial', 'Domestic', 'Renewables / EV', 'Testing / EICR', 'Emergency'];
+  const services = ['Commercial', 'Industrial', 'Domestic', 'Renewables / EV', 'Testing / EICR', 'Maintenance'];
   const sectors = ['Office', 'Retail', 'Hospitality', 'Healthcare', 'Warehouse', 'Residential', 'Other'];
-  const timings = ['Emergency · now', 'This week', 'Within a month', '1–3 months', '3+ months / scoping'];
+  const timings = ['ASAP', 'This week', 'Within a month', '1–3 months', '3+ months / scoping'];
 
   const validateStep = () => {
     const errs = {};
@@ -59,7 +59,7 @@ function ContactForm() {
         <div className="form-success">
           <div className="tick-big" dangerouslySetInnerHTML={{ __html: CARTER.svg.check.replace('width=\"16\"', '') }} />
           <h3>Thanks, {data.name.split(' ')[0]}. Your enquiry is in.</h3>
-          <p>You'll hear from one of the team within one working day on <strong>{data.email}</strong> or <strong>{data.phone}</strong>. For emergencies, please call us directly.</p>
+          <p>You'll hear from one of the team within one working day on <strong>{data.email}</strong> or <strong>{data.phone}</strong>.</p>
           <div className="ref">Reference · {refNum}</div>
           <div style={{ marginTop: 24, display: 'flex', gap: 12 }}>
             <a href={CARTER.company.phoneHref} className="btn btn-primary">Call {CARTER.company.phone}</a>
@@ -127,7 +127,7 @@ function ContactForm() {
             <textarea
               value={data.scope}
               onChange={(e) => { update({ scope: e.target.value }); if (errors.scope) clearErr('scope'); }}
-              placeholder="e.g. Office fit-out, ~1,200 sq ft, new distribution, LED lighting, emergency, fire alarm integration."
+              placeholder="e.g. Office fit-out, ~1,200 sq ft, new distribution, LED lighting, fire alarm integration."
             />
             {errors.scope && <span className="err-msg">{errors.scope}</span>}
           </div>

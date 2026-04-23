@@ -18,7 +18,7 @@ function AboutPage() {
         section="About Carter Electrical"
         sectionNum="04 / About"
         title="A regional firm"
-        titleAccent="that punches above its weight."
+        titleAccent={<>that punches above its weight<span className="dot-white">.</span></>}
         subtext="NICEIC-approved electrical contractors based in Christleton, Chester. We deliver commercial, industrial and domestic installations across the North West — scoped candidly, installed by our own team, documented at handover."
       />
 
@@ -83,38 +83,45 @@ function ServicesPage() {
     <>
       <Header current="services" theme="dark"/>
       <PageHero
-        section="Carter Electrical Services"
+        section="Services"
         sectionNum="02 / Services"
-        title="One contractor."
-        titleAccent="The full electrical scope."
-        subtext="Four service lines, one in-house team. Deep-dive pages below — each with scope, compliance and recent work."
+        title={<>One contractor<span className="dot-green">.</span></>}
+        titleAccent={<>The full electrical scope<span className="dot-white">.</span></>}
+        subtext="From replacing a faulty socket to a full commercial fit-out, we deliver work that looks right and tests perfectly. Every time."
       />
 
       {CARTER.services.map((s, i) => (
         <section key={s.slug} id={s.slug} className={`section-y reveal ${i % 2 === 0 ? 'light' : 'bright'}`}>
           <div className="wrap">
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 60, alignItems: 'start' }}>
+            {/* Full-width section header — keeps both columns below aligned at the same Y */}
+            <div style={{ marginBottom: 40 }}>
+              <div className="mono" style={{ fontSize: 11, letterSpacing: '0.16em', color: 'var(--muted)' }}>0{i + 1} / 05</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 20, marginTop: 18 }}>
+                <div className="sc-glyph" style={{ width: 50, height: 50, color: 'var(--accent)', flexShrink: 0 }} dangerouslySetInnerHTML={{ __html: CARTER.svg[s.icon] }}/>
+                <h2 className="h-1" style={{ margin: 0 }}>{s.title}</h2>
+              </div>
+            </div>
+
+            {/* Image (left) and body content (right) — same top baseline, stretched so bottoms meet */}
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 60, alignItems: 'stretch' }}>
               <div>
-                <div className="mono" style={{ fontSize: 11, letterSpacing: '0.16em', color: 'var(--muted)' }}>0{i + 1} / 05</div>
-                <h2 className="h-1" style={{ marginTop: 18, marginBottom: 28 }}>{s.title}</h2>
                 {s.imgSrc && (
-                  <div style={{ height: '280px', position: 'relative', marginBottom: 28, borderRadius: '2px', overflow: 'hidden' }}>
-                    <window.CarterPlaceholder imgSrc={s.imgSrc} titleCaption={s.title} />
+                  <div style={{ height: '100%', minHeight: '320px', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--white)', borderRadius: '16px', boxShadow: '0 8px 32px rgba(0,0,0,0.15)', overflow: 'hidden' }}>
+                    <img src={s.imgSrc} alt={s.title} style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block', borderRadius: '16px' }} />
                   </div>
                 )}
-                <div className="sc-glyph" style={{ width: 60, height: 60, color: 'var(--accent)' }} dangerouslySetInnerHTML={{ __html: CARTER.svg[s.icon] }}/>
               </div>
-              <div>
-                <p className="lede" style={{ color: 'var(--ink-2)' }}>{s.lede}</p>
+              <div style={{ display: 'flex', flexDirection: 'column' }}>
+                <p className="lede" style={{ color: 'var(--ink-2)', marginTop: 0 }}>{s.lede}</p>
                 <div style={{ marginTop: 28, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 1, background: 'var(--rule)', border: '1px solid var(--rule)' }}>
                   {s.bullets.map((c, j) => (
                     <div key={j} style={{ background: 'var(--white)', padding: '22px 20px', display: 'flex', alignItems: 'center', gap: 12 }}>
-                      <span style={{ width: 8, height: 8, background: 'var(--accent)' }}/>
+                      <span style={{ width: 8, height: 8, background: 'var(--accent)', flexShrink: 0 }}/>
                       <span className="display" style={{ fontWeight: 500, fontSize: 15 }}>{c}</span>
                     </div>
                   ))}
                 </div>
-                <div style={{ marginTop: 28 }}>
+                <div style={{ marginTop: 'auto', paddingTop: 28 }}>
                   {s.slug === 'commercial'
                     ? <a href="commercial.html" className="btn btn-ghost-dark">Commercial deep-dive <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }}/></a>
                     : <a href="contact.html" className="btn btn-ghost-dark">Get your free quote <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }}/></a>}
@@ -159,11 +166,11 @@ function AreasPage() {
     <>
       <Header current="areas" theme="dark"/>
       <PageHero
-        section="Carter Electrical Coverage"
-        sectionNum="03 / Areas We Cover"
+        section="Locations"
+        sectionNum="03 / Locations"
         title="Local enough"
-        titleAccent="to be on-site by lunch."
-        subtext="Based in Christleton, with primary coverage within 25 miles and further afield for contract clients."
+        titleAccent={<>to be on-site by lunch<span className="dot-white">.</span></>}
+        subtext="We cover Chester, Cheshire West, and North Wales. If you're in our radius, we can usually have an engineer on-site the same week for scoping, and the same day for emergencies."
       />
 
       <section className="areas" style={{ paddingTop: 60 }}>

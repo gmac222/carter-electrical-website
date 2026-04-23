@@ -108,10 +108,10 @@ window.Header = function Header({
     className: "header-cta"
   }, /*#__PURE__*/React.createElement("div", {
     className: "header-phone",
-    "aria-label": "24/7 call-out"
+    "aria-label": "Call Carter Electrical"
   }, /*#__PURE__*/React.createElement("span", {
     className: "dot"
-  }), /*#__PURE__*/React.createElement("span", null, "24/7 \xB7 ", CARTER.company.phone)), /*#__PURE__*/React.createElement("a", {
+  }), /*#__PURE__*/React.createElement("span", null, CARTER.company.phone)), /*#__PURE__*/React.createElement("a", {
     href: "contact.html",
     className: "btn btn-primary btn-sm"
   }, "Discuss Project", /*#__PURE__*/React.createElement("span", {
@@ -142,9 +142,9 @@ window.TrustBar = function TrustBar() {
     top: 'NICEIC',
     bottom: 'Approved Contractor'
   }, {
-    glyph: CARTER.svg.clock,
-    top: '24 / 7',
-    bottom: 'Emergency Call-out'
+    glyph: CARTER.svg.check,
+    top: 'Fully Insured',
+    bottom: 'Guaranteed Work'
   }, {
     glyph: CARTER.svg.pin,
     top: 'Chester · CH3',
@@ -216,7 +216,7 @@ window.Footer = function Footer() {
       textTransform: 'uppercase',
       color: 'rgba(255,255,255,0.4)'
     }
-  }, "NICEIC \xB7 24/7 \xB7 Est. ", CARTER.company.founded)), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h4", null, "Services"), /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+  }, "NICEIC \xB7 Est. ", CARTER.company.founded)), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h4", null, "Services"), /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
     href: "commercial.html"
   }, "Commercial")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
     href: "services.html#industrial"

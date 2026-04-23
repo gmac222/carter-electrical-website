@@ -62,7 +62,7 @@ const areas = [
     county: 'Cheshire West', distance: '14 miles', responseTime: '45–75 minutes',
     postcodes: ['WA6'],
     neighbourhoods: ['Kingsley', 'Helsby', 'Overton', 'Alvanley', 'Manley', 'Mouldsworth', 'Norley', 'Crowton'],
-    metaDesc: 'NICEIC-approved electricians in Frodsham (WA6). Main Street commercial fit-outs, EICRs, full rewires and OZEV EV chargers across Helsby, Kingsley, Overton, Alvanley and Mouldsworth. On-site within the hour.',
+    metaDesc: 'NICEIC-approved electricians in Frodsham (WA6). Main Street commercial fit-outs, EICRs, full rewires and OZEV EV chargers across Helsby, Kingsley, Overton, Alvanley and Mouldsworth.',
     intro: "Frodsham is a market town with a strong high-street trade, a surrounding belt of Cheshire villages (Kingsley, Helsby, Alvanley, Manley) and a growing commuter population. The WA6 postcode gives us a mix we enjoy: small-to-mid commercial work for the independents on Main Street, EV charger installs across the commuter homes of Helsby and Overton, and sensitive rewires on older stone-built properties.",
     commercialAngle: "Frodsham's independents — restaurants, pubs, salons and the Main Street retail trade — rely on us for quick-turnaround fit-outs, EICRs ahead of lease renewals, and PAT testing programmes.",
     domesticAngle: "Commuter demand dominates: OZEV-approved EV charger installs with load management, full-property rewires where homebuyers' surveys have flagged old wiring, and smart-heating retrofits for the Overton and Helsby stock."
@@ -94,7 +94,7 @@ const areas = [
     neighbourhoods: ['Shotton', "Connah's Quay", 'Queensferry', 'Sealand', 'Hawarden', 'Garden City', 'Sandycroft', 'Mancot', 'Ewloe'],
     metaDesc: 'NICEIC-approved electricians in Deeside (CH5). Deeside Industrial Park three-phase, factory shutdowns, commercial fit-outs, full rewires and EV chargers across Shotton, Connah\'s Quay, Queensferry, Hawarden and Ewloe.',
     intro: "Deeside is defined by the Deeside Industrial Park — one of North Wales' largest employment zones — and the nearby Airbus Broughton site. That shapes what we do here: heavy three-phase industrial supplies, motor-control rewires, planned factory shutdowns, machinery installation and relocation, and preventative-maintenance contracts for manufacturers across CH5.",
-    commercialAngle: "Deeside Industrial Park tenants are the backbone of our commercial work here — scheduled maintenance, RCD and distribution upgrades, compliance testing and emergency call-outs.",
+    commercialAngle: "Deeside Industrial Park tenants are the backbone of our commercial work here — scheduled maintenance, RCD and distribution upgrades, compliance testing and planned remedial works.",
     domesticAngle: "Shotton and Connah's Quay terraced stock needs full rewires and consumer-unit upgrades more often than not, while Hawarden and Ewloe homeowners are mostly calling us for EV chargers, solar-PV add-ons and smart-home retrofits."
   }
 ];
@@ -110,8 +110,8 @@ function buildFaqs(area) {
       a: 'Yes. Carter Electrical Contracting is a fully NICEIC-approved contractor, and every electrician dispatched to ' + area.name + ' works to BS 7671 (18th Edition, including the latest amendments). Certification is issued at handover on every job — EIC, minor works or EICR as appropriate — and logged against the property address so it\'s straightforward to retrieve if you need it for insurance, a landlord pack or a future sale.'
     },
     {
-      q: 'How quickly can you respond to an emergency call-out in ' + area.name + '?',
-      a: 'From our Christleton base we typically reach ' + area.name + ' in ' + area.responseTime + ' for genuine emergencies — loss of power, a burning-plastic smell, water ingress near a consumer unit, or tripped main breakers that won\'t reset. Our phone line is answered during working hours by the same team that schedules the engineers, so you\'ll get an honest answer on timings rather than a call-handler promise.'
+      q: 'What\'s your typical lead time for a new project in ' + area.name + '?',
+      a: 'It depends on scope. A small domestic job — a consumer-unit upgrade, a few additional circuits, a single EV charger — we can usually schedule within a week or two of sign-off. A larger commercial fit-out or industrial installation normally goes through a site visit, a detailed scope and a formal quote first, and we\'ll give you an honest date at that stage rather than overpromise. Our phone is answered during working hours by the same team that schedules the engineers, so you\'ll get a straight answer on timings.'
     },
     {
       q: 'Which ' + area.name + ' postcodes and neighbourhoods do you cover?',

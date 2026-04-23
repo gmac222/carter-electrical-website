@@ -62,9 +62,9 @@ window.Header = function Header({ current = 'home', theme = 'dark' }) {
             ))}
           </nav>
           <div className="header-cta">
-            <div className="header-phone" aria-label="24/7 call-out">
+            <div className="header-phone" aria-label="Call Carter Electrical">
               <span className="dot" />
-              <span>24/7 · {CARTER.company.phone}</span>
+              <span>{CARTER.company.phone}</span>
             </div>
             <a href="contact.html" className="btn btn-primary btn-sm">
               Discuss Project
@@ -87,7 +87,7 @@ window.Header = function Header({ current = 'home', theme = 'dark' }) {
 window.TrustBar = function TrustBar() {
   const items = [
     { img: 'uploads/nic.png',       alt: 'NICEIC Approved Contractor logo', top: 'NICEIC',          bottom: 'Approved Contractor' },
-    { glyph: CARTER.svg.clock,                                             top: '24 / 7',          bottom: 'Emergency Call-out' },
+    { glyph: CARTER.svg.check,                                             top: 'Fully Insured',   bottom: 'Guaranteed Work' },
     { glyph: CARTER.svg.pin,                                               top: 'Chester · CH3',   bottom: 'Local & On-Call' },
     { img: 'uploads/ozev-logo.jpg', alt: 'OZEV-approved EV charger installer logo', top: 'OZEV Registered', bottom: 'EV Charger Install' },
     { glyph: CARTER.svg.shield,                                            top: '18th Edition',    bottom: 'BS 7671 Compliant' },
@@ -125,7 +125,7 @@ window.Footer = function Footer() {
             </p>
             <div className="circuit-rule" style={{ margin: '28px 0 20px', color: 'rgba(255,255,255,0.4)' }} />
             <div className="mono" style={{ fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)' }}>
-              NICEIC · 24/7 · Est. {CARTER.company.founded}
+              NICEIC · Est. {CARTER.company.founded}
             </div>
           </div>
           <div>

@@ -4,11 +4,11 @@ const { Header, Footer, TrustBar, Logo, useScrollReveal, StatNumber, TweaksPanel
 
 const HERO_HEADLINES = {
   outcome: {
-    eyebrow: 'NICEIC · Chester · 24/7',
+    eyebrow: 'NICEIC · Chester · Est. 2008',
     h1: <>Electricians in Chester<span className="accent">.</span></>,
     strapline: (
       <>
-        Electrical services <span className="accent">you can trust.</span>
+        Electrical services <span className="accent">you can trust<span style={{ color: 'var(--white)' }}>.</span></span>
       </>
     ),
     sub: 'Commercial, industrial and domestic electrical services across Cheshire West, North Wales, Wirral and Merseyside. Local electricians covering the full electrics scope from first fix to sign-off.',
@@ -18,7 +18,7 @@ const HERO_HEADLINES = {
     h1: <>NICEIC-approved electricians in Chester<span className="accent">.</span></>,
     strapline: (
       <>
-        Built to <span className="accent">last.</span>
+        Built to <span className="accent">last<span style={{ color: 'var(--white)' }}>.</span></span>
       </>
     ),
     sub: 'Design and install of distribution, lighting, fire, emergency and renewable systems. Fully certified, documented, and handed over on schedule.',
@@ -28,7 +28,7 @@ const HERO_HEADLINES = {
     h1: <>Chester&rsquo;s electricians<span className="accent">.</span></>,
     strapline: (
       <>
-        Commercial-grade<span className="accent">.</span> <span className="accent">Local accountability.</span>
+        Commercial-grade<span className="accent">.</span> <span className="accent">Local accountability<span style={{ color: 'var(--white)' }}>.</span></span>
       </>
     ),
     sub: 'Based in Christleton. On-call across Chester, Wrexham, Wirral, Merseyside and North Wales. The same team, owning the work from first fix to sign-off.',
@@ -94,8 +94,8 @@ function Hero() {
               <span className="v">Chester · Wirral · North Wales</span>
             </div>
             <div className="cell">
-              <span className="k">Response</span>
-              <span className="v">24/7 · <span className="accent">emergency call-out</span></span>
+              <span className="k">Assurance</span>
+              <span className="v">Fully Insured · <span className="accent">Guaranteed Work</span></span>
             </div>
           </div>
         </div>
@@ -122,7 +122,7 @@ function Intro() {
                 Fully certified, documented, and handed over on schedule.
               </p>
             </div>
-          </div>
+            </div>
 
           {/* Right Column: Content */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
@@ -133,7 +133,7 @@ function Intro() {
               Typical projects include a full rewire, consumer unit replacement, socket and light fitting installation, and electrical repairs. We handle single sockets, a full commercial electrical fit-out, or a fault repair with the same certified standard. Every job must comply with current regulations and is tested and signed off.
             </p>
             <p className="lede">
-              Our team also covers portable appliance testing, EICR inspections, fuse board upgrades and emergency call-outs. Proper qualification and electrical wiring compliance on every installation.
+              Our team also covers portable appliance testing, EICR inspections and fuse board upgrades. Proper qualification and electrical wiring compliance on every installation.
             </p>
           </div>
 
@@ -213,8 +213,8 @@ function Stats() {
             <span className="l">Projects delivered across the region</span>
           </div>
           <div className="stat">
-            <StatNumber target={24} unit="/7" />
-            <span className="l">Emergency response for clients on contract</span>
+            <StatNumber target={1} unit=" day" />
+            <span className="l">Typical response on contract enquiries</span>
           </div>
           <div className="stat">
             <StatNumber target={100} unit="%" />
@@ -349,27 +349,12 @@ function Areas() {
         </div>
 
         <div className="areas-grid">
-          <div className="area-map">
-            <div className="map-grid" />
-            <svg viewBox="0 0 100 100" preserveAspectRatio="none" style={{ position: 'absolute', inset: 0 }}>
-              {/* Abstracted region outline (not geographic — suggestive) */}
-              <path d="M5,35 Q15,20 30,18 L45,10 Q60,12 70,22 Q82,28 88,42 Q92,58 84,72 Q74,84 60,86 Q42,90 28,82 Q14,74 8,58 Q2,48 5,35Z"
-                    fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.12)" strokeWidth="0.25"/>
-              <path d="M20,45 L80,45 M50,15 L50,80" stroke="rgba(255,255,255,0.05)" strokeWidth="0.2" strokeDasharray="1 1"/>
-            </svg>
-            <div className="map-crosshair">53°11′N · 02°50′W</div>
-            {map.map((p) => (
-              <div
-                key={p.name}
-                className={`pin ${p.hq ? 'hq' : ''} ${active === p.name ? 'active' : ''}`}
-                style={{ left: `${p.x}%`, top: `${p.y}%` }}
-                onMouseEnter={() => setActive(p.name)}
-                onClick={() => setActive(p.name)}
-              >
-                <span className="dot" />
-                <span className="pin-label">{p.name}</span>
-              </div>
-            ))}
+          <div className="area-image" style={{ position: 'relative', borderRadius: '2px', overflow: 'hidden' }}>
+            <img 
+              src="Carter Electrical Contractors man with clipboard.jpg" 
+              alt="Home - Carter Electrical Contractors man with clipboard" 
+              style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} 
+            />
           </div>
           <div className="area-detail">
             <div>
@@ -378,7 +363,7 @@ function Areas() {
               <p style={{ color: 'rgba(255,255,255,0.7)', maxWidth: '42ch' }}>
                 {active === 'Chester'
                   ? 'Our base. Domestic work, commercial maintenance contracts, hospitality fit-outs across the city.'
-                  : `NICEIC electrical services in ${active}. Commercial, domestic and industrial installations, maintenance and emergency response.`}
+                  : `NICEIC electrical services in ${active}. Commercial, domestic and industrial installations and maintenance.`}
               </p>
             </div>
             <div className="area-list">
@@ -420,7 +405,7 @@ function CTABand() {
           <a href={CARTER.company.phoneHref} className="phone-big">
             <span className="accent">·</span> {CARTER.company.phone}
           </a>
-          <div className="label-mono" style={{ color: 'var(--muted-2)' }}>Mon–Fri 07:30–17:30 · 24/7 emergency</div>
+          <div className="label-mono" style={{ color: 'var(--muted-2)' }}>Mon–Fri 07:30–17:30</div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginTop: '14px' }}>
             <div style={{ display: 'flex', gap: 12 }}>
               <a href="contact.html" className="btn btn-primary">

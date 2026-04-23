@@ -11,13 +11,17 @@ const {
 } = window;
 const HERO_HEADLINES = {
   outcome: {
-    eyebrow: 'NICEIC · Chester · 24/7',
+    eyebrow: 'NICEIC · Chester · Est. 2008',
     h1: /*#__PURE__*/React.createElement(React.Fragment, null, "Electricians in Chester", /*#__PURE__*/React.createElement("span", {
       className: "accent"
     }, ".")),
     strapline: /*#__PURE__*/React.createElement(React.Fragment, null, "Electrical services ", /*#__PURE__*/React.createElement("span", {
       className: "accent"
-    }, "you can trust.")),
+    }, "you can trust", /*#__PURE__*/React.createElement("span", {
+      style: {
+        color: 'var(--white)'
+      }
+    }, "."))),
     sub: 'Commercial, industrial and domestic electrical services across Cheshire West, North Wales, Wirral and Merseyside. Local electricians covering the full electrics scope from first fix to sign-off.'
   },
   credential: {
@@ -27,7 +31,11 @@ const HERO_HEADLINES = {
     }, ".")),
     strapline: /*#__PURE__*/React.createElement(React.Fragment, null, "Built to ", /*#__PURE__*/React.createElement("span", {
       className: "accent"
-    }, "last.")),
+    }, "last", /*#__PURE__*/React.createElement("span", {
+      style: {
+        color: 'var(--white)'
+      }
+    }, "."))),
     sub: 'Design and install of distribution, lighting, fire, emergency and renewable systems. Fully certified, documented, and handed over on schedule.'
   },
   regional: {
@@ -39,7 +47,11 @@ const HERO_HEADLINES = {
       className: "accent"
     }, "."), " ", /*#__PURE__*/React.createElement("span", {
       className: "accent"
-    }, "Local accountability.")),
+    }, "Local accountability", /*#__PURE__*/React.createElement("span", {
+      style: {
+        color: 'var(--white)'
+      }
+    }, "."))),
     sub: 'Based in Christleton. On-call across Chester, Wrexham, Wirral, Merseyside and North Wales. The same team, owning the work from first fix to sign-off.'
   }
 };
@@ -151,11 +163,11 @@ function Hero() {
     className: "cell"
   }, /*#__PURE__*/React.createElement("span", {
     className: "k"
-  }, "Response"), /*#__PURE__*/React.createElement("span", {
+  }, "Assurance"), /*#__PURE__*/React.createElement("span", {
     className: "v"
-  }, "24/7 \xB7 ", /*#__PURE__*/React.createElement("span", {
+  }, "Fully Insured \xB7 ", /*#__PURE__*/React.createElement("span", {
     className: "accent"
-  }, "emergency call-out")))))));
+  }, "Guaranteed Work")))))));
 }
 function Intro() {
   return /*#__PURE__*/React.createElement("section", {
@@ -219,7 +231,7 @@ function Intro() {
     className: "lede"
   }, "Typical projects include a full rewire, consumer unit replacement, socket and light fitting installation, and electrical repairs. We handle single sockets, a full commercial electrical fit-out, or a fault repair with the same certified standard. Every job must comply with current regulations and is tested and signed off."), /*#__PURE__*/React.createElement("p", {
     className: "lede"
-  }, "Our team also covers portable appliance testing, EICR inspections, fuse board upgrades and emergency call-outs. Proper qualification and electrical wiring compliance on every installation.")))));
+  }, "Our team also covers portable appliance testing, EICR inspections and fuse board upgrades. Proper qualification and electrical wiring compliance on every installation.")))));
 }
 function Services() {
   return /*#__PURE__*/React.createElement("section", {
@@ -336,11 +348,11 @@ function Stats() {
   }, "Projects delivered across the region")), /*#__PURE__*/React.createElement("div", {
     className: "stat"
   }, /*#__PURE__*/React.createElement(StatNumber, {
-    target: 24,
-    unit: "/7"
+    target: 1,
+    unit: " day"
   }), /*#__PURE__*/React.createElement("span", {
     className: "l"
-  }, "Emergency response for clients on contract")), /*#__PURE__*/React.createElement("div", {
+  }, "Typical response on contract enquiries")), /*#__PURE__*/React.createElement("div", {
     className: "stat"
   }, /*#__PURE__*/React.createElement(StatNumber, {
     target: 100,
@@ -474,42 +486,22 @@ function Areas() {
   }, "Unit 5, White Lane Depot in Christleton. Main coverage within 25 miles, further afield for contract clients.")), /*#__PURE__*/React.createElement("div", {
     className: "areas-grid"
   }, /*#__PURE__*/React.createElement("div", {
-    className: "area-map"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "map-grid"
-  }), /*#__PURE__*/React.createElement("svg", {
-    viewBox: "0 0 100 100",
-    preserveAspectRatio: "none",
+    className: "area-image",
     style: {
-      position: 'absolute',
-      inset: 0
+      position: 'relative',
+      borderRadius: '2px',
+      overflow: 'hidden'
     }
-  }, /*#__PURE__*/React.createElement("path", {
-    d: "M5,35 Q15,20 30,18 L45,10 Q60,12 70,22 Q82,28 88,42 Q92,58 84,72 Q74,84 60,86 Q42,90 28,82 Q14,74 8,58 Q2,48 5,35Z",
-    fill: "rgba(255,255,255,0.03)",
-    stroke: "rgba(255,255,255,0.12)",
-    strokeWidth: "0.25"
-  }), /*#__PURE__*/React.createElement("path", {
-    d: "M20,45 L80,45 M50,15 L50,80",
-    stroke: "rgba(255,255,255,0.05)",
-    strokeWidth: "0.2",
-    strokeDasharray: "1 1"
-  })), /*#__PURE__*/React.createElement("div", {
-    className: "map-crosshair"
-  }, "53\xB011\u2032N \xB7 02\xB050\u2032W"), map.map(p => /*#__PURE__*/React.createElement("div", {
-    key: p.name,
-    className: `pin ${p.hq ? 'hq' : ''} ${active === p.name ? 'active' : ''}`,
+  }, /*#__PURE__*/React.createElement("img", {
+    src: "Carter Electrical Contractors man with clipboard.jpg",
+    alt: "Home - Carter Electrical Contractors man with clipboard",
     style: {
-      left: `${p.x}%`,
-      top: `${p.y}%`
-    },
-    onMouseEnter: () => setActive(p.name),
-    onClick: () => setActive(p.name)
-  }, /*#__PURE__*/React.createElement("span", {
-    className: "dot"
-  }), /*#__PURE__*/React.createElement("span", {
-    className: "pin-label"
-  }, p.name)))), /*#__PURE__*/React.createElement("div", {
+      width: '100%',
+      height: '100%',
+      objectFit: 'cover',
+      display: 'block'
+    }
+  })), /*#__PURE__*/React.createElement("div", {
     className: "area-detail"
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "label-mono",
@@ -526,7 +518,7 @@ function Areas() {
       color: 'rgba(255,255,255,0.7)',
       maxWidth: '42ch'
     }
-  }, active === 'Chester' ? 'Our base. Domestic work, commercial maintenance contracts, hospitality fit-outs across the city.' : `NICEIC electrical services in ${active}. Commercial, domestic and industrial installations, maintenance and emergency response.`)), /*#__PURE__*/React.createElement("div", {
+  }, active === 'Chester' ? 'Our base. Domestic work, commercial maintenance contracts, hospitality fit-outs across the city.' : `NICEIC electrical services in ${active}. Commercial, domestic and industrial installations and maintenance.`)), /*#__PURE__*/React.createElement("div", {
     className: "area-list"
   }, map.map(p => /*#__PURE__*/React.createElement("button", {
     key: p.name,
@@ -571,7 +563,7 @@ function CTABand() {
     style: {
       color: 'var(--muted-2)'
     }
-  }, "Mon\u2013Fri 07:30\u201317:30 \xB7 24/7 emergency"), /*#__PURE__*/React.createElement("div", {
+  }, "Mon\u2013Fri 07:30\u201317:30"), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       flexDirection: 'column',
@@ -628,4 +620,4 @@ function Home() {
     theme: "dark"
   }), /*#__PURE__*/React.createElement(Hero, null), /*#__PURE__*/React.createElement(TrustBar, null), /*#__PURE__*/React.createElement(Intro, null), /*#__PURE__*/React.createElement(Services, null), /*#__PURE__*/React.createElement(Stats, null), /*#__PURE__*/React.createElement(Cases, null), /*#__PURE__*/React.createElement(Testimonials, null), /*#__PURE__*/React.createElement(Areas, null), /*#__PURE__*/React.createElement(CTABand, null), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
 }
-ReactDOM.hydrateRoot(document.getElementById('root'), /*#__PURE__*/React.createElement(Home, null));
+ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/React.createElement(Home, null));

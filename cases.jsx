@@ -107,7 +107,7 @@ function OldDukes() {
           </aside>
           <div className="cs-prose">
             <h3>The brief</h3>
-            <p>An old city-centre tea rooms, converted across two floors into a sports bar. The client needed a single electrical contractor to coordinate distribution, lighting design, AV power, fire and emergency — with a fixed opening date that didn&rsquo;t move.</p>
+            <p>An old city-centre tea rooms, converted across two floors into a sports bar. The client needed a single electrical contractor to coordinate distribution, lighting design, AV power, fire and emergency lighting — with a fixed opening date that didn&rsquo;t move.</p>
             <h3>What we did</h3>
             <p>We scoped the full package during stripping-out week, then phased the installation by floor: first-fix upstairs while the ground floor was still being opened up, then reversed for second-fix. A purpose-built distribution layout accommodated the bar, kitchen, AV walls and a new plant room without an incoming supply upgrade.</p>
             <p>Lighting was specified for sports-viewing and late-evening service — zoned, dimmable, with feature pendants on emergency battery backup. Fire alarm and emergency lighting were designed to BS 5839 / BS 5266 and commissioned alongside final electrical testing.</p>

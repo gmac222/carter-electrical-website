@@ -36,7 +36,9 @@ function AboutPage() {
     section: "About Carter Electrical",
     sectionNum: "04 / About",
     title: "A regional firm",
-    titleAccent: "that punches above its weight.",
+    titleAccent: /*#__PURE__*/React.createElement(React.Fragment, null, "that punches above its weight", /*#__PURE__*/React.createElement("span", {
+      className: "dot-white"
+    }, ".")),
     subtext: "NICEIC-approved electrical contractors based in Christleton, Chester. We deliver commercial, industrial and domestic installations across the North West \u2014 scoped candidly, installed by our own team, documented at handover."
   }), /*#__PURE__*/React.createElement("section", {
     className: "section-y light reveal"
@@ -169,11 +171,15 @@ function ServicesPage() {
     current: "services",
     theme: "dark"
   }), /*#__PURE__*/React.createElement(PageHero, {
-    section: "Carter Electrical Services",
+    section: "Services",
     sectionNum: "02 / Services",
-    title: "One contractor.",
-    titleAccent: "The full electrical scope.",
-    subtext: "Four service lines, one in-house team. Deep-dive pages below \u2014 each with scope, compliance and recent work."
+    title: /*#__PURE__*/React.createElement(React.Fragment, null, "One contractor", /*#__PURE__*/React.createElement("span", {
+      className: "dot-green"
+    }, ".")),
+    titleAccent: /*#__PURE__*/React.createElement(React.Fragment, null, "The full electrical scope", /*#__PURE__*/React.createElement("span", {
+      className: "dot-white"
+    }, ".")),
+    subtext: "From replacing a faulty socket to a full commercial fit-out, we deliver work that looks right and tests perfectly. Every time."
   }), CARTER.services.map((s, i) => /*#__PURE__*/React.createElement("section", {
     key: s.slug,
     id: s.slug,
@@ -182,49 +188,78 @@ function ServicesPage() {
     className: "wrap"
   }, /*#__PURE__*/React.createElement("div", {
     style: {
-      display: 'grid',
-      gridTemplateColumns: '1fr 1.4fr',
-      gap: 60,
-      alignItems: 'start'
+      marginBottom: 40
     }
-  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("div", {
     className: "mono",
     style: {
       fontSize: 11,
       letterSpacing: '0.16em',
       color: 'var(--muted)'
     }
-  }, "0", i + 1, " / 05"), /*#__PURE__*/React.createElement("h2", {
-    className: "h-1",
+  }, "0", i + 1, " / 05"), /*#__PURE__*/React.createElement("div", {
     style: {
-      marginTop: 18,
-      marginBottom: 28
+      display: 'flex',
+      alignItems: 'center',
+      gap: 20,
+      marginTop: 18
     }
-  }, s.title), s.imgSrc && /*#__PURE__*/React.createElement("div", {
-    style: {
-      height: '280px',
-      position: 'relative',
-      marginBottom: 28,
-      borderRadius: '2px',
-      overflow: 'hidden'
-    }
-  }, /*#__PURE__*/React.createElement(window.CarterPlaceholder, {
-    imgSrc: s.imgSrc,
-    titleCaption: s.title
-  })), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("div", {
     className: "sc-glyph",
     style: {
-      width: 60,
-      height: 60,
-      color: 'var(--accent)'
+      width: 50,
+      height: 50,
+      color: 'var(--accent)',
+      flexShrink: 0
     },
     dangerouslySetInnerHTML: {
       __html: CARTER.svg[s.icon]
     }
-  })), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", {
+  }), /*#__PURE__*/React.createElement("h2", {
+    className: "h-1",
+    style: {
+      margin: 0
+    }
+  }, s.title))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'grid',
+      gridTemplateColumns: '1fr 1.4fr',
+      gap: 60,
+      alignItems: 'stretch'
+    }
+  }, /*#__PURE__*/React.createElement("div", null, s.imgSrc && /*#__PURE__*/React.createElement("div", {
+    style: {
+      height: '100%',
+      minHeight: '320px',
+      position: 'relative',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      background: 'var(--white)',
+      borderRadius: '16px',
+      boxShadow: '0 8px 32px rgba(0,0,0,0.15)',
+      overflow: 'hidden'
+    }
+  }, /*#__PURE__*/React.createElement("img", {
+    src: s.imgSrc,
+    alt: s.title,
+    style: {
+      width: '100%',
+      height: '100%',
+      objectFit: 'contain',
+      display: 'block',
+      borderRadius: '16px'
+    }
+  }))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      flexDirection: 'column'
+    }
+  }, /*#__PURE__*/React.createElement("p", {
     className: "lede",
     style: {
-      color: 'var(--ink-2)'
+      color: 'var(--ink-2)',
+      marginTop: 0
     }
   }, s.lede), /*#__PURE__*/React.createElement("div", {
     style: {
@@ -248,7 +283,8 @@ function ServicesPage() {
     style: {
       width: 8,
       height: 8,
-      background: 'var(--accent)'
+      background: 'var(--accent)',
+      flexShrink: 0
     }
   }), /*#__PURE__*/React.createElement("span", {
     className: "display",
@@ -258,7 +294,8 @@ function ServicesPage() {
     }
   }, c)))), /*#__PURE__*/React.createElement("div", {
     style: {
-      marginTop: 28
+      marginTop: 'auto',
+      paddingTop: 28
     }
   }, s.slug === 'commercial' ? /*#__PURE__*/React.createElement("a", {
     href: "commercial.html",
@@ -343,11 +380,13 @@ function AreasPage() {
     current: "areas",
     theme: "dark"
   }), /*#__PURE__*/React.createElement(PageHero, {
-    section: "Carter Electrical Coverage",
-    sectionNum: "03 / Areas We Cover",
+    section: "Locations",
+    sectionNum: "03 / Locations",
     title: "Local enough",
-    titleAccent: "to be on-site by lunch.",
-    subtext: "Based in Christleton, with primary coverage within 25 miles and further afield for contract clients."
+    titleAccent: /*#__PURE__*/React.createElement(React.Fragment, null, "to be on-site by lunch", /*#__PURE__*/React.createElement("span", {
+      className: "dot-white"
+    }, ".")),
+    subtext: "We cover Chester, Cheshire West, and North Wales. If you're in our radius, we can usually have an engineer on-site the same week for scoping, and the same day for emergencies."
   }), /*#__PURE__*/React.createElement("section", {
     className: "areas",
     style: {

@@ -9,7 +9,7 @@ function CommercialHero() {
       sectionNum="02.1 / Services"
       title="Commercial electricians"
       titleAccent="Chester businesses trust."
-      subtext="Fit-outs, maintenance contracts and compliance for offices, retail, hospitality, leisure and multi-tenant buildings. One contractor owning distribution, lighting, fire, emergency and data containment from first fix to sign-off."
+      subtext="Fit-outs, maintenance contracts and compliance for offices, retail, hospitality, leisure and multi-tenant buildings. One contractor owning distribution, lighting, fire, emergency lighting and data containment from first fix to sign-off."
       ctas={
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 10 }}>
           <div style={{ display: 'flex', gap: 16 }}>

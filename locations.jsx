@@ -29,7 +29,7 @@ function LocationPage({ locationName }) {
         sectionNum="03.1 / Location"
         title={`Local electricians covering ${locationName}`}
         titleAccent={`— on-site in ${area.responseTime || 'the same working day'}.`}
-        subtext={`NICEIC-approved commercial, industrial, domestic and renewables electricians serving ${locationName}${area.postcodes && area.postcodes.length ? ' (' + area.postcodes.join(', ') + ')' : ''} and the surrounding ${area.county || 'area'}. Emergency call-outs, EICR testing, EV chargers, full rewires and commercial fit-outs — delivered by our in-house team from our Christleton base, ${area.distance || 'a short drive from'} ${locationName}.`}
+        subtext={`NICEIC-approved commercial, industrial, domestic and renewables electricians serving ${locationName}${area.postcodes && area.postcodes.length ? ' (' + area.postcodes.join(', ') + ')' : ''} and the surrounding ${area.county || 'area'}. EICR testing, EV chargers, full rewires and commercial fit-outs — delivered by our in-house team from our Christleton base, ${area.distance || 'a short drive from'} ${locationName}.`}
         ctas={
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
             <div style={{ display: 'flex', gap: '12px' }}>
@@ -79,29 +79,17 @@ function LocationPage({ locationName }) {
             <div className="section-head" style={{ marginBottom: 0, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
               <div>
                 <div className="eyebrow">Local Electricians in {locationName}</div>
-                <h2 className="h-1">Electrical work in {locationName}, done properly the first time.</h2>
+                <h2 className="h-1">Electrical work in {locationName}, done properly the first time<span className="accent">.</span></h2>
               </div>
               <p className="lede" style={{ marginTop: 'auto' }}>{area.intro}</p>
             </div>
             
-            <div className="area-map" style={{ height: '100%', minHeight: '360px', width: '100%', position: 'relative', background: 'var(--ink)', borderRadius: '2px', overflow: 'hidden' }}>
-              <div className="map-grid" />
-              <svg viewBox="0 0 100 100" preserveAspectRatio="none" style={{ position: 'absolute', inset: 0 }}>
-                <path d="M5,35 Q15,20 30,18 L45,10 Q60,12 70,22 Q82,28 88,42 Q92,58 84,72 Q74,84 60,86 Q42,90 28,82 Q14,74 8,58 Q2,48 5,35Z"
-                      fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.12)" strokeWidth="0.25"/>
-                <path d="M20,45 L80,45 M50,15 L50,80" stroke="rgba(255,255,255,0.05)" strokeWidth="0.2" strokeDasharray="1 1"/>
-              </svg>
-              <div className="map-crosshair">Coverage zone · {locationName}</div>
-              {CARTER.areas.map((p) => (
-                <div
-                  key={p.name}
-                  className={`pin ${p.hq ? 'hq' : ''} ${locationName === p.name ? 'active' : ''}`}
-                  style={{ left: `${p.x}%`, top: `${p.y}%` }}
-                >
-                  <span className="dot" />
-                  <span className="pin-label">{p.name}</span>
-                </div>
-              ))}
+            <div className="area-image" style={{ height: '100%', width: '100%', position: 'relative', minHeight: '300px' }}>
+              <img 
+                src={`Carter Electrical Contractors man with clipboard.jpg`} 
+                alt={`${locationName} - Carter Electrical Contractors man with clipboard`} 
+                style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block', borderRadius: '16px', boxShadow: '0 8px 32px rgba(0,0,0,0.15)' }} 
+              />
             </div>
           </div>
 
@@ -129,7 +117,7 @@ function LocationPage({ locationName }) {
           <div className="section-head">
             <div>
               <div className="eyebrow">Services</div>
-              <h2 className="h-1">The full electrical scope for {locationName}.</h2>
+              <h2 className="h-1">The full electrical scope for {locationName}<span className="accent">.</span></h2>
             </div>
             <p className="lede">
               Five service lines, one in-house team. Here's how each applies to the {locationName} market — and what our {locationName} clients most often call us about.
@@ -140,13 +128,15 @@ function LocationPage({ locationName }) {
             {CARTER.services.map((s, i) => (
               <div key={s.slug} style={{ background: 'var(--white)', border: '1px solid var(--rule)', overflow: 'hidden' }}>
                 {s.imgSrc && (
-                  <div style={{ height: '200px', position: 'relative' }}>
-                    <window.CarterPlaceholder imgSrc={s.imgSrc} titleCaption={s.title + ' in ' + locationName} />
+                  <div style={{ width: '100%', position: 'relative', padding: '16px 16px 0 16px' }}>
+                    <img src={s.imgSrc} alt={`${s.title} in ${locationName}`} style={{ width: '100%', height: '220px', objectFit: 'contain', display: 'block', borderRadius: '16px', boxShadow: '0 8px 32px rgba(0,0,0,0.15)' }} />
                   </div>
                 )}
-                <div style={{ padding: '32px' }}>
-                  <div className="sc-glyph" style={{ width: 40, height: 40, color: 'var(--accent)', marginBottom: 20 }} dangerouslySetInnerHTML={{ __html: CARTER.svg[s.icon] }}/>
-                  <h3 className="h-3" style={{ marginBottom: 12 }}>{s.title} electricians in {locationName}</h3>
+                <div style={{ padding: '32px', paddingTop: '16px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: 20 }}>
+                    <div className="sc-glyph" style={{ width: 40, height: 40, color: 'var(--accent)', flexShrink: 0 }} dangerouslySetInnerHTML={{ __html: CARTER.svg[s.icon] }}/>
+                    <h3 className="h-3" style={{ margin: 0 }}>{s.title} electricians in {locationName}</h3>
+                  </div>
                   <p style={{ color: 'var(--muted-2)', lineHeight: 1.6, marginBottom: 16 }}>{s.lede}</p>
                   <ul className="bullets" style={{ margin: 0, padding: 0, listStyle: 'none' }}>
                     {s.bullets && s.bullets.slice(0, 4).map((bullet, idx) => (
@@ -170,7 +160,7 @@ function LocationPage({ locationName }) {
           {area.commercialAngle && (
             <div>
               <div className="eyebrow">Commercial in {locationName}</div>
-              <h3 className="h-2" style={{ marginTop: 10 }}>Commercial electricians in {locationName}</h3>
+              <h3 className="h-2" style={{ marginTop: 10 }}>Commercial electricians in {locationName}<span className="accent">.</span></h3>
               <p style={{ color: 'var(--muted-2)', lineHeight: 1.7, marginTop: 16 }}>{area.commercialAngle}</p>
               <p style={{ color: 'var(--muted-2)', lineHeight: 1.7, marginTop: 14 }}>
                 Typical scopes we quote for in {locationName}: full distribution and sub-mains replacements, emergency-lighting upgrades to BS 5266, BS 5839-1 fire detection, retail and restaurant fit-outs, data containment and structured cabling, EICR remedials following a failed report, and scheduled shutdowns timed around the business's trading hours.
@@ -180,10 +170,10 @@ function LocationPage({ locationName }) {
           {area.domesticAngle && (
             <div>
               <div className="eyebrow">Domestic in {locationName}</div>
-              <h3 className="h-2" style={{ marginTop: 10 }}>Domestic electricians in {locationName}</h3>
+              <h3 className="h-2" style={{ marginTop: 10 }}>Domestic electricians in {locationName}<span className="accent">.</span></h3>
               <p style={{ color: 'var(--muted-2)', lineHeight: 1.7, marginTop: 16 }}>{area.domesticAngle}</p>
               <p style={{ color: 'var(--muted-2)', lineHeight: 1.7, marginTop: 14 }}>
-                Common domestic jobs across {locationName}: full and partial rewires, consumer-unit (fuseboard) upgrades, OZEV-approved EV charger installs with load management, smart-lighting and smart-heating retrofits, extensions, loft conversions and garage conversions, external lighting and outbuilding supplies, and emergency call-outs when a main breaker keeps tripping.
+                Common domestic jobs across {locationName}: full and partial rewires, consumer-unit (fuseboard) upgrades, OZEV-approved EV charger installs with load management, smart-lighting and smart-heating retrofits, extensions, loft conversions and garage conversions, external lighting and outbuilding supplies, and fault finding when a main breaker keeps tripping.
               </p>
             </div>
           )}
@@ -197,7 +187,7 @@ function LocationPage({ locationName }) {
         <div className="wrap">
           <div style={{ maxWidth: '800px' }}>
             <div className="eyebrow">Neighbourhoods served</div>
-            <h2 className="h-2" style={{ marginTop: 10 }}>Areas of {locationName} we cover</h2>
+            <h2 className="h-2" style={{ marginTop: 10 }}>Areas of {locationName} we cover<span className="accent">.</span></h2>
             <p className="lede" style={{ marginTop: 16 }}>
               Our electricians work across every part of {locationName}{area.postcodes && area.postcodes.length ? ' — covering ' + area.postcodes.join(', ') : ''}. If your address is inside any of the following neighbourhoods, you're well inside our core coverage zone:
             </p>
@@ -225,7 +215,7 @@ function LocationPage({ locationName }) {
         <div className="wrap">
           <div style={{ maxWidth: '800px' }}>
             <div className="eyebrow">Recent work in {locationName}</div>
-            <h2 className="h-2" style={{ marginTop: 10 }}>A {locationName} project we delivered</h2>
+            <h2 className="h-2" style={{ marginTop: 10 }}>A {locationName} project we delivered<span className="accent">.</span></h2>
             <p className="lede" style={{ marginTop: 16 }}>{area.featuredProject}</p>
             {area.cases > 0 && (
               <p style={{ color: 'var(--muted-2)', lineHeight: 1.7, marginTop: 16 }}>
@@ -248,7 +238,7 @@ function LocationPage({ locationName }) {
         <div className="wrap">
           <div style={{ maxWidth: '800px' }}>
             <div className="eyebrow">Questions we get from {locationName}</div>
-            <h2 className="h-2" style={{ marginTop: 10 }}>Frequently asked questions</h2>
+            <h2 className="h-2" style={{ marginTop: 10 }}>Frequently asked questions<span className="accent">.</span></h2>
           </div>
           <div style={{ marginTop: 30, display: 'grid', gap: 1, background: 'var(--rule)', border: '1px solid var(--rule)' }}>
             {faqs.map((f, i) => (
@@ -268,7 +258,7 @@ function LocationPage({ locationName }) {
         <div className="wrap">
           <div style={{ maxWidth: '800px' }}>
             <div className="eyebrow">Also covering</div>
-            <h2 className="h-2" style={{ marginTop: 10 }}>Other areas near {locationName}</h2>
+            <h2 className="h-2" style={{ marginTop: 10 }}>Other areas near {locationName}<span className="accent">.</span></h2>
             <p className="lede" style={{ marginTop: 16 }}>
               We cover the wider {area.county || 'North West'} region from our Chester base. If you're scoping work outside {locationName} proper, the following are also in our core patch:
             </p>
@@ -290,9 +280,9 @@ function LocationPage({ locationName }) {
         <div className="wrap">
           <div>
             <div className="eyebrow">Start a conversation</div>
-            <h2 style={{ marginTop: 20 }}>Need an electrician in {locationName}?<br/>Let's scope it properly.</h2>
+            <h2 style={{ marginTop: 20 }}>Need an electrician in {locationName}?<br/>Let's scope it properly<span className="accent">.</span></h2>
             <p className="lede" style={{ marginTop: 18, maxWidth: '54ch' }}>
-              Brief the scope in three steps. You'll hear back within one working day — or inside the hour for emergency call-outs in {locationName}.
+              Brief the scope in three steps. You'll hear back within one working day.
             </p>
           </div>
           <div className="cta-aside">

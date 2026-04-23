@@ -32,7 +32,7 @@ window.CARTER = {
   testimonials: [
     { quote: 'They handled the entire Old Dukes fit out under a tight programme and kept us informed every step. Genuinely the smoothest trades experience we have had in a Chester job.', author: 'M. Bradshaw', role: 'Director, Old Dukes' },
     { quote: 'Turned up when they said they would, left the site cleaner than they found it, and the price on the quote was the price on the invoice. Can\u2019t ask for more.', author: 'J. Pritchard', role: 'Operations, Quayside' },
-    { quote: 'We had a power fault on a Saturday night. Carter\u2019s had someone here within the hour and the kitchen was back on for Sunday service.', author: 'A. Colley', role: 'Owner, Carbonara No.49' }
+    { quote: 'Kitchen distribution, dimmable lighting and signage — all scoped in one visit and delivered without fuss. Clear certificates at handover and the quote held right through to invoicing.', author: 'A. Colley', role: 'Owner, Carbonara No.49' }
   ],
 
   areas: [
@@ -119,7 +119,7 @@ window.CARTER = {
       postcodes: ['CH5'],
       neighbourhoods: ['Shotton', "Connah's Quay", 'Queensferry', 'Sealand', 'Hawarden', 'Garden City', 'Sandycroft', 'Mancot', 'Ewloe'],
       intro: "Deeside is defined by the Deeside Industrial Park — one of North Wales' largest employment zones — and the nearby Airbus Broughton site. That shapes what we do here: heavy three-phase industrial supplies, motor-control rewires, planned factory shutdowns, machinery installation and relocation, and preventative-maintenance contracts for manufacturers across CH5. We also handle a steady stream of domestic work through Shotton, Connah's Quay, Queensferry and Hawarden, and mid-scale commercial fit-outs in the Garden City and Sandycroft retail areas.",
-      commercialAngle: "Deeside Industrial Park tenants are the backbone of our commercial work here — scheduled maintenance, RCD and distribution upgrades, compliance testing and emergency call-outs. Retail and hospitality around Hawarden and the retail-park strip at Sandycroft pick up the rest.",
+      commercialAngle: "Deeside Industrial Park tenants are the backbone of our commercial work here — scheduled maintenance, RCD and distribution upgrades, compliance testing and planned remedial works. Retail and hospitality around Hawarden and the retail-park strip at Sandycroft pick up the rest.",
       domesticAngle: "Shotton and Connah's Quay terraced stock needs full rewires and consumer-unit upgrades more often than not, while Hawarden and Ewloe homeowners are mostly calling us for EV chargers, solar-PV add-ons and smart-home retrofits.",
       featuredProject: "A planned three-phase distribution upgrade for a Deeside Industrial Park manufacturer, including thermal imaging survey, cable-trunking redesign and a two-phase energisation to avoid production loss.",
       landmarks: ['Deeside Industrial Park', 'Airbus Broughton (nearby)', 'Hawarden Airport', 'Queensferry retail belt', 'Connah’s Quay high street']
@@ -170,7 +170,7 @@ window.CARTER = {
 
 window.CarterPlaceholder = function(props) {
   var hue = props.hue == null ? 35 : props.hue;
-  var bg = props.imgSrc ? '#000' : 'linear-gradient(135deg, hsl(' + hue + ', 10%, 18%) 0%, hsl(' + hue + ', 14%, 8%) 100%)';
+  var bg = props.imgSrc ? 'transparent' : 'linear-gradient(135deg, hsl(' + hue + ', 10%, 18%) 0%, hsl(' + hue + ', 14%, 8%) 100%)';
   var children = [];
   
   if (props.imgSrc) {
@@ -190,7 +190,9 @@ window.CarterPlaceholder = function(props) {
     h('span', { key: 't' }, props.titleCaption),
     h('span', { key: 'y' }, props.year)
   ));
-  return h('div', { className: 'case-photo-placeholder ' + (props.className || ''), style: { background: bg } }, children);
+  
+  var combinedStyle = Object.assign({ background: bg }, props.style || {});
+  return h('div', { className: 'case-photo-placeholder ' + (props.className || ''), style: combinedStyle }, children);
 };
 })();
 
@@ -208,8 +210,8 @@ window.CARTER.locationFaqs = function(area) {
       a: "Yes. Carter Electrical Contracting is a fully NICEIC-approved contractor, and every electrician dispatched to " + area.name + " works to BS 7671 (18th Edition, including the latest amendments). Certification is issued at handover on every job — EIC, minor works or EICR as appropriate — and logged against the property address so it's straightforward to retrieve if you need it for insurance, a landlord pack or a future sale."
     },
     {
-      q: "How quickly can you respond to an emergency call-out in " + area.name + "?",
-      a: "From our Christleton base we typically reach " + area.name + " in " + area.responseTime + " for genuine emergencies — loss of power, a burning-plastic smell, water ingress near a consumer unit, or tripped main breakers that won't reset. Our phone line is answered during working hours by the same team that schedules the engineers, so you'll get an honest answer on timings rather than a call-handler promise."
+      q: "What's your typical lead time for a new project in " + area.name + "?",
+      a: "It depends on scope. A small domestic job — a consumer-unit upgrade, a few additional circuits, a single EV charger — we can usually schedule within a week or two of sign-off. A larger commercial fit-out or industrial installation normally goes through a site visit, a detailed scope and a formal quote first, and we'll give you an honest date at that stage rather than overpromise. Our phone is answered during working hours by the same team that schedules the engineers, so you'll get a straight answer on timings."
     },
     {
       q: "Which " + area.name + " postcodes and neighbourhoods do you cover?",

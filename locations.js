@@ -39,7 +39,7 @@ function LocationPage({
     sectionNum: "03.1 / Location",
     title: `Local electricians covering ${locationName}`,
     titleAccent: `— on-site in ${area.responseTime || 'the same working day'}.`,
-    subtext: `NICEIC-approved commercial, industrial, domestic and renewables electricians serving ${locationName}${area.postcodes && area.postcodes.length ? ' (' + area.postcodes.join(', ') + ')' : ''} and the surrounding ${area.county || 'area'}. Emergency call-outs, EICR testing, EV chargers, full rewires and commercial fit-outs — delivered by our in-house team from our Christleton base, ${area.distance || 'a short drive from'} ${locationName}.`,
+    subtext: `NICEIC-approved commercial, industrial, domestic and renewables electricians serving ${locationName}${area.postcodes && area.postcodes.length ? ' (' + area.postcodes.join(', ') + ')' : ''} and the surrounding ${area.county || 'area'}. EICR testing, EV chargers, full rewires and commercial fit-outs — delivered by our in-house team from our Christleton base, ${area.distance || 'a short drive from'} ${locationName}.`,
     ctas: /*#__PURE__*/React.createElement("div", {
       style: {
         display: 'flex',
@@ -129,62 +129,48 @@ function LocationPage({
       display: 'grid',
       gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
       gap: '60px',
-      alignItems: 'center'
+      alignItems: 'stretch'
     }
   }, /*#__PURE__*/React.createElement("div", {
     className: "section-head",
     style: {
-      marginBottom: 0
+      marginBottom: 0,
+      height: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center'
     }
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "eyebrow"
   }, "Local Electricians in ", locationName), /*#__PURE__*/React.createElement("h2", {
     className: "h-1"
-  }, "Electrical work in ", locationName, ", done properly the first time.")), /*#__PURE__*/React.createElement("p", {
-    className: "lede"
-  }, area.intro)), /*#__PURE__*/React.createElement("div", {
-    className: "area-map",
+  }, "Electrical work in ", locationName, ", done properly the first time", /*#__PURE__*/React.createElement("span", {
+    className: "accent"
+  }, "."))), /*#__PURE__*/React.createElement("p", {
+    className: "lede",
     style: {
-      height: '360px',
+      marginTop: 'auto'
+    }
+  }, area.intro)), /*#__PURE__*/React.createElement("div", {
+    className: "area-image",
+    style: {
+      height: '100%',
       width: '100%',
       position: 'relative',
-      background: 'var(--ink)',
-      borderRadius: '2px',
-      overflow: 'hidden'
+      minHeight: '300px'
     }
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "map-grid"
-  }), /*#__PURE__*/React.createElement("svg", {
-    viewBox: "0 0 100 100",
-    preserveAspectRatio: "none",
+  }, /*#__PURE__*/React.createElement("img", {
+    src: `Carter Electrical Contractors man with clipboard.jpg`,
+    alt: `${locationName} - Carter Electrical Contractors man with clipboard`,
     style: {
-      position: 'absolute',
-      inset: 0
+      width: '100%',
+      height: '100%',
+      objectFit: 'contain',
+      display: 'block',
+      borderRadius: '16px',
+      boxShadow: '0 8px 32px rgba(0,0,0,0.15)'
     }
-  }, /*#__PURE__*/React.createElement("path", {
-    d: "M5,35 Q15,20 30,18 L45,10 Q60,12 70,22 Q82,28 88,42 Q92,58 84,72 Q74,84 60,86 Q42,90 28,82 Q14,74 8,58 Q2,48 5,35Z",
-    fill: "rgba(255,255,255,0.03)",
-    stroke: "rgba(255,255,255,0.12)",
-    strokeWidth: "0.25"
-  }), /*#__PURE__*/React.createElement("path", {
-    d: "M20,45 L80,45 M50,15 L50,80",
-    stroke: "rgba(255,255,255,0.05)",
-    strokeWidth: "0.2",
-    strokeDasharray: "1 1"
-  })), /*#__PURE__*/React.createElement("div", {
-    className: "map-crosshair"
-  }, "Coverage zone \xB7 ", locationName), CARTER.areas.map(p => /*#__PURE__*/React.createElement("div", {
-    key: p.name,
-    className: `pin ${p.hq ? 'hq' : ''} ${locationName === p.name ? 'active' : ''}`,
-    style: {
-      left: `${p.x}%`,
-      top: `${p.y}%`
-    }
-  }, /*#__PURE__*/React.createElement("span", {
-    className: "dot"
-  }), /*#__PURE__*/React.createElement("span", {
-    className: "pin-label"
-  }, p.name))))), /*#__PURE__*/React.createElement("div", {
+  }))), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'grid',
       gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
@@ -239,7 +225,9 @@ function LocationPage({
     className: "eyebrow"
   }, "Services"), /*#__PURE__*/React.createElement("h2", {
     className: "h-1"
-  }, "The full electrical scope for ", locationName, ".")), /*#__PURE__*/React.createElement("p", {
+  }, "The full electrical scope for ", locationName, /*#__PURE__*/React.createElement("span", {
+    className: "accent"
+  }, "."))), /*#__PURE__*/React.createElement("p", {
     className: "lede"
   }, "Five service lines, one in-house team. Here's how each applies to the ", locationName, " market \u2014 and what our ", locationName, " clients most often call us about.")), /*#__PURE__*/React.createElement("div", {
     style: {
@@ -257,15 +245,32 @@ function LocationPage({
     }
   }, s.imgSrc && /*#__PURE__*/React.createElement("div", {
     style: {
-      height: '200px',
-      position: 'relative'
+      width: '100%',
+      position: 'relative',
+      padding: '16px 16px 0 16px'
     }
-  }, /*#__PURE__*/React.createElement(window.CarterPlaceholder, {
-    imgSrc: s.imgSrc,
-    titleCaption: s.title + ' in ' + locationName
+  }, /*#__PURE__*/React.createElement("img", {
+    src: s.imgSrc,
+    alt: `${s.title} in ${locationName}`,
+    style: {
+      width: '100%',
+      height: '220px',
+      objectFit: 'contain',
+      display: 'block',
+      borderRadius: '16px',
+      boxShadow: '0 8px 32px rgba(0,0,0,0.15)'
+    }
   })), /*#__PURE__*/React.createElement("div", {
     style: {
-      padding: '32px'
+      padding: '32px',
+      paddingTop: '16px'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: '16px',
+      marginBottom: 20
     }
   }, /*#__PURE__*/React.createElement("div", {
     className: "sc-glyph",
@@ -273,7 +278,7 @@ function LocationPage({
       width: 40,
       height: 40,
       color: 'var(--accent)',
-      marginBottom: 20
+      flexShrink: 0
     },
     dangerouslySetInnerHTML: {
       __html: CARTER.svg[s.icon]
@@ -281,9 +286,9 @@ function LocationPage({
   }), /*#__PURE__*/React.createElement("h3", {
     className: "h-3",
     style: {
-      marginBottom: 12
+      margin: 0
     }
-  }, s.title, " electricians in ", locationName), /*#__PURE__*/React.createElement("p", {
+  }, s.title, " electricians in ", locationName)), /*#__PURE__*/React.createElement("p", {
     style: {
       color: 'var(--muted-2)',
       lineHeight: 1.6,
@@ -328,7 +333,9 @@ function LocationPage({
     style: {
       marginTop: 10
     }
-  }, "Commercial electricians in ", locationName), /*#__PURE__*/React.createElement("p", {
+  }, "Commercial electricians in ", locationName, /*#__PURE__*/React.createElement("span", {
+    className: "accent"
+  }, ".")), /*#__PURE__*/React.createElement("p", {
     style: {
       color: 'var(--muted-2)',
       lineHeight: 1.7,
@@ -347,7 +354,9 @@ function LocationPage({
     style: {
       marginTop: 10
     }
-  }, "Domestic electricians in ", locationName), /*#__PURE__*/React.createElement("p", {
+  }, "Domestic electricians in ", locationName, /*#__PURE__*/React.createElement("span", {
+    className: "accent"
+  }, ".")), /*#__PURE__*/React.createElement("p", {
     style: {
       color: 'var(--muted-2)',
       lineHeight: 1.7,
@@ -359,7 +368,7 @@ function LocationPage({
       lineHeight: 1.7,
       marginTop: 14
     }
-  }, "Common domestic jobs across ", locationName, ": full and partial rewires, consumer-unit (fuseboard) upgrades, OZEV-approved EV charger installs with load management, smart-lighting and smart-heating retrofits, extensions, loft conversions and garage conversions, external lighting and outbuilding supplies, and emergency call-outs when a main breaker keeps tripping.")))), area.neighbourhoods && area.neighbourhoods.length > 0 && /*#__PURE__*/React.createElement("section", {
+  }, "Common domestic jobs across ", locationName, ": full and partial rewires, consumer-unit (fuseboard) upgrades, OZEV-approved EV charger installs with load management, smart-lighting and smart-heating retrofits, extensions, loft conversions and garage conversions, external lighting and outbuilding supplies, and fault finding when a main breaker keeps tripping.")))), area.neighbourhoods && area.neighbourhoods.length > 0 && /*#__PURE__*/React.createElement("section", {
     className: "section-y reveal"
   }, /*#__PURE__*/React.createElement("div", {
     className: "wrap"
@@ -374,7 +383,9 @@ function LocationPage({
     style: {
       marginTop: 10
     }
-  }, "Areas of ", locationName, " we cover"), /*#__PURE__*/React.createElement("p", {
+  }, "Areas of ", locationName, " we cover", /*#__PURE__*/React.createElement("span", {
+    className: "accent"
+  }, ".")), /*#__PURE__*/React.createElement("p", {
     className: "lede",
     style: {
       marginTop: 16
@@ -432,7 +443,9 @@ function LocationPage({
     style: {
       marginTop: 10
     }
-  }, "A ", locationName, " project we delivered"), /*#__PURE__*/React.createElement("p", {
+  }, "A ", locationName, " project we delivered", /*#__PURE__*/React.createElement("span", {
+    className: "accent"
+  }, ".")), /*#__PURE__*/React.createElement("p", {
     className: "lede",
     style: {
       marginTop: 16
@@ -469,7 +482,9 @@ function LocationPage({
     style: {
       marginTop: 10
     }
-  }, "Frequently asked questions")), /*#__PURE__*/React.createElement("div", {
+  }, "Frequently asked questions", /*#__PURE__*/React.createElement("span", {
+    className: "accent"
+  }, "."))), /*#__PURE__*/React.createElement("div", {
     style: {
       marginTop: 30,
       display: 'grid',
@@ -512,7 +527,9 @@ function LocationPage({
     style: {
       marginTop: 10
     }
-  }, "Other areas near ", locationName), /*#__PURE__*/React.createElement("p", {
+  }, "Other areas near ", locationName, /*#__PURE__*/React.createElement("span", {
+    className: "accent"
+  }, ".")), /*#__PURE__*/React.createElement("p", {
     className: "lede",
     style: {
       marginTop: 16
@@ -560,13 +577,15 @@ function LocationPage({
     style: {
       marginTop: 20
     }
-  }, "Need an electrician in ", locationName, "?", /*#__PURE__*/React.createElement("br", null), "Let's scope it properly."), /*#__PURE__*/React.createElement("p", {
+  }, "Need an electrician in ", locationName, "?", /*#__PURE__*/React.createElement("br", null), "Let's scope it properly", /*#__PURE__*/React.createElement("span", {
+    className: "accent"
+  }, ".")), /*#__PURE__*/React.createElement("p", {
     className: "lede",
     style: {
       marginTop: 18,
       maxWidth: '54ch'
     }
-  }, "Brief the scope in three steps. You'll hear back within one working day \u2014 or inside the hour for emergency call-outs in ", locationName, ".")), /*#__PURE__*/React.createElement("div", {
+  }, "Brief the scope in three steps. You'll hear back within one working day.")), /*#__PURE__*/React.createElement("div", {
     className: "cta-aside"
   }, /*#__PURE__*/React.createElement("div", {
     className: "label-mono"
