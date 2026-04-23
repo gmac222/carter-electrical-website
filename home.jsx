@@ -5,33 +5,30 @@ const { Header, Footer, TrustBar, Logo, useScrollReveal, StatNumber, TweaksPanel
 const HERO_HEADLINES = {
   outcome: {
     eyebrow: 'NICEIC · Chester · 24/7',
-    h1: (
+    h1: 'Electricians in Chester.',
+    strapline: (
       <>
-        Electrician in Chester.<br />
-        Electrical services<br />
-        <span className="accent">you can trust.</span>
+        Electrical services <span className="accent">you can trust.</span>
       </>
     ),
     sub: 'Commercial, industrial and domestic electrical services across Cheshire West, North Wales, Wirral and Merseyside. Local electricians covering the full electrics scope from first fix to sign-off.',
   },
   credential: {
     eyebrow: 'NICEIC Approved · Est. 2008',
-    h1: (
+    h1: 'NICEIC-approved electricians in Chester.',
+    strapline: (
       <>
-        NICEIC-approved<br />
-        electricians in Chester.<br />
-        <span className="accent">Built to last.</span>
+        Built to <span className="accent">last.</span>
       </>
     ),
     sub: 'Design and install of distribution, lighting, fire, emergency and renewable systems. Fully certified, documented, and handed over on schedule.',
   },
   regional: {
     eyebrow: 'Christleton · CH3 6AH',
-    h1: (
+    h1: 'Chester&rsquo;s electricians.',
+    strapline: (
       <>
-        Chester&rsquo;s<br />
-        electricians.<br />
-        <span className="accent">Commercial-grade. Local accountability.</span>
+        Commercial-grade. <span className="accent">Local accountability.</span>
       </>
     ),
     sub: 'Based in Christleton. On-call across Chester, Wrexham, Wirral, Merseyside and North Wales. The same team, owning the work from first fix to sign-off.',
@@ -61,6 +58,7 @@ function Hero() {
           <span>Ref · carterelec.co.uk</span>
         </div>
         <h1 className="h-display">{copy.h1}</h1>
+        {copy.strapline && <div className="hero-strapline">{copy.strapline}</div>}
         <p className="hero-sub">{copy.sub}</p>
         <div className="hero-ctas">
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>

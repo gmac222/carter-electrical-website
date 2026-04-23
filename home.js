@@ -12,23 +12,26 @@ const {
 const HERO_HEADLINES = {
   outcome: {
     eyebrow: 'NICEIC · Chester · 24/7',
-    h1: /*#__PURE__*/React.createElement(React.Fragment, null, "Electrician in Chester.", /*#__PURE__*/React.createElement("br", null), "Electrical services", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("span", {
+    h1: 'Electricians in Chester.',
+    strapline: /*#__PURE__*/React.createElement(React.Fragment, null, "Electrical services ", /*#__PURE__*/React.createElement("span", {
       className: "accent"
     }, "you can trust.")),
     sub: 'Commercial, industrial and domestic electrical services across Cheshire West, North Wales, Wirral and Merseyside. Local electricians covering the full electrics scope from first fix to sign-off.'
   },
   credential: {
     eyebrow: 'NICEIC Approved · Est. 2008',
-    h1: /*#__PURE__*/React.createElement(React.Fragment, null, "NICEIC-approved", /*#__PURE__*/React.createElement("br", null), "electricians in Chester.", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("span", {
+    h1: 'NICEIC-approved electricians in Chester.',
+    strapline: /*#__PURE__*/React.createElement(React.Fragment, null, "Built to ", /*#__PURE__*/React.createElement("span", {
       className: "accent"
-    }, "Built to last.")),
+    }, "last.")),
     sub: 'Design and install of distribution, lighting, fire, emergency and renewable systems. Fully certified, documented, and handed over on schedule.'
   },
   regional: {
     eyebrow: 'Christleton · CH3 6AH',
-    h1: /*#__PURE__*/React.createElement(React.Fragment, null, "Chester\u2019s", /*#__PURE__*/React.createElement("br", null), "electricians.", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("span", {
+    h1: 'Chester&rsquo;s electricians.',
+    strapline: /*#__PURE__*/React.createElement(React.Fragment, null, "Commercial-grade. ", /*#__PURE__*/React.createElement("span", {
       className: "accent"
-    }, "Commercial-grade. Local accountability.")),
+    }, "Local accountability.")),
     sub: 'Based in Christleton. On-call across Chester, Wrexham, Wirral, Merseyside and North Wales. The same team, owning the work from first fix to sign-off.'
   }
 };
@@ -59,7 +62,9 @@ function Hero() {
     className: "dot-green"
   }), " ", copy.eyebrow), /*#__PURE__*/React.createElement("span", null, "01 / Electricians Chester"), /*#__PURE__*/React.createElement("span", null, "Ref \xB7 carterelec.co.uk")), /*#__PURE__*/React.createElement("h1", {
     className: "h-display"
-  }, copy.h1), /*#__PURE__*/React.createElement("p", {
+  }, copy.h1), copy.strapline && /*#__PURE__*/React.createElement("div", {
+    className: "hero-strapline"
+  }, copy.strapline), /*#__PURE__*/React.createElement("p", {
     className: "hero-sub"
   }, copy.sub), /*#__PURE__*/React.createElement("div", {
     className: "hero-ctas"

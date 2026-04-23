@@ -382,6 +382,16 @@ section { position: relative; }
 
 .hero h1 { margin: 0; }
 .hero .accent { color: var(--accent); }
+.hero-strapline {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(24px, 3vw, 40px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  margin-top: 12px;
+}
+.hero-strapline .accent { color: var(--accent); }
 .hero-sub {
   margin-top: 18px;
   max-width: 620px;
