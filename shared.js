@@ -138,7 +138,7 @@ window.CARTER = {
       icon: 'home', slug: 'domestic', imgSrc: 'uploads/domestic-electrical-services.jpg' },
     { title: 'Testing & Inspection', lede: 'EICRs, landlord reports and PAT testing. NICEIC-approved.',
       bullets: ['EICR reports (commercial & domestic)', 'Landlord electrical safety', 'PAT testing', 'New-install certification', 'Remedial works'],
-      icon: 'shield', slug: 'testing', imgSrc: 'uploads/testing_electrical_work.png' },
+      icon: 'shield', slug: 'testing', imgSrc: 'uploads/testing-inspection-service.jpg' },
     { title: 'Renewables & EV', lede: 'EV chargers, solar PV and battery storage. OZEV-approved installer.',
       bullets: ['EV chargers (domestic & commercial)', 'Solar PV & battery', 'Load management', 'Grid application support'],
       icon: 'bolt', slug: 'renewables', imgSrc: 'uploads/renewables-1.jpg' }
