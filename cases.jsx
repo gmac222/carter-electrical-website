@@ -17,9 +17,9 @@ function CaseIndex() {
       <PageHero
         section="Case Studies"
         sectionNum="06 / Work"
-        title="Real installations."
-        titleAccent="Real sign-offs."
-        subtext="A record of work across commercial, hospitality, domestic and industrial — photographed and documented at handover."
+        title="Real projects."
+        titleAccent="Properly delivered."
+        subtext="A proven track record across commercial, hospitality, domestic and industrial work — completed, signed off and documented."
       />
       <section className="cases">
         <div className="wrap">

@@ -73,7 +73,7 @@ function Hero() {
               </a>
             </div>
             <div className="label-mono" style={{ color: 'rgba(255,255,255,0.6)', marginTop: '4px' }}>
-              Takes 60 seconds • Receive a proposal within 24 hours
+              Takes 60 seconds • We'll be in touch within 48 hours
             </div>
           </div>
         </div>
@@ -140,7 +140,7 @@ function Intro() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 1, background: 'var(--rule)', border: '1px solid var(--rule)', marginTop: 40 }}>
           {[
             { k: 'Coverage', v: 'Chester & Cheshire West' },
-            { k: 'Response time', v: 'Same working day' },
+            { k: 'Response time', v: 'Within 48 hours' },
             { k: 'Distance from HQ', v: 'Christleton, CH3 6AH' },
             { k: 'Accreditation', v: 'NICEIC + OZEV' },
             { k: 'Est.', v: '2008 · 17+ years' },
@@ -317,7 +317,7 @@ function Testimonials() {
         <div className="section-head">
           <div>
             <div className="eyebrow">05 · In their words</div>
-            <h2 className="h-1">Clients who came<br/>back for the next one<span className="accent">.</span></h2>
+            <h2 className="h-1">Client Testimonials<span className="accent">.</span></h2>
           </div>
           <p className="lede">
             Representative feedback from recent commercial and domestic clients,
@@ -353,11 +353,10 @@ function Areas() {
         <div className="section-head" style={{ marginBottom: 50 }}>
           <div>
             <div className="eyebrow" style={{ color: '#8a8a85' }}>06 · Areas we cover</div>
-            <h2 className="h-1">Local enough<br/>to be on-site by lunch<span className="accent">.</span></h2>
+            <h2 className="h-1">Covering Cheshire,<br/>the Wirral &amp; North Wales<span className="accent">.</span></h2>
           </div>
           <p className="lede" style={{ color: 'rgba(255,255,255,0.7)' }}>
-            Unit 5, White Lane Depot in Christleton. Main coverage within 25 miles,
-            further afield for contract clients.
+            Based at Unit 5, White Lane Depot in Christleton. Regular coverage across a 40–50 mile radius for both planned works and urgent call-outs.
           </p>
         </div>
 
@@ -405,12 +404,10 @@ function CTABand() {
         <div>
           <div className="eyebrow">07 · Start a conversation</div>
           <h2 style={{ marginTop: 20 }}>
-            Get Your Free Quote<span className="accent">.</span><br/>Quick, transparent, zero obligation<span className="accent">.</span>
+            Get Your Free Quote<span className="accent">.</span><br/>Quick &amp; no obligation<span className="accent">.</span>
           </h2>
           <p className="lede" style={{ marginTop: 18, maxWidth: '54ch' }}>
-            Share the scope, the site and the timescale. You&rsquo;ll hear back within
-            one working day with the next sensible step — a site visit, a scoping
-            call, or a straight proposal.
+            Share the scope, the site and the timescale. We&rsquo;ll be in touch shortly to talk through the next sensible step — a site visit, a scoping call, or a straight proposal.
           </p>
         </div>
         <div className="cta-aside">
@@ -447,7 +444,6 @@ function Home() {
       <TrustBar />
       <Services />
       <Intro />
-      <Stats />
       <Cases />
       <Testimonials />
       <Areas />

@@ -321,13 +321,13 @@ function ServicesPage() {
     style: {
       marginTop: 20
     }
-  }, "Not sure which service fits?", /*#__PURE__*/React.createElement("br", null), "Start a conversation."), /*#__PURE__*/React.createElement("p", {
+  }, "Not sure which service", /*#__PURE__*/React.createElement("br", null), "you need?"), /*#__PURE__*/React.createElement("p", {
     className: "lede",
     style: {
       marginTop: 18,
       maxWidth: '54ch'
     }
-  }, "Brief the scope in three steps. We'll come back with the next sensible action.")), /*#__PURE__*/React.createElement("div", {
+  }, "Get in touch and tell us a bit about your project and we\u2019ll guide you on the best approach.")), /*#__PURE__*/React.createElement("div", {
     className: "cta-aside"
   }, /*#__PURE__*/React.createElement("div", {
     className: "label-mono"
@@ -369,7 +369,7 @@ function ServicesPage() {
       marginRight: 6,
       verticalAlign: 'middle'
     }
-  }), "100% Secure. Zero obligation. Your data is strictly protected."))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
+  }), "100% Secure. No obligation. Your data is strictly protected."))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
 }
 
 // ----- Areas -----
@@ -382,11 +382,11 @@ function AreasPage() {
   }), /*#__PURE__*/React.createElement(PageHero, {
     section: "Locations",
     sectionNum: "03 / Locations",
-    title: "Local enough",
-    titleAccent: /*#__PURE__*/React.createElement(React.Fragment, null, "to be on-site by lunch", /*#__PURE__*/React.createElement("span", {
+    title: "Regional coverage",
+    titleAccent: /*#__PURE__*/React.createElement(React.Fragment, null, "you can rely on", /*#__PURE__*/React.createElement("span", {
       className: "dot-white"
     }, ".")),
-    subtext: "We cover Chester, Cheshire West, and North Wales. If you're in our radius, we can usually have an engineer on-site the same week for scoping, and the same day for emergencies."
+    subtext: "Operating across Chester, the Wirral, Merseyside, Cheshire and North Wales, we provide dependable on-site support for both planned works and urgent requirements within a 50-mile radius of our Christleton base."
   }), /*#__PURE__*/React.createElement("section", {
     className: "areas",
     style: {
@@ -444,22 +444,26 @@ function AreasPage() {
       color: 'rgba(255,255,255,0.7)',
       maxWidth: '42ch'
     }
-  }, "NICEIC electrical services in ", active, ". Commercial fit-outs, domestic rewires, EV chargers and compliance testing."), /*#__PURE__*/React.createElement("div", {
-    style: {
-      marginTop: 24
-    }
-  }, /*#__PURE__*/React.createElement("a", {
-    href: active === 'Chester' ? '/' : `electricians-${active.toLowerCase().replace(/ /g, '-')}.html`,
-    className: "btn btn-ghost-light",
-    style: {
-      padding: '14px 24px',
-      fontSize: 14
-    }
-  }, "View ", active, " services ", /*#__PURE__*/React.createElement("span", {
-    dangerouslySetInnerHTML: {
-      __html: CARTER.svg.arrow
-    }
-  })))), /*#__PURE__*/React.createElement("div", {
+  }, "NICEIC electrical services in ", active, ". Commercial fit-outs, domestic rewires, EV chargers and compliance testing."), (() => {
+    const a = CARTER.areas.find(x => x.name === active);
+    if (!a || !a.slug) return null;
+    return /*#__PURE__*/React.createElement("div", {
+      style: {
+        marginTop: 24
+      }
+    }, /*#__PURE__*/React.createElement("a", {
+      href: active === 'Chester' ? '/' : `electricians-${a.slug}.html`,
+      className: "btn btn-ghost-light",
+      style: {
+        padding: '14px 24px',
+        fontSize: 14
+      }
+    }, "View ", active, " services ", /*#__PURE__*/React.createElement("span", {
+      dangerouslySetInnerHTML: {
+        __html: CARTER.svg.arrow
+      }
+    })));
+  })()), /*#__PURE__*/React.createElement("div", {
     className: "area-list"
   }, CARTER.areas.map(p => /*#__PURE__*/React.createElement("button", {
     key: p.name,

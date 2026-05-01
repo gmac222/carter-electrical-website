@@ -24,7 +24,7 @@ function LocationPage({
     domesticAngle: '',
     featuredProject: '',
     landmarks: [],
-    responseTime: 'within the same working day',
+    responseTime: 'within 48 hours',
     distance: '',
     county: ''
   };
@@ -38,7 +38,7 @@ function LocationPage({
     section: `Electricians in ${locationName}`,
     sectionNum: "03.1 / Location",
     title: `Local electricians covering ${locationName}`,
-    titleAccent: `— on-site in ${area.responseTime || 'the same working day'}.`,
+    titleAccent: `— response within ${area.responseTime || '48 hours'}.`,
     subtext: `NICEIC-approved commercial, industrial, domestic and renewables electricians serving ${locationName}${area.postcodes && area.postcodes.length ? ' (' + area.postcodes.join(', ') + ')' : ''} and the surrounding ${area.county || 'area'}. EICR testing, EV chargers, full rewires and commercial fit-outs — delivered by our in-house team from our Christleton base, ${area.distance || 'a short drive from'} ${locationName}.`,
     ctas: /*#__PURE__*/React.createElement("div", {
       style: {
@@ -75,7 +75,7 @@ function LocationPage({
         color: 'rgba(255,255,255,0.6)',
         marginTop: '4px'
       }
-    }, "Takes 60 seconds \u2022 Receive a proposal within 24 hours"))
+    }, "Takes 60 seconds \u2022 We'll be in touch within 48 hours"))
   }, /*#__PURE__*/React.createElement("div", {
     className: "hero-strip wrap",
     style: {
@@ -184,7 +184,7 @@ function LocationPage({
     v: area.postcodes && area.postcodes.length ? area.postcodes.join(', ') : locationName
   }, {
     k: 'Response time',
-    v: area.responseTime || 'Same-day'
+    v: area.responseTime || 'Within 48 hours'
   }, {
     k: 'Distance from HQ',
     v: area.distance || '—'
@@ -585,7 +585,7 @@ function LocationPage({
       marginTop: 18,
       maxWidth: '54ch'
     }
-  }, "Brief the scope in three steps. You'll hear back within one working day.")), /*#__PURE__*/React.createElement("div", {
+  }, "Brief the scope in three steps. We'll be in touch within 48 hours.")), /*#__PURE__*/React.createElement("div", {
     className: "cta-aside"
   }, /*#__PURE__*/React.createElement("div", {
     className: "label-mono"
@@ -624,6 +624,6 @@ function LocationPage({
       marginRight: 6,
       verticalAlign: 'middle'
     }
-  }), "100% Secure. Zero obligation. Your data is strictly protected."))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(MobileStickyCTA, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
+  }), "100% Secure. No obligation. Your data is strictly protected."))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(MobileStickyCTA, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
 }
 window.LocationPage = LocationPage;

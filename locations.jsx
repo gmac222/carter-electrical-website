@@ -11,7 +11,7 @@ function LocationPage({ locationName }) {
     cases: 0, postcodes: [], neighbourhoods: [],
     intro: 'NICEIC-approved electrical services across ' + locationName + '.',
     commercialAngle: '', domesticAngle: '', featuredProject: '',
-    landmarks: [], responseTime: 'within the same working day', distance: '', county: ''
+    landmarks: [], responseTime: 'within 48 hours', distance: '', county: ''
   };
 
   const faqs = (CARTER.locationFaqs ? CARTER.locationFaqs(area) : []);
@@ -28,7 +28,7 @@ function LocationPage({ locationName }) {
         section={`Electricians in ${locationName}`}
         sectionNum="03.1 / Location"
         title={`Local electricians covering ${locationName}`}
-        titleAccent={`— on-site in ${area.responseTime || 'the same working day'}.`}
+        titleAccent={`— response within ${area.responseTime || '48 hours'}.`}
         subtext={`NICEIC-approved commercial, industrial, domestic and renewables electricians serving ${locationName}${area.postcodes && area.postcodes.length ? ' (' + area.postcodes.join(', ') + ')' : ''} and the surrounding ${area.county || 'area'}. EICR testing, EV chargers, full rewires and commercial fit-outs — delivered by our in-house team from our Christleton base, ${area.distance || 'a short drive from'} ${locationName}.`}
         ctas={
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
@@ -43,7 +43,7 @@ function LocationPage({ locationName }) {
               </a>
             </div>
             <div className="label-mono" style={{ color: 'rgba(255,255,255,0.6)', marginTop: '4px' }}>
-              Takes 60 seconds • Receive a proposal within 24 hours
+              Takes 60 seconds • We'll be in touch within 48 hours
             </div>
           </div>
         }
@@ -97,7 +97,7 @@ function LocationPage({ locationName }) {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 1, background: 'var(--rule)', border: '1px solid var(--rule)', marginTop: 40 }}>
             {[
               { k: 'Coverage', v: area.postcodes && area.postcodes.length ? area.postcodes.join(', ') : locationName },
-              { k: 'Response time', v: area.responseTime || 'Same-day' },
+              { k: 'Response time', v: area.responseTime || 'Within 48 hours' },
               { k: 'Distance from HQ', v: area.distance || '—' },
               { k: 'Accreditation', v: 'NICEIC + OZEV' },
               { k: 'Documented projects', v: (area.cases || 0) + ' in ' + locationName },
@@ -282,7 +282,7 @@ function LocationPage({ locationName }) {
             <div className="eyebrow">Start a conversation</div>
             <h2 style={{ marginTop: 20 }}>Need an electrician in {locationName}?<br/>Let's scope it properly<span className="accent">.</span></h2>
             <p className="lede" style={{ marginTop: 18, maxWidth: '54ch' }}>
-              Brief the scope in three steps. You'll hear back within one working day.
+              Brief the scope in three steps. We'll be in touch within 48 hours.
             </p>
           </div>
           <div className="cta-aside">
@@ -294,7 +294,7 @@ function LocationPage({ locationName }) {
               <a href="contact.html" className="btn btn-primary">Get Your Free Quote <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }}/></a>
               <div style={{ fontSize: '0.85rem', color: 'var(--muted-2)', textAlign: 'center' }}>
                 <span dangerouslySetInnerHTML={{ __html: CARTER.svg.lock || '&#128274;' }} style={{ display: 'inline-block', width: 12, marginRight: 6, verticalAlign: 'middle' }} />
-                100% Secure. Zero obligation. Your data is strictly protected.
+                100% Secure. No obligation. Your data is strictly protected.
               </div>
             </div>
           </div>

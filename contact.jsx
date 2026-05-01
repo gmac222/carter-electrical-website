@@ -60,7 +60,7 @@ function ContactForm() {
         <div className="form-success">
           <div className="tick-big" dangerouslySetInnerHTML={{ __html: CARTER.svg.check.replace('width=\"16\"', '') }} />
           <h3>Thanks, {data.name.split(' ')[0]}. Your enquiry is in.</h3>
-          <p>You'll hear from one of the team within one working day on <strong>{data.email}</strong> or <strong>{data.phone}</strong>.</p>
+          <p>You'll hear from one of the team within 48 hours on <strong>{data.email}</strong> or <strong>{data.phone}</strong>.</p>
           <div className="ref">Reference · {refNum}</div>
           <div style={{ marginTop: 24, display: 'flex', gap: 12 }}>
             <a href={CARTER.company.phoneHref} className="btn btn-primary">Call {CARTER.company.phone}</a>
@@ -202,9 +202,9 @@ function ContactPage() {
       <PageHero
         section="Contact Us"
         sectionNum="05 / Contact"
-        title="Tell us about the project."
-        titleAccent="We'll tell you what it takes."
-        subtext="A three-step conversation-starter. Not a hard sell. You'll hear back within one working day with the next sensible step."
+        title="Tell us"
+        titleAccent="about your project."
+        subtext="Whether it’s a planned job or something more urgent, share a few details and our team will be in touch."
       />
 
       <section className="section-y light">

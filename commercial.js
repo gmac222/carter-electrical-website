@@ -16,7 +16,7 @@ function CommercialHero() {
     sectionNum: "02.1 / Services",
     title: "Commercial electricians",
     titleAccent: "Chester businesses trust.",
-    subtext: "Fit-outs, maintenance contracts and compliance for offices, retail, hospitality, leisure and multi-tenant buildings. One contractor owning distribution, lighting, fire, emergency lighting and data containment from first fix to sign-off.",
+    subtext: "Fit-outs, maintenance contracts and compliance for offices, retail, hospitality, leisure and multi-tenant buildings. We specialise in all types of commercial electrical works, whether completely new or upgrading existing installations.",
     ctas: /*#__PURE__*/React.createElement("div", {
       style: {
         display: 'flex',
@@ -44,7 +44,7 @@ function CommercialHero() {
         fontSize: '0.85rem',
         color: 'rgba(255,255,255,0.7)'
       }
-    }, "Takes 60 seconds \u2022 Receive a proposal within 24 hours."))
+    }, "Takes 60 seconds \u2022 We'll be in touch within 48 hours."))
   });
 }
 const CAPABILITIES = [{
@@ -97,7 +97,7 @@ function Capabilities() {
     className: "h-1"
   }, "The commercial scope,", /*#__PURE__*/React.createElement("br", null), "under one roof.")), /*#__PURE__*/React.createElement("p", {
     className: "lede"
-  }, "A coordinated electrical package, not a spread of sub-sub-contractors. Design assistance on request \u2014 bring us in early and we\u2019ll flag the compliance gotchas before they cost you.")), /*#__PURE__*/React.createElement("div", {
+  }, "A coordinated electrical package, not a spread of sub-sub-contractors.")), /*#__PURE__*/React.createElement("div", {
     className: "capability-grid"
   }, CAPABILITIES.map(c => /*#__PURE__*/React.createElement("div", {
     key: c.n,
@@ -110,11 +110,11 @@ function Process() {
   const steps = [{
     n: '01',
     t: 'Scoping call',
-    d: 'Fifteen minutes to understand the project, the site, and the timescale. We tell you candidly whether we\'re the right contractor for it.'
+    d: 'A call to understand the project, the site, and the timescale. We tell you candidly whether we\'re the right contractor for it.'
   }, {
     n: '02',
     t: 'Site visit',
-    d: 'We measure, photograph and check existing infrastructure. You get a written scope with design assumptions and compliance notes.'
+    d: 'A site visit to assess the work to be carried out by one of our trained professionals.'
   }, {
     n: '03',
     t: 'Proposal',
@@ -122,18 +122,21 @@ function Process() {
   }, {
     n: '04',
     t: 'Delivery',
-    d: 'One point of contact from first fix to commissioning. Weekly progress, photographs and a clean RAMS pack before works start.'
+    d: 'One point of contact from first fix to completion.'
   }, {
     n: '05',
     t: 'Handover',
-    d: 'Full certification — EIC, emergency lighting, fire alarm — plus as-builts and a maintenance schedule.'
+    d: 'Full sign off with customer complete with full certification provided when needed.'
   }];
   return /*#__PURE__*/React.createElement("section", {
     className: "section-y dark reveal"
   }, /*#__PURE__*/React.createElement("div", {
     className: "wrap"
   }, /*#__PURE__*/React.createElement("div", {
-    className: "section-head"
+    className: "section-head",
+    style: {
+      marginBottom: 40
+    }
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "eyebrow",
     style: {
@@ -244,11 +247,8 @@ function FAQBand() {
     q: 'Do you handle design or just install?',
     a: 'Both. Bring us in at design stage and we\'ll produce layouts and compliance notes. Happy to tender against an existing spec too.'
   }, {
-    q: 'What about sub-contracting?',
-    a: 'Installation is delivered by our in-house team. Specialist items (fire alarm commissioning, data cabling) are managed by us, not handed off.'
-  }, {
     q: 'Will we get proper paperwork at handover?',
-    a: 'Yes — NICEIC Electrical Installation Certificate, emergency lighting certification, fire alarm commissioning cert, as-built drawings and a service schedule.'
+    a: 'Yes — all our work is NICEIC regulated and we\'re happy to provide all necessary paperwork.'
   }];
   const [open, setOpen] = useState(0);
   return /*#__PURE__*/React.createElement("section", {
@@ -322,13 +322,13 @@ function Commercial() {
     style: {
       marginTop: 20
     }
-  }, "Planning a commercial project?", /*#__PURE__*/React.createElement("br", null), "Let\u2019s scope it properly."), /*#__PURE__*/React.createElement("p", {
+  }, "Got a commercial project", /*#__PURE__*/React.createElement("br", null), "to deliver?"), /*#__PURE__*/React.createElement("p", {
     className: "lede",
     style: {
       marginTop: 18,
       maxWidth: '54ch'
     }
-  }, "Share the scope, the site and the timescale. You\u2019ll hear back within one working day with the next sensible step.")), /*#__PURE__*/React.createElement("div", {
+  }, "Send us the scope, location and timeframe and we\u2019ll be in touch with how we can support.")), /*#__PURE__*/React.createElement("div", {
     className: "cta-aside"
   }, /*#__PURE__*/React.createElement("div", {
     className: "label-mono"
@@ -367,6 +367,6 @@ function Commercial() {
       marginRight: 6,
       verticalAlign: 'middle'
     }
-  }), "100% Secure. Zero obligation. Your data is strictly protected."))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(MobileStickyCTA, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
+  }), "100% Secure. No obligation. Your data is strictly protected."))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(MobileStickyCTA, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
 }
 ReactDOM.hydrateRoot(document.getElementById('root'), /*#__PURE__*/React.createElement(Commercial, null));

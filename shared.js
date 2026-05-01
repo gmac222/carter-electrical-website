@@ -123,7 +123,12 @@ window.CARTER = {
       domesticAngle: "Shotton and Connah's Quay terraced stock needs full rewires and consumer-unit upgrades more often than not, while Hawarden and Ewloe homeowners are mostly calling us for EV chargers, solar-PV add-ons and smart-home retrofits.",
       featuredProject: "A planned three-phase distribution upgrade for a Deeside Industrial Park manufacturer, including thermal imaging survey, cable-trunking redesign and a two-phase energisation to avoid production loss.",
       landmarks: ['Deeside Industrial Park', 'Airbus Broughton (nearby)', 'Hawarden Airport', 'Queensferry retail belt', 'Connah’s Quay high street']
-    }
+    },
+    { name: 'Wirral', slug: null, cases: 0, x: 24, y: 34, county: 'Merseyside', distance: '20 miles' },
+    { name: 'Liverpool', slug: null, cases: 0, x: 18, y: 24, county: 'Merseyside', distance: '25 miles' },
+    { name: 'Crewe', slug: null, cases: 0, x: 80, y: 78, county: 'Cheshire East', distance: '25 miles' },
+    { name: 'Warrington', slug: null, cases: 0, x: 70, y: 50, county: 'Cheshire', distance: '22 miles' },
+    { name: 'Conwy', slug: null, cases: 0, x: 14, y: 78, county: 'North Wales', distance: '45 miles' }
   ],
 
   services: [
