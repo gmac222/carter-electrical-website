@@ -7,7 +7,7 @@ window.CARTER = {
     name: 'Carter Electrical Contracting',
     phone: '01244 738493',
     phoneHref: 'tel:+441244738493',
-    email: 'info@carterelectricalcontracting.co.uk',
+    email: 'info@carterelec.co.uk',
     address: ['Unit 5, White Lane Depot', 'White Lane, Christleton', 'Chester, CH3 6AH'],
     socialFb: 'https://facebook.com/carter.electrical.chester',
     founded: 2008
