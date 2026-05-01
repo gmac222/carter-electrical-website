@@ -136,8 +136,8 @@ function ServicesPage() {
         <div className="wrap">
           <div>
             <div className="eyebrow">Next step</div>
-            <h2 style={{ marginTop: 20 }}>Not sure which service fits?<br/>Start a conversation.</h2>
-            <p className="lede" style={{ marginTop: 18, maxWidth: '54ch' }}>Brief the scope in three steps. We'll come back with the next sensible action.</p>
+            <h2 style={{ marginTop: 20 }}>Not sure which service<br/>you need?</h2>
+            <p className="lede" style={{ marginTop: 18, maxWidth: '54ch' }}>Get in touch and tell us a bit about your project and we&rsquo;ll guide you on the best approach.</p>
           </div>
           <div className="cta-aside">
             <div className="label-mono">Direct line</div>
@@ -146,7 +146,7 @@ function ServicesPage() {
               <a href="contact.html" className="btn btn-primary" style={{ marginTop: 0 }}>Get Your Free Quote <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }}/></a>
               <div style={{ fontSize: '0.85rem', color: 'var(--muted-2)', textAlign: 'center' }}>
                 <span dangerouslySetInnerHTML={{ __html: CARTER.svg.lock || '&#128274;' }} style={{ display: 'inline-block', width: 12, marginRight: 6, verticalAlign: 'middle' }} />
-                100% Secure. Zero obligation. Your data is strictly protected.
+                100% Secure. No obligation. Your data is strictly protected.
               </div>
             </div>
           </div>
@@ -168,9 +168,9 @@ function AreasPage() {
       <PageHero
         section="Locations"
         sectionNum="03 / Locations"
-        title="Local enough"
-        titleAccent={<>to be on-site by lunch<span className="dot-white">.</span></>}
-        subtext="We cover Chester, Cheshire West, and North Wales. If you're in our radius, we can usually have an engineer on-site the same week for scoping, and the same day for emergencies."
+        title="Regional coverage"
+        titleAccent={<>you can rely on<span className="dot-white">.</span></>}
+        subtext="Operating across Chester, the Wirral, Merseyside, Cheshire and North Wales, we provide dependable on-site support for both planned works and urgent requirements within a 50-mile radius of our Christleton base."
       />
 
       <section className="areas" style={{ paddingTop: 60 }}>
@@ -193,11 +193,17 @@ function AreasPage() {
                 <div className="label-mono" style={{ color: 'var(--accent)' }}>Selected area</div>
                 <h3 className="h-2" style={{ margin: '10px 0 10px' }}>{active}</h3>
                 <p style={{ color: 'rgba(255,255,255,0.7)', maxWidth: '42ch' }}>NICEIC electrical services in {active}. Commercial fit-outs, domestic rewires, EV chargers and compliance testing.</p>
-                <div style={{ marginTop: 24 }}>
-                  <a href={active === 'Chester' ? '/' : `electricians-${active.toLowerCase().replace(/ /g, '-')}.html`} className="btn btn-ghost-light" style={{ padding: '14px 24px', fontSize: 14 }}>
-                    View {active} services <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }}/>
-                  </a>
-                </div>
+                {(() => {
+                  const a = CARTER.areas.find(x => x.name === active);
+                  if (!a || !a.slug) return null;
+                  return (
+                    <div style={{ marginTop: 24 }}>
+                      <a href={active === 'Chester' ? '/' : `electricians-${a.slug}.html`} className="btn btn-ghost-light" style={{ padding: '14px 24px', fontSize: 14 }}>
+                        View {active} services <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }}/>
+                      </a>
+                    </div>
+                  );
+                })()}
               </div>
               <div className="area-list">
                 {CARTER.areas.map(p => (

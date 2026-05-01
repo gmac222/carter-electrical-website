@@ -9,7 +9,7 @@ function CommercialHero() {
       sectionNum="02.1 / Services"
       title="Commercial electricians"
       titleAccent="Chester businesses trust."
-      subtext="Fit-outs, maintenance contracts and compliance for offices, retail, hospitality, leisure and multi-tenant buildings. One contractor owning distribution, lighting, fire, emergency lighting and data containment from first fix to sign-off."
+      subtext="Fit-outs, maintenance contracts and compliance for offices, retail, hospitality, leisure and multi-tenant buildings. We specialise in all types of commercial electrical works, whether completely new or upgrading existing installations."
       ctas={
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 10 }}>
           <div style={{ display: 'flex', gap: 16 }}>
@@ -19,7 +19,7 @@ function CommercialHero() {
             </a>
             <a href="case-studies.html" className="btn btn-ghost-light">See commercial work</a>
           </div>
-          <div style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.7)' }}>Takes 60 seconds • Receive a proposal within 24 hours.</div>
+          <div style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.7)' }}>Takes 60 seconds • We'll be in touch within 48 hours.</div>
         </div>
       }
     />
@@ -49,8 +49,6 @@ function Capabilities() {
           </div>
           <p className="lede">
             A coordinated electrical package, not a spread of sub-sub-contractors.
-            Design assistance on request — bring us in early and we&rsquo;ll flag
-            the compliance gotchas before they cost you.
           </p>
         </div>
         <div className="capability-grid">
@@ -69,16 +67,16 @@ function Capabilities() {
 
 function Process() {
   const steps = [
-    { n: '01', t: 'Scoping call', d: 'Fifteen minutes to understand the project, the site, and the timescale. We tell you candidly whether we\'re the right contractor for it.' },
-    { n: '02', t: 'Site visit', d: 'We measure, photograph and check existing infrastructure. You get a written scope with design assumptions and compliance notes.' },
+    { n: '01', t: 'Scoping call', d: 'A call to understand the project, the site, and the timescale. We tell you candidly whether we\'re the right contractor for it.' },
+    { n: '02', t: 'Site visit', d: 'A site visit to assess the work to be carried out by one of our trained professionals.' },
     { n: '03', t: 'Proposal', d: 'Itemised quotation broken down by area and phase. Clear about what\'s in, what\'s provisional, and what\'s out.' },
-    { n: '04', t: 'Delivery', d: 'One point of contact from first fix to commissioning. Weekly progress, photographs and a clean RAMS pack before works start.' },
-    { n: '05', t: 'Handover', d: 'Full certification — EIC, emergency lighting, fire alarm — plus as-builts and a maintenance schedule.' },
+    { n: '04', t: 'Delivery', d: 'One point of contact from first fix to completion.' },
+    { n: '05', t: 'Handover', d: 'Full sign off with customer complete with full certification provided when needed.' },
   ];
   return (
     <section className="section-y dark reveal">
       <div className="wrap">
-        <div className="section-head">
+        <div className="section-head" style={{ marginBottom: 40 }}>
           <div>
             <div className="eyebrow" style={{ color: 'var(--accent)' }}>How we work</div>
             <h2 className="h-1">A five-step process<br/>you can brief your board on.</h2>
@@ -153,8 +151,7 @@ function FAQBand() {
   const faqs = [
     { q: 'Can you work around our trading hours?', a: 'Yes. We routinely phase works around retail, office and hospitality opening. Night and weekend shifts are priced transparently upfront.' },
     { q: 'Do you handle design or just install?', a: 'Both. Bring us in at design stage and we\'ll produce layouts and compliance notes. Happy to tender against an existing spec too.' },
-    { q: 'What about sub-contracting?', a: 'Installation is delivered by our in-house team. Specialist items (fire alarm commissioning, data cabling) are managed by us, not handed off.' },
-    { q: 'Will we get proper paperwork at handover?', a: 'Yes — NICEIC Electrical Installation Certificate, emergency lighting certification, fire alarm commissioning cert, as-built drawings and a service schedule.' },
+    { q: 'Will we get proper paperwork at handover?', a: 'Yes — all our work is NICEIC regulated and we\'re happy to provide all necessary paperwork.' },
   ];
   const [open, setOpen] = useState(0);
   return (
@@ -198,10 +195,9 @@ function Commercial() {
         <div className="wrap">
           <div>
             <div className="eyebrow">Start a conversation</div>
-            <h2 style={{ marginTop: 20 }}>Planning a commercial project?<br/>Let&rsquo;s scope it properly.</h2>
+            <h2 style={{ marginTop: 20 }}>Got a commercial project<br/>to deliver?</h2>
             <p className="lede" style={{ marginTop: 18, maxWidth: '54ch' }}>
-              Share the scope, the site and the timescale. You&rsquo;ll hear back
-              within one working day with the next sensible step.
+              Send us the scope, location and timeframe and we&rsquo;ll be in touch with how we can support.
             </p>
           </div>
           <div className="cta-aside">
@@ -213,7 +209,7 @@ function Commercial() {
               <a href="contact.html" className="btn btn-primary">Get Your Free Quote <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }}/></a>
               <div style={{ fontSize: '0.85rem', color: 'var(--muted-2)', textAlign: 'center' }}>
                 <span dangerouslySetInnerHTML={{ __html: CARTER.svg.lock || '&#128274;' }} style={{ display: 'inline-block', width: 12, marginRight: 6, verticalAlign: 'middle' }} />
-                100% Secure. Zero obligation. Your data is strictly protected.
+                100% Secure. No obligation. Your data is strictly protected.
               </div>
             </div>
           </div>

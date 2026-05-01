@@ -123,7 +123,7 @@ function Hero() {
       color: 'rgba(255,255,255,0.6)',
       marginTop: '4px'
     }
-  }, "Takes 60 seconds \u2022 Receive a proposal within 24 hours")))), /*#__PURE__*/React.createElement("div", {
+  }, "Takes 60 seconds \u2022 We'll be in touch within 48 hours")))), /*#__PURE__*/React.createElement("div", {
     className: "hero-strip wrap",
     style: {
       maxWidth: '100%',
@@ -242,7 +242,7 @@ function Intro() {
     v: 'Chester & Cheshire West'
   }, {
     k: 'Response time',
-    v: 'Same working day'
+    v: 'Within 48 hours'
   }, {
     k: 'Distance from HQ',
     v: 'Christleton, CH3 6AH'
@@ -479,7 +479,7 @@ function Testimonials() {
     className: "eyebrow"
   }, "05 \xB7 In their words"), /*#__PURE__*/React.createElement("h2", {
     className: "h-1"
-  }, "Clients who came", /*#__PURE__*/React.createElement("br", null), "back for the next one", /*#__PURE__*/React.createElement("span", {
+  }, "Client Testimonials", /*#__PURE__*/React.createElement("span", {
     className: "accent"
   }, "."))), /*#__PURE__*/React.createElement("p", {
     className: "lede"
@@ -518,14 +518,14 @@ function Areas() {
     }
   }, "06 \xB7 Areas we cover"), /*#__PURE__*/React.createElement("h2", {
     className: "h-1"
-  }, "Local enough", /*#__PURE__*/React.createElement("br", null), "to be on-site by lunch", /*#__PURE__*/React.createElement("span", {
+  }, "Covering Cheshire,", /*#__PURE__*/React.createElement("br", null), "the Wirral & North Wales", /*#__PURE__*/React.createElement("span", {
     className: "accent"
   }, "."))), /*#__PURE__*/React.createElement("p", {
     className: "lede",
     style: {
       color: 'rgba(255,255,255,0.7)'
     }
-  }, "Unit 5, White Lane Depot in Christleton. Main coverage within 25 miles, further afield for contract clients.")), /*#__PURE__*/React.createElement("div", {
+  }, "Based at Unit 5, White Lane Depot in Christleton. Regular coverage across a 40\u201350 mile radius for both planned works and urgent call-outs.")), /*#__PURE__*/React.createElement("div", {
     className: "areas-grid"
   }, /*#__PURE__*/React.createElement("div", {
     className: "area-image",
@@ -583,7 +583,7 @@ function CTABand() {
     }
   }, "Get Your Free Quote", /*#__PURE__*/React.createElement("span", {
     className: "accent"
-  }, "."), /*#__PURE__*/React.createElement("br", null), "Quick, transparent, zero obligation", /*#__PURE__*/React.createElement("span", {
+  }, "."), /*#__PURE__*/React.createElement("br", null), "Quick & no obligation", /*#__PURE__*/React.createElement("span", {
     className: "accent"
   }, ".")), /*#__PURE__*/React.createElement("p", {
     className: "lede",
@@ -591,7 +591,7 @@ function CTABand() {
       marginTop: 18,
       maxWidth: '54ch'
     }
-  }, "Share the scope, the site and the timescale. You\u2019ll hear back within one working day with the next sensible step \u2014 a site visit, a scoping call, or a straight proposal.")), /*#__PURE__*/React.createElement("div", {
+  }, "Share the scope, the site and the timescale. We\u2019ll be in touch shortly to talk through the next sensible step \u2014 a site visit, a scoping call, or a straight proposal.")), /*#__PURE__*/React.createElement("div", {
     className: "cta-aside"
   }, /*#__PURE__*/React.createElement("div", {
     className: "label-mono"
@@ -660,6 +660,6 @@ function Home() {
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Header, {
     current: "home",
     theme: "dark"
-  }), /*#__PURE__*/React.createElement(Hero, null), /*#__PURE__*/React.createElement(TrustBar, null), /*#__PURE__*/React.createElement(Services, null), /*#__PURE__*/React.createElement(Intro, null), /*#__PURE__*/React.createElement(Stats, null), /*#__PURE__*/React.createElement(Cases, null), /*#__PURE__*/React.createElement(Testimonials, null), /*#__PURE__*/React.createElement(Areas, null), /*#__PURE__*/React.createElement(CTABand, null), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(MobileStickyCTA, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
+  }), /*#__PURE__*/React.createElement(Hero, null), /*#__PURE__*/React.createElement(TrustBar, null), /*#__PURE__*/React.createElement(Services, null), /*#__PURE__*/React.createElement(Intro, null), /*#__PURE__*/React.createElement(Cases, null), /*#__PURE__*/React.createElement(Testimonials, null), /*#__PURE__*/React.createElement(Areas, null), /*#__PURE__*/React.createElement(CTABand, null), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(MobileStickyCTA, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
 }
 ReactDOM.hydrateRoot(document.getElementById('root'), /*#__PURE__*/React.createElement(Home, null));

@@ -82,10 +82,6 @@ window.Header = function Header({
     label: 'Areas',
     href: 'areas.html'
   }, {
-    id: 'about',
-    label: 'About',
-    href: 'about.html'
-  }, {
     id: 'contact',
     label: 'Contact',
     href: 'contact.html'
@@ -227,8 +223,6 @@ window.Footer = function Footer() {
   }, "Renewables & EV")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
     href: "services.html#testing"
   }, "Inspection & Testing")))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h4", null, "Company"), /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
-    href: "about.html"
-  }, "About")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
     href: "case-studies.html"
   }, "Case Studies")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
     href: "areas.html"

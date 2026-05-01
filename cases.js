@@ -25,9 +25,9 @@ function CaseIndex() {
   }), /*#__PURE__*/React.createElement(PageHero, {
     section: "Case Studies",
     sectionNum: "06 / Work",
-    title: "Real installations.",
-    titleAccent: "Real sign-offs.",
-    subtext: "A record of work across commercial, hospitality, domestic and industrial \u2014 photographed and documented at handover."
+    title: "Real projects.",
+    titleAccent: "Properly delivered.",
+    subtext: "A proven track record across commercial, hospitality, domestic and industrial work \u2014 completed, signed off and documented."
   }), /*#__PURE__*/React.createElement("section", {
     className: "cases"
   }, /*#__PURE__*/React.createElement("div", {

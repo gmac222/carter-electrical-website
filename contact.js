@@ -77,7 +77,7 @@ function ContactForm() {
       dangerouslySetInnerHTML: {
         __html: CARTER.svg.check.replace('width=\"16\"', '')
       }
-    }), /*#__PURE__*/React.createElement("h3", null, "Thanks, ", data.name.split(' ')[0], ". Your enquiry is in."), /*#__PURE__*/React.createElement("p", null, "You'll hear from one of the team within one working day on ", /*#__PURE__*/React.createElement("strong", null, data.email), " or ", /*#__PURE__*/React.createElement("strong", null, data.phone), "."), /*#__PURE__*/React.createElement("div", {
+    }), /*#__PURE__*/React.createElement("h3", null, "Thanks, ", data.name.split(' ')[0], ". Your enquiry is in."), /*#__PURE__*/React.createElement("p", null, "You'll hear from one of the team within 48 hours on ", /*#__PURE__*/React.createElement("strong", null, data.email), " or ", /*#__PURE__*/React.createElement("strong", null, data.phone), "."), /*#__PURE__*/React.createElement("div", {
       className: "ref"
     }, "Reference \xB7 ", refNum), /*#__PURE__*/React.createElement("div", {
       style: {
@@ -305,9 +305,9 @@ function ContactPage() {
   }), /*#__PURE__*/React.createElement(PageHero, {
     section: "Contact Us",
     sectionNum: "05 / Contact",
-    title: "Tell us about the project.",
-    titleAccent: "We'll tell you what it takes.",
-    subtext: "A three-step conversation-starter. Not a hard sell. You'll hear back within one working day with the next sensible step."
+    title: "Tell us",
+    titleAccent: "about your project.",
+    subtext: "Whether it\u2019s a planned job or something more urgent, share a few details and our team will be in touch."
   }), /*#__PURE__*/React.createElement("section", {
     className: "section-y light"
   }, /*#__PURE__*/React.createElement("div", {

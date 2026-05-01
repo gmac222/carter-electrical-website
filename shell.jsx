@@ -47,7 +47,6 @@ window.Header = function Header({ current = 'home', theme = 'dark' }) {
     { id: 'services', label: 'Services', href: 'services.html' },
     { id: 'cases', label: 'Case Studies', href: 'case-studies.html' },
     { id: 'areas', label: 'Areas', href: 'areas.html' },
-    { id: 'about', label: 'About', href: 'about.html' },
     { id: 'contact', label: 'Contact', href: 'contact.html' },
   ];
 
@@ -141,7 +140,6 @@ window.Footer = function Footer() {
           <div>
             <h4>Company</h4>
             <ul>
-              <li><a href="about.html">About</a></li>
               <li><a href="case-studies.html">Case Studies</a></li>
               <li><a href="areas.html">Areas We Cover</a></li>
               <li><a href="contact.html">Contact</a></li>
