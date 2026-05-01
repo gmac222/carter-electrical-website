@@ -26,7 +26,7 @@ function ContactForm() {
 
   const services = ['Commercial', 'Industrial', 'Domestic', 'Renewables / EV', 'Testing / EICR', 'Maintenance'];
   const sectors = ['Office', 'Retail', 'Hospitality', 'Healthcare', 'Warehouse', 'Residential', 'Other'];
-  const timings = ['ASAP', 'This week', 'Within a month', '1–3 months', '3+ months / scoping'];
+  const timings = ['Within a month', '1–3 months', '3+ months / scoping'];
 
   const validateStep = () => {
     const errs = {};
@@ -34,7 +34,7 @@ function ContactForm() {
       if (!data.service) errs.service = 'Pick a service area';
     }
     if (step === 1) {
-      if (!data.scope || data.scope.length < 20) errs.scope = 'Give us a couple of sentences (min. 20 chars)';
+      if (!data.scope) errs.scope = 'Tell us briefly what you need';
       if (!data.timing) errs.timing = 'Pick a timeframe';
     }
     if (step === 2) {
