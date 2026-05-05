@@ -1,5 +1,4 @@
 User-agent: *
-Disallow: /
+Allow: /
 
-# Site is in development. NOINDEX applied to all pages.
-# Remove this Disallow and restore Allow: / when the site goes live.
+Sitemap: https://carterelec.co.uk/sitemap.xml
