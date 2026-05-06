@@ -278,6 +278,15 @@ function buildHtml(area) {
   <script type="application/ld+json">
 ${JSON.stringify(schema, null, 2)}
   </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6WK8M8E9R9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6WK8M8E9R9');
+</script>
 </head>
 <body>
   <div id="root"></div>
