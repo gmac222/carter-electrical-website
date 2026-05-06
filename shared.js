@@ -5,8 +5,8 @@ var h = React.createElement;
 window.CARTER = {
   company: {
     name: 'Carter Electrical Contracting',
-    phone: '01244 738493',
-    phoneHref: 'tel:+441244738493',
+    phone: '01244 727291',
+    phoneHref: 'tel:+441244727291',
     email: 'info@carterelec.co.uk',
     address: ['Unit 5, White Lane Depot', 'White Lane, Christleton', 'Chester, CH3 6AH'],
     socialFb: 'https://facebook.com/carter.electrical.chester',
