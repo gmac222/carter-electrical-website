@@ -12,8 +12,8 @@ const fs = require('fs');
 
 const COMPANY = {
   name: 'Carter Electrical Contracting',
-  phone: '01244 738493',
-  phoneHref: 'tel:+441244738493',
+  phone: '01244 727291',
+  phoneHref: 'tel:+441244727291',
   site: 'https://carterelec.co.uk',
   streetAddress: 'Unit 5, White Lane Depot, White Lane, Christleton',
   locality: 'Chester',
@@ -201,7 +201,7 @@ function buildHtml(area) {
   // Noscript fallback — real, crawlable content for non-JS crawlers.
   const noscript = `
     <header>
-      <p><a href="${COMPANY.site}">${COMPANY.name}</a> · <a href="tel:+441244738493">${COMPANY.phone}</a></p>
+      <p><a href="${COMPANY.site}">${COMPANY.name}</a> · <a href="tel:+441244727291">${COMPANY.phone}</a></p>
     </header>
     <main>
       <nav aria-label="Breadcrumb">
@@ -247,7 +247,7 @@ function buildHtml(area) {
         ${otherAreas.map(a => '<li><a href="/electricians-' + a.slug + '.html">Electricians in ' + esc(a.name) + '</a></li>').join('\n        ')}
       </ul>
 
-      <p><a href="/contact.html">Discuss your ${esc(area.name)} project</a> &middot; <a href="tel:+441244738493">Call ${esc(COMPANY.phone)}</a></p>
+      <p><a href="/contact.html">Discuss your ${esc(area.name)} project</a> &middot; <a href="tel:+441244727291">Call ${esc(COMPANY.phone)}</a></p>
     </main>`;
 
   return `<!doctype html>
