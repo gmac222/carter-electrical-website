@@ -11,6 +11,7 @@ const {
 function ContactForm() {
   const [step, setStep] = useState(0);
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [data, setData] = useState({
     service: '',
     sector: '',
@@ -63,8 +64,27 @@ function ContactForm() {
     if (validateStep()) setStep(s => s + 1);
   };
   const back = () => setStep(s => Math.max(0, s - 1));
-  const submit = () => {
-    if (validateStep()) setSubmitted(true);
+  const submit = async () => {
+    if (!validateStep()) return;
+    setIsSubmitting(true);
+    try {
+      const response = await fetch('/api/lead', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        alert('There was a problem submitting your enquiry. Please try again or call us directly.');
+      }
+    } catch (err) {
+      console.error(err);
+      alert('Network error. Please try again or call us directly.');
+    }
+    setIsSubmitting(false);
   };
   const refNum = 'CEC-' + Math.floor(1000 + Math.random() * 9000) + '-' + new Date().getFullYear();
   if (submitted) {
@@ -278,7 +298,8 @@ function ContactForm() {
   }, step > 0 ? /*#__PURE__*/React.createElement("button", {
     type: "button",
     className: "back-link",
-    onClick: back
+    onClick: back,
+    disabled: isSubmitting
   }, "\u2190 Back") : /*#__PURE__*/React.createElement("span", null), step < 2 ? /*#__PURE__*/React.createElement("button", {
     type: "button",
     className: "btn btn-primary",
@@ -290,8 +311,9 @@ function ContactForm() {
   })) : /*#__PURE__*/React.createElement("button", {
     type: "button",
     className: "btn btn-primary",
-    onClick: submit
-  }, "Send enquiry ", /*#__PURE__*/React.createElement("span", {
+    onClick: submit,
+    disabled: isSubmitting
+  }, isSubmitting ? 'Sending...' : 'Send enquiry', !isSubmitting && /*#__PURE__*/React.createElement("span", {
     dangerouslySetInnerHTML: {
       __html: CARTER.svg.arrow
     }
@@ -393,4 +415,4 @@ function ContactPage() {
     }
   }, "CHRISTLETON \xB7 CHESTER \xB7 53\xB011\u2032N \xB7 02\xB050\u2032W")))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(MobileStickyCTA, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
 }
-ReactDOM.hydrateRoot(document.getElementById('root'), /*#__PURE__*/React.createElement(ContactPage, null));
+ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/React.createElement(ContactPage, null));
