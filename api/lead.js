@@ -7,8 +7,8 @@ export default async function handler(req, res) {
     const { service, sector, scope, name, company, email, phone, postcode, timing, details } = req.body;
 
     // 1. Send to Airtable
-    if (process.env.AIRTABLE_BASE_ID && process.env.AIRTABLE_PAT) {
-      await fetch(`https://api.airtable.com/v0/${process.env.AIRTABLE_BASE_ID}/Leads`, {
+    if (process.env.AIRTABLE_BASE_ID && process.env.AIRTABLE_PAT && process.env.AIRTABLE_TABLE_ID) {
+      await fetch(`https://api.airtable.com/v0/${process.env.AIRTABLE_BASE_ID}/${process.env.AIRTABLE_TABLE_ID}`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${process.env.AIRTABLE_PAT}`,
