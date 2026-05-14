@@ -6,55 +6,425 @@
   <title>Admin Dashboard | Carter Electrical Contracting</title>
   <meta name="robots" content="noindex, nofollow">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-  <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" sizes="32x32" href="uploads/favicon-32x32-1.png">
-  <meta name="theme-color" content="#111111">
+  <meta name="theme-color" content="#0B2637">
   <style>
-    /* Specific styles for the Admin Dashboard to give it a CRM feel */
-    body { background-color: #f8fafc; color: #0f172a; }
-    .admin-container { padding: 40px 24px; max-width: 1200px; margin: 0 auto; }
-    .admin-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; }
-    .admin-header h1 { margin: 0; font-family: 'Montserrat', sans-serif; font-weight: 600; }
-    
-    .login-box {
-      max-width: 400px; margin: 100px auto; background: white; padding: 40px; 
-      border-radius: 12px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+    /* ═══════════════════════════════════════════
+       Carter Electrical CRM — Admin Dashboard
+       Brand tokens: --ink #011D30, --accent #7AC143
+       ═══════════════════════════════════════════ */
+
+    :root {
+      --ink: #011D30;
+      --ink-2: #0B2637;
+      --paper: #f4f3ee;
+      --paper-2: #ebe8e0;
+      --white: #ffffff;
+      --rule: #e4e1db;
+      --muted: #8b8b85;
+      --muted-2: #5a5a55;
+      --accent: #7AC143;
+      --accent-deep: #5fa02f;
+      --accent-text: #4d8225;
+      --danger: #ef4444;
+      --danger-hover: #dc2626;
+      --font-display: 'Montserrat', sans-serif;
+      --font-sans: 'Inter', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-sans);
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--ink);
+      background: var(--paper);
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    /* ── Login screen ── */
+    .login-screen {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--ink);
+      position: relative;
+      overflow: hidden;
+    }
+    .login-glow {
+      position: absolute;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(122,193,67,0.15), transparent 60%);
+      top: 20%; right: 10%;
+      pointer-events: none;
+      filter: blur(40px);
+    }
+    .login-card {
+      position: relative;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(20px);
+      padding: 48px 40px;
+      width: 100%;
+      max-width: 420px;
       text-align: center;
     }
-    .login-box input {
-      width: 100%; padding: 12px; margin-bottom: 20px; border: 1px solid #cbd5e1;
-      border-radius: 6px; font-size: 16px;
+    .login-logo { margin-bottom: 20px; }
+    .login-bolt { width: 44px; height: 44px; }
+    .login-card h2 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 22px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 6px;
     }
-    .login-box button { width: 100%; }
-    
-    .kanban-board {
-      display: flex; gap: 24px; overflow-x: auto; padding-bottom: 24px;
+    .login-subtitle {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 32px;
     }
-    .kanban-column {
-      flex: 1; min-width: 320px; background: #e2e8f0; border-radius: 8px; padding: 16px;
+    .input-group { text-align: left; margin-bottom: 20px; }
+    .input-group label {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 8px;
     }
-    .kanban-column h3 {
-      font-size: 14px; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0; color: #475569;
+    .input-group input {
+      width: 100%;
+      padding: 14px 16px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: var(--white);
+      font-family: var(--font-mono);
+      font-size: 15px;
+      letter-spacing: 0.15em;
+      outline: none;
+      transition: border-color var(--transition-fast);
     }
-    .lead-card {
-      background: white; border-radius: 6px; padding: 16px; margin-bottom: 12px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1); font-size: 14px;
+    .input-group input::placeholder { color: rgba(255,255,255,0.25); letter-spacing: 0.08em; }
+    .input-group input:focus { border-color: var(--accent); }
+
+    .login-error {
+      color: var(--danger);
+      font-size: 13px;
+      margin-bottom: 16px;
     }
-    .lead-card h4 { margin: 0 0 8px 0; font-size: 16px; color: #0f172a; }
-    .lead-card p { margin: 4px 0; color: #475569; }
-    .lead-card .meta { font-size: 12px; color: #64748b; margin-top: 12px; border-top: 1px solid #e2e8f0; padding-top: 8px; }
-    
-    .lead-actions { margin-top: 12px; display: flex; gap: 8px; }
-    .lead-actions select { padding: 6px; border-radius: 4px; border: 1px solid #cbd5e1; font-size: 12px; }
-    .lead-actions button { padding: 6px 12px; font-size: 12px; border-radius: 4px; }
+    .login-btn {
+      width: 100%;
+      padding: 14px;
+      background: var(--accent);
+      color: #0b1a05;
+      border: none;
+      font-family: var(--font-sans);
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: background var(--transition-fast);
+    }
+    .login-btn:hover { background: #8bd150; }
+    .login-btn:disabled { opacity: 0.6; cursor: wait; }
+    .arrow-right { transition: transform var(--transition-fast); }
+    .login-btn:hover .arrow-right { transform: translateX(3px); }
+
+    .spinner {
+      width: 16px; height: 16px;
+      border: 2px solid rgba(0,0,0,0.2);
+      border-top-color: #0b1a05;
+      border-radius: 50%;
+      animation: spin 0.6s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── CRM Header ── */
+    .crm-header {
+      background: var(--ink-2);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    .crm-header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 28px;
+    }
+    .crm-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .crm-bolt { width: 30px; height: 30px; }
+    .crm-brand-name {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: 0.06em;
+      color: var(--white);
+      display: block;
+    }
+    .crm-brand-sub {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent);
+      display: block;
+      margin-top: 2px;
+    }
+    .crm-header-actions {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .crm-lead-count {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.45);
+    }
+    .crm-signout {
+      padding: 8px 16px;
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.7);
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      background: none;
+    }
+    .crm-signout:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* ── Toolbar ── */
+    .crm-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 28px;
+      background: var(--white);
+      border-bottom: 1px solid var(--rule);
+      flex-wrap: wrap;
+    }
+    .crm-filters {
+      display: flex;
+      gap: 4px;
+      flex-wrap: wrap;
+    }
+    .crm-filter-btn {
+      padding: 8px 14px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted-2);
+      background: none;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .crm-filter-btn:hover { color: var(--ink); border-color: var(--rule); }
+    .crm-filter-btn.active { background: var(--ink); color: var(--white); }
+    .filter-count {
+      font-size: 10px;
+      opacity: 0.6;
+    }
+    .crm-filter-btn.active .filter-count { opacity: 0.8; }
+
+    .crm-search-box {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border: 1px solid var(--rule);
+      min-width: 240px;
+    }
+    .search-icon { width: 16px; height: 16px; color: var(--muted); flex-shrink: 0; }
+    .crm-search-box input {
+      border: none;
+      outline: none;
+      font-family: var(--font-sans);
+      font-size: 13px;
+      color: var(--ink);
+      background: transparent;
+      width: 100%;
+    }
+    .crm-search-box input::placeholder { color: var(--muted); }
+
+    /* ── Table ── */
+    .crm-table-wrap {
+      padding: 0 28px 40px;
+      overflow-x: auto;
+    }
+    .crm-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin-top: 0;
+    }
+    .crm-table thead th {
+      background: var(--paper-2);
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted-2);
+      padding: 12px 14px;
+      text-align: left;
+      border-bottom: 1px solid var(--rule);
+      white-space: nowrap;
+      position: sticky;
+      top: 56px;
+      z-index: 10;
+    }
+    .th-actions { text-align: center; }
+
+    .crm-table tbody tr {
+      background: var(--white);
+      transition: background var(--transition-fast);
+    }
+    .crm-table tbody tr:hover { background: #f8faf5; }
+    .crm-table tbody tr:nth-child(even) { background: #fafaf8; }
+    .crm-table tbody tr:nth-child(even):hover { background: #f8faf5; }
+
+    .crm-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--rule);
+      vertical-align: top;
+      max-width: 200px;
+    }
+    .cell-name { font-weight: 600; white-space: nowrap; }
+    .cell-date {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    .cell-notes { max-width: 280px; }
+    .cell-actions { white-space: nowrap; text-align: center; }
+
+    .empty-row {
+      text-align: center;
+      padding: 60px 20px !important;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* ── Editable fields ── */
+    .editable-value {
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 2px 4px;
+      border-radius: 2px;
+      transition: background var(--transition-fast);
+    }
+    .editable-value:hover { background: rgba(122,193,67,0.08); }
+    .edit-icon { width: 12px; height: 12px; color: var(--muted); opacity: 0; transition: opacity var(--transition-fast); flex-shrink: 0; }
+    .editable-value:hover .edit-icon { opacity: 1; color: var(--accent-deep); }
+    .empty-value { color: var(--muted); font-style: italic; }
+
+    .inline-input {
+      width: 100%;
+      padding: 6px 8px;
+      border: 1px solid var(--accent);
+      outline: none;
+      font-family: var(--font-sans);
+      font-size: 13px;
+      color: var(--ink);
+      background: #fcfff8;
+      box-shadow: 0 0 0 3px rgba(122,193,67,0.12);
+    }
+    .inline-textarea {
+      min-height: 60px;
+      resize: vertical;
+    }
+
+    /* ── Status select ── */
+    .status-select {
+      padding: 6px 10px;
+      border: 1px solid var(--rule);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      cursor: pointer;
+      color: var(--ink);
+      background: var(--white);
+      outline: none;
+      transition: border-color var(--transition-fast);
+    }
+    .status-select:focus { border-color: var(--accent); }
+    .status-select[data-status="New Lead"] { border-left: 3px solid #3b82f6; }
+    .status-select[data-status="Contacted"] { border-left: 3px solid #f59e0b; }
+    .status-select[data-status="Won"] { border-left: 3px solid var(--accent); }
+    .status-select[data-status="Lost"] { border-left: 3px solid var(--danger); }
+
+    /* ── Action buttons ── */
+    .action-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px; height: 30px;
+      border: 1px solid var(--rule);
+      background: var(--white);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      color: var(--muted-2);
+      text-decoration: none;
+    }
+    .action-btn svg { width: 15px; height: 15px; }
+    .action-btn:hover { border-color: var(--ink); color: var(--ink); }
+    .action-call:hover { border-color: var(--accent-deep); color: var(--accent-deep); background: rgba(122,193,67,0.05); }
+    .action-email:hover { border-color: #3b82f6; color: #3b82f6; background: rgba(59,130,246,0.05); }
+    .action-delete:hover { border-color: var(--danger); color: var(--danger); background: rgba(239,68,68,0.05); }
+    .action-delete:disabled { opacity: 0.4; cursor: wait; }
+
+    .row-deleting { opacity: 0.35; pointer-events: none; }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .crm-header-inner { padding: 12px 16px; }
+      .crm-toolbar { padding: 12px 16px; }
+      .crm-table-wrap { padding: 0 16px 24px; }
+      .crm-search-box { min-width: 100%; }
+      .crm-table { font-size: 12px; }
+      .crm-table thead th { font-size: 9.5px; padding: 10px 8px; }
+      .crm-table td { padding: 10px 8px; }
+    }
   </style>
 </head>
 <body>
   <div id="root"></div>
 
   <!-- React Dependencies -->
-  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin></script>
 
   <!-- Load the Admin React App -->
   <script src="admin.js"></script>

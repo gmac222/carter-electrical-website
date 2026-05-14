@@ -8,9 +8,23 @@ export default async function handler(req, res) {
     return res.status(401).json({ error: 'Unauthorized' });
   }
 
-  const { id, status } = req.body;
-  if (!id || !status) {
-    return res.status(400).json({ error: 'Missing id or status' });
+  const { id, status, name, phone, email, service, notes, quote } = req.body;
+  if (!id) {
+    return res.status(400).json({ error: 'Missing record id' });
+  }
+
+  // Build a fields object from only the provided values
+  const fields = {};
+  if (status !== undefined) fields['Status'] = status;
+  if (name !== undefined) fields['Customer Name'] = name;
+  if (phone !== undefined) fields['Customer Phone'] = phone;
+  if (email !== undefined) fields['Customer Email'] = email;
+  if (service !== undefined) fields['Service Requested'] = service;
+  if (notes !== undefined) fields['Notes'] = notes;
+  if (quote !== undefined) fields['Quote Amount'] = Number(quote) || 0;
+
+  if (Object.keys(fields).length === 0) {
+    return res.status(400).json({ error: 'No fields to update' });
   }
 
   try {
@@ -20,16 +34,12 @@ export default async function handler(req, res) {
         'Authorization': `Bearer ${process.env.AIRTABLE_PAT}`,
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({
-        typecast: true,
-        fields: {
-          'Status': status
-        }
-      })
+      body: JSON.stringify({ typecast: true, fields })
     });
 
     if (!response.ok) {
-      throw new Error(`Airtable error: ${response.statusText}`);
+      const errBody = await response.text();
+      throw new Error(`Airtable error: ${response.status} ${errBody}`);
     }
 
     res.status(200).json({ success: true });
