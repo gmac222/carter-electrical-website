@@ -15,6 +15,7 @@ export default async function handler(req, res) {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
+          typecast: true,
           fields: {
             'Customer Name': name || 'Unknown',
             'Customer Phone': phone || '',

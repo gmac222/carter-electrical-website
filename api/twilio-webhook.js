@@ -12,14 +12,15 @@ export default async function handler(req, res) {
     
     // In Twilio, set this webhook URL in the "A call comes in" section.
     
-    if (From && process.env.AIRTABLE_BASE_ID && process.env.AIRTABLE_PAT) {
-      await fetch(`https://api.airtable.com/v0/${process.env.AIRTABLE_BASE_ID}/Leads`, {
+    if (From && process.env.AIRTABLE_BASE_ID && process.env.AIRTABLE_PAT && process.env.AIRTABLE_TABLE_ID) {
+      await fetch(`https://api.airtable.com/v0/${process.env.AIRTABLE_BASE_ID}/${process.env.AIRTABLE_TABLE_ID}`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${process.env.AIRTABLE_PAT}`,
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
+          typecast: true,
           fields: {
             'Customer Name': 'Phone Caller',
             'Customer Phone': From,
