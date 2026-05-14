@@ -14,14 +14,14 @@ export default async function handler(req, res) {
   }
 
   try {
-    const response = await fetch(`https://api.airtable.com/v0/${process.env.AIRTABLE_BASE_ID}/Leads?sort%5B0%5D%5Bfield%5D=Date+Received&sort%5B0%5D%5Bdirection%5D=desc`, {
+    const response = await fetch(`https://api.airtable.com/v0/${process.env.AIRTABLE_BASE_ID}/Leads`, {
       headers: {
         'Authorization': `Bearer ${process.env.AIRTABLE_PAT}`
       }
     });
 
     if (!response.ok) {
-      throw new Error(`Airtable error: ${response.statusText}`);
+      throw new Error(`Airtable error: ${response.status} ${response.statusText}`);
     }
 
     const data = await response.json();
@@ -37,6 +37,9 @@ export default async function handler(req, res) {
       notes: record.fields['Notes'],
       createdTime: record.createdTime
     }));
+
+    // Sort leads by createdTime descending (newest first)
+    leads.sort((a, b) => new Date(b.createdTime) - new Date(a.createdTime));
 
     res.status(200).json({ leads });
   } catch (error) {
