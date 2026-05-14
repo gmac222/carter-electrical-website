@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Dashboard | Carter Electrical Contracting</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="uploads/favicon-32x32-1.png">
+  <meta name="theme-color" content="#111111">
+  <style>
+    /* Specific styles for the Admin Dashboard to give it a CRM feel */
+    body { background-color: #f8fafc; color: #0f172a; }
+    .admin-container { padding: 40px 24px; max-width: 1200px; margin: 0 auto; }
+    .admin-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; }
+    .admin-header h1 { margin: 0; font-family: 'Montserrat', sans-serif; font-weight: 600; }
+    
+    .login-box {
+      max-width: 400px; margin: 100px auto; background: white; padding: 40px; 
+      border-radius: 12px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .login-box input {
+      width: 100%; padding: 12px; margin-bottom: 20px; border: 1px solid #cbd5e1;
+      border-radius: 6px; font-size: 16px;
+    }
+    .login-box button { width: 100%; }
+    
+    .kanban-board {
+      display: flex; gap: 24px; overflow-x: auto; padding-bottom: 24px;
+    }
+    .kanban-column {
+      flex: 1; min-width: 320px; background: #e2e8f0; border-radius: 8px; padding: 16px;
+    }
+    .kanban-column h3 {
+      font-size: 14px; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0; color: #475569;
+    }
+    .lead-card {
+      background: white; border-radius: 6px; padding: 16px; margin-bottom: 12px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1); font-size: 14px;
+    }
+    .lead-card h4 { margin: 0 0 8px 0; font-size: 16px; color: #0f172a; }
+    .lead-card p { margin: 4px 0; color: #475569; }
+    .lead-card .meta { font-size: 12px; color: #64748b; margin-top: 12px; border-top: 1px solid #e2e8f0; padding-top: 8px; }
+    
+    .lead-actions { margin-top: 12px; display: flex; gap: 8px; }
+    .lead-actions select { padding: 6px; border-radius: 4px; border: 1px solid #cbd5e1; font-size: 12px; }
+    .lead-actions button { padding: 6px 12px; font-size: 12px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- React Dependencies -->
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
+
+  <!-- Load the Admin React App -->
+  <script src="admin.js"></script>
+</body>
+</html>

@@ -6,6 +6,7 @@ const { Header, Footer, TrustBar, TweaksPanel, useScrollReveal, MobileStickyCTA 
 function ContactForm() {
   const [step, setStep] = useState(0);
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [data, setData] = useState({
     service: '',
     sector: '',
@@ -48,8 +49,25 @@ function ContactForm() {
 
   const next = () => { if (validateStep()) setStep(s => s + 1); };
   const back = () => setStep(s => Math.max(0, s - 1));
-  const submit = () => {
-    if (validateStep()) setSubmitted(true);
+  const submit = async () => {
+    if (!validateStep()) return;
+    setIsSubmitting(true);
+    try {
+      const response = await fetch('/api/lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        alert('There was a problem submitting your enquiry. Please try again or call us directly.');
+      }
+    } catch (err) {
+      console.error(err);
+      alert('Network error. Please try again or call us directly.');
+    }
+    setIsSubmitting(false);
   };
 
   const refNum = 'CEC-' + Math.floor(1000 + Math.random() * 9000) + '-' + new Date().getFullYear();
@@ -184,11 +202,14 @@ function ContactForm() {
 
       <div className="form-actions">
         {step > 0
-          ? <button type="button" className="back-link" onClick={back}>← Back</button>
+          ? <button type="button" className="back-link" onClick={back} disabled={isSubmitting}>← Back</button>
           : <span />}
         {step < 2
           ? <button type="button" className="btn btn-primary" onClick={next}>Continue <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }}/></button>
-          : <button type="button" className="btn btn-primary" onClick={submit}>Send enquiry <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }}/></button>}
+          : <button type="button" className="btn btn-primary" onClick={submit} disabled={isSubmitting}>
+              {isSubmitting ? 'Sending...' : 'Send enquiry'} 
+              {!isSubmitting && <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }}/>}
+            </button>}
       </div>
     </div>
   );
