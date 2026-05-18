@@ -577,7 +577,7 @@ function LocationPage({
     style: {
       marginTop: 20
     }
-  }, "Need an electrician in ", locationName, "?", /*#__PURE__*/React.createElement("br", null), "Let's scope it properly", /*#__PURE__*/React.createElement("span", {
+  }, "Need an electrician in ", locationName, "?", /*#__PURE__*/React.createElement("br", null), "Get in touch today", /*#__PURE__*/React.createElement("span", {
     className: "accent"
   }, ".")), /*#__PURE__*/React.createElement("p", {
     className: "lede",

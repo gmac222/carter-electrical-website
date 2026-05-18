@@ -280,7 +280,7 @@ function LocationPage({ locationName }) {
         <div className="wrap">
           <div>
             <div className="eyebrow">Start a conversation</div>
-            <h2 style={{ marginTop: 20 }}>Need an electrician in {locationName}?<br/>Let's scope it properly<span className="accent">.</span></h2>
+            <h2 style={{ marginTop: 20 }}>Need an electrician in {locationName}?<br/>Get in touch today<span className="accent">.</span></h2>
             <p className="lede" style={{ marginTop: 18, maxWidth: '54ch' }}>
               Brief the scope in three steps. We'll be in touch within 48 hours.
             </p>
