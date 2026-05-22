@@ -979,7 +979,7 @@ section { position: relative; }
   gap: 0;
   border-top: 1px solid rgba(255,255,255,0.1);
 }
-.area-list button, .area-list a {
+.area-list button, .area-list .area-item {
   text-align: left;
   padding: 16px 0;
   display: flex; align-items: center; justify-content: space-between;
@@ -997,18 +997,25 @@ section { position: relative; }
   border-top: none;
   cursor: pointer;
 }
-.area-list button:nth-child(odd), .area-list a:nth-child(odd) { padding-right: 20px; border-right: 1px solid rgba(255,255,255,0.1); padding-left: 0; }
-.area-list button:nth-child(even), .area-list a:nth-child(even) { padding-left: 20px; }
-.area-list button .distance, .area-list a .distance {
+.area-list button:nth-child(odd), .area-list .area-item:nth-child(odd) { padding-right: 20px; border-right: 1px solid rgba(255,255,255,0.1); padding-left: 0; }
+.area-list button:nth-child(even), .area-list .area-item:nth-child(even) { padding-left: 20px; }
+.area-list button .distance, .area-list .area-item .distance {
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.1em;
   color: rgba(255,255,255,0.4);
 }
-.area-list button:hover, .area-list button.active, .area-list a:hover, .area-list a.active {
+.area-list button:hover, .area-list button.active, .area-list .area-item:hover, .area-list .area-item.active {
   color: var(--accent);
 }
-.area-list button.active .distance, .area-list a.active .distance { color: var(--accent); }
+.area-list button.active .distance, .area-list .area-item.active .distance { color: var(--accent); }
+.area-list .area-item a {
+  color: inherit;
+  text-decoration: none;
+}
+.area-list .area-item a:hover {
+  text-decoration: underline;
+}
 
 /* ---------- CTA band ---------- */
 .cta-band {

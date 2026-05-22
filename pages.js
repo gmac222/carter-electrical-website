@@ -475,12 +475,14 @@ function AreasPage() {
       }
     };
     if (isLink) {
-      return /*#__PURE__*/React.createElement("a", {
+      return /*#__PURE__*/React.createElement("div", {
         key: p.name,
+        className: `area-item ${active === p.name ? 'active' : ''}`,
+        onClick: () => setActive(p.name)
+      }, /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("a", {
         href: href,
-        className: active === p.name ? 'active' : '',
         onClick: handleClick
-      }, /*#__PURE__*/React.createElement("span", null, p.name), /*#__PURE__*/React.createElement("span", {
+      }, p.name)), /*#__PURE__*/React.createElement("span", {
         className: "distance"
       }, p.distance));
     } else {

@@ -403,15 +403,21 @@ function Areas() {
 
                 if (isLink) {
                   return (
-                    <a
+                    <div
                       key={p.name}
-                      href={href}
-                      className={active === p.name ? 'active' : ''}
-                      onClick={handleClick}
+                      className={`area-item ${active === p.name ? 'active' : ''}`}
+                      onClick={() => setActive(p.name)}
                     >
-                      <span>{p.name}</span>
+                      <span>
+                        <a
+                          href={href}
+                          onClick={handleClick}
+                        >
+                          {p.name}
+                        </a>
+                      </span>
                       <span className="distance">{p.distance}</span>
-                    </a>
+                    </div>
                   );
                 } else {
                   return (
