@@ -468,20 +468,13 @@ function AreasPage() {
   }, CARTER.areas.map(p => {
     const isLink = !!p.slug;
     const href = p.name === 'Chester' ? '/' : `electricians-${p.slug}.html`;
-    const handleClick = e => {
-      if (active !== p.name) {
-        e.preventDefault();
-        setActive(p.name);
-      }
-    };
     if (isLink) {
       return /*#__PURE__*/React.createElement("div", {
         key: p.name,
         className: `area-item ${active === p.name ? 'active' : ''}`,
         onClick: () => setActive(p.name)
       }, /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("a", {
-        href: href,
-        onClick: handleClick
+        href: href
       }, p.name)), /*#__PURE__*/React.createElement("span", {
         className: "distance"
       }, p.distance));

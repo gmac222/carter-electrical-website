@@ -209,12 +209,6 @@ function AreasPage() {
                 {CARTER.areas.map(p => {
                   const isLink = !!p.slug;
                   const href = p.name === 'Chester' ? '/' : `electricians-${p.slug}.html`;
-                  const handleClick = (e) => {
-                    if (active !== p.name) {
-                      e.preventDefault();
-                      setActive(p.name);
-                    }
-                  };
                   if (isLink) {
                     return (
                       <div
@@ -225,7 +219,6 @@ function AreasPage() {
                         <span>
                           <a
                             href={href}
-                            onClick={handleClick}
                           >
                             {p.name}
                           </a>
