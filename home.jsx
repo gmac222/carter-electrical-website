@@ -278,7 +278,7 @@ function Cases() {
           {visible.map((c, i) => (
             <a
               key={c.id}
-              href={c.id === 'old-dukes' ? 'case-old-dukes.html' : 'case-studies.html'}
+              href={`case-${c.id}.html`}
               className="case-card"
             >
               <div className="case-visual">
