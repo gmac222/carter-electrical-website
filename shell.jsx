@@ -120,7 +120,7 @@ window.Footer = function Footer() {
           <div>
             <Logo light={true} />
             <p style={{ color: 'rgba(255,255,255,0.6)', marginTop: 20, maxWidth: '36ch', fontSize: 14.5, lineHeight: 1.55 }}>
-              NICEIC-approved electrical contractors. Commercial, industrial, domestic and renewables across Chester, North Wales, Wirral and Merseyside.
+              NICEIC-approved electrical contractors. Commercial, industrial, domestic and renewables across the North West and North Wales.
             </p>
             <div className="circuit-rule" style={{ margin: '28px 0 20px', color: 'rgba(255,255,255,0.4)' }} />
             <div className="mono" style={{ fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)' }}>

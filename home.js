@@ -11,7 +11,7 @@ const {
 } = window;
 const HERO_HEADLINES = {
   outcome: {
-    eyebrow: 'NICEIC · Chester · Est. 2008',
+    eyebrow: 'NICEIC · Chester · Est. 2019',
     h1: /*#__PURE__*/React.createElement(React.Fragment, null, "Electricians in Chester", /*#__PURE__*/React.createElement("span", {
       className: "accent"
     }, ".")),
@@ -22,10 +22,10 @@ const HERO_HEADLINES = {
         color: 'var(--white)'
       }
     }, "."))),
-    sub: 'Commercial, industrial and domestic electrical services across Cheshire West, North Wales, Wirral and Merseyside. Local electricians covering the full electrics scope from first fix to sign-off.'
+    sub: 'Commercial, industrial and domestic electrical services across the North West and North Wales. Local electricians covering the full electrics scope from first fix to sign-off.'
   },
   credential: {
-    eyebrow: 'NICEIC Approved · Est. 2008',
+    eyebrow: 'NICEIC Approved · Est. 2019',
     h1: /*#__PURE__*/React.createElement(React.Fragment, null, "NICEIC-approved electricians in Chester", /*#__PURE__*/React.createElement("span", {
       className: "accent"
     }, ".")),
@@ -52,7 +52,7 @@ const HERO_HEADLINES = {
         color: 'var(--white)'
       }
     }, "."))),
-    sub: 'Based in Christleton. On-call across Chester, Wrexham, Wirral, Merseyside and North Wales. The same team, owning the work from first fix to sign-off.'
+    sub: 'Based in Christleton. On-call across the North West and North Wales. The same team, owning the work from first fix to sign-off.'
   }
 };
 function Hero() {
@@ -159,7 +159,7 @@ function Hero() {
     className: "k"
   }, "Coverage"), /*#__PURE__*/React.createElement("span", {
     className: "v"
-  }, "Chester \xB7 Wirral \xB7 North Wales")), /*#__PURE__*/React.createElement("div", {
+  }, "North West & North Wales")), /*#__PURE__*/React.createElement("div", {
     className: "cell"
   }, /*#__PURE__*/React.createElement("span", {
     className: "k"
@@ -204,12 +204,12 @@ function Intro() {
     style: {
       marginTop: '28px'
     }
-  }, /*#__PURE__*/React.createElement("strong", null, "Carter Electrical"), " is an NICEIC approved electrical contractor serving Cheshire West and the wider Cheshire area. Our electrical services cover domestic, commercial and industrial electrical work across the local area. Every job is Part P qualified, compliant with current building regulations and BS\xA07671, and signed off with full documentation."), /*#__PURE__*/React.createElement("p", {
+  }, /*#__PURE__*/React.createElement("strong", null, "Carter Electrical"), " is an NICEIC approved electrical contractor serving Cheshire West and the wider Cheshire area. Our electrical services cover domestic, commercial and industrial electrical work across the local area. Every job is compliant with current building regulations and BS\xA07671, and signed off with full documentation."), /*#__PURE__*/React.createElement("p", {
     className: "lede",
     style: {
       marginTop: '16px'
     }
-  }, "Typical projects include full rewires, consumer unit replacements, socket and light fitting installation, and electrical repairs \u2014 from a single socket to a full commercial electrical fit-out or fault repair, all delivered to the same certified standard.")), /*#__PURE__*/React.createElement("div", {
+  }, "Typical projects include full rewires, replacement consumer units, socket and light fitting installation, and electrical repairs \u2014 from a single socket to a full commercial electrical fit-out or fault repair, all delivered to the same certified standard.")), /*#__PURE__*/React.createElement("div", {
     className: "area-image",
     style: {
       height: '100%',
@@ -251,7 +251,7 @@ function Intro() {
     v: 'NICEIC + OZEV'
   }, {
     k: 'Est.',
-    v: '2008 · 17+ years'
+    v: '2019 · 7+ years'
   }].map((r, i) => /*#__PURE__*/React.createElement("div", {
     key: i,
     style: {
@@ -376,7 +376,7 @@ function Stats() {
   }, /*#__PURE__*/React.createElement("div", {
     className: "stat"
   }, /*#__PURE__*/React.createElement(StatNumber, {
-    target: 17,
+    target: 7,
     unit: "+"
   }), /*#__PURE__*/React.createElement("span", {
     className: "l"
@@ -518,7 +518,7 @@ function Areas() {
     }
   }, "06 \xB7 Areas we cover"), /*#__PURE__*/React.createElement("h2", {
     className: "h-1"
-  }, "Covering Cheshire,", /*#__PURE__*/React.createElement("br", null), "the Wirral & North Wales", /*#__PURE__*/React.createElement("span", {
+  }, "Covering the", /*#__PURE__*/React.createElement("br", null), "North West & North Wales", /*#__PURE__*/React.createElement("span", {
     className: "accent"
   }, "."))), /*#__PURE__*/React.createElement("p", {
     className: "lede",

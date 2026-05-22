@@ -198,7 +198,7 @@ window.Footer = function Footer() {
       fontSize: 14.5,
       lineHeight: 1.55
     }
-  }, "NICEIC-approved electrical contractors. Commercial, industrial, domestic and renewables across Chester, North Wales, Wirral and Merseyside."), /*#__PURE__*/React.createElement("div", {
+  }, "NICEIC-approved electrical contractors. Commercial, industrial, domestic and renewables across the North West and North Wales."), /*#__PURE__*/React.createElement("div", {
     className: "circuit-rule",
     style: {
       margin: '28px 0 20px',

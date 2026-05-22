@@ -10,7 +10,7 @@ window.CARTER = {
     email: 'info@carterelec.co.uk',
     address: ['Unit 5, White Lane Depot', 'White Lane, Christleton', 'Chester, CH3 6AH'],
     socialFb: 'https://facebook.com/carter.electrical.chester',
-    founded: 2008
+    founded: 2019
   },
 
   cases: [
@@ -43,7 +43,7 @@ window.CARTER = {
       neighbourhoods: ['Hoole', 'Saltney', 'Upton', 'Blacon', 'Boughton', 'Handbridge', 'Vicars Cross', 'Christleton', 'Newton', 'Mickle Trafford', 'Waverton'],
       intro: "Carter Electrical is headquartered in Christleton, on the eastern edge of Chester — our vans are typically on-site within an hour across all four main CH postcodes. Chester's mix of listed Georgian city-centre stock, Victorian terraces in Hoole and Boughton, out-of-town business parks and a dense hospitality trade means we rotate daily between heritage rewires, EICRs for landlords, fit-outs on Bridge Street and Watergate Street, and compliance work for the city's offices and hotels. Working in a city with this much listed-building stock demands a careful hand — surface-clipped cable runs, concealed containment, and sign-off documentation that satisfies both NICEIC and conservation officers.",
       commercialAngle: "Chester's retail and hospitality trade — from the Rows to the Northgate development — leans heavily on overnight shutdowns and Sunday-morning energisations so that fit-outs can open on schedule. We also carry out planned lighting upgrades, EICR programmes and emergency-lighting certification for the city's office estates.",
-      domesticAngle: "Chester homeowners are often dealing with period properties: sensitive rewires around original plasterwork and panelling, consumer-unit upgrades on listed buildings, and smart-lighting retrofits where the wiring chases need hiding with care. We've also done volume EV-charger installs across Hoole and Upton as the CH2 and CH3 postcodes picked up uptake.",
+      domesticAngle: "Chester homeowners are often dealing with period properties: sensitive rewires around original plasterwork and panelling, replacement consumer units on listed buildings, and smart-lighting retrofits where the wiring chases need hiding with care. We've also done volume EV-charger installs across Hoole and Upton as the CH2 and CH3 postcodes picked up uptake.",
       featuredProject: "Old Dukes, a full electrical design-and-install on a two-floor Chester-centre tea-room-to-sports-bar conversion, delivered ahead of opening week with distribution, AV power, emergency lighting and fire alarm all scoped in-house.",
       landmarks: ['Chester Business Park', 'Sealand Industrial Estate', 'Chester city centre (Rows, Eastgate, Watergate)', 'Countess of Chester Hospital', 'University of Chester']
     },
@@ -54,7 +54,7 @@ window.CARTER = {
       neighbourhoods: ['Little Sutton', 'Whitby', 'Great Sutton', 'Hooton', 'Overpool', 'Rivacre', 'Strawberry', 'Wolverham'],
       intro: "Ellesmere Port is the industrial anchor of our north-Wirral coverage — a town whose electrical demand is shaped by Cheshire Oaks Designer Outlet at one end and the Stanlow refinery, Essar petrochemical complex and the former Vauxhall plant at the other. In practice that means we spend as much time on three-phase industrial installations, motor control work and machinery relocations for manufacturers along the M53 corridor as we do on retail unit fit-outs and EICR testing for landlords across the CH65 and CH66 postcodes.",
       commercialAngle: "Cheshire Oaks, Coliseum Retail Park and the Stanney Lane trading estates all drive a steady flow of shop and restaurant fit-outs, landlord-side compliance testing, and emergency-lighting upgrades. Our team is used to working around live retail trading hours and overnight shutdown windows.",
-      domesticAngle: "The CH65/CH66 housing stock is a mix of 1960s–1970s estates needing consumer-unit upgrades and full rewires, and newer developments where we're installing OZEV-approved EV chargers and smart home controls.",
+      domesticAngle: "The CH65/CH66 housing stock is a mix of 1960s–1970s estates needing replacement consumer units and full rewires, and newer developments where we're installing OZEV-approved EV chargers and smart home controls.",
       featuredProject: "The nearby Prenton, Wirral commercial distribution upgrade — a full mains distribution replacement, three-phase board install and cable-trunking redesign following an inspection that flagged multiple issues.",
       landmarks: ['Cheshire Oaks Designer Outlet', 'Stanlow Refinery', 'Coliseum Retail Park', 'Essar petrochemical complex', 'Port Arcades shopping centre']
     },
@@ -65,7 +65,7 @@ window.CARTER = {
       neighbourhoods: ['Acton', 'Rhosddu', 'Rossett', 'Marford', 'Gwersyllt', 'Rhosllanerchrugog', 'Ruabon', 'Gresford', 'Coedpoeth', 'Borras', 'Hightown'],
       intro: "Wrexham — now officially a city — sits at the heart of one of the UK's largest industrial estates. Wrexham Industrial Estate alone hosts hundreds of manufacturers, and that dominates the electrical demand we see across LL11, LL12, LL13 and LL14: three-phase supplies, machinery installation and relocation, planned factory shutdowns, motor control rewires and preventative maintenance contracts. Away from the industrial estate, we handle commercial fit-outs around the town centre and the growing residential stock in Gresford, Rossett and Marford.",
       commercialAngle: "Wrexham's commercial demand ranges from town-centre retail units through to newer office and hospitality work around the Racecourse and Eagles Meadow. We deliver design-and-install, EICR-led remedials and emergency-lighting programmes to landlords and operators.",
-      domesticAngle: "Cross-border working is routine for us — we hold NICEIC approval recognised across England and Wales. Domestic demand skews toward rewires in the older terraced stock of Rhosllanerchrugog and Ruabon, EV chargers in Gresford and Marford, and consumer-unit upgrades across the LL12 belt.",
+      domesticAngle: "Cross-border working is routine for us — we hold NICEIC approval recognised across England and Wales. Domestic demand skews toward rewires in the older terraced stock of Rhosllanerchrugog and Ruabon, EV chargers in Gresford and Marford, and replacement consumer units across the LL12 belt.",
       featuredProject: "Industrial distribution and machinery install work on Wrexham Industrial Estate, including a three-phase motor-control replacement executed during a planned two-day shutdown.",
       landmarks: ['Wrexham Industrial Estate', 'Racecourse Ground', 'Eagles Meadow', 'Wrexham Maelor Hospital', 'Glyndŵr University']
     },
@@ -76,7 +76,7 @@ window.CARTER = {
       neighbourhoods: ['Barnton', 'Hartford', 'Weaverham', 'Lostock Gralam', 'Rudheath', 'Castle', 'Winnington', 'Leftwich', 'Davenham', 'Sandiway', 'Kingsmead'],
       intro: "Northwich has always been a chemical and industrial town — Tata Chemicals and the long Brunner Mond legacy still shape the commercial electrical demand across CW8 and CW9. Combined with a regenerated town centre (Barons Quay, Northwich Indoor Market) and a strong pipeline of new-build residential in Kingsmead, Leftwich and Davenham, Northwich gives us a full spread of work: industrial three-phase and maintenance, retail and leisure fit-outs, EV charger installs in newer estates, and full-house rewires on older properties around Castle and Winnington.",
       commercialAngle: "Barons Quay retail and leisure tenants, the Lostock Gralam trading estates and town-centre hospitality drive most of our Northwich commercial work — fit-outs, EICRs, landlord compliance, and planned lighting upgrades.",
-      domesticAngle: "Hartford and Davenham demand sits with consumer-unit upgrades and part-rewires on 1970s-era stock, while Kingsmead and Leftwich new-build owners most often call us for EV chargers, solar-PV add-ons and smart lighting.",
+      domesticAngle: "Hartford and Davenham demand sits with replacement consumer units and part-rewires on 1970s-era stock, while Kingsmead and Leftwich new-build owners most often call us for EV chargers, solar-PV add-ons and smart lighting.",
       featuredProject: "A planned commercial lighting and emergency-lighting upgrade for a leisure-sector tenant at Barons Quay, scheduled around trading hours to avoid disruption.",
       landmarks: ['Barons Quay', 'Tata Chemicals Winnington', 'Lostock Gralam industrial area', 'Anderton Boat Lift', 'Leftwich Community Village']
     },
@@ -120,7 +120,7 @@ window.CARTER = {
       neighbourhoods: ['Shotton', "Connah's Quay", 'Queensferry', 'Sealand', 'Hawarden', 'Garden City', 'Sandycroft', 'Mancot', 'Ewloe'],
       intro: "Deeside is defined by the Deeside Industrial Park — one of North Wales' largest employment zones — and the nearby Airbus Broughton site. That shapes what we do here: heavy three-phase industrial supplies, motor-control rewires, planned factory shutdowns, machinery installation and relocation, and preventative-maintenance contracts for manufacturers across CH5. We also handle a steady stream of domestic work through Shotton, Connah's Quay, Queensferry and Hawarden, and mid-scale commercial fit-outs in the Garden City and Sandycroft retail areas.",
       commercialAngle: "Deeside Industrial Park tenants are the backbone of our commercial work here — scheduled maintenance, RCD and distribution upgrades, compliance testing and planned remedial works. Retail and hospitality around Hawarden and the retail-park strip at Sandycroft pick up the rest.",
-      domesticAngle: "Shotton and Connah's Quay terraced stock needs full rewires and consumer-unit upgrades more often than not, while Hawarden and Ewloe homeowners are mostly calling us for EV chargers, solar-PV add-ons and smart-home retrofits.",
+      domesticAngle: "Shotton and Connah's Quay terraced stock needs full rewires and replacement consumer units more often than not, while Hawarden and Ewloe homeowners are mostly calling us for EV chargers, solar-PV add-ons and smart-home retrofits.",
       featuredProject: "A planned three-phase distribution upgrade for a Deeside Industrial Park manufacturer, including thermal imaging survey, cable-trunking redesign and a two-phase energisation to avoid production loss.",
       landmarks: ['Deeside Industrial Park', 'Airbus Broughton (nearby)', 'Hawarden Airport', 'Queensferry retail belt', 'Connah’s Quay high street']
     },
@@ -139,11 +139,11 @@ window.CARTER = {
       bullets: ['Three-phase & motor control', 'Machinery install & relocation', 'Preventative maintenance', 'Thermal imaging surveys', 'Factory shutdown work'],
       icon: 'factory', slug: 'industrial', imgSrc: 'uploads/industrial-electrical-services-v2.jpg' },
     { title: 'Domestic', lede: 'Rewires, extensions and smart-home work across Chester and the North West.',
-      bullets: ['Full & partial rewires', 'Consumer unit upgrades', 'Extensions & loft conversions', 'Smart lighting & heating', 'Heritage & listed buildings'],
+      bullets: ['Full & partial rewires', 'Replacement Consumer Units', 'Extensions & loft conversions', 'Smart lighting & heating', 'Heritage & listed buildings'],
       icon: 'home', slug: 'domestic', imgSrc: 'uploads/domestic-electrical-services-v2.jpg' },
     { title: 'Testing & Inspection', lede: 'EICRs, landlord reports and PAT testing. NICEIC-approved.',
       bullets: ['EICR reports (commercial & domestic)', 'Landlord electrical safety', 'PAT testing', 'New-install certification', 'Remedial works'],
-      icon: 'shield', slug: 'testing', imgSrc: 'uploads/pat-testing.png' },
+      icon: 'shield', slug: 'testing', imgSrc: 'uploads/electrician-testing-cropped.jpg' },
     { title: 'Renewables & EV', lede: 'EV chargers, solar PV and battery storage. OZEV-approved installer.',
       bullets: ['EV chargers (domestic & commercial)', 'Solar PV & battery', 'Load management', 'Grid application support'],
       icon: 'bolt', slug: 'renewables', imgSrc: 'uploads/renewables-1.jpg' }
@@ -216,7 +216,7 @@ window.CARTER.locationFaqs = function(area) {
     },
     {
       q: "What's your typical lead time for a new project in " + area.name + "?",
-      a: "It depends on scope. A small domestic job — a consumer-unit upgrade, a few additional circuits, a single EV charger — we can usually schedule within a week or two of sign-off. A larger commercial fit-out or industrial installation normally goes through a site visit, a detailed scope and a formal quote first, and we'll give you an honest date at that stage rather than overpromise. Our phone is answered during working hours by the same team that schedules the engineers, so you'll get a straight answer on timings."
+      a: "It depends on scope. A small domestic job — a replacement consumer unit, a few additional circuits, a single EV charger — we can usually schedule within a week or two of sign-off. A larger commercial fit-out or industrial installation normally goes through a site visit, a detailed scope and a formal quote first, and we'll give you an honest date at that stage rather than overpromise. Our phone is answered during working hours by the same team that schedules the engineers, so you'll get a straight answer on timings."
     },
     {
       q: "Which " + area.name + " postcodes and neighbourhoods do you cover?",

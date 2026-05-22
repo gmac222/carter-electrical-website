@@ -367,7 +367,7 @@ function LocationPage({
       lineHeight: 1.7,
       marginTop: 14
     }
-  }, "Common domestic jobs across ", locationName, ": full and partial rewires, consumer-unit (fuseboard) upgrades, OZEV-approved EV charger installs with load management, smart-lighting and smart-heating retrofits, extensions, loft conversions and garage conversions, external lighting and outbuilding supplies, and fault finding when a main breaker keeps tripping.")))), area.neighbourhoods && area.neighbourhoods.length > 0 && /*#__PURE__*/React.createElement("section", {
+  }, "Common domestic jobs across ", locationName, ": full and partial rewires, replacement consumer units (fuseboards), OZEV-approved EV charger installs with load management, smart-lighting and smart-heating retrofits, extensions, loft conversions and garage conversions, external lighting and outbuilding supplies, and fault finding when a main breaker keeps tripping.")))), area.neighbourhoods && area.neighbourhoods.length > 0 && /*#__PURE__*/React.createElement("section", {
     className: "section-y reveal"
   }, /*#__PURE__*/React.createElement("div", {
     className: "wrap"

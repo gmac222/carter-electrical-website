@@ -170,7 +170,7 @@ function AreasPage() {
         sectionNum="03 / Locations"
         title="Regional coverage"
         titleAccent={<>you can rely on<span className="dot-white">.</span></>}
-        subtext="Operating across Chester, the Wirral, Merseyside, Cheshire and North Wales, we provide dependable on-site support for both planned works and urgent requirements within a 50-mile radius of our Christleton base."
+        subtext="Operating across the North West and North Wales, we provide dependable on-site support for both planned works and urgent requirements within a 50-mile radius of our Christleton base."
       />
 
       <section className="areas" style={{ paddingTop: 60 }}>

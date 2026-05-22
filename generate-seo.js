@@ -35,7 +35,7 @@ const areas = [
     metaDesc: 'NICEIC-approved electricians in Ellesmere Port (CH65, CH66). Industrial three-phase, retail fit-outs at Cheshire Oaks, domestic rewires and OZEV EV chargers across Little Sutton, Whitby, Hooton and the surrounding area.',
     intro: "Ellesmere Port is the industrial anchor of our north-Wirral coverage — a town whose electrical demand is shaped by Cheshire Oaks Designer Outlet at one end and the Stanlow refinery, Essar petrochemical complex and the former Vauxhall plant at the other. In practice that means we spend as much time on three-phase industrial installations, motor control work and machinery relocations for manufacturers along the M53 corridor as we do on retail unit fit-outs and EICR testing for landlords across CH65 and CH66.",
     commercialAngle: "Cheshire Oaks, Coliseum Retail Park and the Stanney Lane trading estates drive a steady flow of shop and restaurant fit-outs, landlord-side compliance testing, and emergency-lighting upgrades.",
-    domesticAngle: "The CH65/CH66 housing stock is a mix of 1960s–1970s estates needing consumer-unit upgrades and full rewires, and newer developments where we're installing OZEV-approved EV chargers and smart home controls."
+    domesticAngle: "The CH65/CH66 housing stock is a mix of 1960s–1970s estates needing replacement consumer units and full rewires, and newer developments where we're installing OZEV-approved EV chargers and smart home controls."
   },
   {
     name: 'Wrexham', slug: 'wrexham',
@@ -45,17 +45,17 @@ const areas = [
     metaDesc: 'NICEIC-approved electricians in Wrexham (LL11–LL14). Wrexham Industrial Estate three-phase work, commercial fit-outs, full rewires and EV chargers across Gresford, Rossett, Marford, Ruabon and the city centre.',
     intro: "Wrexham — now officially a city — sits at the heart of one of the UK's largest industrial estates. Wrexham Industrial Estate alone hosts hundreds of manufacturers, and that dominates the electrical demand we see across LL11, LL12, LL13 and LL14: three-phase supplies, machinery installation and relocation, planned factory shutdowns, motor control rewires and preventative maintenance contracts.",
     commercialAngle: "Wrexham's commercial demand ranges from town-centre retail units through to newer office and hospitality work around the Racecourse and Eagles Meadow. We deliver design-and-install, EICR-led remedials and emergency-lighting programmes to landlords and operators.",
-    domesticAngle: "Cross-border working is routine for us — we hold NICEIC approval recognised across England and Wales. Domestic demand skews toward rewires in older terraced stock, EV chargers in Gresford and Marford, and consumer-unit upgrades across the LL12 belt."
+    domesticAngle: "Cross-border working is routine for us — we hold NICEIC approval recognised across England and Wales. Domestic demand skews toward rewires in older terraced stock, EV chargers in Gresford and Marford, and replacement consumer units across the LL12 belt."
   },
   {
     name: 'Northwich', slug: 'northwich',
     county: 'Cheshire West', distance: '18 miles',
     postcodes: ['CW8', 'CW9'],
     neighbourhoods: ['Barnton', 'Hartford', 'Weaverham', 'Lostock Gralam', 'Rudheath', 'Castle', 'Winnington', 'Leftwich', 'Davenham', 'Sandiway', 'Kingsmead'],
-    metaDesc: 'NICEIC-approved electricians in Northwich (CW8, CW9). Industrial maintenance, Barons Quay retail fit-outs, full rewires, consumer-unit upgrades and EV chargers across Hartford, Davenham, Kingsmead, Leftwich and Weaverham.',
+    metaDesc: 'NICEIC-approved electricians in Northwich (CW8, CW9). Industrial maintenance, Barons Quay retail fit-outs, full rewires, replacement consumer units and EV chargers across Hartford, Davenham, Kingsmead, Leftwich and Weaverham.',
     intro: "Northwich has always been a chemical and industrial town — Tata Chemicals and the long Brunner Mond legacy still shape the commercial electrical demand across CW8 and CW9. Combined with a regenerated town centre (Barons Quay, Northwich Indoor Market) and a strong pipeline of new-build residential in Kingsmead, Leftwich and Davenham, Northwich gives us a full spread of work.",
     commercialAngle: "Barons Quay retail and leisure tenants, the Lostock Gralam trading estates and town-centre hospitality drive most of our Northwich commercial work — fit-outs, EICRs, landlord compliance, and planned lighting upgrades.",
-    domesticAngle: "Hartford and Davenham demand sits with consumer-unit upgrades and part-rewires on 1970s-era stock, while Kingsmead and Leftwich new-build owners most often call us for EV chargers, solar-PV add-ons and smart lighting."
+    domesticAngle: "Hartford and Davenham demand sits with replacement consumer units and part-rewires on 1970s-era stock, while Kingsmead and Leftwich new-build owners most often call us for EV chargers, solar-PV add-ons and smart lighting."
   },
   {
     name: 'Frodsham', slug: 'frodsham',
@@ -95,7 +95,7 @@ const areas = [
     metaDesc: 'NICEIC-approved electricians in Deeside (CH5). Deeside Industrial Park three-phase, factory shutdowns, commercial fit-outs, full rewires and EV chargers across Shotton, Connah\'s Quay, Queensferry, Hawarden and Ewloe.',
     intro: "Deeside is defined by the Deeside Industrial Park — one of North Wales' largest employment zones — and the nearby Airbus Broughton site. That shapes what we do here: heavy three-phase industrial supplies, motor-control rewires, planned factory shutdowns, machinery installation and relocation, and preventative-maintenance contracts for manufacturers across CH5.",
     commercialAngle: "Deeside Industrial Park tenants are the backbone of our commercial work here — scheduled maintenance, RCD and distribution upgrades, compliance testing and planned remedial works.",
-    domesticAngle: "Shotton and Connah's Quay terraced stock needs full rewires and consumer-unit upgrades more often than not, while Hawarden and Ewloe homeowners are mostly calling us for EV chargers, solar-PV add-ons and smart-home retrofits."
+    domesticAngle: "Shotton and Connah's Quay terraced stock needs full rewires and replacement consumer units more often than not, while Hawarden and Ewloe homeowners are mostly calling us for EV chargers, solar-PV add-ons and smart-home retrofits."
   }
 ];
 
@@ -111,7 +111,7 @@ function buildFaqs(area) {
     },
     {
       q: 'What\'s your typical lead time for a new project in ' + area.name + '?',
-      a: 'It depends on scope. A small domestic job — a consumer-unit upgrade, a few additional circuits, a single EV charger — we can usually schedule within a week or two of sign-off. A larger commercial fit-out or industrial installation normally goes through a site visit, a detailed scope and a formal quote first, and we\'ll give you an honest date at that stage rather than overpromise. Our phone is answered during working hours by the same team that schedules the engineers, so you\'ll get a straight answer on timings.'
+      a: 'It depends on scope. A small domestic job — a replacement consumer unit, a few additional circuits, a single EV charger — we can usually schedule within a week or two of sign-off. A larger commercial fit-out or industrial installation normally goes through a site visit, a detailed scope and a formal quote first, and we\'ll give you an honest date at that stage rather than overpromise. Our phone is answered during working hours by the same team that schedules the engineers, so you\'ll get a straight answer on timings.'
     },
     {
       q: 'Which ' + area.name + ' postcodes and neighbourhoods do you cover?',
@@ -233,7 +233,7 @@ function buildHtml(area) {
       <ul>
         <li>Commercial fit-outs, distribution, emergency lighting and fire alarm</li>
         <li>Industrial three-phase, motor control and factory shutdowns</li>
-        <li>Full and partial domestic rewires, consumer-unit upgrades</li>
+        <li>Full and partial domestic rewires, replacement consumer units</li>
         <li>EICR testing, landlord safety reports and PAT testing</li>
         <li>OZEV-approved EV charger installation and solar-PV integration</li>
       </ul>

@@ -173,7 +173,7 @@ function LocationPage({ locationName }) {
               <h3 className="h-2" style={{ marginTop: 10 }}>Domestic electricians in {locationName}<span className="accent">.</span></h3>
               <p style={{ color: 'var(--muted-2)', lineHeight: 1.7, marginTop: 16 }}>{area.domesticAngle}</p>
               <p style={{ color: 'var(--muted-2)', lineHeight: 1.7, marginTop: 14 }}>
-                Common domestic jobs across {locationName}: full and partial rewires, consumer-unit (fuseboard) upgrades, OZEV-approved EV charger installs with load management, smart-lighting and smart-heating retrofits, extensions, loft conversions and garage conversions, external lighting and outbuilding supplies, and fault finding when a main breaker keeps tripping.
+                Common domestic jobs across {locationName}: full and partial rewires, replacement consumer units (fuseboards), OZEV-approved EV charger installs with load management, smart-lighting and smart-heating retrofits, extensions, loft conversions and garage conversions, external lighting and outbuilding supplies, and fault finding when a main breaker keeps tripping.
               </p>
             </div>
           )}

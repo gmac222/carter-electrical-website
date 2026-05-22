@@ -386,7 +386,7 @@ function AreasPage() {
     titleAccent: /*#__PURE__*/React.createElement(React.Fragment, null, "you can rely on", /*#__PURE__*/React.createElement("span", {
       className: "dot-white"
     }, ".")),
-    subtext: "Operating across Chester, the Wirral, Merseyside, Cheshire and North Wales, we provide dependable on-site support for both planned works and urgent requirements within a 50-mile radius of our Christleton base."
+    subtext: "Operating across the North West and North Wales, we provide dependable on-site support for both planned works and urgent requirements within a 50-mile radius of our Christleton base."
   }), /*#__PURE__*/React.createElement("section", {
     className: "areas",
     style: {

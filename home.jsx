@@ -4,17 +4,17 @@ const { Header, Footer, TrustBar, Logo, useScrollReveal, StatNumber, TweaksPanel
 
 const HERO_HEADLINES = {
   outcome: {
-    eyebrow: 'NICEIC · Chester · Est. 2008',
+    eyebrow: 'NICEIC · Chester · Est. 2019',
     h1: <>Electricians in Chester<span className="accent">.</span></>,
     strapline: (
       <>
         Electrical services <span className="accent">you can trust<span style={{ color: 'var(--white)' }}>.</span></span>
       </>
     ),
-    sub: 'Commercial, industrial and domestic electrical services across Cheshire West, North Wales, Wirral and Merseyside. Local electricians covering the full electrics scope from first fix to sign-off.',
+    sub: 'Commercial, industrial and domestic electrical services across the North West and North Wales. Local electricians covering the full electrics scope from first fix to sign-off.',
   },
   credential: {
-    eyebrow: 'NICEIC Approved · Est. 2008',
+    eyebrow: 'NICEIC Approved · Est. 2019',
     h1: <>NICEIC-approved electricians in Chester<span className="accent">.</span></>,
     strapline: (
       <>
@@ -31,7 +31,7 @@ const HERO_HEADLINES = {
         Commercial-grade<span className="accent">.</span> <span className="accent">Local accountability<span style={{ color: 'var(--white)' }}>.</span></span>
       </>
     ),
-    sub: 'Based in Christleton. On-call across Chester, Wrexham, Wirral, Merseyside and North Wales. The same team, owning the work from first fix to sign-off.',
+    sub: 'Based in Christleton. On-call across the North West and North Wales. The same team, owning the work from first fix to sign-off.',
   },
 };
 
@@ -91,7 +91,7 @@ function Hero() {
             </div>
             <div className="cell">
               <span className="k">Coverage</span>
-              <span className="v">Chester · Wirral · North Wales</span>
+              <span className="v">North West &amp; North Wales</span>
             </div>
             <div className="cell">
               <span className="k">Assurance</span>
@@ -119,10 +119,10 @@ function Intro() {
               </h2>
             </div>
             <p className="lede" style={{ marginTop: '28px' }}>
-              <strong>Carter Electrical</strong> is an NICEIC approved electrical contractor serving Cheshire West and the wider Cheshire area. Our electrical services cover domestic, commercial and industrial electrical work across the local area. Every job is Part P qualified, compliant with current building regulations and BS&nbsp;7671, and signed off with full documentation.
+              <strong>Carter Electrical</strong> is an NICEIC approved electrical contractor serving Cheshire West and the wider Cheshire area. Our electrical services cover domestic, commercial and industrial electrical work across the local area. Every job is compliant with current building regulations and BS&nbsp;7671, and signed off with full documentation.
             </p>
             <p className="lede" style={{ marginTop: '16px' }}>
-              Typical projects include full rewires, consumer unit replacements, socket and light fitting installation, and electrical repairs — from a single socket to a full commercial electrical fit-out or fault repair, all delivered to the same certified standard.
+              Typical projects include full rewires, replacement consumer units, socket and light fitting installation, and electrical repairs — from a single socket to a full commercial electrical fit-out or fault repair, all delivered to the same certified standard.
             </p>
           </div>
 
@@ -143,7 +143,7 @@ function Intro() {
             { k: 'Response time', v: 'Within 48 hours' },
             { k: 'Distance from HQ', v: 'Christleton, CH3 6AH' },
             { k: 'Accreditation', v: 'NICEIC + OZEV' },
-            { k: 'Est.', v: '2008 · 17+ years' },
+            { k: 'Est.', v: '2019 · 7+ years' },
           ].map((r, i) => (
             <div key={i} style={{ background: 'var(--white)', padding: '24px 22px' }}>
               <div className="mono" style={{ fontSize: 11, letterSpacing: '0.16em', color: 'var(--muted)', textTransform: 'uppercase' }}>{r.k}</div>
@@ -218,7 +218,7 @@ function Stats() {
         </div>
         <div className="stats-grid">
           <div className="stat">
-            <StatNumber target={17} unit="+" />
+            <StatNumber target={7} unit="+" />
             <span className="l">Years in business</span>
           </div>
           <div className="stat">
@@ -353,7 +353,7 @@ function Areas() {
         <div className="section-head" style={{ marginBottom: 50 }}>
           <div>
             <div className="eyebrow" style={{ color: '#8a8a85' }}>06 · Areas we cover</div>
-            <h2 className="h-1">Covering Cheshire,<br/>the Wirral &amp; North Wales<span className="accent">.</span></h2>
+            <h2 className="h-1">Covering the<br/>North West &amp; North Wales<span className="accent">.</span></h2>
           </div>
           <p className="lede" style={{ color: 'rgba(255,255,255,0.7)' }}>
             Based at Unit 5, White Lane Depot in Christleton. Regular coverage across a 40–50 mile radius for both planned works and urgent call-outs.
