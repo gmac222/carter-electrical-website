@@ -560,15 +560,56 @@ function Areas() {
       color: 'rgba(255,255,255,0.7)',
       maxWidth: '42ch'
     }
-  }, active === 'Chester' ? 'Our base. Domestic work, commercial maintenance contracts, hospitality fit-outs across the city.' : `NICEIC electrical services in ${active}. Commercial, domestic and industrial installations and maintenance.`)), /*#__PURE__*/React.createElement("div", {
+  }, active === 'Chester' ? 'Our base. Domestic work, commercial maintenance contracts, hospitality fit-outs across the city.' : `NICEIC electrical services in ${active}. Commercial, domestic and industrial installations and maintenance.`), (() => {
+    const a = CARTER.areas.find(x => x.name === active);
+    if (!a || !a.slug) return null;
+    return /*#__PURE__*/React.createElement("div", {
+      style: {
+        marginTop: 24
+      }
+    }, /*#__PURE__*/React.createElement("a", {
+      href: active === 'Chester' ? '/' : `electricians-${a.slug}.html`,
+      className: "btn btn-ghost-light",
+      style: {
+        padding: '14px 24px',
+        fontSize: 14
+      }
+    }, "View ", active, " services ", /*#__PURE__*/React.createElement("span", {
+      dangerouslySetInnerHTML: {
+        __html: CARTER.svg.arrow
+      }
+    })));
+  })()), /*#__PURE__*/React.createElement("div", {
     className: "area-list"
-  }, map.map(p => /*#__PURE__*/React.createElement("button", {
-    key: p.name,
-    className: active === p.name ? 'active' : '',
-    onClick: () => setActive(p.name)
-  }, /*#__PURE__*/React.createElement("span", null, p.name), /*#__PURE__*/React.createElement("span", {
-    className: "distance"
-  }, p.distance))))))));
+  }, map.map(p => {
+    const isLink = !!p.slug;
+    const href = p.name === 'Chester' ? '/' : `electricians-${p.slug}.html`;
+    const handleClick = e => {
+      if (active !== p.name) {
+        e.preventDefault();
+        setActive(p.name);
+      }
+    };
+    if (isLink) {
+      return /*#__PURE__*/React.createElement("a", {
+        key: p.name,
+        href: href,
+        className: active === p.name ? 'active' : '',
+        onClick: handleClick
+      }, /*#__PURE__*/React.createElement("span", null, p.name), /*#__PURE__*/React.createElement("span", {
+        className: "distance"
+      }, p.distance));
+    } else {
+      return /*#__PURE__*/React.createElement("button", {
+        key: p.name,
+        type: "button",
+        className: active === p.name ? 'active' : '',
+        onClick: () => setActive(p.name)
+      }, /*#__PURE__*/React.createElement("span", null, p.name), /*#__PURE__*/React.createElement("span", {
+        className: "distance"
+      }, p.distance));
+    }
+  }))))));
 }
 function CTABand() {
   return /*#__PURE__*/React.createElement("section", {

@@ -206,11 +206,41 @@ function AreasPage() {
                 })()}
               </div>
               <div className="area-list">
-                {CARTER.areas.map(p => (
-                  <button key={p.name} className={active === p.name ? 'active' : ''} onClick={() => setActive(p.name)}>
-                    <span>{p.name}</span><span className="distance">{p.distance}</span>
-                  </button>
-                ))}
+                {CARTER.areas.map(p => {
+                  const isLink = !!p.slug;
+                  const href = p.name === 'Chester' ? '/' : `electricians-${p.slug}.html`;
+                  const handleClick = (e) => {
+                    if (active !== p.name) {
+                      e.preventDefault();
+                      setActive(p.name);
+                    }
+                  };
+                  if (isLink) {
+                    return (
+                      <a
+                        key={p.name}
+                        href={href}
+                        className={active === p.name ? 'active' : ''}
+                        onClick={handleClick}
+                      >
+                        <span>{p.name}</span>
+                        <span className="distance">{p.distance}</span>
+                      </a>
+                    );
+                  } else {
+                    return (
+                      <button
+                        key={p.name}
+                        type="button"
+                        className={active === p.name ? 'active' : ''}
+                        onClick={() => setActive(p.name)}
+                      >
+                        <span>{p.name}</span>
+                        <span className="distance">{p.distance}</span>
+                      </button>
+                    );
+                  }
+                })}
               </div>
             </div>
           </div>

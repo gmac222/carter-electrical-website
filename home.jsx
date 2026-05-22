@@ -377,18 +377,56 @@ function Areas() {
                   ? 'Our base. Domestic work, commercial maintenance contracts, hospitality fit-outs across the city.'
                   : `NICEIC electrical services in ${active}. Commercial, domestic and industrial installations and maintenance.`}
               </p>
+              {(() => {
+                const a = CARTER.areas.find(x => x.name === active);
+                if (!a || !a.slug) return null;
+                return (
+                  <div style={{ marginTop: 24 }}>
+                    <a href={active === 'Chester' ? '/' : `electricians-${a.slug}.html`} className="btn btn-ghost-light" style={{ padding: '14px 24px', fontSize: 14 }}>
+                      View {active} services <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }}/>
+                    </a>
+                  </div>
+                );
+              })()}
             </div>
             <div className="area-list">
-              {map.map((p) => (
-                <button
-                  key={p.name}
-                  className={active === p.name ? 'active' : ''}
-                  onClick={() => setActive(p.name)}
-                >
-                  <span>{p.name}</span>
-                  <span className="distance">{p.distance}</span>
-                </button>
-              ))}
+              {map.map((p) => {
+                const isLink = !!p.slug;
+                const href = p.name === 'Chester' ? '/' : `electricians-${p.slug}.html`;
+                
+                const handleClick = (e) => {
+                  if (active !== p.name) {
+                    e.preventDefault();
+                    setActive(p.name);
+                  }
+                };
+
+                if (isLink) {
+                  return (
+                    <a
+                      key={p.name}
+                      href={href}
+                      className={active === p.name ? 'active' : ''}
+                      onClick={handleClick}
+                    >
+                      <span>{p.name}</span>
+                      <span className="distance">{p.distance}</span>
+                    </a>
+                  );
+                } else {
+                  return (
+                    <button
+                      key={p.name}
+                      type="button"
+                      className={active === p.name ? 'active' : ''}
+                      onClick={() => setActive(p.name)}
+                    >
+                      <span>{p.name}</span>
+                      <span className="distance">{p.distance}</span>
+                    </button>
+                  );
+                }
+              })}
             </div>
           </div>
         </div>

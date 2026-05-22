@@ -465,13 +465,35 @@ function AreasPage() {
     })));
   })()), /*#__PURE__*/React.createElement("div", {
     className: "area-list"
-  }, CARTER.areas.map(p => /*#__PURE__*/React.createElement("button", {
-    key: p.name,
-    className: active === p.name ? 'active' : '',
-    onClick: () => setActive(p.name)
-  }, /*#__PURE__*/React.createElement("span", null, p.name), /*#__PURE__*/React.createElement("span", {
-    className: "distance"
-  }, p.distance)))))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
+  }, CARTER.areas.map(p => {
+    const isLink = !!p.slug;
+    const href = p.name === 'Chester' ? '/' : `electricians-${p.slug}.html`;
+    const handleClick = e => {
+      if (active !== p.name) {
+        e.preventDefault();
+        setActive(p.name);
+      }
+    };
+    if (isLink) {
+      return /*#__PURE__*/React.createElement("a", {
+        key: p.name,
+        href: href,
+        className: active === p.name ? 'active' : '',
+        onClick: handleClick
+      }, /*#__PURE__*/React.createElement("span", null, p.name), /*#__PURE__*/React.createElement("span", {
+        className: "distance"
+      }, p.distance));
+    } else {
+      return /*#__PURE__*/React.createElement("button", {
+        key: p.name,
+        type: "button",
+        className: active === p.name ? 'active' : '',
+        onClick: () => setActive(p.name)
+      }, /*#__PURE__*/React.createElement("span", null, p.name), /*#__PURE__*/React.createElement("span", {
+        className: "distance"
+      }, p.distance));
+    }
+  })))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
 }
 window.AboutPage = AboutPage;
 window.ServicesPage = ServicesPage;
