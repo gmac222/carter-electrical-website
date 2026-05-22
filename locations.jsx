@@ -11,7 +11,7 @@ function LocationPage({ locationName }) {
     cases: 0, postcodes: [], neighbourhoods: [],
     intro: 'NICEIC-approved electrical services across ' + locationName + '.',
     commercialAngle: '', domesticAngle: '', featuredProject: '',
-    landmarks: [], responseTime: 'within 48 hours', distance: '', county: ''
+    landmarks: [], distance: '', county: ''
   };
 
   const faqs = (CARTER.locationFaqs ? CARTER.locationFaqs(area) : []);
@@ -28,7 +28,7 @@ function LocationPage({ locationName }) {
         section={`Electricians in ${locationName}`}
         sectionNum="03.1 / Location"
         title={`Local electricians covering ${locationName}`}
-        titleAccent={`— response within ${area.responseTime || '48 hours'}.`}
+        titleAccent="— NICEIC-approved."
         subtext={`NICEIC-approved commercial, industrial, domestic and renewables electricians serving ${locationName}${area.postcodes && area.postcodes.length ? ' (' + area.postcodes.join(', ') + ')' : ''} and the surrounding ${area.county || 'area'}. EICR testing, EV chargers, full rewires and commercial fit-outs — delivered by our in-house team from our Christleton base, ${area.distance || 'a short drive from'} ${locationName}.`}
         ctas={
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
@@ -56,8 +56,8 @@ function LocationPage({ locationName }) {
                 <span className="v">{locationName} &amp; {area.county || 'Surrounds'}</span>
               </div>
               <div className="cell">
-                <span className="k">Response Time</span>
-                <span className="v"><span className="accent">{area.responseTime || 'Same-day'}</span> on-site</span>
+                <span className="k">Assurance</span>
+                <span className="v">Fully Insured · <span className="accent">Guaranteed</span></span>
               </div>
               <div className="cell">
                 <span className="k">Accreditation</span>

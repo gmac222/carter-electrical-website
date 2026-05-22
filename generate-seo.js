@@ -29,7 +29,7 @@ const COMPANY = {
 const areas = [
   {
     name: 'Ellesmere Port', slug: 'ellesmere-port',
-    county: 'Cheshire West', distance: '9 miles', responseTime: '45–75 minutes',
+    county: 'Cheshire West', distance: '9 miles',
     postcodes: ['CH65', 'CH66'],
     neighbourhoods: ['Little Sutton', 'Whitby', 'Great Sutton', 'Hooton', 'Overpool', 'Rivacre', 'Strawberry', 'Wolverham'],
     metaDesc: 'NICEIC-approved electricians in Ellesmere Port (CH65, CH66). Industrial three-phase, retail fit-outs at Cheshire Oaks, domestic rewires and OZEV EV chargers across Little Sutton, Whitby, Hooton and the surrounding area.',
@@ -39,7 +39,7 @@ const areas = [
   },
   {
     name: 'Wrexham', slug: 'wrexham',
-    county: 'Wrexham (Wales)', distance: '12 miles', responseTime: '45–75 minutes',
+    county: 'Wrexham (Wales)', distance: '12 miles',
     postcodes: ['LL11', 'LL12', 'LL13', 'LL14'],
     neighbourhoods: ['Acton', 'Rhosddu', 'Rossett', 'Marford', 'Gwersyllt', 'Rhosllanerchrugog', 'Ruabon', 'Gresford', 'Coedpoeth', 'Borras', 'Hightown'],
     metaDesc: 'NICEIC-approved electricians in Wrexham (LL11–LL14). Wrexham Industrial Estate three-phase work, commercial fit-outs, full rewires and EV chargers across Gresford, Rossett, Marford, Ruabon and the city centre.',
@@ -49,7 +49,7 @@ const areas = [
   },
   {
     name: 'Northwich', slug: 'northwich',
-    county: 'Cheshire West', distance: '18 miles', responseTime: '60–90 minutes',
+    county: 'Cheshire West', distance: '18 miles',
     postcodes: ['CW8', 'CW9'],
     neighbourhoods: ['Barnton', 'Hartford', 'Weaverham', 'Lostock Gralam', 'Rudheath', 'Castle', 'Winnington', 'Leftwich', 'Davenham', 'Sandiway', 'Kingsmead'],
     metaDesc: 'NICEIC-approved electricians in Northwich (CW8, CW9). Industrial maintenance, Barons Quay retail fit-outs, full rewires, consumer-unit upgrades and EV chargers across Hartford, Davenham, Kingsmead, Leftwich and Weaverham.',
@@ -59,7 +59,7 @@ const areas = [
   },
   {
     name: 'Frodsham', slug: 'frodsham',
-    county: 'Cheshire West', distance: '14 miles', responseTime: '45–75 minutes',
+    county: 'Cheshire West', distance: '14 miles',
     postcodes: ['WA6'],
     neighbourhoods: ['Kingsley', 'Helsby', 'Overton', 'Alvanley', 'Manley', 'Mouldsworth', 'Norley', 'Crowton'],
     metaDesc: 'NICEIC-approved electricians in Frodsham (WA6). Main Street commercial fit-outs, EICRs, full rewires and OZEV EV chargers across Helsby, Kingsley, Overton, Alvanley and Mouldsworth.',
@@ -69,7 +69,7 @@ const areas = [
   },
   {
     name: 'Tarporley', slug: 'tarporley',
-    county: 'Cheshire West', distance: '11 miles', responseTime: '40–70 minutes',
+    county: 'Cheshire West', distance: '11 miles',
     postcodes: ['CW6'],
     neighbourhoods: ['Utkinton', 'Cotebrook', 'Eaton', 'Alpraham', 'Beeston', 'Bunbury', 'Tiverton', 'Little Budworth', 'Cuddington'],
     metaDesc: 'NICEIC-approved electricians in Tarporley (CW6). Heritage rewires, smart-home installs, barn conversion wiring, three-phase outbuilding supplies and EV chargers across Utkinton, Cotebrook, Beeston, Bunbury and Tiverton.',
@@ -79,7 +79,7 @@ const areas = [
   },
   {
     name: 'Mold', slug: 'mold',
-    county: 'Flintshire (Wales)', distance: '13 miles', responseTime: '45–75 minutes',
+    county: 'Flintshire (Wales)', distance: '13 miles',
     postcodes: ['CH7'],
     neighbourhoods: ['Buckley', 'New Brighton', 'Gwernaffield', 'Gwernymynydd', 'Leeswood', 'Nercwys', 'Pontblyddyn', 'Sychdyn', 'Alltami'],
     metaDesc: 'NICEIC-approved electricians in Mold (CH7). Town-centre commercial fit-outs, agricultural three-phase, rural outbuilding supplies, full rewires and EV chargers across Buckley, Gwernaffield, Leeswood, Nercwys and Alltami.',
@@ -89,7 +89,7 @@ const areas = [
   },
   {
     name: 'Deeside', slug: 'deeside',
-    county: 'Flintshire (Wales)', distance: '10 miles', responseTime: '45–75 minutes',
+    county: 'Flintshire (Wales)', distance: '10 miles',
     postcodes: ['CH5'],
     neighbourhoods: ['Shotton', "Connah's Quay", 'Queensferry', 'Sealand', 'Hawarden', 'Garden City', 'Sandycroft', 'Mancot', 'Ewloe'],
     metaDesc: 'NICEIC-approved electricians in Deeside (CH5). Deeside Industrial Park three-phase, factory shutdowns, commercial fit-outs, full rewires and EV chargers across Shotton, Connah\'s Quay, Queensferry, Hawarden and Ewloe.',
@@ -213,7 +213,7 @@ function buildHtml(area) {
       <h2>Coverage</h2>
       <ul>
         <li><strong>Postcodes:</strong> ${area.postcodes.map(esc).join(', ')}</li>
-        <li><strong>Response time:</strong> ${esc(area.responseTime)}</li>
+        <li><strong>Response time:</strong> Within 48 hours</li>
         <li><strong>Distance from Chester HQ:</strong> ${esc(area.distance)}</li>
         <li><strong>County:</strong> ${esc(area.county)}</li>
       </ul>

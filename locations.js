@@ -24,7 +24,6 @@ function LocationPage({
     domesticAngle: '',
     featuredProject: '',
     landmarks: [],
-    responseTime: 'within 48 hours',
     distance: '',
     county: ''
   };
@@ -38,7 +37,7 @@ function LocationPage({
     section: `Electricians in ${locationName}`,
     sectionNum: "03.1 / Location",
     title: `Local electricians covering ${locationName}`,
-    titleAccent: `— response within ${area.responseTime || '48 hours'}.`,
+    titleAccent: "\u2014 NICEIC-approved.",
     subtext: `NICEIC-approved commercial, industrial, domestic and renewables electricians serving ${locationName}${area.postcodes && area.postcodes.length ? ' (' + area.postcodes.join(', ') + ')' : ''} and the surrounding ${area.county || 'area'}. EICR testing, EV chargers, full rewires and commercial fit-outs — delivered by our in-house team from our Christleton base, ${area.distance || 'a short drive from'} ${locationName}.`,
     ctas: /*#__PURE__*/React.createElement("div", {
       style: {
@@ -102,11 +101,11 @@ function LocationPage({
     className: "cell"
   }, /*#__PURE__*/React.createElement("span", {
     className: "k"
-  }, "Response Time"), /*#__PURE__*/React.createElement("span", {
+  }, "Assurance"), /*#__PURE__*/React.createElement("span", {
     className: "v"
-  }, /*#__PURE__*/React.createElement("span", {
+  }, "Fully Insured \xB7 ", /*#__PURE__*/React.createElement("span", {
     className: "accent"
-  }, area.responseTime || 'Same-day'), " on-site")), /*#__PURE__*/React.createElement("div", {
+  }, "Guaranteed"))), /*#__PURE__*/React.createElement("div", {
     className: "cell"
   }, /*#__PURE__*/React.createElement("span", {
     className: "k"

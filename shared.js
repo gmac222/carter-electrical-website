@@ -38,7 +38,7 @@ window.CARTER = {
   areas: [
     {
       name: 'Chester', slug: 'chester', cases: 14, featured: true, hq: true, x: 46, y: 58,
-      county: 'Cheshire West', distance: '0 miles (HQ)', responseTime: '30–60 minutes',
+      county: 'Cheshire West', distance: '0 miles (HQ)',
       postcodes: ['CH1', 'CH2', 'CH3', 'CH4'],
       neighbourhoods: ['Hoole', 'Saltney', 'Upton', 'Blacon', 'Boughton', 'Handbridge', 'Vicars Cross', 'Christleton', 'Newton', 'Mickle Trafford', 'Waverton'],
       intro: "Carter Electrical is headquartered in Christleton, on the eastern edge of Chester — our vans are typically on-site within an hour across all four main CH postcodes. Chester's mix of listed Georgian city-centre stock, Victorian terraces in Hoole and Boughton, out-of-town business parks and a dense hospitality trade means we rotate daily between heritage rewires, EICRs for landlords, fit-outs on Bridge Street and Watergate Street, and compliance work for the city's offices and hotels. Working in a city with this much listed-building stock demands a careful hand — surface-clipped cable runs, concealed containment, and sign-off documentation that satisfies both NICEIC and conservation officers.",
@@ -49,7 +49,7 @@ window.CARTER = {
     },
     {
       name: 'Ellesmere Port', slug: 'ellesmere-port', cases: 6, x: 30, y: 40,
-      county: 'Cheshire West', distance: '9 miles', responseTime: '45–75 minutes',
+      county: 'Cheshire West', distance: '9 miles',
       postcodes: ['CH65', 'CH66'],
       neighbourhoods: ['Little Sutton', 'Whitby', 'Great Sutton', 'Hooton', 'Overpool', 'Rivacre', 'Strawberry', 'Wolverham'],
       intro: "Ellesmere Port is the industrial anchor of our north-Wirral coverage — a town whose electrical demand is shaped by Cheshire Oaks Designer Outlet at one end and the Stanlow refinery, Essar petrochemical complex and the former Vauxhall plant at the other. In practice that means we spend as much time on three-phase industrial installations, motor control work and machinery relocations for manufacturers along the M53 corridor as we do on retail unit fit-outs and EICR testing for landlords across the CH65 and CH66 postcodes.",
@@ -60,7 +60,7 @@ window.CARTER = {
     },
     {
       name: 'Wrexham', slug: 'wrexham', cases: 5, x: 32, y: 80,
-      county: 'Wrexham (Wales)', distance: '12 miles', responseTime: '45–75 minutes',
+      county: 'Wrexham (Wales)', distance: '12 miles',
       postcodes: ['LL11', 'LL12', 'LL13', 'LL14'],
       neighbourhoods: ['Acton', 'Rhosddu', 'Rossett', 'Marford', 'Gwersyllt', 'Rhosllanerchrugog', 'Ruabon', 'Gresford', 'Coedpoeth', 'Borras', 'Hightown'],
       intro: "Wrexham — now officially a city — sits at the heart of one of the UK's largest industrial estates. Wrexham Industrial Estate alone hosts hundreds of manufacturers, and that dominates the electrical demand we see across LL11, LL12, LL13 and LL14: three-phase supplies, machinery installation and relocation, planned factory shutdowns, motor control rewires and preventative maintenance contracts. Away from the industrial estate, we handle commercial fit-outs around the town centre and the growing residential stock in Gresford, Rossett and Marford.",
@@ -71,7 +71,7 @@ window.CARTER = {
     },
     {
       name: 'Northwich', slug: 'northwich', cases: 4, x: 72, y: 66,
-      county: 'Cheshire West', distance: '18 miles', responseTime: '60–90 minutes',
+      county: 'Cheshire West', distance: '18 miles',
       postcodes: ['CW8', 'CW9'],
       neighbourhoods: ['Barnton', 'Hartford', 'Weaverham', 'Lostock Gralam', 'Rudheath', 'Castle', 'Winnington', 'Leftwich', 'Davenham', 'Sandiway', 'Kingsmead'],
       intro: "Northwich has always been a chemical and industrial town — Tata Chemicals and the long Brunner Mond legacy still shape the commercial electrical demand across CW8 and CW9. Combined with a regenerated town centre (Barons Quay, Northwich Indoor Market) and a strong pipeline of new-build residential in Kingsmead, Leftwich and Davenham, Northwich gives us a full spread of work: industrial three-phase and maintenance, retail and leisure fit-outs, EV charger installs in newer estates, and full-house rewires on older properties around Castle and Winnington.",
@@ -82,7 +82,7 @@ window.CARTER = {
     },
     {
       name: 'Frodsham', slug: 'frodsham', cases: 3, x: 56, y: 46,
-      county: 'Cheshire West', distance: '14 miles', responseTime: '45–75 minutes',
+      county: 'Cheshire West', distance: '14 miles',
       postcodes: ['WA6'],
       neighbourhoods: ['Kingsley', 'Helsby', 'Overton', 'Alvanley', 'Manley', 'Mouldsworth', 'Norley', 'Crowton'],
       intro: "Frodsham is a market town with a strong high-street trade, a surrounding belt of Cheshire villages (Kingsley, Helsby, Alvanley, Manley) and a growing commuter population. The WA6 postcode gives us a mix we enjoy: small-to-mid commercial work for the independents on Main Street, EV charger installs across the commuter homes of Helsby and Overton, and sensitive rewires on older stone-built properties through Mouldsworth and the Delamere villages.",
@@ -93,7 +93,7 @@ window.CARTER = {
     },
     {
       name: 'Tarporley', slug: 'tarporley', cases: 3, x: 64, y: 72,
-      county: 'Cheshire West', distance: '11 miles', responseTime: '40–70 minutes',
+      county: 'Cheshire West', distance: '11 miles',
       postcodes: ['CW6'],
       neighbourhoods: ['Utkinton', 'Cotebrook', 'Eaton', 'Alpraham', 'Beeston', 'Bunbury', 'Tiverton', 'Little Budworth', 'Cuddington'],
       intro: "Tarporley is the archetypal upmarket Cheshire village — a conservation-area High Street of Georgian and Victorian property, surrounded by equestrian estates and barn conversions across Utkinton, Cotebrook, Beeston and Bunbury. Our CW6 work leans strongly domestic and high-end: full rewires on listed farmhouses, smart-home and lighting-control retrofits, outbuilding and stable-yard three-phase supplies, and sensitive work on conservation-area stock where containment must be discreet.",
@@ -104,7 +104,7 @@ window.CARTER = {
     },
     {
       name: 'Mold', slug: 'mold', cases: 2, x: 22, y: 66,
-      county: 'Flintshire (Wales)', distance: '13 miles', responseTime: '45–75 minutes',
+      county: 'Flintshire (Wales)', distance: '13 miles',
       postcodes: ['CH7'],
       neighbourhoods: ['Buckley', 'New Brighton', 'Gwernaffield', 'Gwernymynydd', 'Leeswood', 'Nercwys', 'Pontblyddyn', 'Sychdyn', 'Alltami'],
       intro: "Mold is the county town of Flintshire and our primary foothold for cross-border Welsh work. The CH7 postcode covers a wide rural area — so alongside the town-centre commercial and hospitality trade, we carry out a lot of three-phase agricultural supplies, farm and outbuilding installs, and sensitive domestic rewires through Gwernaffield, Nercwys and Leeswood. We hold NICEIC approval that's recognised across England and Wales, and we're comfortable with both sides of the border's Building Regulations regime.",
@@ -115,7 +115,7 @@ window.CARTER = {
     },
     {
       name: 'Deeside', slug: 'deeside', cases: 4, x: 34, y: 52,
-      county: 'Flintshire (Wales)', distance: '10 miles', responseTime: '45–75 minutes',
+      county: 'Flintshire (Wales)', distance: '10 miles',
       postcodes: ['CH5'],
       neighbourhoods: ['Shotton', "Connah's Quay", 'Queensferry', 'Sealand', 'Hawarden', 'Garden City', 'Sandycroft', 'Mancot', 'Ewloe'],
       intro: "Deeside is defined by the Deeside Industrial Park — one of North Wales' largest employment zones — and the nearby Airbus Broughton site. That shapes what we do here: heavy three-phase industrial supplies, motor-control rewires, planned factory shutdowns, machinery installation and relocation, and preventative-maintenance contracts for manufacturers across CH5. We also handle a steady stream of domestic work through Shotton, Connah's Quay, Queensferry and Hawarden, and mid-scale commercial fit-outs in the Garden City and Sandycroft retail areas.",
