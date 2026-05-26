@@ -33,6 +33,42 @@ export default async function handler(req, res) {
       });
     }
 
+    // 2. Track call conversion in GA4 via Measurement Protocol
+    if (From && process.env.GA_API_SECRET) {
+      try {
+        const measurementId = 'G-6WK8M8E9R9';
+        const apiSecret = process.env.GA_API_SECRET;
+        const clientId = 'twilio_' + From.replace(/\D/g, '');
+
+        await fetch(`https://www.google-analytics.com/mp/collect?measurement_id=${measurementId}&api_secret=${apiSecret}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            client_id: clientId,
+            events: [
+              {
+                name: 'generate_lead',
+                params: {
+                  lead_type: 'phone',
+                  value: 1.0,
+                  currency: 'GBP'
+                }
+              },
+              {
+                name: 'phone_lead',
+                params: {
+                  value: 1.0,
+                  currency: 'GBP'
+                }
+              }
+            ]
+          })
+        });
+      } catch (gaError) {
+        console.error('GA4 Measurement Protocol error:', gaError);
+      }
+    }
+
     // Twilio expects TwiML in response to proceed with the call
     // Empty TwiML tells Twilio to continue executing the rest of the flow (or just end if no flow)
     res.setHeader('Content-Type', 'text/xml');

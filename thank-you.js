@@ -10,8 +10,11 @@ function ThankYouPage() {
     // Send GA4 event on page mount
     if (typeof window.gtag !== 'undefined') {
       window.gtag('event', 'generate_lead', {
-        'event_category': 'Engagement',
-        'event_label': 'Form Submission Success',
+        'lead_type': 'form',
+        'value': 1.0,
+        'currency': 'GBP'
+      });
+      window.gtag('event', 'form_lead', {
         'value': 1.0,
         'currency': 'GBP'
       });
