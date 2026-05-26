@@ -34,7 +34,8 @@ const jsxFilesToCompile = [
   'commercial.jsx',
   'contact.jsx',
   'cases.jsx',
-  'locations.jsx'
+  'locations.jsx',
+  'thank-you.jsx'
 ];
 
 console.log("Compiling JSX files...");

@@ -59,7 +59,7 @@ function ContactForm() {
         body: JSON.stringify(data)
       });
       if (response.ok) {
-        setSubmitted(true);
+        window.location.href = 'thank-you.html';
       } else {
         alert('There was a problem submitting your enquiry. Please try again or call us directly.');
       }
