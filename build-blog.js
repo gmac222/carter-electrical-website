@@ -71,7 +71,7 @@ function generateArticleHtml(post) {
   }
   </script>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6WK8M8E9R9"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18182294304"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -124,7 +124,7 @@ function generateBlogIndexHtml(posts) {
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"/>
   <link rel="stylesheet" href="/styles.css"/>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6WK8M8E9R9"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18182294304"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
