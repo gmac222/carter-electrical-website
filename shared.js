@@ -7,7 +7,7 @@ window.CARTER = {
     name: 'Carter Electrical Contracting',
     phone: '01244 727291',
     phoneHref: 'tel:+441244727291',
-    email: 'info@carterelec.co.uk',
+    email: 'ian@carterelec.co.uk',
     address: ['Unit 5, White Lane Depot', 'White Lane, Christleton', 'Chester, CH3 6AH'],
     socialFb: 'https://facebook.com/carter.electrical.chester',
     founded: 2019
@@ -202,7 +202,7 @@ window.CarterPlaceholder = function(props) {
 })();
 
 
-window.CARTER.blog = [{"title":"The Importance of EICR Testing for Commercial Properties","date":"2026-04-22","author":"Carter Electrical Contracting","category":"Compliance","tags":["EICR","Commercial","Safety"],"excerpt":"Understanding the legal requirements and safety benefits of regular Electrical Installation Condition Reports (EICR) for businesses.","image":"uploads/testing_electrical_work.png","slug":"the-importance-of-eicr-testing"}];
+window.CARTER.blog = [{"title":"The Importance of EICR Testing for Commercial Properties","date":"2026-04-22","author":"Carter Electrical Contracting","category":"Compliance","tags":["EICR","Commercial","Safety"],"excerpt":"Understanding the legal requirements and safety benefits of regular Electrical Installation Condition Reports (EICR) for businesses.","image":"","slug":"the-importance-of-eicr-testing"}];
 
 // Build the FAQ set for a location. Answers are tailored per-area using the location
 // data, so each page's FAQ section is genuinely unique rather than duplicate content.
