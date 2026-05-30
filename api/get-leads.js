@@ -26,17 +26,43 @@ export default async function handler(req, res) {
 
     const data = await response.json();
     
-    const leads = data.records.map(record => ({
-      id: record.id,
-      name: record.fields['Customer Name'],
-      phone: record.fields['Customer Phone'],
-      email: record.fields['Customer Email'],
-      service: record.fields['Service Requested'],
-      status: record.fields['Status'],
-      quote: record.fields['Quote Amount'],
-      notes: record.fields['Notes'],
-      createdTime: record.createdTime
-    }));
+    const leads = data.records.map(record => {
+      const notes = record.fields['Notes'] || '';
+      const parsedFallback = {};
+      if (notes) {
+        notes.split('\n').forEach(line => {
+          const colonIdx = line.indexOf(': ');
+          if (colonIdx !== -1) {
+            const key = line.slice(0, colonIdx).trim();
+            const val = line.slice(colonIdx + 2).trim();
+            if (key === 'Sector') parsedFallback.sector = val === 'N/A' ? '' : val;
+            else if (key === 'Scope') parsedFallback.scope = val === 'N/A' ? '' : val;
+            else if (key === 'Timing') parsedFallback.timing = val === 'N/A' ? '' : val;
+            else if (key === 'Postcode') parsedFallback.postcode = val === 'N/A' ? '' : val;
+            else if (key === 'Company') parsedFallback.company = val === 'N/A' ? '' : val;
+            else if (key === 'Additional Details') parsedFallback.details = (val === 'None' || val === 'N/A') ? '' : val;
+          }
+        });
+      }
+
+      return {
+        id: record.id,
+        name: record.fields['Customer Name'],
+        phone: record.fields['Customer Phone'],
+        email: record.fields['Customer Email'],
+        service: record.fields['Service Requested'],
+        sector: record.fields['Sector'] || parsedFallback.sector || '',
+        scope: record.fields['Scope'] || parsedFallback.scope || '',
+        timing: record.fields['Timing'] || parsedFallback.timing || '',
+        postcode: record.fields['Postcode'] || parsedFallback.postcode || '',
+        company: record.fields['Company'] || parsedFallback.company || '',
+        details: record.fields['Additional Details'] || parsedFallback.details || '',
+        status: record.fields['Status'],
+        quote: record.fields['Quote Amount'],
+        notes: notes,
+        createdTime: record.createdTime
+      };
+    });
 
     // Sort leads by createdTime descending (newest first)
     leads.sort((a, b) => new Date(b.createdTime) - new Date(a.createdTime));

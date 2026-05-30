@@ -162,7 +162,7 @@ function AdminDashboard() {
     if (filter !== 'All' && (l.status || 'New Lead') !== filter) return false;
     if (search) {
       const q = search.toLowerCase();
-      return [l.name, l.email, l.phone, l.service, l.notes].some(v => (v || '').toLowerCase().includes(q));
+      return [l.name, l.email, l.phone, l.service, l.sector, l.postcode, l.timing, l.company, l.scope, l.details, l.notes].some(v => (v || '').toLowerCase().includes(q));
     }
     return true;
   });
@@ -288,10 +288,10 @@ function AdminDashboard() {
     className: "crm-table-wrap"
   }, /*#__PURE__*/React.createElement("table", {
     className: "crm-table"
-  }, /*#__PURE__*/React.createElement("thead", null, /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("th", null, "Name"), /*#__PURE__*/React.createElement("th", null, "Phone"), /*#__PURE__*/React.createElement("th", null, "Email"), /*#__PURE__*/React.createElement("th", null, "Service"), /*#__PURE__*/React.createElement("th", null, "Status"), /*#__PURE__*/React.createElement("th", null, "Quote (\xA3)"), /*#__PURE__*/React.createElement("th", null, "Notes"), /*#__PURE__*/React.createElement("th", null, "Received"), /*#__PURE__*/React.createElement("th", {
+  }, /*#__PURE__*/React.createElement("thead", null, /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("th", null, "Name"), /*#__PURE__*/React.createElement("th", null, "Phone"), /*#__PURE__*/React.createElement("th", null, "Email"), /*#__PURE__*/React.createElement("th", null, "Service"), /*#__PURE__*/React.createElement("th", null, "Sector"), /*#__PURE__*/React.createElement("th", null, "Postcode"), /*#__PURE__*/React.createElement("th", null, "Timing"), /*#__PURE__*/React.createElement("th", null, "Company"), /*#__PURE__*/React.createElement("th", null, "Status"), /*#__PURE__*/React.createElement("th", null, "Quote (\xA3)"), /*#__PURE__*/React.createElement("th", null, "Scope"), /*#__PURE__*/React.createElement("th", null, "Add. Details"), /*#__PURE__*/React.createElement("th", null, "Received"), /*#__PURE__*/React.createElement("th", {
     className: "th-actions"
   }, "Actions"))), /*#__PURE__*/React.createElement("tbody", null, visibleLeads.length === 0 && /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("td", {
-    colSpan: 9,
+    colSpan: 14,
     className: "empty-row"
   }, "No leads found", filter !== 'All' || search ? ' matching your filters' : '', ".")), visibleLeads.map(lead => /*#__PURE__*/React.createElement("tr", {
     key: lead.id,
@@ -318,6 +318,26 @@ function AdminDashboard() {
     field: "service",
     leadId: lead.id,
     onSave: updateLead
+  })), /*#__PURE__*/React.createElement("td", null, /*#__PURE__*/React.createElement(EditableField, {
+    value: lead.sector,
+    field: "sector",
+    leadId: lead.id,
+    onSave: updateLead
+  })), /*#__PURE__*/React.createElement("td", null, /*#__PURE__*/React.createElement(EditableField, {
+    value: lead.postcode,
+    field: "postcode",
+    leadId: lead.id,
+    onSave: updateLead
+  })), /*#__PURE__*/React.createElement("td", null, /*#__PURE__*/React.createElement(EditableField, {
+    value: lead.timing,
+    field: "timing",
+    leadId: lead.id,
+    onSave: updateLead
+  })), /*#__PURE__*/React.createElement("td", null, /*#__PURE__*/React.createElement(EditableField, {
+    value: lead.company,
+    field: "company",
+    leadId: lead.id,
+    onSave: updateLead
   })), /*#__PURE__*/React.createElement("td", null, /*#__PURE__*/React.createElement("select", {
     className: "status-select",
     value: lead.status || 'New Lead',
@@ -337,8 +357,16 @@ function AdminDashboard() {
   })), /*#__PURE__*/React.createElement("td", {
     className: "cell-notes"
   }, /*#__PURE__*/React.createElement(EditableField, {
-    value: lead.notes,
-    field: "notes",
+    value: lead.scope,
+    field: "scope",
+    leadId: lead.id,
+    onSave: updateLead,
+    type: "textarea"
+  })), /*#__PURE__*/React.createElement("td", {
+    className: "cell-notes"
+  }, /*#__PURE__*/React.createElement(EditableField, {
+    value: lead.details,
+    field: "details",
     leadId: lead.id,
     onSave: updateLead,
     type: "textarea"

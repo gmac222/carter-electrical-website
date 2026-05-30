@@ -102,7 +102,7 @@ function AdminDashboard() {
     if (filter !== 'All' && (l.status || 'New Lead') !== filter) return false;
     if (search) {
       const q = search.toLowerCase();
-      return [l.name, l.email, l.phone, l.service, l.notes].some(v => (v || '').toLowerCase().includes(q));
+      return [l.name, l.email, l.phone, l.service, l.sector, l.postcode, l.timing, l.company, l.scope, l.details, l.notes].some(v => (v || '').toLowerCase().includes(q));
     }
     return true;
   });
@@ -189,16 +189,21 @@ function AdminDashboard() {
               <th>Phone</th>
               <th>Email</th>
               <th>Service</th>
+              <th>Sector</th>
+              <th>Postcode</th>
+              <th>Timing</th>
+              <th>Company</th>
               <th>Status</th>
               <th>Quote (£)</th>
-              <th>Notes</th>
+              <th>Scope</th>
+              <th>Add. Details</th>
               <th>Received</th>
               <th className="th-actions">Actions</th>
             </tr>
           </thead>
           <tbody>
             {visibleLeads.length === 0 && (
-              <tr><td colSpan={9} className="empty-row">No leads found{filter !== 'All' || search ? ' matching your filters' : ''}.</td></tr>
+              <tr><td colSpan={14} className="empty-row">No leads found{filter !== 'All' || search ? ' matching your filters' : ''}.</td></tr>
             )}
             {visibleLeads.map(lead => (
               <tr key={lead.id} className={deleting === lead.id ? 'row-deleting' : ''}>
@@ -206,13 +211,18 @@ function AdminDashboard() {
                 <td><EditableField value={lead.phone} field="phone" leadId={lead.id} onSave={updateLead} /></td>
                 <td><EditableField value={lead.email} field="email" leadId={lead.id} onSave={updateLead} /></td>
                 <td><EditableField value={lead.service} field="service" leadId={lead.id} onSave={updateLead} /></td>
+                <td><EditableField value={lead.sector} field="sector" leadId={lead.id} onSave={updateLead} /></td>
+                <td><EditableField value={lead.postcode} field="postcode" leadId={lead.id} onSave={updateLead} /></td>
+                <td><EditableField value={lead.timing} field="timing" leadId={lead.id} onSave={updateLead} /></td>
+                <td><EditableField value={lead.company} field="company" leadId={lead.id} onSave={updateLead} /></td>
                 <td>
                   <select className="status-select" value={lead.status || 'New Lead'} onChange={e => updateLead(lead.id, { status: e.target.value })} data-status={lead.status || 'New Lead'}>
                     {statuses.map(s => <option key={s} value={s}>{s}</option>)}
                   </select>
                 </td>
                 <td><EditableField value={lead.quote != null ? String(lead.quote) : ''} field="quote" leadId={lead.id} onSave={updateLead} type="number" /></td>
-                <td className="cell-notes"><EditableField value={lead.notes} field="notes" leadId={lead.id} onSave={updateLead} type="textarea" /></td>
+                <td className="cell-notes"><EditableField value={lead.scope} field="scope" leadId={lead.id} onSave={updateLead} type="textarea" /></td>
+                <td className="cell-notes"><EditableField value={lead.details} field="details" leadId={lead.id} onSave={updateLead} type="textarea" /></td>
                 <td className="cell-date">{new Date(lead.createdTime).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })}</td>
                 <td className="cell-actions">
                   {lead.phone && <a href={`tel:${lead.phone}`} className="action-btn action-call" title="Call"><svg viewBox="0 0 20 20" fill="none"><path d="M3 5a2 2 0 0 1 2-2h1.28a1 1 0 0 1 .95.68l1.02 3.06a1 1 0 0 1-.38 1.1l-1.2.8a10.05 10.05 0 0 0 4.69 4.69l.8-1.2a1 1 0 0 1 1.1-.38l3.06 1.02a1 1 0 0 1 .68.95V15a2 2 0 0 1-2 2h-1C7.4 17 3 12.6 3 7V5z" stroke="currentColor" strokeWidth="1.4"/></svg></a>}

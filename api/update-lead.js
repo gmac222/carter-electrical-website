@@ -8,7 +8,7 @@ export default async function handler(req, res) {
     return res.status(401).json({ error: 'Unauthorized' });
   }
 
-  const { id, status, name, phone, email, service, notes, quote } = req.body;
+  const { id, status, name, phone, email, service, notes, quote, sector, scope, timing, postcode, company, details } = req.body;
   if (!id) {
     return res.status(400).json({ error: 'Missing record id' });
   }
@@ -22,6 +22,12 @@ export default async function handler(req, res) {
   if (service !== undefined) fields['Service Requested'] = service;
   if (notes !== undefined) fields['Notes'] = notes;
   if (quote !== undefined) fields['Quote Amount'] = Number(quote) || 0;
+  if (sector !== undefined) fields['Sector'] = sector;
+  if (scope !== undefined) fields['Scope'] = scope;
+  if (timing !== undefined) fields['Timing'] = timing;
+  if (postcode !== undefined) fields['Postcode'] = postcode;
+  if (company !== undefined) fields['Company'] = company;
+  if (details !== undefined) fields['Additional Details'] = details;
 
   if (Object.keys(fields).length === 0) {
     return res.status(400).json({ error: 'No fields to update' });
