@@ -1,4 +1,4 @@
-// About, Services, Areas — compact pages
+// About, Services, Areas - compact pages
 
 const { Header, Footer, TrustBar, TweaksPanel, useScrollReveal, PageHero } = window;
 
@@ -19,7 +19,7 @@ function AboutPage() {
         sectionNum="04 / About"
         title="A regional firm"
         titleAccent={<>that punches above its weight<span className="dot-white">.</span></>}
-        subtext="NICEIC-approved electrical contractors based in Christleton, Chester. We deliver commercial, industrial and domestic installations across the North West — scoped candidly, installed by our own team, documented at handover."
+        subtext="NICEIC-approved electrical contractors based in Christleton, Chester. We deliver commercial, industrial and domestic installations across the North West - scoped candidly, installed by our own team, documented at handover."
       />
 
       <section className="section-y light reveal">
@@ -93,7 +93,7 @@ function ServicesPage() {
       {CARTER.services.map((s, i) => (
         <section key={s.slug} id={s.slug} className={`section-y reveal ${i % 2 === 0 ? 'light' : 'bright'}`}>
           <div className="wrap">
-            {/* Full-width section header — keeps both columns below aligned at the same Y */}
+            {/* Full-width section header - keeps both columns below aligned at the same Y */}
             <div style={{ marginBottom: 40 }}>
               <div className="mono" style={{ fontSize: 11, letterSpacing: '0.16em', color: 'var(--muted)' }}>0{i + 1} / 05</div>
               <div style={{ display: 'flex', alignItems: 'center', gap: 20, marginTop: 18 }}>
@@ -102,7 +102,7 @@ function ServicesPage() {
               </div>
             </div>
 
-            {/* Image (left) and body content (right) — same top baseline, stretched so bottoms meet */}
+            {/* Image (left) and body content (right) - same top baseline, stretched so bottoms meet */}
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 60, alignItems: 'stretch' }}>
               <div>
                 {s.imgSrc && (

@@ -1,4 +1,4 @@
-// About, Services, Areas — compact pages
+// About, Services, Areas - compact pages
 
 const {
   Header,
@@ -39,7 +39,7 @@ function AboutPage() {
     titleAccent: /*#__PURE__*/React.createElement(React.Fragment, null, "that punches above its weight", /*#__PURE__*/React.createElement("span", {
       className: "dot-white"
     }, ".")),
-    subtext: "NICEIC-approved electrical contractors based in Christleton, Chester. We deliver commercial, industrial and domestic installations across the North West \u2014 scoped candidly, installed by our own team, documented at handover."
+    subtext: "NICEIC-approved electrical contractors based in Christleton, Chester. We deliver commercial, industrial and domestic installations across the North West - scoped candidly, installed by our own team, documented at handover."
   }), /*#__PURE__*/React.createElement("section", {
     className: "section-y light reveal"
   }, /*#__PURE__*/React.createElement("div", {

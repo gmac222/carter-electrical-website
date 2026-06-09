@@ -1,4 +1,4 @@
-// Shared UI: Header, Footer, Logo, trust bar — used by every page.
+// Shared UI: Header, Footer, Logo, trust bar - used by every page.
 
 const {
   useState,
@@ -81,6 +81,10 @@ window.Header = function Header({
     id: 'areas',
     label: 'Areas',
     href: 'areas.html'
+  }, {
+    id: 'about',
+    label: 'About',
+    href: 'about.html'
   }, {
     id: 'contact',
     label: 'Contact',
@@ -223,6 +227,8 @@ window.Footer = function Footer() {
   }, "Renewables & EV")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
     href: "services.html#testing"
   }, "Inspection & Testing")))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h4", null, "Company"), /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+    href: "about.html"
+  }, "About")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
     href: "case-studies.html"
   }, "Case Studies")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
     href: "areas.html"
@@ -247,7 +253,7 @@ window.Footer = function Footer() {
   }, /*#__PURE__*/React.createElement("div", null, "\xA9 ", new Date().getFullYear(), " Carter Electrical Contracting Ltd"), /*#__PURE__*/React.createElement("div", null, "carterelec.co.uk"))));
 };
 
-// Scroll-reveal helper — adds `.in` to `.reveal` on entry
+// Scroll-reveal helper - adds `.in` to `.reveal` on entry
 window.useScrollReveal = function useScrollReveal() {
   useEffect(() => {
     const els = document.querySelectorAll('.reveal');
@@ -297,7 +303,7 @@ window.PageHero = function PageHero({
   }, ctas)), children);
 };
 
-// Mobile sticky CTA bar — visible only on mobile, hides near footer
+// Mobile sticky CTA bar - visible only on mobile, hides near footer
 window.MobileStickyCTA = function MobileStickyCTA() {
   const [visible, setVisible] = useState(false);
   const [hidden, setHidden] = useState(false);

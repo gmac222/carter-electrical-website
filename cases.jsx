@@ -19,7 +19,7 @@ function CaseIndex() {
         sectionNum="06 / Work"
         title="Real projects."
         titleAccent="Properly delivered."
-        subtext="A proven track record across commercial, hospitality, domestic and industrial work — completed, signed off and documented."
+        subtext="A proven track record across commercial, hospitality, domestic and industrial work - completed, signed off and documented."
       />
       <section className="cases">
         <div className="wrap">
@@ -32,7 +32,7 @@ function CaseIndex() {
             {visible.map(c => (
               <a key={c.id} href={`case-${c.id}.html`} className={`case-card ${c.size || ''}`}>
                 <div className="case-visual">
-                  <CarterPlaceholder imgSrc={c.imgSrc} metaTag={`${c.sector} · ${c.subsector}`} titleCaption={`${c.title} — ${c.location}`} year={c.year} hue={c.hue}/>
+                  <CarterPlaceholder imgSrc={c.imgSrc} metaTag={`${c.sector} · ${c.subsector}`} titleCaption={`${c.title} - ${c.location}`} year={c.year} hue={c.hue}/>
                 </div>
                 <div className="case-body">
                   <div className="case-tags">
@@ -79,7 +79,7 @@ function OldDukes() {
             </div>
           </div>
           <div className="cs-visual" style={{ marginTop: 32 }}>
-            <CarterPlaceholder imgSrc="uploads/dukes-1.jpg" metaTag="Commercial · Hospitality · Fit-out" titleCaption={`Old Dukes — ${c.location}`} year={c.year} hue={c.hue}/>
+            <CarterPlaceholder imgSrc="uploads/dukes-1.jpg" metaTag="Commercial · Hospitality · Fit-out" titleCaption={`Old Dukes - ${c.location}`} year={c.year} hue={c.hue}/>
           </div>
         </div>
       </section>
@@ -108,12 +108,12 @@ function OldDukes() {
           </aside>
           <div className="cs-prose">
             <h3>The brief</h3>
-            <p>An old city-centre tea rooms, converted across two floors into a sports bar. The client needed a single electrical contractor to coordinate distribution, lighting design, AV power, fire and emergency lighting — with a fixed opening date that didn&rsquo;t move.</p>
+            <p>An old city-centre tea rooms, converted across two floors into a sports bar. The client needed a single electrical contractor to coordinate distribution, lighting design, AV power, fire and emergency lighting - with a fixed opening date that didn&rsquo;t move.</p>
             <h3>What we did</h3>
             <p>We scoped the full package during stripping-out week, then phased the installation by floor: first-fix upstairs while the ground floor was still being opened up, then reversed for second-fix. A purpose-built distribution layout accommodated the bar, kitchen, AV walls and a new plant room without an incoming supply upgrade.</p>
-            <p>Lighting was specified for sports-viewing and late-evening service — zoned, dimmable, with feature pendants on emergency battery backup. Fire alarm and emergency lighting were designed to BS 5839 / BS 5266 and commissioned alongside final electrical testing.</p>
+            <p>Lighting was specified for sports-viewing and late-evening service - zoned, dimmable, with feature pendants on emergency battery backup. Fire alarm and emergency lighting were designed to BS 5839 / BS 5266 and commissioned alongside final electrical testing.</p>
             <h3>Outcome</h3>
-            <p>Handed over one working day ahead of schedule. Full certification pack — NICEIC EIC, emergency lighting, fire alarm — delivered at sign-off. Client has since retained us on a PPM schedule covering annual testing and six-monthly emergency lighting checks.</p>
+            <p>Handed over one working day ahead of schedule. Full certification pack - NICEIC EIC, emergency lighting, fire alarm - delivered at sign-off. Client has since retained us on a PPM schedule covering annual testing and six-monthly emergency lighting checks.</p>
 
             <div className="cs-gallery">
               <div className="tile wide"><CarterPlaceholder imgSrc="uploads/dukes-2.jpg" metaTag="Bar area · ground floor" titleCaption="Feature pendants, zoned dimming" year={c.year} hue={c.hue}/></div>
@@ -183,7 +183,7 @@ function PrentonWirral() {
             </div>
           </div>
           <div className="cs-visual" style={{ marginTop: 32 }}>
-            <CarterPlaceholder imgSrc={c.imgSrc} metaTag="Commercial · Distribution · Mains Upgrade" titleCaption={`Prenton, Wirral — ${c.location}`} year={c.year} hue={c.hue}/>
+            <CarterPlaceholder imgSrc={c.imgSrc} metaTag="Commercial · Distribution · Mains Upgrade" titleCaption={`Prenton, Wirral - ${c.location}`} year={c.year} hue={c.hue}/>
           </div>
         </div>
       </section>
@@ -277,7 +277,7 @@ function CarbonaraNo49() {
             </div>
           </div>
           <div className="cs-visual" style={{ marginTop: 32 }}>
-            <CarterPlaceholder imgSrc={c.imgSrc} metaTag="Commercial · Restaurant · Fit-out" titleCaption={`Carbonara @ no 49 — ${c.location}`} year={c.year} hue={c.hue}/>
+            <CarterPlaceholder imgSrc={c.imgSrc} metaTag="Commercial · Restaurant · Fit-out" titleCaption={`Carbonara @ no 49 - ${c.location}`} year={c.year} hue={c.hue}/>
           </div>
         </div>
       </section>
@@ -306,7 +306,7 @@ function CarbonaraNo49() {
           </aside>
           <div className="cs-prose">
             <h3>The brief</h3>
-            <p>An empty commercial retail unit on Chester&rsquo;s historic Rows was to be converted into an authentic, fine-dining Italian restaurant. The client required a complete design-and-build electrical package including high-performance kitchen power, a decorative dimmable lighting scheme, and integrated audio systems — under a tight opening deadline.</p>
+            <p>An empty commercial retail unit on Chester&rsquo;s historic Rows was to be converted into an authentic, fine-dining Italian restaurant. The client required a complete design-and-build electrical package including high-performance kitchen power, a decorative dimmable lighting scheme, and integrated audio systems - under a tight opening deadline.</p>
             <h3>What we did</h3>
             <p>We installed a new three-phase fuse board to handle the heavy cooking appliances and commercial kitchen load. The entire kitchen space was re-wired with stainless steel containment for easy cleaning. We then designed and installed the front-of-house lighting scheme, incorporating dimmable zoning, ambient pendants, and external signage illumination, and integrated a multi-zone sound system.</p>
             <h3>Outcome</h3>
@@ -371,7 +371,7 @@ function BrynRhiw() {
             </div>
           </div>
           <div className="cs-visual" style={{ marginTop: 32 }}>
-            <CarterPlaceholder imgSrc={c.imgSrc} metaTag="Domestic · Residential · Rewire" titleCaption={`Bryn Rhiw — ${c.location}`} year={c.year} hue={c.hue}/>
+            <CarterPlaceholder imgSrc={c.imgSrc} metaTag="Domestic · Residential · Rewire" titleCaption={`Bryn Rhiw - ${c.location}`} year={c.year} hue={c.hue}/>
           </div>
         </div>
       </section>

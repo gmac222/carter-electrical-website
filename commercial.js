@@ -1,4 +1,4 @@
-// Commercial Electrical Services — dedicated landing page
+// Commercial Electrical Services - dedicated landing page
 
 const {
   Header,
@@ -66,7 +66,7 @@ const CAPABILITIES = [{
 }, {
   n: 'C05',
   t: 'Containment & small power',
-  d: 'Cable tray, basket, trunking and dado systems for offices, retail and hospitality — coordinated with other trades.'
+  d: 'Cable tray, basket, trunking and dado systems for offices, retail and hospitality - coordinated with other trades.'
 }, {
   n: 'C06',
   t: 'Compliance testing',
@@ -78,7 +78,7 @@ const CAPABILITIES = [{
 }, {
   n: 'C08',
   t: 'Data & AV containment',
-  d: 'Clean containment for Cat6/6A and AV power — coordinated with the data contractor or delivered as one package.'
+  d: 'Clean containment for Cat6/6A and AV power - coordinated with the data contractor or delivered as one package.'
 }, {
   n: 'C09',
   t: 'Out-of-hours works',
@@ -219,7 +219,7 @@ function CommercialCases() {
   }, /*#__PURE__*/React.createElement(CarterPlaceholder, {
     imgSrc: c.imgSrc,
     metaTag: `${c.sector} · ${c.subsector}`,
-    titleCaption: `${c.title} — ${c.location}`,
+    titleCaption: `${c.title} - ${c.location}`,
     year: c.year,
     hue: c.hue
   })), /*#__PURE__*/React.createElement("div", {
@@ -248,7 +248,7 @@ function FAQBand() {
     a: 'Both. Bring us in at design stage and we\'ll produce layouts and compliance notes. Happy to tender against an existing spec too.'
   }, {
     q: 'Will we get proper paperwork at handover?',
-    a: 'Yes — all our work is NICEIC regulated and we\'re happy to provide all necessary paperwork.'
+    a: 'Yes - all our work is NICEIC regulated and we\'re happy to provide all necessary paperwork.'
   }];
   const [open, setOpen] = useState(0);
   return /*#__PURE__*/React.createElement("section", {

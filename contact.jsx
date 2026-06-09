@@ -243,7 +243,7 @@ function ContactPage() {
               </div>
               <div className="static-map" style={{ overflow: 'hidden', position: 'relative' }}>
                 <iframe
-                  title="Carter Electrical Contracting — White Lane Depot, Christleton, Chester CH3 6AH"
+                  title="Carter Electrical Contracting - White Lane Depot, Christleton, Chester CH3 6AH"
                   src="https://www.google.com/maps?q=Unit%205%20White%20Lane%20Depot%2C%20White%20Lane%2C%20Christleton%2C%20Chester%20CH3%206AH&output=embed"
                   width="100%"
                   height="100%"

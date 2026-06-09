@@ -1,4 +1,4 @@
-// Homepage — Carter Electrical Contracting
+// Homepage - Carter Electrical Contracting
 
 const {
   Header,
@@ -209,7 +209,7 @@ function Intro() {
     style: {
       marginTop: '16px'
     }
-  }, "Typical projects include full rewires, replacement consumer units, socket and light fitting installation, and electrical repairs \u2014 from a single socket to a full commercial electrical fit-out or fault repair, all delivered to the same certified standard.")), /*#__PURE__*/React.createElement("div", {
+  }, "Typical projects include full rewires, replacement consumer units, socket and light fitting installation, and electrical repairs - from a single socket to a full commercial electrical fit-out or fault repair, all delivered to the same certified standard.")), /*#__PURE__*/React.createElement("div", {
     className: "area-image",
     style: {
       height: '100%',
@@ -219,7 +219,7 @@ function Intro() {
     }
   }, /*#__PURE__*/React.createElement("img", {
     src: "Home - Carter Electrical Contractors man with clipboard.jpg",
-    alt: "Carter Electrical Contractors \u2014 NICEIC approved electrician in Chester",
+    alt: "Carter Electrical Contractors - NICEIC approved electrician in Chester",
     style: {
       width: '100%',
       height: '100%',
@@ -448,7 +448,7 @@ function Cases() {
   }, /*#__PURE__*/React.createElement(CarterPlaceholder, {
     imgSrc: c.imgSrc,
     metaTag: `${c.sector} · ${c.subsector}`,
-    titleCaption: `${c.title} — ${c.location}`,
+    titleCaption: `${c.title} - ${c.location}`,
     year: c.year,
     hue: c.hue
   })), /*#__PURE__*/React.createElement("div", {
@@ -627,7 +627,7 @@ function CTABand() {
       marginTop: 18,
       maxWidth: '54ch'
     }
-  }, "Share the scope, the site and the timescale. We\u2019ll be in touch shortly to talk through the next sensible step \u2014 a site visit, a scoping call, or a straight proposal.")), /*#__PURE__*/React.createElement("div", {
+  }, "Share the scope, the site and the timescale. We\u2019ll be in touch shortly to talk through the next sensible step - a site visit, a scoping call, or a straight proposal.")), /*#__PURE__*/React.createElement("div", {
     className: "cta-aside"
   }, /*#__PURE__*/React.createElement("div", {
     className: "label-mono"

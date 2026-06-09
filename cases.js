@@ -27,7 +27,7 @@ function CaseIndex() {
     sectionNum: "06 / Work",
     title: "Real projects.",
     titleAccent: "Properly delivered.",
-    subtext: "A proven track record across commercial, hospitality, domestic and industrial work \u2014 completed, signed off and documented."
+    subtext: "A proven track record across commercial, hospitality, domestic and industrial work - completed, signed off and documented."
   }), /*#__PURE__*/React.createElement("section", {
     className: "cases"
   }, /*#__PURE__*/React.createElement("div", {
@@ -50,7 +50,7 @@ function CaseIndex() {
   }, /*#__PURE__*/React.createElement(CarterPlaceholder, {
     imgSrc: c.imgSrc,
     metaTag: `${c.sector} · ${c.subsector}`,
-    titleCaption: `${c.title} — ${c.location}`,
+    titleCaption: `${c.title} - ${c.location}`,
     year: c.year,
     hue: c.hue
   })), /*#__PURE__*/React.createElement("div", {
@@ -148,7 +148,7 @@ function OldDukes() {
   }, /*#__PURE__*/React.createElement(CarterPlaceholder, {
     imgSrc: "uploads/dukes-1.jpg",
     metaTag: "Commercial \xB7 Hospitality \xB7 Fit-out",
-    titleCaption: `Old Dukes — ${c.location}`,
+    titleCaption: `Old Dukes - ${c.location}`,
     year: c.year,
     hue: c.hue
   })))), /*#__PURE__*/React.createElement("section", null, /*#__PURE__*/React.createElement("div", {
@@ -199,7 +199,7 @@ function OldDukes() {
     }
   }))), /*#__PURE__*/React.createElement("div", {
     className: "cs-prose"
-  }, /*#__PURE__*/React.createElement("h3", null, "The brief"), /*#__PURE__*/React.createElement("p", null, "An old city-centre tea rooms, converted across two floors into a sports bar. The client needed a single electrical contractor to coordinate distribution, lighting design, AV power, fire and emergency lighting \u2014 with a fixed opening date that didn\u2019t move."), /*#__PURE__*/React.createElement("h3", null, "What we did"), /*#__PURE__*/React.createElement("p", null, "We scoped the full package during stripping-out week, then phased the installation by floor: first-fix upstairs while the ground floor was still being opened up, then reversed for second-fix. A purpose-built distribution layout accommodated the bar, kitchen, AV walls and a new plant room without an incoming supply upgrade."), /*#__PURE__*/React.createElement("p", null, "Lighting was specified for sports-viewing and late-evening service \u2014 zoned, dimmable, with feature pendants on emergency battery backup. Fire alarm and emergency lighting were designed to BS 5839 / BS 5266 and commissioned alongside final electrical testing."), /*#__PURE__*/React.createElement("h3", null, "Outcome"), /*#__PURE__*/React.createElement("p", null, "Handed over one working day ahead of schedule. Full certification pack \u2014 NICEIC EIC, emergency lighting, fire alarm \u2014 delivered at sign-off. Client has since retained us on a PPM schedule covering annual testing and six-monthly emergency lighting checks."), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("h3", null, "The brief"), /*#__PURE__*/React.createElement("p", null, "An old city-centre tea rooms, converted across two floors into a sports bar. The client needed a single electrical contractor to coordinate distribution, lighting design, AV power, fire and emergency lighting - with a fixed opening date that didn\u2019t move."), /*#__PURE__*/React.createElement("h3", null, "What we did"), /*#__PURE__*/React.createElement("p", null, "We scoped the full package during stripping-out week, then phased the installation by floor: first-fix upstairs while the ground floor was still being opened up, then reversed for second-fix. A purpose-built distribution layout accommodated the bar, kitchen, AV walls and a new plant room without an incoming supply upgrade."), /*#__PURE__*/React.createElement("p", null, "Lighting was specified for sports-viewing and late-evening service - zoned, dimmable, with feature pendants on emergency battery backup. Fire alarm and emergency lighting were designed to BS 5839 / BS 5266 and commissioned alongside final electrical testing."), /*#__PURE__*/React.createElement("h3", null, "Outcome"), /*#__PURE__*/React.createElement("p", null, "Handed over one working day ahead of schedule. Full certification pack - NICEIC EIC, emergency lighting, fire alarm - delivered at sign-off. Client has since retained us on a PPM schedule covering annual testing and six-monthly emergency lighting checks."), /*#__PURE__*/React.createElement("div", {
     className: "cs-gallery"
   }, /*#__PURE__*/React.createElement("div", {
     className: "tile wide"
@@ -380,7 +380,7 @@ function PrentonWirral() {
   }, /*#__PURE__*/React.createElement(CarterPlaceholder, {
     imgSrc: c.imgSrc,
     metaTag: "Commercial \xB7 Distribution \xB7 Mains Upgrade",
-    titleCaption: `Prenton, Wirral — ${c.location}`,
+    titleCaption: `Prenton, Wirral - ${c.location}`,
     year: c.year,
     hue: c.hue
   })))), /*#__PURE__*/React.createElement("section", null, /*#__PURE__*/React.createElement("div", {
@@ -591,7 +591,7 @@ function CarbonaraNo49() {
   }, /*#__PURE__*/React.createElement(CarterPlaceholder, {
     imgSrc: c.imgSrc,
     metaTag: "Commercial \xB7 Restaurant \xB7 Fit-out",
-    titleCaption: `Carbonara @ no 49 — ${c.location}`,
+    titleCaption: `Carbonara @ no 49 - ${c.location}`,
     year: c.year,
     hue: c.hue
   })))), /*#__PURE__*/React.createElement("section", null, /*#__PURE__*/React.createElement("div", {
@@ -642,7 +642,7 @@ function CarbonaraNo49() {
     }
   }))), /*#__PURE__*/React.createElement("div", {
     className: "cs-prose"
-  }, /*#__PURE__*/React.createElement("h3", null, "The brief"), /*#__PURE__*/React.createElement("p", null, "An empty commercial retail unit on Chester\u2019s historic Rows was to be converted into an authentic, fine-dining Italian restaurant. The client required a complete design-and-build electrical package including high-performance kitchen power, a decorative dimmable lighting scheme, and integrated audio systems \u2014 under a tight opening deadline."), /*#__PURE__*/React.createElement("h3", null, "What we did"), /*#__PURE__*/React.createElement("p", null, "We installed a new three-phase fuse board to handle the heavy cooking appliances and commercial kitchen load. The entire kitchen space was re-wired with stainless steel containment for easy cleaning. We then designed and installed the front-of-house lighting scheme, incorporating dimmable zoning, ambient pendants, and external signage illumination, and integrated a multi-zone sound system."), /*#__PURE__*/React.createElement("h3", null, "Outcome"), /*#__PURE__*/React.createElement("p", null, "The restaurant opened on the planned launch date with all compliance paperwork (NICEIC EIC, emergency lighting certification) signed off. The dimmable lighting system successfully created the intimate Roman-style atmosphere the client envisioned."), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("h3", null, "The brief"), /*#__PURE__*/React.createElement("p", null, "An empty commercial retail unit on Chester\u2019s historic Rows was to be converted into an authentic, fine-dining Italian restaurant. The client required a complete design-and-build electrical package including high-performance kitchen power, a decorative dimmable lighting scheme, and integrated audio systems - under a tight opening deadline."), /*#__PURE__*/React.createElement("h3", null, "What we did"), /*#__PURE__*/React.createElement("p", null, "We installed a new three-phase fuse board to handle the heavy cooking appliances and commercial kitchen load. The entire kitchen space was re-wired with stainless steel containment for easy cleaning. We then designed and installed the front-of-house lighting scheme, incorporating dimmable zoning, ambient pendants, and external signage illumination, and integrated a multi-zone sound system."), /*#__PURE__*/React.createElement("h3", null, "Outcome"), /*#__PURE__*/React.createElement("p", null, "The restaurant opened on the planned launch date with all compliance paperwork (NICEIC EIC, emergency lighting certification) signed off. The dimmable lighting system successfully created the intimate Roman-style atmosphere the client envisioned."), /*#__PURE__*/React.createElement("div", {
     className: "cs-gallery"
   }, /*#__PURE__*/React.createElement("div", {
     className: "tile wide"
@@ -802,7 +802,7 @@ function BrynRhiw() {
   }, /*#__PURE__*/React.createElement(CarterPlaceholder, {
     imgSrc: c.imgSrc,
     metaTag: "Domestic \xB7 Residential \xB7 Rewire",
-    titleCaption: `Bryn Rhiw — ${c.location}`,
+    titleCaption: `Bryn Rhiw - ${c.location}`,
     year: c.year,
     hue: c.hue
   })))), /*#__PURE__*/React.createElement("section", null, /*#__PURE__*/React.createElement("div", {

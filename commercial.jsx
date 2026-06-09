@@ -1,4 +1,4 @@
-// Commercial Electrical Services — dedicated landing page
+// Commercial Electrical Services - dedicated landing page
 
 const { Header, Footer, TrustBar, TweaksPanel, useScrollReveal, StatNumber, PageHero, MobileStickyCTA } = window;
 
@@ -31,10 +31,10 @@ const CAPABILITIES = [
   { n: 'C02', t: 'LED lighting upgrades', d: 'Retrofit and new-design schemes with payback modelling. DALI and emergency integration on request.' },
   { n: 'C03', t: 'Emergency lighting', d: 'Category-compliant design, install and annual monthly/six-monthly/three-yearly testing with cert pack.' },
   { n: 'C04', t: 'Fire alarm systems', d: 'L1 to L5 system design, install, commissioning and service under BS 5839-1. Integrated with nurse call where required.' },
-  { n: 'C05', t: 'Containment & small power', d: 'Cable tray, basket, trunking and dado systems for offices, retail and hospitality — coordinated with other trades.' },
+  { n: 'C05', t: 'Containment & small power', d: 'Cable tray, basket, trunking and dado systems for offices, retail and hospitality - coordinated with other trades.' },
   { n: 'C06', t: 'Compliance testing', d: 'Fixed-wire EICR, PAT testing, thermographic surveys and remedial works to landlord and insurer standards.' },
   { n: 'C07', t: 'PPM contracts', d: 'Planned preventative maintenance agreements with SLAs, reporting and asset registers for facilities teams.' },
-  { n: 'C08', t: 'Data & AV containment', d: 'Clean containment for Cat6/6A and AV power — coordinated with the data contractor or delivered as one package.' },
+  { n: 'C08', t: 'Data & AV containment', d: 'Clean containment for Cat6/6A and AV power - coordinated with the data contractor or delivered as one package.' },
   { n: 'C09', t: 'Out-of-hours works', d: 'Live-environment retail, office and hospitality works scheduled around trading to avoid downtime.' },
 ];
 
@@ -128,7 +128,7 @@ function CommercialCases() {
           {cases.map(c => (
             <a key={c.id} href={c.id === 'old-dukes' ? 'case-old-dukes.html' : 'case-studies.html'} className="case-card big">
               <div className="case-visual">
-                <CarterPlaceholder imgSrc={c.imgSrc} metaTag={`${c.sector} · ${c.subsector}`} titleCaption={`${c.title} — ${c.location}`} year={c.year} hue={c.hue}/>
+                <CarterPlaceholder imgSrc={c.imgSrc} metaTag={`${c.sector} · ${c.subsector}`} titleCaption={`${c.title} - ${c.location}`} year={c.year} hue={c.hue}/>
               </div>
               <div className="case-body">
                 <div className="case-tags">
@@ -151,7 +151,7 @@ function FAQBand() {
   const faqs = [
     { q: 'Can you work around our trading hours?', a: 'Yes. We routinely phase works around retail, office and hospitality opening. Night and weekend shifts are priced transparently upfront.' },
     { q: 'Do you handle design or just install?', a: 'Both. Bring us in at design stage and we\'ll produce layouts and compliance notes. Happy to tender against an existing spec too.' },
-    { q: 'Will we get proper paperwork at handover?', a: 'Yes — all our work is NICEIC regulated and we\'re happy to provide all necessary paperwork.' },
+    { q: 'Will we get proper paperwork at handover?', a: 'Yes - all our work is NICEIC regulated and we\'re happy to provide all necessary paperwork.' },
   ];
   const [open, setOpen] = useState(0);
   return (

@@ -1,4 +1,4 @@
-// Shared UI: Header, Footer, Logo, trust bar — used by every page.
+// Shared UI: Header, Footer, Logo, trust bar - used by every page.
 
 const { useState, useEffect, useRef } = React;
 
@@ -47,6 +47,7 @@ window.Header = function Header({ current = 'home', theme = 'dark' }) {
     { id: 'services', label: 'Services', href: 'services.html' },
     { id: 'cases', label: 'Case Studies', href: 'case-studies.html' },
     { id: 'areas', label: 'Areas', href: 'areas.html' },
+    { id: 'about', label: 'About', href: 'about.html' },
     { id: 'contact', label: 'Contact', href: 'contact.html' },
   ];
 
@@ -140,6 +141,7 @@ window.Footer = function Footer() {
           <div>
             <h4>Company</h4>
             <ul>
+              <li><a href="about.html">About</a></li>
               <li><a href="case-studies.html">Case Studies</a></li>
               <li><a href="areas.html">Areas We Cover</a></li>
               <li><a href="contact.html">Contact</a></li>
@@ -166,7 +168,7 @@ window.Footer = function Footer() {
   );
 };
 
-// Scroll-reveal helper — adds `.in` to `.reveal` on entry
+// Scroll-reveal helper - adds `.in` to `.reveal` on entry
 window.useScrollReveal = function useScrollReveal() {
   useEffect(() => {
     const els = document.querySelectorAll('.reveal');
@@ -206,7 +208,7 @@ window.PageHero = function PageHero({ section, sectionNum, title, titleAccent, s
   );
 };
 
-// Mobile sticky CTA bar — visible only on mobile, hides near footer
+// Mobile sticky CTA bar - visible only on mobile, hides near footer
 window.MobileStickyCTA = function MobileStickyCTA() {
   const [visible, setVisible] = useState(false);
   const [hidden, setHidden] = useState(false);

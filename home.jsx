@@ -1,4 +1,4 @@
-// Homepage — Carter Electrical Contracting
+// Homepage - Carter Electrical Contracting
 
 const { Header, Footer, TrustBar, Logo, useScrollReveal, StatNumber, TweaksPanel } = window;
 
@@ -122,7 +122,7 @@ function Intro() {
               <strong>Carter Electrical</strong> is an NICEIC approved electrical contractor serving Cheshire West and the wider Cheshire area. Our electrical services cover domestic, commercial and industrial electrical work across the local area. Every job is compliant with current building regulations and BS&nbsp;7671, and signed off with full documentation.
             </p>
             <p className="lede" style={{ marginTop: '16px' }}>
-              Typical projects include full rewires, replacement consumer units, socket and light fitting installation, and electrical repairs — from a single socket to a full commercial electrical fit-out or fault repair, all delivered to the same certified standard.
+              Typical projects include full rewires, replacement consumer units, socket and light fitting installation, and electrical repairs - from a single socket to a full commercial electrical fit-out or fault repair, all delivered to the same certified standard.
             </p>
           </div>
 
@@ -130,7 +130,7 @@ function Intro() {
           <div className="area-image" style={{ height: '100%', width: '100%', position: 'relative', minHeight: '300px' }}>
             <img
               src="Home - Carter Electrical Contractors man with clipboard.jpg"
-              alt="Carter Electrical Contractors — NICEIC approved electrician in Chester"
+              alt="Carter Electrical Contractors - NICEIC approved electrician in Chester"
               style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', borderRadius: '4px', boxShadow: '0 8px 32px rgba(0,0,0,0.12)' }}
             />
           </div>
@@ -285,7 +285,7 @@ function Cases() {
                 <CarterPlaceholder
                   imgSrc={c.imgSrc}
                   metaTag={`${c.sector} · ${c.subsector}`}
-                  titleCaption={`${c.title} — ${c.location}`}
+                  titleCaption={`${c.title} - ${c.location}`}
                   year={c.year}
                   hue={c.hue}
                 />
@@ -443,7 +443,7 @@ function CTABand() {
             Get Your Free Quote<span className="accent">.</span><br/>Quick &amp; no obligation<span className="accent">.</span>
           </h2>
           <p className="lede" style={{ marginTop: 18, maxWidth: '54ch' }}>
-            Share the scope, the site and the timescale. We&rsquo;ll be in touch shortly to talk through the next sensible step — a site visit, a scoping call, or a straight proposal.
+            Share the scope, the site and the timescale. We&rsquo;ll be in touch shortly to talk through the next sensible step - a site visit, a scoping call, or a straight proposal.
           </p>
         </div>
         <div className="cta-aside">

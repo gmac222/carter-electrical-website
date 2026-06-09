@@ -1,4 +1,4 @@
-// Location pages for targeted areas — long-form, unique per-city content to avoid
+// Location pages for targeted areas - long-form, unique per-city content to avoid
 // thin/duplicate-content penalties on service+location pages.
 
 const {
@@ -37,8 +37,8 @@ function LocationPage({
     section: `Electricians in ${locationName}`,
     sectionNum: "03.1 / Location",
     title: `Local electricians covering ${locationName}`,
-    titleAccent: "\u2014 NICEIC-approved.",
-    subtext: `NICEIC-approved commercial, industrial, domestic and renewables electricians serving ${locationName}${area.postcodes && area.postcodes.length ? ' (' + area.postcodes.join(', ') + ')' : ''} and the surrounding ${area.county || 'area'}. EICR testing, EV chargers, full rewires and commercial fit-outs — delivered by our in-house team from our Christleton base, ${area.distance || 'a short drive from'} ${locationName}.`,
+    titleAccent: " - NICEIC-approved.",
+    subtext: `NICEIC-approved commercial, industrial, domestic and renewables electricians serving ${locationName}${area.postcodes && area.postcodes.length ? ' (' + area.postcodes.join(', ') + ')' : ''} and the surrounding ${area.county || 'area'}. EICR testing, EV chargers, full rewires and commercial fit-outs - delivered by our in-house team from our Christleton base, ${area.distance || 'a short drive from'} ${locationName}.`,
     ctas: /*#__PURE__*/React.createElement("div", {
       style: {
         display: 'flex',
@@ -186,7 +186,7 @@ function LocationPage({
     v: area.responseTime || 'Within 48 hours'
   }, {
     k: 'Distance from HQ',
-    v: area.distance || '—'
+    v: area.distance || '-'
   }, {
     k: 'Accreditation',
     v: 'NICEIC + OZEV'
@@ -228,7 +228,7 @@ function LocationPage({
     className: "accent"
   }, "."))), /*#__PURE__*/React.createElement("p", {
     className: "lede"
-  }, "Five service lines, one in-house team. Here's how each applies to the ", locationName, " market \u2014 and what our ", locationName, " clients most often call us about.")), /*#__PURE__*/React.createElement("div", {
+  }, "Five service lines, one in-house team. Here's how each applies to the ", locationName, " market - and what our ", locationName, " clients most often call us about.")), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'grid',
       gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
@@ -389,7 +389,7 @@ function LocationPage({
     style: {
       marginTop: 16
     }
-  }, "Our electricians work across every part of ", locationName, area.postcodes && area.postcodes.length ? ' — covering ' + area.postcodes.join(', ') : '', ". If your address is inside any of the following neighbourhoods, you're well inside our core coverage zone:")), /*#__PURE__*/React.createElement("div", {
+  }, "Our electricians work across every part of ", locationName, area.postcodes && area.postcodes.length ? ' - covering ' + area.postcodes.join(', ') : '', ". If your address is inside any of the following neighbourhoods, you're well inside our core coverage zone:")), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'grid',
       gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
