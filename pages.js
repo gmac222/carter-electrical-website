@@ -35,12 +35,291 @@ function AboutPage() {
   }), /*#__PURE__*/React.createElement(PageHero, {
     section: "About Carter Electrical",
     sectionNum: "04 / About",
-    title: "A regional firm",
-    titleAccent: /*#__PURE__*/React.createElement(React.Fragment, null, "that punches above its weight", /*#__PURE__*/React.createElement("span", {
+    title: "Technical excellence",
+    titleAccent: /*#__PURE__*/React.createElement(React.Fragment, null, "built on trust and safety", /*#__PURE__*/React.createElement("span", {
       className: "dot-white"
     }, ".")),
-    subtext: "NICEIC-approved electrical contractors based in Christleton, Chester. We deliver commercial, industrial and domestic installations across the North West - scoped candidly, installed by our own team, documented at handover."
+    subtext: "NICEIC Approved Electrical Contractors based in Christleton, Chester. We deliver commercial, industrial, and domestic installations across Cheshire, the Wirral, Merseyside, and North Wales - scoped candidly, installed by our in-house team, and fully certified at handover."
   }), /*#__PURE__*/React.createElement("section", {
+    className: "section-y light reveal"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "wrap"
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+      gap: 60,
+      alignItems: 'center'
+    }
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    className: "eyebrow"
+  }, "Our Story"), /*#__PURE__*/React.createElement("h2", {
+    className: "h-1",
+    style: {
+      margin: '18px 0 24px'
+    }
+  }, "Serving the region since 2019."), /*#__PURE__*/React.createElement("p", {
+    className: "lede",
+    style: {
+      marginBottom: 20
+    }
+  }, "Established in 2019, Carter Electrical Contracting has built a solid reputation as a reliable and professional electrical contractor in the North West."), /*#__PURE__*/React.createElement("p", {
+    style: {
+      color: 'var(--muted-2)',
+      fontSize: 16,
+      lineHeight: 1.6,
+      marginBottom: 16
+    }
+  }, "Based at Unit 5, White Lane Depot in Christleton, Chester, we are perfectly positioned to serve domestic, commercial, and industrial clients across Cheshire, the Wirral, Merseyside, and North Wales."), /*#__PURE__*/React.createElement("p", {
+    style: {
+      color: 'var(--muted-2)',
+      fontSize: 16,
+      lineHeight: 1.6,
+      margin: 0
+    }
+  }, "From small domestic testing to large-scale industrial control installations, our master electricians carry out every job with absolute precision. We do not rely on a daisy-chain of sub-contractors - our own qualified engineers on our own vans deliver the work.")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      height: 420,
+      position: 'relative',
+      borderRadius: '4px',
+      overflow: 'hidden',
+      boxShadow: '0 12px 40px rgba(0,0,0,0.1)'
+    }
+  }, /*#__PURE__*/React.createElement("img", {
+    src: "uploads/about_hero_electrician_1776877287568.png",
+    alt: "Carter Electrical team at work",
+    style: {
+      width: '100%',
+      height: '100%',
+      objectFit: 'cover',
+      display: 'block'
+    }
+  }))))), /*#__PURE__*/React.createElement("section", {
+    className: "section-y bright reveal"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "wrap"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "section-head"
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    className: "eyebrow"
+  }, "Specialist Services"), /*#__PURE__*/React.createElement("h2", {
+    className: "h-1"
+  }, "EV Charging & Renewables.")), /*#__PURE__*/React.createElement("p", {
+    className: "lede"
+  }, "Meeting the modern demands of businesses and homeowners with energy-efficient solutions.")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+      gap: 32
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: 'var(--paper)',
+      padding: 40,
+      borderRadius: 2,
+      border: '1px solid var(--rule)'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "mono",
+    style: {
+      fontSize: 11,
+      color: 'var(--accent-text)',
+      letterSpacing: '0.16em',
+      textTransform: 'uppercase',
+      marginBottom: 16
+    }
+  }, "01 / EV INSTALLATION"), /*#__PURE__*/React.createElement("h3", {
+    className: "h-3",
+    style: {
+      margin: '0 0 16px',
+      fontSize: 20
+    }
+  }, "OZEV Registered Charger Installer"), /*#__PURE__*/React.createElement("p", {
+    style: {
+      color: 'var(--muted-2)',
+      fontSize: 15,
+      lineHeight: 1.6,
+      margin: 0
+    }
+  }, "We are government-registered for OZEV electric vehicle charging station installations. We stay up-to-date on the latest EV models and charger types to install custom domestic and commercial charging systems, including load management setups for business fleets.")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: 'var(--paper)',
+      padding: 40,
+      borderRadius: 2,
+      border: '1px solid var(--rule)'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "mono",
+    style: {
+      fontSize: 11,
+      color: 'var(--accent-text)',
+      letterSpacing: '0.16em',
+      textTransform: 'uppercase',
+      marginBottom: 16
+    }
+  }, "02 / GREEN ENERGY"), /*#__PURE__*/React.createElement("h3", {
+    className: "h-3",
+    style: {
+      margin: '0 0 16px',
+      fontSize: 20
+    }
+  }, "Solar PV & Battery Partnerships"), /*#__PURE__*/React.createElement("p", {
+    style: {
+      color: 'var(--muted-2)',
+      fontSize: 15,
+      lineHeight: 1.6,
+      margin: 0
+    }
+  }, "We maintain a long-standing partnership with one of the region\\'s leading renewables companies, installing domestic and commercial solar PV systems and battery storage. Our expertise in battery optimisation helps clients maximise their renewable energy yields and achieve energy independence.")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: 'var(--paper)',
+      padding: 40,
+      borderRadius: 2,
+      border: '1px solid var(--rule)'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "mono",
+    style: {
+      fontSize: 11,
+      color: 'var(--accent-text)',
+      letterSpacing: '0.16em',
+      textTransform: 'uppercase',
+      marginBottom: 16
+    }
+  }, "03 / SPECIALIST ENGINEERING"), /*#__PURE__*/React.createElement("h3", {
+    className: "h-3",
+    style: {
+      margin: '0 0 16px',
+      fontSize: 20
+    }
+  }, "Wider Capability Scope"), /*#__PURE__*/React.createElement("p", {
+    style: {
+      color: 'var(--muted-2)',
+      fontSize: 15,
+      lineHeight: 1.6,
+      margin: 0
+    }
+  }, "Our engineering capabilities go far beyond standard wiring. We specialise in three-phase power distribution, motor control circuits, emergency lighting layouts, fire alarm systems (BS 5839-1), ventilation circuits, CCTV setups, and automated gates."))))), /*#__PURE__*/React.createElement("section", {
+    className: "section-y dark reveal"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "wrap"
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+      gap: 60,
+      alignItems: 'flex-start'
+    }
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    className: "eyebrow",
+    style: {
+      color: 'var(--accent)'
+    }
+  }, "EEAT & Accreditation"), /*#__PURE__*/React.createElement("h2", {
+    className: "h-1",
+    style: {
+      marginTop: 18,
+      color: 'var(--white)'
+    }
+  }, "Fully accredited.", /*#__PURE__*/React.createElement("br", null), "Documented at handover."), /*#__PURE__*/React.createElement("p", {
+    style: {
+      color: 'rgba(255,255,255,0.7)',
+      fontSize: 16,
+      lineHeight: 1.6,
+      marginTop: 20
+    }
+  }, "Your safety and peace of mind are our priority. We are registered with the National Inspection Council for Electrical Installation Contracting (NICEIC) and adhere strictly to British Standards, ensuring that every project is certified and logged correctly."), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      gap: 20,
+      marginTop: 40,
+      alignItems: 'center'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: 'rgba(255,255,255,0.05)',
+      padding: '12px 18px',
+      borderRadius: 4,
+      display: 'inline-flex',
+      alignItems: 'center',
+      justifyContent: 'center'
+    }
+  }, /*#__PURE__*/React.createElement("img", {
+    src: "uploads/nic.png",
+    alt: "NICEIC Approved Contractor Logo",
+    style: {
+      height: 44,
+      width: 'auto',
+      objectFit: 'contain'
+    }
+  })), /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: 'rgba(255,255,255,0.05)',
+      padding: '12px 18px',
+      borderRadius: 4,
+      display: 'inline-flex',
+      alignItems: 'center',
+      justifyContent: 'center'
+    }
+  }, /*#__PURE__*/React.createElement("img", {
+    src: "uploads/ozev-logo.jpg",
+    alt: "OZEV Registered Installer Logo",
+    style: {
+      height: 44,
+      width: 'auto',
+      objectFit: 'contain'
+    }
+  })))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'grid',
+      gap: 16
+    }
+  }, [{
+    k: 'NICEIC Approved Contractor',
+    v: 'Full registration ensures all building regulations and H&S criteria are met.'
+  }, {
+    k: 'OZEV Registered Installer',
+    v: 'Authorised to install domestic and commercial vehicle charging units.'
+  }, {
+    k: 'BS 7671 Wiring Regulations',
+    v: 'Compliant with the current 18th Edition wiring standards and amendments.'
+  }, {
+    k: 'BS 5839-1 & BS 5266',
+    v: 'Fully trained for British Standard fire detection and emergency lighting installations.'
+  }, {
+    k: '£5M Public Liability Insurance',
+    v: 'Comprehensive coverage across all residential, commercial, and industrial sites.'
+  }, {
+    k: 'Local Christleton Depot',
+    v: 'Unit 5 White Lane Depot, Christleton, Chester, CH3 6AH.'
+  }].map((r, i) => /*#__PURE__*/React.createElement("div", {
+    key: i,
+    style: {
+      display: 'flex',
+      justifyContent: 'space-between',
+      padding: '18px 0',
+      borderTop: '1px solid rgba(255,255,255,0.1)',
+      alignItems: 'center',
+      gap: 20
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "mono",
+    style: {
+      fontSize: 11,
+      letterSpacing: '0.16em',
+      textTransform: 'uppercase',
+      color: 'rgba(255,255,255,0.55)',
+      flexShrink: 0
+    }
+  }, r.k), /*#__PURE__*/React.createElement("span", {
+    className: "display",
+    style: {
+      fontSize: 15,
+      fontWeight: 500,
+      textAlign: 'right',
+      color: 'rgba(255,255,255,0.95)'
+    }
+  }, r.v))))))), /*#__PURE__*/React.createElement("section", {
     className: "section-y light reveal"
   }, /*#__PURE__*/React.createElement("div", {
     className: "wrap"
@@ -52,21 +331,10 @@ function AboutPage() {
     className: "h-1"
   }, "How we run jobs.")), /*#__PURE__*/React.createElement("p", {
     className: "lede"
-  }, "Four things we don't compromise on, however big or small the project.")), /*#__PURE__*/React.createElement("div", {
-    style: {
-      marginBottom: 60,
-      height: 400,
-      position: 'relative',
-      borderRadius: '4px',
-      overflow: 'hidden'
-    }
-  }, /*#__PURE__*/React.createElement(window.CarterPlaceholder, {
-    imgSrc: "uploads/worker-1.jpg",
-    titleCaption: "Our Team"
-  })), /*#__PURE__*/React.createElement("div", {
+  }, "Four things we do not compromise on, however big or small the project.")), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'grid',
-      gridTemplateColumns: 'repeat(2, 1fr)',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
       gap: 1,
       background: 'var(--rule)',
       border: '1px solid var(--rule)'
@@ -94,74 +362,9 @@ function AboutPage() {
       color: 'var(--muted-2)',
       fontSize: 15,
       lineHeight: 1.6,
-      margin: 0,
-      maxWidth: '40ch'
+      margin: 0
     }
-  }, v.d)))))), /*#__PURE__*/React.createElement("section", {
-    className: "section-y dark reveal"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "wrap",
-    style: {
-      display: 'grid',
-      gridTemplateColumns: '1fr 1.2fr',
-      gap: 60
-    }
-  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
-    className: "eyebrow",
-    style: {
-      color: 'var(--accent)'
-    }
-  }, "Accreditation"), /*#__PURE__*/React.createElement("h2", {
-    className: "h-1",
-    style: {
-      marginTop: 18
-    }
-  }, "NICEIC-approved.", /*#__PURE__*/React.createElement("br", null), "Documented at handover.")), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'grid',
-      gap: 16
-    }
-  }, [{
-    k: 'NICEIC',
-    v: 'Approved Contractor'
-  }, {
-    k: 'OZEV',
-    v: 'EV charge-point installer'
-  }, {
-    k: 'BS 7671',
-    v: '18th Edition (incl. amendments)'
-  }, {
-    k: 'BS 5839-1',
-    v: 'Fire detection & alarm systems'
-  }, {
-    k: 'BS 5266',
-    v: 'Emergency lighting'
-  }, {
-    k: 'PLI',
-    v: '£5M Public Liability'
-  }].map((r, i) => /*#__PURE__*/React.createElement("div", {
-    key: i,
-    style: {
-      display: 'flex',
-      justifyContent: 'space-between',
-      padding: '18px 0',
-      borderTop: '1px solid rgba(255,255,255,0.1)'
-    }
-  }, /*#__PURE__*/React.createElement("span", {
-    className: "mono",
-    style: {
-      fontSize: 11,
-      letterSpacing: '0.16em',
-      textTransform: 'uppercase',
-      color: 'rgba(255,255,255,0.55)'
-    }
-  }, r.k), /*#__PURE__*/React.createElement("span", {
-    className: "display",
-    style: {
-      fontSize: 16,
-      fontWeight: 500
-    }
-  }, r.v)))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
+  }, v.d)))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
 }
 
 // ----- Services stub page -----

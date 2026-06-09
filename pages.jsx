@@ -17,10 +17,114 @@ function AboutPage() {
       <PageHero
         section="About Carter Electrical"
         sectionNum="04 / About"
-        title="A regional firm"
-        titleAccent={<>that punches above its weight<span className="dot-white">.</span></>}
-        subtext="NICEIC-approved electrical contractors based in Christleton, Chester. We deliver commercial, industrial and domestic installations across the North West - scoped candidly, installed by our own team, documented at handover."
+        title="Technical excellence"
+        titleAccent={<>built on trust and safety<span className="dot-white">.</span></>}
+        subtext="NICEIC Approved Electrical Contractors based in Christleton, Chester. We deliver commercial, industrial, and domestic installations across Cheshire, the Wirral, Merseyside, and North Wales - scoped candidly, installed by our in-house team, and fully certified at handover."
       />
+
+      <section className="section-y light reveal">
+        <div className="wrap">
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 60, alignItems: 'center' }}>
+            <div>
+              <div className="eyebrow">Our Story</div>
+              <h2 className="h-1" style={{ margin: '18px 0 24px' }}>Serving the region since 2019.</h2>
+              <p className="lede" style={{ marginBottom: 20 }}>
+                Established in 2019, Carter Electrical Contracting has built a solid reputation as a reliable and professional electrical contractor in the North West.
+              </p>
+              <p style={{ color: 'var(--muted-2)', fontSize: 16, lineHeight: 1.6, marginBottom: 16 }}>
+                Based at Unit 5, White Lane Depot in Christleton, Chester, we are perfectly positioned to serve domestic, commercial, and industrial clients across Cheshire, the Wirral, Merseyside, and North Wales.
+              </p>
+              <p style={{ color: 'var(--muted-2)', fontSize: 16, lineHeight: 1.6, margin: 0 }}>
+                From small domestic testing to large-scale industrial control installations, our master electricians carry out every job with absolute precision. We do not rely on a daisy-chain of sub-contractors - our own qualified engineers on our own vans deliver the work.
+              </p>
+            </div>
+            <div style={{ height: 420, position: 'relative', borderRadius: '4px', overflow: 'hidden', boxShadow: '0 12px 40px rgba(0,0,0,0.1)' }}>
+              <img 
+                src="uploads/about_hero_electrician_1776877287568.png" 
+                alt="Carter Electrical team at work" 
+                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} 
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-y bright reveal">
+        <div className="wrap">
+          <div className="section-head">
+            <div>
+              <div className="eyebrow">Specialist Services</div>
+              <h2 className="h-1">EV Charging & Renewables.</h2>
+            </div>
+            <p className="lede">Meeting the modern demands of businesses and homeowners with energy-efficient solutions.</p>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 32 }}>
+            <div style={{ background: 'var(--paper)', padding: 40, borderRadius: 2, border: '1px solid var(--rule)' }}>
+              <div className="mono" style={{ fontSize: 11, color: 'var(--accent-text)', letterSpacing: '0.16em', textTransform: 'uppercase', marginBottom: 16 }}>01 / EV INSTALLATION</div>
+              <h3 className="h-3" style={{ margin: '0 0 16px', fontSize: 20 }}>OZEV Registered Charger Installer</h3>
+              <p style={{ color: 'var(--muted-2)', fontSize: 15, lineHeight: 1.6, margin: 0 }}>
+                We are government-registered for OZEV electric vehicle charging station installations. We stay up-to-date on the latest EV models and charger types to install custom domestic and commercial charging systems, including load management setups for business fleets.
+              </p>
+            </div>
+
+            <div style={{ background: 'var(--paper)', padding: 40, borderRadius: 2, border: '1px solid var(--rule)' }}>
+              <div className="mono" style={{ fontSize: 11, color: 'var(--accent-text)', letterSpacing: '0.16em', textTransform: 'uppercase', marginBottom: 16 }}>02 / GREEN ENERGY</div>
+              <h3 className="h-3" style={{ margin: '0 0 16px', fontSize: 20 }}>Solar PV & Battery Partnerships</h3>
+              <p style={{ color: 'var(--muted-2)', fontSize: 15, lineHeight: 1.6, margin: 0 }}>
+                We maintain a long-standing partnership with one of the region\'s leading renewables companies, installing domestic and commercial solar PV systems and battery storage. Our expertise in battery optimisation helps clients maximise their renewable energy yields and achieve energy independence.
+              </p>
+            </div>
+
+            <div style={{ background: 'var(--paper)', padding: 40, borderRadius: 2, border: '1px solid var(--rule)' }}>
+              <div className="mono" style={{ fontSize: 11, color: 'var(--accent-text)', letterSpacing: '0.16em', textTransform: 'uppercase', marginBottom: 16 }}>03 / SPECIALIST ENGINEERING</div>
+              <h3 className="h-3" style={{ margin: '0 0 16px', fontSize: 20 }}>Wider Capability Scope</h3>
+              <p style={{ color: 'var(--muted-2)', fontSize: 15, lineHeight: 1.6, margin: 0 }}>
+                Our engineering capabilities go far beyond standard wiring. We specialise in three-phase power distribution, motor control circuits, emergency lighting layouts, fire alarm systems (BS 5839-1), ventilation circuits, CCTV setups, and automated gates.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-y dark reveal">
+        <div className="wrap">
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 60, alignItems: 'flex-start' }}>
+            <div>
+              <div className="eyebrow" style={{ color: 'var(--accent)' }}>EEAT & Accreditation</div>
+              <h2 className="h-1" style={{ marginTop: 18, color: 'var(--white)' }}>Fully accredited.<br/>Documented at handover.</h2>
+              <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 16, lineHeight: 1.6, marginTop: 20 }}>
+                Your safety and peace of mind are our priority. We are registered with the National Inspection Council for Electrical Installation Contracting (NICEIC) and adhere strictly to British Standards, ensuring that every project is certified and logged correctly.
+              </p>
+              
+              <div style={{ display: 'flex', gap: 20, marginTop: 40, alignItems: 'center' }}>
+                <div style={{ background: 'rgba(255,255,255,0.05)', padding: '12px 18px', borderRadius: 4, display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <img src="uploads/nic.png" alt="NICEIC Approved Contractor Logo" style={{ height: 44, width: 'auto', objectFit: 'contain' }} />
+                </div>
+                <div style={{ background: 'rgba(255,255,255,0.05)', padding: '12px 18px', borderRadius: 4, display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <img src="uploads/ozev-logo.jpg" alt="OZEV Registered Installer Logo" style={{ height: 44, width: 'auto', objectFit: 'contain' }} />
+                </div>
+              </div>
+            </div>
+
+            <div style={{ display: 'grid', gap: 16 }}>
+              {[
+                { k: 'NICEIC Approved Contractor', v: 'Full registration ensures all building regulations and H&S criteria are met.' },
+                { k: 'OZEV Registered Installer', v: 'Authorised to install domestic and commercial vehicle charging units.' },
+                { k: 'BS 7671 Wiring Regulations', v: 'Compliant with the current 18th Edition wiring standards and amendments.' },
+                { k: 'BS 5839-1 & BS 5266', v: 'Fully trained for British Standard fire detection and emergency lighting installations.' },
+                { k: '£5M Public Liability Insurance', v: 'Comprehensive coverage across all residential, commercial, and industrial sites.' },
+                { k: 'Local Christleton Depot', v: 'Unit 5 White Lane Depot, Christleton, Chester, CH3 6AH.' },
+              ].map((r, i) => (
+                <div key={i} style={{ display: 'flex', justifyContent: 'space-between', padding: '18px 0', borderTop: '1px solid rgba(255,255,255,0.1)', alignItems: 'center', gap: 20 }}>
+                  <span className="mono" style={{ fontSize: 11, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.55)', flexShrink: 0 }}>{r.k}</span>
+                  <span className="display" style={{ fontSize: 15, fontWeight: 500, textAlign: 'right', color: 'rgba(255,255,255,0.95)' }}>{r.v}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="section-y light reveal">
         <div className="wrap">
@@ -29,41 +133,14 @@ function AboutPage() {
               <div className="eyebrow">Our principles</div>
               <h2 className="h-1">How we run jobs.</h2>
             </div>
-            <p className="lede">Four things we don't compromise on, however big or small the project.</p>
+            <p className="lede">Four things we do not compromise on, however big or small the project.</p>
           </div>
-          <div style={{ marginBottom: 60, height: 400, position: 'relative', borderRadius: '4px', overflow: 'hidden' }}>
-             <window.CarterPlaceholder imgSrc="uploads/worker-1.jpg" titleCaption="Our Team" />
-          </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 1, background: 'var(--rule)', border: '1px solid var(--rule)' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 1, background: 'var(--rule)', border: '1px solid var(--rule)' }}>
             {values.map(v => (
               <div key={v.n} style={{ background: 'var(--white)', padding: '40px 36px' }}>
                 <div className="mono" style={{ fontSize: 11, letterSpacing: '0.16em', color: 'var(--muted)' }}>{v.n}</div>
                 <h3 className="h-3" style={{ margin: '18px 0 12px' }}>{v.t}</h3>
-                <p style={{ color: 'var(--muted-2)', fontSize: 15, lineHeight: 1.6, margin: 0, maxWidth: '40ch' }}>{v.d}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section-y dark reveal">
-        <div className="wrap" style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: 60 }}>
-          <div>
-            <div className="eyebrow" style={{ color: 'var(--accent)' }}>Accreditation</div>
-            <h2 className="h-1" style={{ marginTop: 18 }}>NICEIC-approved.<br/>Documented at handover.</h2>
-          </div>
-          <div style={{ display: 'grid', gap: 16 }}>
-            {[
-              { k: 'NICEIC', v: 'Approved Contractor' },
-              { k: 'OZEV', v: 'EV charge-point installer' },
-              { k: 'BS 7671', v: '18th Edition (incl. amendments)' },
-              { k: 'BS 5839-1', v: 'Fire detection & alarm systems' },
-              { k: 'BS 5266', v: 'Emergency lighting' },
-              { k: 'PLI', v: '£5M Public Liability' },
-            ].map((r,i) => (
-              <div key={i} style={{ display: 'flex', justifyContent: 'space-between', padding: '18px 0', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
-                <span className="mono" style={{ fontSize: 11, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.55)' }}>{r.k}</span>
-                <span className="display" style={{ fontSize: 16, fontWeight: 500 }}>{r.v}</span>
+                <p style={{ color: 'var(--muted-2)', fontSize: 15, lineHeight: 1.6, margin: 0 }}>{v.d}</p>
               </div>
             ))}
           </div>
