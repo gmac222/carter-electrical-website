@@ -24,27 +24,18 @@ function AboutPage() {
 
       <section className="section-y light reveal">
         <div className="wrap">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 60, alignItems: 'center' }}>
-            <div>
-              <div className="eyebrow">Our Story</div>
-              <h2 className="h-1" style={{ margin: '18px 0 24px' }}>Serving the region since 2019.</h2>
-              <p className="lede" style={{ marginBottom: 20 }}>
-                Established in 2019, Carter Electrical Contracting has built a solid reputation as a reliable and professional electrical contractor in the North West.
-              </p>
-              <p style={{ color: 'var(--muted-2)', fontSize: 16, lineHeight: 1.6, marginBottom: 16 }}>
-                Based at Unit 5, White Lane Depot in Christleton, Chester, we are perfectly positioned to serve domestic, commercial, and industrial clients across Cheshire, the Wirral, Merseyside, and North Wales.
-              </p>
-              <p style={{ color: 'var(--muted-2)', fontSize: 16, lineHeight: 1.6, margin: 0 }}>
-                From small domestic testing to large-scale industrial control installations, our master electricians carry out every job with absolute precision. We do not rely on a daisy-chain of sub-contractors - our own qualified engineers on our own vans deliver the work.
-              </p>
-            </div>
-            <div style={{ height: 420, position: 'relative', borderRadius: '4px', overflow: 'hidden', boxShadow: '0 12px 40px rgba(0,0,0,0.1)' }}>
-              <img 
-                src="uploads/about_hero_electrician_1776877287568.png" 
-                alt="Carter Electrical team at work" 
-                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} 
-              />
-            </div>
+          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+            <div className="eyebrow">Our Story</div>
+            <h2 className="h-1" style={{ margin: '18px 0 24px' }}>Serving the region since 2019.</h2>
+            <p className="lede" style={{ marginBottom: 20 }}>
+              Established in 2019, Carter Electrical Contracting has built a solid reputation as a reliable and professional electrical contractor in the North West.
+            </p>
+            <p style={{ color: 'var(--muted-2)', fontSize: 16, lineHeight: 1.6, marginBottom: 16 }}>
+              Based at Unit 5, White Lane Depot in Christleton, Chester, we are perfectly positioned to serve domestic, commercial, and industrial clients across Cheshire, the Wirral, Merseyside, and North Wales.
+            </p>
+            <p style={{ color: 'var(--muted-2)', fontSize: 16, lineHeight: 1.6, margin: 0 }}>
+              From small domestic testing to large-scale industrial control installations, our master electricians carry out every job with absolute precision. We do not rely on a daisy-chain of sub-contractors; our own qualified engineers on our own vans deliver the work.
+            </p>
           </div>
         </div>
       </section>

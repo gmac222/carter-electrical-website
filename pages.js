@@ -46,12 +46,10 @@ function AboutPage() {
     className: "wrap"
   }, /*#__PURE__*/React.createElement("div", {
     style: {
-      display: 'grid',
-      gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-      gap: 60,
-      alignItems: 'center'
+      maxWidth: '800px',
+      margin: '0 auto'
     }
-  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("div", {
     className: "eyebrow"
   }, "Our Story"), /*#__PURE__*/React.createElement("h2", {
     className: "h-1",
@@ -77,24 +75,7 @@ function AboutPage() {
       lineHeight: 1.6,
       margin: 0
     }
-  }, "From small domestic testing to large-scale industrial control installations, our master electricians carry out every job with absolute precision. We do not rely on a daisy-chain of sub-contractors - our own qualified engineers on our own vans deliver the work.")), /*#__PURE__*/React.createElement("div", {
-    style: {
-      height: 420,
-      position: 'relative',
-      borderRadius: '4px',
-      overflow: 'hidden',
-      boxShadow: '0 12px 40px rgba(0,0,0,0.1)'
-    }
-  }, /*#__PURE__*/React.createElement("img", {
-    src: "uploads/about_hero_electrician_1776877287568.png",
-    alt: "Carter Electrical team at work",
-    style: {
-      width: '100%',
-      height: '100%',
-      objectFit: 'cover',
-      display: 'block'
-    }
-  }))))), /*#__PURE__*/React.createElement("section", {
+  }, "From small domestic testing to large-scale industrial control installations, our master electricians carry out every job with absolute precision. We do not rely on a daisy-chain of sub-contractors; our own qualified engineers on our own vans deliver the work.")))), /*#__PURE__*/React.createElement("section", {
     className: "section-y bright reveal"
   }, /*#__PURE__*/React.createElement("div", {
     className: "wrap"
