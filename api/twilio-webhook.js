@@ -70,13 +70,14 @@ export default async function handler(req, res) {
     }
 
     // Twilio expects TwiML in response to proceed with the call
-    // Empty TwiML tells Twilio to continue executing the rest of the flow (or just end if no flow)
+    // We return a Dial response so that if the phone number is routed directly to this webhook,
+    // Twilio will automatically dial Ian's number to connect the call.
     res.setHeader('Content-Type', 'text/xml');
-    res.status(200).send('<?xml version="1.0" encoding="UTF-8"?><Response></Response>');
+    res.status(200).send('<?xml version="1.0" encoding="UTF-8"?><Response><Dial>+447843672120</Dial></Response>');
   } catch (error) {
     console.error('Twilio Webhook error:', error);
-    // Still return 200 so Twilio doesn't error out the caller
+    // Still return 200 and attempt to connect the call so we do not drop the caller
     res.setHeader('Content-Type', 'text/xml');
-    res.status(200).send('<?xml version="1.0" encoding="UTF-8"?><Response></Response>');
+    res.status(200).send('<?xml version="1.0" encoding="UTF-8"?><Response><Dial>+447843672120</Dial></Response>');
   }
 }

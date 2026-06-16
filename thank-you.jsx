@@ -4,7 +4,7 @@ function ThankYouPage() {
   useScrollReveal();
 
   useEffect(() => {
-    // Send GA4 event on page mount
+    // Send GA4 and Google Ads events on page mount
     if (typeof window.gtag !== 'undefined') {
       window.gtag('event', 'generate_lead', {
         'lead_type': 'form',
@@ -12,6 +12,11 @@ function ThankYouPage() {
         'currency': 'GBP'
       });
       window.gtag('event', 'form_lead', {
+        'value': 1.0,
+        'currency': 'GBP'
+      });
+      window.gtag('event', 'conversion', {
+        'send_to': 'AW-18182294304/nzMqCN_skcAcEKCW_91D',
         'value': 1.0,
         'currency': 'GBP'
       });

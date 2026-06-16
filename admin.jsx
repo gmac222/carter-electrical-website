@@ -16,7 +16,7 @@ function EditableField({ value, field, leadId, onSave, type = 'text' }) {
   if (!editing) {
     return (
       <span className="editable-value" onClick={() => { setDraft(value || ''); setEditing(true); }} title="Click to edit">
-        {value || <span className="empty-value">—</span>}
+        {value || <span className="empty-value">-</span>}
         <svg className="edit-icon" viewBox="0 0 16 16" fill="none"><path d="M11.13 1.87a1.25 1.25 0 0 1 1.77 0l1.23 1.23a1.25 1.25 0 0 1 0 1.77L5.69 13.31l-3.56.89.89-3.56 8.11-8.77Z" stroke="currentColor" strokeWidth="1.2"/></svg>
       </span>
     );
@@ -57,7 +57,7 @@ function AdminDashboard() {
         setError('Invalid PIN or server error');
       }
     } catch (err) {
-      setError('Network error — please try again');
+      setError('Network error - please try again');
     }
     setLoading(false);
   };
@@ -123,7 +123,7 @@ function AdminDashboard() {
             </svg>
           </div>
           <h2>Carter Electrical</h2>
-          <p className="login-subtitle">CRM Dashboard — Authorised Access Only</p>
+          <p className="login-subtitle">CRM Dashboard - Authorised Access Only</p>
           <form onSubmit={handleLogin}>
             <div className="input-group">
               <label htmlFor="pin-input">Access PIN</label>
@@ -214,7 +214,7 @@ function AdminDashboard() {
                 <td><EditableField value={lead.sector} field="sector" leadId={lead.id} onSave={updateLead} /></td>
                 <td><EditableField value={lead.postcode} field="postcode" leadId={lead.id} onSave={updateLead} /></td>
                 <td><EditableField value={lead.timing} field="timing" leadId={lead.id} onSave={updateLead} /></td>
-                <td><EditableField value={lead.company} field="company" leadId={lead.id} onSave={updateLead} /></td>
+                <td className="cell-company"><EditableField value={lead.company} field="company" leadId={lead.id} onSave={updateLead} /></td>
                 <td>
                   <select className="status-select" value={lead.status || 'New Lead'} onChange={e => updateLead(lead.id, { status: e.target.value })} data-status={lead.status || 'New Lead'}>
                     {statuses.map(s => <option key={s} value={s}>{s}</option>)}

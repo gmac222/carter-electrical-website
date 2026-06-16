@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#0B2637">
   <style>
     /* ═══════════════════════════════════════════
-       Carter Electrical CRM — Admin Dashboard
+       Carter Electrical CRM - Admin Dashboard
        Brand tokens: --ink #011D30, --accent #7AC143
        ═══════════════════════════════════════════ */
 
@@ -278,6 +278,7 @@
     }
     .crm-table {
       width: 100%;
+      min-width: 1500px; /* Prevent 14 columns from squishing and breaking layout */
       border-collapse: collapse;
       font-size: 13px;
       margin-top: 0;
@@ -311,8 +312,9 @@
     .crm-table td {
       padding: 12px 14px;
       border-bottom: 1px solid var(--rule);
-      vertical-align: top;
+      vertical-align: middle;
       max-width: 200px;
+      white-space: nowrap;
     }
     .cell-name { font-weight: 600; white-space: nowrap; }
     .cell-date {
@@ -322,7 +324,14 @@
       color: var(--muted);
       white-space: nowrap;
     }
-    .cell-notes { max-width: 280px; }
+    .cell-company {
+      max-width: 220px;
+      white-space: normal;
+    }
+    .cell-notes {
+      max-width: 320px;
+      white-space: normal;
+    }
     .cell-actions { white-space: nowrap; text-align: center; }
 
     .empty-row {
@@ -418,7 +427,7 @@
   </style>
 </head>
 <body>
-  <div id="root"><div class="login-screen"><div class="login-glow"></div><div class="login-card"><div class="login-logo"><svg viewBox="0 0 36 36" fill="none" class="login-bolt"><path d="M20.5 3L8 20h9l-1 13L29 16h-9.5L20.5 3z" fill="#7AC143" stroke="#5fa02f" stroke-width="1"></path></svg></div><h2>Carter Electrical</h2><p class="login-subtitle">CRM Dashboard — Authorised Access Only</p><form><div class="input-group"><label for="pin-input">Access PIN</label><input id="pin-input" type="password" placeholder="Enter your PIN" required="" autocomplete="off" value=""></div><button type="submit" class="login-btn">Access Dashboard <span class="arrow-right">→</span></button></form></div></div></div>
+  <div id="root"><div class="login-screen"><div class="login-glow"></div><div class="login-card"><div class="login-logo"><svg viewBox="0 0 36 36" fill="none" class="login-bolt"><path d="M20.5 3L8 20h9l-1 13L29 16h-9.5L20.5 3z" fill="#7AC143" stroke="#5fa02f" stroke-width="1"></path></svg></div><h2>Carter Electrical</h2><p class="login-subtitle">CRM Dashboard - Authorised Access Only</p><form><div class="input-group"><label for="pin-input">Access PIN</label><input id="pin-input" type="password" placeholder="Enter your PIN" required="" autocomplete="off" value=""></div><button type="submit" class="login-btn">Access Dashboard <span class="arrow-right">→</span></button></form></div></div></div>
 
   <!-- React Dependencies -->
   <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin=""></script>

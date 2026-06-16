@@ -34,7 +34,7 @@ function EditableField({
       title: "Click to edit"
     }, value || /*#__PURE__*/React.createElement("span", {
       className: "empty-value"
-    }, "\u2014"), /*#__PURE__*/React.createElement("svg", {
+    }, "-"), /*#__PURE__*/React.createElement("svg", {
       className: "edit-icon",
       viewBox: "0 0 16 16",
       fill: "none"
@@ -99,7 +99,7 @@ function AdminDashboard() {
         setError('Invalid PIN or server error');
       }
     } catch (err) {
-      setError('Network error — please try again');
+      setError('Network error - please try again');
     }
     setLoading(false);
   };
@@ -196,7 +196,7 @@ function AdminDashboard() {
       strokeWidth: "1"
     }))), /*#__PURE__*/React.createElement("h2", null, "Carter Electrical"), /*#__PURE__*/React.createElement("p", {
       className: "login-subtitle"
-    }, "CRM Dashboard \u2014 Authorised Access Only"), /*#__PURE__*/React.createElement("form", {
+    }, "CRM Dashboard - Authorised Access Only"), /*#__PURE__*/React.createElement("form", {
       onSubmit: handleLogin
     }, /*#__PURE__*/React.createElement("div", {
       className: "input-group"
@@ -333,7 +333,9 @@ function AdminDashboard() {
     field: "timing",
     leadId: lead.id,
     onSave: updateLead
-  })), /*#__PURE__*/React.createElement("td", null, /*#__PURE__*/React.createElement(EditableField, {
+  })), /*#__PURE__*/React.createElement("td", {
+    className: "cell-company"
+  }, /*#__PURE__*/React.createElement(EditableField, {
     value: lead.company,
     field: "company",
     leadId: lead.id,
