@@ -4,14 +4,61 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { From, To, CallStatus, Direction } = req.body;
+    const { From, To, CallStatus, Direction, RecordingUrl } = req.body;
 
-    // We only want to log inbound calls
-    // Twilio sends multiple webhooks per call (ringing, answered, completed).
-    // Let's just log it once if we have the data.
-    
-    // In Twilio, set this webhook URL in the "A call comes in" section.
-    
+    // Handle call recording callbacks from Twilio when a recording is ready
+    if (RecordingUrl && From && process.env.AIRTABLE_BASE_ID && process.env.AIRTABLE_PAT && process.env.AIRTABLE_TABLE_ID) {
+      console.log(`Received recording callback for caller ${From}. Recording URL: ${RecordingUrl}`);
+
+      // 1. Search for the most recent lead with this phone number in Airtable
+      const searchRes = await fetch(`https://api.airtable.com/v0/${process.env.AIRTABLE_BASE_ID}/${process.env.AIRTABLE_TABLE_ID}?filterByFormula=SEARCH("${From}", {Customer Phone})`, {
+        headers: { 'Authorization': `Bearer ${process.env.AIRTABLE_PAT}` }
+      });
+
+      if (searchRes.ok) {
+        const searchData = await searchRes.json();
+        const records = searchData.records || [];
+        if (records.length > 0) {
+          // Sort by createdTime descending to find the most recent lead
+          records.sort((a, b) => new Date(b.createdTime) - new Date(a.createdTime));
+          const targetRecord = records[0];
+
+          const currentNotes = targetRecord.fields['Notes'] || '';
+          const currentAttachments = targetRecord.fields['Attachments'] || [];
+
+          // 2. Attach the recording MP3 file and add a link in the notes
+          await fetch(`https://api.airtable.com/v0/${process.env.AIRTABLE_BASE_ID}/${process.env.AIRTABLE_TABLE_ID}/${targetRecord.id}`, {
+            method: 'PATCH',
+            headers: {
+              'Authorization': `Bearer ${process.env.AIRTABLE_PAT}`,
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              typecast: true,
+              fields: {
+                'Attachments': [
+                  ...currentAttachments,
+                  { url: RecordingUrl + '.mp3', filename: 'Call_Recording.mp3' }
+                ],
+                'Notes': currentNotes + `\nCall Recording: ${RecordingUrl}`
+              }
+            })
+          });
+          console.log(`Successfully attached call recording to Airtable lead ID: ${targetRecord.id}`);
+        } else {
+          console.log(`No matching lead found for caller: ${From}`);
+        }
+      } else {
+        const errText = await searchRes.text();
+        console.error('Airtable lead search failed:', errText);
+      }
+
+      // Return empty TwiML response for the recording callback
+      res.setHeader('Content-Type', 'text/xml');
+      return res.status(200).send('<?xml version="1.0" encoding="UTF-8"?><Response></Response>');
+    }
+
+    // Standard incoming call handling
     if (From && process.env.AIRTABLE_BASE_ID && process.env.AIRTABLE_PAT && process.env.AIRTABLE_TABLE_ID) {
       await fetch(`https://api.airtable.com/v0/${process.env.AIRTABLE_BASE_ID}/${process.env.AIRTABLE_TABLE_ID}`, {
         method: 'POST',
@@ -69,11 +116,15 @@ export default async function handler(req, res) {
       }
     }
 
-    // Twilio expects TwiML in response to proceed with the call
+    const host = req.headers.host || 'carterelec.co.uk';
+    const protocol = req.headers['x-forwarded-proto'] || 'https';
+    const callbackUrl = `${protocol}://${host}/api/twilio-webhook`;
+
+    // Twilio expects TwiML in response to proceed with the call.
     // We return a Dial response so that if the phone number is routed directly to this webhook,
-    // Twilio will automatically dial Ian's number to connect the call.
+    // Twilio will automatically dial Ian's number, record the call, and send the recording back here.
     res.setHeader('Content-Type', 'text/xml');
-    res.status(200).send('<?xml version="1.0" encoding="UTF-8"?><Response><Dial>+447843672120</Dial></Response>');
+    res.status(200).send(`<?xml version="1.0" encoding="UTF-8"?><Response><Dial record="record-from-answer-dual" recordingStatusCallback="${callbackUrl}">+447843672120</Dial></Response>`);
   } catch (error) {
     console.error('Twilio Webhook error:', error);
     // Still return 200 and attempt to connect the call so we do not drop the caller
