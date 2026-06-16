@@ -59,6 +59,7 @@ export default async function handler(req, res) {
         details: record.fields['Additional Details'] || parsedFallback.details || '',
         status: record.fields['Status'],
         quote: record.fields['Quote Amount'],
+        attachments: record.fields['Attachments'] || [],
         notes: notes,
         createdTime: record.createdTime
       };
