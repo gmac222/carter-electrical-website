@@ -962,16 +962,32 @@ function AdminDashboard() {
       return /*#__PURE__*/React.createElement("div", {
         key: idx,
         className: "audio-player-wrapper"
+      }, /*#__PURE__*/React.createElement("div", {
+        style: {
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          marginBottom: '4px'
+        }
       }, /*#__PURE__*/React.createElement("span", {
         style: {
           fontSize: '11px',
           fontWeight: 'bold'
         }
-      }, "Call Recording (", att.filename || 'Audio File', ")"), /*#__PURE__*/React.createElement("audio", {
+      }, "Call Recording (", att.filename || 'Audio File', ")"), /*#__PURE__*/React.createElement("a", {
+        href: att.url,
+        target: "_blank",
+        rel: "noreferrer",
+        style: {
+          fontSize: '11.5px',
+          color: '#3b82f6',
+          textDecoration: 'underline'
+        }
+      }, "Open recording in new tab \u2192")), /*#__PURE__*/React.createElement("audio", {
         controls: true,
         src: att.url,
         style: {
-          marginTop: '4px'
+          width: '100%'
         }
       }));
     }

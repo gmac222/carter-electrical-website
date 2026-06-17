@@ -707,8 +707,11 @@ function AdminDashboard() {
                         if (isAudio || (att.url && att.url.includes('.mp3'))) {
                           return (
                             <div key={idx} className="audio-player-wrapper">
-                              <span style={{ fontSize: '11px', fontWeight: 'bold' }}>Call Recording ({att.filename || 'Audio File'})</span>
-                              <audio controls src={att.url} style={{ marginTop: '4px' }}></audio>
+                              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '4px' }}>
+                                <span style={{ fontSize: '11px', fontWeight: 'bold' }}>Call Recording ({att.filename || 'Audio File'})</span>
+                                <a href={att.url} target="_blank" rel="noreferrer" style={{ fontSize: '11.5px', color: '#3b82f6', textDecoration: 'underline' }}>Open recording in new tab &rarr;</a>
+                              </div>
+                              <audio controls src={att.url} style={{ width: '100%' }}></audio>
                             </div>
                           );
                         }
