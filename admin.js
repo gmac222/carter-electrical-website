@@ -256,6 +256,8 @@ function AdminDashboard() {
   const wonLeads = leads.filter(l => l.status === 'Won').length;
   const winRate = totalLeads > 0 ? Math.round(wonLeads / totalLeads * 100) : 0;
   const totalCalls = leads.filter(l => l.service === 'Inbound Call').length;
+  const answeredCalls = leads.filter(l => l.service === 'Inbound Call' && !l.isMissed).length;
+  const missedCalls = leads.filter(l => l.service === 'Inbound Call' && l.isMissed).length;
   const totalForms = totalLeads - totalCalls;
 
   // Pipeline Values
@@ -394,16 +396,34 @@ function AdminDashboard() {
   }, "Total Leads"), /*#__PURE__*/React.createElement("div", {
     className: "crm-stat-value"
   }, totalLeads)), /*#__PURE__*/React.createElement("div", {
-    className: `crm-stat-trend ${trendClass}`
-  }, trendText)), /*#__PURE__*/React.createElement("div", {
+    className: "crm-stat-trend trend-neutral"
+  }, "All recorded enquiries & calls")), /*#__PURE__*/React.createElement("div", {
     className: "crm-stat-card"
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "crm-stat-label"
   }, "Inbound Calls"), /*#__PURE__*/React.createElement("div", {
     className: "crm-stat-value"
   }, totalCalls)), /*#__PURE__*/React.createElement("div", {
-    className: "crm-stat-trend trend-neutral"
-  }, totalLeads > 0 ? `${Math.round(totalCalls / totalLeads * 100)}% of total` : '0% of total')), /*#__PURE__*/React.createElement("div", {
+    className: "crm-stat-trend trend-neutral",
+    style: {
+      display: 'flex',
+      gap: '6px'
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      color: 'var(--accent-text)',
+      fontWeight: 'bold'
+    }
+  }, answeredCalls, " Answered"), /*#__PURE__*/React.createElement("span", {
+    style: {
+      color: 'rgba(255,255,255,0.2)'
+    }
+  }, "\xB7"), /*#__PURE__*/React.createElement("span", {
+    style: {
+      color: '#ef4444',
+      fontWeight: 'bold'
+    }
+  }, missedCalls, " Missed"))), /*#__PURE__*/React.createElement("div", {
     className: "crm-stat-card"
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "crm-stat-label"

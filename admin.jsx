@@ -191,6 +191,8 @@ function AdminDashboard() {
   const wonLeads = leads.filter(l => l.status === 'Won').length;
   const winRate = totalLeads > 0 ? Math.round((wonLeads / totalLeads) * 100) : 0;
   const totalCalls = leads.filter(l => l.service === 'Inbound Call').length;
+  const answeredCalls = leads.filter(l => l.service === 'Inbound Call' && !l.isMissed).length;
+  const missedCalls = leads.filter(l => l.service === 'Inbound Call' && l.isMissed).length;
   const totalForms = totalLeads - totalCalls;
 
   // Pipeline Values
@@ -309,15 +311,17 @@ function AdminDashboard() {
                   <div className="crm-stat-label">Total Leads</div>
                   <div className="crm-stat-value">{totalLeads}</div>
                 </div>
-                <div className={`crm-stat-trend ${trendClass}`}>{trendText}</div>
+                <div className="crm-stat-trend trend-neutral">All recorded enquiries & calls</div>
               </div>
               <div className="crm-stat-card">
                 <div>
                   <div className="crm-stat-label">Inbound Calls</div>
                   <div className="crm-stat-value">{totalCalls}</div>
                 </div>
-                <div className="crm-stat-trend trend-neutral">
-                  {totalLeads > 0 ? `${Math.round((totalCalls / totalLeads) * 100)}% of total` : '0% of total'}
+                <div className="crm-stat-trend trend-neutral" style={{ display: 'flex', gap: '6px' }}>
+                  <span style={{ color: 'var(--accent-text)', fontWeight: 'bold' }}>{answeredCalls} Answered</span>
+                  <span style={{ color: 'rgba(255,255,255,0.2)' }}>·</span>
+                  <span style={{ color: '#ef4444', fontWeight: 'bold' }}>{missedCalls} Missed</span>
                 </div>
               </div>
               <div className="crm-stat-card">
