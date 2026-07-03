@@ -67,7 +67,16 @@ export default async function handler(req, res) {
               atts = [{ url: match[1], filename: 'Call_Recording.mp3' }];
             }
           }
-          return atts;
+          // Proxy any Twilio URLs through our local proxy to avoid browser basic auth prompts
+          return atts.map(att => {
+            if (att.url && att.url.includes('api.twilio.com')) {
+              return {
+                ...att,
+                url: `/api/recording?url=${encodeURIComponent(att.url)}`
+              };
+            }
+            return att;
+          });
         })(),
         notes: notes,
         createdTime: record.createdTime
