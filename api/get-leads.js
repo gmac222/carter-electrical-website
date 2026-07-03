@@ -41,8 +41,29 @@ export default async function handler(req, res) {
             else if (key === 'Postcode') parsedFallback.postcode = val === 'N/A' ? '' : val;
             else if (key === 'Company') parsedFallback.company = val === 'N/A' ? '' : val;
             else if (key === 'Additional Details') parsedFallback.details = (val === 'None' || val === 'N/A') ? '' : val;
+            else if (key === 'Duration') parsedFallback.duration = val;
+            else if (key === 'Status') parsedFallback.callStatus = val;
           }
         });
+      }
+
+      let duration = null;
+      if (parsedFallback.duration) {
+        const match = parsedFallback.duration.match(/^(\d+)/);
+        if (match) {
+          duration = parseInt(match[1], 10);
+        }
+      }
+      
+      const callStatus = parsedFallback.callStatus || '';
+      const isCall = record.fields['Service Requested'] === 'Inbound Call';
+      let isMissed = false;
+      if (isCall) {
+        if (duration === 0) {
+          isMissed = true;
+        } else if (callStatus && ['busy', 'no-answer', 'failed', 'ringing'].includes(callStatus.toLowerCase())) {
+          isMissed = true;
+        }
       }
 
       return {
@@ -59,6 +80,9 @@ export default async function handler(req, res) {
         details: record.fields['Additional Details'] || parsedFallback.details || '',
         status: record.fields['Status'],
         quote: record.fields['Quote Amount'],
+        duration: duration,
+        isMissed: isMissed,
+        callStatus: callStatus,
         attachments: (() => {
           let atts = record.fields['Attachments'] || [];
           if (atts.length === 0 && notes) {

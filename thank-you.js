@@ -92,4 +92,4 @@ function ThankYouPage() {
     className: "btn btn-ghost-light"
   }, "Back to Home"))))), /*#__PURE__*/React.createElement(TrustBar, null), /*#__PURE__*/React.createElement(Footer, null));
 }
-ReactDOM.hydrateRoot(document.getElementById('root'), /*#__PURE__*/React.createElement(ThankYouPage, null));
+ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/React.createElement(ThankYouPage, null));

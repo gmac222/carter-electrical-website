@@ -1,5 +1,18 @@
 const { useState, useEffect, useRef } = React;
 
+const formatDuration = (sec) => {
+  if (sec == null) return '';
+  const s = parseInt(sec, 10);
+  if (isNaN(s)) return '';
+  if (s === 0) return '0s';
+  const m = Math.floor(s / 60);
+  const r = s % 60;
+  if (m > 0) {
+    return `${m}m ${r}s`;
+  }
+  return `${r}s`;
+};
+
 /* ── Inline-editable field ── */
 function EditableField({ value, field, leadId, onSave, type = 'text' }) {
   const [editing, setEditing] = useState(false);
@@ -586,18 +599,25 @@ function AdminDashboard() {
                         <div style={{ fontSize: '11px', color: 'var(--muted)' }}>{lead.email || 'No email'}</div>
                       </td>
                       <td>
-                        <span className={`badge ${isCall ? 'badge-call' : 'badge-form'}`} style={{
-                          padding: '4px 8px',
-                          fontSize: '11px',
-                          fontFamily: 'var(--font-mono)',
-                          background: isCall ? 'rgba(122,193,67,0.12)' : 'rgba(59,130,246,0.12)',
-                          color: isCall ? 'var(--accent-text)' : '#2563eb',
-                          borderRadius: '2px',
-                          textTransform: 'uppercase',
-                          letterSpacing: '0.04em'
-                        }}>
-                          {lead.service || 'Unknown'}
-                        </span>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', alignItems: 'flex-start' }}>
+                          <span className={`badge ${isCall ? 'badge-call' : 'badge-form'}`} style={{
+                            padding: '4px 8px',
+                            fontSize: '11px',
+                            fontFamily: 'var(--font-mono)',
+                            background: isCall ? (lead.isMissed ? 'rgba(239,68,68,0.12)' : 'rgba(122,193,67,0.12)') : 'rgba(59,130,246,0.12)',
+                            color: isCall ? (lead.isMissed ? '#ef4444' : 'var(--accent-text)') : '#2563eb',
+                            borderRadius: '2px',
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.04em'
+                          }}>
+                            {isCall ? (lead.isMissed ? 'Missed Call' : 'Inbound Call') : (lead.service || 'Unknown')}
+                          </span>
+                          {isCall && !lead.isMissed && lead.duration != null && (
+                            <span style={{ fontSize: '10.5px', color: 'var(--muted)', fontFamily: 'var(--font-mono)' }}>
+                              {formatDuration(lead.duration)}
+                            </span>
+                          )}
+                        </div>
                       </td>
                       <td>
                         <select className="status-select" value={lead.status || 'New Lead'} onClick={e => e.stopPropagation()} onChange={e => updateLead(lead.id, { status: e.target.value })} data-status={lead.status || 'New Lead'}>
@@ -658,6 +678,24 @@ function AdminDashboard() {
                     <div className="modal-field-label">Service Type</div>
                     <EditableField value={selectedLead.service} field="service" leadId={selectedLead.id} onSave={handleModalUpdate} />
                   </div>
+                  {selectedLead.service === 'Inbound Call' && (
+                    <>
+                      <div className="modal-field-group">
+                        <div className="modal-field-label">Call Status</div>
+                        <span className="editable-value" style={{ color: selectedLead.isMissed ? '#ef4444' : 'var(--accent-text)', fontWeight: 'bold' }}>
+                          {selectedLead.isMissed ? 'Missed Call' : 'Answered'}
+                        </span>
+                      </div>
+                      {!selectedLead.isMissed && selectedLead.duration != null && (
+                        <div className="modal-field-group">
+                          <div className="modal-field-label">Call Duration</div>
+                          <span className="editable-value" style={{ fontFamily: 'var(--font-mono)' }}>
+                            {formatDuration(selectedLead.duration)}
+                          </span>
+                        </div>
+                      )}
+                    </>
+                  )}
                   <div className="modal-field-group">
                     <div className="modal-field-label">Sector</div>
                     <EditableField value={selectedLead.sector} field="sector" leadId={selectedLead.id} onSave={handleModalUpdate} />
