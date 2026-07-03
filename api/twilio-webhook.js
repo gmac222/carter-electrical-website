@@ -6,8 +6,8 @@ export default async function handler(req, res) {
   try {
     const { From, To, CallStatus, Direction, RecordingUrl } = req.body;
 
-    // Handle call recording callbacks from Twilio when a recording is ready
-    if (RecordingUrl && From && process.env.AIRTABLE_BASE_ID && process.env.AIRTABLE_PAT && process.env.AIRTABLE_TABLE_ID) {
+    // Handle call recording callbacks from Twilio when a recording is ready - only for our number (+441244727291)
+    if (To === '+441244727291' && RecordingUrl && From && process.env.AIRTABLE_BASE_ID && process.env.AIRTABLE_PAT && process.env.AIRTABLE_TABLE_ID) {
       console.log(`Received recording callback for caller ${From}. Recording URL: ${RecordingUrl}`);
 
       // 1. Search for the most recent lead with this phone number in Airtable
@@ -58,8 +58,8 @@ export default async function handler(req, res) {
       return res.status(200).send('<?xml version="1.0" encoding="UTF-8"?><Response></Response>');
     }
 
-    // Standard incoming call handling
-    if (From && process.env.AIRTABLE_BASE_ID && process.env.AIRTABLE_PAT && process.env.AIRTABLE_TABLE_ID) {
+    // Standard incoming call handling - only log calls to Carter Electrical's number (+441244727291)
+    if (To === '+441244727291' && From && process.env.AIRTABLE_BASE_ID && process.env.AIRTABLE_PAT && process.env.AIRTABLE_TABLE_ID) {
       await fetch(`https://api.airtable.com/v0/${process.env.AIRTABLE_BASE_ID}/${process.env.AIRTABLE_TABLE_ID}`, {
         method: 'POST',
         headers: {
@@ -80,8 +80,8 @@ export default async function handler(req, res) {
       });
     }
 
-    // 2. Track call conversion in GA4 via Measurement Protocol
-    if (From && process.env.GA_API_SECRET) {
+    // 2. Track call conversion in GA4 via Measurement Protocol - only for our number (+441244727291)
+    if (To === '+441244727291' && From && process.env.GA_API_SECRET) {
       try {
         const measurementId = 'G-6WK8M8E9R9';
         const apiSecret = process.env.GA_API_SECRET;
