@@ -59,7 +59,16 @@ export default async function handler(req, res) {
         details: record.fields['Additional Details'] || parsedFallback.details || '',
         status: record.fields['Status'],
         quote: record.fields['Quote Amount'],
-        attachments: record.fields['Attachments'] || [],
+        attachments: (() => {
+          let atts = record.fields['Attachments'] || [];
+          if (atts.length === 0 && notes) {
+            const match = notes.match(/(?:Call Recording|Recording):\s*(https?:\/\/\S+)/i);
+            if (match) {
+              atts = [{ url: match[1], filename: 'Call_Recording.mp3' }];
+            }
+          }
+          return atts;
+        })(),
         notes: notes,
         createdTime: record.createdTime
       };
