@@ -1,4 +1,4 @@
-// Commercial Electrical Services - dedicated landing page
+// Industrial Electrical Services - dedicated landing page
 
 const {
   Header,
@@ -11,13 +11,13 @@ const {
   MobileStickyCTA,
   CarterPlaceholder
 } = window;
-function CommercialHero() {
+function IndustrialHero() {
   return /*#__PURE__*/React.createElement(PageHero, {
-    section: "Commercial Electrical",
-    sectionNum: "02.1 / Services",
-    title: "Commercial Electricians in Chester",
-    titleAccent: "NICEIC Approved Contractors.",
-    subtext: "Fit-outs, maintenance contracts, EICR compliance, and emergency lighting for offices, retail, hospitality, leisure, and multi-tenant buildings. Scoped candidly, delivered by our in-house team.",
+    section: "Industrial Electrical",
+    sectionNum: "02.2 / Services",
+    title: "Industrial Electricians",
+    titleAccent: "Chester facilities rely on.",
+    subtext: "High-voltage distribution, machinery wiring, control panels, plant maintenance, and compliance for factories, warehouses, agriculture, and logistics hubs. Scoped candidly, delivered by our directly employed team.",
     ctas: /*#__PURE__*/React.createElement("div", {
       style: {
         display: 'flex',
@@ -40,50 +40,50 @@ function CommercialHero() {
     })), /*#__PURE__*/React.createElement("a", {
       href: "case-studies.html",
       className: "btn btn-ghost-light"
-    }, "See commercial work")), /*#__PURE__*/React.createElement("div", {
+    }, "See industrial work")), /*#__PURE__*/React.createElement("div", {
       style: {
         fontSize: '0.85rem',
         color: 'rgba(255,255,255,0.7)'
       }
-    }, "Takes 60 seconds \u2022 We will be in touch within 48 hours."))
+    }, "Detailed proposal \u2022 Direct engineer access."))
   });
 }
 const CAPABILITIES = [{
-  n: 'C01',
-  t: 'Distribution boards',
-  d: 'Design, install and upgrade of commercial main and sub-boards. Metered, labelled, fully documented.'
+  n: 'I01',
+  t: '3-Phase distribution',
+  d: 'Design and installation of 415V power distribution networks, busbar chambers, and heavy-duty cabling containment.'
 }, {
-  n: 'C02',
-  t: 'LED lighting upgrades',
-  d: 'Retrofit and new-design schemes with payback modelling. DALI and emergency integration on request.'
+  n: 'I02',
+  t: 'PLC & automation wiring',
+  d: 'Control circuit wiring, sensor calibration, and PLC panel integrations for automated production lines.'
 }, {
-  n: 'C03',
+  n: 'I03',
+  t: 'Machinery installation',
+  d: 'Power connections and control wiring for heavy industrial machinery, motors, conveyors, and plant equipment.'
+}, {
+  n: 'I04',
+  t: 'Control panel design',
+  d: 'Bespoke design, building, and installation of electrical control panels compliant with BS EN 61439.'
+}, {
+  n: 'I05',
+  t: 'High-voltage containment',
+  d: 'Galvanised cable tray, ladder rack, and trunking systems designed for harsh industrial environments.'
+}, {
+  n: 'I06',
+  t: 'Industrial EICR testing',
+  d: 'Periodic inspection and testing of complex plant wiring to ensure compliance with the Electricity at Work Regulations 1989.'
+}, {
+  n: 'I07',
+  t: 'PPM & plant maintenance',
+  d: 'Planned preventative maintenance to minimise production downtime, including thermal imaging surveys.'
+}, {
+  n: 'I08',
   t: 'Emergency lighting',
-  d: 'Category-compliant design, install and annual monthly/six-monthly/three-yearly testing with cert pack.'
+  d: 'BS 5266 compliant emergency and escape route lighting layouts for warehouses and factories.'
 }, {
-  n: 'C04',
-  t: 'Fire alarm systems',
-  d: 'L1 to L5 system design, install, commissioning and service under BS 5839-1. Integrated with nurse call where required.'
-}, {
-  n: 'C05',
-  t: 'Containment & small power',
-  d: 'Cable tray, basket, trunking and dado systems for offices, retail and hospitality - coordinated with other trades.'
-}, {
-  n: 'C06',
-  t: 'Compliance testing',
-  d: 'Fixed-wire EICR, PAT testing, thermographic surveys and remedial works to landlord and insurer standards.'
-}, {
-  n: 'C07',
-  t: 'PPM contracts',
-  d: 'Planned preventative maintenance agreements with SLAs, reporting and asset registers for facilities teams.'
-}, {
-  n: 'C08',
-  t: 'Data & AV containment',
-  d: 'Clean containment for Cat6/6A and AV power - coordinated with the data contractor or delivered as one package.'
-}, {
-  n: 'C09',
-  t: 'Out-of-hours works',
-  d: 'Live-environment retail, office and hospitality works scheduled around trading to avoid downtime.'
+  n: 'I09',
+  t: 'Hazardous area scoping',
+  d: 'Scoping and installation works for safety-critical zones, including dust extraction and chemical containment.'
 }];
 function Capabilities() {
   return /*#__PURE__*/React.createElement("section", {
@@ -94,11 +94,11 @@ function Capabilities() {
     className: "section-head"
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "eyebrow"
-  }, "What we do"), /*#__PURE__*/React.createElement("h2", {
+  }, "Expertise Scope"), /*#__PURE__*/React.createElement("h2", {
     className: "h-1"
-  }, "Commercial electrical services", /*#__PURE__*/React.createElement("br", null), " Chester businesses trust.")), /*#__PURE__*/React.createElement("p", {
+  }, "Industrial electrical services", /*#__PURE__*/React.createElement("br", null), " Chester plant managers trust.")), /*#__PURE__*/React.createElement("p", {
     className: "lede"
-  }, "A coordinated electrical package, not a spread of sub-sub-contractors.")), /*#__PURE__*/React.createElement("div", {
+  }, "Specialised high-voltage and automation systems delivered to strict BS 7671 wiring standards.")), /*#__PURE__*/React.createElement("div", {
     className: "capability-grid"
   }, CAPABILITIES.map(c => /*#__PURE__*/React.createElement("div", {
     key: c.n,
@@ -120,8 +120,8 @@ function EditorialSection() {
       alignItems: 'center'
     }
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("img", {
-    src: "uploads/commercial-electricians-chester.jpg",
-    alt: "Commercial Electricians in Chester",
+    src: "uploads/industrial-electricians-chester.jpg",
+    alt: "Industrial Electricians in Chester",
     style: {
       width: '100%',
       height: 'auto',
@@ -132,53 +132,53 @@ function EditorialSection() {
     }
   })), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "eyebrow"
-  }, "Accredited Delivery"), /*#__PURE__*/React.createElement("h2", {
+  }, "Engineering discipline"), /*#__PURE__*/React.createElement("h2", {
     className: "h-1",
     style: {
       margin: '18px 0'
     }
-  }, "Minimising downtime. Maximising safety."), /*#__PURE__*/React.createElement("p", {
+  }, "Built for continuous operation."), /*#__PURE__*/React.createElement("p", {
     className: "lede",
     style: {
       marginBottom: '20px'
     }
-  }, "We deliver complete commercial electrical packages, designed to coordinate with other on-site trades."), /*#__PURE__*/React.createElement("p", {
+  }, "We understand that in industrial environments, a single hour of production downtime can cost thousands of pounds."), /*#__PURE__*/React.createElement("p", {
     style: {
       color: 'var(--muted-2)',
       fontSize: '15px',
       lineHeight: '1.6',
       marginBottom: '16px'
     }
-  }, "Our commercial electricians are NICEIC Approved, bringing extensive experience to retail fit-outs, corporate office refurbishments, and hospitality conversions. We understand that your business operations cannot halt for electrical works; that is why we offer flexible out-of-hours scheduling."), /*#__PURE__*/React.createElement("p", {
+  }, "Our directly employed industrial engineers are fully trained in modern factory environments. We phase our installations and planned maintenance visits to match your shift patterns, ensuring that major shut-downs or switchgear installations are performed out of hours."), /*#__PURE__*/React.createElement("p", {
     style: {
       color: 'var(--muted-2)',
       fontSize: '15px',
       lineHeight: '1.6',
       margin: 0
     }
-  }, "From initial containment and cabling runs to high-end LED lighting schematics and BS 5839-1 compliant fire systems, we scoping every detail upfront. Handover is clean, complete with NICEIC certifications, emergency lighting logs, and full asset registers.")))));
+  }, "From heavy cable tray installations in logistics hubs to delicate 24V control logic in processing plants, we follow a rigorous process from scoping to handover. You receive complete as-built diagrams, test certifications, and NICEIC documentation at completion.")))));
 }
 function Process() {
   const steps = [{
     n: '01',
-    t: 'Scoping call',
-    d: 'A call to understand the project, the site, and the timescale. We tell you candidly whether we\'re the right contractor for it.'
+    t: 'Technical review',
+    d: 'We review your site drawings, load requirements, and machinery specifications to assess the electrical scope.'
   }, {
     n: '02',
-    t: 'Site visit',
-    d: 'A site visit to assess the work to be carried out by one of our trained professionals.'
+    t: 'On-site survey',
+    d: 'Our senior engineer performs a physical site assessment of your distribution capacity and containment paths.'
   }, {
     n: '03',
-    t: 'Proposal',
-    d: 'Itemised quotation broken down by area and phase. Clear about what\'s in, what\'s provisional, and what\'s out.'
+    t: 'Fixed proposal',
+    d: 'An itemised breakdown of all containment, cabling, switchgear, and labour costs, with zero hidden extras.'
   }, {
     n: '04',
-    t: 'Delivery',
-    d: 'One point of contact from first fix to completion.'
+    t: 'Engineered delivery',
+    d: 'Safe installation using directly employed electricians following RAMS and strict lockout/tagout protocols.'
   }, {
     n: '05',
-    t: 'Handover',
-    d: 'Full sign off with customer complete with full certification provided when needed.'
+    t: 'Handover packet',
+    d: 'Delivery of full NICEIC certification, load logs, and updated circuit drawings.'
   }];
   return /*#__PURE__*/React.createElement("section", {
     className: "section-y dark reveal"
@@ -194,14 +194,14 @@ function Process() {
     style: {
       color: 'var(--accent)'
     }
-  }, "How we work"), /*#__PURE__*/React.createElement("h2", {
+  }, "Safety First"), /*#__PURE__*/React.createElement("h2", {
     className: "h-1"
-  }, "A five-step process", /*#__PURE__*/React.createElement("br", null), "you can brief your board on.")), /*#__PURE__*/React.createElement("p", {
+  }, "Our industrial delivery process.")), /*#__PURE__*/React.createElement("p", {
     className: "lede",
     style: {
       color: 'rgba(255,255,255,0.7)'
     }
-  }, "No surprises. No sub-contracting daisy-chains. One team, one number to call, full documentation at handover.")), /*#__PURE__*/React.createElement("div", {
+  }, "Methodical execution, clear project management, and complete technical handover documentation.")), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'grid',
       gridTemplateColumns: 'repeat(5, 1fr)',
@@ -246,8 +246,10 @@ function Process() {
           }
         `)));
 }
-function CommercialCases() {
-  const cases = CARTER.cases.filter(c => c.sector === 'Commercial');
+function IndustrialCases() {
+  const cases = CARTER.cases.filter(c => c.sector === 'Industrial' || c.subsector === 'Industrial');
+  // Fallback to Bryn Rhiw (which has domestic/industrial elements) if empty, or show domestic/commercial cases
+  const displayCases = cases.length > 0 ? cases : CARTER.cases.slice(0, 2);
   return /*#__PURE__*/React.createElement("section", {
     className: "cases reveal"
   }, /*#__PURE__*/React.createElement("div", {
@@ -256,13 +258,13 @@ function CommercialCases() {
     className: "section-head"
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "eyebrow"
-  }, "Commercial case studies"), /*#__PURE__*/React.createElement("h2", {
+  }, "Projects"), /*#__PURE__*/React.createElement("h2", {
     className: "h-1"
-  }, "Recent", /*#__PURE__*/React.createElement("br", null), "commercial work.")), /*#__PURE__*/React.createElement("p", {
+  }, "Industrial installations.")), /*#__PURE__*/React.createElement("p", {
     className: "lede"
-  }, "Hospitality, retail and office projects across Chester. More detail in the full case-study index.")), /*#__PURE__*/React.createElement("div", {
+  }, "A selection of recent industrial electrical installations delivered in Cheshire and North Wales.")), /*#__PURE__*/React.createElement("div", {
     className: "cases-grid"
-  }, cases.map(c => /*#__PURE__*/React.createElement("a", {
+  }, displayCases.map(c => /*#__PURE__*/React.createElement("a", {
     key: c.id,
     href: c.id === 'old-dukes' ? 'case-old-dukes.html' : 'case-studies.html',
     className: "case-card big"
@@ -293,14 +295,14 @@ function CommercialCases() {
 }
 function FAQBand() {
   const faqs = [{
-    q: 'What is classed as commercial electrical work?',
-    a: 'Commercial electrical work involves installations, maintenance, and compliance inspections within business environments. This includes offices, retail spaces, restaurants, public buildings, and large multi-tenant residential complexes. Common works include distribution board installation, LED lighting designs, emergency lighting setups, and fire alarm installations.'
+    q: 'What does an industrial electrician do?',
+    a: 'Industrial electricians install, maintain, and troubleshoot electrical systems in high-voltage, high-demand settings like factories, chemical plants, and logistics hubs. This includes heavy machinery wiring, PLC automation circuitry, control panel building, and substantial containment structures.'
   }, {
-    q: "What's the difference between a commercial and industrial electrician?",
-    a: 'Commercial electricians focus on retail, hospitality, and office spaces with standard low-to-medium voltage parameters. Industrial electricians work in factories, chemical plants, and production hubs where they handle high-voltage feeds, complex machinery connections, automation systems, and PLCs under advanced safety constraints.'
+    q: 'How is an industrial electrician different from other electricians?',
+    a: 'While commercial electricians focus on offices, retail, and public spaces, industrial electricians deal with high-voltage inputs, complex automated control panels, three-phase power distribution, and plant machinery. The environments require advanced safety certifications, lockout/tagout protocols, and arc flash awareness.'
   }, {
-    q: 'Are your commercial electricians NICEIC approved?',
-    a: 'Yes. Carter Electrical is a fully NICEIC Approved Contractor. All of our commercial electricians are directly employed, insured, and certified to carry out installations, testing, and full safety handovers compliant with BS 7671 Wiring Regulations.'
+    q: 'How often should industrial electrical systems be inspected?',
+    a: 'Under UK safety regulations and guidelines, industrial installations should typically undergo an Electrical Installation Condition Report (EICR) at least once every three years (or annually for high-risk environments). Regular thermal imaging and diagnostic maintenance checks are also recommended to proactively identify faults.'
   }];
   const [open, setOpen] = useState(0);
   return /*#__PURE__*/React.createElement("section", {
@@ -317,7 +319,7 @@ function FAQBand() {
     style: {
       marginBottom: 40
     }
-  }, "Common commercial questions."), /*#__PURE__*/React.createElement("div", {
+  }, "Common industrial questions."), /*#__PURE__*/React.createElement("div", {
     style: {
       borderTop: '1px solid var(--rule)'
     }
@@ -359,28 +361,24 @@ function FAQBand() {
     }
   }, f.a))))));
 }
-function Commercial() {
+function Industrial() {
   useScrollReveal();
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Header, {
-    current: "commercial",
+    current: "industrial",
     theme: "dark"
-  }), /*#__PURE__*/React.createElement(CommercialHero, null), /*#__PURE__*/React.createElement(TrustBar, null), /*#__PURE__*/React.createElement(Capabilities, null), /*#__PURE__*/React.createElement(EditorialSection, null), /*#__PURE__*/React.createElement(Process, null), /*#__PURE__*/React.createElement(CommercialCases, null), /*#__PURE__*/React.createElement(FAQBand, null), /*#__PURE__*/React.createElement("section", {
+  }), /*#__PURE__*/React.createElement(IndustrialHero, null), /*#__PURE__*/React.createElement(TrustBar, null), /*#__PURE__*/React.createElement(Capabilities, null), /*#__PURE__*/React.createElement(EditorialSection, null), /*#__PURE__*/React.createElement(Process, null), /*#__PURE__*/React.createElement(IndustrialCases, null), /*#__PURE__*/React.createElement(FAQBand, null), /*#__PURE__*/React.createElement("section", {
     className: "cta-band reveal"
   }, /*#__PURE__*/React.createElement("div", {
     className: "wrap"
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "eyebrow"
-  }, "Start a conversation"), /*#__PURE__*/React.createElement("h2", {
-    style: {
-      marginTop: 20
-    }
-  }, "Got a commercial project", /*#__PURE__*/React.createElement("br", null), "to deliver?"), /*#__PURE__*/React.createElement("p", {
+  }, "Start a conversation"), /*#__PURE__*/React.createElement("h2", null, "Got an industrial electrical scope to deliver?"), /*#__PURE__*/React.createElement("p", {
     className: "lede",
     style: {
       marginTop: 18,
       maxWidth: '54ch'
     }
-  }, "Send us the scope, location and timeframe and we\u2019ll be in touch with how we can support.")), /*#__PURE__*/React.createElement("div", {
+  }, "Send us the details, machinery specs and timeframe and we will get back to you with a professional scoping estimate.")), /*#__PURE__*/React.createElement("div", {
     className: "cta-aside"
   }, /*#__PURE__*/React.createElement("div", {
     className: "label-mono"
@@ -421,4 +419,4 @@ function Commercial() {
     }
   }), "100% Secure. No obligation. Your data is strictly protected."))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(MobileStickyCTA, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
 }
-ReactDOM.hydrateRoot(document.getElementById('root'), /*#__PURE__*/React.createElement(Commercial, null));
+ReactDOM.hydrateRoot(document.getElementById('root'), /*#__PURE__*/React.createElement(Industrial, null));

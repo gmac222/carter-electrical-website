@@ -32,6 +32,8 @@ const jsxFilesToCompile = [
   'home.jsx',
   'pages.jsx',
   'commercial.jsx',
+  'industrial.jsx',
+  'domestic.jsx',
   'contact.jsx',
   'cases.jsx',
   'locations.jsx',

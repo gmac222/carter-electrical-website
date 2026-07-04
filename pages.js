@@ -801,6 +801,20 @@ function SitemapPage() {
       fontWeight: 500
     }
   }, "Commercial Services")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+    href: "industrial.html",
+    style: {
+      color: 'var(--ink)',
+      textDecoration: 'none',
+      fontWeight: 500
+    }
+  }, "Industrial Services")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+    href: "domestic.html",
+    style: {
+      color: 'var(--ink)',
+      textDecoration: 'none',
+      fontWeight: 500
+    }
+  }, "Domestic Services")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
     href: "case-studies.html",
     style: {
       color: 'var(--ink)',

@@ -160,6 +160,8 @@ function generateSitemap(posts) {
     '/about.html',
     '/services.html',
     '/commercial.html',
+    '/industrial.html',
+    '/domestic.html',
     '/areas.html',
     '/case-studies.html',
     '/contact.html',

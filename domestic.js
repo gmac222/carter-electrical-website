@@ -1,4 +1,4 @@
-// Commercial Electrical Services - dedicated landing page
+// Domestic Electrical Services - dedicated landing page
 
 const {
   Header,
@@ -11,13 +11,13 @@ const {
   MobileStickyCTA,
   CarterPlaceholder
 } = window;
-function CommercialHero() {
+function DomesticHero() {
   return /*#__PURE__*/React.createElement(PageHero, {
-    section: "Commercial Electrical",
-    sectionNum: "02.1 / Services",
-    title: "Commercial Electricians in Chester",
-    titleAccent: "NICEIC Approved Contractors.",
-    subtext: "Fit-outs, maintenance contracts, EICR compliance, and emergency lighting for offices, retail, hospitality, leisure, and multi-tenant buildings. Scoped candidly, delivered by our in-house team.",
+    section: "Domestic Electrical",
+    sectionNum: "02.3 / Services",
+    title: "Domestic Electricians",
+    titleAccent: "Chester homeowners trust.",
+    subtext: "From full house rewires and consumer unit upgrades to OZEV-approved EV home chargers and smart lighting systems. Safe, certified, and fully insured works delivered by our polite in-house team.",
     ctas: /*#__PURE__*/React.createElement("div", {
       style: {
         display: 'flex',
@@ -40,50 +40,50 @@ function CommercialHero() {
     })), /*#__PURE__*/React.createElement("a", {
       href: "case-studies.html",
       className: "btn btn-ghost-light"
-    }, "See commercial work")), /*#__PURE__*/React.createElement("div", {
+    }, "See domestic work")), /*#__PURE__*/React.createElement("div", {
       style: {
         fontSize: '0.85rem',
         color: 'rgba(255,255,255,0.7)'
       }
-    }, "Takes 60 seconds \u2022 We will be in touch within 48 hours."))
+    }, "Takes 60 seconds \u2022 NICEIC certified handover."))
   });
 }
 const CAPABILITIES = [{
-  n: 'C01',
-  t: 'Distribution boards',
-  d: 'Design, install and upgrade of commercial main and sub-boards. Metered, labelled, fully documented.'
+  n: 'D01',
+  t: 'Full & partial rewires',
+  d: 'Safe, complete replacement of outdated cables, sockets, and switches with minimal disruption to your home.'
 }, {
-  n: 'C02',
-  t: 'LED lighting upgrades',
-  d: 'Retrofit and new-design schemes with payback modelling. DALI and emergency integration on request.'
+  n: 'D02',
+  t: 'Consumer unit upgrades',
+  d: 'Replacement of old fuse boxes with modern, compliant consumer units featuring RCD and surge protection.'
 }, {
-  n: 'C03',
-  t: 'Emergency lighting',
-  d: 'Category-compliant design, install and annual monthly/six-monthly/three-yearly testing with cert pack.'
+  n: 'D03',
+  t: 'EV home chargers',
+  d: 'OZEV approved home EV charging station installation, including smart charger setup and load balancing.'
 }, {
-  n: 'C04',
-  t: 'Fire alarm systems',
-  d: 'L1 to L5 system design, install, commissioning and service under BS 5839-1. Integrated with nurse call where required.'
+  n: 'D04',
+  t: 'Smart home lighting',
+  d: 'Design and installation of smart lighting systems (Lutron, Philips Hue) and heating integration.'
 }, {
-  n: 'C05',
-  t: 'Containment & small power',
-  d: 'Cable tray, basket, trunking and dado systems for offices, retail and hospitality - coordinated with other trades.'
+  n: 'D05',
+  t: 'Fault finding & repairs',
+  d: 'Rapid diagnostic tracing of tripping circuits, faulty outlets, and domestic power failures.'
 }, {
-  n: 'C06',
-  t: 'Compliance testing',
-  d: 'Fixed-wire EICR, PAT testing, thermographic surveys and remedial works to landlord and insurer standards.'
+  n: 'D06',
+  t: 'Smoke & heat alarms',
+  d: 'Installation of mains-powered, interlinked smoke, heat, and carbon monoxide detectors to current regulations.'
 }, {
-  n: 'C07',
-  t: 'PPM contracts',
-  d: 'Planned preventative maintenance agreements with SLAs, reporting and asset registers for facilities teams.'
+  n: 'D07',
+  t: 'Outdoor & garden power',
+  d: 'Weatherproof external sockets, security lighting, and power runs to garden rooms and outbuildings.'
 }, {
-  n: 'C08',
-  t: 'Data & AV containment',
-  d: 'Clean containment for Cat6/6A and AV power - coordinated with the data contractor or delivered as one package.'
+  n: 'D08',
+  t: 'EICR home inspections',
+  d: 'Electrical Installation Condition Reports for homebuyers, landlords, and safety certification.'
 }, {
-  n: 'C09',
-  t: 'Out-of-hours works',
-  d: 'Live-environment retail, office and hospitality works scheduled around trading to avoid downtime.'
+  n: 'D09',
+  t: 'NICEIC Part P certification',
+  d: 'All works notified to local building control, with official compliance certs delivered promptly.'
 }];
 function Capabilities() {
   return /*#__PURE__*/React.createElement("section", {
@@ -94,11 +94,11 @@ function Capabilities() {
     className: "section-head"
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "eyebrow"
-  }, "What we do"), /*#__PURE__*/React.createElement("h2", {
+  }, "Household scope"), /*#__PURE__*/React.createElement("h2", {
     className: "h-1"
-  }, "Commercial electrical services", /*#__PURE__*/React.createElement("br", null), " Chester businesses trust.")), /*#__PURE__*/React.createElement("p", {
+  }, "Domestic electrical services", /*#__PURE__*/React.createElement("br", null), " Chester families rely on.")), /*#__PURE__*/React.createElement("p", {
     className: "lede"
-  }, "A coordinated electrical package, not a spread of sub-sub-contractors.")), /*#__PURE__*/React.createElement("div", {
+  }, "Whether upgrading a single socket or completely rewiring a period property, we guarantee clean and safe delivery.")), /*#__PURE__*/React.createElement("div", {
     className: "capability-grid"
   }, CAPABILITIES.map(c => /*#__PURE__*/React.createElement("div", {
     key: c.n,
@@ -120,8 +120,8 @@ function EditorialSection() {
       alignItems: 'center'
     }
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("img", {
-    src: "uploads/commercial-electricians-chester.jpg",
-    alt: "Commercial Electricians in Chester",
+    src: "uploads/domestic-electricians-chester.jpg",
+    alt: "Domestic Electricians in Chester",
     style: {
       width: '100%',
       height: 'auto',
@@ -132,53 +132,53 @@ function EditorialSection() {
     }
   })), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "eyebrow"
-  }, "Accredited Delivery"), /*#__PURE__*/React.createElement("h2", {
+  }, "Home compliance"), /*#__PURE__*/React.createElement("h2", {
     className: "h-1",
     style: {
       margin: '18px 0'
     }
-  }, "Minimising downtime. Maximising safety."), /*#__PURE__*/React.createElement("p", {
+  }, "Safe wiring. Clean homes."), /*#__PURE__*/React.createElement("p", {
     className: "lede",
     style: {
       marginBottom: '20px'
     }
-  }, "We deliver complete commercial electrical packages, designed to coordinate with other on-site trades."), /*#__PURE__*/React.createElement("p", {
+  }, "Your home is your sanctuary, and we treat it with absolute respect."), /*#__PURE__*/React.createElement("p", {
     style: {
       color: 'var(--muted-2)',
       fontSize: '15px',
       lineHeight: '1.6',
       marginBottom: '16px'
     }
-  }, "Our commercial electricians are NICEIC Approved, bringing extensive experience to retail fit-outs, corporate office refurbishments, and hospitality conversions. We understand that your business operations cannot halt for electrical works; that is why we offer flexible out-of-hours scheduling."), /*#__PURE__*/React.createElement("p", {
+  }, "Our domestic electricians are fully qualified, insured, and DBS-checked. We use dust-extraction systems on all chasing tools and clean up thoroughly at the end of every working day. We do not rely on sub-contractors; our own in-house engineers carry out the work."), /*#__PURE__*/React.createElement("p", {
     style: {
       color: 'var(--muted-2)',
       fontSize: '15px',
       lineHeight: '1.6',
       margin: 0
     }
-  }, "From initial containment and cabling runs to high-end LED lighting schematics and BS 5839-1 compliant fire systems, we scoping every detail upfront. Handover is clean, complete with NICEIC certifications, emergency lighting logs, and full asset registers.")))));
+  }, "All major residential work requires notification under Part P of the Building Regulations. As an NICEIC Approved Contractor, we notify Building Control on your behalf, providing you with both the NICEIC installation certificate and the Building Regulations compliance certificate at completion.")))));
 }
 function Process() {
   const steps = [{
     n: '01',
-    t: 'Scoping call',
-    d: 'A call to understand the project, the site, and the timescale. We tell you candidly whether we\'re the right contractor for it.'
+    t: 'First contact',
+    d: 'We listen to your domestic requirements, outline potential options, and provide a clear timeline for scoping.'
   }, {
     n: '02',
-    t: 'Site visit',
-    d: 'A site visit to assess the work to be carried out by one of our trained professionals.'
+    t: 'Home visit',
+    d: 'A clean, punctual site visit to assess your wiring, check consumer unit capacity, and measure runs.'
   }, {
     n: '03',
-    t: 'Proposal',
-    d: 'Itemised quotation broken down by area and phase. Clear about what\'s in, what\'s provisional, and what\'s out.'
+    t: 'Fixed quotation',
+    d: 'A detailed proposal via email, outlining exact costs with zero provisional estimates or surprises.'
   }, {
     n: '04',
-    t: 'Delivery',
-    d: 'One point of contact from first fix to completion.'
+    t: 'Neat delivery',
+    d: 'Safe installation by our polite team, using protective floor coverings and dust-minimising tools.'
   }, {
     n: '05',
-    t: 'Handover',
-    d: 'Full sign off with customer complete with full certification provided when needed.'
+    t: 'Handover certs',
+    d: 'Final testing and delivery of your NICEIC safety and Part P building compliance certificates.'
   }];
   return /*#__PURE__*/React.createElement("section", {
     className: "section-y dark reveal"
@@ -194,14 +194,14 @@ function Process() {
     style: {
       color: 'var(--accent)'
     }
-  }, "How we work"), /*#__PURE__*/React.createElement("h2", {
+  }, "Our Method"), /*#__PURE__*/React.createElement("h2", {
     className: "h-1"
-  }, "A five-step process", /*#__PURE__*/React.createElement("br", null), "you can brief your board on.")), /*#__PURE__*/React.createElement("p", {
+  }, "Our household delivery process.")), /*#__PURE__*/React.createElement("p", {
     className: "lede",
     style: {
       color: 'rgba(255,255,255,0.7)'
     }
-  }, "No surprises. No sub-contracting daisy-chains. One team, one number to call, full documentation at handover.")), /*#__PURE__*/React.createElement("div", {
+  }, "Transparent pricing, neat execution, and official building regulations sign-off.")), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'grid',
       gridTemplateColumns: 'repeat(5, 1fr)',
@@ -246,8 +246,9 @@ function Process() {
           }
         `)));
 }
-function CommercialCases() {
-  const cases = CARTER.cases.filter(c => c.sector === 'Commercial');
+function DomesticCases() {
+  const cases = CARTER.cases.filter(c => c.sector === 'Domestic' || c.sector === 'Residential');
+  const displayCases = cases.length > 0 ? cases : CARTER.cases.slice(2, 4);
   return /*#__PURE__*/React.createElement("section", {
     className: "cases reveal"
   }, /*#__PURE__*/React.createElement("div", {
@@ -256,13 +257,13 @@ function CommercialCases() {
     className: "section-head"
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "eyebrow"
-  }, "Commercial case studies"), /*#__PURE__*/React.createElement("h2", {
+  }, "Projects"), /*#__PURE__*/React.createElement("h2", {
     className: "h-1"
-  }, "Recent", /*#__PURE__*/React.createElement("br", null), "commercial work.")), /*#__PURE__*/React.createElement("p", {
+  }, "Residential installations.")), /*#__PURE__*/React.createElement("p", {
     className: "lede"
-  }, "Hospitality, retail and office projects across Chester. More detail in the full case-study index.")), /*#__PURE__*/React.createElement("div", {
+  }, "A selection of recent domestic electrical projects delivered across Chester, Wirral, and Merseyside.")), /*#__PURE__*/React.createElement("div", {
     className: "cases-grid"
-  }, cases.map(c => /*#__PURE__*/React.createElement("a", {
+  }, displayCases.map(c => /*#__PURE__*/React.createElement("a", {
     key: c.id,
     href: c.id === 'old-dukes' ? 'case-old-dukes.html' : 'case-studies.html',
     className: "case-card big"
@@ -293,14 +294,14 @@ function CommercialCases() {
 }
 function FAQBand() {
   const faqs = [{
-    q: 'What is classed as commercial electrical work?',
-    a: 'Commercial electrical work involves installations, maintenance, and compliance inspections within business environments. This includes offices, retail spaces, restaurants, public buildings, and large multi-tenant residential complexes. Common works include distribution board installation, LED lighting designs, emergency lighting setups, and fire alarm installations.'
+    q: 'Is it illegal to do electrical work in your home in the UK?',
+    a: 'In the UK, it is not illegal to perform simple electrical work yourself, such as replacing light switches or sockets on a like-for-like basis. However, major works—such as installing a new circuit, rewiring a property, or adding circuits in kitchens and bathrooms—fall under Part P of the Building Regulations and must legally be certified by a registered competent person or notified to Building Control.'
   }, {
-    q: "What's the difference between a commercial and industrial electrician?",
-    a: 'Commercial electricians focus on retail, hospitality, and office spaces with standard low-to-medium voltage parameters. Industrial electricians work in factories, chemical plants, and production hubs where they handle high-voltage feeds, complex machinery connections, automation systems, and PLCs under advanced safety constraints.'
+    q: 'How to find a trusted domestic electrician?',
+    a: 'Always check that the electrician is registered with a government-approved scheme such as the NICEIC. This guarantees they undergo regular audits, carry sufficient public liability insurance, and are authorised to self-certify their work under Part P. Additionally, look for direct employment rather than sub-contractors.'
   }, {
-    q: 'Are your commercial electricians NICEIC approved?',
-    a: 'Yes. Carter Electrical is a fully NICEIC Approved Contractor. All of our commercial electricians are directly employed, insured, and certified to carry out installations, testing, and full safety handovers compliant with BS 7671 Wiring Regulations.'
+    q: 'What is NICEIC Part P certification and why do I need it?',
+    a: 'Part P is the section of the Building Regulations in England and Wales that covers electrical safety in dwellings. A Part P certificate proves that your electrical installation is compliant and safe. You will require this certificate when selling or leasing your home, or when resolving insurance claims.'
   }];
   const [open, setOpen] = useState(0);
   return /*#__PURE__*/React.createElement("section", {
@@ -317,7 +318,7 @@ function FAQBand() {
     style: {
       marginBottom: 40
     }
-  }, "Common commercial questions."), /*#__PURE__*/React.createElement("div", {
+  }, "Common domestic questions."), /*#__PURE__*/React.createElement("div", {
     style: {
       borderTop: '1px solid var(--rule)'
     }
@@ -359,28 +360,24 @@ function FAQBand() {
     }
   }, f.a))))));
 }
-function Commercial() {
+function Domestic() {
   useScrollReveal();
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Header, {
-    current: "commercial",
+    current: "domestic",
     theme: "dark"
-  }), /*#__PURE__*/React.createElement(CommercialHero, null), /*#__PURE__*/React.createElement(TrustBar, null), /*#__PURE__*/React.createElement(Capabilities, null), /*#__PURE__*/React.createElement(EditorialSection, null), /*#__PURE__*/React.createElement(Process, null), /*#__PURE__*/React.createElement(CommercialCases, null), /*#__PURE__*/React.createElement(FAQBand, null), /*#__PURE__*/React.createElement("section", {
+  }), /*#__PURE__*/React.createElement(DomesticHero, null), /*#__PURE__*/React.createElement(TrustBar, null), /*#__PURE__*/React.createElement(Capabilities, null), /*#__PURE__*/React.createElement(EditorialSection, null), /*#__PURE__*/React.createElement(Process, null), /*#__PURE__*/React.createElement(DomesticCases, null), /*#__PURE__*/React.createElement(FAQBand, null), /*#__PURE__*/React.createElement("section", {
     className: "cta-band reveal"
   }, /*#__PURE__*/React.createElement("div", {
     className: "wrap"
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "eyebrow"
-  }, "Start a conversation"), /*#__PURE__*/React.createElement("h2", {
-    style: {
-      marginTop: 20
-    }
-  }, "Got a commercial project", /*#__PURE__*/React.createElement("br", null), "to deliver?"), /*#__PURE__*/React.createElement("p", {
+  }, "Start a conversation"), /*#__PURE__*/React.createElement("h2", null, "Need a trusted domestic electrician?"), /*#__PURE__*/React.createElement("p", {
     className: "lede",
     style: {
       marginTop: 18,
       maxWidth: '54ch'
     }
-  }, "Send us the scope, location and timeframe and we\u2019ll be in touch with how we can support.")), /*#__PURE__*/React.createElement("div", {
+  }, "Send us details of your home project and we will provide a comprehensive, transparent quotation.")), /*#__PURE__*/React.createElement("div", {
     className: "cta-aside"
   }, /*#__PURE__*/React.createElement("div", {
     className: "label-mono"
@@ -421,4 +418,4 @@ function Commercial() {
     }
   }), "100% Secure. No obligation. Your data is strictly protected."))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(MobileStickyCTA, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
 }
-ReactDOM.hydrateRoot(document.getElementById('root'), /*#__PURE__*/React.createElement(Commercial, null));
+ReactDOM.hydrateRoot(document.getElementById('root'), /*#__PURE__*/React.createElement(Domestic, null));

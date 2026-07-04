@@ -490,6 +490,8 @@ function SitemapPage() {
                 <li><a href="about.html" style={{ color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>About Us</a></li>
                 <li><a href="services.html" style={{ color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>Our Services</a></li>
                 <li><a href="commercial.html" style={{ color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>Commercial Services</a></li>
+                <li><a href="industrial.html" style={{ color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>Industrial Services</a></li>
+                <li><a href="domestic.html" style={{ color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>Domestic Services</a></li>
                 <li><a href="case-studies.html" style={{ color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>Case Studies</a></li>
                 <li><a href="areas.html" style={{ color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>Areas We Cover</a></li>
                 <li><a href="contact.html" style={{ color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>Contact Us</a></li>

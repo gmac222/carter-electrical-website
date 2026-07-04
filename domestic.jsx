@@ -1,15 +1,15 @@
-// Commercial Electrical Services - dedicated landing page
+// Domestic Electrical Services - dedicated landing page
 
 const { Header, Footer, TrustBar, TweaksPanel, useScrollReveal, StatNumber, PageHero, MobileStickyCTA, CarterPlaceholder } = window;
 
-function CommercialHero() {
+function DomesticHero() {
   return (
     <PageHero
-      section="Commercial Electrical"
-      sectionNum="02.1 / Services"
-      title="Commercial Electricians in Chester"
-      titleAccent="NICEIC Approved Contractors."
-      subtext="Fit-outs, maintenance contracts, EICR compliance, and emergency lighting for offices, retail, hospitality, leisure, and multi-tenant buildings. Scoped candidly, delivered by our in-house team."
+      section="Domestic Electrical"
+      sectionNum="02.3 / Services"
+      title="Domestic Electricians"
+      titleAccent="Chester homeowners trust."
+      subtext="From full house rewires and consumer unit upgrades to OZEV-approved EV home chargers and smart lighting systems. Safe, certified, and fully insured works delivered by our polite in-house team."
       ctas={
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 10 }}>
           <div style={{ display: 'flex', gap: 16 }}>
@@ -17,9 +17,9 @@ function CommercialHero() {
               Get Your Free Quote
               <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }} />
             </a>
-            <a href="case-studies.html" className="btn btn-ghost-light">See commercial work</a>
+            <a href="case-studies.html" className="btn btn-ghost-light">See domestic work</a>
           </div>
-          <div style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.7)' }}>Takes 60 seconds • We will be in touch within 48 hours.</div>
+          <div style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.7)' }}>Takes 60 seconds • NICEIC certified handover.</div>
         </div>
       }
     />
@@ -27,15 +27,15 @@ function CommercialHero() {
 }
 
 const CAPABILITIES = [
-  { n: 'C01', t: 'Distribution boards', d: 'Design, install and upgrade of commercial main and sub-boards. Metered, labelled, fully documented.' },
-  { n: 'C02', t: 'LED lighting upgrades', d: 'Retrofit and new-design schemes with payback modelling. DALI and emergency integration on request.' },
-  { n: 'C03', t: 'Emergency lighting', d: 'Category-compliant design, install and annual monthly/six-monthly/three-yearly testing with cert pack.' },
-  { n: 'C04', t: 'Fire alarm systems', d: 'L1 to L5 system design, install, commissioning and service under BS 5839-1. Integrated with nurse call where required.' },
-  { n: 'C05', t: 'Containment & small power', d: 'Cable tray, basket, trunking and dado systems for offices, retail and hospitality - coordinated with other trades.' },
-  { n: 'C06', t: 'Compliance testing', d: 'Fixed-wire EICR, PAT testing, thermographic surveys and remedial works to landlord and insurer standards.' },
-  { n: 'C07', t: 'PPM contracts', d: 'Planned preventative maintenance agreements with SLAs, reporting and asset registers for facilities teams.' },
-  { n: 'C08', t: 'Data & AV containment', d: 'Clean containment for Cat6/6A and AV power - coordinated with the data contractor or delivered as one package.' },
-  { n: 'C09', t: 'Out-of-hours works', d: 'Live-environment retail, office and hospitality works scheduled around trading to avoid downtime.' },
+  { n: 'D01', t: 'Full & partial rewires', d: 'Safe, complete replacement of outdated cables, sockets, and switches with minimal disruption to your home.' },
+  { n: 'D02', t: 'Consumer unit upgrades', d: 'Replacement of old fuse boxes with modern, compliant consumer units featuring RCD and surge protection.' },
+  { n: 'D03', t: 'EV home chargers', d: 'OZEV approved home EV charging station installation, including smart charger setup and load balancing.' },
+  { n: 'D04', t: 'Smart home lighting', d: 'Design and installation of smart lighting systems (Lutron, Philips Hue) and heating integration.' },
+  { n: 'D05', t: 'Fault finding & repairs', d: 'Rapid diagnostic tracing of tripping circuits, faulty outlets, and domestic power failures.' },
+  { n: 'D06', t: 'Smoke & heat alarms', d: 'Installation of mains-powered, interlinked smoke, heat, and carbon monoxide detectors to current regulations.' },
+  { n: 'D07', t: 'Outdoor & garden power', d: 'Weatherproof external sockets, security lighting, and power runs to garden rooms and outbuildings.' },
+  { n: 'D08', t: 'EICR home inspections', d: 'Electrical Installation Condition Reports for homebuyers, landlords, and safety certification.' },
+  { n: 'D09', t: 'NICEIC Part P certification', d: 'All works notified to local building control, with official compliance certs delivered promptly.' }
 ];
 
 function Capabilities() {
@@ -44,11 +44,11 @@ function Capabilities() {
       <div className="wrap">
         <div className="section-head">
           <div>
-            <div className="eyebrow">What we do</div>
-            <h2 className="h-1">Commercial electrical services<br/> Chester businesses trust.</h2>
+            <div className="eyebrow">Household scope</div>
+            <h2 className="h-1">Domestic electrical services<br/> Chester families rely on.</h2>
           </div>
           <p className="lede">
-            A coordinated electrical package, not a spread of sub-sub-contractors.
+            Whether upgrading a single socket or completely rewiring a period property, we guarantee clean and safe delivery.
           </p>
         </div>
         <div className="capability-grid">
@@ -72,22 +72,22 @@ function EditorialSection() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '60px', alignItems: 'center' }}>
           <div>
             <img 
-              src="uploads/commercial-electricians-chester.jpg" 
-              alt="Commercial Electricians in Chester" 
+              src="uploads/domestic-electricians-chester.jpg" 
+              alt="Domestic Electricians in Chester" 
               style={{ width: '100%', height: 'auto', borderRadius: '2px', boxShadow: '0 8px 30px rgba(0,0,0,0.15)', display: 'block', objectFit: 'cover' }}
             />
           </div>
           <div>
-            <div className="eyebrow">Accredited Delivery</div>
-            <h2 className="h-1" style={{ margin: '18px 0' }}>Minimising downtime. Maximising safety.</h2>
+            <div className="eyebrow">Home compliance</div>
+            <h2 className="h-1" style={{ margin: '18px 0' }}>Safe wiring. Clean homes.</h2>
             <p className="lede" style={{ marginBottom: '20px' }}>
-              We deliver complete commercial electrical packages, designed to coordinate with other on-site trades.
+              Your home is your sanctuary, and we treat it with absolute respect.
             </p>
             <p style={{ color: 'var(--muted-2)', fontSize: '15px', lineHeight: '1.6', marginBottom: '16px' }}>
-              Our commercial electricians are NICEIC Approved, bringing extensive experience to retail fit-outs, corporate office refurbishments, and hospitality conversions. We understand that your business operations cannot halt for electrical works; that is why we offer flexible out-of-hours scheduling.
+              Our domestic electricians are fully qualified, insured, and DBS-checked. We use dust-extraction systems on all chasing tools and clean up thoroughly at the end of every working day. We do not rely on sub-contractors; our own in-house engineers carry out the work.
             </p>
             <p style={{ color: 'var(--muted-2)', fontSize: '15px', lineHeight: '1.6', margin: 0 }}>
-              From initial containment and cabling runs to high-end LED lighting schematics and BS 5839-1 compliant fire systems, we scoping every detail upfront. Handover is clean, complete with NICEIC certifications, emergency lighting logs, and full asset registers.
+              All major residential work requires notification under Part P of the Building Regulations. As an NICEIC Approved Contractor, we notify Building Control on your behalf, providing you with both the NICEIC installation certificate and the Building Regulations compliance certificate at completion.
             </p>
           </div>
         </div>
@@ -98,22 +98,22 @@ function EditorialSection() {
 
 function Process() {
   const steps = [
-    { n: '01', t: 'Scoping call', d: 'A call to understand the project, the site, and the timescale. We tell you candidly whether we\'re the right contractor for it.' },
-    { n: '02', t: 'Site visit', d: 'A site visit to assess the work to be carried out by one of our trained professionals.' },
-    { n: '03', t: 'Proposal', d: 'Itemised quotation broken down by area and phase. Clear about what\'s in, what\'s provisional, and what\'s out.' },
-    { n: '04', t: 'Delivery', d: 'One point of contact from first fix to completion.' },
-    { n: '05', t: 'Handover', d: 'Full sign off with customer complete with full certification provided when needed.' },
+    { n: '01', t: 'First contact', d: 'We listen to your domestic requirements, outline potential options, and provide a clear timeline for scoping.' },
+    { n: '02', t: 'Home visit', d: 'A clean, punctual site visit to assess your wiring, check consumer unit capacity, and measure runs.' },
+    { n: '03', t: 'Fixed quotation', d: 'A detailed proposal via email, outlining exact costs with zero provisional estimates or surprises.' },
+    { n: '04', t: 'Neat delivery', d: 'Safe installation by our polite team, using protective floor coverings and dust-minimising tools.' },
+    { n: '05', t: 'Handover certs', d: 'Final testing and delivery of your NICEIC safety and Part P building compliance certificates.' },
   ];
   return (
     <section className="section-y dark reveal">
       <div className="wrap">
         <div className="section-head" style={{ marginBottom: 40 }}>
           <div>
-            <div className="eyebrow" style={{ color: 'var(--accent)' }}>How we work</div>
-            <h2 className="h-1">A five-step process<br/>you can brief your board on.</h2>
+            <div className="eyebrow" style={{ color: 'var(--accent)' }}>Our Method</div>
+            <h2 className="h-1">Our household delivery process.</h2>
           </div>
           <p className="lede" style={{ color: 'rgba(255,255,255,0.7)' }}>
-            No surprises. No sub-contracting daisy-chains. One team, one number to call, full documentation at handover.
+            Transparent pricing, neat execution, and official building regulations sign-off.
           </p>
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 1, background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.08)' }}
@@ -139,22 +139,24 @@ function Process() {
   );
 }
 
-function CommercialCases() {
-  const cases = CARTER.cases.filter(c => c.sector === 'Commercial');
+function DomesticCases() {
+  const cases = CARTER.cases.filter(c => c.sector === 'Domestic' || c.sector === 'Residential');
+  const displayCases = cases.length > 0 ? cases : CARTER.cases.slice(2, 4);
+  
   return (
     <section className="cases reveal">
       <div className="wrap">
         <div className="section-head">
           <div>
-            <div className="eyebrow">Commercial case studies</div>
-            <h2 className="h-1">Recent<br/>commercial work.</h2>
+            <div className="eyebrow">Projects</div>
+            <h2 className="h-1">Residential installations.</h2>
           </div>
           <p className="lede">
-            Hospitality, retail and office projects across Chester. More detail in the full case-study index.
+            A selection of recent domestic electrical projects delivered across Chester, Wirral, and Merseyside.
           </p>
         </div>
         <div className="cases-grid">
-          {cases.map(c => (
+          {displayCases.map(c => (
             <a key={c.id} href={c.id === 'old-dukes' ? 'case-old-dukes.html' : 'case-studies.html'} className="case-card big">
               <div className="case-visual">
                 <CarterPlaceholder imgSrc={c.imgSrc} metaTag={`${c.sector} · ${c.subsector}`} titleCaption={`${c.title} - ${c.location}`} year={c.year} hue={c.hue}/>
@@ -178,16 +180,16 @@ function CommercialCases() {
 
 function FAQBand() {
   const faqs = [
-    { q: 'What is classed as commercial electrical work?', a: 'Commercial electrical work involves installations, maintenance, and compliance inspections within business environments. This includes offices, retail spaces, restaurants, public buildings, and large multi-tenant residential complexes. Common works include distribution board installation, LED lighting designs, emergency lighting setups, and fire alarm installations.' },
-    { q: "What's the difference between a commercial and industrial electrician?", a: 'Commercial electricians focus on retail, hospitality, and office spaces with standard low-to-medium voltage parameters. Industrial electricians work in factories, chemical plants, and production hubs where they handle high-voltage feeds, complex machinery connections, automation systems, and PLCs under advanced safety constraints.' },
-    { q: 'Are your commercial electricians NICEIC approved?', a: 'Yes. Carter Electrical is a fully NICEIC Approved Contractor. All of our commercial electricians are directly employed, insured, and certified to carry out installations, testing, and full safety handovers compliant with BS 7671 Wiring Regulations.' },
+    { q: 'Is it illegal to do electrical work in your home in the UK?', a: 'In the UK, it is not illegal to perform simple electrical work yourself, such as replacing light switches or sockets on a like-for-like basis. However, major works—such as installing a new circuit, rewiring a property, or adding circuits in kitchens and bathrooms—fall under Part P of the Building Regulations and must legally be certified by a registered competent person or notified to Building Control.' },
+    { q: 'How to find a trusted domestic electrician?', a: 'Always check that the electrician is registered with a government-approved scheme such as the NICEIC. This guarantees they undergo regular audits, carry sufficient public liability insurance, and are authorised to self-certify their work under Part P. Additionally, look for direct employment rather than sub-contractors.' },
+    { q: 'What is NICEIC Part P certification and why do I need it?', a: 'Part P is the section of the Building Regulations in England and Wales that covers electrical safety in dwellings. A Part P certificate proves that your electrical installation is compliant and safe. You will require this certificate when selling or leasing your home, or when resolving insurance claims.' },
   ];
   const [open, setOpen] = useState(0);
   return (
     <section className="section-y bright reveal">
       <div className="wrap wrap-narrow">
         <div className="eyebrow" style={{ marginBottom: 20 }}>FAQ</div>
-        <h2 className="h-1" style={{ marginBottom: 40 }}>Common commercial questions.</h2>
+        <h2 className="h-1" style={{ marginBottom: 40 }}>Common domestic questions.</h2>
         <div style={{ borderTop: '1px solid var(--rule)' }}>
           {faqs.map((f, i) => (
             <div key={i} style={{ borderBottom: '1px solid var(--rule)' }}>
@@ -209,25 +211,25 @@ function FAQBand() {
   );
 }
 
-function Commercial() {
+function Domestic() {
   useScrollReveal();
   return (
     <>
-      <Header current="commercial" theme="dark" />
-      <CommercialHero />
+      <Header current="domestic" theme="dark" />
+      <DomesticHero />
       <TrustBar />
       <Capabilities />
       <EditorialSection />
       <Process />
-      <CommercialCases />
+      <DomesticCases />
       <FAQBand />
       <section className="cta-band reveal">
         <div className="wrap">
           <div>
             <div className="eyebrow">Start a conversation</div>
-            <h2 style={{ marginTop: 20 }}>Got a commercial project<br/>to deliver?</h2>
+            <h2>Need a trusted domestic electrician?</h2>
             <p className="lede" style={{ marginTop: 18, maxWidth: '54ch' }}>
-              Send us the scope, location and timeframe and we&rsquo;ll be in touch with how we can support.
+              Send us details of your home project and we will provide a comprehensive, transparent quotation.
             </p>
           </div>
           <div className="cta-aside">
@@ -252,4 +254,4 @@ function Commercial() {
   );
 }
 
-ReactDOM.createRoot(document.getElementById('root')).render(<Commercial />);
+ReactDOM.createRoot(document.getElementById('root')).render(<Domestic />);

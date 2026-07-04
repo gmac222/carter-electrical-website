@@ -43,10 +43,20 @@ window.Header = function Header({ current = 'home', theme = 'dark' }) {
   }, []);
 
   const links = [
-    { id: 'commercial', label: 'Commercial', href: 'commercial.html' },
-    { id: 'services', label: 'Services', href: 'services.html' },
+    { id: 'home', label: 'Home', href: 'index.html' },
+    {
+      id: 'services',
+      label: 'Services',
+      href: 'services.html',
+      children: [
+        { id: 'commercial', label: 'Commercial Electrical', href: 'commercial.html' },
+        { id: 'industrial', label: 'Industrial Electrical', href: 'industrial.html' },
+        { id: 'domestic', label: 'Domestic Electrical', href: 'domestic.html' },
+        { id: 'all-services', label: 'All Services', href: 'services.html' }
+      ]
+    },
     { id: 'cases', label: 'Case Studies', href: 'case-studies.html' },
-    { id: 'areas', label: 'Areas', href: 'areas.html' },
+    { id: 'areas', label: 'Areas We Cover', href: 'areas.html' },
     { id: 'about', label: 'About', href: 'about.html' },
     { id: 'contact', label: 'Contact', href: 'contact.html' },
   ];
@@ -57,9 +67,29 @@ window.Header = function Header({ current = 'home', theme = 'dark' }) {
         <div className="header-inner">
           <Logo light={theme === 'dark'} />
           <nav className={`nav ${menuOpen ? 'open' : ''}`}>
-            {links.map(l => (
-              <a key={l.id} href={l.href} className={current === l.id ? 'active' : ''}>{l.label}</a>
-            ))}
+            {links.map(l => {
+              if (l.children) {
+                const isActive = current === l.id || l.children.some(c => current === c.id);
+                return (
+                  <div key={l.id} className="nav-dropdown-wrapper">
+                    <a href={l.href} className={`nav-dropdown-trigger ${isActive ? 'active' : ''}`}>
+                      {l.label}
+                      <svg className="chevron-down" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" strokeWidth="1.5" style={{ marginLeft: '4px', verticalAlign: 'middle', transition: 'transform 0.2s' }}>
+                        <path d="M1 1l4 4 4-4" />
+                      </svg>
+                    </a>
+                    <div className="nav-dropdown">
+                      {l.children.map(c => (
+                        <a key={c.id} href={c.href} className={current === c.id ? 'active' : ''}>{c.label}</a>
+                      ))}
+                    </div>
+                  </div>
+                );
+              }
+              return (
+                <a key={l.id} href={l.href} className={current === l.id ? 'active' : ''}>{l.label}</a>
+              );
+            })}
           </nav>
           <div className="header-cta">
             <div className="header-phone" aria-label="Call Carter Electrical">

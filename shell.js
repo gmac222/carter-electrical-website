@@ -66,20 +66,37 @@ window.Header = function Header({
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
   const links = [{
-    id: 'commercial',
-    label: 'Commercial',
-    href: 'commercial.html'
+    id: 'home',
+    label: 'Home',
+    href: 'index.html'
   }, {
     id: 'services',
     label: 'Services',
-    href: 'services.html'
+    href: 'services.html',
+    children: [{
+      id: 'commercial',
+      label: 'Commercial Electrical',
+      href: 'commercial.html'
+    }, {
+      id: 'industrial',
+      label: 'Industrial Electrical',
+      href: 'industrial.html'
+    }, {
+      id: 'domestic',
+      label: 'Domestic Electrical',
+      href: 'domestic.html'
+    }, {
+      id: 'all-services',
+      label: 'All Services',
+      href: 'services.html'
+    }]
   }, {
     id: 'cases',
     label: 'Case Studies',
     href: 'case-studies.html'
   }, {
     id: 'areas',
-    label: 'Areas',
+    label: 'Areas We Cover',
     href: 'areas.html'
   }, {
     id: 'about',
@@ -100,11 +117,44 @@ window.Header = function Header({
     light: theme === 'dark'
   }), /*#__PURE__*/React.createElement("nav", {
     className: `nav ${menuOpen ? 'open' : ''}`
-  }, links.map(l => /*#__PURE__*/React.createElement("a", {
-    key: l.id,
-    href: l.href,
-    className: current === l.id ? 'active' : ''
-  }, l.label))), /*#__PURE__*/React.createElement("div", {
+  }, links.map(l => {
+    if (l.children) {
+      const isActive = current === l.id || l.children.some(c => current === c.id);
+      return /*#__PURE__*/React.createElement("div", {
+        key: l.id,
+        className: "nav-dropdown-wrapper"
+      }, /*#__PURE__*/React.createElement("a", {
+        href: l.href,
+        className: `nav-dropdown-trigger ${isActive ? 'active' : ''}`
+      }, l.label, /*#__PURE__*/React.createElement("svg", {
+        className: "chevron-down",
+        width: "10",
+        height: "6",
+        viewBox: "0 0 10 6",
+        fill: "none",
+        stroke: "currentColor",
+        strokeWidth: "1.5",
+        style: {
+          marginLeft: '4px',
+          verticalAlign: 'middle',
+          transition: 'transform 0.2s'
+        }
+      }, /*#__PURE__*/React.createElement("path", {
+        d: "M1 1l4 4 4-4"
+      }))), /*#__PURE__*/React.createElement("div", {
+        className: "nav-dropdown"
+      }, l.children.map(c => /*#__PURE__*/React.createElement("a", {
+        key: c.id,
+        href: c.href,
+        className: current === c.id ? 'active' : ''
+      }, c.label))));
+    }
+    return /*#__PURE__*/React.createElement("a", {
+      key: l.id,
+      href: l.href,
+      className: current === l.id ? 'active' : ''
+    }, l.label);
+  })), /*#__PURE__*/React.createElement("div", {
     className: "header-cta"
   }, /*#__PURE__*/React.createElement("div", {
     className: "header-phone",
