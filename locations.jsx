@@ -6,6 +6,21 @@ const { Header, Footer, TrustBar, CarterPlaceholder, TweaksPanel, useScrollRevea
 function LocationPage({ locationName }) {
   useScrollReveal();
 
+  const [isContactModalOpen, setIsContactModalOpen] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleContactClick = (e) => {
+      const a = e.target.closest('a');
+      if (a && a.getAttribute('href') === 'contact.html') {
+        e.preventDefault();
+        setIsContactModalOpen(true);
+      }
+    };
+    document.addEventListener('click', handleContactClick);
+    return () => document.removeEventListener('click', handleContactClick);
+  }, []);
+
+
   const area = CARTER.areas.find(a => a.name === locationName) || {
     name: locationName, slug: locationName.toLowerCase().replace(/\s+/g, '-'),
     cases: 0, postcodes: [], neighbourhoods: [],
@@ -371,8 +386,254 @@ function LocationPage({ locationName }) {
       <Footer />
       <MobileStickyCTA />
       <TweaksPanel />
+      <ContactModal isOpen={isContactModalOpen} onClose={() => setIsContactModalOpen(false)} />
     </>
   );
 }
 
+function ContactModal({ isOpen, onClose }) {
+  const [step, setStep] = React.useState(0);
+  const [submitted, setSubmitted] = React.useState(false);
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
+  const [data, setData] = React.useState({
+    service: '',
+    sector: '',
+    scope: '',
+    name: '',
+    company: '',
+    email: '',
+    phone: '',
+    postcode: '',
+    timing: '',
+    details: '',
+  });
+  const [errors, setErrors] = React.useState({});
+
+  // Reset form when modal opens/closes
+  React.useEffect(() => {
+    if (isOpen) {
+      setStep(0);
+      setSubmitted(false);
+      setIsSubmitting(false);
+      setData({
+        service: '',
+        sector: '',
+        scope: '',
+        name: '',
+        company: '',
+        email: '',
+        phone: '',
+        postcode: '',
+        timing: '',
+        details: '',
+      });
+      setErrors({});
+    }
+  }, [isOpen]);
+
+  const update = (patch) => setData(d => ({ ...d, ...patch }));
+  const setErr = (key, msg) => setErrors(e => ({ ...e, [key]: msg }));
+  const clearErr = (key) => setErrors(e => { const n = { ...e }; delete n[key]; return n; });
+
+  const services = ['Commercial', 'Industrial', 'Domestic', 'Renewables / EV', 'Testing / EICR', 'Maintenance'];
+  const sectors = ['Office', 'Retail', 'Hospitality', 'Healthcare', 'Warehouse', 'Residential', 'Other'];
+  const timings = ['Within a month', '1–3 months', '3+ months / scoping'];
+
+  const validateStep = () => {
+    const errs = {};
+    if (step === 0) {
+      if (!data.service) errs.service = 'Pick a service area';
+    }
+    if (step === 1) {
+      if (!data.scope) errs.scope = 'Tell us briefly what you need';
+      if (!data.timing) errs.timing = 'Pick a timeframe';
+    }
+    if (step === 2) {
+      if (!data.name) errs.name = 'Your name, please';
+      if (!data.email || !/^\S+@\S+\.\S+$/.test(data.email)) errs.email = 'A valid email address';
+      if (!data.phone || data.phone.replace(/\D/g, '').length < 9) errs.phone = 'A reachable UK number';
+    }
+    setErrors(errs);
+    return Object.keys(errs).length === 0;
+  };
+
+  const next = () => { if (validateStep()) setStep(s => s + 1); };
+  const back = () => setStep(s => Math.max(0, s - 1));
+  const submit = async () => {
+    if (!validateStep()) return;
+    setIsSubmitting(true);
+    try {
+      const response = await fetch('/api/lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      if (response.ok) {
+        window.location.href = 'thank-you.html';
+      } else {
+        alert('There was a problem submitting your enquiry. Please try again or call us directly.');
+      }
+    } catch (err) {
+      console.error(err);
+      alert('Network error. Please try again or call us directly.');
+    }
+    setIsSubmitting(false);
+  };
+
+  const refNum = 'CEC-' + Math.floor(1000 + Math.random() * 9000) + '-' + new Date().getFullYear();
+
+  // Close when pressing Escape key
+  React.useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') onClose();
+    };
+    if (isOpen) {
+      document.addEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = 'hidden'; // prevent scrolling behind modal
+    }
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = '';
+    };
+  }, [isOpen, onClose]);
+
+  if (!isOpen) return null;
+
+  return (
+    <div className={`contact-modal-overlay ${isOpen ? 'is-open' : ''}`} onClick={onClose}>
+      <div className="contact-modal-container" onClick={e => e.stopPropagation()}>
+        <button className="contact-modal-close" onClick={onClose} aria-label="Close form">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.8">
+            <path d="M4 4l12 12M16 4L4 16" />
+          </svg>
+        </button>
+        
+        <div className="form-shell">
+          <div className="form-stepper">
+            {['Service', 'Project', 'Details'].map((s, i) => (
+              <div key={i} className={`form-step ${step === i ? 'active' : step > i ? 'done' : ''}`}>
+                <span className="num">{step > i ? '✓' : i + 1}</span>
+                <span>{s}</span>
+              </div>
+            ))}
+          </div>
+
+          {step === 0 && (
+            <div>
+              <div className="label-mono" style={{ marginBottom: 12 }}>Step 1 of 3</div>
+              <h3 className="h-2" style={{ margin: '0 0 24px' }}>What can we help with?</h3>
+              <div className="field">
+                <label>Service area <span className="req">*</span></label>
+                <div className="chip-group">
+                  {services.map(s => (
+                    <button
+                      key={s}
+                      type="button"
+                      className={`chip ${data.service === s ? 'selected' : ''}`}
+                      onClick={() => { update({ service: s }); clearErr('service'); }}
+                    >
+                      {data.service === s && <span className="tick" dangerouslySetInnerHTML={{ __html: CARTER.svg.check }} />}
+                      {s}
+                    </button>
+                  ))}
+                </div>
+                {errors.service && <span className="err-msg">{errors.service}</span>}
+              </div>
+              <div className="field">
+                <label>Sector (optional)</label>
+                <div className="chip-group">
+                  {sectors.map(s => (
+                    <button
+                      key={s}
+                      type="button"
+                      className={`chip ${data.sector === s ? 'selected' : ''}`}
+                      onClick={() => update({ sector: data.sector === s ? '' : s })}
+                    >{s}</button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
+
+          {step === 1 && (
+            <div>
+              <div className="label-mono" style={{ marginBottom: 12 }}>Step 2 of 3</div>
+              <h3 className="h-2" style={{ margin: '0 0 24px' }}>Tell us about the project.</h3>
+              <div className={`field ${errors.scope ? 'error' : ''}`}>
+                <label>Scope in a couple of sentences <span className="req">*</span></label>
+                <textarea
+                  value={data.scope}
+                  onChange={(e) => { update({ scope: e.target.value }); if (errors.scope) clearErr('scope'); }}
+                  placeholder="e.g. Office fit-out, ~1,200 sq ft, new distribution, LED lighting, fire alarm integration."
+                />
+                {errors.scope && <span className="err-msg">{errors.scope}</span>}
+              </div>
+              <div className="field">
+                <label>When do you need it done? <span className="req">*</span></label>
+                <div className="chip-group">
+                  {timings.map(t => (
+                    <button key={t} type="button" className={`chip ${data.timing === t ? 'selected' : ''}`} onClick={() => { update({ timing: t }); clearErr('timing'); }}>{t}</button>
+                  ))}
+                </div>
+                {errors.timing && <span className="err-msg">{errors.timing}</span>}
+              </div>
+              <div className="field">
+                <label>Site postcode (optional)</label>
+                <input type="text" value={data.postcode} onChange={e => update({ postcode: e.target.value.toUpperCase() })} placeholder="e.g. CH1 2AB"/>
+              </div>
+            </div>
+          )}
+
+          {step === 2 && (
+            <div>
+              <div className="label-mono" style={{ marginBottom: 12 }}>Step 3 of 3</div>
+              <h3 className="h-2" style={{ margin: '0 0 24px' }}>How do we reach you?</h3>
+              <div className="field-row">
+                <div className={`field ${errors.name ? 'error' : ''}`}>
+                  <label>Your name <span className="req">*</span></label>
+                  <input type="text" value={data.name} onChange={e => { update({ name: e.target.value }); if (errors.name) clearErr('name'); }}/>
+                  {errors.name && <span className="err-msg">{errors.name}</span>}
+                </div>
+                <div className="field">
+                  <label>Company (optional)</label>
+                  <input type="text" value={data.company} onChange={e => update({ company: e.target.value })}/>
+                </div>
+              </div>
+              <div className="field-row">
+                <div className={`field ${errors.email ? 'error' : ''}`}>
+                  <label>Email <span className="req">*</span></label>
+                  <input type="email" value={data.email} onChange={e => { update({ email: e.target.value }); if (errors.email) clearErr('email'); }}/>
+                  {errors.email && <span className="err-msg">{errors.email}</span>}
+                </div>
+                <div className={`field ${errors.phone ? 'error' : ''}`}>
+                  <label>Phone <span className="req">*</span></label>
+                  <input type="tel" value={data.phone} onChange={e => { update({ phone: e.target.value }); if (errors.phone) clearErr('phone'); }}/>
+                  {errors.phone && <span className="err-msg">{errors.phone}</span>}
+                </div>
+              </div>
+              <div className="field">
+                <label>Anything else we should know?</label>
+                <textarea value={data.details} onChange={e => update({ details: e.target.value })} placeholder="Access, timings, existing documentation, other contractors on site…"/>
+              </div>
+            </div>
+          )}
+
+          <div className="form-actions">
+            {step > 0
+              ? <button type="button" className="back-link" onClick={back} disabled={isSubmitting}>← Back</button>
+              : <span />}
+            {step < 2
+              ? <button type="button" className="btn btn-primary" onClick={next}>Continue <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }}/></button>
+              : <button type="button" className="btn btn-primary" onClick={submit} disabled={isSubmitting}>
+                  {isSubmitting ? 'Sending...' : 'Send enquiry'} 
+                  {!isSubmitting && <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }}/>}
+                </button>}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 window.LocationPage = LocationPage;
+

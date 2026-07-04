@@ -14,6 +14,18 @@ function LocationPage({
   locationName
 }) {
   useScrollReveal();
+  const [isContactModalOpen, setIsContactModalOpen] = React.useState(false);
+  React.useEffect(() => {
+    const handleContactClick = e => {
+      const a = e.target.closest('a');
+      if (a && a.getAttribute('href') === 'contact.html') {
+        e.preventDefault();
+        setIsContactModalOpen(true);
+      }
+    };
+    document.addEventListener('click', handleContactClick);
+    return () => document.removeEventListener('click', handleContactClick);
+  }, []);
   const area = CARTER.areas.find(a => a.name === locationName) || {
     name: locationName,
     slug: locationName.toLowerCase().replace(/\s+/g, '-'),
@@ -666,6 +678,354 @@ function LocationPage({
       marginRight: 6,
       verticalAlign: 'middle'
     }
-  }), "100% Secure. No obligation. Your data is strictly protected."))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(MobileStickyCTA, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
+  }), "100% Secure. No obligation. Your data is strictly protected."))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(MobileStickyCTA, null), /*#__PURE__*/React.createElement(TweaksPanel, null), /*#__PURE__*/React.createElement(ContactModal, {
+    isOpen: isContactModalOpen,
+    onClose: () => setIsContactModalOpen(false)
+  }));
+}
+function ContactModal({
+  isOpen,
+  onClose
+}) {
+  const [step, setStep] = React.useState(0);
+  const [submitted, setSubmitted] = React.useState(false);
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
+  const [data, setData] = React.useState({
+    service: '',
+    sector: '',
+    scope: '',
+    name: '',
+    company: '',
+    email: '',
+    phone: '',
+    postcode: '',
+    timing: '',
+    details: ''
+  });
+  const [errors, setErrors] = React.useState({});
+
+  // Reset form when modal opens/closes
+  React.useEffect(() => {
+    if (isOpen) {
+      setStep(0);
+      setSubmitted(false);
+      setIsSubmitting(false);
+      setData({
+        service: '',
+        sector: '',
+        scope: '',
+        name: '',
+        company: '',
+        email: '',
+        phone: '',
+        postcode: '',
+        timing: '',
+        details: ''
+      });
+      setErrors({});
+    }
+  }, [isOpen]);
+  const update = patch => setData(d => ({
+    ...d,
+    ...patch
+  }));
+  const setErr = (key, msg) => setErrors(e => ({
+    ...e,
+    [key]: msg
+  }));
+  const clearErr = key => setErrors(e => {
+    const n = {
+      ...e
+    };
+    delete n[key];
+    return n;
+  });
+  const services = ['Commercial', 'Industrial', 'Domestic', 'Renewables / EV', 'Testing / EICR', 'Maintenance'];
+  const sectors = ['Office', 'Retail', 'Hospitality', 'Healthcare', 'Warehouse', 'Residential', 'Other'];
+  const timings = ['Within a month', '1–3 months', '3+ months / scoping'];
+  const validateStep = () => {
+    const errs = {};
+    if (step === 0) {
+      if (!data.service) errs.service = 'Pick a service area';
+    }
+    if (step === 1) {
+      if (!data.scope) errs.scope = 'Tell us briefly what you need';
+      if (!data.timing) errs.timing = 'Pick a timeframe';
+    }
+    if (step === 2) {
+      if (!data.name) errs.name = 'Your name, please';
+      if (!data.email || !/^\S+@\S+\.\S+$/.test(data.email)) errs.email = 'A valid email address';
+      if (!data.phone || data.phone.replace(/\D/g, '').length < 9) errs.phone = 'A reachable UK number';
+    }
+    setErrors(errs);
+    return Object.keys(errs).length === 0;
+  };
+  const next = () => {
+    if (validateStep()) setStep(s => s + 1);
+  };
+  const back = () => setStep(s => Math.max(0, s - 1));
+  const submit = async () => {
+    if (!validateStep()) return;
+    setIsSubmitting(true);
+    try {
+      const response = await fetch('/api/lead', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+      if (response.ok) {
+        window.location.href = 'thank-you.html';
+      } else {
+        alert('There was a problem submitting your enquiry. Please try again or call us directly.');
+      }
+    } catch (err) {
+      console.error(err);
+      alert('Network error. Please try again or call us directly.');
+    }
+    setIsSubmitting(false);
+  };
+  const refNum = 'CEC-' + Math.floor(1000 + Math.random() * 9000) + '-' + new Date().getFullYear();
+
+  // Close when pressing Escape key
+  React.useEffect(() => {
+    const handleKeyDown = e => {
+      if (e.key === 'Escape') onClose();
+    };
+    if (isOpen) {
+      document.addEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = 'hidden'; // prevent scrolling behind modal
+    }
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = '';
+    };
+  }, [isOpen, onClose]);
+  if (!isOpen) return null;
+  return /*#__PURE__*/React.createElement("div", {
+    className: `contact-modal-overlay ${isOpen ? 'is-open' : ''}`,
+    onClick: onClose
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "contact-modal-container",
+    onClick: e => e.stopPropagation()
+  }, /*#__PURE__*/React.createElement("button", {
+    className: "contact-modal-close",
+    onClick: onClose,
+    "aria-label": "Close form"
+  }, /*#__PURE__*/React.createElement("svg", {
+    width: "20",
+    height: "20",
+    viewBox: "0 0 20 20",
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: "1.8"
+  }, /*#__PURE__*/React.createElement("path", {
+    d: "M4 4l12 12M16 4L4 16"
+  }))), /*#__PURE__*/React.createElement("div", {
+    className: "form-shell"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "form-stepper"
+  }, ['Service', 'Project', 'Details'].map((s, i) => /*#__PURE__*/React.createElement("div", {
+    key: i,
+    className: `form-step ${step === i ? 'active' : step > i ? 'done' : ''}`
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "num"
+  }, step > i ? '✓' : i + 1), /*#__PURE__*/React.createElement("span", null, s)))), step === 0 && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    className: "label-mono",
+    style: {
+      marginBottom: 12
+    }
+  }, "Step 1 of 3"), /*#__PURE__*/React.createElement("h3", {
+    className: "h-2",
+    style: {
+      margin: '0 0 24px'
+    }
+  }, "What can we help with?"), /*#__PURE__*/React.createElement("div", {
+    className: "field"
+  }, /*#__PURE__*/React.createElement("label", null, "Service area ", /*#__PURE__*/React.createElement("span", {
+    className: "req"
+  }, "*")), /*#__PURE__*/React.createElement("div", {
+    className: "chip-group"
+  }, services.map(s => /*#__PURE__*/React.createElement("button", {
+    key: s,
+    type: "button",
+    className: `chip ${data.service === s ? 'selected' : ''}`,
+    onClick: () => {
+      update({
+        service: s
+      });
+      clearErr('service');
+    }
+  }, data.service === s && /*#__PURE__*/React.createElement("span", {
+    className: "tick",
+    dangerouslySetInnerHTML: {
+      __html: CARTER.svg.check
+    }
+  }), s))), errors.service && /*#__PURE__*/React.createElement("span", {
+    className: "err-msg"
+  }, errors.service)), /*#__PURE__*/React.createElement("div", {
+    className: "field"
+  }, /*#__PURE__*/React.createElement("label", null, "Sector (optional)"), /*#__PURE__*/React.createElement("div", {
+    className: "chip-group"
+  }, sectors.map(s => /*#__PURE__*/React.createElement("button", {
+    key: s,
+    type: "button",
+    className: `chip ${data.sector === s ? 'selected' : ''}`,
+    onClick: () => update({
+      sector: data.sector === s ? '' : s
+    })
+  }, s))))), step === 1 && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    className: "label-mono",
+    style: {
+      marginBottom: 12
+    }
+  }, "Step 2 of 3"), /*#__PURE__*/React.createElement("h3", {
+    className: "h-2",
+    style: {
+      margin: '0 0 24px'
+    }
+  }, "Tell us about the project."), /*#__PURE__*/React.createElement("div", {
+    className: `field ${errors.scope ? 'error' : ''}`
+  }, /*#__PURE__*/React.createElement("label", null, "Scope in a couple of sentences ", /*#__PURE__*/React.createElement("span", {
+    className: "req"
+  }, "*")), /*#__PURE__*/React.createElement("textarea", {
+    value: data.scope,
+    onChange: e => {
+      update({
+        scope: e.target.value
+      });
+      if (errors.scope) clearErr('scope');
+    },
+    placeholder: "e.g. Office fit-out, ~1,200 sq ft, new distribution, LED lighting, fire alarm integration."
+  }), errors.scope && /*#__PURE__*/React.createElement("span", {
+    className: "err-msg"
+  }, errors.scope)), /*#__PURE__*/React.createElement("div", {
+    className: "field"
+  }, /*#__PURE__*/React.createElement("label", null, "When do you need it done? ", /*#__PURE__*/React.createElement("span", {
+    className: "req"
+  }, "*")), /*#__PURE__*/React.createElement("div", {
+    className: "chip-group"
+  }, timings.map(t => /*#__PURE__*/React.createElement("button", {
+    key: t,
+    type: "button",
+    className: `chip ${data.timing === t ? 'selected' : ''}`,
+    onClick: () => {
+      update({
+        timing: t
+      });
+      clearErr('timing');
+    }
+  }, t))), errors.timing && /*#__PURE__*/React.createElement("span", {
+    className: "err-msg"
+  }, errors.timing)), /*#__PURE__*/React.createElement("div", {
+    className: "field"
+  }, /*#__PURE__*/React.createElement("label", null, "Site postcode (optional)"), /*#__PURE__*/React.createElement("input", {
+    type: "text",
+    value: data.postcode,
+    onChange: e => update({
+      postcode: e.target.value.toUpperCase()
+    }),
+    placeholder: "e.g. CH1 2AB"
+  }))), step === 2 && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    className: "label-mono",
+    style: {
+      marginBottom: 12
+    }
+  }, "Step 3 of 3"), /*#__PURE__*/React.createElement("h3", {
+    className: "h-2",
+    style: {
+      margin: '0 0 24px'
+    }
+  }, "How do we reach you?"), /*#__PURE__*/React.createElement("div", {
+    className: "field-row"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: `field ${errors.name ? 'error' : ''}`
+  }, /*#__PURE__*/React.createElement("label", null, "Your name ", /*#__PURE__*/React.createElement("span", {
+    className: "req"
+  }, "*")), /*#__PURE__*/React.createElement("input", {
+    type: "text",
+    value: data.name,
+    onChange: e => {
+      update({
+        name: e.target.value
+      });
+      if (errors.name) clearErr('name');
+    }
+  }), errors.name && /*#__PURE__*/React.createElement("span", {
+    className: "err-msg"
+  }, errors.name)), /*#__PURE__*/React.createElement("div", {
+    className: "field"
+  }, /*#__PURE__*/React.createElement("label", null, "Company (optional)"), /*#__PURE__*/React.createElement("input", {
+    type: "text",
+    value: data.company,
+    onChange: e => update({
+      company: e.target.value
+    })
+  }))), /*#__PURE__*/React.createElement("div", {
+    className: "field-row"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: `field ${errors.email ? 'error' : ''}`
+  }, /*#__PURE__*/React.createElement("label", null, "Email ", /*#__PURE__*/React.createElement("span", {
+    className: "req"
+  }, "*")), /*#__PURE__*/React.createElement("input", {
+    type: "email",
+    value: data.email,
+    onChange: e => {
+      update({
+        email: e.target.value
+      });
+      if (errors.email) clearErr('email');
+    }
+  }), errors.email && /*#__PURE__*/React.createElement("span", {
+    className: "err-msg"
+  }, errors.email)), /*#__PURE__*/React.createElement("div", {
+    className: `field ${errors.phone ? 'error' : ''}`
+  }, /*#__PURE__*/React.createElement("label", null, "Phone ", /*#__PURE__*/React.createElement("span", {
+    className: "req"
+  }, "*")), /*#__PURE__*/React.createElement("input", {
+    type: "tel",
+    value: data.phone,
+    onChange: e => {
+      update({
+        phone: e.target.value
+      });
+      if (errors.phone) clearErr('phone');
+    }
+  }), errors.phone && /*#__PURE__*/React.createElement("span", {
+    className: "err-msg"
+  }, errors.phone))), /*#__PURE__*/React.createElement("div", {
+    className: "field"
+  }, /*#__PURE__*/React.createElement("label", null, "Anything else we should know?"), /*#__PURE__*/React.createElement("textarea", {
+    value: data.details,
+    onChange: e => update({
+      details: e.target.value
+    }),
+    placeholder: "Access, timings, existing documentation, other contractors on site\u2026"
+  }))), /*#__PURE__*/React.createElement("div", {
+    className: "form-actions"
+  }, step > 0 ? /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: "back-link",
+    onClick: back,
+    disabled: isSubmitting
+  }, "\u2190 Back") : /*#__PURE__*/React.createElement("span", null), step < 2 ? /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: "btn btn-primary",
+    onClick: next
+  }, "Continue ", /*#__PURE__*/React.createElement("span", {
+    dangerouslySetInnerHTML: {
+      __html: CARTER.svg.arrow
+    }
+  })) : /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: "btn btn-primary",
+    onClick: submit,
+    disabled: isSubmitting
+  }, isSubmitting ? 'Sending...' : 'Send enquiry', !isSubmitting && /*#__PURE__*/React.createElement("span", {
+    dangerouslySetInnerHTML: {
+      __html: CARTER.svg.arrow
+    }
+  }))))));
 }
 window.LocationPage = LocationPage;
