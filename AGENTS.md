@@ -61,3 +61,18 @@ Use the returned `workflowDir` exactly as provided. Do not reconstruct paths fro
 
 Never write `n8nac-config.json`, `~/.n8n-manager`, or n8n-manager secret files by hand.
 <!-- n8n-as-code-end -->
+
+## Semantic SEO & Readability Rules
+
+Whenever creating or editing content for this or any other page in this project, always adhere to the following rules:
+- **Primary Focus**: Readability for humans must be the primary focus. Content must read naturally, professionally, and clearly as local services pages (not blog posts).
+- **Keyword Placement**:
+  - The H1 heading must always contain the primary keyword for the page.
+  - At least one H2 heading must contain the primary keyword.
+  - Other headings (H2, H3, etc.) must use secondary keywords and location context naturally, avoiding over-optimisation (e.g. do not suffix every heading with "in [Location]").
+- **Image Naming and Alt Attributes**:
+  - The first main image of the page must be named exactly the primary keyword for the page (using hyphens, e.g. `electricians-chester.jpg`).
+  - The first image's `alt` attribute must match the primary keyword exactly (e.g. `Electricians in Chester`).
+  - The other images must be named after the secondary keywords for the page (e.g. `uploads/commercial-electrical-services-chester.jpg`).
+  - The other images' `alt` attributes must match their corresponding secondary keywords exactly.
+

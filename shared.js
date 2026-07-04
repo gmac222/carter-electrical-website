@@ -219,7 +219,7 @@ window.CarterPlaceholder = function(props) {
   if (props.imgSrc) {
     children.push(h('img', { 
       src: props.imgSrc, 
-      alt: props.titleCaption || 'Carter Electrical',
+      alt: props.alt || props.titleCaption || 'Carter Electrical',
       className: 'placeholder-img',
       key: 'img'
     }));

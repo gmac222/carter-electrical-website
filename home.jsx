@@ -129,8 +129,8 @@ function Intro() {
           {/* Right: image */}
           <div className="area-image" style={{ height: '100%', width: '100%', position: 'relative', minHeight: '300px' }}>
             <img
-              src="Home - Carter Electrical Contractors man with clipboard.jpg"
-              alt="Carter Electrical Contractors - NICEIC approved electrician in Chester"
+              src="electricians-chester.jpg"
+              alt="Electricians in Chester"
               style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', borderRadius: '4px', boxShadow: '0 8px 32px rgba(0,0,0,0.12)' }}
             />
           </div>
@@ -174,10 +174,26 @@ function Services() {
         <div className="services-grid">
           {CARTER.services.map((s, idx) => {
             const num = String(idx + 1).padStart(2, '0');
+            const chesterImages = {
+              commercial: 'uploads/commercial-electrical-services-chester.jpg',
+              industrial: 'uploads/industrial-electrical-services-chester.jpg',
+              domestic: 'uploads/domestic-electrical-services-chester.jpg',
+              testing: 'uploads/electrical-testing-inspection-chester.jpg',
+              renewables: 'uploads/ev-charger-installation-chester.jpg'
+            };
+            const chesterAlts = {
+              commercial: 'Commercial electrical services in Chester',
+              industrial: 'Industrial electrical services in Chester',
+              domestic: 'Domestic electrical services in Chester',
+              testing: 'Electrical testing and inspection in Chester',
+              renewables: 'EV charger installation in Chester'
+            };
+            const chesterImgSrc = chesterImages[s.slug] || s.imgSrc;
+            const chesterAlt = chesterAlts[s.slug] || 'Carter Electrical';
             return (
             <a href={s.slug === 'commercial' ? 'commercial.html' : `services.html#${s.slug}`} key={s.slug} className="service-card" style={{ padding: 0 }}>
               <div className="sc-visual" style={{ height: '220px', position: 'relative', width: '100%' }}>
-                <CarterPlaceholder imgSrc={s.imgSrc} hue={210} />
+                <CarterPlaceholder imgSrc={chesterImgSrc} alt={chesterAlt} hue={210} />
               </div>
               <div style={{ padding: '32px 24px 28px', display: 'flex', flexDirection: 'column', flex: 1 }}>
                 <span className="sc-num">{num} / {String(CARTER.services.length).padStart(2,'0')}</span>
@@ -363,8 +379,8 @@ function Areas() {
         <div className="areas-grid">
           <div className="area-image" style={{ position: 'relative', borderRadius: '2px', overflow: 'hidden' }}>
             <img 
-              src="Carter Electrical Contractors man with clipboard.jpg" 
-              alt="Home - Carter Electrical Contractors man with clipboard" 
+              src="niceic-approved-electrician-chester.jpg" 
+              alt="NICEIC approved electrician in Chester" 
               style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} 
             />
           </div>

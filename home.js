@@ -218,8 +218,8 @@ function Intro() {
       minHeight: '300px'
     }
   }, /*#__PURE__*/React.createElement("img", {
-    src: "Home - Carter Electrical Contractors man with clipboard.jpg",
-    alt: "Carter Electrical Contractors - NICEIC approved electrician in Chester",
+    src: "electricians-chester.jpg",
+    alt: "Electricians in Chester",
     style: {
       width: '100%',
       height: '100%',
@@ -297,6 +297,22 @@ function Services() {
     className: "services-grid"
   }, CARTER.services.map((s, idx) => {
     const num = String(idx + 1).padStart(2, '0');
+    const chesterImages = {
+      commercial: 'uploads/commercial-electrical-services-chester.jpg',
+      industrial: 'uploads/industrial-electrical-services-chester.jpg',
+      domestic: 'uploads/domestic-electrical-services-chester.jpg',
+      testing: 'uploads/electrical-testing-inspection-chester.jpg',
+      renewables: 'uploads/ev-charger-installation-chester.jpg'
+    };
+    const chesterAlts = {
+      commercial: 'Commercial electrical services in Chester',
+      industrial: 'Industrial electrical services in Chester',
+      domestic: 'Domestic electrical services in Chester',
+      testing: 'Electrical testing and inspection in Chester',
+      renewables: 'EV charger installation in Chester'
+    };
+    const chesterImgSrc = chesterImages[s.slug] || s.imgSrc;
+    const chesterAlt = chesterAlts[s.slug] || 'Carter Electrical';
     return /*#__PURE__*/React.createElement("a", {
       href: s.slug === 'commercial' ? 'commercial.html' : `services.html#${s.slug}`,
       key: s.slug,
@@ -312,7 +328,8 @@ function Services() {
         width: '100%'
       }
     }, /*#__PURE__*/React.createElement(CarterPlaceholder, {
-      imgSrc: s.imgSrc,
+      imgSrc: chesterImgSrc,
+      alt: chesterAlt,
       hue: 210
     })), /*#__PURE__*/React.createElement("div", {
       style: {
@@ -535,8 +552,8 @@ function Areas() {
       overflow: 'hidden'
     }
   }, /*#__PURE__*/React.createElement("img", {
-    src: "Carter Electrical Contractors man with clipboard.jpg",
-    alt: "Home - Carter Electrical Contractors man with clipboard",
+    src: "niceic-approved-electrician-chester.jpg",
+    alt: "NICEIC approved electrician in Chester",
     style: {
       width: '100%',
       height: '100%',

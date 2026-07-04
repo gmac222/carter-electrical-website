@@ -167,8 +167,8 @@ function LocationPage({
       minHeight: '300px'
     }
   }, /*#__PURE__*/React.createElement("img", {
-    src: `Carter Electrical Contractors man with clipboard.jpg`,
-    alt: `${locationName} - Carter Electrical Contractors man with clipboard`,
+    src: `electricians-${area.slug}.jpg`,
+    alt: `Electricians in ${locationName}`,
     style: {
       width: '100%',
       height: '100%',
@@ -250,24 +250,44 @@ function LocationPage({
       border: '1px solid var(--rule)',
       overflow: 'hidden'
     }
-  }, s.imgSrc && /*#__PURE__*/React.createElement("div", {
-    style: {
-      width: '100%',
-      position: 'relative',
-      padding: '16px 16px 0 16px'
+  }, (() => {
+    let localImgSrc = s.imgSrc;
+    let localAlt = `${s.title} in ${locationName}`;
+    if (s.slug === 'commercial') {
+      localImgSrc = `uploads/commercial-electrical-services-${area.slug}.jpg`;
+      localAlt = `Commercial electrical services in ${locationName}`;
+    } else if (s.slug === 'industrial') {
+      localImgSrc = `uploads/industrial-electrical-services-${area.slug}.jpg`;
+      localAlt = `Industrial electrical services in ${locationName}`;
+    } else if (s.slug === 'domestic') {
+      localImgSrc = `uploads/domestic-electrical-services-${area.slug}.jpg`;
+      localAlt = `Domestic electrical services in ${locationName}`;
+    } else if (s.slug === 'testing') {
+      localImgSrc = `uploads/electrical-testing-inspection-${area.slug}.jpg`;
+      localAlt = `Electrical testing and inspection in ${locationName}`;
+    } else if (s.slug === 'renewables') {
+      localImgSrc = `uploads/ev-charger-installation-${area.slug}.jpg`;
+      localAlt = `EV charger installation in ${locationName}`;
     }
-  }, /*#__PURE__*/React.createElement("img", {
-    src: s.imgSrc,
-    alt: `${s.title} in ${locationName}`,
-    style: {
-      width: '100%',
-      height: '220px',
-      objectFit: 'contain',
-      display: 'block',
-      borderRadius: '16px',
-      boxShadow: '0 8px 32px rgba(0,0,0,0.15)'
-    }
-  })), /*#__PURE__*/React.createElement("div", {
+    return localImgSrc ? /*#__PURE__*/React.createElement("div", {
+      style: {
+        width: '100%',
+        position: 'relative',
+        padding: '16px 16px 0 16px'
+      }
+    }, /*#__PURE__*/React.createElement("img", {
+      src: localImgSrc,
+      alt: localAlt,
+      style: {
+        width: '100%',
+        height: '220px',
+        objectFit: 'contain',
+        display: 'block',
+        borderRadius: '16px',
+        boxShadow: '0 8px 32px rgba(0,0,0,0.15)'
+      }
+    })) : null;
+  })(), /*#__PURE__*/React.createElement("div", {
     style: {
       padding: '32px',
       paddingTop: '16px'
