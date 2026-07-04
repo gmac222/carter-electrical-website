@@ -20,10 +20,6 @@ function LocationPage({ locationName }) {
   );
   const otherAreas = CARTER.areas.filter(a => a.name !== locationName).slice(0, 6);
 
-  const distanceText = locationName === 'Chester' 
-    ? 'right here in Chester' 
-    : `${area.distance ? `${area.distance} from ` : 'a short drive from '}${locationName}`;
-
   return (
     <>
       <Header current="areas" theme="dark" />
@@ -33,7 +29,7 @@ function LocationPage({ locationName }) {
         sectionNum="03.1 / Location"
         title={`Local electricians covering ${locationName}`}
         titleAccent=" - NICEIC-approved."
-        subtext={`NICEIC-approved commercial, industrial, domestic and renewables electricians serving ${locationName}${area.postcodes && area.postcodes.length ? ' (' + area.postcodes.join(', ') + ')' : ''} and the surrounding ${area.county || 'area'}. EICR testing, EV chargers, full rewires and commercial fit-outs - delivered by our in-house team from our Christleton base, ${distanceText}.`}
+        subtext={`NICEIC-approved commercial, industrial, domestic and renewables electricians serving ${locationName}${area.postcodes && area.postcodes.length ? ' (' + area.postcodes.join(', ') + ')' : ''} and the surrounding ${area.county || 'area'}. EICR testing, EV chargers, full rewires and commercial fit-outs.`}
         ctas={
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
             <div style={{ display: 'flex', gap: '12px' }}>
