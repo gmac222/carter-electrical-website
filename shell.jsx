@@ -149,6 +149,23 @@ window.Footer = function Footer() {
             </ul>
           </div>
           <div>
+            <h4>Hours</h4>
+            <ul style={{ gap: '8px' }}>
+              <li style={{ fontSize: '14.5px', color: 'rgba(255,255,255,0.78)', display: 'flex', justifyContent: 'space-between', gap: '16px' }}>
+                <span>Mon - Fri</span>
+                <span>07:30 - 17:30</span>
+              </li>
+              <li style={{ fontSize: '14.5px', color: 'rgba(255,255,255,0.78)', display: 'flex', justifyContent: 'space-between', gap: '16px' }}>
+                <span>Saturday</span>
+                <span style={{ color: 'rgba(255,255,255,0.4)' }}>Closed</span>
+              </li>
+              <li style={{ fontSize: '14.5px', color: 'rgba(255,255,255,0.78)', display: 'flex', justifyContent: 'space-between', gap: '16px' }}>
+                <span>Sunday</span>
+                <span style={{ color: 'rgba(255,255,255,0.4)' }}>Closed</span>
+              </li>
+            </ul>
+          </div>
+          <div>
             <h4>Contact</h4>
             <address className="footer-address">
               {CARTER.company.address.map((l, i) => <div key={i}>{l}</div>)}

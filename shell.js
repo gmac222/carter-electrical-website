@@ -236,7 +236,43 @@ window.Footer = function Footer() {
     href: "contact.html"
   }, "Contact")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
     href: CARTER.company.socialFb
-  }, "Facebook")))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h4", null, "Contact"), /*#__PURE__*/React.createElement("address", {
+  }, "Facebook")))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h4", null, "Hours"), /*#__PURE__*/React.createElement("ul", {
+    style: {
+      gap: '8px'
+    }
+  }, /*#__PURE__*/React.createElement("li", {
+    style: {
+      fontSize: '14.5px',
+      color: 'rgba(255,255,255,0.78)',
+      display: 'flex',
+      justifyContent: 'space-between',
+      gap: '16px'
+    }
+  }, /*#__PURE__*/React.createElement("span", null, "Mon - Fri"), /*#__PURE__*/React.createElement("span", null, "07:30 - 17:30")), /*#__PURE__*/React.createElement("li", {
+    style: {
+      fontSize: '14.5px',
+      color: 'rgba(255,255,255,0.78)',
+      display: 'flex',
+      justifyContent: 'space-between',
+      gap: '16px'
+    }
+  }, /*#__PURE__*/React.createElement("span", null, "Saturday"), /*#__PURE__*/React.createElement("span", {
+    style: {
+      color: 'rgba(255,255,255,0.4)'
+    }
+  }, "Closed")), /*#__PURE__*/React.createElement("li", {
+    style: {
+      fontSize: '14.5px',
+      color: 'rgba(255,255,255,0.78)',
+      display: 'flex',
+      justifyContent: 'space-between',
+      gap: '16px'
+    }
+  }, /*#__PURE__*/React.createElement("span", null, "Sunday"), /*#__PURE__*/React.createElement("span", {
+    style: {
+      color: 'rgba(255,255,255,0.4)'
+    }
+  }, "Closed")))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h4", null, "Contact"), /*#__PURE__*/React.createElement("address", {
     className: "footer-address"
   }, CARTER.company.address.map((l, i) => /*#__PURE__*/React.createElement("div", {
     key: i
