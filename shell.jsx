@@ -178,12 +178,54 @@ window.Footer = function Footer() {
         </div>
         <div className="footer-bottom">
           <div>© {new Date().getFullYear()} Carter Electrical Contracting Ltd</div>
-          <div>carterelec.co.uk</div>
+          <div className="footer-bottom-links" style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
+            <a href="privacy-policy.html" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none', transition: 'color .15s ease' }} onMouseEnter={e => e.target.style.color = 'var(--accent)'} onMouseLeave={e => e.target.style.color = 'rgba(255,255,255,0.4)'}>Privacy Policy</a>
+            <a href="terms.html" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none', transition: 'color .15s ease' }} onMouseEnter={e => e.target.style.color = 'var(--accent)'} onMouseLeave={e => e.target.style.color = 'rgba(255,255,255,0.4)'}>Terms of Use</a>
+            <span style={{ color: 'rgba(255,255,255,0.4)' }}>carterelec.co.uk</span>
+          </div>
         </div>
       </div>
+      <CookieBanner />
     </footer>
   );
 };
+
+function CookieBanner() {
+  const [accepted, setAccepted] = useState(true);
+
+  useEffect(() => {
+    const consent = localStorage.getItem('cookieConsent');
+    if (!consent) {
+      setAccepted(false);
+    }
+  }, []);
+
+  const handleAccept = () => {
+    localStorage.setItem('cookieConsent', 'accepted');
+    setAccepted(true);
+  };
+
+  const handleDecline = () => {
+    localStorage.setItem('cookieConsent', 'declined');
+    setAccepted(true);
+  };
+
+  if (accepted) return null;
+
+  return (
+    <div className="cookie-banner" role="dialog" aria-label="Cookie consent">
+      <div className="cookie-banner-content">
+        <p style={{ margin: 0, fontSize: '13.5px', color: 'rgba(255,255,255,0.85)', lineHeight: 1.5 }}>
+          We use cookies to optimise your experience on our website. Read our <a href="privacy-policy.html" style={{ color: 'var(--accent)', textDecoration: 'underline' }}>Privacy Policy</a> to learn more.
+        </p>
+        <div className="cookie-banner-actions" style={{ display: 'flex', gap: '8px', flexShrink: 0 }}>
+          <button onClick={handleAccept} className="btn btn-primary btn-sm" style={{ padding: '6px 12px', fontSize: '12px', minHeight: '32px' }}>Accept</button>
+          <button onClick={handleDecline} className="btn btn-ghost-light btn-sm" style={{ padding: '6px 12px', fontSize: '12px', minHeight: '32px', borderColor: 'rgba(255,255,255,0.2)' }}>Decline</button>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 // Scroll-reveal helper - adds `.in` to `.reveal` on entry
 window.useScrollReveal = function useScrollReveal() {

@@ -320,6 +320,154 @@ function AreasPage() {
   );
 }
 
+function PrivacyPolicyPage() {
+  useScrollReveal();
+  return (
+    <>
+      <Header current="" theme="dark"/>
+      <PageHero
+        section="Compliance & Security"
+        sectionNum="05.1 / Policy"
+        title="Privacy Policy"
+        titleAccent={<>your data protection guaranteed<span className="dot-white">.</span></>}
+        subtext="This policy explains how Carter Electrical Contracting Ltd collects, uses, and safeguards your personal data when you interact with our website."
+      />
+
+      <section className="section-y light reveal">
+        <div className="wrap">
+          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+            <div className="prose">
+              <h2>1. Introduction</h2>
+              <p>
+                Carter Electrical Contracting Ltd ("we", "us", or "our") is committed to protecting and respecting your privacy. We are fully compliant with the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018.
+              </p>
+              <p>
+                Our registered address is Unit 5, White Lane Depot, White Lane, Christleton, Chester, CH3 6AH. For any data protection enquiries, you can contact us at <a href="mailto:ian@carterelec.co.uk">ian@carterelec.co.uk</a>.
+              </p>
+
+              <h2>2. Information We Collect</h2>
+              <p>
+                We only collect personal information that you voluntarily provide to us when submitting an enquiry through our contact form. This includes:
+              </p>
+              <ul>
+                <li>Your name</li>
+                <li>Your email address</li>
+                <li>Your phone number</li>
+                <li>Details of your electrical enquiry and project address</li>
+              </ul>
+
+              <h2>3. How We Use Your Information</h2>
+              <p>
+                We process your personal data for the following purposes:
+              </p>
+              <ul>
+                <li>To respond to your project enquiries and provide scoping calls or fixed quotes.</li>
+                <li>To manage our customer relationships and provide NICEIC-certified electrical services.</li>
+                <li>To comply with legal, regulatory, and tax obligations under UK law.</li>
+              </ul>
+              <p>
+                We will never sell or rent your personal data to third parties for marketing purposes.
+              </p>
+
+              <h2>4. How We Secure Your Data</h2>
+              <p>
+                We implement industry-standard technical and organizational security measures to protect your data from unauthorized access, loss, or alteration. All lead submissions are encrypted in transit and securely processed through our central CRM system.
+              </p>
+
+              <h2>5. Your Rights</h2>
+              <p>
+                Under UK data protection laws, you have the following rights regarding your personal information:
+              </p>
+              <ul>
+                <li>The right to request access to the personal data we hold about you.</li>
+                <li>The right to request that we correct any inaccurate or incomplete data.</li>
+                <li>The right to request the deletion of your personal data ("the right to be forgotten").</li>
+                <li>The right to withdraw your consent to data processing at any time.</li>
+              </ul>
+              <p>
+                If you wish to exercise any of these rights, please email us directly at <a href="mailto:ian@carterelec.co.uk">ian@carterelec.co.uk</a>.
+              </p>
+
+              <h2>6. Cookies</h2>
+              <p>
+                We use cookies to optimise website performance and remember your preferences. You can choose to accept or decline cookies using our consent banner. Declining cookies will not prevent you from using the main features of our website.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer/>
+      <TweaksPanel/>
+    </>
+  );
+}
+
+function TermsOfUsePage() {
+  useScrollReveal();
+  return (
+    <>
+      <Header current="" theme="dark"/>
+      <PageHero
+        section="Compliance & Security"
+        sectionNum="05.2 / Terms"
+        title="Terms of Use"
+        titleAccent={<>website usage guidelines<span className="dot-white">.</span></>}
+        subtext="These terms govern your access to and use of the Carter Electrical Contracting website. By browsing this site, you accept these terms in full."
+      />
+
+      <section className="section-y light reveal">
+        <div className="wrap">
+          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+            <div className="prose">
+              <h2>1. Agreement to Terms</h2>
+              <p>
+                By accessing and browsing the website <a href="index.html">carterelec.co.uk</a>, you agree to comply with and be bound by these Terms of Use, along with our Privacy Policy. If you disagree with any part of these terms, please do not use our website.
+              </p>
+
+              <h2>2. Intellectual Property Rights</h2>
+              <p>
+                Unless otherwise stated, Carter Electrical Contracting Ltd owns the intellectual property rights for all material on this website, including all photography, design layouts, graphics, logos, and written copy. All intellectual property rights are reserved.
+              </p>
+              <p>
+                You must not republish, sell, rent, sub-license, duplicate, or redistribute any content from this website without our prior written consent.
+              </p>
+
+              <h2>3. Acceptable Use</h2>
+              <p>
+                You must use our website in a lawful manner that does not damage, disrupt, or impair the accessibility of the site, or interfere with other users' enjoyment. You must not use this website to distribute malware, spyware, viruses, or any other harmful software.
+              </p>
+
+              <h2>4. Disclaimer of Warranties</h2>
+              <p>
+                The information provided on this website is for general guidance and informational purposes only. While we endeavour to ensure that all information on this website is accurate and current, we do not warrant its completeness or accuracy, nor do we commit to ensuring the website remains available.
+              </p>
+              <p>
+                All electrical installations, compliance regulations, and technical certifications are governed by our formal customer contracts and NICEIC standards, not the general content of this website.
+              </p>
+
+              <h2>5. Limitation of Liability</h2>
+              <p>
+                To the maximum extent permitted by UK law, Carter Electrical Contracting Ltd will not be liable for any direct, indirect, or consequential loss or damage arising under these terms or in connection with the use of our website.
+              </p>
+
+              <h2>6. Governing Law</h2>
+              <p>
+                These Terms of Use are governed by and construed in accordance with the laws of England and Wales. Any disputes relating to these terms will be subject to the exclusive jurisdiction of the courts of England and Wales.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer/>
+      <TweaksPanel/>
+    </>
+  );
+}
+
 window.AboutPage = AboutPage;
 window.ServicesPage = ServicesPage;
 window.AreasPage = AreasPage;
+window.PrivacyPolicyPage = PrivacyPolicyPage;
+window.TermsOfUsePage = TermsOfUsePage;

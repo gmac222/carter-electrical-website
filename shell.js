@@ -286,8 +286,99 @@ window.Footer = function Footer() {
     href: `mailto:${CARTER.company.email}`
   }, CARTER.company.email))))), /*#__PURE__*/React.createElement("div", {
     className: "footer-bottom"
-  }, /*#__PURE__*/React.createElement("div", null, "\xA9 ", new Date().getFullYear(), " Carter Electrical Contracting Ltd"), /*#__PURE__*/React.createElement("div", null, "carterelec.co.uk"))));
+  }, /*#__PURE__*/React.createElement("div", null, "\xA9 ", new Date().getFullYear(), " Carter Electrical Contracting Ltd"), /*#__PURE__*/React.createElement("div", {
+    className: "footer-bottom-links",
+    style: {
+      display: 'flex',
+      gap: '20px',
+      flexWrap: 'wrap'
+    }
+  }, /*#__PURE__*/React.createElement("a", {
+    href: "privacy-policy.html",
+    style: {
+      color: 'rgba(255,255,255,0.4)',
+      textDecoration: 'none',
+      transition: 'color .15s ease'
+    },
+    onMouseEnter: e => e.target.style.color = 'var(--accent)',
+    onMouseLeave: e => e.target.style.color = 'rgba(255,255,255,0.4)'
+  }, "Privacy Policy"), /*#__PURE__*/React.createElement("a", {
+    href: "terms.html",
+    style: {
+      color: 'rgba(255,255,255,0.4)',
+      textDecoration: 'none',
+      transition: 'color .15s ease'
+    },
+    onMouseEnter: e => e.target.style.color = 'var(--accent)',
+    onMouseLeave: e => e.target.style.color = 'rgba(255,255,255,0.4)'
+  }, "Terms of Use"), /*#__PURE__*/React.createElement("span", {
+    style: {
+      color: 'rgba(255,255,255,0.4)'
+    }
+  }, "carterelec.co.uk")))), /*#__PURE__*/React.createElement(CookieBanner, null));
 };
+function CookieBanner() {
+  const [accepted, setAccepted] = useState(true);
+  useEffect(() => {
+    const consent = localStorage.getItem('cookieConsent');
+    if (!consent) {
+      setAccepted(false);
+    }
+  }, []);
+  const handleAccept = () => {
+    localStorage.setItem('cookieConsent', 'accepted');
+    setAccepted(true);
+  };
+  const handleDecline = () => {
+    localStorage.setItem('cookieConsent', 'declined');
+    setAccepted(true);
+  };
+  if (accepted) return null;
+  return /*#__PURE__*/React.createElement("div", {
+    className: "cookie-banner",
+    role: "dialog",
+    "aria-label": "Cookie consent"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "cookie-banner-content"
+  }, /*#__PURE__*/React.createElement("p", {
+    style: {
+      margin: 0,
+      fontSize: '13.5px',
+      color: 'rgba(255,255,255,0.85)',
+      lineHeight: 1.5
+    }
+  }, "We use cookies to optimise your experience on our website. Read our ", /*#__PURE__*/React.createElement("a", {
+    href: "privacy-policy.html",
+    style: {
+      color: 'var(--accent)',
+      textDecoration: 'underline'
+    }
+  }, "Privacy Policy"), " to learn more."), /*#__PURE__*/React.createElement("div", {
+    className: "cookie-banner-actions",
+    style: {
+      display: 'flex',
+      gap: '8px',
+      flexShrink: 0
+    }
+  }, /*#__PURE__*/React.createElement("button", {
+    onClick: handleAccept,
+    className: "btn btn-primary btn-sm",
+    style: {
+      padding: '6px 12px',
+      fontSize: '12px',
+      minHeight: '32px'
+    }
+  }, "Accept"), /*#__PURE__*/React.createElement("button", {
+    onClick: handleDecline,
+    className: "btn btn-ghost-light btn-sm",
+    style: {
+      padding: '6px 12px',
+      fontSize: '12px',
+      minHeight: '32px',
+      borderColor: 'rgba(255,255,255,0.2)'
+    }
+  }, "Decline"))));
+}
 
 // Scroll-reveal helper - adds `.in` to `.reveal` on entry
 window.useScrollReveal = function useScrollReveal() {
