@@ -1,9 +1,9 @@
-/* Carter Electrical Contracting — carterelec.co.uk
+/* Carter Electrical Contracting - carterelec.co.uk
  * Premium-technical with local approachability.
  */
 
 :root {
-  /* Light editorial palette — paper + ink, green accent */
+  /* Light editorial palette - paper + ink, green accent */
   --ink: #011D30;          /* near-black ink */
   --ink-2: #0B2637;        /* softer body ink */
   --paper: #f4f3ee;        /* warm cream */
@@ -18,7 +18,7 @@
   --accent-text: #4d8225;  /* WCAG 4.5:1 safe on white */
   --accent-ink: #0b1a05;
 
-  /* Type — editorial sans with mono labels */
+  /* Type - editorial sans with mono labels */
   --font-display: 'Montserrat', 'Neue Haas Grotesk Display Pro', 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --font-sans: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --font-body: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -83,7 +83,7 @@ section { position: relative; }
 .rule { border: 0; border-top: 1px solid var(--rule); margin: 0; }
 .dark .rule { border-top: 1px solid var(--rule-dark); }
 
-/* Eyebrow / meta label — a key identity element */
+/* Eyebrow / meta label - a key identity element */
 .eyebrow {
   font-family: var(--font-mono);
   font-size: 11px;
@@ -1771,7 +1771,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 }
 .skip-link:focus { top: 0; }
 
-/* Enhanced service card hover — more premium lift */
+/* Enhanced service card hover - more premium lift */
 .service-card {
   border: 1px solid var(--rule);
 }
@@ -1804,7 +1804,7 @@ details[open] summary::after {
 }
 details + details { border-top: none; }
 
-/* Location page area image — better aspect ratio */
+/* Location page area image - better aspect ratio */
 .area-image img {
   opacity: 1;
   object-fit: cover;
@@ -1843,7 +1843,7 @@ details + details { border-top: none; }
   .cta-band h2 { font-size: clamp(28px, 8vw, 44px); }
 }
 
-/* Improved button interaction — tactile press */
+/* Improved button interaction - tactile press */
 .btn:active { transform: translateY(1px); }
 
 /* Smooth cases grid hover */
@@ -1954,7 +1954,7 @@ details + details { border-top: none; }
     pointer-events: none;
   }
 
-  /* Quote button — primary green */
+  /* Quote button - primary green */
   .mobile-sticky-cta__quote {
     flex: 3;
     display: flex;
@@ -1980,7 +1980,7 @@ details + details { border-top: none; }
     filter: brightness(0.9);
   }
 
-  /* Call button — dark with accent text */
+  /* Call button - dark with accent text */
   .mobile-sticky-cta__call {
     flex: 2;
     display: flex;

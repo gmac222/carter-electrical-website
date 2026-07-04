@@ -321,7 +321,7 @@ const faqsMap = {
   'wirral': [
     {
       q: 'How do I find a qualified electrician for a Wirral commercial property?',
-      a: 'For commercial premises across Wirral—from retail units on Heswall High Street to light industrial sites at Wirral International Business Park in Bromborough—you should ensure your contractor is registered with a competent person scheme such as the NICEIC. Carter Electrical is fully NICEIC-approved, meaning we are regularly assessed on health and safety compliance, holds £5M public liability insurance, and can self-certify all commercial works.'
+      a: 'For commercial premises across Wirral (from retail units on Heswall High Street to light industrial sites at Wirral International Business Park in Bromborough), you should ensure your contractor is registered with a competent person scheme such as the NICEIC. Carter Electrical is fully NICEIC-approved, meaning we are regularly assessed on health and safety compliance, holds £5M public liability insurance, and can self-certify all commercial works.'
     },
     {
       q: 'Do you install OZEV EV chargers in Wirral residential areas?',

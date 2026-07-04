@@ -8,7 +8,7 @@ excerpt: "Understanding the legal requirements and safety benefits of regular El
 image: ""
 ---
 
-An Electrical Installation Condition Report (EICR) is an in-depth inspection of your property's electrical systems. For commercial properties, this is not just best practice—it's a legal requirement.
+An Electrical Installation Condition Report (EICR) is an in-depth inspection of your property's electrical systems. For commercial properties, this is not just best practice - it's a legal requirement.
 
 ## What is an EICR?
 
