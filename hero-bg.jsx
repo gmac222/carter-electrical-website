@@ -107,7 +107,7 @@ function HeroCanvas() {
       }
       ctx.restore();
 
-      // Traces — thin base lines
+      // Traces - thin base lines
       ctx.save();
       ctx.lineWidth = 1;
       ctx.strokeStyle = 'rgba(255,255,255,0.06)';
@@ -151,7 +151,7 @@ function HeroCanvas() {
           const x = (c0 + (c1 - c0) * frac) * cell;
           const y = (r0 + (r1 - r0) * frac) * cell;
 
-          // Trail — draw a short glowing segment behind the head along the path
+          // Trail - draw a short glowing segment behind the head along the path
           const trailLen = 0.06; // fraction of whole path
           const startT = Math.max(0, p.t - trailLen);
           const startScaled = startT * pathLen;
@@ -203,7 +203,7 @@ function HeroCanvas() {
         }
       }
 
-      // Nodes — lit when pulses arrive; slowly decay
+      // Nodes - lit when pulses arrive; slowly decay
       for (const n of nodes.values()) {
         if (n.pulse > 0.01) {
           const x = n.c * cell, y = n.r * cell;
@@ -223,7 +223,7 @@ function HeroCanvas() {
         }
       }
 
-      // Ambient slow wash — a large soft green glow that drifts
+      // Ambient slow wash - a large soft green glow that drifts
       const gx = W * (0.7 + 0.1 * Math.sin(elapsed * 0.00015));
       const gy = H * (0.35 + 0.08 * Math.cos(elapsed * 0.00012));
       const grad = ctx.createRadialGradient(gx, gy, 0, gx, gy, Math.max(W, H) * 0.55);
@@ -233,7 +233,7 @@ function HeroCanvas() {
       ctx.fillStyle = grad;
       ctx.fillRect(0, 0, W, H);
 
-      // Horizontal scan line — very subtle
+      // Horizontal scan line - very subtle
       // Scan line removed for subtlety
 
       raf = requestAnimationFrame(draw);

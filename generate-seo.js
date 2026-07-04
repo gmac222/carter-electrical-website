@@ -22,7 +22,7 @@ const COMPANY = {
   country: 'GB'
 };
 
-// Chester is intentionally NOT in this list — the homepage (/) is the Chester
+// Chester is intentionally NOT in this list: the homepage (/) is the Chester
 // service+location page, so we don't generate electricians-chester.html (would
 // cannibalise the homepage keyword). Cross-links to Chester from the 7 city
 // pages below go to "/" instead of a separate Chester page.
@@ -32,8 +32,8 @@ const areas = [
     county: 'Cheshire West', distance: '9 miles',
     postcodes: ['CH65', 'CH66'],
     neighbourhoods: ['Little Sutton', 'Whitby', 'Great Sutton', 'Hooton', 'Overpool', 'Rivacre', 'Strawberry', 'Wolverham'],
-    metaDesc: 'NICEIC-approved electricians in Ellesmere Port (CH65, CH66). Industrial three-phase, retail fit-outs at Cheshire Oaks, domestic rewires and OZEV EV chargers across Little Sutton, Whitby, Hooton and the surrounding area.',
-    intro: "Ellesmere Port is the industrial anchor of our north-Wirral coverage — a town whose electrical demand is shaped by Cheshire Oaks Designer Outlet at one end and the Stanlow refinery, Essar petrochemical complex and the former Vauxhall plant at the other. In practice that means we spend as much time on three-phase industrial installations, motor control work and machinery relocations for manufacturers along the M53 corridor as we do on retail unit fit-outs and EICR testing for landlords across CH65 and CH66.",
+    metaDesc: 'NICEIC-approved electricians in Ellesmere Port (CH65, CH66). Industrial three-phase, retail fit-outs, domestic rewires, and OZEV EV chargers. Get a free quote.',
+    intro: "Ellesmere Port is the industrial anchor of our north-Wirral coverage: a town whose electrical demand is shaped by Cheshire Oaks Designer Outlet at one end and the Stanlow refinery, Essar petrochemical complex and the former Vauxhall plant at the other. In practice that means we spend as much time on three-phase industrial installations, motor control work and machinery relocations for manufacturers along the M53 corridor as we do on retail unit fit-outs and EICR testing for landlords across CH65 and CH66.",
     commercialAngle: "Cheshire Oaks, Coliseum Retail Park and the Stanney Lane trading estates drive a steady flow of shop and restaurant fit-outs, landlord-side compliance testing, and emergency-lighting upgrades.",
     domesticAngle: "The CH65/CH66 housing stock is a mix of 1960s–1970s estates needing replacement consumer units and full rewires, and newer developments where we're installing OZEV-approved EV chargers and smart home controls."
   },
@@ -42,19 +42,19 @@ const areas = [
     county: 'Wrexham (Wales)', distance: '12 miles',
     postcodes: ['LL11', 'LL12', 'LL13', 'LL14'],
     neighbourhoods: ['Acton', 'Rhosddu', 'Rossett', 'Marford', 'Gwersyllt', 'Rhosllanerchrugog', 'Ruabon', 'Gresford', 'Coedpoeth', 'Borras', 'Hightown'],
-    metaDesc: 'NICEIC-approved electricians in Wrexham (LL11–LL14). Wrexham Industrial Estate three-phase work, commercial fit-outs, full rewires and EV chargers across Gresford, Rossett, Marford, Ruabon and the city centre.',
-    intro: "Wrexham — now officially a city — sits at the heart of one of the UK's largest industrial estates. Wrexham Industrial Estate alone hosts hundreds of manufacturers, and that dominates the electrical demand we see across LL11, LL12, LL13 and LL14: three-phase supplies, machinery installation and relocation, planned factory shutdowns, motor control rewires and preventative maintenance contracts.",
+    metaDesc: 'NICEIC-approved electricians in Wrexham (LL11–LL14). Industrial three-phase, commercial fit-outs, full rewires, and OZEV EV chargers. Contact us today.',
+    intro: "Wrexham, now officially a city, sits at the heart of one of the UK's largest industrial estates. Wrexham Industrial Estate alone hosts hundreds of manufacturers, and that dominates the electrical demand we see across LL11, LL12, LL13 and LL14: three-phase supplies, machinery installation and relocation, planned factory shutdowns, motor control rewires and preventative maintenance contracts.",
     commercialAngle: "Wrexham's commercial demand ranges from town-centre retail units through to newer office and hospitality work around the Racecourse and Eagles Meadow. We deliver design-and-install, EICR-led remedials and emergency-lighting programmes to landlords and operators.",
-    domesticAngle: "Cross-border working is routine for us — we hold NICEIC approval recognised across England and Wales. Domestic demand skews toward rewires in older terraced stock, EV chargers in Gresford and Marford, and replacement consumer units across the LL12 belt."
+    domesticAngle: "Cross-border working is routine for us: we hold NICEIC approval recognised across England and Wales. Domestic demand skews toward rewires in older terraced stock, EV chargers in Gresford and Marford, and replacement consumer units across the LL12 belt."
   },
   {
     name: 'Northwich', slug: 'northwich',
     county: 'Cheshire West', distance: '18 miles',
     postcodes: ['CW8', 'CW9'],
     neighbourhoods: ['Barnton', 'Hartford', 'Weaverham', 'Lostock Gralam', 'Rudheath', 'Castle', 'Winnington', 'Leftwich', 'Davenham', 'Sandiway', 'Kingsmead'],
-    metaDesc: 'NICEIC-approved electricians in Northwich (CW8, CW9). Industrial maintenance, Barons Quay retail fit-outs, full rewires, replacement consumer units and EV chargers across Hartford, Davenham, Kingsmead, Leftwich and Weaverham.',
-    intro: "Northwich has always been a chemical and industrial town — Tata Chemicals and the long Brunner Mond legacy still shape the commercial electrical demand across CW8 and CW9. Combined with a regenerated town centre (Barons Quay, Northwich Indoor Market) and a strong pipeline of new-build residential in Kingsmead, Leftwich and Davenham, Northwich gives us a full spread of work.",
-    commercialAngle: "Barons Quay retail and leisure tenants, the Lostock Gralam trading estates and town-centre hospitality drive most of our Northwich commercial work — fit-outs, EICRs, landlord compliance, and planned lighting upgrades.",
+    metaDesc: 'NICEIC-approved electricians in Northwich (CW8, CW9). Industrial maintenance, retail fit-outs, full rewires, consumer units, and EV chargers. Request a quote.',
+    intro: "Northwich has always been a chemical and industrial town: Tata Chemicals and the long Brunner Mond legacy still shape the commercial electrical demand across CW8 and CW9. Combined with a regenerated town centre (Barons Quay, Northwich Indoor Market) and a strong pipeline of new-build residential in Kingsmead, Leftwich and Davenham, Northwich gives us a full spread of work.",
+    commercialAngle: "Barons Quay retail and leisure tenants, the Lostock Gralam trading estates and town-centre hospitality drive most of our Northwich commercial work: fit-outs, EICRs, landlord compliance, and planned lighting upgrades.",
     domesticAngle: "Hartford and Davenham demand sits with replacement consumer units and part-rewires on 1970s-era stock, while Kingsmead and Leftwich new-build owners most often call us for EV chargers, solar-PV add-ons and smart lighting."
   },
   {
@@ -62,9 +62,9 @@ const areas = [
     county: 'Cheshire West', distance: '14 miles',
     postcodes: ['WA6'],
     neighbourhoods: ['Kingsley', 'Helsby', 'Overton', 'Alvanley', 'Manley', 'Mouldsworth', 'Norley', 'Crowton'],
-    metaDesc: 'NICEIC-approved electricians in Frodsham (WA6). Main Street commercial fit-outs, EICRs, full rewires and OZEV EV chargers across Helsby, Kingsley, Overton, Alvanley and Mouldsworth.',
+    metaDesc: 'NICEIC-approved electricians in Frodsham (WA6). Commercial fit-outs, landlord EICRs, full rewires, and OZEV EV chargers. Contact us for a free quote.',
     intro: "Frodsham is a market town with a strong high-street trade, a surrounding belt of Cheshire villages (Kingsley, Helsby, Alvanley, Manley) and a growing commuter population. The WA6 postcode gives us a mix we enjoy: small-to-mid commercial work for the independents on Main Street, EV charger installs across the commuter homes of Helsby and Overton, and sensitive rewires on older stone-built properties.",
-    commercialAngle: "Frodsham's independents — restaurants, pubs, salons and the Main Street retail trade — rely on us for quick-turnaround fit-outs, EICRs ahead of lease renewals, and PAT testing programmes.",
+    commercialAngle: "Frodsham's independents (restaurants, pubs, salons and the Main Street retail trade) rely on us for quick-turnaround fit-outs, EICRs ahead of lease renewals, and PAT testing programmes.",
     domesticAngle: "Commuter demand dominates: OZEV-approved EV charger installs with load management, full-property rewires where homebuyers' surveys have flagged old wiring, and smart-heating retrofits for the Overton and Helsby stock."
   },
   {
@@ -72,19 +72,19 @@ const areas = [
     county: 'Cheshire West', distance: '11 miles',
     postcodes: ['CW6'],
     neighbourhoods: ['Utkinton', 'Cotebrook', 'Eaton', 'Alpraham', 'Beeston', 'Bunbury', 'Tiverton', 'Little Budworth', 'Cuddington'],
-    metaDesc: 'NICEIC-approved electricians in Tarporley (CW6). Heritage rewires, smart-home installs, barn conversion wiring, three-phase outbuilding supplies and EV chargers across Utkinton, Cotebrook, Beeston, Bunbury and Tiverton.',
-    intro: "Tarporley is the archetypal upmarket Cheshire village — a conservation-area High Street of Georgian and Victorian property, surrounded by equestrian estates and barn conversions across Utkinton, Cotebrook, Beeston and Bunbury. Our CW6 work leans strongly domestic and high-end: full rewires on listed farmhouses, smart-home and lighting-control retrofits, outbuilding and stable-yard three-phase supplies, and sensitive work on conservation-area stock.",
+    metaDesc: 'NICEIC-approved electricians in Tarporley (CW6). Heritage rewires, smart-home systems, barn conversions, and outbuilding three-phase supplies. Contact us.',
+    intro: "Tarporley is the archetypal upmarket Cheshire village: a conservation-area High Street of Georgian and Victorian property, surrounded by equestrian estates and barn conversions across Utkinton, Cotebrook, Beeston and Bunbury. Our CW6 work leans strongly domestic and high-end: full rewires on listed farmhouses, smart-home and lighting-control retrofits, outbuilding and stable-yard three-phase supplies, and sensitive work on conservation-area stock.",
     commercialAngle: "Tarporley High Street's boutique retail, hospitality and professional-services offices use us for EICR-led remedials, fit-outs and emergency lighting. We also support the equestrian and agricultural sector with three-phase supplies to yards and barns.",
-    domesticAngle: "High-end domestic is the core of our Tarporley demand — smart-lighting schemes with multi-room control, heritage-sensitive rewires on listed farmhouses, EV charger installs with three-phase capability, and outdoor lighting design on larger plots."
+    domesticAngle: "High-end domestic is the core of our Tarporley demand: smart-lighting schemes with multi-room control, heritage-sensitive rewires on listed farmhouses, EV charger installs with three-phase capability, and outdoor lighting design on larger plots."
   },
   {
     name: 'Mold', slug: 'mold',
     county: 'Flintshire (Wales)', distance: '13 miles',
     postcodes: ['CH7'],
     neighbourhoods: ['Buckley', 'New Brighton', 'Gwernaffield', 'Gwernymynydd', 'Leeswood', 'Nercwys', 'Pontblyddyn', 'Sychdyn', 'Alltami'],
-    metaDesc: 'NICEIC-approved electricians in Mold (CH7). Town-centre commercial fit-outs, agricultural three-phase, rural outbuilding supplies, full rewires and EV chargers across Buckley, Gwernaffield, Leeswood, Nercwys and Alltami.',
-    intro: "Mold is the county town of Flintshire and our primary foothold for cross-border Welsh work. The CH7 postcode covers a wide rural area — so alongside the town-centre commercial and hospitality trade, we carry out a lot of three-phase agricultural supplies, farm and outbuilding installs, and sensitive domestic rewires through Gwernaffield, Nercwys and Leeswood.",
-    commercialAngle: "Mold town centre — Daniel Owen Square, the Market and High Street — drives most of our commercial work: small-to-mid fit-outs, landlord EICRs, emergency-lighting upgrades and PAT testing.",
+    metaDesc: 'NICEIC-approved electricians in Mold (CH7). Commercial fit-outs, agricultural three-phase, outbuilding supplies, rewires, and EV chargers. Get a quote.',
+    intro: "Mold is the county town of Flintshire and our primary foothold for cross-border Welsh work. The CH7 postcode covers a wide rural area, so alongside the town-centre commercial and hospitality trade, we carry out a lot of three-phase agricultural supplies, farm and outbuilding installs, and sensitive domestic rewires through Gwernaffield, Nercwys and Leeswood.",
+    commercialAngle: "Mold town centre (Daniel Owen Square, the Market and High Street) drives most of our commercial work: small-to-mid fit-outs, landlord EICRs, emergency-lighting upgrades and PAT testing.",
     domesticAngle: "Rural demand is a big part of CH7: outbuilding supplies, three-phase for farms, smart-home and EV-charger installs for commuter villages, and full rewires on older stone-built properties."
   },
   {
@@ -92,9 +92,9 @@ const areas = [
     county: 'Flintshire (Wales)', distance: '10 miles',
     postcodes: ['CH5'],
     neighbourhoods: ['Shotton', "Connah's Quay", 'Queensferry', 'Sealand', 'Hawarden', 'Garden City', 'Sandycroft', 'Mancot', 'Ewloe'],
-    metaDesc: 'NICEIC-approved electricians in Deeside (CH5). Deeside Industrial Park three-phase, factory shutdowns, commercial fit-outs, full rewires and EV chargers across Shotton, Connah\'s Quay, Queensferry, Hawarden and Ewloe.',
-    intro: "Deeside is defined by the Deeside Industrial Park — one of North Wales' largest employment zones — and the nearby Airbus Broughton site. That shapes what we do here: heavy three-phase industrial supplies, motor-control rewires, planned factory shutdowns, machinery installation and relocation, and preventative-maintenance contracts for manufacturers across CH5.",
-    commercialAngle: "Deeside Industrial Park tenants are the backbone of our commercial work here — scheduled maintenance, RCD and distribution upgrades, compliance testing and planned remedial works.",
+    metaDesc: 'NICEIC-approved electricians in Deeside (CH5). Industrial three-phase, factory shutdowns, commercial fit-outs, full rewires, and EV chargers. Contact us.',
+    intro: "Deeside is defined by the Deeside Industrial Park, one of North Wales' largest employment zones, and the nearby Airbus Broughton site. That shapes what we do here: heavy three-phase industrial supplies, motor-control rewires, planned factory shutdowns, machinery installation and relocation, and preventative-maintenance contracts for manufacturers across CH5.",
+    commercialAngle: "Deeside Industrial Park tenants are the backbone of our commercial work here: scheduled maintenance, RCD and distribution upgrades, compliance testing and planned remedial works.",
     domesticAngle: "Shotton and Connah's Quay terraced stock needs full rewires and replacement consumer units more often than not, while Hawarden and Ewloe homeowners are mostly calling us for EV chargers, solar-PV add-ons and smart-home retrofits."
   },
   {
@@ -102,14 +102,14 @@ const areas = [
     county: 'Merseyside', distance: '20 miles',
     postcodes: ['CH41', 'CH42', 'CH43', 'CH44', 'CH45', 'CH46', 'CH47', 'CH48', 'CH49', 'CH60', 'CH61', 'CH62', 'CH63'],
     neighbourhoods: ['Birkenhead', 'Prenton', 'Wallasey', 'New Brighton', 'Bebington', 'Heswall', 'West Kirby', 'Hoylake', 'Bromborough', 'Moreton', 'Upton', 'Greasby', 'Port Sunlight', 'Eastham', 'Caldy'],
-    metaDesc: 'NICEIC-approved electricians on the Wirral (CH41–CH49, CH60–CH63). Industrial three-phase at Bromborough, commercial fit-outs, full rewires, EICRs and OZEV EV chargers across Birkenhead, Wallasey, Bebington, Heswall, West Kirby and Hoylake.',
-    intro: "The Wirral peninsula is the densest and most varied patch of our Merseyside coverage — a full spread from the shipbuilding and dockside industry of Birkenhead and Cammell Laird, through the retail and hospitality trade of Wallasey, New Brighton and West Kirby, to the higher-end residential belt of Heswall, Caldy and Gayton. Across the CH41–CH49 and CH60–CH63 postcodes that gives us the complete range of work: three-phase industrial supplies and motor-control on the Wirral International Business Park at Bromborough, retail and leisure fit-outs, EICR-led landlord compliance on Birkenhead's dense terraced and flatted stock, and sensitive full rewires and smart-home installs on the peninsula's period and coastal property.",
+    metaDesc: 'NICEIC-approved electricians in Wirral (CH41–CH49, CH60–CH63). Commercial fit-outs, industrial three-phase, EICRs & EV chargers. Contact us for a quote.',
+    intro: "The Wirral peninsula is the densest and most varied patch of our Merseyside coverage: a full spread from the shipbuilding and dockside industry of Birkenhead and Cammell Laird, through the retail and hospitality trade of Wallasey, New Brighton and West Kirby, to the higher-end residential belt of Heswall, Caldy and Gayton. Across the CH41–CH49 and CH60–CH63 postcodes that gives us the complete range of work: three-phase industrial supplies and motor-control on the Wirral International Business Park at Bromborough, retail and leisure fit-outs, EICR-led landlord compliance on Birkenhead's dense terraced and flatted stock, and sensitive full rewires and smart-home installs on the peninsula's period and coastal property.",
     commercialAngle: "Wirral's commercial demand spans the Wirral International Business Park and Bromborough's manufacturing estates, the regenerating Birkenhead waterfront around Wirral Waters and Twelve Quays, and the retail and hospitality trade at New Brighton's Marine Point, Birkenhead's Grange and Pyramids precincts and the West Kirby and Heswall high streets. We deliver design-and-install fit-outs, landlord EICRs ahead of lease renewals, emergency-lighting certification and planned maintenance contracts.",
     domesticAngle: "The peninsula's housing stock runs the full range: Victorian and Edwardian terraces in Birkenhead, Tranmere and Wallasey needing full rewires and replacement consumer units; interwar semis across Bebington, Eastham and Moreton; and higher-end detached and coastal property in Heswall, Caldy, West Kirby and Hoylake where the calls are for smart-lighting schemes, garden and outbuilding supplies, and OZEV-approved EV chargers with load management."
   }
 ];
 
-// Per-location FAQs — same structure as window.CARTER.locationFaqs so the
+// Per-location FAQs: same structure as window.CARTER.locationFaqs so the
 // noscript version mirrors what React renders.
 function buildFaqs(area) {
   const post = area.postcodes.join(', ');
@@ -117,27 +117,27 @@ function buildFaqs(area) {
   return [
     {
       q: 'Are your electricians NICEIC-approved and qualified to work in ' + area.name + '?',
-      a: 'Yes. Carter Electrical Contracting is a fully NICEIC-approved contractor, and every electrician dispatched to ' + area.name + ' works to BS 7671 (18th Edition, including the latest amendments). Certification is issued at handover on every job — EIC, minor works or EICR as appropriate — and logged against the property address so it\'s straightforward to retrieve if you need it for insurance, a landlord pack or a future sale.'
+      a: 'Yes. Carter Electrical Contracting is a fully NICEIC-approved contractor, and every electrician dispatched to ' + area.name + ' works to BS 7671 (18th Edition, including the latest amendments). Certification is issued at handover on every job (EIC, minor works or EICR as appropriate) and logged against the property address so it\'s straightforward to retrieve if you need it for insurance, a landlord pack or a future sale.'
     },
     {
       q: 'What\'s your typical lead time for a new project in ' + area.name + '?',
-      a: 'It depends on scope. A small domestic job — a replacement consumer unit, a few additional circuits, a single EV charger — we can usually schedule within a week or two of sign-off. A larger commercial fit-out or industrial installation normally goes through a site visit, a detailed scope and a formal quote first, and we\'ll give you an honest date at that stage rather than overpromise. Our phone is answered during working hours by the same team that schedules the engineers, so you\'ll get a straight answer on timings.'
+      a: 'It depends on scope. A small domestic job (a replacement consumer unit, a few additional circuits, or a single EV charger) we can usually schedule within a week or two of sign-off. A larger commercial fit-out or industrial installation normally goes through a site visit, a detailed scope and a formal quote first, and we\'ll give you an honest date at that stage rather than overpromise. Our phone is answered during working hours by the same team that schedules the engineers, so you\'ll get a straight answer on timings.'
     },
     {
       q: 'Which ' + area.name + ' postcodes and neighbourhoods do you cover?',
-      a: 'We cover every postcode inside ' + area.name + ' and its surrounding villages — primarily ' + post + '. That includes ' + nb + ' and the rest of the ' + area.county + ' area. If you\'re unsure whether your address is in our usual radius, call us with the postcode and we\'ll confirm before scheduling.'
+      a: 'We cover every postcode inside ' + area.name + ' and its surrounding villages, primarily ' + post + '. That includes ' + nb + ' and the rest of the ' + area.county + ' area. If you\'re unsure whether your address is in our usual radius, call us with the postcode and we\'ll confirm before scheduling.'
     },
     {
       q: 'Do you carry out EICRs and landlord electrical-safety reports in ' + area.name + '?',
-      a: 'Yes. We\'re a go-to contractor for EICRs across ' + area.name + ' — both for commercial landlords ahead of lease renewals and for residential landlords meeting the five-yearly Electrical Safety Standards in the Private Rented Sector (England) Regulations 2020, or the equivalent Welsh legislation where applicable. Reports are issued as a signed PDF within 48 hours of the test, with remedial quotes broken out clearly so you can decide what\'s urgent.'
+      a: 'Yes. We\'re a go-to contractor for EICRs across ' + area.name + ': both for commercial landlords ahead of lease renewals and for residential landlords meeting the five-yearly Electrical Safety Standards in the Private Rented Sector (England) Regulations 2020, or the equivalent Welsh legislation where applicable. Reports are issued as a signed PDF within 48 hours of the test, with remedial quotes broken out clearly so you can decide what\'s urgent.'
     },
     {
       q: 'Can you install an OZEV-approved EV charger at a home or business in ' + area.name + '?',
-      a: 'Yes — we\'re OZEV-approved and install 7 kW single-phase and 22 kW three-phase chargers throughout ' + area.name + '. For domestic installs we handle the DNO notification, load management (so your main supply doesn\'t get overloaded) and OLEV/EV-chargepoint grant paperwork where you\'re eligible. For workplace installs we can scope multi-bay back-office systems with RFID authorisation and billing integration.'
+      a: 'Yes, we\'re OZEV-approved and install 7 kW single-phase and 22 kW three-phase chargers throughout ' + area.name + '. For domestic installs we handle the DNO notification, load management (so your main supply doesn\'t get overloaded) and OLEV/EV-chargepoint grant paperwork where you\'re eligible. For workplace installs we can scope multi-bay back-office systems with RFID authorisation and billing integration.'
     },
     {
       q: 'Do you work on heritage, listed or conservation-area properties in ' + area.name + '?',
-      a: 'Yes, and we do it often. ' + area.name + '\'s older property stock needs a different hand — surface-clipped cable runs on stone walls, concealed containment through plasterwork, period-sympathetic switch and socket plates, and documentation that will satisfy both a conservation officer and the NICEIC.'
+      a: 'Yes, and we do it often. ' + area.name + '\'s older property stock needs a different hand: surface-clipped cable runs on stone walls, concealed containment through plasterwork, period-sympathetic switch and socket plates, and documentation that will satisfy both a conservation officer and the NICEIC.'
     }
   ];
 }
@@ -148,7 +148,7 @@ function esc(str) {
 
 function buildHtml(area) {
   const url = `${COMPANY.site}/electricians-${area.slug}.html`;
-  const title = `Electricians in ${area.name} | NICEIC-approved | ${COMPANY.name}`;
+  const title = `Electricians in ${area.name} | NICEIC-Approved | Carter Electrical`;
   const faqs = buildFaqs(area);
   // Cross-link to the 7 other city pages plus back to the Chester/homepage.
   const otherAreas = areas.filter(a => a.slug !== area.slug);
@@ -208,7 +208,7 @@ function buildHtml(area) {
     ]
   };
 
-  // Noscript fallback — real, crawlable content for non-JS crawlers.
+  // Noscript fallback: real, crawlable content for non-JS crawlers.
   const noscript = `
     <header>
       <p><a href="${COMPANY.site}">${COMPANY.name}</a> · <a href="tel:+441244727291">${COMPANY.phone}</a></p>
@@ -217,7 +217,7 @@ function buildHtml(area) {
       <nav aria-label="Breadcrumb">
         <a href="/">Home</a> &rsaquo; <a href="/areas.html">Areas We Cover</a> &rsaquo; Electricians in ${esc(area.name)}
       </nav>
-      <h1>Electricians in ${esc(area.name)} — NICEIC-approved</h1>
+      <h1>Electricians in ${esc(area.name)} - NICEIC-approved</h1>
       <p>${esc(area.intro)}</p>
 
       <h2>Coverage</h2>

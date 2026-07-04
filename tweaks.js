@@ -1,4 +1,4 @@
-// Tweaks panel — hooks into the host's edit-mode protocol.
+// Tweaks panel - hooks into the host's edit-mode protocol.
 
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "accentHue": 131,

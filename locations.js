@@ -30,6 +30,7 @@ function LocationPage({
   const faqs = CARTER.locationFaqs ? CARTER.locationFaqs(area) : [];
   const relatedCases = CARTER.cases.filter(c => (c.location || '').toLowerCase().indexOf(locationName.toLowerCase()) !== -1);
   const otherAreas = CARTER.areas.filter(a => a.name !== locationName).slice(0, 6);
+  const distanceText = locationName === 'Chester' ? 'right here in Chester' : `${area.distance ? `${area.distance} from ` : 'a short drive from '}${locationName}`;
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Header, {
     current: "areas",
     theme: "dark"
@@ -38,7 +39,7 @@ function LocationPage({
     sectionNum: "03.1 / Location",
     title: `Local electricians covering ${locationName}`,
     titleAccent: " - NICEIC-approved.",
-    subtext: `NICEIC-approved commercial, industrial, domestic and renewables electricians serving ${locationName}${area.postcodes && area.postcodes.length ? ' (' + area.postcodes.join(', ') + ')' : ''} and the surrounding ${area.county || 'area'}. EICR testing, EV chargers, full rewires and commercial fit-outs - delivered by our in-house team from our Christleton base, ${area.distance || 'a short drive from'} ${locationName}.`,
+    subtext: `NICEIC-approved commercial, industrial, domestic and renewables electricians serving ${locationName}${area.postcodes && area.postcodes.length ? ' (' + area.postcodes.join(', ') + ')' : ''} and the surrounding ${area.county || 'area'}. EICR testing, EV chargers, full rewires and commercial fit-outs - delivered by our in-house team from our Christleton base, ${distanceText}.`,
     ctas: /*#__PURE__*/React.createElement("div", {
       style: {
         display: 'flex',
@@ -427,7 +428,7 @@ function LocationPage({
       marginTop: 28,
       maxWidth: '70ch'
     }
-  }, "We also work around key ", locationName, " locations including ", area.landmarks.join(', '), ". If you're scoping electrical work at one of these or on a nearby site, we've likely been on-site in the area recently \u2014 ask us for a reference."))), area.featuredProject && /*#__PURE__*/React.createElement("section", {
+  }, "We also work around key ", locationName, " locations including ", area.landmarks.join(', '), ". If you're scoping electrical work at one of these or on a nearby site, we've likely been on-site in the area recently - ask us for a reference."))), area.featuredProject && /*#__PURE__*/React.createElement("section", {
     className: "section-y light reveal"
   }, /*#__PURE__*/React.createElement("div", {
     className: "wrap"
@@ -459,14 +460,21 @@ function LocationPage({
     style: {
       marginTop: 24
     }
-  }, /*#__PURE__*/React.createElement("a", {
-    href: "case-studies.html",
-    className: "btn btn-ghost-dark"
-  }, "See related case studies ", /*#__PURE__*/React.createElement("span", {
-    dangerouslySetInnerHTML: {
-      __html: CARTER.svg.arrow
-    }
-  })))))), faqs.length > 0 && /*#__PURE__*/React.createElement("section", {
+  }, (() => {
+    const validCaseIds = ['prenton-wirral', 'old-dukes', 'carbonara-no-49', 'bryn-rhiw'];
+    const firstCase = relatedCases[0];
+    const hasPage = firstCase && firstCase.id && validCaseIds.includes(firstCase.id);
+    const href = hasPage ? `case-${firstCase.id}.html` : 'case-studies.html';
+    const text = hasPage ? 'View case study' : 'See related case studies';
+    return /*#__PURE__*/React.createElement("a", {
+      href: href,
+      className: "btn btn-ghost-dark"
+    }, text, " ", /*#__PURE__*/React.createElement("span", {
+      dangerouslySetInnerHTML: {
+        __html: CARTER.svg.arrow
+      }
+    }));
+  })())))), faqs.length > 0 && /*#__PURE__*/React.createElement("section", {
     className: "section-y reveal"
   }, /*#__PURE__*/React.createElement("div", {
     className: "wrap"

@@ -20,6 +20,10 @@ function LocationPage({ locationName }) {
   );
   const otherAreas = CARTER.areas.filter(a => a.name !== locationName).slice(0, 6);
 
+  const distanceText = locationName === 'Chester' 
+    ? 'right here in Chester' 
+    : `${area.distance ? `${area.distance} from ` : 'a short drive from '}${locationName}`;
+
   return (
     <>
       <Header current="areas" theme="dark" />
@@ -29,7 +33,7 @@ function LocationPage({ locationName }) {
         sectionNum="03.1 / Location"
         title={`Local electricians covering ${locationName}`}
         titleAccent=" - NICEIC-approved."
-        subtext={`NICEIC-approved commercial, industrial, domestic and renewables electricians serving ${locationName}${area.postcodes && area.postcodes.length ? ' (' + area.postcodes.join(', ') + ')' : ''} and the surrounding ${area.county || 'area'}. EICR testing, EV chargers, full rewires and commercial fit-outs - delivered by our in-house team from our Christleton base, ${area.distance || 'a short drive from'} ${locationName}.`}
+        subtext={`NICEIC-approved commercial, industrial, domestic and renewables electricians serving ${locationName}${area.postcodes && area.postcodes.length ? ' (' + area.postcodes.join(', ') + ')' : ''} and the surrounding ${area.county || 'area'}. EICR testing, EV chargers, full rewires and commercial fit-outs - delivered by our in-house team from our Christleton base, ${distanceText}.`}
         ctas={
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
             <div style={{ display: 'flex', gap: '12px' }}>
@@ -72,7 +76,7 @@ function LocationPage({ locationName }) {
         </div>
       </PageHero>
 
-      {/* Intro / local context — unique per city */}
+      {/* Intro / local context - unique per city */}
       <section className="section-y light reveal">
         <div className="wrap">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '60px', alignItems: 'stretch' }}>
@@ -153,7 +157,7 @@ function LocationPage({ locationName }) {
         </div>
       </section>
 
-      {/* Commercial + domestic deep paragraphs — unique per area */}
+      {/* Commercial + domestic deep paragraphs - unique per area */}
       {(area.commercialAngle || area.domesticAngle) && (
       <section className="section-y light reveal">
         <div className="wrap" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 40 }}>
@@ -202,7 +206,7 @@ function LocationPage({ locationName }) {
           </div>
           {area.landmarks && area.landmarks.length > 0 && (
             <p style={{ color: 'var(--muted-2)', lineHeight: 1.7, marginTop: 28, maxWidth: '70ch' }}>
-              We also work around key {locationName} locations including {area.landmarks.join(', ')}. If you're scoping electrical work at one of these or on a nearby site, we've likely been on-site in the area recently — ask us for a reference.
+              We also work around key {locationName} locations including {area.landmarks.join(', ')}. If you're scoping electrical work at one of these or on a nearby site, we've likely been on-site in the area recently - ask us for a reference.
             </p>
           )}
         </div>
@@ -224,7 +228,18 @@ function LocationPage({ locationName }) {
             )}
             {relatedCases.length > 0 && (
               <div style={{ marginTop: 24 }}>
-                <a href="case-studies.html" className="btn btn-ghost-dark">See related case studies <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }}/></a>
+                {(() => {
+                  const validCaseIds = ['prenton-wirral', 'old-dukes', 'carbonara-no-49', 'bryn-rhiw'];
+                  const firstCase = relatedCases[0];
+                  const hasPage = firstCase && firstCase.id && validCaseIds.includes(firstCase.id);
+                  const href = hasPage ? `case-${firstCase.id}.html` : 'case-studies.html';
+                  const text = hasPage ? 'View case study' : 'See related case studies';
+                  return (
+                    <a href={href} className="btn btn-ghost-dark">
+                      {text} <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }}/>
+                    </a>
+                  );
+                })()}
               </div>
             )}
           </div>
@@ -232,7 +247,7 @@ function LocationPage({ locationName }) {
       </section>
       )}
 
-      {/* FAQ — genuinely local answers */}
+      {/* FAQ - genuinely local answers */}
       {faqs.length > 0 && (
       <section className="section-y reveal">
         <div className="wrap">
@@ -252,7 +267,7 @@ function LocationPage({ locationName }) {
       </section>
       )}
 
-      {/* Related nearby areas — internal linking */}
+      {/* Related nearby areas - internal linking */}
       {otherAreas.length > 0 && (
       <section className="section-y light reveal">
         <div className="wrap">
