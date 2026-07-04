@@ -5,6 +5,7 @@ const {
   Header,
   Footer,
   TrustBar,
+  CarterPlaceholder,
   TweaksPanel,
   useScrollReveal,
   PageHero
@@ -28,7 +29,8 @@ function LocationPage({
     county: ''
   };
   const faqs = CARTER.locationFaqs ? CARTER.locationFaqs(area) : [];
-  const relatedCases = CARTER.cases.filter(c => (c.location || '').toLowerCase().indexOf(locationName.toLowerCase()) !== -1);
+  const relatedCases = CARTER.cases.filter(c => (c.location || '').toLowerCase().indexOf(locationName.toLowerCase()) !== -1 || locationName === 'Ellesmere Port' && c.id === 'prenton-wirral');
+  const displayCases = relatedCases.length > 0 ? relatedCases : CARTER.cases.filter(c => c.id === 'old-dukes' || c.id === 'bryn-rhiw');
   const otherAreas = CARTER.areas.filter(a => a.name !== locationName).slice(0, 6);
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Header, {
     current: "areas",
@@ -119,7 +121,7 @@ function LocationPage({
     className: "k"
   }, "Sectors"), /*#__PURE__*/React.createElement("span", {
     className: "v"
-  }, "Commercial \xB7 Domestic \xB7 Industrial")))))), /*#__PURE__*/React.createElement("section", {
+  }, "Commercial \xB7 Domestic \xB7 Industrial")))))), /*#__PURE__*/React.createElement(TrustBar, null), /*#__PURE__*/React.createElement("section", {
     className: "section-y light reveal"
   }, /*#__PURE__*/React.createElement("div", {
     className: "wrap"
@@ -456,12 +458,13 @@ function LocationPage({
       maxWidth: '70ch'
     }
   }, "We also work around key ", locationName, " locations including ", area.landmarks.join(', '), ". If you're scoping electrical work at one of these or on a nearby site, we've likely been on-site in the area recently - ask us for a reference."))), area.featuredProject && /*#__PURE__*/React.createElement("section", {
-    className: "section-y light reveal"
+    className: "section-y light reveal",
+    id: "cases"
   }, /*#__PURE__*/React.createElement("div", {
     className: "wrap"
   }, /*#__PURE__*/React.createElement("div", {
     style: {
-      maxWidth: '800px'
+      marginBottom: 40
     }
   }, /*#__PURE__*/React.createElement("div", {
     className: "eyebrow"
@@ -470,7 +473,7 @@ function LocationPage({
     style: {
       marginTop: 10
     }
-  }, "Featured project", /*#__PURE__*/React.createElement("span", {
+  }, "Featured project & local work", /*#__PURE__*/React.createElement("span", {
     className: "accent"
   }, ".")), /*#__PURE__*/React.createElement("p", {
     className: "lede",
@@ -483,25 +486,36 @@ function LocationPage({
       lineHeight: 1.7,
       marginTop: 16
     }
-  }, "We've completed ", area.cases, " documented electrical installations or compliance programmes in and around ", locationName, ". Our work is built on reliability, transparent pricing (the number on the quote is the number on the invoice), and rigorous NICEIC-standard safety."), relatedCases.length > 0 && /*#__PURE__*/React.createElement("div", {
-    style: {
-      marginTop: 24
+  }, "We've completed ", area.cases, " documented electrical installations or compliance programmes in and around ", locationName, ". Below is a selection of recent projects illustrating our standard of work:")), /*#__PURE__*/React.createElement("div", {
+    className: "cases-grid"
+  }, displayCases.map(c => /*#__PURE__*/React.createElement("a", {
+    key: c.id,
+    href: `case-${c.id}.html`,
+    className: "case-card"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "case-visual"
+  }, /*#__PURE__*/React.createElement(CarterPlaceholder, {
+    imgSrc: c.imgSrc,
+    metaTag: `${c.sector} · ${c.subsector}`,
+    titleCaption: `${c.title} - ${c.location}`,
+    year: c.year,
+    hue: c.hue
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "case-body"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "case-tags"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "case-tag primary"
+  }, c.sector), c.scope.slice(0, 2).map(s => /*#__PURE__*/React.createElement("span", {
+    key: s,
+    className: "case-tag"
+  }, s))), /*#__PURE__*/React.createElement("h3", null, c.title), /*#__PURE__*/React.createElement("p", null, c.blurb), /*#__PURE__*/React.createElement("span", {
+    className: "link"
+  }, "View project", /*#__PURE__*/React.createElement("span", {
+    dangerouslySetInnerHTML: {
+      __html: CARTER.svg.arrow
     }
-  }, (() => {
-    const validCaseIds = ['prenton-wirral', 'old-dukes', 'carbonara-no-49', 'bryn-rhiw'];
-    const firstCase = relatedCases[0];
-    const hasPage = firstCase && firstCase.id && validCaseIds.includes(firstCase.id);
-    const href = hasPage ? `case-${firstCase.id}.html` : 'case-studies.html';
-    const text = hasPage ? 'View case study' : 'See related case studies';
-    return /*#__PURE__*/React.createElement("a", {
-      href: href,
-      className: "btn btn-ghost-dark"
-    }, text, " ", /*#__PURE__*/React.createElement("span", {
-      dangerouslySetInnerHTML: {
-        __html: CARTER.svg.arrow
-      }
-    }));
-  })())))), faqs.length > 0 && /*#__PURE__*/React.createElement("section", {
+  })))))))), faqs.length > 0 && /*#__PURE__*/React.createElement("section", {
     className: "section-y reveal"
   }, /*#__PURE__*/React.createElement("div", {
     className: "wrap"

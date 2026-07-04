@@ -181,6 +181,29 @@ function generateSitemap(posts) {
   </url>\n`;
   });
 
+  // Dynamically add generated location pages (electricians-*.html)
+  const rootFiles = fs.readdirSync(__dirname);
+  const locationPages = rootFiles.filter(f => f.startsWith('electricians-') && f.endsWith('.html'));
+  locationPages.forEach(page => {
+    xml += `  <url>
+    <loc>${SITE_URL}/${page}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>\n`;
+  });
+
+  // Dynamically add generated case study pages (case-*.html)
+  const casePages = rootFiles.filter(f => f.startsWith('case-') && f.endsWith('.html') && f !== 'case-studies.html');
+  casePages.forEach(page => {
+    xml += `  <url>
+    <loc>${SITE_URL}/${page}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>\n`;
+  });
+
   posts.forEach(post => {
     xml += `  <url>
     <loc>${SITE_URL}/blog/${post.slug}/</loc>

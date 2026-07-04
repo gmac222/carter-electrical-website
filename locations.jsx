@@ -1,7 +1,7 @@
 // Location pages for targeted areas - long-form, unique per-city content to avoid
 // thin/duplicate-content penalties on service+location pages.
 
-const { Header, Footer, TrustBar, TweaksPanel, useScrollReveal, PageHero } = window;
+const { Header, Footer, TrustBar, CarterPlaceholder, TweaksPanel, useScrollReveal, PageHero } = window;
 
 function LocationPage({ locationName }) {
   useScrollReveal();
@@ -16,8 +16,12 @@ function LocationPage({ locationName }) {
 
   const faqs = (CARTER.locationFaqs ? CARTER.locationFaqs(area) : []);
   const relatedCases = CARTER.cases.filter(c =>
-    (c.location || '').toLowerCase().indexOf(locationName.toLowerCase()) !== -1
+    (c.location || '').toLowerCase().indexOf(locationName.toLowerCase()) !== -1 ||
+    (locationName === 'Ellesmere Port' && c.id === 'prenton-wirral')
   );
+  const displayCases = relatedCases.length > 0
+    ? relatedCases
+    : CARTER.cases.filter(c => c.id === 'old-dukes' || c.id === 'bryn-rhiw');
   const otherAreas = CARTER.areas.filter(a => a.name !== locationName).slice(0, 6);
 
   return (
@@ -71,6 +75,8 @@ function LocationPage({ locationName }) {
           </div>
         </div>
       </PageHero>
+
+      <TrustBar />
 
       {/* Intro / local context - unique per city */}
       <section className="section-y light reveal">
@@ -246,33 +252,49 @@ function LocationPage({ locationName }) {
 
       {/* Featured project for this area */}
       {area.featuredProject && (
-      <section className="section-y light reveal">
+      <section className="section-y light reveal" id="cases">
         <div className="wrap">
-          <div style={{ maxWidth: '800px' }}>
+          <div style={{ marginBottom: 40 }}>
             <div className="eyebrow">Recent Work</div>
-            <h2 className="h-2" style={{ marginTop: 10 }}>Featured project<span className="accent">.</span></h2>
+            <h2 className="h-2" style={{ marginTop: 10 }}>Featured project &amp; local work<span className="accent">.</span></h2>
             <p className="lede" style={{ marginTop: 16 }}>{area.featuredProject}</p>
             {area.cases > 0 && (
               <p style={{ color: 'var(--muted-2)', lineHeight: 1.7, marginTop: 16 }}>
-                We've completed {area.cases} documented electrical installations or compliance programmes in and around {locationName}. Our work is built on reliability, transparent pricing (the number on the quote is the number on the invoice), and rigorous NICEIC-standard safety.
+                We've completed {area.cases} documented electrical installations or compliance programmes in and around {locationName}. Below is a selection of recent projects illustrating our standard of work:
               </p>
             )}
-            {relatedCases.length > 0 && (
-              <div style={{ marginTop: 24 }}>
-                {(() => {
-                  const validCaseIds = ['prenton-wirral', 'old-dukes', 'carbonara-no-49', 'bryn-rhiw'];
-                  const firstCase = relatedCases[0];
-                  const hasPage = firstCase && firstCase.id && validCaseIds.includes(firstCase.id);
-                  const href = hasPage ? `case-${firstCase.id}.html` : 'case-studies.html';
-                  const text = hasPage ? 'View case study' : 'See related case studies';
-                  return (
-                    <a href={href} className="btn btn-ghost-dark">
-                      {text} <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }}/>
-                    </a>
-                  );
-                })()}
-              </div>
-            )}
+          </div>
+
+          <div className="cases-grid">
+            {displayCases.map((c) => (
+              <a
+                key={c.id}
+                href={`case-${c.id}.html`}
+                className="case-card"
+              >
+                <div className="case-visual">
+                  <CarterPlaceholder
+                    imgSrc={c.imgSrc}
+                    metaTag={`${c.sector} · ${c.subsector}`}
+                    titleCaption={`${c.title} - ${c.location}`}
+                    year={c.year}
+                    hue={c.hue}
+                  />
+                </div>
+                <div className="case-body">
+                  <div className="case-tags">
+                    <span className="case-tag primary">{c.sector}</span>
+                    {c.scope.slice(0, 2).map(s => <span key={s} className="case-tag">{s}</span>)}
+                  </div>
+                  <h3>{c.title}</h3>
+                  <p>{c.blurb}</p>
+                  <span className="link">
+                    View project
+                    <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }} />
+                  </span>
+                </div>
+              </a>
+            ))}
           </div>
         </div>
       </section>
