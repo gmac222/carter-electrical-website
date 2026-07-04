@@ -49,6 +49,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://carterelec.co.uk/uploads/favicon-32x32-1.png</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://carterelec.co.uk/sitemap.html</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://carterelec.co.uk/electricians-deeside.html</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>weekly</changefreq>

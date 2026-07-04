@@ -732,8 +732,239 @@ function TermsOfUsePage() {
     href: "index.html"
   }, "carterelec.co.uk"), ", you agree to comply with and be bound by these Terms of Use, along with our Privacy Policy. If you disagree with any part of these terms, please do not use our website."), /*#__PURE__*/React.createElement("h2", null, "2. Intellectual Property Rights"), /*#__PURE__*/React.createElement("p", null, "Unless otherwise stated, Carter Electrical Contracting Ltd owns the intellectual property rights for all material on this website, including all photography, design layouts, graphics, logos, and written copy. All intellectual property rights are reserved."), /*#__PURE__*/React.createElement("p", null, "You must not republish, sell, rent, sub-license, duplicate, or redistribute any content from this website without our prior written consent."), /*#__PURE__*/React.createElement("h2", null, "3. Acceptable Use"), /*#__PURE__*/React.createElement("p", null, "You must use our website in a lawful manner that does not damage, disrupt, or impair the accessibility of the site, or interfere with other users' enjoyment. You must not use this website to distribute malware, spyware, viruses, or any other harmful software."), /*#__PURE__*/React.createElement("h2", null, "4. Disclaimer of Warranties"), /*#__PURE__*/React.createElement("p", null, "The information provided on this website is for general guidance and informational purposes only. While we endeavour to ensure that all information on this website is accurate and current, we do not warrant its completeness or accuracy, nor do we commit to ensuring the website remains available."), /*#__PURE__*/React.createElement("p", null, "All electrical installations, compliance regulations, and technical certifications are governed by our formal customer contracts and NICEIC standards, not the general content of this website."), /*#__PURE__*/React.createElement("h2", null, "5. Limitation of Liability"), /*#__PURE__*/React.createElement("p", null, "To the maximum extent permitted by UK law, Carter Electrical Contracting Ltd will not be liable for any direct, indirect, or consequential loss or damage arising under these terms or in connection with the use of our website."), /*#__PURE__*/React.createElement("h2", null, "6. Governing Law"), /*#__PURE__*/React.createElement("p", null, "These Terms of Use are governed by and construed in accordance with the laws of England and Wales. Any disputes relating to these terms will be subject to the exclusive jurisdiction of the courts of England and Wales."))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
 }
+function SitemapPage() {
+  useScrollReveal();
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Header, {
+    current: "",
+    theme: "dark"
+  }), /*#__PURE__*/React.createElement(PageHero, {
+    section: "Navigation",
+    sectionNum: "06 / Sitemap",
+    title: "HTML Sitemap",
+    titleAccent: /*#__PURE__*/React.createElement(React.Fragment, null, "explore all pages on our site", /*#__PURE__*/React.createElement("span", {
+      className: "dot-white"
+    }, ".")),
+    subtext: "Find your way around our website to learn more about our commercial, industrial, domestic, and renewables electrical services."
+  }), /*#__PURE__*/React.createElement("section", {
+    className: "section-y light reveal"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "wrap"
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+      gap: '40px',
+      alignItems: 'flex-start'
+    }
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h3", {
+    className: "h-3",
+    style: {
+      borderBottom: '2px solid var(--accent)',
+      paddingBottom: '8px',
+      marginBottom: '20px'
+    }
+  }, "Main Pages"), /*#__PURE__*/React.createElement("ul", {
+    style: {
+      listStyle: 'none',
+      padding: 0,
+      margin: 0,
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '12px'
+    }
+  }, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+    href: "index.html",
+    style: {
+      color: 'var(--ink)',
+      textDecoration: 'none',
+      fontWeight: 500
+    }
+  }, "Home")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+    href: "about.html",
+    style: {
+      color: 'var(--ink)',
+      textDecoration: 'none',
+      fontWeight: 500
+    }
+  }, "About Us")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+    href: "services.html",
+    style: {
+      color: 'var(--ink)',
+      textDecoration: 'none',
+      fontWeight: 500
+    }
+  }, "Our Services")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+    href: "commercial.html",
+    style: {
+      color: 'var(--ink)',
+      textDecoration: 'none',
+      fontWeight: 500
+    }
+  }, "Commercial Services")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+    href: "case-studies.html",
+    style: {
+      color: 'var(--ink)',
+      textDecoration: 'none',
+      fontWeight: 500
+    }
+  }, "Case Studies")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+    href: "areas.html",
+    style: {
+      color: 'var(--ink)',
+      textDecoration: 'none',
+      fontWeight: 500
+    }
+  }, "Areas We Cover")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+    href: "contact.html",
+    style: {
+      color: 'var(--ink)',
+      textDecoration: 'none',
+      fontWeight: 500
+    }
+  }, "Contact Us")))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h3", {
+    className: "h-3",
+    style: {
+      borderBottom: '2px solid var(--accent)',
+      paddingBottom: '8px',
+      marginBottom: '20px'
+    }
+  }, "Locations"), /*#__PURE__*/React.createElement("ul", {
+    style: {
+      listStyle: 'none',
+      padding: 0,
+      margin: 0,
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '12px'
+    }
+  }, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+    href: "electricians-wirral.html",
+    style: {
+      color: 'var(--ink)',
+      textDecoration: 'none',
+      fontWeight: 500
+    }
+  }, "Wirral Electricians")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+    href: "electricians-wrexham.html",
+    style: {
+      color: 'var(--ink)',
+      textDecoration: 'none',
+      fontWeight: 500
+    }
+  }, "Wrexham Electricians")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+    href: "electricians-ellesmere-port.html",
+    style: {
+      color: 'var(--ink)',
+      textDecoration: 'none',
+      fontWeight: 500
+    }
+  }, "Ellesmere Port Electricians")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+    href: "electricians-deeside.html",
+    style: {
+      color: 'var(--ink)',
+      textDecoration: 'none',
+      fontWeight: 500
+    }
+  }, "Deeside Electricians")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+    href: "electricians-mold.html",
+    style: {
+      color: 'var(--ink)',
+      textDecoration: 'none',
+      fontWeight: 500
+    }
+  }, "Mold Electricians")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+    href: "electricians-northwich.html",
+    style: {
+      color: 'var(--ink)',
+      textDecoration: 'none',
+      fontWeight: 500
+    }
+  }, "Northwich Electricians")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+    href: "electricians-frodsham.html",
+    style: {
+      color: 'var(--ink)',
+      textDecoration: 'none',
+      fontWeight: 500
+    }
+  }, "Frodsham Electricians")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+    href: "electricians-tarporley.html",
+    style: {
+      color: 'var(--ink)',
+      textDecoration: 'none',
+      fontWeight: 500
+    }
+  }, "Tarporley Electricians")))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h3", {
+    className: "h-3",
+    style: {
+      borderBottom: '2px solid var(--accent)',
+      paddingBottom: '8px',
+      marginBottom: '20px'
+    }
+  }, "Case Studies"), /*#__PURE__*/React.createElement("ul", {
+    style: {
+      listStyle: 'none',
+      padding: 0,
+      margin: 0,
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '12px'
+    }
+  }, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+    href: "case-old-dukes.html",
+    style: {
+      color: 'var(--ink)',
+      textDecoration: 'none',
+      fontWeight: 500
+    }
+  }, "Old Dukes, Chester")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+    href: "case-bryn-rhiw.html",
+    style: {
+      color: 'var(--ink)',
+      textDecoration: 'none',
+      fontWeight: 500
+    }
+  }, "Bryn Rhiw, North Wales")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+    href: "case-prenton-wirral.html",
+    style: {
+      color: 'var(--ink)',
+      textDecoration: 'none',
+      fontWeight: 500
+    }
+  }, "Prenton, Wirral")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+    href: "case-carbonara-no-49.html",
+    style: {
+      color: 'var(--ink)',
+      textDecoration: 'none',
+      fontWeight: 500
+    }
+  }, "Carbonara No. 49, Chester")))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h3", {
+    className: "h-3",
+    style: {
+      borderBottom: '2px solid var(--accent)',
+      paddingBottom: '8px',
+      marginBottom: '20px'
+    }
+  }, "Blog & Advice"), /*#__PURE__*/React.createElement("ul", {
+    style: {
+      listStyle: 'none',
+      padding: 0,
+      margin: 0,
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '12px'
+    }
+  }, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+    href: "blog/the-importance-of-eicr-testing/",
+    style: {
+      color: 'var(--ink)',
+      textDecoration: 'none',
+      fontWeight: 500
+    }
+  }, "The Importance of EICR Testing"))))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
+}
 window.AboutPage = AboutPage;
 window.ServicesPage = ServicesPage;
 window.AreasPage = AreasPage;
 window.PrivacyPolicyPage = PrivacyPolicyPage;
 window.TermsOfUsePage = TermsOfUsePage;
+window.SitemapPage = SitemapPage;

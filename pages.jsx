@@ -466,8 +466,80 @@ function TermsOfUsePage() {
   );
 }
 
+function SitemapPage() {
+  useScrollReveal();
+  return (
+    <>
+      <Header current="" theme="dark"/>
+      <PageHero
+        section="Navigation"
+        sectionNum="06 / Sitemap"
+        title="HTML Sitemap"
+        titleAccent={<>explore all pages on our site<span className="dot-white">.</span></>}
+        subtext="Find your way around our website to learn more about our commercial, industrial, domestic, and renewables electrical services."
+      />
+
+      <section className="section-y light reveal">
+        <div className="wrap">
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '40px', alignItems: 'flex-start' }}>
+            
+            <div>
+              <h3 className="h-3" style={{ borderBottom: '2px solid var(--accent)', paddingBottom: '8px', marginBottom: '20px' }}>Main Pages</h3>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                <li><a href="index.html" style={{ color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>Home</a></li>
+                <li><a href="about.html" style={{ color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>About Us</a></li>
+                <li><a href="services.html" style={{ color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>Our Services</a></li>
+                <li><a href="commercial.html" style={{ color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>Commercial Services</a></li>
+                <li><a href="case-studies.html" style={{ color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>Case Studies</a></li>
+                <li><a href="areas.html" style={{ color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>Areas We Cover</a></li>
+                <li><a href="contact.html" style={{ color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>Contact Us</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="h-3" style={{ borderBottom: '2px solid var(--accent)', paddingBottom: '8px', marginBottom: '20px' }}>Locations</h3>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                <li><a href="electricians-wirral.html" style={{ color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>Wirral Electricians</a></li>
+                <li><a href="electricians-wrexham.html" style={{ color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>Wrexham Electricians</a></li>
+                <li><a href="electricians-ellesmere-port.html" style={{ color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>Ellesmere Port Electricians</a></li>
+                <li><a href="electricians-deeside.html" style={{ color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>Deeside Electricians</a></li>
+                <li><a href="electricians-mold.html" style={{ color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>Mold Electricians</a></li>
+                <li><a href="electricians-northwich.html" style={{ color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>Northwich Electricians</a></li>
+                <li><a href="electricians-frodsham.html" style={{ color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>Frodsham Electricians</a></li>
+                <li><a href="electricians-tarporley.html" style={{ color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>Tarporley Electricians</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="h-3" style={{ borderBottom: '2px solid var(--accent)', paddingBottom: '8px', marginBottom: '20px' }}>Case Studies</h3>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                <li><a href="case-old-dukes.html" style={{ color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>Old Dukes, Chester</a></li>
+                <li><a href="case-bryn-rhiw.html" style={{ color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>Bryn Rhiw, North Wales</a></li>
+                <li><a href="case-prenton-wirral.html" style={{ color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>Prenton, Wirral</a></li>
+                <li><a href="case-carbonara-no-49.html" style={{ color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>Carbonara No. 49, Chester</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="h-3" style={{ borderBottom: '2px solid var(--accent)', paddingBottom: '8px', marginBottom: '20px' }}>Blog &amp; Advice</h3>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                <li><a href="blog/the-importance-of-eicr-testing/" style={{ color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>The Importance of EICR Testing</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <Footer/>
+      <TweaksPanel/>
+    </>
+  );
+}
+
 window.AboutPage = AboutPage;
 window.ServicesPage = ServicesPage;
 window.AreasPage = AreasPage;
 window.PrivacyPolicyPage = PrivacyPolicyPage;
 window.TermsOfUsePage = TermsOfUsePage;
+window.SitemapPage = SitemapPage;

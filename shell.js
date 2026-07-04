@@ -294,6 +294,15 @@ window.Footer = function Footer() {
       flexWrap: 'wrap'
     }
   }, /*#__PURE__*/React.createElement("a", {
+    href: "sitemap.html",
+    style: {
+      color: 'rgba(255,255,255,0.4)',
+      textDecoration: 'none',
+      transition: 'color .15s ease'
+    },
+    onMouseEnter: e => e.target.style.color = 'var(--accent)',
+    onMouseLeave: e => e.target.style.color = 'rgba(255,255,255,0.4)'
+  }, "Sitemap"), /*#__PURE__*/React.createElement("a", {
     href: "privacy-policy.html",
     rel: "nofollow",
     style: {
