@@ -244,9 +244,6 @@ function Intro() {
     k: 'Response time',
     v: 'Within 48 hours'
   }, {
-    k: 'Distance from HQ',
-    v: 'Christleton, CH3 6AH'
-  }, {
     k: 'Accreditation',
     v: 'NICEIC + OZEV'
   }, {

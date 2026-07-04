@@ -119,7 +119,6 @@ function LocationPage({ locationName }) {
             {[
               { k: 'Coverage', v: area.postcodes && area.postcodes.length ? area.postcodes.join(', ') : locationName },
               { k: 'Response time', v: area.responseTime || 'Within 48 hours' },
-              { k: 'Distance from HQ', v: area.distance || '-' },
               { k: 'Accreditation', v: 'NICEIC + OZEV' },
               { k: 'Documented projects', v: (area.cases || 0) + ' in ' + locationName },
             ].map((r, i) => (
@@ -145,7 +144,7 @@ function LocationPage({ locationName }) {
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px', marginTop: 40 }}>
+          <div className="locations-services-grid">
             {CARTER.services.map((s, i) => (
               <div key={s.slug} style={{ background: 'var(--white)', border: '1px solid var(--rule)', overflow: 'hidden' }}>
                 {(() => {

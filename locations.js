@@ -197,9 +197,6 @@ function LocationPage({
     k: 'Response time',
     v: area.responseTime || 'Within 48 hours'
   }, {
-    k: 'Distance from HQ',
-    v: area.distance || '-'
-  }, {
     k: 'Accreditation',
     v: 'NICEIC + OZEV'
   }, {
@@ -241,12 +238,7 @@ function LocationPage({
   }, "."))), /*#__PURE__*/React.createElement("p", {
     className: "lede"
   }, "Five service lines, one in-house team. Here is how we support local businesses, industrial facilities and homeowners.")), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'grid',
-      gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-      gap: '20px',
-      marginTop: 40
-    }
+    className: "locations-services-grid"
   }, CARTER.services.map((s, i) => /*#__PURE__*/React.createElement("div", {
     key: s.slug,
     style: {

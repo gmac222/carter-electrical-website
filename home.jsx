@@ -141,7 +141,6 @@ function Intro() {
           {[
             { k: 'Coverage', v: 'Chester & Cheshire West' },
             { k: 'Response time', v: 'Within 48 hours' },
-            { k: 'Distance from HQ', v: 'Christleton, CH3 6AH' },
             { k: 'Accreditation', v: 'NICEIC + OZEV' },
             { k: 'Est.', v: '2019 · 7+ years' },
           ].map((r, i) => (
