@@ -124,7 +124,17 @@ window.CARTER = {
       featuredProject: "A planned three-phase distribution upgrade for a Deeside Industrial Park manufacturer, including thermal imaging survey, cable-trunking redesign and a two-phase energisation to avoid production loss.",
       landmarks: ['Deeside Industrial Park', 'Airbus Broughton (nearby)', 'Hawarden Airport', 'Queensferry retail belt', 'Connah’s Quay high street']
     },
-    { name: 'Wirral', slug: null, cases: 0, x: 24, y: 34, county: 'Merseyside', distance: '20 miles' },
+    {
+      name: 'Wirral', slug: 'wirral', cases: 1, x: 24, y: 34,
+      county: 'Merseyside', distance: '20 miles',
+      postcodes: ['CH41', 'CH42', 'CH43', 'CH44', 'CH45', 'CH46', 'CH47', 'CH48', 'CH49', 'CH60', 'CH61', 'CH62', 'CH63'],
+      neighbourhoods: ['Birkenhead', 'Prenton', 'Wallasey', 'New Brighton', 'Bebington', 'Heswall', 'West Kirby', 'Hoylake', 'Bromborough', 'Moreton', 'Upton', 'Greasby', 'Port Sunlight', 'Eastham', 'Caldy'],
+      intro: "The Wirral peninsula is the densest and most varied patch of our Merseyside coverage — a full spread from the shipbuilding and dockside industry of Birkenhead and Cammell Laird, through the retail and hospitality trade of Wallasey, New Brighton and West Kirby, to the higher-end residential belt of Heswall, Caldy and Gayton. Across the CH41–CH49 and CH60–CH63 postcodes that gives us the complete range of work: three-phase industrial supplies and motor-control on the Wirral International Business Park at Bromborough, retail and leisure fit-outs, EICR-led landlord compliance on Birkenhead's dense terraced and flatted stock, and sensitive full rewires and smart-home installs on the peninsula's period and coastal property. We reach the whole of Wirral up the M53, and our engineers are used to working around live retail hours and the mixed old-and-new building stock the peninsula is known for.",
+      commercialAngle: "Wirral's commercial demand spans the Wirral International Business Park and Bromborough's manufacturing estates, the regenerating Birkenhead waterfront around Wirral Waters and Twelve Quays, and the retail and hospitality trade at New Brighton's Marine Point, Birkenhead's Grange and Pyramids precincts and the West Kirby and Heswall high streets. We deliver design-and-install fit-outs, landlord EICRs ahead of lease renewals, emergency-lighting certification and planned maintenance contracts.",
+      domesticAngle: "The peninsula's housing stock runs the full range: Victorian and Edwardian terraces in Birkenhead, Tranmere and Wallasey needing full rewires and replacement consumer units; interwar semis across Bebington, Eastham and Moreton; and higher-end detached and coastal property in Heswall, Caldy, West Kirby and Hoylake where the calls are for smart-lighting schemes, garden and outbuilding supplies, and OZEV-approved EV chargers with load management.",
+      featuredProject: "Our Prenton, Wirral commercial distribution upgrade (CH43) — a full mains distribution replacement, three-phase board install and cable-trunking redesign carried out after an inspection flagged multiple issues, energised in stages to keep the site trading.",
+      landmarks: ['Wirral International Business Park (Bromborough)', 'Cammell Laird shipyard, Birkenhead', 'Wirral Waters & Twelve Quays regeneration', 'New Brighton Marine Point', 'Port Sunlight & Unilever, Bebington']
+    },
     { name: 'Liverpool', slug: null, cases: 0, x: 18, y: 24, county: 'Merseyside', distance: '25 miles' },
     { name: 'Crewe', slug: null, cases: 0, x: 80, y: 78, county: 'Cheshire East', distance: '25 miles' },
     { name: 'Warrington', slug: null, cases: 0, x: 70, y: 50, county: 'Cheshire', distance: '22 miles' },
