@@ -140,28 +140,28 @@ function buildFaqs(area) {
   const nb = area.neighbourhoods.slice(0, 5).join(', ');
   return [
     {
-      q: 'How do I know if a local electrician in ' + area.name + ' is qualified?',
-      a: 'Check if they are registered with a government-approved scheme, such as the NICEIC or NAPIT. Competent person schemes guarantee the contractor undergoes regular assessments, holds valid public liability insurance, and works to BS 7671 (the 18th Edition wiring regulations). You can verify registrations directly on the Registered Competent Person Electrical website or by asking the contractor for their NICEIC registration number.'
+      q: 'How do I hire a qualified electrician in ' + area.name + '?',
+      a: 'When hiring local electricians in ' + area.name + ', you should always confirm they are NICEIC or NAPIT registered. Carter Electrical is a fully NICEIC-approved contractor. All our work complies with BS 7671 standards, is fully certified at handover, and is backed by £5M public liability insurance.'
     },
     {
-      q: 'What is the average hourly rate for an electrician in the UK?',
-      a: 'Most qualified electricians in the UK charge between £45 and £60 per hour, with day rates typically ranging from £300 to £450 depending on the complexity of the work and the location. Minor works are often subject to a minimum call-out charge to cover travel and diagnostics. For larger projects, a reputable contractor will provide a detailed, fixed-price quote rather than working on an hourly basis.'
+      q: 'Do you provide commercial electrical services in ' + area.name + '?',
+      a: 'Yes, we deliver full-scope commercial electrical services in ' + area.name + ' for offices, retail units, and hospitality venues. Our local engineers handle mains distribution upgrades, energy-efficient lighting schemes, emergency lighting installation (BS 5266), and landlord compliance work timed to avoid disrupting your business hours.'
     },
     {
-      q: 'What electrical work is legally notifiable in ' + area.name + '?',
-      a: 'Under Part P of the Building Regulations in England and Wales, higher-risk electrical installations must be notified to local authority Building Control. This includes the installation of new circuits, replacing a consumer unit (fuse box), and any alterations within \'special locations\' (such as zones immediately surrounding a bath or shower). Registered competent electricians can self-certify this work and automatically notify Building Control on your behalf.'
+      q: 'What domestic electrical services do you offer in ' + area.name + '?',
+      a: 'From full property rewires and consumer unit (fuse box) upgrades to installing extra sockets and outdoor lighting, our in-house domestic electricians cover the entire domestic scope across ' + area.name + '. All work complies with Part P of the Building Regulations and is signed off with official certification.'
     },
     {
-      q: 'Are EICR reports a legal requirement for landlords in ' + area.name + '?',
-      a: 'Yes. Under the Electrical Safety Standards in the Private Rented Sector Regulations, landlords of private tenancies in England are legally required to have the electrical installations in their properties inspected and tested by a qualified person at least every five years. This inspection produces an Electrical Installation Condition Report (EICR) which must be provided to existing tenants within 28 days of the test.'
+      q: 'Are EICR safety inspections required for properties in ' + area.name + '?',
+      a: 'Yes, Electrical Installation Condition Reports (EICRs) are a legal requirement for private landlords, who must have their properties inspected every five years. We also carry out commercial EICRs for businesses to meet health and safety regulations, providing clear, transparent safety certificates within 48 hours.'
     },
     {
-      q: 'Can I do my own electrical work at home?',
-      a: 'While you are legally permitted to carry out minor, non-notifiable electrical tasks, such as replacing a damaged light switch, socket faceplate, or light fitting on a like-for-like basis, all electrical work must comply with BS 7671 safety standards. Any notifiable work, such as adding new circuits or upgrading a fuse box, must either be certified by a registered electrician or approved in advance by local Building Control.'
+      q: 'Can you install home or commercial EV chargers in ' + area.name + '?',
+      a: 'Yes. Carter Electrical is an OZEV-approved EV charger installer covering ' + area.name + '. We install single-phase chargers for homes and three-phase charging networks for workplaces, handling all DNO notifications and load management configuration to protect your property\'s main supply.'
     },
     {
-      q: 'Which postcodes do you cover in ' + area.name + '?',
-      a: 'Our local team covers every postcode and neighbourhood across ' + area.name + ' and its surrounding areas, primarily ' + post + '. This includes ' + nb + ' and neighbouring villages. If you are unsure whether your address falls within our standard service radius, you can get in touch with our team with your postcode, and we will confirm our availability.'
+      q: 'Which postcodes and neighbourhoods do you cover in ' + area.name + '?',
+      a: 'Based in Christleton, our electricians cover the whole of ' + area.name + ' and surrounding villages, primarily ' + post + '. We regularly work across ' + nb + ', providing reliable, on-call coverage for planned installations and urgent works.'
     }
   ];
 }
