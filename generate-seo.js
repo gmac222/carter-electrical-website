@@ -140,28 +140,28 @@ function buildFaqs(area) {
   const nb = area.neighbourhoods.slice(0, 5).join(', ');
   return [
     {
-      q: 'Are your electricians NICEIC-approved and qualified to work in ' + area.name + '?',
-      a: 'Yes. Carter Electrical Contracting is a fully NICEIC-approved contractor, and every electrician dispatched to ' + area.name + ' works to BS 7671 (18th Edition, including the latest amendments). Certification is issued at handover on every job (EIC, minor works or EICR as appropriate) and logged against the property address so it\'s straightforward to retrieve if you need it for insurance, a landlord pack or a future sale.'
+      q: 'How do I know if a local electrician in ' + area.name + ' is qualified?',
+      a: 'Check if they are registered with a government-approved scheme, such as the NICEIC or NAPIT. Competent person schemes guarantee the contractor undergoes regular assessments, holds valid public liability insurance, and works to BS 7671 (the 18th Edition wiring regulations). You can verify registrations directly on the Registered Competent Person Electrical website or by asking the contractor for their NICEIC registration number.'
     },
     {
-      q: 'What\'s your typical lead time for a new project in ' + area.name + '?',
-      a: 'It depends on scope. A small domestic job (a replacement consumer unit, a few additional circuits, or a single EV charger) we can usually schedule within a week or two of sign-off. A larger commercial fit-out or industrial installation normally goes through a site visit, a detailed scope and a formal quote first, and we\'ll give you an honest date at that stage rather than overpromise. Our phone is answered during working hours by the same team that schedules the engineers, so you\'ll get a straight answer on timings.'
+      q: 'What is the average hourly rate for an electrician in the UK?',
+      a: 'Most qualified electricians in the UK charge between £45 and £60 per hour, with day rates typically ranging from £300 to £450 depending on the complexity of the work and the location. Minor works are often subject to a minimum call-out charge to cover travel and diagnostics. For larger projects, a reputable contractor will provide a detailed, fixed-price quote rather than working on an hourly basis.'
     },
     {
-      q: 'Which ' + area.name + ' postcodes and neighbourhoods do you cover?',
-      a: 'We cover every postcode inside ' + area.name + ' and its surrounding villages, primarily ' + post + '. That includes ' + nb + ' and the rest of the ' + area.county + ' area. If you\'re unsure whether your address is in our usual radius, call us with the postcode and we\'ll confirm before scheduling.'
+      q: 'What electrical work is legally notifiable in ' + area.name + '?',
+      a: 'Under Part P of the Building Regulations in England and Wales, higher-risk electrical installations must be notified to local authority Building Control. This includes the installation of new circuits, replacing a consumer unit (fuse box), and any alterations within \'special locations\' (such as zones immediately surrounding a bath or shower). Registered competent electricians can self-certify this work and automatically notify Building Control on your behalf.'
     },
     {
-      q: 'Do you carry out EICRs and landlord electrical-safety reports in ' + area.name + '?',
-      a: 'Yes. We\'re a go-to contractor for EICRs across ' + area.name + ': both for commercial landlords ahead of lease renewals and for residential landlords meeting the five-yearly Electrical Safety Standards in the Private Rented Sector (England) Regulations 2020, or the equivalent Welsh legislation where applicable. Reports are issued as a signed PDF within 48 hours of the test, with remedial quotes broken out clearly so you can decide what\'s urgent.'
+      q: 'Are EICR reports a legal requirement for landlords in ' + area.name + '?',
+      a: 'Yes. Under the Electrical Safety Standards in the Private Rented Sector Regulations, landlords of private tenancies in England are legally required to have the electrical installations in their properties inspected and tested by a qualified person at least every five years. This inspection produces an Electrical Installation Condition Report (EICR) which must be provided to existing tenants within 28 days of the test.'
     },
     {
-      q: 'Can you install an OZEV-approved EV charger at a home or business in ' + area.name + '?',
-      a: 'Yes, we\'re OZEV-approved and install 7 kW single-phase and 22 kW three-phase chargers throughout ' + area.name + '. For domestic installs we handle the DNO notification, load management (so your main supply doesn\'t get overloaded) and OLEV/EV-chargepoint grant paperwork where you\'re eligible. For workplace installs we can scope multi-bay back-office systems with RFID authorisation and billing integration.'
+      q: 'Can I do my own electrical work at home?',
+      a: 'While you are legally permitted to carry out minor, non-notifiable electrical tasks, such as replacing a damaged light switch, socket faceplate, or light fitting on a like-for-like basis, all electrical work must comply with BS 7671 safety standards. Any notifiable work, such as adding new circuits or upgrading a fuse box, must either be certified by a registered electrician or approved in advance by local Building Control.'
     },
     {
-      q: 'Do you work on heritage, listed or conservation-area properties in ' + area.name + '?',
-      a: 'Yes, and we do it often. ' + area.name + '\'s older property stock needs a different hand: surface-clipped cable runs on stone walls, concealed containment through plasterwork, period-sympathetic switch and socket plates, and documentation that will satisfy both a conservation officer and the NICEIC.'
+      q: 'Which postcodes do you cover in ' + area.name + '?',
+      a: 'Our local team covers every postcode and neighbourhood across ' + area.name + ' and its surrounding areas, primarily ' + post + '. This includes ' + nb + ' and neighbouring villages. If you are unsure whether your address falls within our standard service radius, you can get in touch with our team with your postcode, and we will confirm our availability.'
     }
   ];
 }
