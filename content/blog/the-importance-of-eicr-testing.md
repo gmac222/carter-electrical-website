@@ -46,4 +46,5 @@ During an EICR, our NICEIC-approved electricians will test:
 
 We provide a comprehensive report detailing our findings. If any urgent remedial work is required, we provide a transparent, itemised quote.
 
-Don't wait for a breakdown or an accident. Ensure your commercial property is safe and compliant. [Contact us today](contact.html) to schedule your EICR.
+Don't wait for a breakdown or an accident. Ensure your commercial property is safe and compliant. We provide NICEIC-approved commercial EICR testing and inspection services across Chester, Ellesmere Port, Wrexham, and the [Wirral](/electricians-wirral.html). [Contact us today](/contact.html) to schedule your EICR.
+

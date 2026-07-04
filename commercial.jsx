@@ -155,7 +155,7 @@ function CommercialCases() {
         </div>
         <div className="cases-grid">
           {cases.map(c => (
-            <a key={c.id} href={c.id === 'old-dukes' ? 'case-old-dukes.html' : 'case-studies.html'} className="case-card big">
+            <a key={c.id} href={`case-${c.id}.html`} className="case-card big">
               <div className="case-visual">
                 <CarterPlaceholder imgSrc={c.imgSrc} metaTag={`${c.sector} · ${c.subsector}`} titleCaption={`${c.title} - ${c.location}`} year={c.year} hue={c.hue}/>
               </div>

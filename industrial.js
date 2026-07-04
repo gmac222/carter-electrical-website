@@ -266,7 +266,7 @@ function IndustrialCases() {
     className: "cases-grid"
   }, displayCases.map(c => /*#__PURE__*/React.createElement("a", {
     key: c.id,
-    href: c.id === 'old-dukes' ? 'case-old-dukes.html' : 'case-studies.html',
+    href: `case-${c.id}.html`,
     className: "case-card big"
   }, /*#__PURE__*/React.createElement("div", {
     className: "case-visual"

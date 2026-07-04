@@ -38,7 +38,7 @@ function LocationPage({
   }), /*#__PURE__*/React.createElement(PageHero, {
     section: "Local Coverage",
     sectionNum: "03.1 / Location",
-    title: `Local electricians covering ${locationName}`,
+    title: `Electricians in ${locationName}`,
     titleAccent: " - NICEIC-approved.",
     subtext: `NICEIC-approved commercial, industrial, domestic and renewables electricians serving ${locationName}${area.postcodes && area.postcodes.length ? ' (' + area.postcodes.join(', ') + ')' : ''} and the surrounding ${area.county || 'area'}. EICR testing, EV chargers, full rewires and commercial fit-outs.`,
     ctas: /*#__PURE__*/React.createElement("div", {
@@ -236,11 +236,11 @@ function LocationPage({
     className: "eyebrow"
   }, "Services"), /*#__PURE__*/React.createElement("h2", {
     className: "h-1"
-  }, "Our electrical services in ", locationName, /*#__PURE__*/React.createElement("span", {
+  }, "Our electrical services", /*#__PURE__*/React.createElement("span", {
     className: "accent"
   }, "."))), /*#__PURE__*/React.createElement("p", {
     className: "lede"
-  }, "Five service lines, one in-house team. Here's how each applies to the ", locationName, " market - and what our ", locationName, " clients most often call us about.")), /*#__PURE__*/React.createElement("div", {
+  }, "Five service lines, one in-house team. Here is how we support local businesses, industrial facilities and homeowners.")), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'grid',
       gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
@@ -378,7 +378,7 @@ function LocationPage({
       lineHeight: 1.7,
       marginTop: 14
     }
-  }, "Typical scopes we quote for in ", locationName, ": full distribution and sub-mains replacements, emergency-lighting upgrades to BS 5266, BS 5839-1 fire detection, retail and restaurant fit-outs, data containment and structured cabling, EICR remedials following a failed report, and scheduled shutdowns timed around the business's trading hours.")), area.domesticAngle && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+  }, "Typical scopes we quote for: full distribution and sub-mains replacements, emergency-lighting upgrades to BS 5266, BS 5839-1 fire detection, retail and restaurant fit-outs, data containment and structured cabling, EICR remedials following a failed report, and scheduled shutdowns timed around the business's trading hours.")), area.domesticAngle && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "eyebrow"
   }, "Domestic Services"), /*#__PURE__*/React.createElement("h3", {
     className: "h-2",
@@ -399,7 +399,7 @@ function LocationPage({
       lineHeight: 1.7,
       marginTop: 14
     }
-  }, "Common domestic jobs across ", locationName, ": full and partial rewires, replacement consumer units (fuseboards), OZEV-approved EV charger installs with load management, smart-lighting and smart-heating retrofits, extensions, loft conversions and garage conversions, external lighting and outbuilding supplies, and fault finding when a main breaker keeps tripping.")))), area.neighbourhoods && area.neighbourhoods.length > 0 && /*#__PURE__*/React.createElement("section", {
+  }, "Common domestic services we provide: full and partial rewires, replacement consumer units (fuseboards), OZEV-approved EV charger installs with load management, smart-lighting and smart-heating retrofits, extensions, loft conversions and garage conversions, external lighting and outbuilding supplies, and fault finding when a main breaker keeps tripping.")))), area.neighbourhoods && area.neighbourhoods.length > 0 && /*#__PURE__*/React.createElement("section", {
     className: "section-y reveal"
   }, /*#__PURE__*/React.createElement("div", {
     className: "wrap"
@@ -421,7 +421,7 @@ function LocationPage({
     style: {
       marginTop: 16
     }
-  }, "Our electricians work across every part of ", locationName, area.postcodes && area.postcodes.length ? ' - covering ' + area.postcodes.join(', ') : '', ". If your address is inside any of the following neighbourhoods, you're well inside our core coverage zone:")), /*#__PURE__*/React.createElement("div", {
+  }, "Our local engineers cover all area postcodes, including ", area.postcodes && area.postcodes.length ? area.postcodes.join(', ') : '', ". If your address is inside any of the following neighbourhoods, you're well inside our core coverage zone:")), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'grid',
       gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
@@ -459,7 +459,7 @@ function LocationPage({
       marginTop: 28,
       maxWidth: '70ch'
     }
-  }, "We also work around key ", locationName, " locations including ", area.landmarks.join(', '), ". If you're scoping electrical work at one of these or on a nearby site, we've likely been on-site in the area recently - ask us for a reference."))), area.featuredProject && /*#__PURE__*/React.createElement("section", {
+  }, "We also work around key local landmarks and business parks, including ", area.landmarks.join(', '), ". If you're scoping electrical work at one of these or on a nearby site, we've likely been on-site in the area recently - ask us for a reference."))), area.featuredProject && /*#__PURE__*/React.createElement("section", {
     className: "section-y light reveal",
     id: "cases"
   }, /*#__PURE__*/React.createElement("div", {
@@ -488,7 +488,7 @@ function LocationPage({
       lineHeight: 1.7,
       marginTop: 16
     }
-  }, "We've completed ", area.cases, " documented electrical installations or compliance programmes in and around ", locationName, ". Below is a selection of recent projects illustrating our standard of work:")), /*#__PURE__*/React.createElement("div", {
+  }, "We have completed ", area.cases, " documented local projects. Below is a selection illustrating our standard of work:")), /*#__PURE__*/React.createElement("div", {
     className: "cases-grid"
   }, displayCases.map(c => /*#__PURE__*/React.createElement("a", {
     key: c.id,
@@ -584,7 +584,7 @@ function LocationPage({
     style: {
       marginTop: 16
     }
-  }, "We cover the wider ", area.county || 'North West', " region from our Chester base. If you're scoping work outside ", locationName, " proper, the following are also in our core patch:")), /*#__PURE__*/React.createElement("div", {
+  }, "We cover the wider ", area.county || 'North West', " region from our Chester base. If you are scoping work outside this primary zone, the following areas are also within our core patch:")), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'grid',
       gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',

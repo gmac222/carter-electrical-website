@@ -425,7 +425,7 @@ function buildHtml(area) {
       <nav aria-label="Breadcrumb">
         <a href="/">Home</a> &rsaquo; <a href="/areas.html">Areas We Cover</a> &rsaquo; Electricians in ${esc(area.name)}
       </nav>
-      <h1>Local electricians covering ${esc(area.name)} - NICEIC-approved</h1>
+      <h1>Electricians in ${esc(area.name)} - NICEIC-approved</h1>
       <h2>Approved electricians in ${esc(area.name)}, done properly the first time</h2>
       <p>${esc(area.intro)}</p>
 
@@ -448,7 +448,7 @@ function buildHtml(area) {
         ${area.neighbourhoods.map(n => '<li>' + esc(n) + '</li>').join('\n        ')}
       </ul>
 
-      <h2>Our electrical services in ${esc(area.name)}</h2>
+      <h2>Our electrical services</h2>
       <ul>
         <li>Commercial fit-outs, distribution, emergency lighting and fire alarm</li>
         <li>Industrial three-phase, motor control and factory shutdowns</li>

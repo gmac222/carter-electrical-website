@@ -74,7 +74,7 @@ function OldDukes() {
             </div>
             <div style={{ display: 'flex', gap: 40, flexWrap: 'wrap', alignItems: 'flex-end' }}>
               <MetaTile k="Year" v={c.year} />
-              <MetaTile k="Location" v={c.location} />
+              <MetaTile k="Location" v={c.location} href="/" />
               <MetaTile k="Sector" v="Hospitality" />
             </div>
           </div>
@@ -150,14 +150,17 @@ function OldDukes() {
   );
 }
 
-function MetaTile({ k, v }) {
+function MetaTile({ k, v, href }) {
   return (
     <div>
       <div className="mono" style={{ fontSize: 10.5, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)', marginBottom: 6 }}>{k}</div>
-      <div className="display" style={{ fontSize: 18, fontWeight: 500 }}>{v}</div>
+      <div className="display" style={{ fontSize: 18, fontWeight: 500 }}>
+        {href ? <a href={href} style={{ color: 'inherit', textDecoration: 'underline', textDecorationColor: 'var(--accent)' }}>{v}</a> : v}
+      </div>
     </div>
   );
 }
+
 
 // ----- Prenton, Wirral Detail -----
 function PrentonWirral() {
@@ -178,7 +181,7 @@ function PrentonWirral() {
             </div>
             <div style={{ display: 'flex', gap: 40, flexWrap: 'wrap', alignItems: 'flex-end' }}>
               <MetaTile k="Year" v={c.year} />
-              <MetaTile k="Location" v={c.location} />
+              <MetaTile k="Location" v={c.location} href="electricians-wirral.html" />
               <MetaTile k="Sector" v="Commercial" />
             </div>
           </div>
@@ -272,7 +275,7 @@ function CarbonaraNo49() {
             </div>
             <div style={{ display: 'flex', gap: 40, flexWrap: 'wrap', alignItems: 'flex-end' }}>
               <MetaTile k="Year" v={c.year} />
-              <MetaTile k="Location" v={c.location} />
+              <MetaTile k="Location" v={c.location} href="/" />
               <MetaTile k="Sector" v="Commercial" />
             </div>
           </div>

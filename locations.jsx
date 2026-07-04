@@ -31,7 +31,7 @@ function LocationPage({ locationName }) {
       <PageHero
         section="Local Coverage"
         sectionNum="03.1 / Location"
-        title={`Local electricians covering ${locationName}`}
+        title={`Electricians in ${locationName}`}
         titleAccent=" - NICEIC-approved."
         subtext={`NICEIC-approved commercial, industrial, domestic and renewables electricians serving ${locationName}${area.postcodes && area.postcodes.length ? ' (' + area.postcodes.join(', ') + ')' : ''} and the surrounding ${area.county || 'area'}. EICR testing, EV chargers, full rewires and commercial fit-outs.`}
         ctas={
@@ -138,10 +138,10 @@ function LocationPage({ locationName }) {
           <div className="section-head">
             <div>
               <div className="eyebrow">Services</div>
-              <h2 className="h-1">Our electrical services in {locationName}<span className="accent">.</span></h2>
+              <h2 className="h-1">Our electrical services<span className="accent">.</span></h2>
             </div>
             <p className="lede">
-              Five service lines, one in-house team. Here's how each applies to the {locationName} market - and what our {locationName} clients most often call us about.
+              Five service lines, one in-house team. Here is how we support local businesses, industrial facilities and homeowners.
             </p>
           </div>
 
@@ -204,7 +204,7 @@ function LocationPage({ locationName }) {
               <h3 className="h-2" style={{ marginTop: 10 }}>Commercial Electrical<span className="accent">.</span></h3>
               <p style={{ color: 'var(--muted-2)', lineHeight: 1.7, marginTop: 16 }}>{area.commercialAngle}</p>
               <p style={{ color: 'var(--muted-2)', lineHeight: 1.7, marginTop: 14 }}>
-                Typical scopes we quote for in {locationName}: full distribution and sub-mains replacements, emergency-lighting upgrades to BS 5266, BS 5839-1 fire detection, retail and restaurant fit-outs, data containment and structured cabling, EICR remedials following a failed report, and scheduled shutdowns timed around the business's trading hours.
+                Typical scopes we quote for: full distribution and sub-mains replacements, emergency-lighting upgrades to BS 5266, BS 5839-1 fire detection, retail and restaurant fit-outs, data containment and structured cabling, EICR remedials following a failed report, and scheduled shutdowns timed around the business's trading hours.
               </p>
             </div>
           )}
@@ -214,7 +214,7 @@ function LocationPage({ locationName }) {
               <h3 className="h-2" style={{ marginTop: 10 }}>Domestic Electrical<span className="accent">.</span></h3>
               <p style={{ color: 'var(--muted-2)', lineHeight: 1.7, marginTop: 16 }}>{area.domesticAngle}</p>
               <p style={{ color: 'var(--muted-2)', lineHeight: 1.7, marginTop: 14 }}>
-                Common domestic jobs across {locationName}: full and partial rewires, replacement consumer units (fuseboards), OZEV-approved EV charger installs with load management, smart-lighting and smart-heating retrofits, extensions, loft conversions and garage conversions, external lighting and outbuilding supplies, and fault finding when a main breaker keeps tripping.
+                Common domestic services we provide: full and partial rewires, replacement consumer units (fuseboards), OZEV-approved EV charger installs with load management, smart-lighting and smart-heating retrofits, extensions, loft conversions and garage conversions, external lighting and outbuilding supplies, and fault finding when a main breaker keeps tripping.
               </p>
             </div>
           )}
@@ -230,7 +230,7 @@ function LocationPage({ locationName }) {
             <div className="eyebrow">Neighbourhoods served</div>
             <h2 className="h-2" style={{ marginTop: 10 }}>Areas we cover<span className="accent">.</span></h2>
             <p className="lede" style={{ marginTop: 16 }}>
-              Our electricians work across every part of {locationName}{area.postcodes && area.postcodes.length ? ' - covering ' + area.postcodes.join(', ') : ''}. If your address is inside any of the following neighbourhoods, you're well inside our core coverage zone:
+              Our local engineers cover all area postcodes, including {area.postcodes && area.postcodes.length ? area.postcodes.join(', ') : ''}. If your address is inside any of the following neighbourhoods, you're well inside our core coverage zone:
             </p>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 1, background: 'var(--rule)', border: '1px solid var(--rule)', marginTop: 30 }}>
@@ -243,7 +243,7 @@ function LocationPage({ locationName }) {
           </div>
           {area.landmarks && area.landmarks.length > 0 && (
             <p style={{ color: 'var(--muted-2)', lineHeight: 1.7, marginTop: 28, maxWidth: '70ch' }}>
-              We also work around key {locationName} locations including {area.landmarks.join(', ')}. If you're scoping electrical work at one of these or on a nearby site, we've likely been on-site in the area recently - ask us for a reference.
+              We also work around key local landmarks and business parks, including {area.landmarks.join(', ')}. If you're scoping electrical work at one of these or on a nearby site, we've likely been on-site in the area recently - ask us for a reference.
             </p>
           )}
         </div>
@@ -260,7 +260,7 @@ function LocationPage({ locationName }) {
             <p className="lede" style={{ marginTop: 16 }}>{area.featuredProject}</p>
             {area.cases > 0 && (
               <p style={{ color: 'var(--muted-2)', lineHeight: 1.7, marginTop: 16 }}>
-                We've completed {area.cases} documented electrical installations or compliance programmes in and around {locationName}. Below is a selection of recent projects illustrating our standard of work:
+                We have completed {area.cases} documented local projects. Below is a selection illustrating our standard of work:
               </p>
             )}
           </div>
@@ -328,7 +328,7 @@ function LocationPage({ locationName }) {
             <div className="eyebrow">Also covering</div>
             <h2 className="h-2" style={{ marginTop: 10 }}>Nearby coverage<span className="accent">.</span></h2>
             <p className="lede" style={{ marginTop: 16 }}>
-              We cover the wider {area.county || 'North West'} region from our Chester base. If you're scoping work outside {locationName} proper, the following are also in our core patch:
+              We cover the wider {area.county || 'North West'} region from our Chester base. If you are scoping work outside this primary zone, the following areas are also within our core patch:
             </p>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 12, marginTop: 24 }}>

@@ -136,7 +136,8 @@ function OldDukes() {
     v: c.year
   }), /*#__PURE__*/React.createElement(MetaTile, {
     k: "Location",
-    v: c.location
+    v: c.location,
+    href: "/"
   }), /*#__PURE__*/React.createElement(MetaTile, {
     k: "Sector",
     v: "Hospitality"
@@ -283,7 +284,8 @@ function OldDukes() {
 }
 function MetaTile({
   k,
-  v
+  v,
+  href
 }) {
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "mono",
@@ -300,7 +302,14 @@ function MetaTile({
       fontSize: 18,
       fontWeight: 500
     }
-  }, v));
+  }, href ? /*#__PURE__*/React.createElement("a", {
+    href: href,
+    style: {
+      color: 'inherit',
+      textDecoration: 'underline',
+      textDecorationColor: 'var(--accent)'
+    }
+  }, v) : v));
 }
 
 // ----- Prenton, Wirral Detail -----
@@ -368,7 +377,8 @@ function PrentonWirral() {
     v: c.year
   }), /*#__PURE__*/React.createElement(MetaTile, {
     k: "Location",
-    v: c.location
+    v: c.location,
+    href: "electricians-wirral.html"
   }), /*#__PURE__*/React.createElement(MetaTile, {
     k: "Sector",
     v: "Commercial"
@@ -579,7 +589,8 @@ function CarbonaraNo49() {
     v: c.year
   }), /*#__PURE__*/React.createElement(MetaTile, {
     k: "Location",
-    v: c.location
+    v: c.location,
+    href: "/"
   }), /*#__PURE__*/React.createElement(MetaTile, {
     k: "Sector",
     v: "Commercial"
