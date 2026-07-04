@@ -34,7 +34,7 @@ function LocationPage({
     current: "areas",
     theme: "dark"
   }), /*#__PURE__*/React.createElement(PageHero, {
-    section: `Electricians in ${locationName}`,
+    section: "Local Coverage",
     sectionNum: "03.1 / Location",
     title: `Local electricians covering ${locationName}`,
     titleAccent: " - NICEIC-approved.",
@@ -141,9 +141,9 @@ function LocationPage({
     }
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "eyebrow"
-  }, "Local Electricians in ", locationName), /*#__PURE__*/React.createElement("h2", {
+  }, "Local Electricians"), /*#__PURE__*/React.createElement("h2", {
     className: "h-1"
-  }, "Electrical work in ", locationName, ", done properly the first time", /*#__PURE__*/React.createElement("span", {
+  }, "Approved electricians in ", locationName, ", done properly the first time", /*#__PURE__*/React.createElement("span", {
     className: "accent"
   }, "."))), /*#__PURE__*/React.createElement("div", {
     style: {
@@ -232,7 +232,7 @@ function LocationPage({
     className: "eyebrow"
   }, "Services"), /*#__PURE__*/React.createElement("h2", {
     className: "h-1"
-  }, "The full electrical scope for ", locationName, /*#__PURE__*/React.createElement("span", {
+  }, "Our electrical services in ", locationName, /*#__PURE__*/React.createElement("span", {
     className: "accent"
   }, "."))), /*#__PURE__*/React.createElement("p", {
     className: "lede"
@@ -295,7 +295,7 @@ function LocationPage({
     style: {
       margin: 0
     }
-  }, s.title, " electricians in ", locationName)), /*#__PURE__*/React.createElement("p", {
+  }, s.title === 'Commercial' || s.title === 'Industrial' || s.title === 'Domestic' ? `${s.title} Electrical` : s.title)), /*#__PURE__*/React.createElement("p", {
     style: {
       color: 'var(--muted-2)',
       lineHeight: 1.6,
@@ -335,12 +335,12 @@ function LocationPage({
     }
   }, area.commercialAngle && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "eyebrow"
-  }, "Commercial in ", locationName), /*#__PURE__*/React.createElement("h3", {
+  }, "Commercial Services"), /*#__PURE__*/React.createElement("h3", {
     className: "h-2",
     style: {
       marginTop: 10
     }
-  }, "Commercial electricians in ", locationName, /*#__PURE__*/React.createElement("span", {
+  }, "Commercial Electrical", /*#__PURE__*/React.createElement("span", {
     className: "accent"
   }, ".")), /*#__PURE__*/React.createElement("p", {
     style: {
@@ -356,12 +356,12 @@ function LocationPage({
     }
   }, "Typical scopes we quote for in ", locationName, ": full distribution and sub-mains replacements, emergency-lighting upgrades to BS 5266, BS 5839-1 fire detection, retail and restaurant fit-outs, data containment and structured cabling, EICR remedials following a failed report, and scheduled shutdowns timed around the business's trading hours.")), area.domesticAngle && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "eyebrow"
-  }, "Domestic in ", locationName), /*#__PURE__*/React.createElement("h3", {
+  }, "Domestic Services"), /*#__PURE__*/React.createElement("h3", {
     className: "h-2",
     style: {
       marginTop: 10
     }
-  }, "Domestic electricians in ", locationName, /*#__PURE__*/React.createElement("span", {
+  }, "Domestic Electrical", /*#__PURE__*/React.createElement("span", {
     className: "accent"
   }, ".")), /*#__PURE__*/React.createElement("p", {
     style: {
@@ -390,7 +390,7 @@ function LocationPage({
     style: {
       marginTop: 10
     }
-  }, "Areas of ", locationName, " we cover", /*#__PURE__*/React.createElement("span", {
+  }, "Areas we cover", /*#__PURE__*/React.createElement("span", {
     className: "accent"
   }, ".")), /*#__PURE__*/React.createElement("p", {
     className: "lede",
@@ -445,12 +445,12 @@ function LocationPage({
     }
   }, /*#__PURE__*/React.createElement("div", {
     className: "eyebrow"
-  }, "Recent work in ", locationName), /*#__PURE__*/React.createElement("h2", {
+  }, "Recent Work"), /*#__PURE__*/React.createElement("h2", {
     className: "h-2",
     style: {
       marginTop: 10
     }
-  }, "A ", locationName, " project we delivered", /*#__PURE__*/React.createElement("span", {
+  }, "Featured project", /*#__PURE__*/React.createElement("span", {
     className: "accent"
   }, ".")), /*#__PURE__*/React.createElement("p", {
     className: "lede",
@@ -491,7 +491,7 @@ function LocationPage({
     }
   }, /*#__PURE__*/React.createElement("div", {
     className: "eyebrow"
-  }, "Questions we get from ", locationName), /*#__PURE__*/React.createElement("h2", {
+  }, "Common Questions"), /*#__PURE__*/React.createElement("h2", {
     className: "h-2",
     style: {
       marginTop: 10
@@ -541,7 +541,7 @@ function LocationPage({
     style: {
       marginTop: 10
     }
-  }, "Other areas near ", locationName, /*#__PURE__*/React.createElement("span", {
+  }, "Nearby coverage", /*#__PURE__*/React.createElement("span", {
     className: "accent"
   }, ".")), /*#__PURE__*/React.createElement("p", {
     className: "lede",

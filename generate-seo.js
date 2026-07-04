@@ -241,7 +241,8 @@ function buildHtml(area) {
       <nav aria-label="Breadcrumb">
         <a href="/">Home</a> &rsaquo; <a href="/areas.html">Areas We Cover</a> &rsaquo; Electricians in ${esc(area.name)}
       </nav>
-      <h1>Electricians in ${esc(area.name)} - NICEIC-approved</h1>
+      <h1>Local electricians covering ${esc(area.name)} - NICEIC-approved</h1>
+      <h2>Approved electricians in ${esc(area.name)}, done properly the first time</h2>
       <p>${esc(area.intro)}</p>
 
       <h2>Coverage</h2>
@@ -252,18 +253,18 @@ function buildHtml(area) {
         <li><strong>County:</strong> ${esc(area.county)}</li>
       </ul>
 
-      <h2>Commercial electricians in ${esc(area.name)}</h2>
+      <h2>Commercial Electrical</h2>
       <p>${esc(area.commercialAngle)}</p>
 
-      <h2>Domestic electricians in ${esc(area.name)}</h2>
+      <h2>Domestic Electrical</h2>
       <p>${esc(area.domesticAngle)}</p>
 
-      <h2>Neighbourhoods of ${esc(area.name)} we cover</h2>
+      <h2>Areas we cover</h2>
       <ul>
         ${area.neighbourhoods.map(n => '<li>' + esc(n) + '</li>').join('\n        ')}
       </ul>
 
-      <h2>Services in ${esc(area.name)}</h2>
+      <h2>Our electrical services in ${esc(area.name)}</h2>
       <ul>
         <li>Commercial fit-outs, distribution, emergency lighting and fire alarm</li>
         <li>Industrial three-phase, motor control and factory shutdowns</li>

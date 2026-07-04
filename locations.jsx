@@ -25,7 +25,7 @@ function LocationPage({ locationName }) {
       <Header current="areas" theme="dark" />
 
       <PageHero
-        section={`Electricians in ${locationName}`}
+        section="Local Coverage"
         sectionNum="03.1 / Location"
         title={`Local electricians covering ${locationName}`}
         titleAccent=" - NICEIC-approved."
@@ -78,8 +78,8 @@ function LocationPage({ locationName }) {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '60px', alignItems: 'stretch' }}>
             <div className="section-head" style={{ marginBottom: 0, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
               <div>
-                <div className="eyebrow">Local Electricians in {locationName}</div>
-                <h2 className="h-1">Electrical work in {locationName}, done properly the first time<span className="accent">.</span></h2>
+                <div className="eyebrow">Local Electricians</div>
+                <h2 className="h-1">Approved electricians in {locationName}, done properly the first time<span className="accent">.</span></h2>
               </div>
               <div style={{ marginTop: 24 }}>
                 {(area.intro || '').split('\n\n').map((para, idx) => (
@@ -132,7 +132,7 @@ function LocationPage({ locationName }) {
           <div className="section-head">
             <div>
               <div className="eyebrow">Services</div>
-              <h2 className="h-1">The full electrical scope for {locationName}<span className="accent">.</span></h2>
+              <h2 className="h-1">Our electrical services in {locationName}<span className="accent">.</span></h2>
             </div>
             <p className="lede">
               Five service lines, one in-house team. Here's how each applies to the {locationName} market - and what our {locationName} clients most often call us about.
@@ -150,7 +150,7 @@ function LocationPage({ locationName }) {
                 <div style={{ padding: '32px', paddingTop: '16px' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: 20 }}>
                     <div className="sc-glyph" style={{ width: 40, height: 40, color: 'var(--accent)', flexShrink: 0 }} dangerouslySetInnerHTML={{ __html: CARTER.svg[s.icon] }}/>
-                    <h3 className="h-3" style={{ margin: 0 }}>{s.title} electricians in {locationName}</h3>
+                    <h3 className="h-3" style={{ margin: 0 }}>{s.title === 'Commercial' || s.title === 'Industrial' || s.title === 'Domestic' ? `${s.title} Electrical` : s.title}</h3>
                   </div>
                   <p style={{ color: 'var(--muted-2)', lineHeight: 1.6, marginBottom: 16 }}>{s.lede}</p>
                   <ul className="bullets" style={{ margin: 0, padding: 0, listStyle: 'none' }}>
@@ -174,8 +174,8 @@ function LocationPage({ locationName }) {
         <div className="wrap" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 40 }}>
           {area.commercialAngle && (
             <div>
-              <div className="eyebrow">Commercial in {locationName}</div>
-              <h3 className="h-2" style={{ marginTop: 10 }}>Commercial electricians in {locationName}<span className="accent">.</span></h3>
+              <div className="eyebrow">Commercial Services</div>
+              <h3 className="h-2" style={{ marginTop: 10 }}>Commercial Electrical<span className="accent">.</span></h3>
               <p style={{ color: 'var(--muted-2)', lineHeight: 1.7, marginTop: 16 }}>{area.commercialAngle}</p>
               <p style={{ color: 'var(--muted-2)', lineHeight: 1.7, marginTop: 14 }}>
                 Typical scopes we quote for in {locationName}: full distribution and sub-mains replacements, emergency-lighting upgrades to BS 5266, BS 5839-1 fire detection, retail and restaurant fit-outs, data containment and structured cabling, EICR remedials following a failed report, and scheduled shutdowns timed around the business's trading hours.
@@ -184,8 +184,8 @@ function LocationPage({ locationName }) {
           )}
           {area.domesticAngle && (
             <div>
-              <div className="eyebrow">Domestic in {locationName}</div>
-              <h3 className="h-2" style={{ marginTop: 10 }}>Domestic electricians in {locationName}<span className="accent">.</span></h3>
+              <div className="eyebrow">Domestic Services</div>
+              <h3 className="h-2" style={{ marginTop: 10 }}>Domestic Electrical<span className="accent">.</span></h3>
               <p style={{ color: 'var(--muted-2)', lineHeight: 1.7, marginTop: 16 }}>{area.domesticAngle}</p>
               <p style={{ color: 'var(--muted-2)', lineHeight: 1.7, marginTop: 14 }}>
                 Common domestic jobs across {locationName}: full and partial rewires, replacement consumer units (fuseboards), OZEV-approved EV charger installs with load management, smart-lighting and smart-heating retrofits, extensions, loft conversions and garage conversions, external lighting and outbuilding supplies, and fault finding when a main breaker keeps tripping.
@@ -202,7 +202,7 @@ function LocationPage({ locationName }) {
         <div className="wrap">
           <div style={{ maxWidth: '800px' }}>
             <div className="eyebrow">Neighbourhoods served</div>
-            <h2 className="h-2" style={{ marginTop: 10 }}>Areas of {locationName} we cover<span className="accent">.</span></h2>
+            <h2 className="h-2" style={{ marginTop: 10 }}>Areas we cover<span className="accent">.</span></h2>
             <p className="lede" style={{ marginTop: 16 }}>
               Our electricians work across every part of {locationName}{area.postcodes && area.postcodes.length ? ' - covering ' + area.postcodes.join(', ') : ''}. If your address is inside any of the following neighbourhoods, you're well inside our core coverage zone:
             </p>
@@ -229,8 +229,8 @@ function LocationPage({ locationName }) {
       <section className="section-y light reveal">
         <div className="wrap">
           <div style={{ maxWidth: '800px' }}>
-            <div className="eyebrow">Recent work in {locationName}</div>
-            <h2 className="h-2" style={{ marginTop: 10 }}>A {locationName} project we delivered<span className="accent">.</span></h2>
+            <div className="eyebrow">Recent Work</div>
+            <h2 className="h-2" style={{ marginTop: 10 }}>Featured project<span className="accent">.</span></h2>
             <p className="lede" style={{ marginTop: 16 }}>{area.featuredProject}</p>
             {area.cases > 0 && (
               <p style={{ color: 'var(--muted-2)', lineHeight: 1.7, marginTop: 16 }}>
@@ -263,7 +263,7 @@ function LocationPage({ locationName }) {
       <section className="section-y reveal">
         <div className="wrap">
           <div style={{ maxWidth: '800px' }}>
-            <div className="eyebrow">Questions we get from {locationName}</div>
+            <div className="eyebrow">Common Questions</div>
             <h2 className="h-2" style={{ marginTop: 10 }}>Frequently asked questions<span className="accent">.</span></h2>
           </div>
           <div style={{ marginTop: 30, display: 'grid', gap: 1, background: 'var(--rule)', border: '1px solid var(--rule)' }}>
@@ -284,7 +284,7 @@ function LocationPage({ locationName }) {
         <div className="wrap">
           <div style={{ maxWidth: '800px' }}>
             <div className="eyebrow">Also covering</div>
-            <h2 className="h-2" style={{ marginTop: 10 }}>Other areas near {locationName}<span className="accent">.</span></h2>
+            <h2 className="h-2" style={{ marginTop: 10 }}>Nearby coverage<span className="accent">.</span></h2>
             <p className="lede" style={{ marginTop: 16 }}>
               We cover the wider {area.county || 'North West'} region from our Chester base. If you're scoping work outside {locationName} proper, the following are also in our core patch:
             </p>
