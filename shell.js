@@ -295,6 +295,7 @@ window.Footer = function Footer() {
     }
   }, /*#__PURE__*/React.createElement("a", {
     href: "privacy-policy.html",
+    rel: "nofollow",
     style: {
       color: 'rgba(255,255,255,0.4)',
       textDecoration: 'none',
@@ -304,6 +305,7 @@ window.Footer = function Footer() {
     onMouseLeave: e => e.target.style.color = 'rgba(255,255,255,0.4)'
   }, "Privacy Policy"), /*#__PURE__*/React.createElement("a", {
     href: "terms.html",
+    rel: "nofollow",
     style: {
       color: 'rgba(255,255,255,0.4)',
       textDecoration: 'none',

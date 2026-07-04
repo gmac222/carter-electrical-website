@@ -163,9 +163,7 @@ function generateSitemap(posts) {
     '/areas.html',
     '/case-studies.html',
     '/contact.html',
-    '/blog/',
-    '/privacy-policy.html',
-    '/terms.html'
+    '/blog/'
   ];
   
   const today = new Date().toISOString().split('T')[0];
