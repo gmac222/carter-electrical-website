@@ -7,7 +7,7 @@ function CommercialHero() {
     <PageHero
       section="Commercial Electrical"
       sectionNum="02.1 / Services"
-      title="Commercial Electricians in Chester"
+      title="Commercial Electricians"
       titleAccent="NICEIC Approved Contractors."
       subtext="Fit-outs, maintenance contracts, EICR compliance, and emergency lighting for offices, retail, hospitality, leisure, and multi-tenant buildings. Scoped candidly, delivered by our in-house team."
       ctas={
@@ -45,7 +45,7 @@ function Capabilities() {
         <div className="section-head">
           <div>
             <div className="eyebrow">What we do</div>
-            <h2 className="h-1">Commercial electrical services<br/> Chester businesses trust.</h2>
+            <h2 className="h-1">Commercial electrical services<br/> you can trust.</h2>
           </div>
           <p className="lede">
             A coordinated electrical package, not a spread of sub-sub-contractors.

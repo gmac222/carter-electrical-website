@@ -15,7 +15,7 @@ function CommercialHero() {
   return /*#__PURE__*/React.createElement(PageHero, {
     section: "Commercial Electrical",
     sectionNum: "02.1 / Services",
-    title: "Commercial Electricians in Chester",
+    title: "Commercial Electricians",
     titleAccent: "NICEIC Approved Contractors.",
     subtext: "Fit-outs, maintenance contracts, EICR compliance, and emergency lighting for offices, retail, hospitality, leisure, and multi-tenant buildings. Scoped candidly, delivered by our in-house team.",
     ctas: /*#__PURE__*/React.createElement("div", {
@@ -96,7 +96,7 @@ function Capabilities() {
     className: "eyebrow"
   }, "What we do"), /*#__PURE__*/React.createElement("h2", {
     className: "h-1"
-  }, "Commercial electrical services", /*#__PURE__*/React.createElement("br", null), " Chester businesses trust.")), /*#__PURE__*/React.createElement("p", {
+  }, "Commercial electrical services", /*#__PURE__*/React.createElement("br", null), " you can trust.")), /*#__PURE__*/React.createElement("p", {
     className: "lede"
   }, "A coordinated electrical package, not a spread of sub-sub-contractors.")), /*#__PURE__*/React.createElement("div", {
     className: "capability-grid"

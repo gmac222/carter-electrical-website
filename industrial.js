@@ -16,7 +16,7 @@ function IndustrialHero() {
     section: "Industrial Electrical",
     sectionNum: "02.2 / Services",
     title: "Industrial Electricians",
-    titleAccent: "Chester facilities rely on.",
+    titleAccent: "Power & Automation Engineering.",
     subtext: "High-voltage distribution, machinery wiring, control panels, plant maintenance, and compliance for factories, warehouses, agriculture, and logistics hubs. Scoped candidly, delivered by our directly employed team.",
     ctas: /*#__PURE__*/React.createElement("div", {
       style: {
@@ -96,7 +96,7 @@ function Capabilities() {
     className: "eyebrow"
   }, "Expertise Scope"), /*#__PURE__*/React.createElement("h2", {
     className: "h-1"
-  }, "Industrial electrical services", /*#__PURE__*/React.createElement("br", null), " Chester plant managers trust.")), /*#__PURE__*/React.createElement("p", {
+  }, "Industrial electrical services", /*#__PURE__*/React.createElement("br", null), " plant managers trust.")), /*#__PURE__*/React.createElement("p", {
     className: "lede"
   }, "Specialised high-voltage and automation systems delivered to strict BS 7671 wiring standards.")), /*#__PURE__*/React.createElement("div", {
     className: "capability-grid"

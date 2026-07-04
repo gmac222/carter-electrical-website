@@ -8,7 +8,7 @@ function IndustrialHero() {
       section="Industrial Electrical"
       sectionNum="02.2 / Services"
       title="Industrial Electricians"
-      titleAccent="Chester facilities rely on."
+      titleAccent="Power & Automation Engineering."
       subtext="High-voltage distribution, machinery wiring, control panels, plant maintenance, and compliance for factories, warehouses, agriculture, and logistics hubs. Scoped candidly, delivered by our directly employed team."
       ctas={
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 10 }}>
@@ -45,7 +45,7 @@ function Capabilities() {
         <div className="section-head">
           <div>
             <div className="eyebrow">Expertise Scope</div>
-            <h2 className="h-1">Industrial electrical services<br/> Chester plant managers trust.</h2>
+            <h2 className="h-1">Industrial electrical services<br/> plant managers trust.</h2>
           </div>
           <p className="lede">
             Specialised high-voltage and automation systems delivered to strict BS 7671 wiring standards.

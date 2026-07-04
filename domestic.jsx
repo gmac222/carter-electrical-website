@@ -8,7 +8,7 @@ function DomesticHero() {
       section="Domestic Electrical"
       sectionNum="02.3 / Services"
       title="Domestic Electricians"
-      titleAccent="Chester homeowners trust."
+      titleAccent="Safe & Certified Home Wiring."
       subtext="From full house rewires and consumer unit upgrades to OZEV-approved EV home chargers and smart lighting systems. Safe, certified, and fully insured works delivered by our polite in-house team."
       ctas={
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 10 }}>
@@ -45,7 +45,7 @@ function Capabilities() {
         <div className="section-head">
           <div>
             <div className="eyebrow">Household scope</div>
-            <h2 className="h-1">Domestic electrical services<br/> Chester families rely on.</h2>
+            <h2 className="h-1">Domestic electrical services<br/> you can rely on.</h2>
           </div>
           <p className="lede">
             Whether upgrading a single socket or completely rewiring a period property, we guarantee clean and safe delivery.

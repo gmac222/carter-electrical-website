@@ -16,7 +16,7 @@ function DomesticHero() {
     section: "Domestic Electrical",
     sectionNum: "02.3 / Services",
     title: "Domestic Electricians",
-    titleAccent: "Chester homeowners trust.",
+    titleAccent: "Safe & Certified Home Wiring.",
     subtext: "From full house rewires and consumer unit upgrades to OZEV-approved EV home chargers and smart lighting systems. Safe, certified, and fully insured works delivered by our polite in-house team.",
     ctas: /*#__PURE__*/React.createElement("div", {
       style: {
@@ -96,7 +96,7 @@ function Capabilities() {
     className: "eyebrow"
   }, "Household scope"), /*#__PURE__*/React.createElement("h2", {
     className: "h-1"
-  }, "Domestic electrical services", /*#__PURE__*/React.createElement("br", null), " Chester families rely on.")), /*#__PURE__*/React.createElement("p", {
+  }, "Domestic electrical services", /*#__PURE__*/React.createElement("br", null), " you can rely on.")), /*#__PURE__*/React.createElement("p", {
     className: "lede"
   }, "Whether upgrading a single socket or completely rewiring a period property, we guarantee clean and safe delivery.")), /*#__PURE__*/React.createElement("div", {
     className: "capability-grid"
