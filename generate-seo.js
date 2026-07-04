@@ -33,7 +33,11 @@ const areas = [
     postcodes: ['CH65', 'CH66'],
     neighbourhoods: ['Little Sutton', 'Whitby', 'Great Sutton', 'Hooton', 'Overpool', 'Rivacre', 'Strawberry', 'Wolverham'],
     metaDesc: 'NICEIC-approved electricians in Ellesmere Port (CH65, CH66). Industrial three-phase, retail fit-outs, domestic rewires, and OZEV EV chargers. Get a free quote.',
-    intro: "We deliver reliable commercial, industrial, and domestic electrical services throughout Ellesmere Port. Our team routinely carries out three-phase power installations and machinery wiring along the M53 corridor, retail fit-outs at Cheshire Oaks, and landlord EICR safety checks and rewires across the CH65 and CH66 postcodes. Contact us for a clear, fixed-price quote.",
+    intro: `We deliver reliable commercial, industrial, and domestic electrical services throughout Ellesmere Port.
+
+Our team routinely carries out three-phase power installations and machinery wiring along the M53 corridor, retail fit-outs at Cheshire Oaks, and landlord EICR safety checks and rewires across the CH65 and CH66 postcodes.
+
+Contact us for a clear, fixed-price quote.`,
     commercialAngle: "Cheshire Oaks, Coliseum Retail Park and the Stanney Lane trading estates drive a steady flow of shop and restaurant fit-outs, landlord-side compliance testing, and emergency-lighting upgrades.",
     domesticAngle: "The CH65/CH66 housing stock is a mix of 1960s–1970s estates needing replacement consumer units and full rewires, and newer developments where we're installing OZEV-approved EV chargers and smart home controls."
   },
@@ -43,7 +47,11 @@ const areas = [
     postcodes: ['LL11', 'LL12', 'LL13', 'LL14'],
     neighbourhoods: ['Acton', 'Rhosddu', 'Rossett', 'Marford', 'Gwersyllt', 'Rhosllanerchrugog', 'Ruabon', 'Gresford', 'Coedpoeth', 'Borras', 'Hightown'],
     metaDesc: 'NICEIC-approved electricians in Wrexham (LL11–LL14). Industrial three-phase, commercial fit-outs, full rewires, and OZEV EV chargers. Contact us today.',
-    intro: "Our qualified, NICEIC-approved electricians cover Wrexham and all surrounding villages. We specialize in heavy industrial work, three-phase distribution, and preventative maintenance on Wrexham Industrial Estate, alongside town-centre commercial fit-outs and domestic services including rewires and EV charger installations. We operate fully under both English and Welsh building regulations.",
+    intro: `Our qualified, NICEIC-approved electricians cover Wrexham and all surrounding villages.
+
+We specialize in heavy industrial work, three-phase distribution, and preventative maintenance on Wrexham Industrial Estate, alongside town-centre commercial fit-outs and domestic services including rewires and EV charger installations.
+
+We operate fully under both English and Welsh building regulations.`,
     commercialAngle: "Wrexham's commercial demand ranges from town-centre retail units through to newer office and hospitality work around the Racecourse and Eagles Meadow. We deliver design-and-install, EICR-led remedials and emergency-lighting programmes to landlords and operators.",
     domesticAngle: "Cross-border working is routine for us: we hold NICEIC approval recognised across England and Wales. Domestic demand skews toward rewires in older terraced stock, EV chargers in Gresford and Marford, and replacement consumer units across the LL12 belt."
   },
@@ -53,7 +61,9 @@ const areas = [
     postcodes: ['CW8', 'CW9'],
     neighbourhoods: ['Barnton', 'Hartford', 'Weaverham', 'Lostock Gralam', 'Rudheath', 'Castle', 'Winnington', 'Leftwich', 'Davenham', 'Sandiway', 'Kingsmead'],
     metaDesc: 'NICEIC-approved electricians in Northwich (CW8, CW9). Industrial maintenance, retail fit-outs, full rewires, consumer units, and EV chargers. Request a quote.',
-    intro: "If you need an electrician in Northwich, we offer a full range of commercial, industrial, and domestic electrical services. We support local businesses with commercial fit-outs and landlord safety checks, handle three-phase industrial installations, and assist homeowners with replacement consumer units, rewires, and OZEV-approved EV charger installations across CW8 and CW9.",
+    intro: `If you need an electrician in Northwich, we offer a full range of commercial, industrial, and domestic electrical services.
+
+We support local businesses with commercial fit-outs and landlord safety checks, handle three-phase industrial installations, and assist homeowners with replacement consumer units, rewires, and OZEV-approved EV charger installations across CW8 and CW9.`,
     commercialAngle: "Barons Quay retail and leisure tenants, the Lostock Gralam trading estates and town-centre hospitality drive most of our Northwich commercial work: fit-outs, EICRs, landlord compliance, and planned lighting upgrades.",
     domesticAngle: "Hartford and Davenham demand sits with replacement consumer units and part-rewires on 1970s-era stock, while Kingsmead and Leftwich new-build owners most often call us for EV chargers, solar-PV add-ons and smart lighting."
   },
@@ -63,7 +73,9 @@ const areas = [
     postcodes: ['WA6'],
     neighbourhoods: ['Kingsley', 'Helsby', 'Overton', 'Alvanley', 'Manley', 'Mouldsworth', 'Norley', 'Crowton'],
     metaDesc: 'NICEIC-approved electricians in Frodsham (WA6). Commercial fit-outs, landlord EICRs, full rewires, and OZEV EV chargers. Contact us for a free quote.',
-    intro: "We provide professional electrical installations and testing for homes and businesses in Frodsham and Helsby. From emergency lighting and landlord certificates for High Street shops to EV chargers and domestic rewires in the surrounding villages, our NICEIC-approved engineers ensure your project is completed safely, on time, and on budget.",
+    intro: `We provide professional electrical installations and testing for homes and businesses in Frodsham and Helsby.
+
+From emergency lighting and landlord certificates for High Street shops to EV chargers and domestic rewires in the surrounding villages, our NICEIC-approved engineers ensure your project is completed safely, on time, and on budget.`,
     commercialAngle: "Frodsham's independents (restaurants, pubs, salons and the Main Street retail trade) rely on us for quick-turnaround fit-outs, EICRs ahead of lease renewals, and PAT testing programmes.",
     domesticAngle: "Commuter demand dominates: OZEV-approved EV charger installs with load management, full-property rewires where homebuyers' surveys have flagged old wiring, and smart-heating retrofits for the Overton and Helsby stock."
   },
@@ -73,7 +85,11 @@ const areas = [
     postcodes: ['CW6'],
     neighbourhoods: ['Utkinton', 'Cotebrook', 'Eaton', 'Alpraham', 'Beeston', 'Bunbury', 'Tiverton', 'Little Budworth', 'Cuddington'],
     metaDesc: 'NICEIC-approved electricians in Tarporley (CW6). Heritage rewires, smart-home systems, barn conversions, and outbuilding three-phase supplies. Contact us.',
-    intro: "Our team delivers high-quality domestic and commercial electrical work across Tarporley and the CW6 area. We are experienced in heritage-sensitive rewires for listed buildings, smart lighting controls, barn conversions, and three-phase supplies for agricultural and equestrian yards. All work is completed by our in-house engineers with absolute respect for your property.",
+    intro: `Our team delivers high-quality domestic and commercial electrical work across Tarporley and the CW6 area.
+
+We are experienced in heritage-sensitive rewires for listed buildings, smart lighting controls, barn conversions, and three-phase supplies for agricultural and equestrian yards.
+
+All work is completed by our in-house engineers with absolute respect for your property.`,
     commercialAngle: "Tarporley High Street's boutique retail, hospitality and professional-services offices use us for EICR-led remedials, fit-outs and emergency lighting. We also support the equestrian and agricultural sector with three-phase supplies to yards and barns.",
     domesticAngle: "High-end domestic is the core of our Tarporley demand: smart-lighting schemes with multi-room control, heritage-sensitive rewires on listed farmhouses, EV charger installs with three-phase capability, and outdoor lighting design on larger plots."
   },
@@ -83,7 +99,9 @@ const areas = [
     postcodes: ['CH7'],
     neighbourhoods: ['Buckley', 'New Brighton', 'Gwernaffield', 'Gwernymynydd', 'Leeswood', 'Nercwys', 'Pontblyddyn', 'Sychdyn', 'Alltami'],
     metaDesc: 'NICEIC-approved electricians in Mold (CH7). Commercial fit-outs, agricultural three-phase, outbuilding supplies, rewires, and EV chargers. Get a quote.',
-    intro: "We provide fully certified, NICEIC-approved electrical services across Mold and the CH7 postcode. Operating on both sides of the border, we handle commercial fit-outs and compliance testing in the town centre, agricultural and three-phase outbuilding installs in rural areas, and domestic services including rewires, consumer unit replacements, and EV charger installations.",
+    intro: `We provide fully certified, NICEIC-approved electrical services across Mold and the CH7 postcode.
+
+Operating on both sides of the border, we handle commercial fit-outs and compliance testing in the town centre, agricultural and three-phase outbuilding installs in rural areas, and domestic services including rewires, consumer unit replacements, and EV charger installations.`,
     commercialAngle: "Mold town centre (Daniel Owen Square, the Market and High Street) drives most of our commercial work: small-to-mid fit-outs, landlord EICRs, emergency-lighting upgrades and PAT testing.",
     domesticAngle: "Rural demand is a big part of CH7: outbuilding supplies, three-phase for farms, smart-home and EV-charger installs for commuter villages, and full rewires on older stone-built properties."
   },
@@ -93,7 +111,9 @@ const areas = [
     postcodes: ['CH5'],
     neighbourhoods: ['Shotton', "Connah's Quay", 'Queensferry', 'Sealand', 'Hawarden', 'Garden City', 'Sandycroft', 'Mancot', 'Ewloe'],
     metaDesc: 'NICEIC-approved electricians in Deeside (CH5). Industrial three-phase, factory shutdowns, commercial fit-outs, full rewires, and EV chargers. Contact us.',
-    intro: "Looking for a qualified industrial or commercial electrician in Deeside? We support manufacturers on Deeside Industrial Park with three-phase power upgrades, machinery wiring, and preventative maintenance, while providing local retail fit-outs, landlord EICR safety checks, and domestic rewires across the CH5 area.",
+    intro: `Looking for a qualified industrial or commercial electrician in Deeside?
+
+We support manufacturers on Deeside Industrial Park with three-phase power upgrades, machinery wiring, and preventative maintenance, while providing local retail fit-outs, landlord EICR safety checks, and domestic rewires across the CH5 area.`,
     commercialAngle: "Deeside Industrial Park tenants are the backbone of our commercial work here: scheduled maintenance, RCD and distribution upgrades, compliance testing and planned remedial works.",
     domesticAngle: "Shotton and Connah's Quay terraced stock needs full rewires and replacement consumer units more often than not, while Hawarden and Ewloe homeowners are mostly calling us for EV chargers, solar-PV add-ons and smart-home retrofits."
   },
@@ -103,7 +123,11 @@ const areas = [
     postcodes: ['CH41', 'CH42', 'CH43', 'CH44', 'CH45', 'CH46', 'CH47', 'CH48', 'CH49', 'CH60', 'CH61', 'CH62', 'CH63'],
     neighbourhoods: ['Birkenhead', 'Prenton', 'Wallasey', 'New Brighton', 'Bebington', 'Heswall', 'West Kirby', 'Hoylake', 'Bromborough', 'Moreton', 'Upton', 'Greasby', 'Port Sunlight', 'Eastham', 'Caldy'],
     metaDesc: 'NICEIC-approved electricians in Wirral (CH41–CH49, CH60–CH63). Commercial fit-outs, industrial three-phase, EICRs & EV chargers. Contact us for a quote.',
-    intro: "Looking for a reliable, NICEIC-approved electrician in Wirral? We provide comprehensive commercial, industrial, and domestic electrical services across the peninsula, covering Birkenhead, Wallasey, Heswall, West Kirby, and all surrounding areas. From three-phase industrial installations at Bromborough to retail fit-outs, landlord EICRs, and full domestic rewires, our in-house team delivers neat, compliant work with transparent, fixed pricing.",
+    intro: `Looking for a reliable, NICEIC-approved electrician in Wirral?
+
+We provide comprehensive commercial, industrial, and domestic electrical services across the peninsula, covering Birkenhead, Wallasey, Heswall, West Kirby, and all surrounding areas.
+
+From three-phase industrial installations at Bromborough to retail fit-outs, landlord EICRs, and full domestic rewires, our in-house team delivers neat, compliant work with transparent, fixed pricing.`,
     commercialAngle: "Wirral's commercial demand spans the Wirral International Business Park and Bromborough's manufacturing estates, the regenerating Birkenhead waterfront around Wirral Waters and Twelve Quays, and the retail and hospitality trade at New Brighton's Marine Point, Birkenhead's Grange and Pyramids precincts and the West Kirby and Heswall high streets. We deliver design-and-install fit-outs, landlord EICRs ahead of lease renewals, emergency-lighting certification and planned maintenance contracts.",
     domesticAngle: "The peninsula's housing stock runs the full range: Victorian and Edwardian terraces in Birkenhead, Tranmere and Wallasey needing full rewires and replacement consumer units; interwar semis across Bebington, Eastham and Moreton; and higher-end detached and coastal property in Heswall, Caldy, West Kirby and Hoylake where the calls are for smart-lighting schemes, garden and outbuilding supplies, and OZEV-approved EV chargers with load management."
   }

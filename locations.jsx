@@ -81,7 +81,22 @@ function LocationPage({ locationName }) {
                 <div className="eyebrow">Local Electricians in {locationName}</div>
                 <h2 className="h-1">Electrical work in {locationName}, done properly the first time<span className="accent">.</span></h2>
               </div>
-              <p className="lede" style={{ marginTop: 'auto' }}>{area.intro}</p>
+              <div style={{ marginTop: 24 }}>
+                {(area.intro || '').split('\n\n').map((para, idx) => (
+                  <p 
+                    key={idx} 
+                    className={idx === 0 ? "lede" : ""} 
+                    style={{ 
+                      marginTop: idx === 0 ? 0 : 14, 
+                      marginBottom: 0,
+                      color: idx === 0 ? 'var(--dark)' : 'var(--muted-1)',
+                      lineHeight: 1.6
+                    }}
+                  >
+                    {para}
+                  </p>
+                ))}
+              </div>
             </div>
             
             <div className="area-image" style={{ height: '100%', width: '100%', position: 'relative', minHeight: '300px' }}>

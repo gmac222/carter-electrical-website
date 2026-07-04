@@ -145,12 +145,20 @@ function LocationPage({
     className: "h-1"
   }, "Electrical work in ", locationName, ", done properly the first time", /*#__PURE__*/React.createElement("span", {
     className: "accent"
-  }, "."))), /*#__PURE__*/React.createElement("p", {
-    className: "lede",
+  }, "."))), /*#__PURE__*/React.createElement("div", {
     style: {
-      marginTop: 'auto'
+      marginTop: 24
     }
-  }, area.intro)), /*#__PURE__*/React.createElement("div", {
+  }, (area.intro || '').split('\n\n').map((para, idx) => /*#__PURE__*/React.createElement("p", {
+    key: idx,
+    className: idx === 0 ? "lede" : "",
+    style: {
+      marginTop: idx === 0 ? 0 : 14,
+      marginBottom: 0,
+      color: idx === 0 ? 'var(--dark)' : 'var(--muted-1)',
+      lineHeight: 1.6
+    }
+  }, para)))), /*#__PURE__*/React.createElement("div", {
     className: "area-image",
     style: {
       height: '100%',
