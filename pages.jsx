@@ -190,8 +190,8 @@ function ServicesPage() {
                   ))}
                 </div>
                 <div style={{ marginTop: 'auto', paddingTop: 28 }}>
-                  {s.slug === 'commercial'
-                    ? <a href="commercial.html" className="btn btn-ghost-dark">Commercial deep-dive <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }}/></a>
+                  {s.slug === 'commercial' || s.slug === 'industrial' || s.slug === 'domestic'
+                    ? <a href={`${s.slug}.html`} className="btn btn-ghost-dark">{s.title} deep-dive <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }}/></a>
                     : <a href="contact.html" className="btn btn-ghost-dark">Get your free quote <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }}/></a>}
                 </div>
               </div>

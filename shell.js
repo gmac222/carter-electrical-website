@@ -185,7 +185,10 @@ window.Header = function Header({
     d: "M3 7h16M3 15h16"
   }))))))));
 };
-window.TrustBar = function TrustBar() {
+window.TrustBar = function TrustBar({
+  area
+}) {
+  const pinText = area ? `${area.name} · ${area.postcodes && area.postcodes.length ? area.postcodes[0] : 'CH3'}` : 'Chester · CH3';
   const items = [{
     img: 'uploads/nic.png',
     alt: 'NICEIC Approved Contractor logo',
@@ -197,7 +200,7 @@ window.TrustBar = function TrustBar() {
     bottom: 'Guaranteed Work'
   }, {
     glyph: CARTER.svg.pin,
-    top: 'Chester · CH3',
+    top: pinText,
     bottom: 'Local & On-Call'
   }, {
     img: 'uploads/ozev-logo.jpg',
@@ -269,9 +272,9 @@ window.Footer = function Footer() {
   }, "NICEIC \xB7 Est. ", CARTER.company.founded)), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h4", null, "Services"), /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
     href: "commercial.html"
   }, "Commercial")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
-    href: "services.html#industrial"
+    href: "industrial.html"
   }, "Industrial")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
-    href: "services.html#domestic"
+    href: "domestic.html"
   }, "Domestic")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
     href: "services.html#renewables"
   }, "Renewables & EV")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {

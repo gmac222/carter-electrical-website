@@ -121,7 +121,9 @@ function LocationPage({
     className: "k"
   }, "Sectors"), /*#__PURE__*/React.createElement("span", {
     className: "v"
-  }, "Commercial \xB7 Domestic \xB7 Industrial")))))), /*#__PURE__*/React.createElement(TrustBar, null), /*#__PURE__*/React.createElement("section", {
+  }, "Commercial \xB7 Domestic \xB7 Industrial")))))), /*#__PURE__*/React.createElement(TrustBar, {
+    area: area
+  }), /*#__PURE__*/React.createElement("section", {
     className: "section-y light reveal"
   }, /*#__PURE__*/React.createElement("div", {
     className: "wrap"

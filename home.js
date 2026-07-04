@@ -314,7 +314,7 @@ function Services() {
     const chesterImgSrc = chesterImages[s.slug] || s.imgSrc;
     const chesterAlt = chesterAlts[s.slug] || 'Carter Electrical';
     return /*#__PURE__*/React.createElement("a", {
-      href: s.slug === 'commercial' ? 'commercial.html' : `services.html#${s.slug}`,
+      href: s.slug === 'commercial' || s.slug === 'industrial' || s.slug === 'domestic' ? `${s.slug}.html` : `services.html#${s.slug}`,
       key: s.slug,
       className: "service-card",
       style: {

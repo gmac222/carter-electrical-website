@@ -114,11 +114,14 @@ window.Header = function Header({ current = 'home', theme = 'dark' }) {
   );
 };
 
-window.TrustBar = function TrustBar() {
+window.TrustBar = function TrustBar({ area }) {
+  const pinText = area 
+    ? `${area.name} · ${area.postcodes && area.postcodes.length ? area.postcodes[0] : 'CH3'}`
+    : 'Chester · CH3';
   const items = [
     { img: 'uploads/nic.png',       alt: 'NICEIC Approved Contractor logo', top: 'NICEIC',          bottom: 'Approved Contractor' },
     { glyph: CARTER.svg.check,                                             top: 'Fully Insured',   bottom: 'Guaranteed Work' },
-    { glyph: CARTER.svg.pin,                                               top: 'Chester · CH3',   bottom: 'Local & On-Call' },
+    { glyph: CARTER.svg.pin,                                               top: pinText,           bottom: 'Local & On-Call' },
     { img: 'uploads/ozev-logo.jpg', alt: 'OZEV-approved EV charger installer logo', top: 'OZEV Registered', bottom: 'EV Charger Install' },
     { glyph: CARTER.svg.shield,                                            top: '18th Edition',    bottom: 'BS 7671 Compliant' },
   ];
@@ -162,8 +165,8 @@ window.Footer = function Footer() {
             <h4>Services</h4>
             <ul>
               <li><a href="commercial.html">Commercial</a></li>
-              <li><a href="services.html#industrial">Industrial</a></li>
-              <li><a href="services.html#domestic">Domestic</a></li>
+              <li><a href="industrial.html">Industrial</a></li>
+              <li><a href="domestic.html">Domestic</a></li>
               <li><a href="services.html#renewables">Renewables & EV</a></li>
               <li><a href="services.html#testing">Inspection & Testing</a></li>
             </ul>

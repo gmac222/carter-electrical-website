@@ -76,7 +76,7 @@ function LocationPage({ locationName }) {
         </div>
       </PageHero>
 
-      <TrustBar />
+      <TrustBar area={area} />
 
       {/* Intro / local context - unique per city */}
       <section className="section-y light reveal">

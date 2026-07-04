@@ -481,10 +481,10 @@ function ServicesPage() {
       marginTop: 'auto',
       paddingTop: 28
     }
-  }, s.slug === 'commercial' ? /*#__PURE__*/React.createElement("a", {
-    href: "commercial.html",
+  }, s.slug === 'commercial' || s.slug === 'industrial' || s.slug === 'domestic' ? /*#__PURE__*/React.createElement("a", {
+    href: `${s.slug}.html`,
     className: "btn btn-ghost-dark"
-  }, "Commercial deep-dive ", /*#__PURE__*/React.createElement("span", {
+  }, s.title, " deep-dive ", /*#__PURE__*/React.createElement("span", {
     dangerouslySetInnerHTML: {
       __html: CARTER.svg.arrow
     }

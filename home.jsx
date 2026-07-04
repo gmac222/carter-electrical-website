@@ -191,7 +191,7 @@ function Services() {
             const chesterImgSrc = chesterImages[s.slug] || s.imgSrc;
             const chesterAlt = chesterAlts[s.slug] || 'Carter Electrical';
             return (
-            <a href={s.slug === 'commercial' ? 'commercial.html' : `services.html#${s.slug}`} key={s.slug} className="service-card" style={{ padding: 0 }}>
+            <a href={s.slug === 'commercial' || s.slug === 'industrial' || s.slug === 'domestic' ? `${s.slug}.html` : `services.html#${s.slug}`} key={s.slug} className="service-card" style={{ padding: 0 }}>
               <div className="sc-visual" style={{ height: '220px', position: 'relative', width: '100%' }}>
                 <CarterPlaceholder imgSrc={chesterImgSrc} alt={chesterAlt} hue={210} />
               </div>
