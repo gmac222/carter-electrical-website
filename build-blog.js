@@ -78,6 +78,7 @@ function generateArticleHtml(post) {
   gtag('js', new Date());
 
   gtag('config', 'G-6WK8M8E9R9');
+  gtag('config', 'AW-18182294304');
 </script>
 </head>
 <body>
@@ -131,6 +132,7 @@ function generateBlogIndexHtml(posts) {
   gtag('js', new Date());
 
   gtag('config', 'G-6WK8M8E9R9');
+  gtag('config', 'AW-18182294304');
 </script>
 </head>
 <body>

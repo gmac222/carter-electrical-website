@@ -505,6 +505,7 @@ ${JSON.stringify(schema, null, 2)}
   gtag('js', new Date());
 
   gtag('config', 'G-6WK8M8E9R9');
+  gtag('config', 'AW-18182294304');
 </script>
 </head>
 <body>
