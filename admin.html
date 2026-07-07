@@ -419,10 +419,60 @@
     /* ── Tab Navigation ── */
     .crm-tabs {
       display: flex;
-      gap: 4px;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
       padding: 0 28px;
       background: var(--white);
       border-bottom: 1px solid var(--rule);
+      flex-wrap: wrap;
+    }
+    .crm-tab-buttons {
+      display: flex;
+      gap: 4px;
+    }
+    .crm-date-filter {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--muted-2);
+      padding: 10px 0;
+    }
+    .crm-date-filter label {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .crm-date-filter select {
+      padding: 6px 12px;
+      border: 1px solid var(--rule);
+      background: var(--white);
+      font-family: var(--font-sans);
+      font-size: 12.5px;
+      outline: none;
+      cursor: pointer;
+      transition: border-color var(--transition-fast);
+    }
+    .crm-date-filter select:focus {
+      border-color: var(--accent);
+    }
+    .custom-date-inputs {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .custom-date-inputs input[type="date"] {
+      padding: 4px 8px;
+      border: 1px solid var(--rule);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      outline: none;
+    }
+    .custom-date-inputs input[type="date"]:focus {
+      border-color: var(--accent);
     }
     .crm-tab-btn {
       padding: 16px 20px;
@@ -455,7 +505,7 @@
     }
     .crm-stats-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 16px;
     }
     .crm-stat-card {
@@ -839,6 +889,17 @@
     @keyframes slideUp { from { transform: translateY(15px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
 
     /* ── Responsive ── */
+    @media (max-width: 1024px) {
+      .crm-stats-section {
+        grid-template-columns: 1fr;
+      }
+      .crm-breakdowns-section {
+        grid-template-columns: 1fr;
+      }
+      .crm-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
     @media (max-width: 768px) {
       .crm-header-inner { padding: 12px 16px; }
       .crm-toolbar { padding: 12px 16px; }
@@ -847,6 +908,11 @@
       .crm-table { font-size: 12px; }
       .crm-table thead th { font-size: 9.5px; padding: 10px 8px; }
       .crm-table td { padding: 10px 8px; }
+    }
+    @media (max-width: 600px) {
+      .crm-stats-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>

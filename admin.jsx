@@ -54,6 +54,9 @@ function AdminDashboard() {
   const [search, setSearch] = useState('');
   const [selectedLead, setSelectedLead] = useState(null);
   const [activeTab, setActiveTab] = useState('analytics');
+  const [dateRangeType, setDateRangeType] = useState('all');
+  const [customStartDate, setCustomStartDate] = useState('');
+  const [customEndDate, setCustomEndDate] = useState('');
 
   const statuses = ['New Lead', 'Contacted', 'Won', 'Lost', 'Spam'];
 
@@ -121,8 +124,53 @@ function AdminDashboard() {
     setDeleting(null);
   };
 
-  /* ── Filtered + searched leads ── */
-  const visibleLeads = leads.filter(l => {
+  /* ── Filter by date range (applies globally to both tabs) ── */
+  const filteredLeadsByDate = leads.filter(l => {
+    if (!l.createdTime) return true;
+    const date = new Date(l.createdTime);
+    if (isNaN(date.getTime())) return true;
+
+    const now = new Date();
+    
+    // Normalize today
+    const startOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    const endOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59, 999);
+
+    if (dateRangeType === 'today') {
+      return date >= startOfToday && date <= endOfToday;
+    }
+    if (dateRangeType === '7days') {
+      const sevenDaysAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
+      return date >= sevenDaysAgo;
+    }
+    if (dateRangeType === '30days') {
+      const thirtyDaysAgo = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
+      return date >= thirtyDaysAgo;
+    }
+    if (dateRangeType === 'thisMonth') {
+      const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
+      return date >= startOfMonth;
+    }
+    if (dateRangeType === 'lastMonth') {
+      const startOfLastMonth = new Date(now.getFullYear(), now.getMonth() - 1, 1);
+      const endOfLastMonth = new Date(now.getFullYear(), now.getMonth(), 0, 23, 59, 59, 999);
+      return date >= startOfLastMonth && date <= endOfLastMonth;
+    }
+    if (dateRangeType === 'custom') {
+      if (customStartDate) {
+        const start = new Date(customStartDate + 'T00:00:00');
+        if (date < start) return false;
+      }
+      if (customEndDate) {
+        const end = new Date(customEndDate + 'T23:59:59');
+        if (date > end) return false;
+      }
+    }
+    return true;
+  });
+
+  /* ── Filtered + searched leads for Leads Directory ── */
+  const visibleLeads = filteredLeadsByDate.filter(l => {
     if (filter !== 'All' && (l.status || 'New Lead') !== filter) return false;
     if (search) {
       const q = search.toLowerCase();
@@ -136,8 +184,8 @@ function AdminDashboard() {
     const months = [];
     const now = new Date();
     let anchor = now;
-    if (leads.length > 0) {
-      const dates = leads.map(l => new Date(l.createdTime)).filter(d => !isNaN(d.getTime()));
+    if (filteredLeadsByDate.length > 0) {
+      const dates = filteredLeadsByDate.map(l => new Date(l.createdTime)).filter(d => !isNaN(d.getTime()));
       if (dates.length > 0) {
         anchor = new Date(Math.max(...dates));
       }
@@ -157,7 +205,7 @@ function AdminDashboard() {
   };
 
   const chartData = getLast6Months();
-  leads.forEach(l => {
+  filteredLeadsByDate.forEach(l => {
     if (l.status === 'Spam') return; // Exclude spam from MoM chart trends
     const d = new Date(l.createdTime);
     if (isNaN(d.getTime())) return;
@@ -188,9 +236,10 @@ function AdminDashboard() {
     trendClass = rounded >= 0 ? 'trend-up' : 'trend-down';
   }
 
-  const realLeads = leads.filter(l => l.status !== 'Spam');
-  const spamLeads = leads.filter(l => l.status === 'Spam');
+  const realLeads = filteredLeadsByDate.filter(l => l.status !== 'Spam');
+  const spamLeads = filteredLeadsByDate.filter(l => l.status === 'Spam');
 
+  const totalEnquiries = filteredLeadsByDate.length;
   const totalLeads = realLeads.length;
   const wonLeads = realLeads.filter(l => l.status === 'Won').length;
   const winRate = totalLeads > 0 ? Math.round((wonLeads / totalLeads) * 100) : 0;
@@ -198,6 +247,9 @@ function AdminDashboard() {
   const answeredCalls = realLeads.filter(l => l.service === 'Inbound Call' && !l.isMissed).length;
   const missedCalls = realLeads.filter(l => l.service === 'Inbound Call' && l.isMissed).length;
   const totalForms = totalLeads - totalCalls;
+
+  const spamCalls = spamLeads.filter(l => l.service === 'Inbound Call').length;
+  const spamForms = spamLeads.length - spamCalls;
 
   // Pipeline Values
   const pipelineValue = realLeads
@@ -230,8 +282,8 @@ function AdminDashboard() {
     .slice(0, 5);
 
   /* ── Counts per status ── */
-  const counts = { All: leads.length };
-  statuses.forEach(s => { counts[s] = leads.filter(l => (l.status || 'New Lead') === s).length; });
+  const counts = { All: filteredLeadsByDate.length };
+  statuses.forEach(s => { counts[s] = filteredLeadsByDate.filter(l => (l.status || 'New Lead') === s).length; });
 
   const recentLeads = [...realLeads].slice(0, 5);
 
@@ -287,20 +339,44 @@ function AdminDashboard() {
             </div>
           </div>
           <div className="crm-header-actions">
-            <span className="crm-lead-count">{leads.length} lead{leads.length !== 1 ? 's' : ''}</span>
+            <span className="crm-lead-count">
+              {filteredLeadsByDate.length === leads.length ? `${leads.length} lead${leads.length !== 1 ? 's' : ''}` : `${filteredLeadsByDate.length} of ${leads.length} lead${leads.length !== 1 ? 's' : ''}`}
+            </span>
             <button className="crm-signout" onClick={() => setIsLoggedIn(false)}>Sign Out</button>
           </div>
         </div>
       </header>
 
-      {/* ── Tabs Navigation ── */}
+      {/* ── Tabs Navigation & Date Filter ── */}
       <div className="crm-tabs">
-        <button className={`crm-tab-btn ${activeTab === 'analytics' ? 'active' : ''}`} onClick={() => setActiveTab('analytics')}>
-          Analytics Overview
-        </button>
-        <button className={`crm-tab-btn ${activeTab === 'leads' ? 'active' : ''}`} onClick={() => setActiveTab('leads')}>
-          Leads Directory
-        </button>
+        <div className="crm-tab-buttons">
+          <button className={`crm-tab-btn ${activeTab === 'analytics' ? 'active' : ''}`} onClick={() => setActiveTab('analytics')}>
+            Analytics Overview
+          </button>
+          <button className={`crm-tab-btn ${activeTab === 'leads' ? 'active' : ''}`} onClick={() => setActiveTab('leads')}>
+            Leads Directory
+          </button>
+        </div>
+        
+        <div className="crm-date-filter">
+          <label htmlFor="date-range-select">Date Range:</label>
+          <select id="date-range-select" value={dateRangeType} onChange={e => setDateRangeType(e.target.value)}>
+            <option value="all">All Time</option>
+            <option value="today">Today</option>
+            <option value="7days">Last 7 Days</option>
+            <option value="30days">Last 30 Days</option>
+            <option value="thisMonth">This Month</option>
+            <option value="lastMonth">Last Month</option>
+            <option value="custom">Custom Range...</option>
+          </select>
+          {dateRangeType === 'custom' && (
+            <div className="custom-date-inputs">
+              <input type="date" value={customStartDate} onChange={e => setCustomStartDate(e.target.value)} />
+              <span>to</span>
+              <input type="date" value={customEndDate} onChange={e => setCustomEndDate(e.target.value)} />
+            </div>
+          )}
+        </div>
       </div>
 
       {/* ═══════ ANALYTICS VIEW ═══════ */}
@@ -310,53 +386,86 @@ function AdminDashboard() {
           <section className="crm-stats-section">
             {/* KPI Grid */}
             <div className="crm-stats-grid">
+              {/* Card 1: Total Enquiries */}
               <div className="crm-stat-card">
                 <div>
-                  <div className="crm-stat-label">Total Leads</div>
+                  <div className="crm-stat-label">Total Enquiries</div>
+                  <div className="crm-stat-value">{totalEnquiries}</div>
+                </div>
+                <div className="crm-stat-trend trend-neutral">All calls & web forms</div>
+              </div>
+              
+              {/* Card 2: Active Leads */}
+              <div className="crm-stat-card">
+                <div>
+                  <div className="crm-stat-label">Active Leads</div>
                   <div className="crm-stat-value">{totalLeads}</div>
                 </div>
-                <div className="crm-stat-trend trend-neutral">Real leads ({spamLeads.length} spam marked)</div>
+                <div className="crm-stat-trend trend-neutral">Legitimate business leads</div>
               </div>
+
+              {/* Card 3: Inbound Calls */}
               <div className="crm-stat-card">
                 <div>
                   <div className="crm-stat-label">Inbound Calls</div>
                   <div className="crm-stat-value">{totalCalls}</div>
                 </div>
                 <div className="crm-stat-trend trend-neutral" style={{ display: 'flex', gap: '6px' }}>
-                  <span style={{ color: 'var(--accent-text)', fontWeight: 'bold' }}>{answeredCalls} Answered</span>
-                  <span style={{ color: 'rgba(255,255,255,0.2)' }}>·</span>
-                  <span style={{ color: '#ef4444', fontWeight: 'bold' }}>{missedCalls} Missed</span>
+                  <span style={{ color: 'var(--accent-text)', fontWeight: 'bold' }}>{answeredCalls} Ans</span>
+                  <span style={{ color: 'rgba(0,0,0,0.15)' }}>·</span>
+                  <span style={{ color: '#ef4444', fontWeight: 'bold' }}>{missedCalls} Miss</span>
                 </div>
               </div>
+
+              {/* Card 4: Web Enquiries */}
               <div className="crm-stat-card">
                 <div>
                   <div className="crm-stat-label">Web Enquiries</div>
                   <div className="crm-stat-value">{totalForms}</div>
                 </div>
                 <div className="crm-stat-trend trend-neutral">
-                  {totalLeads > 0 ? `${Math.round((totalForms / totalLeads) * 100)}% of total` : '0% of total'}
+                  {totalLeads > 0 ? `${Math.round((totalForms / totalLeads) * 100)}% of active` : '0% of active'}
                 </div>
               </div>
+
+              {/* Card 5: Pipeline Value */}
               <div className="crm-stat-card">
                 <div>
                   <div className="crm-stat-label">Pipeline Value</div>
                   <div className="crm-stat-value">£{pipelineValue.toLocaleString()}</div>
                 </div>
-                <div className="crm-stat-trend trend-neutral">Active unclosed quote estimates</div>
+                <div className="crm-stat-trend trend-neutral">Estimated open quotes</div>
               </div>
+
+              {/* Card 6: Revenue Won */}
               <div className="crm-stat-card">
                 <div>
                   <div className="crm-stat-label">Revenue Won</div>
                   <div className="crm-stat-value">£{wonRevenue.toLocaleString()}</div>
                 </div>
-                <div className="crm-stat-trend trend-up">Contracts successfully won</div>
+                <div className="crm-stat-trend trend-up">Contracts won successfully</div>
               </div>
+
+              {/* Card 7: Conversion Rate */}
               <div className="crm-stat-card">
                 <div>
                   <div className="crm-stat-label">Conversion Rate</div>
                   <div className="crm-stat-value">{winRate}%</div>
                 </div>
                 <div className="crm-stat-trend trend-up">{wonLeads} won leads</div>
+              </div>
+
+              {/* Card 8: Spam Filtered */}
+              <div className="crm-stat-card">
+                <div>
+                  <div className="crm-stat-label">Spam Filtered</div>
+                  <div className="crm-stat-value">{spamLeads.length}</div>
+                </div>
+                <div className="crm-stat-trend trend-down" style={{ display: 'flex', gap: '6px' }}>
+                  <span style={{ fontWeight: '500' }}>{spamCalls} Calls</span>
+                  <span style={{ color: 'rgba(0,0,0,0.15)' }}>·</span>
+                  <span style={{ fontWeight: '500' }}>{spamForms} Forms</span>
+                </div>
               </div>
             </div>
 

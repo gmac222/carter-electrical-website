@@ -92,6 +92,9 @@ function AdminDashboard() {
   const [search, setSearch] = useState('');
   const [selectedLead, setSelectedLead] = useState(null);
   const [activeTab, setActiveTab] = useState('analytics');
+  const [dateRangeType, setDateRangeType] = useState('all');
+  const [customStartDate, setCustomStartDate] = useState('');
+  const [customEndDate, setCustomEndDate] = useState('');
   const statuses = ['New Lead', 'Contacted', 'Won', 'Lost', 'Spam'];
 
   /* ── Auth ── */
@@ -183,8 +186,51 @@ function AdminDashboard() {
     setDeleting(null);
   };
 
-  /* ── Filtered + searched leads ── */
-  const visibleLeads = leads.filter(l => {
+  /* ── Filter by date range (applies globally to both tabs) ── */
+  const filteredLeadsByDate = leads.filter(l => {
+    if (!l.createdTime) return true;
+    const date = new Date(l.createdTime);
+    if (isNaN(date.getTime())) return true;
+    const now = new Date();
+
+    // Normalize today
+    const startOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    const endOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59, 999);
+    if (dateRangeType === 'today') {
+      return date >= startOfToday && date <= endOfToday;
+    }
+    if (dateRangeType === '7days') {
+      const sevenDaysAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
+      return date >= sevenDaysAgo;
+    }
+    if (dateRangeType === '30days') {
+      const thirtyDaysAgo = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
+      return date >= thirtyDaysAgo;
+    }
+    if (dateRangeType === 'thisMonth') {
+      const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
+      return date >= startOfMonth;
+    }
+    if (dateRangeType === 'lastMonth') {
+      const startOfLastMonth = new Date(now.getFullYear(), now.getMonth() - 1, 1);
+      const endOfLastMonth = new Date(now.getFullYear(), now.getMonth(), 0, 23, 59, 59, 999);
+      return date >= startOfLastMonth && date <= endOfLastMonth;
+    }
+    if (dateRangeType === 'custom') {
+      if (customStartDate) {
+        const start = new Date(customStartDate + 'T00:00:00');
+        if (date < start) return false;
+      }
+      if (customEndDate) {
+        const end = new Date(customEndDate + 'T23:59:59');
+        if (date > end) return false;
+      }
+    }
+    return true;
+  });
+
+  /* ── Filtered + searched leads for Leads Directory ── */
+  const visibleLeads = filteredLeadsByDate.filter(l => {
     if (filter !== 'All' && (l.status || 'New Lead') !== filter) return false;
     if (search) {
       const q = search.toLowerCase();
@@ -198,8 +244,8 @@ function AdminDashboard() {
     const months = [];
     const now = new Date();
     let anchor = now;
-    if (leads.length > 0) {
-      const dates = leads.map(l => new Date(l.createdTime)).filter(d => !isNaN(d.getTime()));
+    if (filteredLeadsByDate.length > 0) {
+      const dates = filteredLeadsByDate.map(l => new Date(l.createdTime)).filter(d => !isNaN(d.getTime()));
       if (dates.length > 0) {
         anchor = new Date(Math.max(...dates));
       }
@@ -219,7 +265,7 @@ function AdminDashboard() {
     return months;
   };
   const chartData = getLast6Months();
-  leads.forEach(l => {
+  filteredLeadsByDate.forEach(l => {
     if (l.status === 'Spam') return; // Exclude spam from MoM chart trends
     const d = new Date(l.createdTime);
     if (isNaN(d.getTime())) return;
@@ -253,8 +299,9 @@ function AdminDashboard() {
     trendText = rounded >= 0 ? `+${rounded}% from last month` : `${rounded}% from last month`;
     trendClass = rounded >= 0 ? 'trend-up' : 'trend-down';
   }
-  const realLeads = leads.filter(l => l.status !== 'Spam');
-  const spamLeads = leads.filter(l => l.status === 'Spam');
+  const realLeads = filteredLeadsByDate.filter(l => l.status !== 'Spam');
+  const spamLeads = filteredLeadsByDate.filter(l => l.status === 'Spam');
+  const totalEnquiries = filteredLeadsByDate.length;
   const totalLeads = realLeads.length;
   const wonLeads = realLeads.filter(l => l.status === 'Won').length;
   const winRate = totalLeads > 0 ? Math.round(wonLeads / totalLeads * 100) : 0;
@@ -262,6 +309,8 @@ function AdminDashboard() {
   const answeredCalls = realLeads.filter(l => l.service === 'Inbound Call' && !l.isMissed).length;
   const missedCalls = realLeads.filter(l => l.service === 'Inbound Call' && l.isMissed).length;
   const totalForms = totalLeads - totalCalls;
+  const spamCalls = spamLeads.filter(l => l.service === 'Inbound Call').length;
+  const spamForms = spamLeads.length - spamCalls;
 
   // Pipeline Values
   const pipelineValue = realLeads.filter(l => l.status === 'New Lead' || l.status === 'Contacted' || !l.status).reduce((acc, l) => acc + (Number(l.quote) || 0), 0);
@@ -292,10 +341,10 @@ function AdminDashboard() {
 
   /* ── Counts per status ── */
   const counts = {
-    All: leads.length
+    All: filteredLeadsByDate.length
   };
   statuses.forEach(s => {
-    counts[s] = leads.filter(l => (l.status || 'New Lead') === s).length;
+    counts[s] = filteredLeadsByDate.filter(l => (l.status || 'New Lead') === s).length;
   });
   const recentLeads = [...realLeads].slice(0, 5);
 
@@ -377,18 +426,52 @@ function AdminDashboard() {
     className: "crm-header-actions"
   }, /*#__PURE__*/React.createElement("span", {
     className: "crm-lead-count"
-  }, leads.length, " lead", leads.length !== 1 ? 's' : ''), /*#__PURE__*/React.createElement("button", {
+  }, filteredLeadsByDate.length === leads.length ? `${leads.length} lead${leads.length !== 1 ? 's' : ''}` : `${filteredLeadsByDate.length} of ${leads.length} lead${leads.length !== 1 ? 's' : ''}`), /*#__PURE__*/React.createElement("button", {
     className: "crm-signout",
     onClick: () => setIsLoggedIn(false)
   }, "Sign Out")))), /*#__PURE__*/React.createElement("div", {
     className: "crm-tabs"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "crm-tab-buttons"
   }, /*#__PURE__*/React.createElement("button", {
     className: `crm-tab-btn ${activeTab === 'analytics' ? 'active' : ''}`,
     onClick: () => setActiveTab('analytics')
   }, "Analytics Overview"), /*#__PURE__*/React.createElement("button", {
     className: `crm-tab-btn ${activeTab === 'leads' ? 'active' : ''}`,
     onClick: () => setActiveTab('leads')
-  }, "Leads Directory")), activeTab === 'analytics' && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("section", {
+  }, "Leads Directory")), /*#__PURE__*/React.createElement("div", {
+    className: "crm-date-filter"
+  }, /*#__PURE__*/React.createElement("label", {
+    htmlFor: "date-range-select"
+  }, "Date Range:"), /*#__PURE__*/React.createElement("select", {
+    id: "date-range-select",
+    value: dateRangeType,
+    onChange: e => setDateRangeType(e.target.value)
+  }, /*#__PURE__*/React.createElement("option", {
+    value: "all"
+  }, "All Time"), /*#__PURE__*/React.createElement("option", {
+    value: "today"
+  }, "Today"), /*#__PURE__*/React.createElement("option", {
+    value: "7days"
+  }, "Last 7 Days"), /*#__PURE__*/React.createElement("option", {
+    value: "30days"
+  }, "Last 30 Days"), /*#__PURE__*/React.createElement("option", {
+    value: "thisMonth"
+  }, "This Month"), /*#__PURE__*/React.createElement("option", {
+    value: "lastMonth"
+  }, "Last Month"), /*#__PURE__*/React.createElement("option", {
+    value: "custom"
+  }, "Custom Range...")), dateRangeType === 'custom' && /*#__PURE__*/React.createElement("div", {
+    className: "custom-date-inputs"
+  }, /*#__PURE__*/React.createElement("input", {
+    type: "date",
+    value: customStartDate,
+    onChange: e => setCustomStartDate(e.target.value)
+  }), /*#__PURE__*/React.createElement("span", null, "to"), /*#__PURE__*/React.createElement("input", {
+    type: "date",
+    value: customEndDate,
+    onChange: e => setCustomEndDate(e.target.value)
+  })))), activeTab === 'analytics' && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("section", {
     className: "crm-stats-section"
   }, /*#__PURE__*/React.createElement("div", {
     className: "crm-stats-grid"
@@ -396,11 +479,19 @@ function AdminDashboard() {
     className: "crm-stat-card"
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "crm-stat-label"
-  }, "Total Leads"), /*#__PURE__*/React.createElement("div", {
+  }, "Total Enquiries"), /*#__PURE__*/React.createElement("div", {
+    className: "crm-stat-value"
+  }, totalEnquiries)), /*#__PURE__*/React.createElement("div", {
+    className: "crm-stat-trend trend-neutral"
+  }, "All calls & web forms")), /*#__PURE__*/React.createElement("div", {
+    className: "crm-stat-card"
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    className: "crm-stat-label"
+  }, "Active Leads"), /*#__PURE__*/React.createElement("div", {
     className: "crm-stat-value"
   }, totalLeads)), /*#__PURE__*/React.createElement("div", {
     className: "crm-stat-trend trend-neutral"
-  }, "Real leads (", spamLeads.length, " spam marked)")), /*#__PURE__*/React.createElement("div", {
+  }, "Legitimate business leads")), /*#__PURE__*/React.createElement("div", {
     className: "crm-stat-card"
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "crm-stat-label"
@@ -417,16 +508,16 @@ function AdminDashboard() {
       color: 'var(--accent-text)',
       fontWeight: 'bold'
     }
-  }, answeredCalls, " Answered"), /*#__PURE__*/React.createElement("span", {
+  }, answeredCalls, " Ans"), /*#__PURE__*/React.createElement("span", {
     style: {
-      color: 'rgba(255,255,255,0.2)'
+      color: 'rgba(0,0,0,0.15)'
     }
   }, "\xB7"), /*#__PURE__*/React.createElement("span", {
     style: {
       color: '#ef4444',
       fontWeight: 'bold'
     }
-  }, missedCalls, " Missed"))), /*#__PURE__*/React.createElement("div", {
+  }, missedCalls, " Miss"))), /*#__PURE__*/React.createElement("div", {
     className: "crm-stat-card"
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "crm-stat-label"
@@ -434,7 +525,7 @@ function AdminDashboard() {
     className: "crm-stat-value"
   }, totalForms)), /*#__PURE__*/React.createElement("div", {
     className: "crm-stat-trend trend-neutral"
-  }, totalLeads > 0 ? `${Math.round(totalForms / totalLeads * 100)}% of total` : '0% of total')), /*#__PURE__*/React.createElement("div", {
+  }, totalLeads > 0 ? `${Math.round(totalForms / totalLeads * 100)}% of active` : '0% of active')), /*#__PURE__*/React.createElement("div", {
     className: "crm-stat-card"
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "crm-stat-label"
@@ -442,7 +533,7 @@ function AdminDashboard() {
     className: "crm-stat-value"
   }, "\xA3", pipelineValue.toLocaleString())), /*#__PURE__*/React.createElement("div", {
     className: "crm-stat-trend trend-neutral"
-  }, "Active unclosed quote estimates")), /*#__PURE__*/React.createElement("div", {
+  }, "Estimated open quotes")), /*#__PURE__*/React.createElement("div", {
     className: "crm-stat-card"
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "crm-stat-label"
@@ -450,7 +541,7 @@ function AdminDashboard() {
     className: "crm-stat-value"
   }, "\xA3", wonRevenue.toLocaleString())), /*#__PURE__*/React.createElement("div", {
     className: "crm-stat-trend trend-up"
-  }, "Contracts successfully won")), /*#__PURE__*/React.createElement("div", {
+  }, "Contracts won successfully")), /*#__PURE__*/React.createElement("div", {
     className: "crm-stat-card"
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "crm-stat-label"
@@ -458,7 +549,31 @@ function AdminDashboard() {
     className: "crm-stat-value"
   }, winRate, "%")), /*#__PURE__*/React.createElement("div", {
     className: "crm-stat-trend trend-up"
-  }, wonLeads, " won leads"))), /*#__PURE__*/React.createElement("div", {
+  }, wonLeads, " won leads")), /*#__PURE__*/React.createElement("div", {
+    className: "crm-stat-card"
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    className: "crm-stat-label"
+  }, "Spam Filtered"), /*#__PURE__*/React.createElement("div", {
+    className: "crm-stat-value"
+  }, spamLeads.length)), /*#__PURE__*/React.createElement("div", {
+    className: "crm-stat-trend trend-down",
+    style: {
+      display: 'flex',
+      gap: '6px'
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontWeight: '500'
+    }
+  }, spamCalls, " Calls"), /*#__PURE__*/React.createElement("span", {
+    style: {
+      color: 'rgba(0,0,0,0.15)'
+    }
+  }, "\xB7"), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontWeight: '500'
+    }
+  }, spamForms, " Forms")))), /*#__PURE__*/React.createElement("div", {
     className: "crm-chart-card"
   }, /*#__PURE__*/React.createElement("div", {
     className: "chart-header"
