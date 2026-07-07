@@ -1,3 +1,20 @@
+function isBlocked(number) {
+  if (!number) return false;
+  const cleanNumber = number.replace(/\D/g, '');
+  if (!cleanNumber) return false;
+
+  const blockedStr = process.env.BLOCKED_NUMBERS || '';
+  const blockedList = blockedStr.split(',').map(num => num.trim().replace(/\D/g, '')).filter(Boolean);
+
+  return blockedList.some(blocked => {
+    const suffixLen = Math.min(blocked.length, cleanNumber.length, 10);
+    if (suffixLen >= 9) {
+      return cleanNumber.endsWith(blocked.slice(-suffixLen)) && blocked.endsWith(cleanNumber.slice(-suffixLen));
+    }
+    return cleanNumber === blocked;
+  });
+}
+
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).send('Method not allowed');
@@ -9,6 +26,13 @@ export default async function handler(req, res) {
     const From = body.From || query.From;
     const To = body.To || query.To;
     const { CallStatus, Direction, RecordingUrl, RecordingDuration } = body;
+
+    // Intercept blocked callers
+    if (From && isBlocked(From)) {
+      console.log(`Rejecting blocked caller: ${From}`);
+      res.setHeader('Content-Type', 'text/xml');
+      return res.status(200).send('<?xml version="1.0" encoding="UTF-8"?><Response><Reject reason="busy" /></Response>');
+    }
 
     // Handle call recording callbacks from Twilio when a recording is ready - only for our number (+441244727291)
     if (To === '+441244727291' && RecordingUrl && From && process.env.AIRTABLE_BASE_ID && process.env.AIRTABLE_PAT && process.env.AIRTABLE_TABLE_ID) {
