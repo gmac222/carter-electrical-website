@@ -621,7 +621,7 @@ function AdminDashboard() {
                           }}>
                             {isCall ? (lead.isMissed ? 'Missed Call' : 'Inbound Call') : (lead.service || 'Unknown')}
                           </span>
-                          {isCall && !lead.isMissed && lead.duration != null && (
+                          {isCall && lead.duration != null && (
                             <span style={{ fontSize: '10.5px', color: 'var(--muted)', fontFamily: 'var(--font-mono)' }}>
                               {formatDuration(lead.duration)}
                             </span>
@@ -695,7 +695,7 @@ function AdminDashboard() {
                           {selectedLead.isMissed ? 'Missed Call' : 'Answered'}
                         </span>
                       </div>
-                      {!selectedLead.isMissed && selectedLead.duration != null && (
+                      {selectedLead.duration != null && (
                         <div className="modal-field-group">
                           <div className="modal-field-label">Call Duration</div>
                           <span className="editable-value" style={{ fontFamily: 'var(--font-mono)' }}>

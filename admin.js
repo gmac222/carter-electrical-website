@@ -781,7 +781,7 @@ function AdminDashboard() {
         textTransform: 'uppercase',
         letterSpacing: '0.04em'
       }
-    }, isCall ? lead.isMissed ? 'Missed Call' : 'Inbound Call' : lead.service || 'Unknown'), isCall && !lead.isMissed && lead.duration != null && /*#__PURE__*/React.createElement("span", {
+    }, isCall ? lead.isMissed ? 'Missed Call' : 'Inbound Call' : lead.service || 'Unknown'), isCall && lead.duration != null && /*#__PURE__*/React.createElement("span", {
       style: {
         fontSize: '10.5px',
         color: 'var(--muted)',
@@ -918,7 +918,7 @@ function AdminDashboard() {
       color: selectedLead.isMissed ? '#ef4444' : 'var(--accent-text)',
       fontWeight: 'bold'
     }
-  }, selectedLead.isMissed ? 'Missed Call' : 'Answered')), !selectedLead.isMissed && selectedLead.duration != null && /*#__PURE__*/React.createElement("div", {
+  }, selectedLead.isMissed ? 'Missed Call' : 'Answered')), selectedLead.duration != null && /*#__PURE__*/React.createElement("div", {
     className: "modal-field-group"
   }, /*#__PURE__*/React.createElement("div", {
     className: "modal-field-label"

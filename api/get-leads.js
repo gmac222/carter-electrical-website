@@ -59,7 +59,7 @@ export default async function handler(req, res) {
       const isCall = record.fields['Service Requested'] === 'Inbound Call';
       let isMissed = false;
       if (isCall) {
-        if (duration === 0) {
+        if (duration === null || duration === 0 || duration < 15) {
           isMissed = true;
         } else if (callStatus && ['busy', 'no-answer', 'failed', 'ringing'].includes(callStatus.toLowerCase())) {
           isMissed = true;
