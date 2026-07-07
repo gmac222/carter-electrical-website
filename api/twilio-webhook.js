@@ -4,14 +4,19 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { From, To, CallStatus, Direction, RecordingUrl } = req.body;
+    const query = req.query || {};
+    const body = req.body || {};
+    const From = body.From || query.From;
+    const To = body.To || query.To;
+    const { CallStatus, Direction, RecordingUrl, RecordingDuration } = body;
 
     // Handle call recording callbacks from Twilio when a recording is ready - only for our number (+441244727291)
     if (To === '+441244727291' && RecordingUrl && From && process.env.AIRTABLE_BASE_ID && process.env.AIRTABLE_PAT && process.env.AIRTABLE_TABLE_ID) {
       console.log(`Received recording callback for caller ${From}. Recording URL: ${RecordingUrl}`);
 
-      // 1. Search for the most recent lead with this phone number in Airtable
-      const searchRes = await fetch(`https://api.airtable.com/v0/${process.env.AIRTABLE_BASE_ID}/${process.env.AIRTABLE_TABLE_ID}?filterByFormula=SEARCH("${From}", {Customer Phone})`, {
+      // 1. Search for the most recent lead with this phone number in Airtable (properly URL encode the formula)
+      const formula = `SEARCH("${From}", {Customer Phone})`;
+      const searchRes = await fetch(`https://api.airtable.com/v0/${process.env.AIRTABLE_BASE_ID}/${process.env.AIRTABLE_TABLE_ID}?filterByFormula=${encodeURIComponent(formula)}`, {
         headers: { 'Authorization': `Bearer ${process.env.AIRTABLE_PAT}` }
       });
 
@@ -25,6 +30,8 @@ export default async function handler(req, res) {
 
           const currentNotes = targetRecord.fields['Notes'] || '';
           const currentAttachments = targetRecord.fields['Attachments'] || [];
+          const durationVal = RecordingDuration ? `${RecordingDuration}s` : '0s';
+          const newNotes = currentNotes + `\nCall Recording: ${RecordingUrl}\nDuration: ${durationVal}\nStatus: completed`;
 
           // 2. Attach the recording MP3 file and add a link in the notes
           await fetch(`https://api.airtable.com/v0/${process.env.AIRTABLE_BASE_ID}/${process.env.AIRTABLE_TABLE_ID}/${targetRecord.id}`, {
@@ -40,7 +47,7 @@ export default async function handler(req, res) {
                   ...currentAttachments,
                   { url: RecordingUrl + '.mp3', filename: 'Call_Recording.mp3' }
                 ],
-                'Notes': currentNotes + `\nCall Recording: ${RecordingUrl}`
+                'Notes': newNotes
               }
             })
           });
@@ -118,7 +125,7 @@ export default async function handler(req, res) {
 
     const host = req.headers.host || 'carterelec.co.uk';
     const protocol = req.headers['x-forwarded-proto'] || 'https';
-    const callbackUrl = `${protocol}://${host}/api/twilio-webhook`;
+    const callbackUrl = `${protocol}://${host}/api/twilio-webhook?From=${encodeURIComponent(From || '')}&To=${encodeURIComponent(To || '')}`;
 
     // Twilio expects TwiML in response to proceed with the call.
     // We return a Dial response so that if the phone number is routed directly to this webhook,

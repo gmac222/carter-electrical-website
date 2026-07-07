@@ -418,4 +418,4 @@ function Domestic() {
     }
   }), "100% Secure. No obligation. Your data is strictly protected."))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(MobileStickyCTA, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
 }
-ReactDOM.hydrateRoot(document.getElementById('root'), /*#__PURE__*/React.createElement(Domestic, null));
+ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/React.createElement(Domestic, null));

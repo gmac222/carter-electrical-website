@@ -55,7 +55,7 @@ function AdminDashboard() {
   const [selectedLead, setSelectedLead] = useState(null);
   const [activeTab, setActiveTab] = useState('analytics');
 
-  const statuses = ['New Lead', 'Contacted', 'Won', 'Lost'];
+  const statuses = ['New Lead', 'Contacted', 'Won', 'Lost', 'Spam'];
 
   /* ── Auth ── */
   const handleLogin = async (e) => {
@@ -158,6 +158,7 @@ function AdminDashboard() {
 
   const chartData = getLast6Months();
   leads.forEach(l => {
+    if (l.status === 'Spam') return; // Exclude spam from MoM chart trends
     const d = new Date(l.createdTime);
     if (isNaN(d.getTime())) return;
     const m = d.getMonth();
@@ -187,26 +188,29 @@ function AdminDashboard() {
     trendClass = rounded >= 0 ? 'trend-up' : 'trend-down';
   }
 
-  const totalLeads = leads.length;
-  const wonLeads = leads.filter(l => l.status === 'Won').length;
+  const realLeads = leads.filter(l => l.status !== 'Spam');
+  const spamLeads = leads.filter(l => l.status === 'Spam');
+
+  const totalLeads = realLeads.length;
+  const wonLeads = realLeads.filter(l => l.status === 'Won').length;
   const winRate = totalLeads > 0 ? Math.round((wonLeads / totalLeads) * 100) : 0;
-  const totalCalls = leads.filter(l => l.service === 'Inbound Call').length;
-  const answeredCalls = leads.filter(l => l.service === 'Inbound Call' && !l.isMissed).length;
-  const missedCalls = leads.filter(l => l.service === 'Inbound Call' && l.isMissed).length;
+  const totalCalls = realLeads.filter(l => l.service === 'Inbound Call').length;
+  const answeredCalls = realLeads.filter(l => l.service === 'Inbound Call' && !l.isMissed).length;
+  const missedCalls = realLeads.filter(l => l.service === 'Inbound Call' && l.isMissed).length;
   const totalForms = totalLeads - totalCalls;
 
   // Pipeline Values
-  const pipelineValue = leads
+  const pipelineValue = realLeads
     .filter(l => l.status === 'New Lead' || l.status === 'Contacted' || !l.status)
     .reduce((acc, l) => acc + (Number(l.quote) || 0), 0);
 
-  const wonRevenue = leads
+  const wonRevenue = realLeads
     .filter(l => l.status === 'Won')
     .reduce((acc, l) => acc + (Number(l.quote) || 0), 0);
 
   // Sector Breakdown
   const sectorCounts = { Domestic: 0, Commercial: 0, Industrial: 0, Other: 0 };
-  leads.forEach(l => {
+  realLeads.forEach(l => {
     const sec = (l.sector || '').trim().toLowerCase();
     if (sec.includes('domestic')) sectorCounts.Domestic++;
     else if (sec.includes('commercial')) sectorCounts.Commercial++;
@@ -216,7 +220,7 @@ function AdminDashboard() {
 
   // Service Breakdown
   const serviceCounts = {};
-  leads.forEach(l => {
+  realLeads.forEach(l => {
     const svc = l.service || 'Unknown';
     serviceCounts[svc] = (serviceCounts[svc] || 0) + 1;
   });
@@ -229,7 +233,7 @@ function AdminDashboard() {
   const counts = { All: leads.length };
   statuses.forEach(s => { counts[s] = leads.filter(l => (l.status || 'New Lead') === s).length; });
 
-  const recentLeads = [...leads].slice(0, 5);
+  const recentLeads = [...realLeads].slice(0, 5);
 
   /* ═══════ LOGIN SCREEN ═══════ */
   if (!isLoggedIn) {
@@ -311,7 +315,7 @@ function AdminDashboard() {
                   <div className="crm-stat-label">Total Leads</div>
                   <div className="crm-stat-value">{totalLeads}</div>
                 </div>
-                <div className="crm-stat-trend trend-neutral">All recorded enquiries & calls</div>
+                <div className="crm-stat-trend trend-neutral">Real leads ({spamLeads.length} spam marked)</div>
               </div>
               <div className="crm-stat-card">
                 <div>
@@ -479,6 +483,7 @@ function AdminDashboard() {
                   if (st === 'Won') colorClass = 'fill-won';
                   else if (st === 'Lost') colorClass = 'fill-lost';
                   else if (st === 'Contacted') colorClass = 'fill-neutral';
+                  else if (st === 'Spam') colorClass = 'fill-spam';
 
                   return (
                     <div key={st} className="crm-breakdown-item">
@@ -535,7 +540,7 @@ function AdminDashboard() {
                           fontSize: '11px',
                           fontFamily: 'var(--font-mono)',
                           fontWeight: '500',
-                          color: lead.status === 'Won' ? 'var(--accent-text)' : lead.status === 'Lost' ? 'var(--danger)' : lead.status === 'Contacted' ? '#f59e0b' : '#3b82f6'
+                          color: lead.status === 'Won' ? 'var(--accent-text)' : lead.status === 'Lost' ? 'var(--danger)' : lead.status === 'Contacted' ? '#f59e0b' : lead.status === 'Spam' ? '#6b7280' : '#3b82f6'
                         }}>
                           {lead.status || 'New Lead'}
                         </span>
