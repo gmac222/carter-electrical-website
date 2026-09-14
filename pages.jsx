@@ -224,8 +224,7 @@ function ServicesPage() {
             <a href={CARTER.company.phoneHref} className="phone-big"><span className="accent">·</span> {CARTER.company.phone}</a>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginTop: 14 }}>
               <a href="contact.html" className="btn btn-primary" style={{ marginTop: 0 }}>Get Your Free Quote <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }}/></a>
-              <div style={{ fontSize: '0.85rem', color: 'var(--muted-2)', textAlign: 'center' }}>
-                <span dangerouslySetInnerHTML={{ __html: CARTER.svg.lock || '&#128274;' }} style={{ display: 'inline-block', width: 12, marginRight: 6, verticalAlign: 'middle' }} />
+              <div style={{ fontSize: '0.85rem', color: 'var(--muted-2)', textAlign: 'left' }}>
                 100% Secure. No obligation. Your data is strictly protected.
               </div>
             </div>

@@ -1015,19 +1015,9 @@ function LocationPage({
     style: {
       fontSize: '0.85rem',
       color: 'var(--muted-2)',
-      textAlign: 'center'
+      textAlign: 'left'
     }
-  }, /*#__PURE__*/React.createElement("span", {
-    dangerouslySetInnerHTML: {
-      __html: CARTER.svg.lock || '&#128274;'
-    },
-    style: {
-      display: 'inline-block',
-      width: 12,
-      marginRight: 6,
-      verticalAlign: 'middle'
-    }
-  }), "100% Secure. No obligation. Your data is strictly protected."))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(MobileStickyCTA, null), /*#__PURE__*/React.createElement(TweaksPanel, null), /*#__PURE__*/React.createElement(ContactModal, {
+  }, "100% Secure. No obligation. Your data is strictly protected."))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(MobileStickyCTA, null), /*#__PURE__*/React.createElement(TweaksPanel, null), /*#__PURE__*/React.createElement(ContactModal, {
     isOpen: isContactModalOpen,
     onClose: () => setIsContactModalOpen(false)
   }));

@@ -667,31 +667,11 @@ function CTABand() {
     className: "btn btn-ghost-dark"
   }, "Email us")), /*#__PURE__*/React.createElement("div", {
     style: {
-      display: 'flex',
-      alignItems: 'center',
-      gap: '8px',
       color: 'var(--muted-2)',
-      fontSize: '13px'
+      fontSize: '0.85rem',
+      textAlign: 'left'
     }
-  }, /*#__PURE__*/React.createElement("svg", {
-    width: "14",
-    height: "14",
-    viewBox: "0 0 24 24",
-    fill: "none",
-    stroke: "currentColor",
-    strokeWidth: "2",
-    strokeLinecap: "round",
-    strokeLinejoin: "round"
-  }, /*#__PURE__*/React.createElement("rect", {
-    x: "3",
-    y: "11",
-    width: "18",
-    height: "11",
-    rx: "2",
-    ry: "2"
-  }), /*#__PURE__*/React.createElement("path", {
-    d: "M7 11V7a5 5 0 0 1 10 0v4"
-  })), "100% Secure. No obligation. Your data is strictly protected.")))));
+  }, "100% Secure. No obligation. Your data is strictly protected.")))));
 }
 function CommercialDomesticDeep() {
   const chester = (CARTER.areas || []).find(a => a.name === 'Chester') || {};
