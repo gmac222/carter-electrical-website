@@ -49,7 +49,7 @@ Contact us for a clear, fixed-price quote.`,
     metaDesc: 'NICEIC-approved electricians in Wrexham (LL11–LL14). Industrial three-phase, commercial fit-outs, full rewires, and OZEV EV chargers. Contact us today.',
     intro: `Our qualified, NICEIC-approved electricians cover Wrexham and all surrounding villages.
 
-We specialize in heavy industrial work, three-phase distribution, and preventative maintenance on Wrexham Industrial Estate, alongside town-centre commercial fit-outs and domestic services including rewires and EV charger installations.
+We specialise in heavy industrial work, three-phase distribution, and preventative maintenance on Wrexham Industrial Estate, alongside town-centre commercial fit-outs and domestic services including rewires and EV charger installations.
 
 We operate fully under both English and Welsh building regulations.`,
     commercialAngle: "Wrexham's commercial demand ranges from town-centre retail units through to newer office and hospitality work around the Racecourse and Eagles Meadow. We deliver design-and-install, EICR-led remedials and emergency-lighting programmes to landlords and operators.",
@@ -143,7 +143,7 @@ const faqsMap = {
     },
     {
       q: 'Do you provide commercial electrical services near Cheshire Oaks?',
-      a: 'Yes, we regularly support retail and hospitality operators around Cheshire Oaks and the Coliseum Retail Park. Our local team carries out shop fit-outs, emergency lighting installations to BS 5266 standards, and planned compliance testing outside of standard trading hours to minimize business disruption.'
+      a: 'Yes, we regularly support retail and hospitality operators around Cheshire Oaks and the Coliseum Retail Park. Our local team carries out shop fit-outs, emergency lighting installations to BS 5266 standards, and planned compliance testing outside of standard trading hours to minimise business disruption.'
     },
     {
       q: 'What domestic electrical upgrades do you offer in CH65 and CH66?',

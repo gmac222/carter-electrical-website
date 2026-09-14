@@ -371,7 +371,7 @@ function PrivacyPolicyPage() {
 
               <h2>4. How We Secure Your Data</h2>
               <p>
-                We implement industry-standard technical and organizational security measures to protect your data from unauthorized access, loss, or alteration. All lead submissions are encrypted in transit and securely processed through our central CRM system.
+                We implement industry-standard technical and organisational security measures to protect your data from unauthorised access, loss, or alteration. All lead submissions are encrypted in transit and securely processed through our central CRM system.
               </p>
 
               <h2>5. Your Rights</h2>
