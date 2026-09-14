@@ -158,47 +158,59 @@ function ServicesPage() {
         subtext="From replacing a faulty socket to a full commercial fit-out, we deliver work that looks right and tests perfectly. Every time."
       />
 
-      {CARTER.services.map((s, i) => (
-        <section key={s.slug} id={s.slug} className={`section-y reveal ${i % 2 === 0 ? 'light' : 'bright'}`}>
-          <div className="wrap">
-            {/* Full-width section header - keeps both columns below aligned at the same Y */}
-            <div style={{ marginBottom: 40 }}>
-              <div className="mono" style={{ fontSize: 11, letterSpacing: '0.16em', color: 'var(--muted)' }}>0{i + 1} / 05</div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 20, marginTop: 18 }}>
-                <div className="sc-glyph" style={{ width: 50, height: 50, color: 'var(--accent)', flexShrink: 0 }} dangerouslySetInnerHTML={{ __html: CARTER.svg[s.icon] }}/>
-                <h2 className="h-1" style={{ margin: 0 }}>{s.title}</h2>
+      {CARTER.services.map((s, i) => {
+        const targetUrl = (s.slug === 'commercial' || s.slug === 'industrial' || s.slug === 'domestic')
+          ? `${s.slug}.html`
+          : 'contact.html';
+        const pageTitle = (s.slug === 'commercial' || s.slug === 'industrial' || s.slug === 'domestic')
+          ? `${s.title} Electrical Services`
+          : s.title;
+        return (
+          <section key={s.slug} id={s.slug} className={`section-y reveal ${i % 2 === 0 ? 'light' : 'bright'}`}>
+            <div className="wrap">
+              {/* Full-width section header - keeps both columns below aligned at the same Y */}
+              <div style={{ marginBottom: 40 }}>
+                <div className="mono" style={{ fontSize: 11, letterSpacing: '0.16em', color: 'var(--muted)' }}>0{i + 1} / 05</div>
+                <div style={{ marginTop: 18 }}>
+                  <a href={targetUrl} style={{ textDecoration: 'none', color: 'inherit', display: 'inline-flex', alignItems: 'center', gap: 20 }}>
+                    <div className="sc-glyph" style={{ width: 50, height: 50, color: 'var(--accent)', flexShrink: 0 }} dangerouslySetInnerHTML={{ __html: CARTER.svg[s.icon] }}/>
+                    <h2 className="h-1" style={{ margin: 0 }}>{pageTitle}</h2>
+                  </a>
+                </div>
               </div>
-            </div>
 
-            {/* Image (left) and body content (right) - same top baseline, stretched so bottoms meet */}
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 60, alignItems: 'stretch' }}>
-              <div>
-                {s.imgSrc && (
-                  <div style={{ height: '100%', minHeight: '320px', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--white)', borderRadius: '16px', boxShadow: '0 8px 32px rgba(0,0,0,0.15)', overflow: 'hidden' }}>
-                    <img src={s.imgSrc} alt={s.title} style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block', borderRadius: '16px' }} />
-                  </div>
-                )}
-              </div>
-              <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <p className="lede" style={{ color: 'var(--ink-2)', marginTop: 0 }}>{s.lede}</p>
-                <div style={{ marginTop: 28, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 1, background: 'var(--rule)', border: '1px solid var(--rule)' }}>
-                  {s.bullets.map((c, j) => (
-                    <div key={j} style={{ background: 'var(--white)', padding: '22px 20px', display: 'flex', alignItems: 'center', gap: 12 }}>
-                      <span style={{ width: 8, height: 8, background: 'var(--accent)', flexShrink: 0 }}/>
-                      <span className="display" style={{ fontWeight: 500, fontSize: 15 }}>{c}</span>
-                    </div>
-                  ))}
+              {/* Image (left) and body content (right) - same top baseline, stretched so bottoms meet */}
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 60, alignItems: 'stretch' }}>
+                <div>
+                  {s.imgSrc && (
+                    <a href={targetUrl} style={{ display: 'block', height: '100%', minHeight: '320px', position: 'relative', background: 'var(--white)', borderRadius: '16px', boxShadow: '0 8px 32px rgba(0,0,0,0.15)', overflow: 'hidden', textDecoration: 'none' }}>
+                      <img src={s.imgSrc} alt={pageTitle} style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block', borderRadius: '16px' }} />
+                    </a>
+                  )}
                 </div>
-                <div style={{ marginTop: 'auto', paddingTop: 28 }}>
-                  {s.slug === 'commercial' || s.slug === 'industrial' || s.slug === 'domestic'
-                    ? <a href={`${s.slug}.html`} className="btn btn-ghost-dark">{s.title} deep-dive <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }}/></a>
-                    : <a href="contact.html" className="btn btn-ghost-dark">Get your free quote <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }}/></a>}
+                <div style={{ display: 'flex', flexDirection: 'column' }}>
+                  <p className="lede" style={{ color: 'var(--ink-2)', marginTop: 0 }}>{s.lede}</p>
+                  <div style={{ marginTop: 28, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 1, background: 'var(--rule)', border: '1px solid var(--rule)' }}>
+                    {s.bullets.map((c, j) => (
+                      <div key={j} style={{ background: 'var(--white)', padding: '22px 20px', display: 'flex', alignItems: 'center', gap: 12 }}>
+                        <span style={{ width: 8, height: 8, background: 'var(--accent)', flexShrink: 0 }}/>
+                        <span className="display" style={{ fontWeight: 500, fontSize: 15 }}>{c}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <div style={{ marginTop: 'auto', paddingTop: 28 }}>
+                    <a href={targetUrl} className="btn btn-ghost-dark">
+                      {s.slug === 'commercial' || s.slug === 'industrial' || s.slug === 'domestic'
+                        ? `Explore ${s.title} Electrical Services`
+                        : `Get Your Free ${s.title} Quote`} <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }}/>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-      ))}
+          </section>
+        );
+      })}
 
       <section className="cta-band">
         <div className="wrap">

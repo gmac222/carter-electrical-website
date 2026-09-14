@@ -364,138 +364,141 @@ function ServicesPage() {
       className: "dot-white"
     }, ".")),
     subtext: "From replacing a faulty socket to a full commercial fit-out, we deliver work that looks right and tests perfectly. Every time."
-  }), CARTER.services.map((s, i) => /*#__PURE__*/React.createElement("section", {
-    key: s.slug,
-    id: s.slug,
-    className: `section-y reveal ${i % 2 === 0 ? 'light' : 'bright'}`
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "wrap"
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      marginBottom: 40
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "mono",
-    style: {
-      fontSize: 11,
-      letterSpacing: '0.16em',
-      color: 'var(--muted)'
-    }
-  }, "0", i + 1, " / 05"), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'flex',
-      alignItems: 'center',
-      gap: 20,
-      marginTop: 18
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "sc-glyph",
-    style: {
-      width: 50,
-      height: 50,
-      color: 'var(--accent)',
-      flexShrink: 0
-    },
-    dangerouslySetInnerHTML: {
-      __html: CARTER.svg[s.icon]
-    }
-  }), /*#__PURE__*/React.createElement("h2", {
-    className: "h-1",
-    style: {
-      margin: 0
-    }
-  }, s.title))), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'grid',
-      gridTemplateColumns: '1fr 1.4fr',
-      gap: 60,
-      alignItems: 'stretch'
-    }
-  }, /*#__PURE__*/React.createElement("div", null, s.imgSrc && /*#__PURE__*/React.createElement("div", {
-    style: {
-      height: '100%',
-      minHeight: '320px',
-      position: 'relative',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      background: 'var(--white)',
-      borderRadius: '16px',
-      boxShadow: '0 8px 32px rgba(0,0,0,0.15)',
-      overflow: 'hidden'
-    }
-  }, /*#__PURE__*/React.createElement("img", {
-    src: s.imgSrc,
-    alt: s.title,
-    style: {
-      width: '100%',
-      height: '100%',
-      objectFit: 'contain',
-      display: 'block',
-      borderRadius: '16px'
-    }
-  }))), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'flex',
-      flexDirection: 'column'
-    }
-  }, /*#__PURE__*/React.createElement("p", {
-    className: "lede",
-    style: {
-      color: 'var(--ink-2)',
-      marginTop: 0
-    }
-  }, s.lede), /*#__PURE__*/React.createElement("div", {
-    style: {
-      marginTop: 28,
-      display: 'grid',
-      gridTemplateColumns: '1fr 1fr',
-      gap: 1,
-      background: 'var(--rule)',
-      border: '1px solid var(--rule)'
-    }
-  }, s.bullets.map((c, j) => /*#__PURE__*/React.createElement("div", {
-    key: j,
-    style: {
-      background: 'var(--white)',
-      padding: '22px 20px',
-      display: 'flex',
-      alignItems: 'center',
-      gap: 12
-    }
-  }, /*#__PURE__*/React.createElement("span", {
-    style: {
-      width: 8,
-      height: 8,
-      background: 'var(--accent)',
-      flexShrink: 0
-    }
-  }), /*#__PURE__*/React.createElement("span", {
-    className: "display",
-    style: {
-      fontWeight: 500,
-      fontSize: 15
-    }
-  }, c)))), /*#__PURE__*/React.createElement("div", {
-    style: {
-      marginTop: 'auto',
-      paddingTop: 28
-    }
-  }, s.slug === 'commercial' || s.slug === 'industrial' || s.slug === 'domestic' ? /*#__PURE__*/React.createElement("a", {
-    href: `${s.slug}.html`,
-    className: "btn btn-ghost-dark"
-  }, s.title, " deep-dive ", /*#__PURE__*/React.createElement("span", {
-    dangerouslySetInnerHTML: {
-      __html: CARTER.svg.arrow
-    }
-  })) : /*#__PURE__*/React.createElement("a", {
-    href: "contact.html",
-    className: "btn btn-ghost-dark"
-  }, "Get your free quote ", /*#__PURE__*/React.createElement("span", {
-    dangerouslySetInnerHTML: {
-      __html: CARTER.svg.arrow
-    }
-  })))))))), /*#__PURE__*/React.createElement("section", {
+  }), CARTER.services.map((s, i) => {
+    const targetUrl = s.slug === 'commercial' || s.slug === 'industrial' || s.slug === 'domestic' ? `${s.slug}.html` : 'contact.html';
+    const pageTitle = s.slug === 'commercial' || s.slug === 'industrial' || s.slug === 'domestic' ? `${s.title} Electrical Services` : s.title;
+    return /*#__PURE__*/React.createElement("section", {
+      key: s.slug,
+      id: s.slug,
+      className: `section-y reveal ${i % 2 === 0 ? 'light' : 'bright'}`
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "wrap"
+    }, /*#__PURE__*/React.createElement("div", {
+      style: {
+        marginBottom: 40
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "mono",
+      style: {
+        fontSize: 11,
+        letterSpacing: '0.16em',
+        color: 'var(--muted)'
+      }
+    }, "0", i + 1, " / 05"), /*#__PURE__*/React.createElement("div", {
+      style: {
+        marginTop: 18
+      }
+    }, /*#__PURE__*/React.createElement("a", {
+      href: targetUrl,
+      style: {
+        textDecoration: 'none',
+        color: 'inherit',
+        display: 'inline-flex',
+        alignItems: 'center',
+        gap: 20
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "sc-glyph",
+      style: {
+        width: 50,
+        height: 50,
+        color: 'var(--accent)',
+        flexShrink: 0
+      },
+      dangerouslySetInnerHTML: {
+        __html: CARTER.svg[s.icon]
+      }
+    }), /*#__PURE__*/React.createElement("h2", {
+      className: "h-1",
+      style: {
+        margin: 0
+      }
+    }, pageTitle)))), /*#__PURE__*/React.createElement("div", {
+      style: {
+        display: 'grid',
+        gridTemplateColumns: '1fr 1.4fr',
+        gap: 60,
+        alignItems: 'stretch'
+      }
+    }, /*#__PURE__*/React.createElement("div", null, s.imgSrc && /*#__PURE__*/React.createElement("a", {
+      href: targetUrl,
+      style: {
+        display: 'block',
+        height: '100%',
+        minHeight: '320px',
+        position: 'relative',
+        background: 'var(--white)',
+        borderRadius: '16px',
+        boxShadow: '0 8px 32px rgba(0,0,0,0.15)',
+        overflow: 'hidden',
+        textDecoration: 'none'
+      }
+    }, /*#__PURE__*/React.createElement("img", {
+      src: s.imgSrc,
+      alt: pageTitle,
+      style: {
+        width: '100%',
+        height: '100%',
+        objectFit: 'contain',
+        display: 'block',
+        borderRadius: '16px'
+      }
+    }))), /*#__PURE__*/React.createElement("div", {
+      style: {
+        display: 'flex',
+        flexDirection: 'column'
+      }
+    }, /*#__PURE__*/React.createElement("p", {
+      className: "lede",
+      style: {
+        color: 'var(--ink-2)',
+        marginTop: 0
+      }
+    }, s.lede), /*#__PURE__*/React.createElement("div", {
+      style: {
+        marginTop: 28,
+        display: 'grid',
+        gridTemplateColumns: '1fr 1fr',
+        gap: 1,
+        background: 'var(--rule)',
+        border: '1px solid var(--rule)'
+      }
+    }, s.bullets.map((c, j) => /*#__PURE__*/React.createElement("div", {
+      key: j,
+      style: {
+        background: 'var(--white)',
+        padding: '22px 20px',
+        display: 'flex',
+        alignItems: 'center',
+        gap: 12
+      }
+    }, /*#__PURE__*/React.createElement("span", {
+      style: {
+        width: 8,
+        height: 8,
+        background: 'var(--accent)',
+        flexShrink: 0
+      }
+    }), /*#__PURE__*/React.createElement("span", {
+      className: "display",
+      style: {
+        fontWeight: 500,
+        fontSize: 15
+      }
+    }, c)))), /*#__PURE__*/React.createElement("div", {
+      style: {
+        marginTop: 'auto',
+        paddingTop: 28
+      }
+    }, /*#__PURE__*/React.createElement("a", {
+      href: targetUrl,
+      className: "btn btn-ghost-dark"
+    }, s.slug === 'commercial' || s.slug === 'industrial' || s.slug === 'domestic' ? `Explore ${s.title} Electrical Services` : `Get Your Free ${s.title} Quote`, " ", /*#__PURE__*/React.createElement("span", {
+      dangerouslySetInnerHTML: {
+        __html: CARTER.svg.arrow
+      }
+    })))))));
+  }), /*#__PURE__*/React.createElement("section", {
     className: "cta-band"
   }, /*#__PURE__*/React.createElement("div", {
     className: "wrap"
