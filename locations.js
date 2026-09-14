@@ -40,90 +40,19 @@ function LocationPage({
     distance: '',
     county: ''
   };
+  const slug = area.slug;
+  const isArchetypeB = slug === 'tarporley' || slug === 'frodsham';
+  const isArchetypeC = slug === 'deeside' || slug === 'ellesmere-port';
+  const isArchetypeA = !isArchetypeB && !isArchetypeC; // mold, wrexham, northwich, wirral
+
   const faqs = CARTER.locationFaqs ? CARTER.locationFaqs(area) : [];
   const relatedCases = CARTER.cases.filter(c => (c.location || '').toLowerCase().indexOf(locationName.toLowerCase()) !== -1 || locationName === 'Ellesmere Port' && c.id === 'prenton-wirral');
   const displayCases = relatedCases.length > 0 ? relatedCases : CARTER.cases.filter(c => c.id === 'old-dukes' || c.id === 'bryn-rhiw');
   const otherAreas = CARTER.areas.filter(a => a.name !== locationName).slice(0, 6);
-  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Header, {
-    current: "areas",
-    theme: "dark"
-  }), /*#__PURE__*/React.createElement(PageHero, {
-    section: "Local Coverage",
-    sectionNum: "03.1 / Location",
-    title: `Electricians in ${locationName}`,
-    titleAccent: " - NICEIC-approved.",
-    subtext: `NICEIC-approved commercial, industrial, domestic and renewables electricians serving ${locationName}${area.postcodes && area.postcodes.length ? ' (' + area.postcodes.join(', ') + ')' : ''} and the surrounding ${area.county || 'area'}. EICR testing, EV chargers, full rewires and commercial fit-outs.`,
-    ctas: /*#__PURE__*/React.createElement("div", {
-      style: {
-        display: 'flex',
-        gap: '12px'
-      }
-    }, /*#__PURE__*/React.createElement("a", {
-      href: "contact.html",
-      className: "btn btn-primary"
-    }, "Get Your Free Quote", /*#__PURE__*/React.createElement("span", {
-      dangerouslySetInnerHTML: {
-        __html: CARTER.svg.arrow
-      }
-    })), /*#__PURE__*/React.createElement("a", {
-      href: CARTER.company.phoneHref,
-      className: "btn btn-ghost-light"
-    }, /*#__PURE__*/React.createElement("span", {
-      dangerouslySetInnerHTML: {
-        __html: CARTER.svg.phone
-      },
-      style: {
-        width: 14,
-        height: 14
-      }
-    }), "Call ", CARTER.company.phone))
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "hero-strip wrap",
-    style: {
-      maxWidth: '100%',
-      padding: 0
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "wrap",
-    style: {
-      display: 'contents'
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "hero-strip",
-    style: {
-      gridColumn: '1 / -1'
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "cell"
-  }, /*#__PURE__*/React.createElement("span", {
-    className: "k"
-  }, "Coverage"), /*#__PURE__*/React.createElement("span", {
-    className: "v"
-  }, locationName, " & ", area.county || 'Surrounds')), /*#__PURE__*/React.createElement("div", {
-    className: "cell"
-  }, /*#__PURE__*/React.createElement("span", {
-    className: "k"
-  }, "Assurance"), /*#__PURE__*/React.createElement("span", {
-    className: "v"
-  }, "Fully Insured \xB7 ", /*#__PURE__*/React.createElement("span", {
-    className: "accent"
-  }, "Guaranteed"))), /*#__PURE__*/React.createElement("div", {
-    className: "cell"
-  }, /*#__PURE__*/React.createElement("span", {
-    className: "k"
-  }, "Accreditation"), /*#__PURE__*/React.createElement("span", {
-    className: "v"
-  }, "NICEIC ", /*#__PURE__*/React.createElement("span", {
-    className: "accent"
-  }, "Approved"))), /*#__PURE__*/React.createElement("div", {
-    className: "cell"
-  }, /*#__PURE__*/React.createElement("span", {
-    className: "k"
-  }, "Sectors"), /*#__PURE__*/React.createElement("span", {
-    className: "v"
-  }, "Commercial \xB7 Domestic \xB7 Industrial")))))), /*#__PURE__*/React.createElement(TrustBar, {
-    area: area
-  }), /*#__PURE__*/React.createElement("section", {
+
+  // Common Reusable Components
+  const IntroSection = /*#__PURE__*/React.createElement("section", {
+    key: "intro",
     className: "section-y light reveal"
   }, /*#__PURE__*/React.createElement("div", {
     className: "wrap"
@@ -145,9 +74,9 @@ function LocationPage({
     }
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "eyebrow"
-  }, "Local Electricians"), /*#__PURE__*/React.createElement("h2", {
+  }, "Local Electrical Contractor"), /*#__PURE__*/React.createElement("h2", {
     className: "h-1"
-  }, "Approved electricians in ", locationName, ", done properly the first time", /*#__PURE__*/React.createElement("span", {
+  }, "NICEIC-approved electrical contractor serving ", locationName, /*#__PURE__*/React.createElement("span", {
     className: "accent"
   }, "."))), /*#__PURE__*/React.createElement("div", {
     style: {
@@ -194,14 +123,14 @@ function LocationPage({
     k: 'Coverage',
     v: area.postcodes && area.postcodes.length ? area.postcodes.join(', ') : locationName
   }, {
-    k: 'Response time',
-    v: area.responseTime || 'Within 48 hours'
+    k: 'Service Model',
+    v: 'Booked appointments'
   }, {
     k: 'Accreditation',
-    v: 'NICEIC + OZEV'
+    v: 'NICEIC Approved'
   }, {
-    k: 'Documented projects',
-    v: (area.cases || 0) + ' in ' + locationName
+    k: 'Insurance',
+    v: '£5M Public Liability'
   }].map((r, i) => /*#__PURE__*/React.createElement("div", {
     key: i,
     style: {
@@ -223,7 +152,9 @@ function LocationPage({
       fontWeight: 500,
       marginTop: 6
     }
-  }, r.v)))))), /*#__PURE__*/React.createElement("section", {
+  }, r.v))))));
+  const ServicesSection = /*#__PURE__*/React.createElement("section", {
+    key: "services",
     className: "section-y reveal"
   }, /*#__PURE__*/React.createElement("div", {
     className: "wrap"
@@ -231,15 +162,15 @@ function LocationPage({
     className: "section-head"
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "eyebrow"
-  }, "Services"), /*#__PURE__*/React.createElement("h2", {
+  }, "Service Scope"), /*#__PURE__*/React.createElement("h2", {
     className: "h-1"
   }, "Our electrical services", /*#__PURE__*/React.createElement("span", {
     className: "accent"
   }, "."))), /*#__PURE__*/React.createElement("p", {
     className: "lede"
-  }, "Five service lines, one in-house team. Here is how we support local businesses, industrial facilities and homeowners.")), /*#__PURE__*/React.createElement("div", {
+  }, "In-house NICEIC engineers providing planned electrical installations, testing and safety upgrades.")), /*#__PURE__*/React.createElement("div", {
     className: "locations-services-grid"
-  }, CARTER.services.map((s, i) => /*#__PURE__*/React.createElement("div", {
+  }, CARTER.services.map(s => /*#__PURE__*/React.createElement("div", {
     key: s.slug,
     style: {
       background: 'var(--white)',
@@ -340,7 +271,9 @@ function LocationPage({
     dangerouslySetInnerHTML: {
       __html: CARTER.svg.check
     }
-  }), bullet))))))))), (area.commercialAngle || area.domesticAngle) && /*#__PURE__*/React.createElement("section", {
+  }), bullet)))))))));
+  const CommercialDomesticDeep = (area.commercialAngle || area.domesticAngle) && /*#__PURE__*/React.createElement("section", {
+    key: "deep-angles",
     className: "section-y light reveal"
   }, /*#__PURE__*/React.createElement("div", {
     className: "wrap",
@@ -351,12 +284,12 @@ function LocationPage({
     }
   }, area.commercialAngle && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "eyebrow"
-  }, "Commercial Services"), /*#__PURE__*/React.createElement("h3", {
+  }, "Commercial Focus"), /*#__PURE__*/React.createElement("h3", {
     className: "h-2",
     style: {
       marginTop: 10
     }
-  }, "Commercial Electrical", /*#__PURE__*/React.createElement("span", {
+  }, "Commercial Electrical Services", /*#__PURE__*/React.createElement("span", {
     className: "accent"
   }, ".")), /*#__PURE__*/React.createElement("p", {
     style: {
@@ -370,14 +303,14 @@ function LocationPage({
       lineHeight: 1.7,
       marginTop: 14
     }
-  }, "Typical scopes we quote for: full distribution and sub-mains replacements, emergency-lighting upgrades to BS 5266, BS 5839-1 fire detection, retail and restaurant fit-outs, data containment and structured cabling, EICR remedials following a failed report, and scheduled shutdowns timed around the business's trading hours.")), area.domesticAngle && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+  }, "Scopes we routinely quote: full distribution board upgrades, emergency lighting to BS 5266, retail and office fit-outs, data containment, and landlord EICR inspection reports.")), area.domesticAngle && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "eyebrow"
-  }, "Domestic Services"), /*#__PURE__*/React.createElement("h3", {
+  }, "Domestic Focus"), /*#__PURE__*/React.createElement("h3", {
     className: "h-2",
     style: {
       marginTop: 10
     }
-  }, "Domestic Electrical", /*#__PURE__*/React.createElement("span", {
+  }, "Domestic Electrical Upgrades", /*#__PURE__*/React.createElement("span", {
     className: "accent"
   }, ".")), /*#__PURE__*/React.createElement("p", {
     style: {
@@ -391,7 +324,143 @@ function LocationPage({
       lineHeight: 1.7,
       marginTop: 14
     }
-  }, "Common domestic services we provide: full and partial rewires, replacement consumer units (fuseboards), OZEV-approved EV charger installs with load management, smart-lighting and smart-heating retrofits, extensions, loft conversions and garage conversions, external lighting and outbuilding supplies, and fault finding when a main breaker keeps tripping.")))), area.neighbourhoods && area.neighbourhoods.length > 0 && /*#__PURE__*/React.createElement("section", {
+  }, "Common domestic projects: consumer unit replacements, full and partial rewires, OZEV-approved EV charger installs, smart home lighting, and outbuilding power supplies."))));
+  const ProcessSectionB = /*#__PURE__*/React.createElement("section", {
+    key: "process-b",
+    className: "section-y light reveal"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "wrap"
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      maxWidth: '800px',
+      marginBottom: 32
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "eyebrow"
+  }, "How We Work"), /*#__PURE__*/React.createElement("h2", {
+    className: "h-2",
+    style: {
+      marginTop: 10
+    }
+  }, "Our 3-Step Project Process", /*#__PURE__*/React.createElement("span", {
+    className: "accent"
+  }, ".")), /*#__PURE__*/React.createElement("p", {
+    className: "lede",
+    style: {
+      marginTop: 16
+    }
+  }, "Transparent, professional electrical installations delivered on agreed schedules.")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+      gap: 24
+    }
+  }, [{
+    step: '01',
+    title: 'Site Survey & Scoping',
+    desc: 'We inspect your electrical installation and review your project requirements in detail.'
+  }, {
+    step: '02',
+    title: 'Itemised Fixed Quote',
+    desc: 'You receive a clear, written specification detailing all materials, labor, and NICEIC certification.'
+  }, {
+    step: '03',
+    title: 'Scheduled Work',
+    desc: 'Our qualified engineers carry out the work to regulation standards with minimal disruption.'
+  }].map((item, idx) => /*#__PURE__*/React.createElement("div", {
+    key: idx,
+    style: {
+      background: 'var(--white)',
+      border: '1px solid var(--rule)',
+      padding: 32,
+      borderRadius: 16
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "mono",
+    style: {
+      fontSize: 28,
+      color: 'var(--accent)',
+      fontWeight: 700
+    }
+  }, item.step), /*#__PURE__*/React.createElement("h3", {
+    className: "h-3",
+    style: {
+      marginTop: 16
+    }
+  }, item.title), /*#__PURE__*/React.createElement("p", {
+    style: {
+      color: 'var(--muted-2)',
+      marginTop: 12,
+      lineHeight: 1.6
+    }
+  }, item.desc))))));
+  const ComplianceSectionC = /*#__PURE__*/React.createElement("section", {
+    key: "compliance-c",
+    className: "section-y light reveal"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "wrap"
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      maxWidth: '800px',
+      marginBottom: 32
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "eyebrow"
+  }, "Health & Safety Compliance"), /*#__PURE__*/React.createElement("h2", {
+    className: "h-2",
+    style: {
+      marginTop: 10
+    }
+  }, "Commercial Standards & Safety First", /*#__PURE__*/React.createElement("span", {
+    className: "accent"
+  }, ".")), /*#__PURE__*/React.createElement("p", {
+    className: "lede",
+    style: {
+      marginTop: 16
+    }
+  }, "Full RAMS documentation, \xA35M Public Liability Insurance, and strict adherence to BS 7671 standards for industrial and commercial environments.")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+      gap: 20
+    }
+  }, [{
+    title: 'NICEIC Approved',
+    detail: 'Full contractor approval for commercial & industrial power.'
+  }, {
+    title: 'RAMS Compliant',
+    detail: 'Site-specific Risk Assessments and Method Statements issued prior to work.'
+  }, {
+    title: 'Minimal Disruption',
+    detail: 'Out-of-hours and planned shutdown scheduling to protect operational continuity.'
+  }, {
+    title: 'Digital Certification',
+    detail: 'NICEIC compliance certificates delivered within 48 hours of completion.'
+  }].map((c, i) => /*#__PURE__*/React.createElement("div", {
+    key: i,
+    style: {
+      background: 'var(--white)',
+      border: '1px solid var(--rule)',
+      padding: 24,
+      borderRadius: 12
+    }
+  }, /*#__PURE__*/React.createElement("strong", {
+    style: {
+      display: 'block',
+      fontSize: 16,
+      color: 'var(--ink)'
+    }
+  }, c.title), /*#__PURE__*/React.createElement("span", {
+    style: {
+      display: 'block',
+      fontSize: 14,
+      color: 'var(--muted-2)',
+      marginTop: 8,
+      lineHeight: 1.5
+    }
+  }, c.detail))))));
+  const NeighbourhoodsSection = area.neighbourhoods && area.neighbourhoods.length > 0 && /*#__PURE__*/React.createElement("section", {
+    key: "neighbourhoods",
     className: "section-y reveal"
   }, /*#__PURE__*/React.createElement("div", {
     className: "wrap"
@@ -401,19 +470,19 @@ function LocationPage({
     }
   }, /*#__PURE__*/React.createElement("div", {
     className: "eyebrow"
-  }, "Neighbourhoods served"), /*#__PURE__*/React.createElement("h2", {
+  }, "Coverage Areas"), /*#__PURE__*/React.createElement("h2", {
     className: "h-2",
     style: {
       marginTop: 10
     }
-  }, "Areas we cover", /*#__PURE__*/React.createElement("span", {
+  }, "Sub-areas & postcodes covered", /*#__PURE__*/React.createElement("span", {
     className: "accent"
   }, ".")), /*#__PURE__*/React.createElement("p", {
     className: "lede",
     style: {
       marginTop: 16
     }
-  }, "Our local engineers cover all area postcodes, including ", area.postcodes && area.postcodes.length ? area.postcodes.join(', ') : '', ". If your address is inside any of the following neighbourhoods, you're well inside our core coverage zone:")), /*#__PURE__*/React.createElement("div", {
+  }, "Covering ", area.postcodes && area.postcodes.length ? area.postcodes.join(', ') : locationName, " and surrounding localities:")), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'grid',
       gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
@@ -444,72 +513,9 @@ function LocationPage({
       fontSize: 15,
       fontWeight: 500
     }
-  }, n)))), area.landmarks && area.landmarks.length > 0 && /*#__PURE__*/React.createElement("p", {
-    style: {
-      color: 'var(--muted-2)',
-      lineHeight: 1.7,
-      marginTop: 28,
-      maxWidth: '70ch'
-    }
-  }, "We also work around key local landmarks and business parks, including ", area.landmarks.join(', '), ". If you're scoping electrical work at one of these or on a nearby site, we've likely been on-site in the area recently - ask us for a reference."))), area.featuredProject && /*#__PURE__*/React.createElement("section", {
-    className: "section-y light reveal",
-    id: "cases"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "wrap"
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      marginBottom: 40
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "eyebrow"
-  }, "Recent Work"), /*#__PURE__*/React.createElement("h2", {
-    className: "h-2",
-    style: {
-      marginTop: 10
-    }
-  }, "Featured project & local work", /*#__PURE__*/React.createElement("span", {
-    className: "accent"
-  }, ".")), /*#__PURE__*/React.createElement("p", {
-    className: "lede",
-    style: {
-      marginTop: 16
-    }
-  }, area.featuredProject), area.cases > 0 && /*#__PURE__*/React.createElement("p", {
-    style: {
-      color: 'var(--muted-2)',
-      lineHeight: 1.7,
-      marginTop: 16
-    }
-  }, "We have completed ", area.cases, " documented local projects. Below is a selection illustrating our standard of work:")), /*#__PURE__*/React.createElement("div", {
-    className: "cases-grid"
-  }, displayCases.map(c => /*#__PURE__*/React.createElement("a", {
-    key: c.id,
-    href: `case-${c.id}.html`,
-    className: "case-card"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "case-visual"
-  }, /*#__PURE__*/React.createElement(CarterPlaceholder, {
-    imgSrc: c.imgSrc,
-    metaTag: `${c.sector} · ${c.subsector}`,
-    titleCaption: `${c.title} - ${c.location}`,
-    year: c.year,
-    hue: c.hue
-  })), /*#__PURE__*/React.createElement("div", {
-    className: "case-body"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "case-tags"
-  }, /*#__PURE__*/React.createElement("span", {
-    className: "case-tag primary"
-  }, c.sector), c.scope.slice(0, 2).map(s => /*#__PURE__*/React.createElement("span", {
-    key: s,
-    className: "case-tag"
-  }, s))), /*#__PURE__*/React.createElement("h3", null, c.title), /*#__PURE__*/React.createElement("p", null, c.blurb), /*#__PURE__*/React.createElement("span", {
-    className: "link"
-  }, "View project", /*#__PURE__*/React.createElement("span", {
-    dangerouslySetInnerHTML: {
-      __html: CARTER.svg.arrow
-    }
-  })))))))), /*#__PURE__*/React.createElement("section", {
+  }, n))))));
+  const MapSection = /*#__PURE__*/React.createElement("section", {
+    key: "map",
     className: "section-y light reveal",
     id: "map"
   }, /*#__PURE__*/React.createElement("div", {
@@ -526,14 +532,14 @@ function LocationPage({
     style: {
       marginTop: 10
     }
-  }, "Areas covered in ", locationName, /*#__PURE__*/React.createElement("span", {
+  }, "Coverage zone map", /*#__PURE__*/React.createElement("span", {
     className: "accent"
   }, ".")), /*#__PURE__*/React.createElement("p", {
     className: "lede",
     style: {
       marginTop: 16
     }
-  }, "Our NICEIC-approved electricians provide prompt response times and full coverage across ", locationName, " and surrounding postcodes.")), /*#__PURE__*/React.createElement("div", {
+  }, "Our qualified engineers provide scheduled coverage across ", locationName, " and neighbouring postcodes.")), /*#__PURE__*/React.createElement("div", {
     style: {
       width: '100%',
       height: '400px',
@@ -552,7 +558,9 @@ function LocationPage({
     loading: "lazy",
     allowFullScreen: true,
     src: `https://maps.google.com/maps?q=${encodeURIComponent(locationName + ', UK')}&t=&z=11&ie=UTF8&iwloc=&output=embed`
-  })))), area.testimonials && area.testimonials.length > 0 && /*#__PURE__*/React.createElement("section", {
+  }))));
+  const TestimonialsSection = area.testimonials && area.testimonials.length > 0 && /*#__PURE__*/React.createElement("section", {
+    key: "testimonials",
     className: "section-y reveal",
     id: "testimonials"
   }, /*#__PURE__*/React.createElement("div", {
@@ -569,14 +577,14 @@ function LocationPage({
     style: {
       marginTop: 10
     }
-  }, "What clients in ", locationName, " say", /*#__PURE__*/React.createElement("span", {
+  }, "What our clients say", /*#__PURE__*/React.createElement("span", {
     className: "accent"
   }, ".")), /*#__PURE__*/React.createElement("p", {
     className: "lede",
     style: {
       marginTop: 16
     }
-  }, "Real feedback from commercial, industrial and domestic clients across ", locationName, ".")), /*#__PURE__*/React.createElement("div", {
+  }, "Real feedback from commercial and domestic clients across ", locationName, ".")), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'grid',
       gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
@@ -636,7 +644,9 @@ function LocationPage({
       letterSpacing: '0.08em',
       textTransform: 'uppercase'
     }
-  }, "Verified Client"))))))), faqs.length > 0 && /*#__PURE__*/React.createElement("section", {
+  }, "Verified Client")))))));
+  const FAQsSection = faqs.length > 0 && /*#__PURE__*/React.createElement("section", {
+    key: "faqs",
     className: "section-y reveal"
   }, /*#__PURE__*/React.createElement("div", {
     className: "wrap"
@@ -681,7 +691,9 @@ function LocationPage({
       lineHeight: 1.7,
       marginTop: 14
     }
-  }, f.a)))))), otherAreas.length > 0 && /*#__PURE__*/React.createElement("section", {
+  }, f.a))))));
+  const NearbySection = otherAreas.length > 0 && /*#__PURE__*/React.createElement("section", {
+    key: "nearby",
     className: "section-y light reveal"
   }, /*#__PURE__*/React.createElement("div", {
     className: "wrap"
@@ -703,7 +715,7 @@ function LocationPage({
     style: {
       marginTop: 16
     }
-  }, "We cover the wider ", area.county || 'North West', " region from our Chester base. If you are scoping work outside this primary zone, the following areas are also within our core patch:")), /*#__PURE__*/React.createElement("div", {
+  }, "We cover the wider ", area.county || 'North West', " region from our Chester base:")), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'grid',
       gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
@@ -736,7 +748,98 @@ function LocationPage({
     dangerouslySetInnerHTML: {
       __html: CARTER.svg.arrow
     }
-  })))))), /*#__PURE__*/React.createElement("section", {
+  }))))));
+
+  // Construct page layout based on Archetype
+  let contentBlocks = [];
+  if (isArchetypeB) {
+    // Archetype B (Residential & Villages: Tarporley, Frodsham)
+    contentBlocks = [ProcessSectionB, CommercialDomesticDeep, IntroSection, ServicesSection, NeighbourhoodsSection, TestimonialsSection, MapSection, FAQsSection, NearbySection];
+  } else if (isArchetypeC) {
+    // Archetype C (Commercial & Industrial Hubs: Deeside, Ellesmere Port)
+    contentBlocks = [ComplianceSectionC, CommercialDomesticDeep, ServicesSection, IntroSection, MapSection, NeighbourhoodsSection, TestimonialsSection, FAQsSection, NearbySection];
+  } else {
+    // Archetype A (Regional Hubs: Mold, Wrexham, Northwich, Wirral)
+    contentBlocks = [TestimonialsSection, IntroSection, ServicesSection, CommercialDomesticDeep, MapSection, NeighbourhoodsSection, FAQsSection, NearbySection];
+  }
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Header, {
+    current: "areas",
+    theme: "dark"
+  }), /*#__PURE__*/React.createElement(PageHero, {
+    section: "Local Coverage",
+    sectionNum: "03.1 / Location",
+    title: `Electricians in ${locationName}`,
+    titleAccent: " - NICEIC-approved.",
+    subtext: `NICEIC-approved commercial, industrial and domestic electrical contractor serving ${locationName}${area.postcodes && area.postcodes.length ? ' (' + area.postcodes.join(', ') + ')' : ''} and the surrounding area. Booked site surveys, EICR testing, full rewires and commercial installations.`,
+    ctas: /*#__PURE__*/React.createElement("div", {
+      style: {
+        display: 'flex',
+        gap: '12px'
+      }
+    }, /*#__PURE__*/React.createElement("a", {
+      href: "contact.html",
+      className: "btn btn-primary"
+    }, "Get Your Free Quote", /*#__PURE__*/React.createElement("span", {
+      dangerouslySetInnerHTML: {
+        __html: CARTER.svg.arrow
+      }
+    })), /*#__PURE__*/React.createElement("a", {
+      href: CARTER.company.phoneHref,
+      className: "btn btn-ghost-light"
+    }, /*#__PURE__*/React.createElement("span", {
+      dangerouslySetInnerHTML: {
+        __html: CARTER.svg.phone
+      },
+      style: {
+        width: 14,
+        height: 14
+      }
+    }), "Call ", CARTER.company.phone))
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "hero-strip wrap",
+    style: {
+      maxWidth: '100%',
+      padding: 0
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "wrap",
+    style: {
+      display: 'contents'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "hero-strip",
+    style: {
+      gridColumn: '1 / -1'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "cell"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "k"
+  }, "Coverage"), /*#__PURE__*/React.createElement("span", {
+    className: "v"
+  }, locationName, " & ", area.county || 'Surrounds')), /*#__PURE__*/React.createElement("div", {
+    className: "cell"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "k"
+  }, "Assurance"), /*#__PURE__*/React.createElement("span", {
+    className: "v"
+  }, "Fully Insured \xB7 \xA35M")), /*#__PURE__*/React.createElement("div", {
+    className: "cell"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "k"
+  }, "Accreditation"), /*#__PURE__*/React.createElement("span", {
+    className: "v"
+  }, "NICEIC ", /*#__PURE__*/React.createElement("span", {
+    className: "accent"
+  }, "Approved"))), /*#__PURE__*/React.createElement("div", {
+    className: "cell"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "k"
+  }, "Sectors"), /*#__PURE__*/React.createElement("span", {
+    className: "v"
+  }, "Commercial \xB7 Domestic \xB7 Industrial")))))), /*#__PURE__*/React.createElement(TrustBar, {
+    area: area
+  }), contentBlocks, /*#__PURE__*/React.createElement("section", {
     className: "cta-band reveal"
   }, /*#__PURE__*/React.createElement("div", {
     className: "wrap"
@@ -754,7 +857,7 @@ function LocationPage({
       marginTop: 18,
       maxWidth: '54ch'
     }
-  }, "Brief the scope in three steps. We'll be in touch within 48 hours.")), /*#__PURE__*/React.createElement("div", {
+  }, "Brief your project requirements. Our team will follow up promptly with a written quote.")), /*#__PURE__*/React.createElement("div", {
     className: "cta-aside"
   }, /*#__PURE__*/React.createElement("div", {
     className: "label-mono"
