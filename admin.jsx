@@ -420,7 +420,7 @@ function AdminDashboard() {
               {/* Card 4: Web Enquiries */}
               <div className="crm-stat-card">
                 <div>
-                  <div className="crm-stat-label">Web Enquiries</div>
+                  <div className="crm-stat-label">Web & SMS Enquiries</div>
                   <div className="crm-stat-value">{totalForms}</div>
                 </div>
                 <div className="crm-stat-trend trend-neutral">

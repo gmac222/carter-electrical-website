@@ -56,12 +56,6 @@ function LocationPage({
     ctas: /*#__PURE__*/React.createElement("div", {
       style: {
         display: 'flex',
-        flexDirection: 'column',
-        gap: '12px'
-      }
-    }, /*#__PURE__*/React.createElement("div", {
-      style: {
-        display: 'flex',
         gap: '12px'
       }
     }, /*#__PURE__*/React.createElement("a", {
@@ -82,13 +76,7 @@ function LocationPage({
         width: 14,
         height: 14
       }
-    }), "Call ", CARTER.company.phone)), /*#__PURE__*/React.createElement("div", {
-      className: "label-mono",
-      style: {
-        color: 'rgba(255,255,255,0.6)',
-        marginTop: '4px'
-      }
-    }, "Takes 60 seconds \u2022 We'll be in touch within 48 hours"))
+    }), "Call ", CARTER.company.phone))
   }, /*#__PURE__*/React.createElement("div", {
     className: "hero-strip wrap",
     style: {

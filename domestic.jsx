@@ -11,15 +11,12 @@ function DomesticHero() {
       titleAccent="Safe & Certified Home Wiring."
       subtext="From full house rewires and consumer unit upgrades to OZEV-approved EV home chargers and smart lighting systems. Safe, certified, and fully insured works delivered by our polite in-house team."
       ctas={
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 10 }}>
-          <div style={{ display: 'flex', gap: 16 }}>
-            <a href="contact.html" className="btn btn-primary">
-              Get Your Free Quote
-              <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }} />
-            </a>
-            <a href="case-studies.html" className="btn btn-ghost-light">See domestic work</a>
-          </div>
-          <div style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.7)' }}>Takes 60 seconds • NICEIC certified handover.</div>
+        <div style={{ display: 'flex', gap: 16 }}>
+          <a href="contact.html" className="btn btn-primary">
+            Get Your Free Quote
+            <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }} />
+          </a>
+          <a href="case-studies.html" className="btn btn-ghost-light">See domestic work</a>
         </div>
       }
     />

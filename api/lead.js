@@ -1,3 +1,5 @@
+import nodemailer from 'nodemailer';
+
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
@@ -39,35 +41,39 @@ export default async function handler(req, res) {
       }
     }
 
-    // 2. Send Email via Resend (Optional if configured)
-    if (process.env.RESEND_API_KEY && process.env.CONTACT_EMAIL) {
-      const emailRes = await fetch('https://api.resend.com/emails', {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${process.env.RESEND_API_KEY}`,
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          from: 'Carter Electrical Leads <leads@carterelec.co.uk>',
-          to: process.env.CONTACT_EMAIL.split(',').map(email => email.trim()).filter(Boolean),
+    // 2. Send Email via Gmail SMTP (Optional if configured)
+    if (process.env.SMTP_USER && process.env.SMTP_PASS && process.env.CONTACT_EMAIL) {
+      try {
+        const transporter = nodemailer.createTransport({
+          service: 'gmail',
+          auth: {
+            user: process.env.SMTP_USER,
+            pass: process.env.SMTP_PASS
+          }
+        });
+
+        const recipients = process.env.CONTACT_EMAIL.split(',').map(email => email.trim()).filter(Boolean);
+        await transporter.sendMail({
+          from: `"Carter Electrical Leads" <${process.env.SMTP_USER}>`,
+          replyTo: email || undefined,
+          to: recipients,
           subject: `New Lead: ${name} - ${service}`,
           html: `
             <h2>New Enquiry from Website</h2>
             <p><strong>Name:</strong> ${name}</p>
-            <p><strong>Company:</strong> ${company}</p>
+            <p><strong>Company:</strong> ${company || 'N/A'}</p>
             <p><strong>Phone:</strong> ${phone}</p>
             <p><strong>Email:</strong> ${email}</p>
             <p><strong>Service:</strong> ${service}</p>
             <p><strong>Timing:</strong> ${timing}</p>
             <p><strong>Scope:</strong> ${scope}</p>
             <p><strong>Postcode:</strong> ${postcode}</p>
-            <p><strong>Details:</strong> ${details}</p>
+            <p><strong>Details:</strong> ${details ? details.replace(/\n/g, '<br>') : 'None'}</p>
           `
-        })
-      });
-      if (!emailRes.ok) {
-        const emailErr = await emailRes.text();
-        console.error('Resend email sending failed:', emailErr);
+        });
+        console.log('Email notification sent successfully via Gmail SMTP');
+      } catch (emailErr) {
+        console.error('SMTP email sending failed:', emailErr);
       }
     }
 

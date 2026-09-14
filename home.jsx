@@ -61,20 +61,15 @@ function Hero() {
         {copy.strapline && <div className="hero-strapline">{copy.strapline}</div>}
         <p className="hero-sub">{copy.sub}</p>
         <div className="hero-ctas">
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-            <div style={{ display: 'flex', gap: '12px' }}>
-              <a href="contact.html" className="btn btn-primary">
-                Get Your Free Quote
-                <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }} />
-              </a>
-              <a href={CARTER.company.phoneHref} className="btn btn-ghost-light">
-                <span dangerouslySetInnerHTML={{ __html: CARTER.svg.phone }} style={{ width: 14, height: 14 }} />
-                Call {CARTER.company.phone}
-              </a>
-            </div>
-            <div className="label-mono" style={{ color: 'rgba(255,255,255,0.6)', marginTop: '4px' }}>
-              Takes 60 seconds • We'll be in touch within 48 hours
-            </div>
+          <div style={{ display: 'flex', gap: '12px' }}>
+            <a href="contact.html" className="btn btn-primary">
+              Get Your Free Quote
+              <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }} />
+            </a>
+            <a href={CARTER.company.phoneHref} className="btn btn-ghost-light">
+              <span dangerouslySetInnerHTML={{ __html: CARTER.svg.phone }} style={{ width: 14, height: 14 }} />
+              Call {CARTER.company.phone}
+            </a>
           </div>
         </div>
       </div>

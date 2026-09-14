@@ -521,7 +521,7 @@ function AdminDashboard() {
     className: "crm-stat-card"
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "crm-stat-label"
-  }, "Web Enquiries"), /*#__PURE__*/React.createElement("div", {
+  }, "Web & SMS Enquiries"), /*#__PURE__*/React.createElement("div", {
     className: "crm-stat-value"
   }, totalForms)), /*#__PURE__*/React.createElement("div", {
     className: "crm-stat-trend trend-neutral"

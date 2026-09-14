@@ -11,15 +11,12 @@ function CommercialHero() {
       titleAccent="NICEIC Approved Contractors."
       subtext="Fit-outs, maintenance contracts, EICR compliance, and emergency lighting for offices, retail, hospitality, leisure, and multi-tenant buildings. Scoped candidly, delivered by our in-house team."
       ctas={
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 10 }}>
-          <div style={{ display: 'flex', gap: 16 }}>
-            <a href="contact.html" className="btn btn-primary">
-              Get Your Free Quote
-              <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }} />
-            </a>
-            <a href="case-studies.html" className="btn btn-ghost-light">See commercial work</a>
-          </div>
-          <div style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.7)' }}>Takes 60 seconds • We will be in touch within 48 hours.</div>
+        <div style={{ display: 'flex', gap: 16 }}>
+          <a href="contact.html" className="btn btn-primary">
+            Get Your Free Quote
+            <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }} />
+          </a>
+          <a href="case-studies.html" className="btn btn-ghost-light">See commercial work</a>
         </div>
       }
     />

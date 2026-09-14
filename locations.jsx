@@ -50,20 +50,15 @@ function LocationPage({ locationName }) {
         titleAccent=" - NICEIC-approved."
         subtext={`NICEIC-approved commercial, industrial, domestic and renewables electricians serving ${locationName}${area.postcodes && area.postcodes.length ? ' (' + area.postcodes.join(', ') + ')' : ''} and the surrounding ${area.county || 'area'}. EICR testing, EV chargers, full rewires and commercial fit-outs.`}
         ctas={
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-            <div style={{ display: 'flex', gap: '12px' }}>
-              <a href="contact.html" className="btn btn-primary">
-                Get Your Free Quote
-                <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }} />
-              </a>
-              <a href={CARTER.company.phoneHref} className="btn btn-ghost-light">
-                <span dangerouslySetInnerHTML={{ __html: CARTER.svg.phone }} style={{ width: 14, height: 14 }} />
-                Call {CARTER.company.phone}
-              </a>
-            </div>
-            <div className="label-mono" style={{ color: 'rgba(255,255,255,0.6)', marginTop: '4px' }}>
-              Takes 60 seconds • We'll be in touch within 48 hours
-            </div>
+          <div style={{ display: 'flex', gap: '12px' }}>
+            <a href="contact.html" className="btn btn-primary">
+              Get Your Free Quote
+              <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }} />
+            </a>
+            <a href={CARTER.company.phoneHref} className="btn btn-ghost-light">
+              <span dangerouslySetInnerHTML={{ __html: CARTER.svg.phone }} style={{ width: 14, height: 14 }} />
+              Call {CARTER.company.phone}
+            </a>
           </div>
         }
       >

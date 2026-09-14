@@ -21,13 +21,6 @@ function CommercialHero() {
     ctas: /*#__PURE__*/React.createElement("div", {
       style: {
         display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'flex-start',
-        gap: 10
-      }
-    }, /*#__PURE__*/React.createElement("div", {
-      style: {
-        display: 'flex',
         gap: 16
       }
     }, /*#__PURE__*/React.createElement("a", {
@@ -40,12 +33,7 @@ function CommercialHero() {
     })), /*#__PURE__*/React.createElement("a", {
       href: "case-studies.html",
       className: "btn btn-ghost-light"
-    }, "See commercial work")), /*#__PURE__*/React.createElement("div", {
-      style: {
-        fontSize: '0.85rem',
-        color: 'rgba(255,255,255,0.7)'
-      }
-    }, "Takes 60 seconds \u2022 We will be in touch within 48 hours."))
+    }, "See commercial work"))
   });
 }
 const CAPABILITIES = [{
@@ -421,4 +409,4 @@ function Commercial() {
     }
   }), "100% Secure. No obligation. Your data is strictly protected."))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(MobileStickyCTA, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
 }
-ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/React.createElement(Commercial, null));
+ReactDOM.hydrateRoot(document.getElementById('root'), /*#__PURE__*/React.createElement(Commercial, null));

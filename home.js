@@ -91,12 +91,6 @@ function Hero() {
   }, /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
-      flexDirection: 'column',
-      gap: '12px'
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'flex',
       gap: '12px'
     }
   }, /*#__PURE__*/React.createElement("a", {
@@ -117,13 +111,7 @@ function Hero() {
       width: 14,
       height: 14
     }
-  }), "Call ", CARTER.company.phone)), /*#__PURE__*/React.createElement("div", {
-    className: "label-mono",
-    style: {
-      color: 'rgba(255,255,255,0.6)',
-      marginTop: '4px'
-    }
-  }, "Takes 60 seconds \u2022 We'll be in touch within 48 hours")))), /*#__PURE__*/React.createElement("div", {
+  }), "Call ", CARTER.company.phone)))), /*#__PURE__*/React.createElement("div", {
     className: "hero-strip wrap",
     style: {
       maxWidth: '100%',
@@ -712,4 +700,4 @@ function Home() {
     theme: "dark"
   }), /*#__PURE__*/React.createElement(Hero, null), /*#__PURE__*/React.createElement(TrustBar, null), /*#__PURE__*/React.createElement(Services, null), /*#__PURE__*/React.createElement(Intro, null), /*#__PURE__*/React.createElement(Cases, null), /*#__PURE__*/React.createElement(Testimonials, null), /*#__PURE__*/React.createElement(Areas, null), /*#__PURE__*/React.createElement(CTABand, null), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(MobileStickyCTA, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
 }
-ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/React.createElement(Home, null));
+ReactDOM.hydrateRoot(document.getElementById('root'), /*#__PURE__*/React.createElement(Home, null));

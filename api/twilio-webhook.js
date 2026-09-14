@@ -1,3 +1,5 @@
+import nodemailer from 'nodemailer';
+
 function isBlocked(number) {
   if (!number) return false;
   const cleanNumber = number.replace(/\D/g, '');
@@ -32,6 +34,108 @@ export default async function handler(req, res) {
       console.log(`Rejecting blocked caller: ${From}`);
       res.setHeader('Content-Type', 'text/xml');
       return res.status(200).send('<?xml version="1.0" encoding="UTF-8"?><Response><Reject reason="busy" /></Response>');
+    }
+
+    // Handle incoming SMS messages
+    const isSms = !!(body.MessageSid || body.SmsSid || query.MessageSid || query.SmsSid);
+    if (isSms) {
+      if (To === '+441244727291' && From) {
+        const smsBodyText = body.Body || query.Body || '';
+        console.log(`Received SMS from ${From} to ${To}: "${smsBodyText}"`);
+
+        // 1. Log to Airtable
+        if (process.env.AIRTABLE_BASE_ID && process.env.AIRTABLE_PAT && process.env.AIRTABLE_TABLE_ID) {
+          try {
+            const airtableRes = await fetch(`https://api.airtable.com/v0/${process.env.AIRTABLE_BASE_ID}/${process.env.AIRTABLE_TABLE_ID}`, {
+              method: 'POST',
+              headers: {
+                'Authorization': `Bearer ${process.env.AIRTABLE_PAT}`,
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({
+                typecast: true,
+                fields: {
+                  'Customer Name': 'SMS Lead',
+                  'Customer Phone': From,
+                  'Service Requested': 'Inbound SMS',
+                  'Status': 'New Lead',
+                  'Quote Amount': 0,
+                  'Notes': smsBodyText,
+                  'Additional Details': smsBodyText
+                }
+              })
+            });
+            if (!airtableRes.ok) {
+              const errText = await airtableRes.text();
+              console.error('Failed to log SMS to Airtable:', errText);
+            } else {
+              console.log('Successfully logged SMS to Airtable');
+            }
+          } catch (atError) {
+            console.error('Error logging SMS to Airtable:', atError);
+          }
+        }
+
+        // 2. Send email notification via Gmail SMTP
+        if (process.env.SMTP_USER && process.env.SMTP_PASS && process.env.CONTACT_EMAIL) {
+          try {
+            const transporter = nodemailer.createTransport({
+              service: 'gmail',
+              auth: {
+                user: process.env.SMTP_USER,
+                pass: process.env.SMTP_PASS
+              }
+            });
+
+            const recipients = process.env.CONTACT_EMAIL.split(',').map(email => email.trim()).filter(Boolean);
+            await transporter.sendMail({
+              from: `"Carter Electrical Leads" <${process.env.SMTP_USER}>`,
+              replyTo: From || undefined,
+              to: recipients,
+              subject: `New SMS Lead from ${From}`,
+              html: `
+                <h2>New SMS Lead Received</h2>
+                <p><strong>Phone:</strong> ${From}</p>
+                <p><strong>Message:</strong></p>
+                <blockquote style="border-left: 3px solid #7AC143; padding-left: 10px; margin: 10px 0; color: #555;">
+                  ${smsBodyText.replace(/\n/g, '<br>')}
+                </blockquote>
+              `
+            });
+            console.log('Email notification sent successfully for SMS lead via Gmail SMTP');
+          } catch (emailErr) {
+            console.error('Failed to send email notification for SMS lead via SMTP:', emailErr);
+          }
+        }
+
+        // 3. Forward SMS notification via ClickSend
+        const clicksendUser = process.env.CLICKSEND_USER;
+        const clicksendKey = process.env.CLICKSEND_KEY;
+        const smsRecipient = process.env.SMS_RECIPIENT_NUMBER;
+        if (clicksendUser && clicksendKey && smsRecipient) {
+          const authHeader = 'Basic ' + Buffer.from(`${clicksendUser}:${clicksendKey}`).toString('base64');
+          const forwardSmsBody = `New SMS Lead from ${From}:\n"${smsBodyText}"`;
+          const recipients = smsRecipient.split(',').map(num => num.trim()).filter(Boolean);
+          const messages = recipients.map(to => ({ to, body: forwardSmsBody }));
+
+          try {
+            await fetch('https://rest.clicksend.com/v3/sms/send', {
+              method: 'POST',
+              headers: {
+                'Authorization': authHeader,
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({ messages })
+            });
+            console.log('SMS notification forwarded successfully');
+          } catch (smsErr) {
+            console.error('Failed to forward SMS notification:', smsErr);
+          }
+        }
+      }
+
+      res.setHeader('Content-Type', 'text/xml');
+      return res.status(200).send('<?xml version="1.0" encoding="UTF-8"?><Response></Response>');
     }
 
     // Handle call recording callbacks from Twilio when a recording is ready - only for our number (+441244727291)
@@ -91,24 +195,53 @@ export default async function handler(req, res) {
 
     // Standard incoming call handling - only log calls to Carter Electrical's number (+441244727291)
     if (To === '+441244727291' && From && process.env.AIRTABLE_BASE_ID && process.env.AIRTABLE_PAT && process.env.AIRTABLE_TABLE_ID) {
-      await fetch(`https://api.airtable.com/v0/${process.env.AIRTABLE_BASE_ID}/${process.env.AIRTABLE_TABLE_ID}`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${process.env.AIRTABLE_PAT}`,
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          typecast: true,
-          fields: {
-            'Customer Name': 'Phone Caller',
-            'Customer Phone': From,
-            'Service Requested': 'Inbound Call',
-            'Status': 'New Lead',
-            'Quote Amount': 0,
-            'Notes': `Incoming call tracked via Twilio.\nCalled Number: ${To}\nStatus: ${CallStatus || 'Unknown'}`
+      // Deduplicate: Check if a call from the same number was created in Airtable in the last 60 seconds
+      let isDuplicate = false;
+      try {
+        const searchFormula = `SEARCH("${From}", {Customer Phone})`;
+        const searchUrl = `https://api.airtable.com/v0/${process.env.AIRTABLE_BASE_ID}/${process.env.AIRTABLE_TABLE_ID}?filterByFormula=${encodeURIComponent(searchFormula)}&maxRecords=5`;
+        const atSearchRes = await fetch(searchUrl, {
+          headers: { 'Authorization': `Bearer ${process.env.AIRTABLE_PAT}` }
+        });
+        if (atSearchRes.ok) {
+          const atSearchData = await atSearchRes.json();
+          const records = atSearchData.records || [];
+          if (records.length > 0) {
+            const times = records.map(r => new Date(r.createdTime).getTime()).filter(t => !isNaN(t));
+            if (times.length > 0) {
+              const mostRecentTime = Math.max(...times);
+              const diffMs = Date.now() - mostRecentTime;
+              if (diffMs < 60 * 1000) {
+                isDuplicate = true;
+                console.log(`Duplicate call detected from ${From} (logged ${Math.round(diffMs / 1000)}s ago). Skipping Airtable log.`);
+              }
+            }
           }
-        })
-      });
+        }
+      } catch (searchErr) {
+        console.error('Error during call deduplication search:', searchErr);
+      }
+
+      if (!isDuplicate) {
+        await fetch(`https://api.airtable.com/v0/${process.env.AIRTABLE_BASE_ID}/${process.env.AIRTABLE_TABLE_ID}`, {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${process.env.AIRTABLE_PAT}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            typecast: true,
+            fields: {
+              'Customer Name': 'Phone Caller',
+              'Customer Phone': From,
+              'Service Requested': 'Inbound Call',
+              'Status': 'New Lead',
+              'Quote Amount': 0,
+              'Notes': `Incoming call tracked via Twilio.\nCalled Number: ${To}\nStatus: ${CallStatus || 'Unknown'}`
+            }
+          })
+        });
+      }
     }
 
     // 2. Track call conversion in GA4 via Measurement Protocol - only for our number (+441244727291)
@@ -154,8 +287,9 @@ export default async function handler(req, res) {
     // Twilio expects TwiML in response to proceed with the call.
     // We return a Dial response so that if the phone number is routed directly to this webhook,
     // Twilio will automatically dial Ian's number, record the call, and send the recording back here.
+    const escapedCallbackUrl = callbackUrl.replace(/&/g, '&amp;');
     res.setHeader('Content-Type', 'text/xml');
-    res.status(200).send(`<?xml version="1.0" encoding="UTF-8"?><Response><Dial record="record-from-answer-dual" recordingStatusCallback="${callbackUrl}">+447843672120</Dial></Response>`);
+    res.status(200).send(`<?xml version="1.0" encoding="UTF-8"?><Response><Dial record="record-from-answer-dual" recordingStatusCallback="${escapedCallbackUrl}">+447843672120</Dial></Response>`);
   } catch (error) {
     console.error('Twilio Webhook error:', error);
     // Still return 200 and attempt to connect the call so we do not drop the caller
