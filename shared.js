@@ -296,6 +296,32 @@ window.CARTER.blog = [{"title":"The Importance of EICR Testing for Commercial Pr
 // Build the FAQ set for a location. Answers are tailored per-area using the location
 // data, so each page's FAQ section is genuinely unique rather than duplicate content.
 const faqsMap = {
+  'chester': [
+    {
+      q: 'How often should a commercial property in Chester undergo EICR safety testing?',
+      a: 'Under the Electricity at Work Regulations 1989 and BS 7671, commercial properties in Chester city centre, office estates, and hospitality venues should undergo EICR testing at least every 5 years (or every 3 years for industrial sites). We conduct thorough commercial inspections with minimal operational disruption.'
+    },
+    {
+      q: 'What is involved in a full domestic property rewire in Chester?',
+      a: 'A full rewire replaces all fixed electrical cabling, backboxes, socket outlets, light switches, and the central consumer unit. Because period homes across Hoole, Upton, and Christleton often feature legacy wiring, our engineers perform sensitive chasing and clean containment brought up to current BS 7671 standards.'
+    },
+    {
+      q: 'Do I need an NICEIC-approved electrician for a consumer unit upgrade in Chester?',
+      a: 'Yes. Replacing a consumer unit (fuse box) is reportable under Part P of the Building Regulations. As an NICEIC Approved Contractor based in Christleton, Carter Electrical installs modern metal RCBO fuse boards with Surge Protection (SPD) and self-certifies compliance with Cheshire West Building Control.'
+    },
+    {
+      q: 'How long does an EICR test take for a landlord rental property in Chester?',
+      a: 'A domestic EICR safety inspection for a 2 to 3-bedroom rental property in Chester takes approximately 2 to 3 hours. Our engineers test fixed wiring circuits and issue digital EICR certificates within 48 hours to fulfill Cheshire West landlord compliance duties.'
+    },
+    {
+      q: 'Can Carter Electrical install EV charger wallboxes for homes in Chester?',
+      a: 'Yes. We are OZEV-approved installers fitting smart, fast home EV chargers across CH1, CH2, CH3, and CH4 postcodes. We evaluate your main fuse capacity, coordinate SP Energy Networks DNO notifications, and ensure clean installation.'
+    },
+    {
+      q: 'Which areas of Chester and Cheshire West do your electricians cover?',
+      a: 'From our base in Christleton (CH3 6AH), we serve all of Chester city centre, Hoole, Upton, Blacon, Boughton, Handbridge, Vicars Cross, Newton, Mickle Trafford, Waverton, and surrounding Cheshire West communities.'
+    }
+  ],
   'tarporley': [
     {
       q: 'How do I know if a period property or barn conversion in Tarporley needs rewiring?',
