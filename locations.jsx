@@ -270,7 +270,7 @@ function LocationPage({ locationName }) {
       <div className="wrap">
         <div style={{ maxWidth: '800px', marginBottom: 28 }}>
           <div className="eyebrow">Local Area Map</div>
-          <h2 className="h-2" style={{ marginTop: 10 }}>Coverage zone map<span className="accent">.</span></h2>
+          <h2 className="h-2" style={{ marginTop: 10 }}>Where We Serve<span className="accent">.</span></h2>
           <p className="lede" style={{ marginTop: 16 }}>
             Our qualified engineers provide scheduled coverage across {locationName} and neighbouring postcodes.
           </p>
@@ -295,9 +295,9 @@ function LocationPage({ locationName }) {
       <div className="wrap">
         <div style={{ maxWidth: '800px', marginBottom: 32 }}>
           <div className="eyebrow">Client Feedback</div>
-          <h2 className="h-2" style={{ marginTop: 10 }}>What our clients say<span className="accent">.</span></h2>
+          <h2 className="h-2" style={{ marginTop: 10 }}>Testimonials<span className="accent">.</span></h2>
           <p className="lede" style={{ marginTop: 16 }}>
-            Real feedback from commercial and domestic clients across {locationName}.
+            Feedback from commercial and domestic clients across {locationName}.
           </p>
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 24 }}>
@@ -312,7 +312,6 @@ function LocationPage({ locationName }) {
                   <strong style={{ display: 'block', color: 'var(--ink)', fontSize: '15px' }}>{t.author}</strong>
                   <small style={{ color: 'var(--muted)', fontSize: '13px' }}>{t.role}</small>
                 </div>
-                <span className="mono" style={{ fontSize: '11px', color: 'var(--accent-text)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>Verified Client</span>
               </div>
             </div>
           ))}
@@ -367,9 +366,8 @@ function LocationPage({ locationName }) {
   if (isArchetypeB) {
     // Archetype B (Residential & Villages: Tarporley, Frodsham)
     contentBlocks = [
-      ProcessSectionB,
-      CommercialDomesticDeep,
       IntroSection,
+      CommercialDomesticDeep,
       ServicesSection,
       NeighbourhoodsSection,
       TestimonialsSection,
@@ -380,10 +378,10 @@ function LocationPage({ locationName }) {
   } else if (isArchetypeC) {
     // Archetype C (Commercial & Industrial Hubs: Deeside, Ellesmere Port)
     contentBlocks = [
+      IntroSection,
       ComplianceSectionC,
       CommercialDomesticDeep,
       ServicesSection,
-      IntroSection,
       MapSection,
       NeighbourhoodsSection,
       TestimonialsSection,
@@ -393,8 +391,8 @@ function LocationPage({ locationName }) {
   } else {
     // Archetype A (Regional Hubs: Mold, Wrexham, Northwich, Wirral)
     contentBlocks = [
-      TestimonialsSection,
       IntroSection,
+      TestimonialsSection,
       ServicesSection,
       CommercialDomesticDeep,
       MapSection,
@@ -409,8 +407,6 @@ function LocationPage({ locationName }) {
       <Header current="areas" theme="dark" />
 
       <PageHero
-        section="Local Coverage"
-        sectionNum="03.1 / Location"
         title={`Electricians in ${locationName}`}
         titleAccent=" - NICEIC-approved."
         subtext={`NICEIC-approved commercial, industrial and domestic electrical contractor serving ${locationName}${area.postcodes && area.postcodes.length ? ' (' + area.postcodes.join(', ') + ')' : ''} and the surrounding area. Booked site surveys, EICR testing, full rewires and commercial installations.`}
@@ -426,30 +422,7 @@ function LocationPage({ locationName }) {
             </a>
           </div>
         }
-      >
-        <div className="hero-strip wrap" style={{ maxWidth: '100%', padding: 0 }}>
-          <div className="wrap" style={{ display: 'contents' }}>
-            <div className="hero-strip" style={{ gridColumn: '1 / -1' }}>
-              <div className="cell">
-                <span className="k">Coverage</span>
-                <span className="v">{locationName} &amp; {area.county || 'Surrounds'}</span>
-              </div>
-              <div className="cell">
-                <span className="k">Assurance</span>
-                <span className="v">Fully Insured · £5M</span>
-              </div>
-              <div className="cell">
-                <span className="k">Accreditation</span>
-                <span className="v">NICEIC <span className="accent">Approved</span></span>
-              </div>
-              <div className="cell">
-                <span className="k">Sectors</span>
-                <span className="v">Commercial · Domestic · Industrial</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </PageHero>
+      />
 
       <TrustBar area={area} />
 

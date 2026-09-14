@@ -65,12 +65,17 @@ function ArticleHeader({
       color: '#fff',
       fontWeight: 'bold'
     }
-  }, post.author ? post.author.charAt(0) : 'C'), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+  }, post.author ? post.author.charAt(0) : 'C'), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("a", {
+    href: "/about.html",
     style: {
       fontWeight: 600,
       fontSize: 16,
-      color: '#fff'
-    }
+      color: '#fff',
+      textDecoration: 'none',
+      transition: 'color 0.2s'
+    },
+    onMouseEnter: e => e.target.style.color = 'var(--accent)',
+    onMouseLeave: e => e.target.style.color = '#fff'
   }, post.author || 'Carter Electrical Contracting'), /*#__PURE__*/React.createElement("div", {
     style: {
       color: 'rgba(255,255,255,0.5)',

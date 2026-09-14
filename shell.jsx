@@ -280,11 +280,13 @@ window.PageHero = function PageHero({ section, sectionNum, title, titleAccent, s
       <div className="hero-glow" />
       {window.HeroCanvas ? <window.HeroCanvas /> : null}
       <div className="wrap hero-inner">
-        <div className="hero-meta">
-          <span><span className="dot-green" /> {section}</span>
-          <span>{sectionNum}</span>
-          <span>Ref · carterelec.co.uk</span>
-        </div>
+        {(section || sectionNum) && (
+          <div className="hero-meta">
+            {section && <span><span className="dot-green" /> {section}</span>}
+            {sectionNum && <span>{sectionNum}</span>}
+            <span>Ref · carterelec.co.uk</span>
+          </div>
+        )}
         <h1 className="h-display">
           {title}
           {titleAccent && <><br /><span className="accent">{titleAccent}</span></>}

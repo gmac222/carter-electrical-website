@@ -99,15 +99,13 @@ From emergency lighting and landlord certificates for High Street shops to EV ch
     name: 'Tarporley', slug: 'tarporley',
     county: 'Cheshire West', distance: '11 miles',
     postcodes: ['CW6'],
-    neighbourhoods: ['Utkinton', 'Cotebrook', 'Eaton', 'Alpraham', 'Beeston', 'Bunbury', 'Tiverton', 'Little Budworth', 'Cuddington'],
-    metaDesc: 'NICEIC-approved electricians in Tarporley (CW6). Heritage rewires, smart-home systems, barn conversions, and outbuilding three-phase supplies. Contact us.',
-    intro: `Our team delivers high-quality domestic and commercial electrical work across Tarporley and the CW6 area.
+    neighbourhoods: ['Tarporley Village (High Street, Portal Estate)', 'Utkinton & Cotebrook', 'Bunbury & Alpraham', 'Tiverton & Huxley', 'Little Budworth'],
+    metaDesc: 'NICEIC-approved electricians in Tarporley (CW6). Period property rewires, EV chargers, agricultural electrics, and RCD consumer unit upgrades. Get a free quote.',
+    intro: `Are you looking for a reliable, Napit/NICEIC-approved electrician in Tarporley? Whether you need a comprehensive electrical safety check on a historic High Street property, a smart home upgrade, or an emergency fault fixed, our team provides a premium, safe, and efficient service.
 
-We are experienced in heritage-sensitive rewires for listed buildings, smart lighting controls, barn conversions, and three-phase supplies for agricultural and equestrian yards.
-
-All work is completed by our in-house engineers with absolute respect for your property.`,
-    commercialAngle: "Tarporley High Street's boutique retail, hospitality and professional-services offices use us for EICR-led remedials, fit-outs and emergency lighting. We also support the equestrian and agricultural sector with three-phase supplies to yards and barns.",
-    domesticAngle: "High-end domestic is the core of our Tarporley demand: smart-lighting schemes with multi-room control, heritage-sensitive rewires on listed farmhouses, EV charger installs with three-phase capability, and outdoor lighting design on larger plots.",
+Our Proximity Guarantee: While our main head office is located just down the road in Chester, our fully stocked service vans travel the A51 daily. Because our engineers regularly service Tarporley, Bunbury, and Tiverton, we guarantee rapid response times with zero travel premiums or hidden call-out fees for CW6 residents.`,
+    commercialAngle: "Specialist Electrical Services for Tarporley Properties: Tarporley features a unique mix of beautiful historic homes, rural agricultural buildings, and modern architectural extensions. We specialise in period property rewiring in thatched cottages and listed buildings, fast EV charger installations tailored to rural commutes, agricultural and barn conversion electrics for outbuildings and stables, and modern RCD-protected consumer unit upgrades to BS 7671 standards.",
+    domesticAngle: "Recent Electrical Work in the Tarporley Area: Designed and installed a complete low-energy LED exterior lighting display near Eaton Lane; completed a full EICR safety inspection for a rental cottage near Tarporley High Street; and resolved a sudden tripping circuit caused by water ingress in an outbuilding near Utkinton.",
     testimonials: [
       { quote: 'Delivered a flawless smart lighting design and high-end rewire on our barn conversion near Tarporley. Extremely respectful of heritage features.', author: 'E. Wright', role: 'Residential Client, Tarporley' },
       { quote: 'Installed a new three-phase supply for our equestrian yard near Bunbury. High standard of workmanship and complete attention to safety.', author: 'V. Stanhope', role: 'Farm Owner, Bunbury / Tarporley' }
@@ -274,28 +272,28 @@ const faqsMap = {
   ],
   'tarporley': [
     {
+      q: 'Do you charge a call-out fee to come out from Chester to Tarporley?',
+      a: 'No. Tarporley sits comfortably within our core 30-mile service radius. Because our electricians are routinely managing projects in the area every week, you pay the exact same local rates as a client living in central Chester.'
+    },
+    {
+      q: 'Can you help with low water pressure or booster pump electrics common in rural Cheshire homes?',
+      a: 'Yes. Many properties around the outskirts of Tarporley rely on borehole pumps or water booster systems. Our team is fully qualified to diagnose, wire, and repair the electrical control panels and power feeds that keep these vital systems running smoothly.'
+    },
+    {
+      q: 'How quickly can you reach Tarporley in an electrical emergency?',
+      a: 'In the event of a dangerous fault or complete power loss, we aim to have a diagnostic engineer at your door within 45 minutes of your call, traffic permitting.'
+    },
+    {
       q: 'How do I find a specialist electrician for a Tarporley barn conversion?',
       a: 'Barn conversions require careful electrical design, often involving exposed brick, oak beams, and smart lighting systems. Carter Electrical has extensive experience in high-end domestic installations, heritage properties, and barn conversions across the Tarporley area.'
-    },
-    {
-      q: 'Do you provide three-phase power for agricultural yards in Tarporley?',
-      a: 'Yes, we install three-phase power supplies, sub-mains distribution, and motor control systems for agricultural and equestrian properties around Tarporley, Kingsley, and Bunbury.'
-    },
-    {
-      q: 'What domestic electrical upgrades do you recommend for historic homes in CW6?',
-      a: 'For listed and heritage properties in Tarporley, we recommend heritage-sensitive rewires using hidden containment, high-quality consumer unit upgrades, and modern smart lighting integrations that preserve the historic character of the building.'
     },
     {
       q: 'Do you conduct landlord EICR safety inspections in Tarporley?',
       a: 'Yes, we carry out Electrical Installation Condition Reports (EICRs) for rental properties in Tarporley, Bunbury, and surrounding villages, helping local landlords comply with the latest private rented sector safety laws.'
     },
     {
-      q: 'Are you OZEV-registered to install EV chargers in Tarporley?',
-      a: 'Yes, we install OZEV-approved EV chargers for domestic properties and commercial sites. We configure load-management systems to ensure chargers run safely alongside large domestic loads.'
-    },
-    {
       q: 'What villages and postcodes do you cover near Tarporley?',
-      a: 'We serve the CW6 postcode area, covering Tarporley, Utkinton, Cotebrook, Eaton, Alpraham, Beeston, Bunbury, Tiverton, Little Budworth, and Cuddington.'
+      a: 'We serve the CW6 postcode area, covering Tarporley Village (High Street, Portal Estate), Utkinton, Cotebrook, Bunbury, Alpraham, Tiverton, Huxley, and Little Budworth.'
     }
   ],
   'mold': [

@@ -131,16 +131,14 @@ From emergency lighting and landlord certificates for High Street shops to EV ch
       name: 'Tarporley', slug: 'tarporley', cases: 3, x: 64, y: 72,
       county: 'Cheshire West', distance: '11 miles',
       postcodes: ['CW6'],
-      neighbourhoods: ['Utkinton', 'Cotebrook', 'Eaton', 'Alpraham', 'Beeston', 'Bunbury', 'Tiverton', 'Little Budworth', 'Cuddington'],
-      intro: `Our team delivers high-quality domestic and commercial electrical work across Tarporley and the CW6 area.
+      neighbourhoods: ['Tarporley Village (High Street, Portal Estate)', 'Utkinton & Cotebrook', 'Bunbury & Alpraham', 'Tiverton & Huxley', 'Little Budworth'],
+      intro: `Are you looking for a reliable, Napit/NICEIC-approved electrician in Tarporley? Whether you need a comprehensive electrical safety check on a historic High Street property, a smart home upgrade, or an emergency fault fixed, our team provides a premium, safe, and efficient service.
 
-We are experienced in heritage-sensitive rewires for listed buildings, smart lighting controls, barn conversions, and three-phase supplies for agricultural and equestrian yards.
-
-All work is completed by our in-house engineers with absolute respect for your property.`,
-      commercialAngle: "Tarporley High Street's boutique retail, hospitality and professional-services offices use us for EICR-led remedials, fit-outs and emergency lighting. We also support the equestrian and agricultural sector with three-phase supplies to yards and barns.",
-      domesticAngle: "High-end domestic is the core of our Tarporley demand: smart-lighting schemes with multi-room control, heritage-sensitive rewires on listed farmhouses, EV charger installs with three-phase capability, and outdoor lighting design on larger plots.",
-      featuredProject: "A full-property rewire and smart-lighting install on a barn conversion in the Utkinton/Cotebrook belt, coordinated with the owner's main contractor and signed off at each stage.",
-      landmarks: ['Tarporley High Street (conservation area)', 'Oulton Park motor-racing circuit (nearby)', 'Beeston Castle', 'Bunbury Mill', 'Tiverton villages'],
+Our Proximity Guarantee: While our main head office is located just down the road in Chester, our fully stocked service vans travel the A51 daily. Because our engineers regularly service Tarporley, Bunbury, and Tiverton, we guarantee rapid response times with zero travel premiums or hidden call-out fees for CW6 residents.`,
+      commercialAngle: "Specialist Electrical Services for Tarporley Properties: Tarporley features a unique mix of beautiful historic homes, rural agricultural buildings, and modern architectural extensions. We specialise in period property rewiring in thatched cottages and listed buildings, fast EV charger installations tailored to rural commutes, agricultural and barn conversion electrics for outbuildings and stables, and modern RCD-protected consumer unit upgrades to BS 7671 standards.",
+      domesticAngle: "Recent Electrical Work in the Tarporley Area: Designed and installed a complete low-energy LED exterior lighting display near Eaton Lane; completed a full EICR safety inspection for a rental cottage near Tarporley High Street; and resolved a sudden tripping circuit caused by water ingress in an outbuilding near Utkinton.",
+      featuredProject: "A snapshot of recent local work: LED architectural exterior lighting near Eaton Lane, landlord EICR safety inspection near Tarporley High Street, and fault finding repair on an outbuilding near Utkinton.",
+      landmarks: ['Tarporley High Street', 'Portal Estate', 'Eaton Lane', 'Utkinton & Cotebrook', 'Bunbury & Alpraham', 'Tiverton & Huxley'],
       testimonials: [
         { quote: 'Delivered a flawless smart lighting design and high-end rewire on our barn conversion near Tarporley. Extremely respectful of heritage features.', author: 'E. Wright', role: 'Residential Client, Tarporley' },
         { quote: 'Installed a new three-phase supply for our equestrian yard near Bunbury. High standard of workmanship and complete attention to safety.', author: 'V. Stanhope', role: 'Farm Owner, Bunbury / Tarporley' }
