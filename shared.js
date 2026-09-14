@@ -56,6 +56,7 @@ Every job is completed by our own qualified engineers and backed by full certifi
       ]
     },
     {
+      adjacentSilos: ['frodsham', 'wirral', 'deeside'],
       name: 'Ellesmere Port', slug: 'ellesmere-port', cases: 6, x: 30, y: 40,
       county: 'Cheshire West', distance: '9 miles',
       postcodes: ['CH65', 'CH66'],
@@ -75,6 +76,7 @@ Contact us for a clear, fixed-price quote.`,
       ]
     },
     {
+      adjacentSilos: ['mold', 'tarporley'],
       name: 'Wrexham', slug: 'wrexham', cases: 5, x: 32, y: 80,
       county: 'Wrexham (Wales)', distance: '12 miles',
       postcodes: ['LL11', 'LL12', 'LL13', 'LL14'],
@@ -94,6 +96,7 @@ We operate fully under both English and Welsh building regulations.`,
       ]
     },
     {
+      adjacentSilos: ['tarporley', 'frodsham'],
       name: 'Northwich', slug: 'northwich', cases: 4, x: 72, y: 66,
       county: 'Cheshire West', distance: '18 miles',
       postcodes: ['CW8', 'CW9'],
@@ -111,6 +114,7 @@ We support local businesses with commercial fit-outs and landlord safety checks,
       ]
     },
     {
+      adjacentSilos: ['northwich', 'ellesmere-port'],
       name: 'Frodsham', slug: 'frodsham', cases: 3, x: 56, y: 46,
       county: 'Cheshire West', distance: '14 miles',
       postcodes: ['WA6'],
@@ -128,6 +132,7 @@ From emergency lighting and landlord certificates for High Street shops to EV ch
       ]
     },
     {
+      adjacentSilos: ['wrexham', 'northwich'],
       name: 'Tarporley', slug: 'tarporley', cases: 3, x: 64, y: 72,
       county: 'Cheshire West', distance: '11 miles',
       postcodes: ['CW6'],
@@ -145,6 +150,7 @@ Our Proximity Guarantee: While our main head office is located just down the roa
       ]
     },
     {
+      adjacentSilos: ['deeside', 'wrexham'],
       name: 'Mold', slug: 'mold', cases: 2, x: 22, y: 66,
       county: 'Flintshire (Wales)', distance: '13 miles',
       postcodes: ['CH7'],
@@ -162,6 +168,7 @@ Operating on both sides of the border, we handle commercial fit-outs and complia
       ]
     },
     {
+      adjacentSilos: ['mold', 'ellesmere-port', 'wirral'],
       name: 'Deeside', slug: 'deeside', cases: 4, x: 34, y: 52,
       county: 'Flintshire (Wales)', distance: '10 miles',
       postcodes: ['CH5'],
@@ -179,6 +186,7 @@ We support manufacturers on Deeside Industrial Park with three-phase power upgra
       ]
     },
     {
+      adjacentSilos: ['ellesmere-port', 'deeside'],
       name: 'Wirral', slug: 'wirral', cases: 1, x: 24, y: 34,
       county: 'Merseyside', distance: '20 miles',
       postcodes: ['CH41', 'CH42', 'CH43', 'CH44', 'CH45', 'CH46', 'CH47', 'CH48', 'CH49', 'CH60', 'CH61', 'CH62', 'CH63', 'CH64'],

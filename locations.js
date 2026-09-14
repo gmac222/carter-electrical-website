@@ -48,7 +48,9 @@ function LocationPage({
   const faqs = CARTER.locationFaqs ? CARTER.locationFaqs(area) : [];
   const relatedCases = CARTER.cases.filter(c => (c.location || '').toLowerCase().indexOf(locationName.toLowerCase()) !== -1 || locationName === 'Ellesmere Port' && c.id === 'prenton-wirral');
   const displayCases = relatedCases.length > 0 ? relatedCases : CARTER.cases.filter(c => c.id === 'old-dukes' || c.id === 'bryn-rhiw');
-  const otherAreas = CARTER.areas.filter(a => a.name !== locationName).slice(0, 6);
+  const chesterArea = CARTER.areas.find(a => a.slug === 'chester');
+  const adjacentList = area.adjacentSilos && area.adjacentSilos.length ? area.adjacentSilos.map(s => CARTER.areas.find(a => a.slug === s)).filter(Boolean) : CARTER.areas.filter(a => a.name !== locationName).slice(0, 6);
+  const otherAreas = [chesterArea, ...adjacentList].filter(a => a && a.name !== locationName);
 
   // Common Reusable Components
   const IntroSection = /*#__PURE__*/React.createElement("section", {

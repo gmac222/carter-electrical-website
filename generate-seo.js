@@ -388,9 +388,11 @@ function buildHtml(area) {
   const url = `${COMPANY.site}/electricians-${area.slug}.html`;
   const title = `Electricians in ${area.name} | NICEIC-Approved | Carter Electrical`;
   const faqs = buildFaqs(area);
-  // Cross-link to the 7 other city pages plus back to the Chester/homepage.
-  const otherAreas = areas.filter(a => a.slug !== area.slug);
-  const chesterLink = { name: 'Chester', href: '/' };
+  const chesterObj = { name: 'Chester', slug: 'chester' };
+  const adjacentList = area.adjacentSilos && area.adjacentSilos.length
+    ? area.adjacentSilos.map(s => areas.find(a => a.slug === s)).filter(Boolean)
+    : areas.filter(a => a.slug !== area.slug);
+  const otherAreas = [chesterObj, ...adjacentList].filter(a => a && a.slug !== area.slug);
 
   // Schema: BreadcrumbList + LocalBusiness (ElectricalContractor) + FAQPage + Service
   const schema = {
@@ -498,8 +500,7 @@ function buildHtml(area) {
 
       <h2>Other areas we cover</h2>
       <ul>
-        <li><a href="${chesterLink.href}">Electricians in ${esc(chesterLink.name)}</a></li>
-        ${otherAreas.map(a => '<li><a href="/electricians-' + a.slug + '.html">Electricians in ' + esc(a.name) + '</a></li>').join('\n        ')}
+        ${otherAreas.map(a => '<li><a href="' + (a.slug === 'chester' ? '/' : '/electricians-' + a.slug + '.html') + '">Electricians in ' + esc(a.name) + '</a></li>').join('\n        ')}
       </ul>
 
       <p><a href="/contact.html">Discuss your ${esc(area.name)} project</a> &middot; <a href="tel:+441244727291">Call ${esc(COMPANY.phone)}</a></p>
