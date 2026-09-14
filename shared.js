@@ -40,6 +40,7 @@ window.CARTER = {
       name: 'Chester', slug: 'chester', cases: 14, featured: true, hq: true, x: 46, y: 58,
       county: 'Cheshire West', distance: '0 miles (HQ)',
       postcodes: ['CH1', 'CH2', 'CH3', 'CH4'],
+      heroSubtext: 'NICEIC-approved electrical contractor based in Christleton, serving Chester city centre, Hoole, Upton, and the CH1 to CH4 area. Scoping commercial fit-outs, landlord EICR safety testing, and domestic rewires with zero call-out fees.',
       neighbourhoods: ['Hoole', 'Saltney', 'Upton', 'Blacon', 'Boughton', 'Handbridge', 'Vicars Cross', 'Christleton', 'Newton', 'Mickle Trafford', 'Waverton'],
       intro: `Based in Christleton, our NICEIC-approved electricians provide prompt, professional service across Chester.
 
@@ -60,6 +61,7 @@ Every job is completed by our own qualified engineers and backed by full certifi
       name: 'Ellesmere Port', slug: 'ellesmere-port', cases: 6, x: 30, y: 40,
       county: 'Cheshire West', distance: '9 miles',
       postcodes: ['CH65', 'CH66'],
+      heroSubtext: 'NICEIC-approved commercial and industrial electrical contractors serving Ellesmere Port (CH65, CH66). Supporting retail fit-outs around Cheshire Oaks, industrial three-phase power along the M53 corridor, and local domestic rewires.',
       neighbourhoods: ['Little Sutton', 'Whitby', 'Great Sutton', 'Hooton', 'Overpool', 'Rivacre', 'Strawberry', 'Wolverham'],
       intro: `We deliver reliable commercial, industrial, and domestic electrical services throughout Ellesmere Port.
 
@@ -80,6 +82,7 @@ Contact us for a clear, fixed-price quote.`,
       name: 'Wrexham', slug: 'wrexham', cases: 5, x: 32, y: 80,
       county: 'Wrexham (Wales)', distance: '12 miles',
       postcodes: ['LL11', 'LL12', 'LL13', 'LL14'],
+      heroSubtext: 'Cross-border NICEIC-approved electrical contractors covering Wrexham (LL11 to LL14). Specialising in heavy three-phase industrial maintenance on Wrexham Industrial Estate, town-centre commercial fit-outs, and domestic rewires under Welsh regulations.',
       neighbourhoods: ['Acton', 'Rhosddu', 'Rossett', 'Marford', 'Gwersyllt', 'Rhosllanerchrugog', 'Ruabon', 'Gresford', 'Coedpoeth', 'Borras', 'Hightown'],
       intro: `Our qualified, NICEIC-approved electricians cover Wrexham and all surrounding villages.
 
@@ -100,6 +103,7 @@ We operate fully under both English and Welsh building regulations.`,
       name: 'Northwich', slug: 'northwich', cases: 4, x: 72, y: 66,
       county: 'Cheshire West', distance: '18 miles',
       postcodes: ['CW8', 'CW9'],
+      heroSubtext: 'NICEIC-approved commercial, industrial, and domestic electricians serving Northwich (CW8, CW9). Delivering retail fit-outs around Barons Quay, industrial power distribution in Lostock Gralam, and domestic rewires across Hartford and Davenham.',
       neighbourhoods: ['Barnton', 'Hartford', 'Weaverham', 'Lostock Gralam', 'Rudheath', 'Castle', 'Winnington', 'Leftwich', 'Davenham', 'Sandiway', 'Kingsmead'],
       intro: `If you need an electrician in Northwich, we offer a full range of commercial, industrial, and domestic electrical services.
 
@@ -118,6 +122,7 @@ We support local businesses with commercial fit-outs and landlord safety checks,
       name: 'Frodsham', slug: 'frodsham', cases: 3, x: 56, y: 46,
       county: 'Cheshire West', distance: '14 miles',
       postcodes: ['WA6'],
+      heroSubtext: 'NICEIC-approved electrical contractor serving Frodsham, Helsby, and the WA6 area. Providing High Street commercial fit-outs, emergency lighting testing to BS 5266 standards, landlord EICR reports, and domestic consumer unit upgrades.',
       neighbourhoods: ['Kingsley', 'Helsby', 'Overton', 'Alvanley', 'Manley', 'Mouldsworth', 'Norley', 'Crowton'],
       intro: `We provide professional electrical installations and testing for homes and businesses in Frodsham and Helsby.
 
@@ -136,6 +141,7 @@ From emergency lighting and landlord certificates for High Street shops to EV ch
       name: 'Tarporley', slug: 'tarporley', cases: 3, x: 64, y: 72,
       county: 'Cheshire West', distance: '11 miles',
       postcodes: ['CW6'],
+      heroSubtext: 'NICEIC-approved electricians serving Tarporley and the CW6 area. Specialising in period property rewires, heritage barn conversion electrical design, agricultural three-phase supplies, and fast home EV charger installations.',
       neighbourhoods: ['Tarporley Village (High Street, Portal Estate)', 'Utkinton & Cotebrook', 'Bunbury & Alpraham', 'Tiverton & Huxley', 'Little Budworth'],
       intro: `Are you looking for a reliable, Napit/NICEIC-approved electrician in Tarporley? Whether you need a comprehensive electrical safety check on a historic High Street property, a smart home upgrade, or an emergency fault fixed, our team provides a premium, safe, and efficient service.
 
@@ -154,6 +160,7 @@ Our Proximity Guarantee: While our main head office is located just down the roa
       name: 'Mold', slug: 'mold', cases: 2, x: 22, y: 66,
       county: 'Flintshire (Wales)', distance: '13 miles',
       postcodes: ['CH7'],
+      heroSubtext: 'NICEIC-approved electrical contractor delivering commercial, agricultural, and domestic electrical services in Mold (CH7) and Flintshire. Handling town-centre shop fit-outs, outbuilding three-phase supplies, landlord EICRs, and home rewires.',
       neighbourhoods: ['Buckley', 'New Brighton', 'Gwernaffield', 'Gwernymynydd', 'Leeswood', 'Nercwys', 'Pontblyddyn', 'Sychdyn', 'Alltami'],
       intro: `We provide fully certified, NICEIC-approved electrical services across Mold and the CH7 postcode.
 
@@ -172,6 +179,7 @@ Operating on both sides of the border, we handle commercial fit-outs and complia
       name: 'Deeside', slug: 'deeside', cases: 4, x: 34, y: 52,
       county: 'Flintshire (Wales)', distance: '10 miles',
       postcodes: ['CH5'],
+      heroSubtext: 'NICEIC-approved industrial and commercial electricians serving Deeside Industrial Park and the CH5 area. Expert three-phase power distribution, factory shutdown maintenance, commercial EICR testing, and workplace EV charging installations.',
       neighbourhoods: ['Shotton', "Connah's Quay", 'Queensferry', 'Sealand', 'Hawarden', 'Garden City', 'Sandycroft', 'Mancot', 'Ewloe'],
       intro: `Looking for a qualified industrial or commercial electrician in Deeside?
 
@@ -190,6 +198,7 @@ We support manufacturers on Deeside Industrial Park with three-phase power upgra
       name: 'Wirral', slug: 'wirral', cases: 1, x: 24, y: 34,
       county: 'Merseyside', distance: '20 miles',
       postcodes: ['CH41', 'CH42', 'CH43', 'CH44', 'CH45', 'CH46', 'CH47', 'CH48', 'CH49', 'CH60', 'CH61', 'CH62', 'CH63', 'CH64'],
+      heroSubtext: 'NICEIC-approved electrical contractor covering the entire Wirral peninsula (CH41 to CH64). Delivering commercial fit-outs, industrial three-phase maintenance at Bromborough, coastal period rewires in Heswall and Caldy, and landlord EICR safety reports.',
       neighbourhoods: ['Birkenhead', 'Prenton', 'Wallasey', 'New Brighton', 'Bebington', 'Heswall', 'West Kirby', 'Hoylake', 'Bromborough', 'Moreton', 'Upton', 'Greasby', 'Port Sunlight', 'Eastham', 'Caldy', 'Neston', 'Willaston', 'Ness'],
       intro: `Looking for a reliable, NICEIC-approved electrician in Wirral?
 

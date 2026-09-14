@@ -516,7 +516,7 @@ function LocationPage({ locationName }) {
       <PageHero
         title={`Electricians in ${locationName}`}
         titleAccent=" - NICEIC-approved."
-        subtext={`NICEIC-approved commercial, industrial and domestic electrical contractor serving ${locationName}${area.postcodes && area.postcodes.length ? ' (' + area.postcodes.join(', ') + ')' : ''} and the surrounding area. Booked site surveys, EICR testing, full rewires and commercial installations.`}
+        subtext={area.heroSubtext || `NICEIC-approved commercial, industrial and domestic electrical contractor serving ${locationName}.`}
         ctas={
           <div style={{ display: 'flex', gap: '12px' }}>
             <a href="contact.html" className="btn btn-primary">
