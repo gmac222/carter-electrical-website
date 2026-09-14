@@ -76,3 +76,54 @@ Whenever creating or editing content for this or any other page in this project,
   - The other images must be named after the secondary keywords for the page (e.g. `uploads/commercial-electrical-services-chester.jpg`).
   - The other images' `alt` attributes must match their corresponding secondary keywords exactly.
 
+---
+
+## 🚫 Doorway Page Prevention & Content Uniqueness
+
+- **Strict Anti-Doorway Rule**: We MUST NEVER create thin, repetitive, or "doorway" pages. Every location page must function as a standalone, value-adding local hub featuring unique local angles, postcode specifics, local landmarks, and distinct business context.
+- **100% Unique Hero Straplines**: Every location page must have a completely unique `heroSubtext` and intro paragraph. Duplicate hero straplines across pages are strictly forbidden.
+- **Client Voice & Tone**: Content must maintain a friendly, professional, accountable tone representing an established local trade business. Avoid generic AI phrasing (e.g., never use "We do not just offer cookie-cutter services").
+
+---
+
+## ⚖️ Building Regulations & Local Compliance Knowledge
+
+- **Welsh Locations (Wrexham, Mold, Deeside)**:
+  - Must reference Welsh Building Regulations and the **Renting Homes (Wales) Act**.
+  - Highlight 5-year mandatory EICRs for Welsh landlords and required hardwired, interconnected smoke/carbon monoxide alarms on every floor.
+- **English Locations (Chester, Ellesmere Port, Northwich, Frodsham, Tarporley, Wirral)**:
+  - Must reference **Part P of the Building Regulations** and **BS 7671 IET Wiring Regulations**.
+  - Highlight 5-year Private Rented Sector EICR duties, **BS 5266** emergency lighting standards for commercial units, and OZEV load-managed EV charger installations with SP Energy Networks DNO notifications.
+- **Service Commitments**: Always specify a booked site survey / appointment model rather than unverified rapid response claims.
+
+---
+
+## ❓ Google 'People Also Asked' (PAA) FAQ Rule
+
+- **PAA Source of Truth**: Generic or guessed FAQs are banned. All FAQ sections must be sourced from real Google PAA search results for the target keyword and location using live search data.
+- **Contractor Perspective**: Answers must be written from the direct contractor perspective ("We are NICEIC-approved...", "Our local team in [Location]...").
+- **Sensitive Pricing**: Never guess pricing. Offer free on-site surveys and fixed-price quotes.
+
+---
+
+## 📐 Standard Location Page Layout Structure
+
+All location and landing pages must follow this exact section order:
+1. **Header & PageHero** (with unique `heroSubtext`)
+2. **TrustBar**
+3. **Intro Section** (positioned immediately below Hero and TrustBar)
+4. **Commercial & Domestic Sector Focus (Two Boxes)** (Upgraded card design with green accent badges `rgba(122,193,67,0.12)` and bulleted scopes)
+5. **Services Grid**
+6. **Case Studies & Client Testimonials**
+7. **Google PAA FAQs Accordion**
+8. **Nearby Geographical Silo Links** (linking to adjacent location pages to establish a strong internal linking silo)
+9. **CTA Band & Footer**
+
+---
+
+## ✍️ Language & Grammar Strict Rules
+
+- **UK English**: Always use UK English spelling and grammar throughout all content and code comments (*specialise*, *colour*, *programme*, *fit-outs*, *licence*, *neighbourhood*).
+- **Em Dash Ban**: Never use the em dash character (`—`) anywhere in copy, page metadata, headers, or comments. Use commas, parentheses, colons, or standard hyphens (`-`).
+
+
