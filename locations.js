@@ -115,7 +115,7 @@ function LocationPage({
   }))), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'grid',
-      gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
       gap: 1,
       background: 'var(--rule)',
       border: '1px solid var(--rule)',
@@ -124,9 +124,6 @@ function LocationPage({
   }, [{
     k: 'Coverage',
     v: area.postcodes && area.postcodes.length ? area.postcodes.join(', ') : locationName
-  }, {
-    k: 'Service Model',
-    v: 'Booked appointments'
   }, {
     k: 'Accreditation',
     v: 'NICEIC Approved'
@@ -172,108 +169,140 @@ function LocationPage({
     className: "lede"
   }, "In-house NICEIC engineers providing planned electrical installations, testing and safety upgrades.")), /*#__PURE__*/React.createElement("div", {
     className: "locations-services-grid"
-  }, CARTER.services.map(s => /*#__PURE__*/React.createElement("div", {
-    key: s.slug,
-    style: {
-      background: 'var(--white)',
-      border: '1px solid var(--rule)',
-      overflow: 'hidden'
-    }
-  }, (() => {
-    let localImgSrc = s.imgSrc;
-    let localAlt = `${s.title} in ${locationName}`;
-    if (s.slug === 'commercial') {
-      localImgSrc = `uploads/commercial-electrical-services-${area.slug}.jpg`;
-      localAlt = `Commercial electrical services in ${locationName}`;
-    } else if (s.slug === 'industrial') {
-      localImgSrc = `uploads/industrial-electrical-services-${area.slug}.jpg`;
-      localAlt = `Industrial electrical services in ${locationName}`;
-    } else if (s.slug === 'domestic') {
-      localImgSrc = `uploads/domestic-electrical-services-${area.slug}.jpg`;
-      localAlt = `Domestic electrical services in ${locationName}`;
-    } else if (s.slug === 'testing') {
-      localImgSrc = `uploads/electrical-testing-inspection-${area.slug}.jpg`;
-      localAlt = `Electrical testing and inspection in ${locationName}`;
-    } else if (s.slug === 'renewables') {
-      localImgSrc = `uploads/ev-charger-installation-${area.slug}.jpg`;
-      localAlt = `EV charger installation in ${locationName}`;
-    }
-    return localImgSrc ? /*#__PURE__*/React.createElement("div", {
+  }, CARTER.services.map(s => {
+    const href = s.slug === 'commercial' || s.slug === 'industrial' || s.slug === 'domestic' ? `${s.slug}.html` : `services.html#${s.slug}`;
+    return /*#__PURE__*/React.createElement("a", {
+      key: s.slug,
+      href: href,
+      className: "service-card-link",
       style: {
-        width: '100%',
-        position: 'relative',
-        padding: '16px 16px 0 16px'
-      }
-    }, /*#__PURE__*/React.createElement("img", {
-      src: localImgSrc,
-      alt: localAlt,
-      style: {
-        width: '100%',
-        height: '220px',
-        objectFit: 'contain',
-        display: 'block',
+        textDecoration: 'none',
+        color: 'inherit',
+        display: 'flex',
+        flexDirection: 'column',
+        background: 'var(--white)',
+        border: '1px solid var(--rule)',
+        overflow: 'hidden',
         borderRadius: '16px',
-        boxShadow: '0 8px 32px rgba(0,0,0,0.15)'
+        boxShadow: '0 4px 20px rgba(0,0,0,0.04)',
+        transition: 'transform 0.2s ease, box-shadow 0.2s ease'
       }
-    })) : null;
-  })(), /*#__PURE__*/React.createElement("div", {
-    style: {
-      padding: '32px',
-      paddingTop: '16px'
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'flex',
-      alignItems: 'center',
-      gap: '16px',
-      marginBottom: 20
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "sc-glyph",
-    style: {
-      width: 40,
-      height: 40,
-      color: 'var(--accent)',
-      flexShrink: 0
-    },
-    dangerouslySetInnerHTML: {
-      __html: CARTER.svg[s.icon]
-    }
-  }), /*#__PURE__*/React.createElement("h3", {
-    className: "h-3",
-    style: {
-      margin: 0
-    }
-  }, s.title === 'Commercial' || s.title === 'Industrial' || s.title === 'Domestic' ? `${s.title} Electrical` : s.title)), /*#__PURE__*/React.createElement("p", {
-    style: {
-      color: 'var(--muted-2)',
-      lineHeight: 1.6,
-      marginBottom: 16
-    }
-  }, s.lede), /*#__PURE__*/React.createElement("ul", {
-    className: "bullets",
-    style: {
-      margin: 0,
-      padding: 0,
-      listStyle: 'none'
-    }
-  }, s.bullets && s.bullets.slice(0, 4).map((bullet, idx) => /*#__PURE__*/React.createElement("li", {
-    key: idx,
-    style: {
-      display: 'flex',
-      gap: 10,
-      marginBottom: 8,
-      fontSize: '0.9rem',
-      color: 'var(--muted-1)'
-    }
-  }, /*#__PURE__*/React.createElement("span", {
-    style: {
-      color: 'var(--accent)'
-    },
-    dangerouslySetInnerHTML: {
-      __html: CARTER.svg.check
-    }
-  }), bullet)))))))));
+    }, (() => {
+      let localImgSrc = s.imgSrc;
+      let localAlt = `${s.title} in ${locationName}`;
+      if (s.slug === 'commercial') {
+        localImgSrc = `uploads/commercial-electrical-services-${area.slug}.jpg`;
+        localAlt = `Commercial electrical services in ${locationName}`;
+      } else if (s.slug === 'industrial') {
+        localImgSrc = `uploads/industrial-electrical-services-${area.slug}.jpg`;
+        localAlt = `Industrial electrical services in ${locationName}`;
+      } else if (s.slug === 'domestic') {
+        localImgSrc = `uploads/domestic-electrical-services-${area.slug}.jpg`;
+        localAlt = `Domestic electrical services in ${locationName}`;
+      } else if (s.slug === 'testing') {
+        localImgSrc = `uploads/electrical-testing-inspection-${area.slug}.jpg`;
+        localAlt = `Electrical testing and inspection in ${locationName}`;
+      } else if (s.slug === 'renewables') {
+        localImgSrc = `uploads/ev-charger-installation-${area.slug}.jpg`;
+        localAlt = `EV charger installation in ${locationName}`;
+      }
+      return localImgSrc ? /*#__PURE__*/React.createElement("div", {
+        style: {
+          width: '100%',
+          position: 'relative',
+          padding: '16px 16px 0 16px'
+        }
+      }, /*#__PURE__*/React.createElement("img", {
+        src: localImgSrc,
+        alt: localAlt,
+        style: {
+          width: '100%',
+          height: '220px',
+          objectFit: 'contain',
+          display: 'block',
+          borderRadius: '16px',
+          boxShadow: '0 8px 32px rgba(0,0,0,0.15)'
+        }
+      })) : null;
+    })(), /*#__PURE__*/React.createElement("div", {
+      style: {
+        padding: '32px',
+        paddingTop: '16px',
+        flex: 1,
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between'
+      }
+    }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+      style: {
+        display: 'flex',
+        alignItems: 'center',
+        gap: '16px',
+        marginBottom: 20
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "sc-glyph",
+      style: {
+        width: 40,
+        height: 40,
+        color: 'var(--accent)',
+        flexShrink: 0
+      },
+      dangerouslySetInnerHTML: {
+        __html: CARTER.svg[s.icon]
+      }
+    }), /*#__PURE__*/React.createElement("h3", {
+      className: "h-3",
+      style: {
+        margin: 0
+      }
+    }, s.title === 'Commercial' || s.title === 'Industrial' || s.title === 'Domestic' ? `${s.title} Electrical` : s.title)), /*#__PURE__*/React.createElement("p", {
+      style: {
+        color: 'var(--muted-2)',
+        lineHeight: 1.6,
+        marginBottom: 16
+      }
+    }, s.lede), /*#__PURE__*/React.createElement("ul", {
+      className: "bullets",
+      style: {
+        margin: 0,
+        padding: 0,
+        listStyle: 'none'
+      }
+    }, s.bullets && s.bullets.slice(0, 4).map((bullet, idx) => /*#__PURE__*/React.createElement("li", {
+      key: idx,
+      style: {
+        display: 'flex',
+        gap: 10,
+        marginBottom: 8,
+        fontSize: '0.9rem',
+        color: 'var(--muted-1)'
+      }
+    }, /*#__PURE__*/React.createElement("span", {
+      style: {
+        color: 'var(--accent)'
+      },
+      dangerouslySetInnerHTML: {
+        __html: CARTER.svg.check
+      }
+    }), bullet)))), /*#__PURE__*/React.createElement("div", {
+      style: {
+        marginTop: 20,
+        paddingTop: 16,
+        borderTop: '1px solid var(--rule)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        color: 'var(--accent)',
+        fontWeight: 600,
+        fontSize: '0.9rem'
+      }
+    }, /*#__PURE__*/React.createElement("span", null, "View ", s.title, " Services"), /*#__PURE__*/React.createElement("span", {
+      dangerouslySetInnerHTML: {
+        __html: CARTER.svg.arrow
+      }
+    }))));
+  }))));
   const CommercialDomesticDeep = (area.commercialAngle || area.domesticAngle) && /*#__PURE__*/React.createElement("section", {
     key: "deep-angles",
     className: "section-y light reveal"

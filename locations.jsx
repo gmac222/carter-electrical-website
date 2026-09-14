@@ -86,10 +86,9 @@ function LocationPage({ locationName }) {
         </div>
 
         {/* Local facts strip */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 1, background: 'var(--rule)', border: '1px solid var(--rule)', marginTop: 40 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 1, background: 'var(--rule)', border: '1px solid var(--rule)', marginTop: 40 }}>
           {[
             { k: 'Coverage', v: area.postcodes && area.postcodes.length ? area.postcodes.join(', ') : locationName },
-            { k: 'Service Model', v: 'Booked appointments' },
             { k: 'Accreditation', v: 'NICEIC Approved' },
             { k: 'Insurance', v: '£5M Public Liability' },
           ].map((r, i) => (
@@ -117,50 +116,77 @@ function LocationPage({ locationName }) {
         </div>
 
         <div className="locations-services-grid">
-          {CARTER.services.map((s) => (
-            <div key={s.slug} style={{ background: 'var(--white)', border: '1px solid var(--rule)', overflow: 'hidden' }}>
-              {(() => {
-                let localImgSrc = s.imgSrc;
-                let localAlt = `${s.title} in ${locationName}`;
-                if (s.slug === 'commercial') {
-                  localImgSrc = `uploads/commercial-electrical-services-${area.slug}.jpg`;
-                  localAlt = `Commercial electrical services in ${locationName}`;
-                } else if (s.slug === 'industrial') {
-                  localImgSrc = `uploads/industrial-electrical-services-${area.slug}.jpg`;
-                  localAlt = `Industrial electrical services in ${locationName}`;
-                } else if (s.slug === 'domestic') {
-                  localImgSrc = `uploads/domestic-electrical-services-${area.slug}.jpg`;
-                  localAlt = `Domestic electrical services in ${locationName}`;
-                } else if (s.slug === 'testing') {
-                  localImgSrc = `uploads/electrical-testing-inspection-${area.slug}.jpg`;
-                  localAlt = `Electrical testing and inspection in ${locationName}`;
-                } else if (s.slug === 'renewables') {
-                  localImgSrc = `uploads/ev-charger-installation-${area.slug}.jpg`;
-                  localAlt = `EV charger installation in ${locationName}`;
-                }
-                return localImgSrc ? (
-                  <div style={{ width: '100%', position: 'relative', padding: '16px 16px 0 16px' }}>
-                    <img src={localImgSrc} alt={localAlt} style={{ width: '100%', height: '220px', objectFit: 'contain', display: 'block', borderRadius: '16px', boxShadow: '0 8px 32px rgba(0,0,0,0.15)' }} />
+          {CARTER.services.map((s) => {
+            const href = s.slug === 'commercial' || s.slug === 'industrial' || s.slug === 'domestic' 
+              ? `${s.slug}.html` 
+              : `services.html#${s.slug}`;
+            return (
+              <a 
+                key={s.slug} 
+                href={href}
+                className="service-card-link"
+                style={{ 
+                  textDecoration: 'none', 
+                  color: 'inherit', 
+                  display: 'flex', 
+                  flexDirection: 'column', 
+                  background: 'var(--white)', 
+                  border: '1px solid var(--rule)', 
+                  overflow: 'hidden',
+                  borderRadius: '16px',
+                  boxShadow: '0 4px 20px rgba(0,0,0,0.04)',
+                  transition: 'transform 0.2s ease, box-shadow 0.2s ease'
+                }}
+              >
+                {(() => {
+                  let localImgSrc = s.imgSrc;
+                  let localAlt = `${s.title} in ${locationName}`;
+                  if (s.slug === 'commercial') {
+                    localImgSrc = `uploads/commercial-electrical-services-${area.slug}.jpg`;
+                    localAlt = `Commercial electrical services in ${locationName}`;
+                  } else if (s.slug === 'industrial') {
+                    localImgSrc = `uploads/industrial-electrical-services-${area.slug}.jpg`;
+                    localAlt = `Industrial electrical services in ${locationName}`;
+                  } else if (s.slug === 'domestic') {
+                    localImgSrc = `uploads/domestic-electrical-services-${area.slug}.jpg`;
+                    localAlt = `Domestic electrical services in ${locationName}`;
+                  } else if (s.slug === 'testing') {
+                    localImgSrc = `uploads/electrical-testing-inspection-${area.slug}.jpg`;
+                    localAlt = `Electrical testing and inspection in ${locationName}`;
+                  } else if (s.slug === 'renewables') {
+                    localImgSrc = `uploads/ev-charger-installation-${area.slug}.jpg`;
+                    localAlt = `EV charger installation in ${locationName}`;
+                  }
+                  return localImgSrc ? (
+                    <div style={{ width: '100%', position: 'relative', padding: '16px 16px 0 16px' }}>
+                      <img src={localImgSrc} alt={localAlt} style={{ width: '100%', height: '220px', objectFit: 'contain', display: 'block', borderRadius: '16px', boxShadow: '0 8px 32px rgba(0,0,0,0.15)' }} />
+                    </div>
+                  ) : null;
+                })()}
+                <div style={{ padding: '32px', paddingTop: '16px', flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                  <div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: 20 }}>
+                      <div className="sc-glyph" style={{ width: 40, height: 40, color: 'var(--accent)', flexShrink: 0 }} dangerouslySetInnerHTML={{ __html: CARTER.svg[s.icon] }}/>
+                      <h3 className="h-3" style={{ margin: 0 }}>{s.title === 'Commercial' || s.title === 'Industrial' || s.title === 'Domestic' ? `${s.title} Electrical` : s.title}</h3>
+                    </div>
+                    <p style={{ color: 'var(--muted-2)', lineHeight: 1.6, marginBottom: 16 }}>{s.lede}</p>
+                    <ul className="bullets" style={{ margin: 0, padding: 0, listStyle: 'none' }}>
+                      {s.bullets && s.bullets.slice(0, 4).map((bullet, idx) => (
+                        <li key={idx} style={{ display: 'flex', gap: 10, marginBottom: 8, fontSize: '0.9rem', color: 'var(--muted-1)' }}>
+                          <span style={{ color: 'var(--accent)' }} dangerouslySetInnerHTML={{ __html: CARTER.svg.check }} />
+                          {bullet}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                ) : null;
-              })()}
-              <div style={{ padding: '32px', paddingTop: '16px' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: 20 }}>
-                  <div className="sc-glyph" style={{ width: 40, height: 40, color: 'var(--accent)', flexShrink: 0 }} dangerouslySetInnerHTML={{ __html: CARTER.svg[s.icon] }}/>
-                  <h3 className="h-3" style={{ margin: 0 }}>{s.title === 'Commercial' || s.title === 'Industrial' || s.title === 'Domestic' ? `${s.title} Electrical` : s.title}</h3>
+                  <div style={{ marginTop: 20, paddingTop: 16, borderTop: '1px solid var(--rule)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', color: 'var(--accent)', fontWeight: 600, fontSize: '0.9rem' }}>
+                    <span>View {s.title} Services</span>
+                    <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }} />
+                  </div>
                 </div>
-                <p style={{ color: 'var(--muted-2)', lineHeight: 1.6, marginBottom: 16 }}>{s.lede}</p>
-                <ul className="bullets" style={{ margin: 0, padding: 0, listStyle: 'none' }}>
-                  {s.bullets && s.bullets.slice(0, 4).map((bullet, idx) => (
-                    <li key={idx} style={{ display: 'flex', gap: 10, marginBottom: 8, fontSize: '0.9rem', color: 'var(--muted-1)' }}>
-                      <span style={{ color: 'var(--accent)' }} dangerouslySetInnerHTML={{ __html: CARTER.svg.check }} />
-                      {bullet}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          ))}
+              </a>
+            );
+          })}
         </div>
       </div>
     </section>
