@@ -414,12 +414,7 @@ function ServicesPage() {
         margin: 0
       }
     }, pageTitle)))), /*#__PURE__*/React.createElement("div", {
-      style: {
-        display: 'grid',
-        gridTemplateColumns: '1fr 1.4fr',
-        gap: 60,
-        alignItems: 'stretch'
-      }
+      className: "services-detail-grid"
     }, /*#__PURE__*/React.createElement("div", null, s.imgSrc && /*#__PURE__*/React.createElement("a", {
       href: targetUrl,
       style: {
@@ -455,14 +450,7 @@ function ServicesPage() {
         marginTop: 0
       }
     }, s.lede), /*#__PURE__*/React.createElement("div", {
-      style: {
-        marginTop: 28,
-        display: 'grid',
-        gridTemplateColumns: '1fr 1fr',
-        gap: 1,
-        background: 'var(--rule)',
-        border: '1px solid var(--rule)'
-      }
+      className: "services-bullets-grid"
     }, s.bullets.map((c, j) => /*#__PURE__*/React.createElement("div", {
       key: j,
       style: {

@@ -195,7 +195,7 @@ function LocationPage({ locationName }) {
   const CommercialDomesticDeep = (area.commercialAngle || area.domesticAngle) && (
     <section key="deep-angles" className="section-y light reveal">
       <div className="wrap">
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: 28, alignItems: 'stretch' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 28, alignItems: 'stretch' }}>
           {area.commercialAngle && (
             <div style={{
               background: 'var(--white)',

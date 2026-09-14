@@ -180,7 +180,7 @@ function ServicesPage() {
               </div>
 
               {/* Image (left) and body content (right) - same top baseline, stretched so bottoms meet */}
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 60, alignItems: 'stretch' }}>
+              <div className="services-detail-grid">
                 <div>
                   {s.imgSrc && (
                     <a href={targetUrl} style={{ display: 'block', height: '100%', minHeight: '320px', position: 'relative', background: 'var(--white)', borderRadius: '16px', boxShadow: '0 8px 32px rgba(0,0,0,0.15)', overflow: 'hidden', textDecoration: 'none' }}>
@@ -190,7 +190,7 @@ function ServicesPage() {
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column' }}>
                   <p className="lede" style={{ color: 'var(--ink-2)', marginTop: 0 }}>{s.lede}</p>
-                  <div style={{ marginTop: 28, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 1, background: 'var(--rule)', border: '1px solid var(--rule)' }}>
+                  <div className="services-bullets-grid">
                     {s.bullets.map((c, j) => (
                       <div key={j} style={{ background: 'var(--white)', padding: '22px 20px', display: 'flex', alignItems: 'center', gap: 12 }}>
                         <span style={{ width: 8, height: 8, background: 'var(--accent)', flexShrink: 0 }}/>

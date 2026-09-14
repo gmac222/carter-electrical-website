@@ -545,6 +545,34 @@ section { position: relative; }
   }
 }
 
+/* Responsive Services Page Grid */
+.services-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 60px;
+  align-items: stretch;
+}
+@media (max-width: 992px) {
+  .services-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+.services-bullets-grid {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+}
+@media (max-width: 560px) {
+  .services-bullets-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 .service-card {
   background: var(--white);

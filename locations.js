@@ -311,7 +311,7 @@ function LocationPage({
   }, /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'grid',
-      gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
       gap: 28,
       alignItems: 'stretch'
     }
