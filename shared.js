@@ -289,98 +289,210 @@ window.CARTER.blog = [{"title":"The Importance of EICR Testing for Commercial Pr
 const faqsMap = {
   'tarporley': [
     {
-      q: 'What domestic electrical upgrades do you recommend for historic homes in CW6?',
-      a: 'For listed and heritage properties in Tarporley, we recommend heritage-sensitive rewires using hidden containment, high-quality consumer unit upgrades, and modern smart lighting integrations that preserve the historic character of the building.'
+      q: 'How do I know if a period property or barn conversion in Tarporley needs rewiring?',
+      a: 'Warning signs include legacy rubber or lead-sheathed cabling, outdated timber-backed fuse boxes, round-pin sockets, or circuits that frequently trip. Many country homes and converted barns across Tarporley and the Eddisbury area feature extended wiring additions over decades. We conduct non-invasive EICR inspections to assess cabling condition and provide transparent recommendations.'
     },
     {
-      q: 'Do you conduct landlord EICR safety inspections in Tarporley?',
-      a: 'Yes, we carry out Electrical Installation Condition Reports (EICRs) for rental properties in Tarporley, Bunbury, and surrounding villages, helping local landlords comply with the latest private rented sector safety laws.'
+      q: 'What is the difference between an EICR and an Electrical Installation Certificate (EIC)?',
+      a: 'An Electrical Installation Certificate (EIC) is issued for new electrical installations, complete property rewires, or consumer unit replacements. An Electrical Installation Condition Report (EICR) is an in-depth safety inspection of existing fixed wiring, mandatory for landlords every 5 years and recommended for property buyers across CW6.'
     },
     {
-      q: 'Are you OZEV-registered to install EV chargers in Tarporley?',
-      a: 'Yes, we install OZEV-approved EV chargers for domestic properties and commercial sites. We configure load-management systems to ensure chargers run safely alongside large domestic loads.'
+      q: 'Can I replace sockets or light switches myself under UK Building Regulations?',
+      a: 'Under Part P of the Building Regulations, minor straightforward replacements of existing accessories are permitted for DIY. However, any work in special locations (such as bathrooms), new circuit additions, or fuse box replacements must be completed and certified by a registered competent electrician like Carter Electrical to guarantee safety and compliance.'
     },
     {
-      q: 'What villages and postcodes do you cover near Tarporley?',
-      a: 'We serve the CW6 postcode area, covering Tarporley, Utkinton, Cotebrook, Eaton, Alpraham, Beeston, Bunbury, Tiverton, Little Budworth, and Cuddington.'
-    }
-  ],
-  'mold': [
-    {
-      q: 'How do I verify if a Mold electrician is NICEIC approved?',
-      a: 'You can verify registrations on the Registered Competent Person Electrical website or by asking the contractor for their NICEIC number. Carter Electrical is fully NICEIC-approved, guaranteeing safe, compliant electrical installations across Mold.'
+      q: 'How often are landlords in Tarporley required to carry out EICR safety testing?',
+      a: 'Private landlords in Cheshire West and Chester must arrange an EICR inspection at least every 5 years or at the start of a new tenancy. We provide comprehensive landlord testing across Tarporley, Bunbury, and Little Budworth, issuing digital EICR certificates within 48 hours.'
     },
     {
-      q: 'Do you offer commercial electrical compliance testing in Mold town centre?',
-      a: 'Yes. We support retail and hospitality businesses around Daniel Owen Square and High Street with commercial EICR safety testing, emergency lighting installation (BS 5266), and planned maintenance.'
+      q: 'Do I need DNO permission to install a fast EV charger in Tarporley?',
+      a: 'Yes. Every grid-connected EV charger requires notification or prior consent from the local Distribution Network Operator (SP Energy Networks across Cheshire). As OZEV-approved installers, we handle all DNO applications and assess your main fuse capacity before installation.'
     },
     {
-      q: 'What domestic services do you provide in Buckley and Mold?',
-      a: 'Our in-house electricians carry out full domestic rewires, replace old consumer units, and install smart home technology for homeowners in Mold, Buckley, and surrounding villages. All works are certified and Part P compliant.'
-    },
-    {
-      q: 'Do you install three-phase electrical supplies for farms in Flintshire?',
-      a: 'Yes, three-phase sub-mains, machinery wiring, and agricultural outbuilding installations are a major part of our work in the rural CH7 area, ensuring reliable power distribution for farm equipment.'
-    },
-    {
-      q: 'Can I install my own EV charger at home in Mold?',
-      a: 'No. Installing an EV charging point requires the addition of a new electrical circuit and must be notified to Building Control under Part P. It should only be carried out by an OZEV-registered, qualified electrician.'
-    },
-    {
-      q: 'Which postcodes and villages do you cover in Mold?',
-      a: 'We serve Mold and the CH7 postcode area, covering Buckley, New Brighton, Gwernaffield, Gwernymynydd, Leeswood, Nercwys, Pontblyddyn, Sychdyn, and Alltami.'
+      q: 'What makes an NICEIC Approved Contractor different from a basic installer?',
+      a: 'NICEIC Approved Contractor status verifies that our engineers are independently assessed across complex domestic, commercial, and three-phase industrial installations. This ensures higher technical compliance and rigorous safety standards than basic single-phase domestic scheme registration.'
     }
   ],
   'deeside': [
     {
-      q: 'Do you offer industrial three-phase services on Deeside Industrial Park?',
-      a: 'Yes. Industrial electrical installations, factory shutdown maintenance, and machinery wiring are core services. We assist manufacturing and logistics firms on Deeside Industrial Park with sub-mains cabling, RCD upgrades, and safety compliance.'
+      q: 'What electrical compliance is required for commercial units on Deeside Industrial Park?',
+      a: 'Under the Electricity at Work Regulations 1989, commercial and industrial duty holders must maintain electrical systems in a safe condition. This requires periodic EICR testing (typically every 3 years for industrial sites), annual emergency lighting testing to BS 5266, and regular PAT testing.'
     },
     {
-      q: 'How do I find an approved commercial electrician in Queensferry or Connah\'s Quay?',
-      a: 'Always check for NICEIC registration. Carter Electrical is fully NICEIC-approved, providing commercial shop fit-outs, landlord safety inspections (EICR), and emergency lighting services for businesses across Deeside.'
+      q: 'What happens if a commercial EICR inspection identifies C1 or C2 fault codes?',
+      a: 'C1 indicates immediate danger and requires urgent isolation on site. C2 indicates potential danger requiring remedial work. By law, duty holders and landlords must rectify C1 and C2 defects within 28 days. Our Deeside team carries out fast remedial repairs and issues updated compliance paperwork.'
     },
     {
-      q: 'What domestic electrical services do you offer in Hawarden and Shotton?',
-      a: 'For domestic properties in Connah\'s Quay, Shotton, Hawarden, and Ewloe, we carry out consumer unit upgrades, full rewires, and smart home installations. All work complies with Part P building regulations.'
+      q: 'How long does a commercial or three-phase power installation take on Deeside?',
+      a: 'Timeframes depend on installation scope, ranging from single-day sub-main additions to multi-week factory distribution upgrades. We conduct thorough site surveys across CH5 postcodes, offering out-of-hours working schedules to avoid production downtime.'
     },
     {
-      q: 'How often do landlords in Deeside need EICR inspections?',
-      a: 'Landlords must obtain a new EICR safety report at least every five years. We perform landlord inspections throughout the CH5 area, ensuring installations are fully compliant with current safety regulations.'
+      q: 'Are EICRs mandatory for private rented properties in Flintshire?',
+      a: 'Yes. Landlords across Connah\'s Quay, Shotton, and Queensferry must possess a valid EICR covering the fixed electrical wiring. Inspections are required every 5 years, with copies provided to tenants and Flintshire County Council upon request.'
     },
     {
-      q: 'Can you install EV charging points at Deeside workplaces?',
-      a: 'Yes, we are OZEV-registered commercial EV charger installers. We design and install fast charging networks for staff and visitor parking, complete with load balancing to protect the site\'s main supply.'
+      q: 'Do workplace EV chargers require load management systems on Deeside?',
+      a: 'For commercial premises with multiple charging bays, dynamic load management prevents overloading the site main switchgear. We design custom EV charging infrastructures for Deeside businesses, managing grid capacity notifications with SP Energy Networks.'
     },
     {
-      q: 'Which areas and postcodes do you cover in Deeside?',
-      a: 'We cover the CH5 postcode, serving Connah\'s Quay, Shotton, Queensferry, Sealand, Hawarden, Garden City, Sandycroft, Mancot, and Ewloe.'
+      q: 'Which local postcodes and industrial zones do you cover around Deeside?',
+      a: 'We cover all CH5 postcodes, serving Deeside Industrial Park, Sandycroft, Connah\'s Quay, Shotton, Queensferry, Garden City, Mancot, and Sealand.'
+    }
+  ],
+  'mold': [
+    {
+      q: 'Is an EICR safety inspection mandatory before selling a property in Mold?',
+      a: 'While not legally mandatory for private home sellers, mortgage lenders and conveyancing solicitors in Flintshire increasingly request an up-to-date EICR. Having a satisfactory report avoids conveyancing delays and prevents buyers from negotiating price reductions due to outdated wiring.'
+    },
+    {
+      q: 'What are the main warning signs that a property in Mold requires a consumer unit upgrade?',
+      a: 'Key indicators include old rewireable fuse boxes with cast-iron or wooden backings, lack of residual current device (RCD) protection, flickering lights, or scorched socket outlets. Upgrading to a modern metal RCBO board with Surge Protection (SPD) ensures full BS 7671 safety compliance.'
+    },
+    {
+      q: 'What electrical regulations apply to private landlords in Flintshire under Welsh law?',
+      a: 'Under the Renting Homes (Wales) Act and electrical safety regulations, landlords must ensure fixed wiring is inspected at least every 5 years, accompanied by an EICR certificate. Landlords must also ensure working smoke and carbon monoxide alarms are hardwired on every floor.'
+    },
+    {
+      q: 'Can Carter Electrical carry out commercial retail fit-outs on Mold High Street?',
+      a: 'Yes. We work with local retailers, cafes, and offices in Mold town centre and surrounding commercial parks. We design energy-efficient LED lighting schemes, install emergency lighting to BS 5266, and perform commercial power distribution fit-outs.'
+    },
+    {
+      q: 'How do I know if my electrician in CH7 is fully registered and accredited?',
+      a: 'You can verify registration on the Registered Competent Person Electrical register. Carter Electrical is a fully NICEIC-approved contractor. All our work is self-certified with Building Control and backed by the NICEIC Platinum Promise warranty.'
+    },
+    {
+      q: 'Which villages surrounding Mold do your domestic electricians cover?',
+      a: 'We cover Mold (CH7) and surrounding areas including Gwernymynydd, Sychdyn, Mynydd Isa, Buckley, New Brighton, Loggerheads, and Llanferres.'
+    }
+  ],
+  'wrexham': [
+    {
+      q: 'What are the electrical inspection duties for landlords under the Renting Homes (Wales) Act in Wrexham?',
+      a: 'Landlords in Wrexham must ensure their rental properties pass an EICR test every 5 years. In addition, Welsh legislation requires mains-powered, interconnected smoke and heat alarms on each floor, alongside annual safety checks for all electrical accessories.'
+    },
+    {
+      q: 'How does three-phase electrical maintenance work for industrial units on Wrexham Industrial Estate?',
+      a: 'Industrial facilities require tailored maintenance routines to protect machinery and workforce safety. We provide thermal imaging inspections, sub-distribution board upgrades, motor control wiring, and periodic 3-year commercial EICR testing with minimal operational disturbance.'
+    },
+    {
+      q: 'What is involved in a full domestic property rewire in Wrexham?',
+      a: 'A full rewire replaces all hidden electrical cables, backboxes, socket outlets, switches, and the central consumer unit. Completed in two stages (first fix cabling and second fix accessory fitting), rewires bring older housing stock in Acton, Rhosddu, or Borras up to current BS 7671 standards.'
+    },
+    {
+      q: 'Do I need an RCD or RCBO consumer unit for an EV charger installation in Wrexham?',
+      a: 'Yes. Modern smart EV wallboxes require individual Type A or Type B RCD protection alongside Surge Protection Devices (SPD). Our engineers assess your current fuse box capacity and install dedicated sub-boards if necessary to meet IET Wiring Regulations.'
+    },
+    {
+      q: 'What should I do if an EICR report shows C2 defects on my Wrexham property?',
+      a: 'C2 indicates a potential danger requiring urgent attention. Property owners and landlords must instruct remedial repairs within 28 days. Once remedied, we issue a clear Electrical Installation Certificate confirming the installation is safe and compliant.'
+    },
+    {
+      q: 'Which neighbourhoods and postcodes do you serve across Wrexham?',
+      a: 'We cover LL11, LL12, LL13, and LL14 postcodes, including Wrexham town centre, Acton, Borras, Rhosddu, Rossett, Marford, Gwersyllt, Rhosllanerchrugog, Ruabon, Gresford, and Coedpoeth.'
+    }
+  ],
+  'ellesmere-port': [
+    {
+      q: 'How do I choose a qualified commercial electrician in Ellesmere Port?',
+      a: 'Look for NICEIC Approved Contractor status rather than basic domestic registration. Carter Electrical is fully NICEIC-approved, delivering compliant services for retail units at Cheshire Oaks, town centre offices, and industrial hubs along the M53 corridor.'
+    },
+    {
+      q: 'Do you provide out-of-hours commercial electrical work around Cheshire Oaks?',
+      a: 'Yes. We routinely carry out commercial shop fit-outs, display lighting installations, and emergency lighting testing (BS 5266) outside trading hours to ensure retail and hospitality businesses in CH65 suffer zero customer disruption.'
+    },
+    {
+      q: 'What is covered during a domestic electrical inspection in CH65 and CH66?',
+      a: 'An EICR tests circuit insulation resistance, earth fault loop impedance, earthing bond adequacy, and RCD trip speeds across all fixed wiring. It identifies hidden hazards, degraded insulation, or overloaded circuits in residential properties.'
+    },
+    {
+      q: 'How often should landlords in Ellesmere Port order an EICR certificate?',
+      a: 'Private landlords must obtain a valid EICR at least every 5 years or before a new tenant moves in. We conduct fast inspections across Great Sutton, Little Sutton, and Whitby, supplying digital certificates within 48 hours.'
+    },
+    {
+      q: 'Can you install workplace EV charging stations for corporate car parks in Ellesmere Port?',
+      a: 'Yes. As OZEV-approved installers, we engineer commercial EV charging hubs with multi-charger dynamic load balancing, payment integration options, and full DNO grid notification to SP Energy Networks.'
+    },
+    {
+      q: 'Which local postcodes and villages do your engineers cover?',
+      a: 'We serve all CH65 and CH66 postcodes, including Great Sutton, Little Sutton, Whitby, Wolverham, Overpool, Hooton, Ledsham, and Capenhurst.'
     }
   ],
   'wirral': [
     {
-      q: 'How do I find a qualified electrician for a Wirral commercial property?',
-      a: 'For commercial premises across Wirral (from retail units on Heswall High Street to light industrial sites at Wirral International Business Park in Bromborough), you should ensure your contractor is registered with a competent person scheme such as the NICEIC. Carter Electrical is fully NICEIC-approved, meaning we are regularly assessed on health and safety compliance, holds £5M public liability insurance, and can self-certify all commercial works.'
+      q: 'How do I know if my house on the Wirral needs a complete rewire?',
+      a: 'Common warning signs in older Wirral properties (especially period homes in Heswall, Caldy, or West Kirby) include original fabric or rubber insulated cables, fuse boxes with rewireable fuse wire, dimming lights, or a lack of earthing on metal switches.'
     },
     {
-      q: 'Do you install OZEV EV chargers in Wirral residential areas?',
-      a: 'Yes, we are OZEV-approved EV charger installers covering the entire Wirral peninsula. We regularly fit smart EV chargers for homeowners in Caldy, Heswall, Neston, Ness, West Kirby, and Hoylake, ensuring proper load management configuration so the charger doesn\'t overload your property\'s main fuse.'
+      q: 'What electrical certificate is legally required for rented properties on the Wirral?',
+      a: 'Landlords across Wirral Council postcodes must possess a valid Electrical Installation Condition Report (EICR) issued by a registered electrician every 5 years. Failure to comply can result in local authority fines of up to £30,000.'
     },
     {
-      q: 'What are the EICR regulations for landlords in Birkenhead and Wallasey?',
-      a: 'Private landlords in Birkenhead, Wallasey, and the wider Merseyside region are legally required to have their electrical installations inspected and tested at least every five years. Our local team conducts landlord EICR tests, providing a detailed report and moving quickly to resolve any C1 or C2 defects to ensure your tenants are safe.'
+      q: 'Is an NICEIC Approved Contractor required for commercial premises in Bromborough?',
+      a: 'While the law requires a "competent person", using an NICEIC Approved Contractor guarantees that the business meets rigorous annual technical assessments. We service retail units, offices, and industrial facilities in Bromborough and Birkenhead.'
     },
     {
-      q: 'Do you handle industrial three-phase installations at Bromborough?',
-      a: 'Yes, three-phase power distribution and motor control circuits are key parts of our commercial and industrial service. We support businesses at Wirral International Business Park and around the Cammell Laird shipyard area with factory power upgrades, sub-mains cabling, and preventative maintenance.'
+      q: 'What is Part P building regulations compliance for domestic electrical work on the Wirral?',
+      a: 'Part P requires that electrical installations in dwellings are designed and installed safely. Major additions, bathroom alterations, and fuse box upgrades must be notified to Building Control. We handle all notifications and issue official certificates automatically.'
     },
     {
-      q: 'Can I do my own electrical work in my Wirral home?',
-      a: 'Under Part P of the Building Regulations, major work like installing a new circuit or replacing a consumer unit is legally notifiable and should only be completed by a registered electrician. Minor works (like replacing a single faceplate) can be done by competent DIYers, but must still comply with BS 7671 safety standards.'
+      q: 'How long does a domestic smart EV charger installation take on the Wirral?',
+      a: 'A standard domestic wallbox installation takes between 3 and 4 hours. Our engineers verify your main fuse board capacity, install dedicated cable routing, configure smart app control, and notify SP Energy Networks.'
     },
     {
-      q: 'Which postcodes and neighbourhoods do you cover in Wirral?',
-      a: 'We provide full coverage across CH41 to CH49, CH60 to CH63, and CH64. Our in-house engineers are on the road daily in Birkenhead, Prenton, Wallasey, New Brighton, Bebington, Heswall, West Kirby, Hoylake, Bromborough, Moreton, Upton, Greasby, Port Sunlight, Eastham, Caldy, Neston, Willaston, and Ness.'
+      q: 'Which postcodes and towns do you cover across the Wirral peninsula?',
+      a: 'We cover the entire Wirral including CH47, CH48, CH60, CH61, CH62, and CH63 postcodes, serving Heswall, Caldy, West Kirby, Bromborough, Bebington, Neston, Parkgate, and Willaston.'
+    }
+  ],
+  'frodsham': [
+    {
+      q: 'How do I verify if an electrician in Frodsham is legally qualified?',
+      a: 'Check their credentials on the Registered Competent Person Electrical register. Carter Electrical is fully NICEIC-approved. We self-certify all domestic and commercial work, automatically registering installations with local Building Control.'
+    },
+    {
+      q: 'What emergency lighting regulations apply to commercial premises in Frodsham?',
+      a: 'Under the Regulatory Reform (Fire Safety) Order 2005, commercial premises on Frodsham High Street and Main Street must maintain emergency escape lighting to BS 5266 standards. This requires monthly function checks and annual 3-hour battery discharge testing.'
+    },
+    {
+      q: 'How long does it take to replace a consumer unit in a Frodsham property?',
+      a: 'A complete consumer unit replacement takes approximately 4 to 6 hours. This includes isolating the supply, installing a modern metal RCBO board with Surge Protection (SPD), and performing 100% circuit safety testing before re-energising.'
+    },
+    {
+      q: 'Are EICR safety checks mandatory for private landlords in Frodsham and Helsby?',
+      a: 'Yes. Private landlords must obtain an EICR every 5 years or at the start of any new tenancy. We carry out non-invasive testing across WA6 postcodes, identifying potential safety defects and delivering digital reports within 48 hours.'
+    },
+    {
+      q: 'Do you install home EV chargers for rural properties around Frodsham?',
+      a: 'Yes. We install smart wallboxes for homes in Frodsham, Helsby, Kingsley, and Alvanley. We evaluate your incoming mains supply and coordinate DNO approval with SP Energy Networks for seamless charging.'
+    },
+    {
+      q: 'Which postcodes and surrounding villages do your electricians cover?',
+      a: 'We cover WA6 postcodes, including Frodsham town centre, Helsby, Kingsley, Alvanley, Manley, Newton by Frodsham, and Dunham on the Hill.'
+    }
+  ],
+  'northwich': [
+    {
+      q: 'What is involved in a commercial EICR inspection for businesses in Northwich?',
+      a: 'A commercial EICR involves dead testing (insulation resistance, continuity) and live testing (earth fault loop impedance, RCD trip times) across all distribution boards and sub-circuits. We test commercial units around Barons Quay and central CW9 outside trading hours to prevent business interruption.'
+    },
+    {
+      q: 'What is the difference between C1, C2, and C3 codes on a Northwich EICR?',
+      a: 'C1 indicates immediate danger (requires immediate isolation). C2 indicates potential danger requiring remedial work within 28 days. C3 indicates an improvement recommendation (optional upgrade). C1 and C2 codes result in an "Unsatisfactory" report until remedied.'
+    },
+    {
+      q: 'What domestic electrical services do you offer in Hartford and Davenham?',
+      a: 'In residential areas like Hartford, Davenham, and Kingsmead, we install smart EV wallboxes, perform consumer unit upgrades, install outdoor power, and conduct full house rewires to current BS 7671 standards.'
+    },
+    {
+      q: 'How often do landlords in CW8 and CW9 need an EICR test?',
+      a: 'Landlords must arrange an EICR inspection at least every 5 years under the Electrical Safety Standards in the Private Rented Sector Regulations. We deliver fast testing across Northwich, issuing digital reports within 48 hours.'
+    },
+    {
+      q: 'Can Carter Electrical handle three-phase industrial power installations in Northwich?',
+      a: 'Yes. Our NICEIC Approved engineers design, install, and maintain heavy three-phase power supplies, sub-distribution panels, and machinery supplies for industrial premises across Northwich and Lostock Gralam.'
+    },
+    {
+      q: 'Which postcodes and surrounding areas do your engineers cover around Northwich?',
+      a: 'We cover CW8 and CW9 postcodes, serving Northwich, Hartford, Davenham, Weaverham, Lostock Gralam, Rudheath, Leftwich, and Kingsmead.'
     }
   ]
 };
