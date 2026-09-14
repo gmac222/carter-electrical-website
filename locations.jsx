@@ -168,27 +168,130 @@ function LocationPage({ locationName }) {
 
   const CommercialDomesticDeep = (area.commercialAngle || area.domesticAngle) && (
     <section key="deep-angles" className="section-y light reveal">
-      <div className="wrap" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 40 }}>
-        {area.commercialAngle && (
-          <div>
-            <div className="eyebrow">Commercial Focus</div>
-            <h3 className="h-2" style={{ marginTop: 10 }}>Commercial Electrical Services<span className="accent">.</span></h3>
-            <p style={{ color: 'var(--muted-2)', lineHeight: 1.7, marginTop: 16 }}>{area.commercialAngle}</p>
-            <p style={{ color: 'var(--muted-2)', lineHeight: 1.7, marginTop: 14 }}>
-              Scopes we routinely quote: full distribution board upgrades, emergency lighting to BS 5266, retail and office fit-outs, data containment, and landlord EICR inspection reports.
-            </p>
-          </div>
-        )}
-        {area.domesticAngle && (
-          <div>
-            <div className="eyebrow">Domestic Focus</div>
-            <h3 className="h-2" style={{ marginTop: 10 }}>Domestic Electrical Upgrades<span className="accent">.</span></h3>
-            <p style={{ color: 'var(--muted-2)', lineHeight: 1.7, marginTop: 16 }}>{area.domesticAngle}</p>
-            <p style={{ color: 'var(--muted-2)', lineHeight: 1.7, marginTop: 14 }}>
-              Common domestic projects: consumer unit replacements, full and partial rewires, OZEV-approved EV charger installs, smart home lighting, and outbuilding power supplies.
-            </p>
-          </div>
-        )}
+      <div className="wrap">
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: 28, alignItems: 'stretch' }}>
+          {area.commercialAngle && (
+            <div style={{
+              background: 'var(--white)',
+              border: '1px solid var(--rule)',
+              borderRadius: '20px',
+              padding: '36px 32px',
+              boxShadow: '0 4px 24px rgba(0,0,0,0.04)',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between'
+            }}>
+              <div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 16 }}>
+                  <div style={{
+                    width: 44,
+                    height: 44,
+                    borderRadius: 12,
+                    background: 'rgba(122, 193, 67, 0.12)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: 'var(--accent)',
+                    flexShrink: 0
+                  }} dangerouslySetInnerHTML={{ __html: CARTER.svg.building }} />
+                  <div>
+                    <div className="eyebrow" style={{ fontSize: '11px', letterSpacing: '0.14em', marginBottom: 2 }}>Commercial Focus</div>
+                    <h3 className="h-2" style={{ margin: 0, fontSize: '1.45rem', lineHeight: 1.25 }}>Commercial Electrical Services<span className="accent">.</span></h3>
+                  </div>
+                </div>
+                <p style={{ color: 'var(--muted-2)', lineHeight: 1.7, fontSize: '0.98rem', margin: '20px 0 0 0' }}>
+                  {area.commercialAngle}
+                </p>
+              </div>
+
+              <div style={{
+                marginTop: 28,
+                padding: '20px',
+                background: 'var(--bg-light)',
+                borderRadius: '14px',
+                border: '1px solid var(--rule)'
+              }}>
+                <strong style={{ display: 'block', fontSize: '12px', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--ink)', marginBottom: 10 }}>
+                  Scopes We Routinely Quote:
+                </strong>
+                <ul style={{ margin: 0, padding: 0, listStyle: 'none' }}>
+                  {[
+                    'Full distribution board upgrades & sub-mains',
+                    'Emergency lighting installation to BS 5266 standards',
+                    'Retail & office fit-outs with data containment',
+                    'Landlord EICR safety inspection reports & remedials'
+                  ].map((bullet, idx) => (
+                    <li key={idx} style={{ display: 'flex', gap: 10, marginBottom: idx < 3 ? 8 : 0, fontSize: '0.88rem', color: 'var(--muted-1)', lineHeight: 1.5 }}>
+                      <span style={{ color: 'var(--accent)' }} dangerouslySetInnerHTML={{ __html: CARTER.svg.check }} />
+                      {bullet}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          )}
+
+          {area.domesticAngle && (
+            <div style={{
+              background: 'var(--white)',
+              border: '1px solid var(--rule)',
+              borderRadius: '20px',
+              padding: '36px 32px',
+              boxShadow: '0 4px 24px rgba(0,0,0,0.04)',
+              display: 'flex',
+              flexDirection: 'column',
+              justify: 'space-between'
+            }}>
+              <div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 16 }}>
+                  <div style={{
+                    width: 44,
+                    height: 44,
+                    borderRadius: 12,
+                    background: 'rgba(122, 193, 67, 0.12)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: 'var(--accent)',
+                    flexShrink: 0
+                  }} dangerouslySetInnerHTML={{ __html: CARTER.svg.home }} />
+                  <div>
+                    <div className="eyebrow" style={{ fontSize: '11px', letterSpacing: '0.14em', marginBottom: 2 }}>Domestic Focus</div>
+                    <h3 className="h-2" style={{ margin: 0, fontSize: '1.45rem', lineHeight: 1.25 }}>Domestic Electrical Upgrades<span className="accent">.</span></h3>
+                  </div>
+                </div>
+                <p style={{ color: 'var(--muted-2)', lineHeight: 1.7, fontSize: '0.98rem', margin: '20px 0 0 0' }}>
+                  {area.domesticAngle}
+                </p>
+              </div>
+
+              <div style={{
+                marginTop: 28,
+                padding: '20px',
+                background: 'var(--bg-light)',
+                borderRadius: '14px',
+                border: '1px solid var(--rule)'
+              }}>
+                <strong style={{ display: 'block', fontSize: '12px', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--ink)', marginBottom: 10 }}>
+                  Common Domestic Projects:
+                </strong>
+                <ul style={{ margin: 0, padding: 0, listStyle: 'none' }}>
+                  {[
+                    'Consumer unit replacements (fuse box upgrades)',
+                    'Full and partial house rewires with Part P certification',
+                    'OZEV-approved EV charger installs with load management',
+                    'Smart home lighting, heating controls & outbuilding power'
+                  ].map((bullet, idx) => (
+                    <li key={idx} style={{ display: 'flex', gap: 10, marginBottom: idx < 3 ? 8 : 0, fontSize: '0.88rem', color: 'var(--muted-1)', lineHeight: 1.5 }}>
+                      <span style={{ color: 'var(--accent)' }} dangerouslySetInnerHTML={{ __html: CARTER.svg.check }} />
+                      {bullet}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );

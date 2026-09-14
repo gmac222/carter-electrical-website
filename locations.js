@@ -278,55 +278,207 @@ function LocationPage({
     key: "deep-angles",
     className: "section-y light reveal"
   }, /*#__PURE__*/React.createElement("div", {
-    className: "wrap",
+    className: "wrap"
+  }, /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'grid',
-      gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-      gap: 40
+      gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))',
+      gap: 28,
+      alignItems: 'stretch'
     }
-  }, area.commercialAngle && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
-    className: "eyebrow"
+  }, area.commercialAngle && /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: 'var(--white)',
+      border: '1px solid var(--rule)',
+      borderRadius: '20px',
+      padding: '36px 32px',
+      boxShadow: '0 4px 24px rgba(0,0,0,0.04)',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-between'
+    }
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: 14,
+      marginBottom: 16
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      width: 44,
+      height: 44,
+      borderRadius: 12,
+      background: 'rgba(122, 193, 67, 0.12)',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      color: 'var(--accent)',
+      flexShrink: 0
+    },
+    dangerouslySetInnerHTML: {
+      __html: CARTER.svg.building
+    }
+  }), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    className: "eyebrow",
+    style: {
+      fontSize: '11px',
+      letterSpacing: '0.14em',
+      marginBottom: 2
+    }
   }, "Commercial Focus"), /*#__PURE__*/React.createElement("h3", {
     className: "h-2",
     style: {
-      marginTop: 10
+      margin: 0,
+      fontSize: '1.45rem',
+      lineHeight: 1.25
     }
   }, "Commercial Electrical Services", /*#__PURE__*/React.createElement("span", {
     className: "accent"
-  }, ".")), /*#__PURE__*/React.createElement("p", {
+  }, ".")))), /*#__PURE__*/React.createElement("p", {
     style: {
       color: 'var(--muted-2)',
       lineHeight: 1.7,
-      marginTop: 16
+      fontSize: '0.98rem',
+      margin: '20px 0 0 0'
     }
-  }, area.commercialAngle), /*#__PURE__*/React.createElement("p", {
+  }, area.commercialAngle)), /*#__PURE__*/React.createElement("div", {
     style: {
-      color: 'var(--muted-2)',
-      lineHeight: 1.7,
-      marginTop: 14
+      marginTop: 28,
+      padding: '20px',
+      background: 'var(--bg-light)',
+      borderRadius: '14px',
+      border: '1px solid var(--rule)'
     }
-  }, "Scopes we routinely quote: full distribution board upgrades, emergency lighting to BS 5266, retail and office fit-outs, data containment, and landlord EICR inspection reports.")), area.domesticAngle && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
-    className: "eyebrow"
+  }, /*#__PURE__*/React.createElement("strong", {
+    style: {
+      display: 'block',
+      fontSize: '12px',
+      textTransform: 'uppercase',
+      letterSpacing: '0.1em',
+      color: 'var(--ink)',
+      marginBottom: 10
+    }
+  }, "Scopes We Routinely Quote:"), /*#__PURE__*/React.createElement("ul", {
+    style: {
+      margin: 0,
+      padding: 0,
+      listStyle: 'none'
+    }
+  }, ['Full distribution board upgrades & sub-mains', 'Emergency lighting installation to BS 5266 standards', 'Retail & office fit-outs with data containment', 'Landlord EICR safety inspection reports & remedials'].map((bullet, idx) => /*#__PURE__*/React.createElement("li", {
+    key: idx,
+    style: {
+      display: 'flex',
+      gap: 10,
+      marginBottom: idx < 3 ? 8 : 0,
+      fontSize: '0.88rem',
+      color: 'var(--muted-1)',
+      lineHeight: 1.5
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      color: 'var(--accent)'
+    },
+    dangerouslySetInnerHTML: {
+      __html: CARTER.svg.check
+    }
+  }), bullet))))), area.domesticAngle && /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: 'var(--white)',
+      border: '1px solid var(--rule)',
+      borderRadius: '20px',
+      padding: '36px 32px',
+      boxShadow: '0 4px 24px rgba(0,0,0,0.04)',
+      display: 'flex',
+      flexDirection: 'column',
+      justify: 'space-between'
+    }
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: 14,
+      marginBottom: 16
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      width: 44,
+      height: 44,
+      borderRadius: 12,
+      background: 'rgba(122, 193, 67, 0.12)',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      color: 'var(--accent)',
+      flexShrink: 0
+    },
+    dangerouslySetInnerHTML: {
+      __html: CARTER.svg.home
+    }
+  }), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    className: "eyebrow",
+    style: {
+      fontSize: '11px',
+      letterSpacing: '0.14em',
+      marginBottom: 2
+    }
   }, "Domestic Focus"), /*#__PURE__*/React.createElement("h3", {
     className: "h-2",
     style: {
-      marginTop: 10
+      margin: 0,
+      fontSize: '1.45rem',
+      lineHeight: 1.25
     }
   }, "Domestic Electrical Upgrades", /*#__PURE__*/React.createElement("span", {
     className: "accent"
-  }, ".")), /*#__PURE__*/React.createElement("p", {
+  }, ".")))), /*#__PURE__*/React.createElement("p", {
     style: {
       color: 'var(--muted-2)',
       lineHeight: 1.7,
-      marginTop: 16
+      fontSize: '0.98rem',
+      margin: '20px 0 0 0'
     }
-  }, area.domesticAngle), /*#__PURE__*/React.createElement("p", {
+  }, area.domesticAngle)), /*#__PURE__*/React.createElement("div", {
     style: {
-      color: 'var(--muted-2)',
-      lineHeight: 1.7,
-      marginTop: 14
+      marginTop: 28,
+      padding: '20px',
+      background: 'var(--bg-light)',
+      borderRadius: '14px',
+      border: '1px solid var(--rule)'
     }
-  }, "Common domestic projects: consumer unit replacements, full and partial rewires, OZEV-approved EV charger installs, smart home lighting, and outbuilding power supplies."))));
+  }, /*#__PURE__*/React.createElement("strong", {
+    style: {
+      display: 'block',
+      fontSize: '12px',
+      textTransform: 'uppercase',
+      letterSpacing: '0.1em',
+      color: 'var(--ink)',
+      marginBottom: 10
+    }
+  }, "Common Domestic Projects:"), /*#__PURE__*/React.createElement("ul", {
+    style: {
+      margin: 0,
+      padding: 0,
+      listStyle: 'none'
+    }
+  }, ['Consumer unit replacements (fuse box upgrades)', 'Full and partial house rewires with Part P certification', 'OZEV-approved EV charger installs with load management', 'Smart home lighting, heating controls & outbuilding power'].map((bullet, idx) => /*#__PURE__*/React.createElement("li", {
+    key: idx,
+    style: {
+      display: 'flex',
+      gap: 10,
+      marginBottom: idx < 3 ? 8 : 0,
+      fontSize: '0.88rem',
+      color: 'var(--muted-1)',
+      lineHeight: 1.5
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      color: 'var(--accent)'
+    },
+    dangerouslySetInnerHTML: {
+      __html: CARTER.svg.check
+    }
+  }), bullet))))))));
   const ProcessSectionB = /*#__PURE__*/React.createElement("section", {
     key: "process-b",
     className: "section-y light reveal"
