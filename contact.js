@@ -109,7 +109,7 @@ function ContactForm() {
       href: CARTER.company.phoneHref,
       className: "btn btn-primary"
     }, "Call ", CARTER.company.phone), /*#__PURE__*/React.createElement("a", {
-      href: "index.html",
+      href: "/",
       className: "btn btn-ghost-dark"
     }, "Back to home"))));
   }

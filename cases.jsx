@@ -64,7 +64,7 @@ function OldDukes() {
       <section className="cs-hero">
         <div className="wrap">
           <div className="breadcrumbs" style={{ fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)', marginBottom: 24 }}>
-            <a href="index.html" style={{ color: 'rgba(255,255,255,0.6)' }}>Home</a> · <a href="case-studies.html" style={{ color: 'rgba(255,255,255,0.6)' }}>Case Studies</a> · <span style={{ color: 'var(--accent)' }}>{c.title}</span>
+            <a href="/" style={{ color: 'rgba(255,255,255,0.6)' }}>Home</a> · <a href="case-studies.html" style={{ color: 'rgba(255,255,255,0.6)' }}>Case Studies</a> · <span style={{ color: 'var(--accent)' }}>{c.title}</span>
           </div>
           <div className="cs-title-row">
             <div>
@@ -171,7 +171,7 @@ function PrentonWirral() {
       <section className="cs-hero">
         <div className="wrap">
           <div className="breadcrumbs" style={{ fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)', marginBottom: 24 }}>
-            <a href="index.html" style={{ color: 'rgba(255,255,255,0.6)' }}>Home</a> · <a href="case-studies.html" style={{ color: 'rgba(255,255,255,0.6)' }}>Case Studies</a> · <span style={{ color: 'var(--accent)' }}>{c.title}</span>
+            <a href="/" style={{ color: 'rgba(255,255,255,0.6)' }}>Home</a> · <a href="case-studies.html" style={{ color: 'rgba(255,255,255,0.6)' }}>Case Studies</a> · <span style={{ color: 'var(--accent)' }}>{c.title}</span>
           </div>
           <div className="cs-title-row">
             <div>
@@ -265,7 +265,7 @@ function CarbonaraNo49() {
       <section className="cs-hero">
         <div className="wrap">
           <div className="breadcrumbs" style={{ fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)', marginBottom: 24 }}>
-            <a href="index.html" style={{ color: 'rgba(255,255,255,0.6)' }}>Home</a> · <a href="case-studies.html" style={{ color: 'rgba(255,255,255,0.6)' }}>Case Studies</a> · <span style={{ color: 'var(--accent)' }}>{c.title}</span>
+            <a href="/" style={{ color: 'rgba(255,255,255,0.6)' }}>Home</a> · <a href="case-studies.html" style={{ color: 'rgba(255,255,255,0.6)' }}>Case Studies</a> · <span style={{ color: 'var(--accent)' }}>{c.title}</span>
           </div>
           <div className="cs-title-row">
             <div>
@@ -359,7 +359,7 @@ function BrynRhiw() {
       <section className="cs-hero">
         <div className="wrap">
           <div className="breadcrumbs" style={{ fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)', marginBottom: 24 }}>
-            <a href="index.html" style={{ color: 'rgba(255,255,255,0.6)' }}>Home</a> · <a href="case-studies.html" style={{ color: 'rgba(255,255,255,0.6)' }}>Case Studies</a> · <span style={{ color: 'var(--accent)' }}>{c.title}</span>
+            <a href="/" style={{ color: 'rgba(255,255,255,0.6)' }}>Home</a> · <a href="case-studies.html" style={{ color: 'rgba(255,255,255,0.6)' }}>Case Studies</a> · <span style={{ color: 'var(--accent)' }}>{c.title}</span>
           </div>
           <div className="cs-title-row">
             <div>

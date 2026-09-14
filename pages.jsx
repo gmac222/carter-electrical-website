@@ -422,7 +422,7 @@ function TermsOfUsePage() {
             <div className="prose">
               <h2>1. Agreement to Terms</h2>
               <p>
-                By accessing and browsing the website <a href="index.html">carterelec.co.uk</a>, you agree to comply with and be bound by these Terms of Use, along with our Privacy Policy. If you disagree with any part of these terms, please do not use our website.
+                By accessing and browsing the website <a href="/">carterelec.co.uk</a>, you agree to comply with and be bound by these Terms of Use, along with our Privacy Policy. If you disagree with any part of these terms, please do not use our website.
               </p>
 
               <h2>2. Intellectual Property Rights</h2>
@@ -486,7 +486,7 @@ function SitemapPage() {
             <div>
               <h3 className="h-3" style={{ borderBottom: '2px solid var(--accent)', paddingBottom: '8px', marginBottom: '20px' }}>Main Pages</h3>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                <li><a href="index.html" style={{ color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>Home</a></li>
+                <li><a href="/" style={{ color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>Home</a></li>
                 <li><a href="about.html" style={{ color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>About Us</a></li>
                 <li><a href="services.html" style={{ color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>Our Services</a></li>
                 <li><a href="commercial.html" style={{ color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>Commercial Services</a></li>

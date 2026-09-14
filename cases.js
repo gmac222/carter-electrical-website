@@ -92,7 +92,7 @@ function OldDukes() {
       marginBottom: 24
     }
   }, /*#__PURE__*/React.createElement("a", {
-    href: "index.html",
+    href: "/",
     style: {
       color: 'rgba(255,255,255,0.6)'
     }
@@ -333,7 +333,7 @@ function PrentonWirral() {
       marginBottom: 24
     }
   }, /*#__PURE__*/React.createElement("a", {
-    href: "index.html",
+    href: "/",
     style: {
       color: 'rgba(255,255,255,0.6)'
     }
@@ -545,7 +545,7 @@ function CarbonaraNo49() {
       marginBottom: 24
     }
   }, /*#__PURE__*/React.createElement("a", {
-    href: "index.html",
+    href: "/",
     style: {
       color: 'rgba(255,255,255,0.6)'
     }
@@ -757,7 +757,7 @@ function BrynRhiw() {
       marginBottom: 24
     }
   }, /*#__PURE__*/React.createElement("a", {
-    href: "index.html",
+    href: "/",
     style: {
       color: 'rgba(255,255,255,0.6)'
     }

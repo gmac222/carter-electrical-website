@@ -44,7 +44,7 @@ function ThankYouPage() {
               <a href={CARTER.company.phoneHref} className="btn btn-primary">
                 Call {CARTER.company.phone}
               </a>
-              <a href="index.html" className="btn btn-ghost-light">
+              <a href="/" className="btn btn-ghost-light">
                 Back to Home
               </a>
             </div>

@@ -26,8 +26,8 @@ const { useState, useEffect, useRef } = React;
 
 window.Logo = function Logo({ light = true }) {
   return (
-    <a href="index.html" className="logo" aria-label="Carter Electrical home">
-      <img src="uploads/logo-original.png" alt="Carter Electrical Contracting" style={{ height: '54px', width: 'auto' }} />
+    <a href="/" className="logo" aria-label="Carter Electrical home">
+      <img src="/uploads/logo-original.png" alt="Carter Electrical Contracting" style={{ height: '54px', width: 'auto' }} />
     </a>
   );
 };
@@ -43,22 +43,22 @@ window.Header = function Header({ current = 'home', theme = 'dark' }) {
   }, []);
 
   const links = [
-    { id: 'home', label: 'Home', href: 'index.html' },
+    { id: 'home', label: 'Home', href: '/' },
     {
       id: 'services',
       label: 'Services',
-      href: 'services.html',
+      href: '/services.html',
       children: [
-        { id: 'commercial', label: 'Commercial Electrical', href: 'commercial.html' },
-        { id: 'industrial', label: 'Industrial Electrical', href: 'industrial.html' },
-        { id: 'domestic', label: 'Domestic Electrical', href: 'domestic.html' },
-        { id: 'all-services', label: 'All Services', href: 'services.html' }
+        { id: 'commercial', label: 'Commercial Electrical', href: '/commercial.html' },
+        { id: 'industrial', label: 'Industrial Electrical', href: '/industrial.html' },
+        { id: 'domestic', label: 'Domestic Electrical', href: '/domestic.html' },
+        { id: 'all-services', label: 'All Services', href: '/services.html' }
       ]
     },
-    { id: 'cases', label: 'Case Studies', href: 'case-studies.html' },
-    { id: 'areas', label: 'Areas We Cover', href: 'areas.html' },
-    { id: 'about', label: 'About', href: 'about.html' },
-    { id: 'contact', label: 'Contact', href: 'contact.html' },
+    { id: 'cases', label: 'Case Studies', href: '/case-studies.html' },
+    { id: 'areas', label: 'Areas We Cover', href: '/areas.html' },
+    { id: 'about', label: 'About', href: '/about.html' },
+    { id: 'contact', label: 'Contact', href: '/contact.html' },
   ];
 
   return (
@@ -96,7 +96,7 @@ window.Header = function Header({ current = 'home', theme = 'dark' }) {
               <span className="dot" />
               <span>{CARTER.company.phone}</span>
             </div>
-            <a href="contact.html" className="btn btn-primary btn-sm">
+            <a href="/contact.html" className="btn btn-primary btn-sm">
               Discuss Project
               <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }} />
             </a>
@@ -119,10 +119,10 @@ window.TrustBar = function TrustBar({ area }) {
     ? `${area.name} · ${area.postcodes && area.postcodes.length ? area.postcodes[0] : 'CH3'}`
     : 'Chester · CH3';
   const items = [
-    { img: 'uploads/nic.png',       alt: 'NICEIC Approved Contractor logo', top: 'NICEIC',          bottom: 'Approved Contractor' },
+    { img: '/uploads/nic.png',       alt: 'NICEIC Approved Contractor logo', top: 'NICEIC',          bottom: 'Approved Contractor' },
     { glyph: CARTER.svg.check,                                             top: 'Fully Insured',   bottom: 'Guaranteed Work' },
     { glyph: CARTER.svg.pin,                                               top: pinText,           bottom: 'Local & On-Call' },
-    { img: 'uploads/ozev-logo.jpg', alt: 'OZEV-approved EV charger installer logo', top: 'OZEV Registered', bottom: 'EV Charger Install' },
+    { img: '/uploads/ozev-logo.jpg', alt: 'OZEV-approved EV charger installer logo', top: 'OZEV Registered', bottom: 'EV Charger Install' },
     { glyph: CARTER.svg.shield,                                            top: '18th Edition',    bottom: 'BS 7671 Compliant' },
   ];
   return (
@@ -164,20 +164,20 @@ window.Footer = function Footer() {
           <div>
             <h4>Services</h4>
             <ul>
-              <li><a href="commercial.html">Commercial</a></li>
-              <li><a href="industrial.html">Industrial</a></li>
-              <li><a href="domestic.html">Domestic</a></li>
-              <li><a href="services.html#renewables">Renewables & EV</a></li>
-              <li><a href="services.html#testing">Inspection & Testing</a></li>
+              <li><a href="/commercial.html">Commercial</a></li>
+              <li><a href="/industrial.html">Industrial</a></li>
+              <li><a href="/domestic.html">Domestic</a></li>
+              <li><a href="/services.html#renewables">Renewables & EV</a></li>
+              <li><a href="/services.html#testing">Inspection & Testing</a></li>
             </ul>
           </div>
           <div>
             <h4>Company</h4>
             <ul>
-              <li><a href="about.html">About</a></li>
-              <li><a href="case-studies.html">Case Studies</a></li>
-              <li><a href="areas.html">Areas We Cover</a></li>
-              <li><a href="contact.html">Contact</a></li>
+              <li><a href="/about.html">About</a></li>
+              <li><a href="/case-studies.html">Case Studies</a></li>
+              <li><a href="/areas.html">Areas We Cover</a></li>
+              <li><a href="/contact.html">Contact</a></li>
               <li><a href={CARTER.company.socialFb}>Facebook</a></li>
             </ul>
           </div>
@@ -212,9 +212,9 @@ window.Footer = function Footer() {
         <div className="footer-bottom">
           <div>© {new Date().getFullYear()} Carter Electrical Contracting Ltd</div>
           <div className="footer-bottom-links" style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
-            <a href="sitemap.html" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none', transition: 'color .15s ease' }} onMouseEnter={e => e.target.style.color = 'var(--accent)'} onMouseLeave={e => e.target.style.color = 'rgba(255,255,255,0.4)'}>Sitemap</a>
-            <a href="privacy-policy.html" rel="nofollow" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none', transition: 'color .15s ease' }} onMouseEnter={e => e.target.style.color = 'var(--accent)'} onMouseLeave={e => e.target.style.color = 'rgba(255,255,255,0.4)'}>Privacy Policy</a>
-            <a href="terms.html" rel="nofollow" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none', transition: 'color .15s ease' }} onMouseEnter={e => e.target.style.color = 'var(--accent)'} onMouseLeave={e => e.target.style.color = 'rgba(255,255,255,0.4)'}>Terms of Use</a>
+            <a href="/sitemap.html" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none', transition: 'color .15s ease' }} onMouseEnter={e => e.target.style.color = 'var(--accent)'} onMouseLeave={e => e.target.style.color = 'rgba(255,255,255,0.4)'}>Sitemap</a>
+            <a href="/privacy-policy.html" rel="nofollow" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none', transition: 'color .15s ease' }} onMouseEnter={e => e.target.style.color = 'var(--accent)'} onMouseLeave={e => e.target.style.color = 'rgba(255,255,255,0.4)'}>Privacy Policy</a>
+            <a href="/terms.html" rel="nofollow" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none', transition: 'color .15s ease' }} onMouseEnter={e => e.target.style.color = 'var(--accent)'} onMouseLeave={e => e.target.style.color = 'rgba(255,255,255,0.4)'}>Terms of Use</a>
             <span style={{ color: 'rgba(255,255,255,0.4)' }}>carterelec.co.uk</span>
           </div>
         </div>

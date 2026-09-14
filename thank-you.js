@@ -88,7 +88,7 @@ function ThankYouPage() {
     href: CARTER.company.phoneHref,
     className: "btn btn-primary"
   }, "Call ", CARTER.company.phone), /*#__PURE__*/React.createElement("a", {
-    href: "index.html",
+    href: "/",
     className: "btn btn-ghost-light"
   }, "Back to Home"))))), /*#__PURE__*/React.createElement(TrustBar, null), /*#__PURE__*/React.createElement(Footer, null));
 }

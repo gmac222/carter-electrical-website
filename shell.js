@@ -39,11 +39,11 @@ window.Logo = function Logo({
   light = true
 }) {
   return /*#__PURE__*/React.createElement("a", {
-    href: "index.html",
+    href: "/",
     className: "logo",
     "aria-label": "Carter Electrical home"
   }, /*#__PURE__*/React.createElement("img", {
-    src: "uploads/logo-original.png",
+    src: "/uploads/logo-original.png",
     alt: "Carter Electrical Contracting",
     style: {
       height: '54px',
@@ -68,44 +68,44 @@ window.Header = function Header({
   const links = [{
     id: 'home',
     label: 'Home',
-    href: 'index.html'
+    href: '/'
   }, {
     id: 'services',
     label: 'Services',
-    href: 'services.html',
+    href: '/services.html',
     children: [{
       id: 'commercial',
       label: 'Commercial Electrical',
-      href: 'commercial.html'
+      href: '/commercial.html'
     }, {
       id: 'industrial',
       label: 'Industrial Electrical',
-      href: 'industrial.html'
+      href: '/industrial.html'
     }, {
       id: 'domestic',
       label: 'Domestic Electrical',
-      href: 'domestic.html'
+      href: '/domestic.html'
     }, {
       id: 'all-services',
       label: 'All Services',
-      href: 'services.html'
+      href: '/services.html'
     }]
   }, {
     id: 'cases',
     label: 'Case Studies',
-    href: 'case-studies.html'
+    href: '/case-studies.html'
   }, {
     id: 'areas',
     label: 'Areas We Cover',
-    href: 'areas.html'
+    href: '/areas.html'
   }, {
     id: 'about',
     label: 'About',
-    href: 'about.html'
+    href: '/about.html'
   }, {
     id: 'contact',
     label: 'Contact',
-    href: 'contact.html'
+    href: '/contact.html'
   }];
   return /*#__PURE__*/React.createElement("header", {
     className: `site-header ${condensed ? 'is-condensed' : ''} ${theme === 'light' ? 'is-light' : ''}`
@@ -162,7 +162,7 @@ window.Header = function Header({
   }, /*#__PURE__*/React.createElement("span", {
     className: "dot"
   }), /*#__PURE__*/React.createElement("span", null, CARTER.company.phone)), /*#__PURE__*/React.createElement("a", {
-    href: "contact.html",
+    href: "/contact.html",
     className: "btn btn-primary btn-sm"
   }, "Discuss Project", /*#__PURE__*/React.createElement("span", {
     dangerouslySetInnerHTML: {
@@ -190,7 +190,7 @@ window.TrustBar = function TrustBar({
 }) {
   const pinText = area ? `${area.name} · ${area.postcodes && area.postcodes.length ? area.postcodes[0] : 'CH3'}` : 'Chester · CH3';
   const items = [{
-    img: 'uploads/nic.png',
+    img: '/uploads/nic.png',
     alt: 'NICEIC Approved Contractor logo',
     top: 'NICEIC',
     bottom: 'Approved Contractor'
@@ -203,7 +203,7 @@ window.TrustBar = function TrustBar({
     top: pinText,
     bottom: 'Local & On-Call'
   }, {
-    img: 'uploads/ozev-logo.jpg',
+    img: '/uploads/ozev-logo.jpg',
     alt: 'OZEV-approved EV charger installer logo',
     top: 'OZEV Registered',
     bottom: 'EV Charger Install'
@@ -270,23 +270,23 @@ window.Footer = function Footer() {
       color: 'rgba(255,255,255,0.4)'
     }
   }, "NICEIC \xB7 Est. ", CARTER.company.founded)), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h4", null, "Services"), /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
-    href: "commercial.html"
+    href: "/commercial.html"
   }, "Commercial")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
-    href: "industrial.html"
+    href: "/industrial.html"
   }, "Industrial")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
-    href: "domestic.html"
+    href: "/domestic.html"
   }, "Domestic")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
-    href: "services.html#renewables"
+    href: "/services.html#renewables"
   }, "Renewables & EV")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
-    href: "services.html#testing"
+    href: "/services.html#testing"
   }, "Inspection & Testing")))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h4", null, "Company"), /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
-    href: "about.html"
+    href: "/about.html"
   }, "About")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
-    href: "case-studies.html"
+    href: "/case-studies.html"
   }, "Case Studies")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
-    href: "areas.html"
+    href: "/areas.html"
   }, "Areas We Cover")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
-    href: "contact.html"
+    href: "/contact.html"
   }, "Contact")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
     href: CARTER.company.socialFb
   }, "Facebook")))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h4", null, "Hours"), /*#__PURE__*/React.createElement("ul", {
@@ -347,7 +347,7 @@ window.Footer = function Footer() {
       flexWrap: 'wrap'
     }
   }, /*#__PURE__*/React.createElement("a", {
-    href: "sitemap.html",
+    href: "/sitemap.html",
     style: {
       color: 'rgba(255,255,255,0.4)',
       textDecoration: 'none',
@@ -356,7 +356,7 @@ window.Footer = function Footer() {
     onMouseEnter: e => e.target.style.color = 'var(--accent)',
     onMouseLeave: e => e.target.style.color = 'rgba(255,255,255,0.4)'
   }, "Sitemap"), /*#__PURE__*/React.createElement("a", {
-    href: "privacy-policy.html",
+    href: "/privacy-policy.html",
     rel: "nofollow",
     style: {
       color: 'rgba(255,255,255,0.4)',
@@ -366,7 +366,7 @@ window.Footer = function Footer() {
     onMouseEnter: e => e.target.style.color = 'var(--accent)',
     onMouseLeave: e => e.target.style.color = 'rgba(255,255,255,0.4)'
   }, "Privacy Policy"), /*#__PURE__*/React.createElement("a", {
-    href: "terms.html",
+    href: "/terms.html",
     rel: "nofollow",
     style: {
       color: 'rgba(255,255,255,0.4)',

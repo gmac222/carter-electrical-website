@@ -729,7 +729,7 @@ function TermsOfUsePage() {
   }, /*#__PURE__*/React.createElement("div", {
     className: "prose"
   }, /*#__PURE__*/React.createElement("h2", null, "1. Agreement to Terms"), /*#__PURE__*/React.createElement("p", null, "By accessing and browsing the website ", /*#__PURE__*/React.createElement("a", {
-    href: "index.html"
+    href: "/"
   }, "carterelec.co.uk"), ", you agree to comply with and be bound by these Terms of Use, along with our Privacy Policy. If you disagree with any part of these terms, please do not use our website."), /*#__PURE__*/React.createElement("h2", null, "2. Intellectual Property Rights"), /*#__PURE__*/React.createElement("p", null, "Unless otherwise stated, Carter Electrical Contracting Ltd owns the intellectual property rights for all material on this website, including all photography, design layouts, graphics, logos, and written copy. All intellectual property rights are reserved."), /*#__PURE__*/React.createElement("p", null, "You must not republish, sell, rent, sub-license, duplicate, or redistribute any content from this website without our prior written consent."), /*#__PURE__*/React.createElement("h2", null, "3. Acceptable Use"), /*#__PURE__*/React.createElement("p", null, "You must use our website in a lawful manner that does not damage, disrupt, or impair the accessibility of the site, or interfere with other users' enjoyment. You must not use this website to distribute malware, spyware, viruses, or any other harmful software."), /*#__PURE__*/React.createElement("h2", null, "4. Disclaimer of Warranties"), /*#__PURE__*/React.createElement("p", null, "The information provided on this website is for general guidance and informational purposes only. While we endeavour to ensure that all information on this website is accurate and current, we do not warrant its completeness or accuracy, nor do we commit to ensuring the website remains available."), /*#__PURE__*/React.createElement("p", null, "All electrical installations, compliance regulations, and technical certifications are governed by our formal customer contracts and NICEIC standards, not the general content of this website."), /*#__PURE__*/React.createElement("h2", null, "5. Limitation of Liability"), /*#__PURE__*/React.createElement("p", null, "To the maximum extent permitted by UK law, Carter Electrical Contracting Ltd will not be liable for any direct, indirect, or consequential loss or damage arising under these terms or in connection with the use of our website."), /*#__PURE__*/React.createElement("h2", null, "6. Governing Law"), /*#__PURE__*/React.createElement("p", null, "These Terms of Use are governed by and construed in accordance with the laws of England and Wales. Any disputes relating to these terms will be subject to the exclusive jurisdiction of the courts of England and Wales."))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
 }
 function SitemapPage() {
@@ -773,7 +773,7 @@ function SitemapPage() {
       gap: '12px'
     }
   }, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
-    href: "index.html",
+    href: "/",
     style: {
       color: 'var(--ink)',
       textDecoration: 'none',

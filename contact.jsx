@@ -82,7 +82,7 @@ function ContactForm() {
           <div className="ref">Reference · {refNum}</div>
           <div style={{ marginTop: 24, display: 'flex', gap: 12 }}>
             <a href={CARTER.company.phoneHref} className="btn btn-primary">Call {CARTER.company.phone}</a>
-            <a href="index.html" className="btn btn-ghost-dark">Back to home</a>
+            <a href="/" className="btn btn-ghost-dark">Back to home</a>
           </div>
         </div>
       </div>

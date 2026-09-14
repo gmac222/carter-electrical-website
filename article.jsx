@@ -22,7 +22,14 @@ function ArticleHeader({ post }) {
             {post.author ? post.author.charAt(0) : 'C'}
           </div>
           <div>
-            <div style={{ fontWeight: 600, fontSize: 16, color: '#fff' }}>{post.author || 'Carter Electrical Contracting'}</div>
+            <a 
+              href="/about.html" 
+              style={{ fontWeight: 600, fontSize: 16, color: '#fff', textDecoration: 'none', transition: 'color 0.2s' }}
+              onMouseEnter={(e) => e.target.style.color = 'var(--accent)'}
+              onMouseLeave={(e) => e.target.style.color = '#fff'}
+            >
+              {post.author || 'Carter Electrical Contracting'}
+            </a>
             <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: 14 }}>Author</div>
           </div>
         </div>
