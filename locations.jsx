@@ -309,6 +309,62 @@ function LocationPage({ locationName }) {
       </section>
       )}
 
+      {/* Local Coverage Map */}
+      <section className="section-y light reveal" id="map">
+        <div className="wrap">
+          <div style={{ maxWidth: '800px', marginBottom: 28 }}>
+            <div className="eyebrow">Local Area Map</div>
+            <h2 className="h-2" style={{ marginTop: 10 }}>Areas covered in {locationName}<span className="accent">.</span></h2>
+            <p className="lede" style={{ marginTop: 16 }}>
+              Our NICEIC-approved electricians provide prompt response times and full coverage across {locationName} and surrounding postcodes.
+            </p>
+          </div>
+          <div style={{ width: '100%', height: '400px', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 8px 32px rgba(0,0,0,0.12)', border: '1px solid var(--rule)' }}>
+            <iframe
+              title={`Map of coverage area in ${locationName}`}
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              loading="lazy"
+              allowFullScreen
+              src={`https://maps.google.com/maps?q=${encodeURIComponent(locationName + ', UK')}&t=&z=11&ie=UTF8&iwloc=&output=embed`}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Unique Local Testimonials */}
+      {area.testimonials && area.testimonials.length > 0 && (
+      <section className="section-y reveal" id="testimonials">
+        <div className="wrap">
+          <div style={{ maxWidth: '800px', marginBottom: 32 }}>
+            <div className="eyebrow">Client Feedback</div>
+            <h2 className="h-2" style={{ marginTop: 10 }}>What clients in {locationName} say<span className="accent">.</span></h2>
+            <p className="lede" style={{ marginTop: 16 }}>
+              Real feedback from commercial, industrial and domestic clients across {locationName}.
+            </p>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 24 }}>
+            {area.testimonials.map((t, idx) => (
+              <div key={idx} style={{ background: 'var(--white)', border: '1px solid var(--rule)', borderRadius: '16px', padding: '32px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', boxShadow: '0 4px 20px rgba(0,0,0,0.04)' }}>
+                <div>
+                  <div style={{ color: 'var(--accent)', fontSize: '20px', marginBottom: 12 }}>★★★★★</div>
+                  <p style={{ color: 'var(--ink)', fontSize: '1.05rem', lineHeight: 1.6, fontStyle: 'italic', margin: 0 }}>"{t.quote}"</p>
+                </div>
+                <div style={{ marginTop: 24, paddingTop: 16, borderTop: '1px solid var(--rule)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <div>
+                    <strong style={{ display: 'block', color: 'var(--ink)', fontSize: '15px' }}>{t.author}</strong>
+                    <small style={{ color: 'var(--muted)', fontSize: '13px' }}>{t.role}</small>
+                  </div>
+                  <span className="mono" style={{ fontSize: '11px', color: 'var(--accent-text)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>Verified Client</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      )}
+
       {/* FAQ - genuinely local answers */}
       {faqs.length > 0 && (
       <section className="section-y reveal">

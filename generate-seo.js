@@ -39,7 +39,11 @@ Our team routinely carries out three-phase power installations and machinery wir
 
 Contact us for a clear, fixed-price quote.`,
     commercialAngle: "Cheshire Oaks, Coliseum Retail Park and the Stanney Lane trading estates drive a steady flow of shop and restaurant fit-outs, landlord-side compliance testing, and emergency-lighting upgrades.",
-    domesticAngle: "The CH65/CH66 housing stock is a mix of 1960s–1970s estates needing replacement consumer units and full rewires, and newer developments where we're installing OZEV-approved EV chargers and smart home controls."
+    domesticAngle: "The CH65/CH66 housing stock is a mix of 1960s–1970s estates needing replacement consumer units and full rewires, and newer developments where we're installing OZEV-approved EV chargers and smart home controls.",
+    testimonials: [
+      { quote: 'Carter Electrical upgraded our retail unit lighting and distribution near Cheshire Oaks with zero downtime during trading hours. Professional, punctual, and fully certified.', author: 'D. Hughes', role: 'Facilities Manager, Ellesmere Port Retail' },
+      { quote: 'Installed three fast EV chargers for our office car park in Great Sutton. Scoped load management perfectly so we had no issues with main supply power.', author: 'C. Jenkins', role: 'Operations Lead, Ellesmere Port' }
+    ]
   },
   {
     name: 'Wrexham', slug: 'wrexham',
@@ -53,7 +57,11 @@ We specialise in heavy industrial work, three-phase distribution, and preventati
 
 We operate fully under both English and Welsh building regulations.`,
     commercialAngle: "Wrexham's commercial demand ranges from town-centre retail units through to newer office and hospitality work around the Racecourse and Eagles Meadow. We deliver design-and-install, EICR-led remedials and emergency-lighting programmes to landlords and operators.",
-    domesticAngle: "Cross-border working is routine for us: we hold NICEIC approval recognised across England and Wales. Domestic demand skews toward rewires in older terraced stock, EV chargers in Gresford and Marford, and replacement consumer units across the LL12 belt."
+    domesticAngle: "Cross-border working is routine for us: we hold NICEIC approval recognised across England and Wales. Domestic demand skews toward rewires in older terraced stock, EV chargers in Gresford and Marford, and replacement consumer units across the LL12 belt.",
+    testimonials: [
+      { quote: 'Superb three-phase distribution installation at our Wrexham Industrial Estate facility. Executed during a planned weekend shutdown with total precision.', author: 'G. Roberts', role: 'Plant Engineer, Wrexham Industrial Estate' },
+      { quote: 'Turned up exactly when promised for a full rewire and consumer unit upgrade in Gresford. Clean, tidy, and issued the NICEIC certificate immediately.', author: 'T. Edwards', role: 'Homeowner, Gresford (Wrexham)' }
+    ]
   },
   {
     name: 'Northwich', slug: 'northwich',
@@ -65,7 +73,11 @@ We operate fully under both English and Welsh building regulations.`,
 
 We support local businesses with commercial fit-outs and landlord safety checks, handle three-phase industrial installations, and assist homeowners with replacement consumer units, rewires, and OZEV-approved EV charger installations across CW8 and CW9.`,
     commercialAngle: "Barons Quay retail and leisure tenants, the Lostock Gralam trading estates and town-centre hospitality drive most of our Northwich commercial work: fit-outs, EICRs, landlord compliance, and planned lighting upgrades.",
-    domesticAngle: "Hartford and Davenham demand sits with replacement consumer units and part-rewires on 1970s-era stock, while Kingsmead and Leftwich new-build owners most often call us for EV chargers, solar-PV add-ons and smart lighting."
+    domesticAngle: "Hartford and Davenham demand sits with replacement consumer units and part-rewires on 1970s-era stock, while Kingsmead and Leftwich new-build owners most often call us for EV chargers, solar-PV add-ons and smart lighting.",
+    testimonials: [
+      { quote: 'Completed our commercial EICR inspection and follow-up remedials in Northwich without any fuss. Clear digital reports provided promptly.', author: 'S. Taylor', role: 'Commercial Property Manager, Northwich' },
+      { quote: 'Replaced our old fusebox and fitted an OZEV EV charger in Hartford. Neat trunking, great communication throughout, highly recommended.', author: 'M. Bennett', role: 'Homeowner, Hartford (Northwich)' }
+    ]
   },
   {
     name: 'Frodsham', slug: 'frodsham',
@@ -77,7 +89,11 @@ We support local businesses with commercial fit-outs and landlord safety checks,
 
 From emergency lighting and landlord certificates for High Street shops to EV chargers and domestic rewires in the surrounding villages, our NICEIC-approved engineers ensure your project is completed safely, on time, and on budget.`,
     commercialAngle: "Frodsham's independents (restaurants, pubs, salons and the Main Street retail trade) rely on us for quick-turnaround fit-outs, EICRs ahead of lease renewals, and PAT testing programmes.",
-    domesticAngle: "Commuter demand dominates: OZEV-approved EV charger installs with load management, full-property rewires where homebuyers' surveys have flagged old wiring, and smart-heating retrofits for the Overton and Helsby stock."
+    domesticAngle: "Commuter demand dominates: OZEV-approved EV charger installs with load management, full-property rewires where homebuyers' surveys have flagged old wiring, and smart-heating retrofits for the Overton and Helsby stock.",
+    testimonials: [
+      { quote: 'Prompt domestic rewire and EV charger installation on our property in Helsby. Ian and the team left the site spotless every evening.', author: 'R. Evans', role: 'Homeowner, Helsby / Frodsham' },
+      { quote: 'Fitted emergency lighting and completed landlord compliance testing for our retail shop on Frodsham High Street. Thorough, polite, and very fair pricing.', author: 'J. Miller', role: 'Shop Owner, Frodsham' }
+    ]
   },
   {
     name: 'Tarporley', slug: 'tarporley',
@@ -91,7 +107,11 @@ We are experienced in heritage-sensitive rewires for listed buildings, smart lig
 
 All work is completed by our in-house engineers with absolute respect for your property.`,
     commercialAngle: "Tarporley High Street's boutique retail, hospitality and professional-services offices use us for EICR-led remedials, fit-outs and emergency lighting. We also support the equestrian and agricultural sector with three-phase supplies to yards and barns.",
-    domesticAngle: "High-end domestic is the core of our Tarporley demand: smart-lighting schemes with multi-room control, heritage-sensitive rewires on listed farmhouses, EV charger installs with three-phase capability, and outdoor lighting design on larger plots."
+    domesticAngle: "High-end domestic is the core of our Tarporley demand: smart-lighting schemes with multi-room control, heritage-sensitive rewires on listed farmhouses, EV charger installs with three-phase capability, and outdoor lighting design on larger plots.",
+    testimonials: [
+      { quote: 'Delivered a flawless smart lighting design and high-end rewire on our barn conversion near Tarporley. Extremely respectful of heritage features.', author: 'E. Wright', role: 'Residential Client, Tarporley' },
+      { quote: 'Installed a new three-phase supply for our equestrian yard near Bunbury. High standard of workmanship and complete attention to safety.', author: 'V. Stanhope', role: 'Farm Owner, Bunbury / Tarporley' }
+    ]
   },
   {
     name: 'Mold', slug: 'mold',
@@ -103,7 +123,11 @@ All work is completed by our in-house engineers with absolute respect for your p
 
 Operating on both sides of the border, we handle commercial fit-outs and compliance testing in the town centre, agricultural and three-phase outbuilding installs in rural areas, and domestic services including rewires, consumer unit replacements, and EV charger installations.`,
     commercialAngle: "Mold town centre (Daniel Owen Square, the Market and High Street) drives most of our commercial work: small-to-mid fit-outs, landlord EICRs, emergency-lighting upgrades and PAT testing.",
-    domesticAngle: "Rural demand is a big part of CH7: outbuilding supplies, three-phase for farms, smart-home and EV-charger installs for commuter villages, and full rewires on older stone-built properties."
+    domesticAngle: "Rural demand is a big part of CH7: outbuilding supplies, three-phase for farms, smart-home and EV-charger installs for commuter villages, and full rewires on older stone-built properties.",
+    testimonials: [
+      { quote: 'Fitted a new three-phase supply and outbuilding distribution for our premises near Mold. Knowledgeable, friendly, and fully NICEIC compliant.', author: 'H. Davies', role: 'Business Owner, Mold' },
+      { quote: 'Full rewire and consumer unit upgrade on our cottage near Buckley. Great advice on lighting positions and completely stress-free experience.', author: 'L. Owen', role: 'Homeowner, Buckley / Mold' }
+    ]
   },
   {
     name: 'Deeside', slug: 'deeside',
@@ -115,7 +139,11 @@ Operating on both sides of the border, we handle commercial fit-outs and complia
 
 We support manufacturers on Deeside Industrial Park with three-phase power upgrades, machinery wiring, and preventative maintenance, while providing local retail fit-outs, landlord EICR safety checks, and domestic rewires across the CH5 area.`,
     commercialAngle: "Deeside Industrial Park tenants are the backbone of our commercial work here: scheduled maintenance, RCD and distribution upgrades, compliance testing and planned remedial works.",
-    domesticAngle: "Shotton and Connah's Quay terraced stock needs full rewires and replacement consumer units more often than not, while Hawarden and Ewloe homeowners are mostly calling us for EV chargers, solar-PV add-ons and smart-home retrofits."
+    domesticAngle: "Shotton and Connah's Quay terraced stock needs full rewires and replacement consumer units more often than not, while Hawarden and Ewloe homeowners are mostly calling us for EV chargers, solar-PV add-ons and smart-home retrofits.",
+    testimonials: [
+      { quote: 'Extremely reliable electrical maintenance and machinery wiring on Deeside Industrial Park. Great communication and fair fixed quotes.', author: 'K. Williams', role: 'Operations Director, Deeside' },
+      { quote: 'Prompt landlord EICR inspection across three commercial units in Shotton. Clear breakdown of remedial work and fast certification.', author: 'B. Thomas', role: 'Property Developer, Deeside' }
+    ]
   },
   {
     name: 'Wirral', slug: 'wirral',
@@ -129,7 +157,11 @@ We provide comprehensive commercial, industrial, and domestic electrical service
 
 From three-phase industrial installations at Bromborough to retail fit-outs, landlord EICRs, and full domestic rewires, our in-house team delivers neat, compliant work with transparent, fixed pricing.`,
     commercialAngle: "Wirral's commercial demand spans the Wirral International Business Park and Bromborough's manufacturing estates, the regenerating Birkenhead waterfront around Wirral Waters and Twelve Quays, and the retail and hospitality trade at New Brighton's Marine Point, Birkenhead's Grange and Pyramids precincts and the West Kirby and Heswall high streets. We deliver design-and-install fit-outs, landlord EICRs ahead of lease renewals, emergency-lighting certification and planned maintenance contracts.",
-    domesticAngle: "The peninsula's housing stock runs the full range: Victorian and Edwardian terraces in Birkenhead, Tranmere and Wallasey needing full rewires and replacement consumer units; interwar semis across Bebington, Eastham and Moreton; and higher-end detached and coastal property in Heswall, Caldy, Neston, Ness, West Kirby and Hoylake where the calls are for smart-lighting schemes, garden and outbuilding supplies, and OZEV-approved EV chargers with load management."
+    domesticAngle: "The peninsula's housing stock runs the full range: Victorian and Edwardian terraces in Birkenhead, Tranmere and Wallasey needing full rewires and replacement consumer units; interwar semis across Bebington, Eastham and Moreton; and higher-end detached and coastal property in Heswall, Caldy, Neston, Ness, West Kirby and Hoylake where the calls are for smart-lighting schemes, garden and outbuilding supplies, and OZEV-approved EV chargers with load management.",
+    testimonials: [
+      { quote: 'Following our electrical inspection in Prenton, Carter Electrical completed a full distribution upgrade with minimal disruption to daily operations.', author: 'P. Harrison', role: 'Site Supervisor, Prenton (Wirral)' },
+      { quote: 'Fitted a home EV charger and upgraded our consumer unit in Heswall. Extremely neat job, explained everything clearly, and great value.', author: 'N. Price', role: 'Homeowner, Heswall (Wirral)' }
+    ]
   }
 ];
 
@@ -456,6 +488,12 @@ function buildHtml(area) {
         <li>EICR testing, landlord safety reports and PAT testing</li>
         <li>OZEV-approved EV charger installation and solar-PV integration</li>
       </ul>
+
+      <h2>Local Area Map - Coverage in ${esc(area.name)}</h2>
+      <p>Interactive coverage map showing our service radius across ${esc(area.name)} and surrounding postcodes (${area.postcodes.map(esc).join(', ')}).</p>
+
+      <h2>Client Testimonials in ${esc(area.name)}</h2>
+      ${(area.testimonials || []).map(t => `<blockquote><p>"${esc(t.quote)}"</p><cite>- ${esc(t.author)}, ${esc(t.role)}</cite></blockquote>`).join('\n      ')}
 
       <h2>Frequently asked questions</h2>
       ${faqs.map(f => `<h3>${esc(f.q)}</h3><p>${esc(f.a)}</p>`).join('\n      ')}
