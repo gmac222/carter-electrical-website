@@ -402,7 +402,7 @@ function buildHtml(area) {
     : areas.filter(a => a.slug !== area.slug);
   const otherAreas = [chesterObj, ...adjacentList].filter(a => a && a.slug !== area.slug);
 
-  // Schema: BreadcrumbList + LocalBusiness (ElectricalContractor) + FAQPage + Service
+  // Schema: BreadcrumbList + LocalBusiness (Electrician) + FAQPage + Service
   const schema = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -415,7 +415,7 @@ function buildHtml(area) {
         ]
       },
       {
-        '@type': ['LocalBusiness', 'ElectricalContractor'],
+        '@type': ['LocalBusiness', 'Electrician'],
         '@id': url + '#business',
         name: COMPANY.name,
         url: url,
