@@ -23,10 +23,8 @@ function CaseIndex() {
     current: "cases",
     theme: "dark"
   }), /*#__PURE__*/React.createElement(PageHero, {
-    section: "Case Studies",
-    sectionNum: "06 / Work",
-    title: "Real projects.",
-    titleAccent: "Properly delivered.",
+    section: "View Some of Our Work",
+    title: "Case Studies.",
     subtext: "A proven track record across commercial, hospitality, domestic and industrial work - completed, signed off and documented."
   }), /*#__PURE__*/React.createElement("section", {
     className: "cases"
