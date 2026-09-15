@@ -155,7 +155,7 @@ function Services() {
         <div className="section-head reveal">
           <div>
             <div className="eyebrow">Services</div>
-            <h2 className="h-1">One contractor<span className="accent">.</span><br/>The full electrical scope<span className="accent">.</span></h2>
+            <h2 className="h-1">Services<span className="accent">.</span></h2>
             <p className="lede">
               From a single board upgrade to a full commercial fit-out. Certified,
               compliant and delivered by an in-house team that owns the job end

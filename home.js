@@ -272,9 +272,7 @@ function Services() {
     className: "eyebrow"
   }, "Services"), /*#__PURE__*/React.createElement("h2", {
     className: "h-1"
-  }, "One contractor", /*#__PURE__*/React.createElement("span", {
-    className: "accent"
-  }, "."), /*#__PURE__*/React.createElement("br", null), "The full electrical scope", /*#__PURE__*/React.createElement("span", {
+  }, "Services", /*#__PURE__*/React.createElement("span", {
     className: "accent"
   }, ".")), /*#__PURE__*/React.createElement("p", {
     className: "lede"
