@@ -218,7 +218,6 @@ function Industrial() {
     <>
       <Header current="industrial" theme="dark" />
       <IndustrialHero />
-      <TrustBar />
       <Capabilities />
       <EditorialSection />
       <Process />

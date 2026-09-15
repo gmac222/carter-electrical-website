@@ -557,8 +557,6 @@ function LocationPage({ locationName }) {
         }
       />
 
-      <TrustBar area={area} />
-
       {contentBlocks}
 
       {/* CTA */}

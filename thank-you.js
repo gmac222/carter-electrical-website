@@ -90,6 +90,6 @@ function ThankYouPage() {
   }, "Call ", CARTER.company.phone), /*#__PURE__*/React.createElement("a", {
     href: "/",
     className: "btn btn-ghost-light"
-  }, "Back to Home"))))), /*#__PURE__*/React.createElement(TrustBar, null), /*#__PURE__*/React.createElement(Footer, null));
+  }, "Back to Home"))))), /*#__PURE__*/React.createElement(Footer, null));
 }
 ReactDOM.hydrateRoot(document.getElementById('root'), /*#__PURE__*/React.createElement(ThankYouPage, null));

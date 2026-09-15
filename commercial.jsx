@@ -212,7 +212,6 @@ function Commercial() {
     <>
       <Header current="commercial" theme="dark" />
       <CommercialHero />
-      <TrustBar />
       <Capabilities />
       <EditorialSection />
       <Process />

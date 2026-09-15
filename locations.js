@@ -968,8 +968,6 @@ function LocationPage({
         height: 14
       }
     }), "Call ", CARTER.company.phone))
-  }), /*#__PURE__*/React.createElement(TrustBar, {
-    area: area
   }), contentBlocks, /*#__PURE__*/React.createElement("section", {
     className: "cta-band reveal"
   }, /*#__PURE__*/React.createElement("div", {

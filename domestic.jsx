@@ -214,7 +214,6 @@ function Domestic() {
     <>
       <Header current="domestic" theme="dark" />
       <DomesticHero />
-      <TrustBar />
       <Capabilities />
       <EditorialSection />
       <Process />

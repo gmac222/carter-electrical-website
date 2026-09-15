@@ -52,7 +52,6 @@ function ThankYouPage() {
         </div>
       </section>
 
-      <TrustBar />
       <Footer />
     </>
   );

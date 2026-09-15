@@ -414,13 +414,15 @@ section { position: relative; }
 
 .hero-strip {
   position: relative;
-  border-top: 1px solid rgba(255,255,255,0.08);
+  background: var(--white);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
 .hero-strip .cell {
   padding: 22px 24px;
-  border-right: 1px solid rgba(255,255,255,0.08);
+  border-right: 1px solid var(--rule);
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -431,21 +433,21 @@ section { position: relative; }
   font-size: 10.5px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.45);
+  color: var(--muted-2);
 }
 .hero-strip .v {
   font-family: var(--font-display);
   font-size: 15px;
-  color: var(--white);
+  color: var(--ink);
   font-weight: 500;
 }
-.hero-strip .v .accent { color: var(--accent); }
+.hero-strip .v .accent { color: var(--accent-text); }
 
 @media (max-width: 780px) {
   .hero-strip { grid-template-columns: repeat(2, 1fr); }
   .hero-strip .cell:nth-child(2) { border-right: 0; }
   .hero-strip .cell:nth-child(1),
-  .hero-strip .cell:nth-child(2) { border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .hero-strip .cell:nth-child(2) { border-bottom: 1px solid var(--rule); }
 }
 
 /* ---------- Intro Section ---------- */
@@ -1960,7 +1962,7 @@ details + details { border-top: none; }
   .hero-strip { grid-template-columns: 1fr 1fr; }
   .hero-strip .cell:nth-child(3) { border-right: 0; }
   .hero-strip .cell:nth-child(1),
-  .hero-strip .cell:nth-child(2) { border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .hero-strip .cell:nth-child(2) { border-bottom: 1px solid var(--rule); }
   .hero-strip .cell:nth-child(3),
   .hero-strip .cell:nth-child(4) { border-bottom: 0; }
 }
