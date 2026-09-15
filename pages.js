@@ -46,17 +46,18 @@ function AboutPage() {
     className: "wrap"
   }, /*#__PURE__*/React.createElement("div", {
     style: {
-      maxWidth: '800px',
-      margin: '0 auto'
+      maxWidth: '800px'
     }
   }, /*#__PURE__*/React.createElement("div", {
     className: "eyebrow"
-  }, "Our Story"), /*#__PURE__*/React.createElement("h2", {
+  }, "Serving customers since 2019"), /*#__PURE__*/React.createElement("h2", {
     className: "h-1",
     style: {
       margin: '18px 0 24px'
     }
-  }, "Serving the region since 2019."), /*#__PURE__*/React.createElement("p", {
+  }, "Our Story", /*#__PURE__*/React.createElement("span", {
+    className: "accent"
+  }, ".")), /*#__PURE__*/React.createElement("p", {
     className: "lede",
     style: {
       marginBottom: 20

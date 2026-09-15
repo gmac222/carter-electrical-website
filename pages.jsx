@@ -22,9 +22,9 @@ function AboutPage() {
 
       <section className="section-y light reveal">
         <div className="wrap">
-          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-            <div className="eyebrow">Our Story</div>
-            <h2 className="h-1" style={{ margin: '18px 0 24px' }}>Serving the region since 2019.</h2>
+          <div style={{ maxWidth: '800px' }}>
+            <div className="eyebrow">Serving customers since 2019</div>
+            <h2 className="h-1" style={{ margin: '18px 0 24px' }}>Our Story<span className="accent">.</span></h2>
             <p className="lede" style={{ marginBottom: 20 }}>
               Established in 2019, Carter Electrical Contracting has built a solid reputation as a reliable and professional electrical contractor in the North West.
             </p>
