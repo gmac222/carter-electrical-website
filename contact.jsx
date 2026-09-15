@@ -238,8 +238,6 @@ function ContactPage() {
                 <div className="contact-row"><span className="k">Address</span><span className="v" style={{ textAlign: 'right', fontSize: 13 }}>{CARTER.company.address.join(', ')}</span></div>
                 <div className="contact-row"><span className="k">Phone</span><span className="v"><a href={CARTER.company.phoneHref}>{CARTER.company.phone}</a></span></div>
                 <div className="contact-row"><span className="k">Email</span><span className="v" style={{ fontSize: 13 }}><a href={`mailto:${CARTER.company.email}`}>{CARTER.company.email}</a></span></div>
-                <div className="contact-row"><span className="k">NICEIC</span><span className="v">Approved Contractor</span></div>
-                <div className="contact-row"><span className="k">OZEV</span><span className="v">EV Installer</span></div>
               </div>
               <div className="static-map" style={{ overflow: 'hidden', position: 'relative' }}>
                 <iframe

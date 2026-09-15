@@ -369,19 +369,7 @@ function ContactPage() {
     }
   }, /*#__PURE__*/React.createElement("a", {
     href: `mailto:${CARTER.company.email}`
-  }, CARTER.company.email))), /*#__PURE__*/React.createElement("div", {
-    className: "contact-row"
-  }, /*#__PURE__*/React.createElement("span", {
-    className: "k"
-  }, "NICEIC"), /*#__PURE__*/React.createElement("span", {
-    className: "v"
-  }, "Approved Contractor")), /*#__PURE__*/React.createElement("div", {
-    className: "contact-row"
-  }, /*#__PURE__*/React.createElement("span", {
-    className: "k"
-  }, "OZEV"), /*#__PURE__*/React.createElement("span", {
-    className: "v"
-  }, "EV Installer"))), /*#__PURE__*/React.createElement("div", {
+  }, CARTER.company.email)))), /*#__PURE__*/React.createElement("div", {
     className: "static-map",
     style: {
       overflow: 'hidden',
