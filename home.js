@@ -15,14 +15,14 @@ const HERO_HEADLINES = {
     h1: /*#__PURE__*/React.createElement(React.Fragment, null, "Electricians in Chester", /*#__PURE__*/React.createElement("span", {
       className: "accent"
     }, ".")),
-    strapline: /*#__PURE__*/React.createElement(React.Fragment, null, "Electrical services ", /*#__PURE__*/React.createElement("span", {
+    strapline: /*#__PURE__*/React.createElement(React.Fragment, null, "NICEIC-", /*#__PURE__*/React.createElement("span", {
       className: "accent"
-    }, "you can trust", /*#__PURE__*/React.createElement("span", {
+    }, "approved", /*#__PURE__*/React.createElement("span", {
       style: {
         color: 'var(--white)'
       }
     }, "."))),
-    sub: 'Chester Based Commercial, industrial and domestic electrical services.'
+    sub: 'Chester-based commercial, industrial and domestic electrical services.'
   },
   credential: {
     eyebrow: 'NICEIC Approved · Est. 2019',
