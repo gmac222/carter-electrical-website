@@ -420,11 +420,9 @@ function Cases() {
     className: "section-head"
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "eyebrow"
-  }, "Case Studies"), /*#__PURE__*/React.createElement("h2", {
+  }, "Selected Work"), /*#__PURE__*/React.createElement("h2", {
     className: "h-1"
-  }, "Real projects", /*#__PURE__*/React.createElement("span", {
-    className: "accent"
-  }, "."), /*#__PURE__*/React.createElement("br", null), "Real sign-offs", /*#__PURE__*/React.createElement("span", {
+  }, "Case Studies", /*#__PURE__*/React.createElement("span", {
     className: "accent"
   }, "."))), /*#__PURE__*/React.createElement("p", {
     className: "lede"
@@ -477,7 +475,7 @@ function Testimonials() {
     className: "section-head"
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "eyebrow"
-  }, "Client Testimonials"), /*#__PURE__*/React.createElement("h2", {
+  }, "Client Feedback"), /*#__PURE__*/React.createElement("h2", {
     className: "h-1"
   }, "Client Testimonials", /*#__PURE__*/React.createElement("span", {
     className: "accent"
@@ -516,9 +514,9 @@ function Areas() {
     style: {
       color: '#8a8a85'
     }
-  }, "Areas We Cover"), /*#__PURE__*/React.createElement("h2", {
+  }, "Coverage Area"), /*#__PURE__*/React.createElement("h2", {
     className: "h-1"
-  }, "Covering the", /*#__PURE__*/React.createElement("br", null), "North West & North Wales", /*#__PURE__*/React.createElement("span", {
+  }, "Areas We Cover", /*#__PURE__*/React.createElement("span", {
     className: "accent"
   }, "."))), /*#__PURE__*/React.createElement("p", {
     className: "lede",

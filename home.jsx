@@ -261,8 +261,8 @@ function Cases() {
       <div className="wrap">
         <div className="section-head">
           <div>
-            <div className="eyebrow">Case Studies</div>
-            <h2 className="h-1">Real projects<span className="accent">.</span><br/>Real sign-offs<span className="accent">.</span></h2>
+            <div className="eyebrow">Selected Work</div>
+            <h2 className="h-1">Case Studies<span className="accent">.</span></h2>
           </div>
           <p className="lede">
             A cross-section of recent installations. Commercial fit-outs,
@@ -324,7 +324,7 @@ function Testimonials() {
       <div className="wrap">
         <div className="section-head">
           <div>
-            <div className="eyebrow">Client Testimonials</div>
+            <div className="eyebrow">Client Feedback</div>
             <h2 className="h-1">Client Testimonials<span className="accent">.</span></h2>
           </div>
           <p className="lede">
@@ -360,8 +360,8 @@ function Areas() {
       <div className="wrap">
         <div className="section-head" style={{ marginBottom: 50 }}>
           <div>
-            <div className="eyebrow" style={{ color: '#8a8a85' }}>Areas We Cover</div>
-            <h2 className="h-1">Covering the<br/>North West &amp; North Wales<span className="accent">.</span></h2>
+            <div className="eyebrow" style={{ color: '#8a8a85' }}>Coverage Area</div>
+            <h2 className="h-1">Areas We Cover<span className="accent">.</span></h2>
           </div>
           <p className="lede" style={{ color: 'rgba(255,255,255,0.7)' }}>
             Based at Unit 5, White Lane Depot in Christleton. Regular coverage across a 40–50 mile radius for both planned works and urgent call-outs.
