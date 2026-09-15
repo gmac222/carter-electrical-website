@@ -11,7 +11,7 @@ const HERO_HEADLINES = {
         Electrical services <span className="accent">you can trust<span style={{ color: 'var(--white)' }}>.</span></span>
       </>
     ),
-    sub: 'Commercial, industrial and domestic electrical services across the North West and North Wales. Local electricians covering the full electrics scope from first fix to sign-off.',
+    sub: 'Chester Based Commercial, industrial and domestic electrical services.',
   },
   credential: {
     eyebrow: 'NICEIC Approved · Est. 2019',
