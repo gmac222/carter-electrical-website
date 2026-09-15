@@ -130,16 +130,16 @@ function Intro() {
         </div>
 
         {/* Facts strip */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 1, background: 'var(--rule)', border: '1px solid var(--rule)', marginTop: 40 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 1, background: 'var(--rule)', border: '1px solid var(--rule)', marginTop: 24 }}>
           {[
             { k: 'Coverage', v: 'Chester & Cheshire West' },
             { k: 'Response time', v: 'Within 48 hours' },
             { k: 'Accreditation', v: 'NICEIC + OZEV' },
             { k: 'Est.', v: '2019 · 7+ years' },
           ].map((r, i) => (
-            <div key={i} style={{ background: 'var(--white)', padding: '24px 22px' }}>
+            <div key={i} style={{ background: 'var(--white)', padding: '20px 20px' }}>
               <div className="mono" style={{ fontSize: 11, letterSpacing: '0.16em', color: 'var(--muted)', textTransform: 'uppercase' }}>{r.k}</div>
-              <div className="display" style={{ fontSize: 16, fontWeight: 500, marginTop: 6 }}>{r.v}</div>
+              <div className="display" style={{ fontSize: 16, fontWeight: 500, marginTop: 4 }}>{r.v}</div>
             </div>
           ))}
         </div>
@@ -198,7 +198,7 @@ function Services() {
                   </ul>
                 </div>
                 <div className="sc-footer">
-                  <span>Get A Quote</span>
+                  <span>View Service</span>
                   <span className="arrow" dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }} />
                 </div>
               </div>
@@ -261,7 +261,7 @@ function Cases() {
       <div className="wrap">
         <div className="section-head">
           <div>
-            <div className="eyebrow">04 · Selected work</div>
+            <div className="eyebrow">Case Studies</div>
             <h2 className="h-1">Real projects<span className="accent">.</span><br/>Real sign-offs<span className="accent">.</span></h2>
           </div>
           <p className="lede">
@@ -306,7 +306,7 @@ function Cases() {
                 <h3>{c.title}</h3>
                 <p>{c.blurb}</p>
                 <span className="link">
-                  View project
+                  View Case Study
                   <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }} />
                 </span>
               </div>
@@ -324,7 +324,7 @@ function Testimonials() {
       <div className="wrap">
         <div className="section-head">
           <div>
-            <div className="eyebrow">05 · In their words</div>
+            <div className="eyebrow">Client Testimonials</div>
             <h2 className="h-1">Client Testimonials<span className="accent">.</span></h2>
           </div>
           <p className="lede">
@@ -360,7 +360,7 @@ function Areas() {
       <div className="wrap">
         <div className="section-head" style={{ marginBottom: 50 }}>
           <div>
-            <div className="eyebrow" style={{ color: '#8a8a85' }}>06 · Areas we cover</div>
+            <div className="eyebrow" style={{ color: '#8a8a85' }}>Areas We Cover</div>
             <h2 className="h-1">Covering the<br/>North West &amp; North Wales<span className="accent">.</span></h2>
           </div>
           <p className="lede" style={{ color: 'rgba(255,255,255,0.7)' }}>
@@ -446,7 +446,7 @@ function CTABand() {
     <section className="cta-band reveal">
       <div className="wrap">
         <div>
-          <div className="eyebrow">07 · Start a conversation</div>
+          <div className="eyebrow">Start a Conversation</div>
           <h2 style={{ marginTop: 20 }}>
             Get Your Free Quote<span className="accent">.</span><br/>Quick &amp; no obligation<span className="accent">.</span>
           </h2>
@@ -485,7 +485,7 @@ function CommercialDomesticDeep() {
       <div className="wrap">
         <div style={{ maxWidth: '800px', marginBottom: 40 }}>
           <div className="eyebrow">Local Capability &amp; Sector Focus</div>
-          <h2 className="h-2" style={{ marginTop: 10 }}>Specialised Electrical Contracting in Chester<span className="accent">.</span></h2>
+          <h2 className="h-2" style={{ marginTop: 10 }}>Electrical Services in Chester<span className="accent">.</span></h2>
           <p className="lede" style={{ marginTop: 16 }}>
             Delivering precision electrical design, installation, and compliance for Chester&rsquo;s commercial premises and residential properties.
           </p>
@@ -646,6 +646,33 @@ function FAQsSection() {
   );
 }
 
+function MapSection() {
+  return (
+    <section className="section-y light reveal" id="map">
+      <div className="wrap">
+        <div style={{ maxWidth: '800px', marginBottom: 28 }}>
+          <div className="eyebrow">Local Area Map</div>
+          <h2 className="h-2" style={{ marginTop: 10 }}>Where We Serve<span className="accent">.</span></h2>
+          <p className="lede" style={{ marginTop: 16 }}>
+            Our qualified engineers provide scheduled coverage across Chester and neighbouring postcodes.
+          </p>
+        </div>
+        <div style={{ width: '100%', height: '400px', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 8px 32px rgba(0,0,0,0.12)', border: '1px solid var(--rule)' }}>
+          <iframe
+            title="Map of coverage area in Chester"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            loading="lazy"
+            allowFullScreen
+            src="https://maps.google.com/maps?q=Chester%2C%20UK&t=&z=11&ie=UTF8&iwloc=&output=embed"
+          />
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Home() {
   useScrollReveal();
   return (
@@ -658,6 +685,7 @@ function Home() {
       <Services />
       <Cases />
       <Testimonials />
+      <MapSection />
       <FAQsSection />
       <Areas />
       <CTABand />

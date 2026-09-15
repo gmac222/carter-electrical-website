@@ -223,7 +223,7 @@ function Intro() {
       gap: 1,
       background: 'var(--rule)',
       border: '1px solid var(--rule)',
-      marginTop: 40
+      marginTop: 24
     }
   }, [{
     k: 'Coverage',
@@ -241,7 +241,7 @@ function Intro() {
     key: i,
     style: {
       background: 'var(--white)',
-      padding: '24px 22px'
+      padding: '20px 20px'
     }
   }, /*#__PURE__*/React.createElement("div", {
     className: "mono",
@@ -256,7 +256,7 @@ function Intro() {
     style: {
       fontSize: 16,
       fontWeight: 500,
-      marginTop: 6
+      marginTop: 4
     }
   }, r.v))))));
 }
@@ -341,7 +341,7 @@ function Services() {
       key: i
     }, c)))), /*#__PURE__*/React.createElement("div", {
       className: "sc-footer"
-    }, /*#__PURE__*/React.createElement("span", null, "Get A Quote"), /*#__PURE__*/React.createElement("span", {
+    }, /*#__PURE__*/React.createElement("span", null, "View Service"), /*#__PURE__*/React.createElement("span", {
       className: "arrow",
       dangerouslySetInnerHTML: {
         __html: CARTER.svg.arrow
@@ -422,7 +422,7 @@ function Cases() {
     className: "section-head"
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "eyebrow"
-  }, "04 \xB7 Selected work"), /*#__PURE__*/React.createElement("h2", {
+  }, "Case Studies"), /*#__PURE__*/React.createElement("h2", {
     className: "h-1"
   }, "Real projects", /*#__PURE__*/React.createElement("span", {
     className: "accent"
@@ -464,7 +464,7 @@ function Cases() {
     className: "case-tag"
   }, s))), /*#__PURE__*/React.createElement("h3", null, c.title), /*#__PURE__*/React.createElement("p", null, c.blurb), /*#__PURE__*/React.createElement("span", {
     className: "link"
-  }, "View project", /*#__PURE__*/React.createElement("span", {
+  }, "View Case Study", /*#__PURE__*/React.createElement("span", {
     dangerouslySetInnerHTML: {
       __html: CARTER.svg.arrow
     }
@@ -479,7 +479,7 @@ function Testimonials() {
     className: "section-head"
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "eyebrow"
-  }, "05 \xB7 In their words"), /*#__PURE__*/React.createElement("h2", {
+  }, "Client Testimonials"), /*#__PURE__*/React.createElement("h2", {
     className: "h-1"
   }, "Client Testimonials", /*#__PURE__*/React.createElement("span", {
     className: "accent"
@@ -518,7 +518,7 @@ function Areas() {
     style: {
       color: '#8a8a85'
     }
-  }, "06 \xB7 Areas we cover"), /*#__PURE__*/React.createElement("h2", {
+  }, "Areas We Cover"), /*#__PURE__*/React.createElement("h2", {
     className: "h-1"
   }, "Covering the", /*#__PURE__*/React.createElement("br", null), "North West & North Wales", /*#__PURE__*/React.createElement("span", {
     className: "accent"
@@ -615,7 +615,7 @@ function CTABand() {
     className: "wrap"
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "eyebrow"
-  }, "07 \xB7 Start a conversation"), /*#__PURE__*/React.createElement("h2", {
+  }, "Start a Conversation"), /*#__PURE__*/React.createElement("h2", {
     style: {
       marginTop: 20
     }
@@ -691,7 +691,7 @@ function CommercialDomesticDeep() {
     style: {
       marginTop: 10
     }
-  }, "Specialised Electrical Contracting in Chester", /*#__PURE__*/React.createElement("span", {
+  }, "Electrical Services in Chester", /*#__PURE__*/React.createElement("span", {
     className: "accent"
   }, ".")), /*#__PURE__*/React.createElement("p", {
     className: "lede",
@@ -953,11 +953,57 @@ function FAQsSection() {
     }
   }, f.a))))));
 }
+function MapSection() {
+  return /*#__PURE__*/React.createElement("section", {
+    className: "section-y light reveal",
+    id: "map"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "wrap"
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      maxWidth: '800px',
+      marginBottom: 28
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "eyebrow"
+  }, "Local Area Map"), /*#__PURE__*/React.createElement("h2", {
+    className: "h-2",
+    style: {
+      marginTop: 10
+    }
+  }, "Where We Serve", /*#__PURE__*/React.createElement("span", {
+    className: "accent"
+  }, ".")), /*#__PURE__*/React.createElement("p", {
+    className: "lede",
+    style: {
+      marginTop: 16
+    }
+  }, "Our qualified engineers provide scheduled coverage across Chester and neighbouring postcodes.")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      width: '100%',
+      height: '400px',
+      borderRadius: '16px',
+      overflow: 'hidden',
+      boxShadow: '0 8px 32px rgba(0,0,0,0.12)',
+      border: '1px solid var(--rule)'
+    }
+  }, /*#__PURE__*/React.createElement("iframe", {
+    title: "Map of coverage area in Chester",
+    width: "100%",
+    height: "100%",
+    style: {
+      border: 0
+    },
+    loading: "lazy",
+    allowFullScreen: true,
+    src: "https://maps.google.com/maps?q=Chester%2C%20UK&t=&z=11&ie=UTF8&iwloc=&output=embed"
+  }))));
+}
 function Home() {
   useScrollReveal();
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Header, {
     current: "home",
     theme: "dark"
-  }), /*#__PURE__*/React.createElement(Hero, null), /*#__PURE__*/React.createElement(TrustBar, null), /*#__PURE__*/React.createElement(Intro, null), /*#__PURE__*/React.createElement(CommercialDomesticDeep, null), /*#__PURE__*/React.createElement(Services, null), /*#__PURE__*/React.createElement(Cases, null), /*#__PURE__*/React.createElement(Testimonials, null), /*#__PURE__*/React.createElement(FAQsSection, null), /*#__PURE__*/React.createElement(Areas, null), /*#__PURE__*/React.createElement(CTABand, null), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(MobileStickyCTA, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
+  }), /*#__PURE__*/React.createElement(Hero, null), /*#__PURE__*/React.createElement(TrustBar, null), /*#__PURE__*/React.createElement(Intro, null), /*#__PURE__*/React.createElement(CommercialDomesticDeep, null), /*#__PURE__*/React.createElement(Services, null), /*#__PURE__*/React.createElement(Cases, null), /*#__PURE__*/React.createElement(Testimonials, null), /*#__PURE__*/React.createElement(MapSection, null), /*#__PURE__*/React.createElement(FAQsSection, null), /*#__PURE__*/React.createElement(Areas, null), /*#__PURE__*/React.createElement(CTABand, null), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(MobileStickyCTA, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
 }
 ReactDOM.hydrateRoot(document.getElementById('root'), /*#__PURE__*/React.createElement(Home, null));

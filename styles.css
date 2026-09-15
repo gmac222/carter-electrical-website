@@ -29,8 +29,8 @@
   --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
 
   /* Spacing rhythm */
-  --gutter: clamp(24px, 4vw, 64px);
-  --section-y: clamp(80px, 9vw, 140px);
+  --gutter: clamp(16px, 4vw, 48px);
+  --section-y: clamp(36px, 4.5vw, 60px);
   --radius: 0px;
   --radius-lg: 2px;
 
@@ -74,6 +74,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 
 section { position: relative; }
 .section-y { padding: var(--section-y) 0; }
+.section-y + .section-y { padding-top: clamp(20px, 2.5vw, 32px); }
 
 .dark { background: var(--ink); color: var(--white); }
 .dark .rule { border-color: var(--rule-dark); }
@@ -498,9 +499,9 @@ section { position: relative; }
 .section-head {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 24px;
   max-width: 820px;
-  margin-bottom: 60px;
+  margin-bottom: clamp(24px, 3.5vw, 36px);
 }
 .section-head.center {
   align-items: center;
@@ -664,7 +665,7 @@ section { position: relative; }
 
 /* ---------- Stats strip ---------- */
 .stats {
-  padding: clamp(60px, 6vw, 100px) 0;
+  padding: clamp(36px, 4.5vw, 60px) 0;
   background: var(--ink);
   color: var(--white);
   position: relative;
@@ -736,13 +737,13 @@ section { position: relative; }
 
 .cases-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .cases-grid { grid-template-columns: repeat(2, 1fr); }
 }
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .cases-grid { grid-template-columns: 1fr; }
 }
 
@@ -1070,7 +1071,7 @@ section { position: relative; }
 
 /* ---------- CTA band ---------- */
 .cta-band {
-  padding: clamp(60px, 7vw, 120px) 0;
+  padding: clamp(36px, 4.5vw, 60px) 0;
   background: var(--paper-2);
   color: var(--ink);
   position: relative;
