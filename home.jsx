@@ -540,7 +540,6 @@ function Home() {
     <>
       <Header current="home" theme="dark" />
       <Hero />
-      <TrustBar />
       <Intro />
       <Services />
       <Cases />
