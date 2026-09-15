@@ -168,8 +168,9 @@ function generateSitemap(posts) {
     '/case-studies.html',
     '/contact.html',
     '/blog/',
-    '/uploads/favicon-32x32-1.png',
-    '/sitemap.html'
+    '/sitemap.html',
+    '/privacy-policy.html',
+    '/terms.html'
   ];
   
   const today = new Date().toISOString().split('T')[0];
