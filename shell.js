@@ -479,11 +479,11 @@ window.PageHero = function PageHero({
     className: "hero-glow"
   }), window.HeroCanvas ? /*#__PURE__*/React.createElement(window.HeroCanvas, null) : null, /*#__PURE__*/React.createElement("div", {
     className: "wrap hero-inner"
-  }, (section || sectionNum) && /*#__PURE__*/React.createElement("div", {
+  }, section && /*#__PURE__*/React.createElement("div", {
     className: "hero-meta"
-  }, section && /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("span", {
+  }, /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("span", {
     className: "dot-green"
-  }), " ", section), sectionNum && /*#__PURE__*/React.createElement("span", null, sectionNum), /*#__PURE__*/React.createElement("span", null, "Ref \xB7 carterelec.co.uk")), /*#__PURE__*/React.createElement("h1", {
+  }), " ", section)), /*#__PURE__*/React.createElement("h1", {
     className: "h-display"
   }, title, titleAccent && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("span", {
     className: "accent"
