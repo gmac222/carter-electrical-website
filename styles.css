@@ -461,7 +461,7 @@ section { position: relative; }
 
 /* ---------- Trust bar ---------- */
 .trust-bar {
-  padding: 28px 0;
+  padding: 24px 0;
   background: var(--white);
   border-bottom: 1px solid var(--rule);
 }
@@ -469,27 +469,79 @@ section { position: relative; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 32px;
-  flex-wrap: wrap;
+  gap: 24px;
+  flex-wrap: nowrap;
 }
 .trust-item {
-  display: flex; align-items: center; gap: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
   font-family: var(--font-mono);
-  font-size: 11.5px;
-  letter-spacing: 0.12em;
+  font-size: 11px;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--ink);
+  min-width: 0;
 }
 .trust-item .glyph {
-  width: 34px; height: 34px;
-  display: grid; place-items: center;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
   border: 1px solid var(--rule);
   border-radius: 2px;
   color: var(--ink);
+  flex-shrink: 0;
 }
 .trust-item .glyph svg { width: 18px; height: 18px; }
-.trust-item strong { color: var(--ink); font-weight: 600; }
-.trust-item small { display: block; font-size: 10px; color: var(--muted-2); letter-spacing: 0.14em; margin-top: 3px; }
+.trust-item strong { color: var(--ink); font-weight: 600; display: block; white-space: nowrap; }
+.trust-item small { display: block; font-size: 9.5px; color: var(--muted-2); letter-spacing: 0.12em; margin-top: 2px; white-space: nowrap; }
+
+@media (max-width: 1024px) {
+  .trust-row {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px 28px;
+  }
+}
+
+@media (max-width: 640px) {
+  .trust-bar {
+    padding: 20px 0;
+  }
+  .trust-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 12px;
+    align-items: center;
+  }
+  .trust-item {
+    gap: 10px;
+  }
+  .trust-item .glyph {
+    width: 30px;
+    height: 30px;
+  }
+  .trust-item .glyph svg {
+    width: 16px;
+    height: 16px;
+  }
+  .trust-item strong {
+    font-size: 10.5px;
+    white-space: normal;
+    line-height: 1.25;
+  }
+  .trust-item small {
+    font-size: 9px;
+    white-space: normal;
+    line-height: 1.25;
+  }
+  .trust-item:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    max-width: 260px;
+  }
+}
 
 /* ---------- Services grid ---------- */
 .services {
