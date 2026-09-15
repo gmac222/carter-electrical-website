@@ -15,10 +15,8 @@ function AboutPage() {
     <>
       <Header current="about" theme="dark"/>
       <PageHero
-        section="About Carter Electrical"
-        sectionNum="04 / About"
-        title="Technical excellence"
-        titleAccent={<>built on trust and safety<span className="dot-white">.</span></>}
+        section="Technical Excellence, Built on Trust and Safety"
+        title="About Carter Electrical."
         subtext="NICEIC Approved Electrical Contractors based in Christleton, Chester. We deliver commercial, industrial, and domestic installations across Cheshire, the Wirral, Merseyside, and North Wales - scoped candidly, installed by our in-house team, and fully certified at handover."
       />
 

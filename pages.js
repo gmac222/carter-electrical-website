@@ -33,12 +33,8 @@ function AboutPage() {
     current: "about",
     theme: "dark"
   }), /*#__PURE__*/React.createElement(PageHero, {
-    section: "About Carter Electrical",
-    sectionNum: "04 / About",
-    title: "Technical excellence",
-    titleAccent: /*#__PURE__*/React.createElement(React.Fragment, null, "built on trust and safety", /*#__PURE__*/React.createElement("span", {
-      className: "dot-white"
-    }, ".")),
+    section: "Technical Excellence, Built on Trust and Safety",
+    title: "About Carter Electrical.",
     subtext: "NICEIC Approved Electrical Contractors based in Christleton, Chester. We deliver commercial, industrial, and domestic installations across Cheshire, the Wirral, Merseyside, and North Wales - scoped candidly, installed by our in-house team, and fully certified at handover."
   }), /*#__PURE__*/React.createElement("section", {
     className: "section-y light reveal"
