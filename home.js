@@ -475,7 +475,7 @@ function Testimonials() {
     className: "section-head"
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "eyebrow"
-  }, "Clients who came back for the next one"), /*#__PURE__*/React.createElement("h2", {
+  }, "See what our clients have to say"), /*#__PURE__*/React.createElement("h2", {
     className: "h-1"
   }, "Client Testimonials", /*#__PURE__*/React.createElement("span", {
     className: "accent"

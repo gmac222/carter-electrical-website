@@ -324,7 +324,7 @@ function Testimonials() {
       <div className="wrap">
         <div className="section-head">
           <div>
-            <div className="eyebrow">Clients who came back for the next one</div>
+            <div className="eyebrow">See what our clients have to say</div>
             <h2 className="h-1">Client Testimonials<span className="accent">.</span></h2>
           </div>
           <p className="lede">
