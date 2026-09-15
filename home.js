@@ -80,7 +80,7 @@ function Hero() {
     className: "hero-meta"
   }, /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("span", {
     className: "dot-green"
-  }), " ", copy.eyebrow), /*#__PURE__*/React.createElement("span", null, "01 / Electricians Chester"), /*#__PURE__*/React.createElement("span", null, "Ref \xB7 carterelec.co.uk")), /*#__PURE__*/React.createElement("h1", {
+  }), " ", copy.eyebrow)), /*#__PURE__*/React.createElement("h1", {
     className: "h-display"
   }, copy.h1), copy.strapline && /*#__PURE__*/React.createElement("div", {
     className: "hero-strapline"
@@ -185,14 +185,14 @@ function Intro() {
     style: {
       marginTop: '12px'
     }
-  }, "NICEIC approved electrical contractor serving Cheshire West", /*#__PURE__*/React.createElement("span", {
+  }, "NICEIC approved electrical contractor serving Chester and Cheshire West", /*#__PURE__*/React.createElement("span", {
     className: "accent"
   }, "."))), /*#__PURE__*/React.createElement("p", {
     className: "lede",
     style: {
       marginTop: '28px'
     }
-  }, /*#__PURE__*/React.createElement("strong", null, "Carter Electrical"), " is an NICEIC approved electrical contractor serving Cheshire West and the wider Cheshire area. Our electrical services cover domestic, commercial and industrial electrical work across the local area. Every job is compliant with current building regulations and BS\xA07671, and signed off with full documentation."), /*#__PURE__*/React.createElement("p", {
+  }, /*#__PURE__*/React.createElement("strong", null, "Carter Electrical"), " is an NICEIC approved electrical contractor serving Chester and Cheshire West and the wider Cheshire area. Our electrical services cover domestic, commercial and industrial electrical work across the local area. Every job is compliant with current building regulations and BS\xA07671, and signed off with full documentation."), /*#__PURE__*/React.createElement("p", {
     className: "lede",
     style: {
       marginTop: '16px'
@@ -270,7 +270,7 @@ function Services() {
     className: "section-head reveal"
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "eyebrow"
-  }, "02 \xB7 Services"), /*#__PURE__*/React.createElement("h2", {
+  }, "Services"), /*#__PURE__*/React.createElement("h2", {
     className: "h-1"
   }, "One contractor", /*#__PURE__*/React.createElement("span", {
     className: "accent"

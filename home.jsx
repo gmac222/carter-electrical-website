@@ -54,8 +54,6 @@ function Hero() {
       <div className="wrap hero-inner">
         <div className="hero-meta">
           <span><span className="dot-green" /> {copy.eyebrow}</span>
-          <span>01 / Electricians Chester</span>
-          <span>Ref · carterelec.co.uk</span>
         </div>
         <h1 className="h-display">{copy.h1}</h1>
         {copy.strapline && <div className="hero-strapline">{copy.strapline}</div>}
@@ -110,11 +108,11 @@ function Intro() {
             <div>
               <div className="eyebrow">Electrician in Chester</div>
               <h2 className="h-1" style={{ marginTop: '12px' }}>
-                NICEIC approved electrical contractor serving Cheshire West<span className="accent">.</span>
+                NICEIC approved electrical contractor serving Chester and Cheshire West<span className="accent">.</span>
               </h2>
             </div>
             <p className="lede" style={{ marginTop: '28px' }}>
-              <strong>Carter Electrical</strong> is an NICEIC approved electrical contractor serving Cheshire West and the wider Cheshire area. Our electrical services cover domestic, commercial and industrial electrical work across the local area. Every job is compliant with current building regulations and BS&nbsp;7671, and signed off with full documentation.
+              <strong>Carter Electrical</strong> is an NICEIC approved electrical contractor serving Chester and Cheshire West and the wider Cheshire area. Our electrical services cover domestic, commercial and industrial electrical work across the local area. Every job is compliant with current building regulations and BS&nbsp;7671, and signed off with full documentation.
             </p>
             <p className="lede" style={{ marginTop: '16px' }}>
               Typical projects include full rewires, replacement consumer units, socket and light fitting installation, and electrical repairs - from a single socket to a full commercial electrical fit-out or fault repair, all delivered to the same certified standard.
@@ -156,7 +154,7 @@ function Services() {
       <div className="wrap">
         <div className="section-head reveal">
           <div>
-            <div className="eyebrow">02 · Services</div>
+            <div className="eyebrow">Services</div>
             <h2 className="h-1">One contractor<span className="accent">.</span><br/>The full electrical scope<span className="accent">.</span></h2>
             <p className="lede">
               From a single board upgrade to a full commercial fit-out. Certified,
