@@ -270,7 +270,7 @@ function Services() {
     className: "section-head reveal"
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "eyebrow"
-  }, "Services"), /*#__PURE__*/React.createElement("h2", {
+  }, "One contractor \xB7 The full electrical scope"), /*#__PURE__*/React.createElement("h2", {
     className: "h-1"
   }, "Services", /*#__PURE__*/React.createElement("span", {
     className: "accent"
@@ -362,7 +362,7 @@ function Stats() {
     style: {
       color: '#8a8a85'
     }
-  }, "03 \xB7 By the numbers"), /*#__PURE__*/React.createElement("h2", {
+  }, "By the Numbers"), /*#__PURE__*/React.createElement("h2", {
     className: "h-1"
   }, "Years of on-site", /*#__PURE__*/React.createElement("br", null), "accountability", /*#__PURE__*/React.createElement("span", {
     className: "accent"
@@ -420,7 +420,7 @@ function Cases() {
     className: "section-head"
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "eyebrow"
-  }, "Selected Work"), /*#__PURE__*/React.createElement("h2", {
+  }, "Real projects \xB7 Real sign-offs"), /*#__PURE__*/React.createElement("h2", {
     className: "h-1"
   }, "Case Studies", /*#__PURE__*/React.createElement("span", {
     className: "accent"
@@ -475,7 +475,7 @@ function Testimonials() {
     className: "section-head"
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "eyebrow"
-  }, "Client Feedback"), /*#__PURE__*/React.createElement("h2", {
+  }, "Clients who came back for the next one"), /*#__PURE__*/React.createElement("h2", {
     className: "h-1"
   }, "Client Testimonials", /*#__PURE__*/React.createElement("span", {
     className: "accent"
@@ -514,7 +514,7 @@ function Areas() {
     style: {
       color: '#8a8a85'
     }
-  }, "Coverage Area"), /*#__PURE__*/React.createElement("h2", {
+  }, "Covering the North West & North Wales"), /*#__PURE__*/React.createElement("h2", {
     className: "h-1"
   }, "Areas We Cover", /*#__PURE__*/React.createElement("span", {
     className: "accent"
@@ -611,13 +611,11 @@ function CTABand() {
     className: "wrap"
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "eyebrow"
-  }, "Start a Conversation"), /*#__PURE__*/React.createElement("h2", {
+  }, "Tell us about the project \xB7 We\u2019ll tell you what it takes"), /*#__PURE__*/React.createElement("h2", {
     style: {
       marginTop: 20
     }
-  }, "Get Your Free Quote", /*#__PURE__*/React.createElement("span", {
-    className: "accent"
-  }, "."), /*#__PURE__*/React.createElement("br", null), "Quick & no obligation", /*#__PURE__*/React.createElement("span", {
+  }, "Start a Conversation", /*#__PURE__*/React.createElement("span", {
     className: "accent"
   }, ".")), /*#__PURE__*/React.createElement("p", {
     className: "lede",

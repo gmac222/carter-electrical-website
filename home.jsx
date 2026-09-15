@@ -154,7 +154,7 @@ function Services() {
       <div className="wrap">
         <div className="section-head reveal">
           <div>
-            <div className="eyebrow">Services</div>
+            <div className="eyebrow">One contractor · The full electrical scope</div>
             <h2 className="h-1">Services<span className="accent">.</span></h2>
             <p className="lede">
               From a single board upgrade to a full commercial fit-out. Certified,
@@ -216,7 +216,7 @@ function Stats() {
       <div className="wrap">
         <div className="section-head" style={{ marginBottom: 60 }}>
           <div>
-            <div className="eyebrow" style={{ color: '#8a8a85' }}>03 · By the numbers</div>
+            <div className="eyebrow" style={{ color: '#8a8a85' }}>By the Numbers</div>
             <h2 className="h-1">Years of on-site<br/>accountability<span className="accent">.</span></h2>
           </div>
           <p className="lede" style={{ color: 'rgba(255,255,255,0.7)' }}>
@@ -261,7 +261,7 @@ function Cases() {
       <div className="wrap">
         <div className="section-head">
           <div>
-            <div className="eyebrow">Selected Work</div>
+            <div className="eyebrow">Real projects · Real sign-offs</div>
             <h2 className="h-1">Case Studies<span className="accent">.</span></h2>
           </div>
           <p className="lede">
@@ -324,7 +324,7 @@ function Testimonials() {
       <div className="wrap">
         <div className="section-head">
           <div>
-            <div className="eyebrow">Client Feedback</div>
+            <div className="eyebrow">Clients who came back for the next one</div>
             <h2 className="h-1">Client Testimonials<span className="accent">.</span></h2>
           </div>
           <p className="lede">
@@ -360,7 +360,7 @@ function Areas() {
       <div className="wrap">
         <div className="section-head" style={{ marginBottom: 50 }}>
           <div>
-            <div className="eyebrow" style={{ color: '#8a8a85' }}>Coverage Area</div>
+            <div className="eyebrow" style={{ color: '#8a8a85' }}>Covering the North West &amp; North Wales</div>
             <h2 className="h-1">Areas We Cover<span className="accent">.</span></h2>
           </div>
           <p className="lede" style={{ color: 'rgba(255,255,255,0.7)' }}>
@@ -446,9 +446,9 @@ function CTABand() {
     <section className="cta-band reveal">
       <div className="wrap">
         <div>
-          <div className="eyebrow">Start a Conversation</div>
+          <div className="eyebrow">Tell us about the project · We’ll tell you what it takes</div>
           <h2 style={{ marginTop: 20 }}>
-            Get Your Free Quote<span className="accent">.</span><br/>Quick &amp; no obligation<span className="accent">.</span>
+            Start a Conversation<span className="accent">.</span>
           </h2>
           <p className="lede" style={{ marginTop: 18, maxWidth: '54ch' }}>
             Share the scope, the site and the timescale. We&rsquo;ll be in touch shortly to talk through the next sensible step - a site visit, a scoping call, or a straight proposal.
