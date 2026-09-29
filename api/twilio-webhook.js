@@ -291,7 +291,7 @@ export default async function handler(req, res) {
     const whisperUrl = `${protocol}://${host}/api/twilio-whisper`;
 
     // Twilio expects TwiML in response to proceed with the call.
-    // Forward the call to Ian's correct mobile with a whisper message so he knows it's from the website.
+    // Forward the call to Jodie's mobile with a whisper message so she knows it is from the website.
     const forwardNumber = process.env.FORWARD_PHONE_NUMBER || '+447867807677';
     const escapedCallbackUrl = callbackUrl.replace(/&/g, '&amp;');
     const escapedWhisperUrl = whisperUrl.replace(/&/g, '&amp;');
