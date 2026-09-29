@@ -18,13 +18,18 @@ function isBlocked(number) {
 }
 
 export default async function handler(req, res) {
+  const query = req.query || {};
+  const body = req.body || {};
+  if (query.whisper === '1' || body.whisper === '1') {
+    res.setHeader('Content-Type', 'text/xml');
+    return res.status(200).send('<?xml version="1.0" encoding="UTF-8"?><Response><Say voice="Polly.Amy" language="en-GB">This is a call for Carter Electrical.</Say></Response>');
+  }
+
   if (req.method !== 'POST') {
     return res.status(405).send('Method not allowed');
   }
 
   try {
-    const query = req.query || {};
-    const body = req.body || {};
     const From = body.From || query.From;
     const To = body.To || query.To;
     const { CallStatus, Direction, RecordingUrl, RecordingDuration } = body;
@@ -283,17 +288,20 @@ export default async function handler(req, res) {
     const host = req.headers.host || 'carterelec.co.uk';
     const protocol = req.headers['x-forwarded-proto'] || 'https';
     const callbackUrl = `${protocol}://${host}/api/twilio-webhook?From=${encodeURIComponent(From || '')}&To=${encodeURIComponent(To || '')}`;
+    const whisperUrl = `${protocol}://${host}/api/twilio-whisper`;
 
     // Twilio expects TwiML in response to proceed with the call.
-    // We return a Dial response so that if the phone number is routed directly to this webhook,
-    // Twilio will automatically dial Ian's number, record the call, and send the recording back here.
+    // Forward the call to Ian's correct mobile with a whisper message so he knows it's from the website.
+    const forwardNumber = process.env.FORWARD_PHONE_NUMBER || '+447867807677';
     const escapedCallbackUrl = callbackUrl.replace(/&/g, '&amp;');
+    const escapedWhisperUrl = whisperUrl.replace(/&/g, '&amp;');
     res.setHeader('Content-Type', 'text/xml');
-    res.status(200).send(`<?xml version="1.0" encoding="UTF-8"?><Response><Dial record="record-from-answer-dual" recordingStatusCallback="${escapedCallbackUrl}">+447843672120</Dial></Response>`);
+    res.status(200).send(`<?xml version="1.0" encoding="UTF-8"?><Response><Dial record="record-from-answer-dual" recordingStatusCallback="${escapedCallbackUrl}"><Number url="${escapedWhisperUrl}">${forwardNumber}</Number></Dial></Response>`);
   } catch (error) {
     console.error('Twilio Webhook error:', error);
-    // Still return 200 and attempt to connect the call so we do not drop the caller
+    const forwardNumber = process.env.FORWARD_PHONE_NUMBER || '+447867807677';
+    // Still return 200 and attempt to connect the call with whisper so we do not drop the caller
     res.setHeader('Content-Type', 'text/xml');
-    res.status(200).send('<?xml version="1.0" encoding="UTF-8"?><Response><Dial>+447843672120</Dial></Response>');
+    res.status(200).send(`<?xml version="1.0" encoding="UTF-8"?><Response><Dial><Number url="https://carterelec.co.uk/api/twilio-whisper">${forwardNumber}</Number></Dial></Response>`);
   }
 }
