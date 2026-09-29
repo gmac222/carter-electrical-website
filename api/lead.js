@@ -80,7 +80,7 @@ export default async function handler(req, res) {
     // 3. Send SMS via ClickSend (Optional if configured)
     const clicksendUser = process.env.CLICKSEND_USER;
     const clicksendKey = process.env.CLICKSEND_KEY;
-    const smsRecipient = process.env.SMS_RECIPIENT_NUMBER;
+    const smsRecipient = process.env.SMS_RECIPIENT_NUMBER || '+447867807677';
 
     if (clicksendUser && clicksendKey && smsRecipient) {
       const authHeader = 'Basic ' + Buffer.from(`${clicksendUser}:${clicksendKey}`).toString('base64');
