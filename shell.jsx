@@ -178,7 +178,7 @@ window.Footer = function Footer() {
               <li><a href="/case-studies.html">Case Studies</a></li>
               <li><a href="/areas.html">Areas We Cover</a></li>
               <li><a href="/contact.html">Contact</a></li>
-              <li><a href={CARTER.company.socialFb}>Facebook</a></li>
+              <li><a href={CARTER.company.socialFb} target="_blank" rel="noopener noreferrer">Facebook</a></li>
             </ul>
           </div>
           <div>

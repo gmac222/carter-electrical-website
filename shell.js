@@ -288,7 +288,9 @@ window.Footer = function Footer() {
   }, "Areas We Cover")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
     href: "/contact.html"
   }, "Contact")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
-    href: CARTER.company.socialFb
+    href: CARTER.company.socialFb,
+    target: "_blank",
+    rel: "noopener noreferrer"
   }, "Facebook")))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h4", null, "Hours"), /*#__PURE__*/React.createElement("ul", {
     style: {
       gap: '8px'
