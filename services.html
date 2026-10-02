@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="en-GB"><head data-carter-head-injected="1">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Electrical Services | Commercial, Industrial, Domestic, EICR, EV | Carter Electrical</title>
+  <title>Electrical Services | Commercial, Industrial, Domestic, EICR, EV | Carter Electrical Contracting</title>
   <meta name="description" content="Comprehensive electrical services from an NICEIC-approved contractor across Chester, Cheshire, North Wales and Wirral: commercial, industrial, domestic, EICRs and EV chargers.">
   <link rel="canonical" href="https://carterelec.co.uk/services.html">
 
@@ -24,26 +24,66 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "url": "https://carterelec.co.uk/services.html",
-    "name": "Electrical Services",
-    "breadcrumb": {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://carterelec.co.uk/" },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://carterelec.co.uk/services.html" }
-      ]
-    },
-    "mainEntity": {
-      "@type": "ItemList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "item": { "@type": "Service", "name": "Commercial electrical services", "url": "https://carterelec.co.uk/commercial.html", "provider": { "@id": "https://carterelec.co.uk/#business" } } },
-        { "@type": "ListItem", "position": 2, "item": { "@type": "Service", "name": "Industrial electrical services", "provider": { "@id": "https://carterelec.co.uk/#business" } } },
-        { "@type": "ListItem", "position": 3, "item": { "@type": "Service", "name": "Domestic electrical services", "provider": { "@id": "https://carterelec.co.uk/#business" } } },
-        { "@type": "ListItem", "position": 4, "item": { "@type": "Service", "name": "EICR testing and inspection", "provider": { "@id": "https://carterelec.co.uk/#business" } } },
-        { "@type": "ListItem", "position": 5, "item": { "@type": "Service", "name": "EV charger installation (OZEV-approved)", "provider": { "@id": "https://carterelec.co.uk/#business" } } }
-      ]
-    }
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://carterelec.co.uk/services.html#webpage",
+        "url": "https://carterelec.co.uk/services.html",
+        "name": "Electrical Services | Carter Electrical Contracting",
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://carterelec.co.uk/" },
+            { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://carterelec.co.uk/services.html" }
+          ]
+        },
+        "mainEntity": {
+          "@type": "ItemList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "item": { "@type": "Service", "name": "Commercial electrical services", "url": "https://carterelec.co.uk/commercial.html", "provider": { "@id": "https://carterelec.co.uk/#business" } } },
+            { "@type": "ListItem", "position": 2, "item": { "@type": "Service", "name": "Industrial electrical services", "url": "https://carterelec.co.uk/industrial.html", "provider": { "@id": "https://carterelec.co.uk/#business" } } },
+            { "@type": "ListItem", "position": 3, "item": { "@type": "Service", "name": "Domestic electrical services", "url": "https://carterelec.co.uk/domestic.html", "provider": { "@id": "https://carterelec.co.uk/#business" } } },
+            { "@type": "ListItem", "position": 4, "item": { "@type": "Service", "name": "EICR testing and inspection", "provider": { "@id": "https://carterelec.co.uk/#business" } } },
+            { "@type": "ListItem", "position": 5, "item": { "@type": "Service", "name": "EV charger installation (OZEV-approved)", "provider": { "@id": "https://carterelec.co.uk/#business" } } }
+          ]
+        }
+      },
+      {
+        "@type": ["Organization", "LocalBusiness", "Electrician"],
+        "@id": "https://carterelec.co.uk/#business",
+        "name": "Carter Electrical Contracting",
+        "legalName": "Carter Electrical Contracting Ltd",
+        "alternateName": "Carter Elec",
+        "url": "https://carterelec.co.uk/",
+        "telephone": "01244 727291",
+        "email": "ian@carterelec.co.uk",
+        "priceRange": "££",
+        "foundingDate": "2019",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Unit 5, White Lane Depot, White Lane, Christleton",
+          "addressLocality": "Chester",
+          "postalCode": "CH3 6AH",
+          "addressRegion": "Cheshire",
+          "addressCountry": "GB"
+        },
+        "geo": { "@type": "GeoCoordinates", "latitude": 53.1836, "longitude": -2.8377 },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "07:30",
+            "closes": "17:30"
+          }
+        ],
+        "hasCredential": [
+          { "@type": "EducationalOccupationalCredential", "credentialCategory": "NICEIC Approved Contractor" },
+          { "@type": "EducationalOccupationalCredential", "credentialCategory": "OZEV-approved EV installer" },
+          { "@type": "EducationalOccupationalCredential", "credentialCategory": "BS 7671 18th Edition" }
+        ],
+        "sameAs": ["https://facebook.com/carter.electrical.chester"]
+      }
+    ]
   }
   </script>
 <link rel="icon" type="image/png" sizes="32x32" href="uploads/favicon-32x32-1.png"><link rel="shortcut icon" type="image/png" href="uploads/favicon-32x32-1.png"><link rel="apple-touch-icon" href="uploads/favicon-32x32-1.png"><meta name="theme-color" content="#111111"><!-- Google tag (gtag.js) -->

@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="en-GB"><head data-carter-head-injected="1">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Industrial Electricians | 3-Phase, PLC, Factory Maintenance | Carter Electrical</title>
+  <title>Industrial Electricians | 3-Phase, PLC, Factory Maintenance | Carter Electrical Contracting</title>
   <meta name="description" content="Industrial electricians providing NICEIC-approved three-phase power distribution networks, factory automation wiring, control panel design, machinery installs and PPM.">
   <link rel="canonical" href="https://carterelec.co.uk/industrial.html">
 
@@ -13,7 +13,7 @@
   <meta property="og:locale" content="en_GB">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Industrial Electricians in Chester">
+  <meta name="twitter:title" content="Industrial Electricians in Chester | Carter Electrical Contracting">
   <meta name="twitter:description" content="Industrial electricians providing NICEIC-approved three-phase power distribution networks, factory automation wiring, control panel design and machinery installs.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,40 +24,79 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "Industrial electrical contracting",
-    "name": "Industrial Electrical Contracting - Chester & North West",
-    "url": "https://carterelec.co.uk/industrial.html",
-    "provider": { "@id": "https://carterelec.co.uk/#business" },
-    "areaServed": [
-      { "@type": "City", "name": "Chester" },
-      { "@type": "City", "name": "Ellesmere Port" },
-      { "@type": "City", "name": "Wrexham" },
-      { "@type": "City", "name": "Northwich" },
-      { "@type": "City", "name": "Frodsham" },
-      { "@type": "City", "name": "Tarporley" },
-      { "@type": "City", "name": "Mold" },
-      { "@type": "City", "name": "Deeside" }
-    ],
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Industrial electrical scope",
-      "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "3-phase power distribution and machinery wiring" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Control panel design and PLC programming" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Industrial EICR testing and compliance" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "High-voltage containment systems" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Factory planned preventative maintenance" } }
-      ]
-    },
-    "breadcrumb": {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://carterelec.co.uk/" },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://carterelec.co.uk/services.html" },
-        { "@type": "ListItem", "position": 3, "name": "Industrial", "item": "https://carterelec.co.uk/industrial.html" }
-      ]
-    }
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": "https://carterelec.co.uk/industrial.html#service",
+        "serviceType": "Industrial electrical contracting",
+        "name": "Industrial Electrical Contracting - Chester & North West",
+        "url": "https://carterelec.co.uk/industrial.html",
+        "provider": { "@id": "https://carterelec.co.uk/#business" },
+        "areaServed": [
+          { "@type": "City", "name": "Chester" },
+          { "@type": "City", "name": "Ellesmere Port" },
+          { "@type": "City", "name": "Wrexham" },
+          { "@type": "City", "name": "Northwich" },
+          { "@type": "City", "name": "Frodsham" },
+          { "@type": "City", "name": "Tarporley" },
+          { "@type": "City", "name": "Mold" },
+          { "@type": "City", "name": "Deeside" }
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Industrial electrical scope",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "3-phase power distribution and machinery wiring" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Control panel design and PLC programming" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Industrial EICR testing and compliance" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "High-voltage containment systems" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Factory planned preventative maintenance" } }
+          ]
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://carterelec.co.uk/" },
+            { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://carterelec.co.uk/services.html" },
+            { "@type": "ListItem", "position": 3, "name": "Industrial", "item": "https://carterelec.co.uk/industrial.html" }
+          ]
+        }
+      },
+      {
+        "@type": ["Organization", "LocalBusiness", "Electrician"],
+        "@id": "https://carterelec.co.uk/#business",
+        "name": "Carter Electrical Contracting",
+        "legalName": "Carter Electrical Contracting Ltd",
+        "alternateName": "Carter Elec",
+        "url": "https://carterelec.co.uk/",
+        "telephone": "01244 727291",
+        "email": "ian@carterelec.co.uk",
+        "priceRange": "££",
+        "foundingDate": "2019",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Unit 5, White Lane Depot, White Lane, Christleton",
+          "addressLocality": "Chester",
+          "postalCode": "CH3 6AH",
+          "addressRegion": "Cheshire",
+          "addressCountry": "GB"
+        },
+        "geo": { "@type": "GeoCoordinates", "latitude": 53.1836, "longitude": -2.8377 },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "07:30",
+            "closes": "17:30"
+          }
+        ],
+        "hasCredential": [
+          { "@type": "EducationalOccupationalCredential", "credentialCategory": "NICEIC Approved Contractor" },
+          { "@type": "EducationalOccupationalCredential", "credentialCategory": "BS 7671 18th Edition" }
+        ],
+        "sameAs": ["https://facebook.com/carter.electrical.chester"]
+      }
+    ]
   }
   </script>
 <link rel="icon" type="image/png" sizes="32x32" href="uploads/favicon-32x32-1.png"><link rel="shortcut icon" type="image/png" href="uploads/favicon-32x32-1.png"><link rel="apple-touch-icon" href="uploads/favicon-32x32-1.png"><meta name="theme-color" content="#111111"><link rel="icon" type="image/png" sizes="32x32" href="uploads/favicon-32x32-1.png"><link rel="shortcut icon" type="image/png" href="uploads/favicon-32x32-1.png"><link rel="apple-touch-icon" href="uploads/favicon-32x32-1.png"><meta name="theme-color" content="#111111"><style>

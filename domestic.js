@@ -283,7 +283,7 @@ function DomesticCases() {
 function FAQBand() {
   const faqs = [{
     q: 'Is it illegal to do electrical work in your home in the UK?',
-    a: 'In the UK, it is not illegal to perform simple electrical work yourself, such as replacing light switches or sockets on a like-for-like basis. However, major works—such as installing a new circuit, rewiring a property, or adding circuits in kitchens and bathrooms—fall under Part P of the Building Regulations and must legally be certified by a registered competent person or notified to Building Control.'
+    a: 'In the UK, it is not illegal to perform simple electrical work yourself, such as replacing light switches or sockets on a like-for-like basis. However, major works - such as installing a new circuit, rewiring a property, or adding circuits in kitchens and bathrooms - fall under Part P of the Building Regulations and must legally be certified by a registered competent person or notified to Building Control.'
   }, {
     q: 'How to find a trusted domestic electrician?',
     a: 'Always check that the electrician is registered with a government-approved scheme such as the NICEIC. This guarantees they undergo regular audits, carry sufficient public liability insurance, and are authorised to self-certify their work under Part P. Additionally, look for direct employment rather than sub-contractors.'

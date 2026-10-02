@@ -394,7 +394,7 @@ function esc(str) {
 
 function buildHtml(area) {
   const url = `${COMPANY.site}/electricians-${area.slug}.html`;
-  const title = `Electricians in ${area.name} | NICEIC-Approved | Carter Electrical`;
+  const title = `Electricians in ${area.name} | NICEIC-Approved | Carter Electrical Contracting`;
   const faqs = buildFaqs(area);
   const chesterObj = { name: 'Chester', slug: 'chester' };
   const adjacentList = area.adjacentSilos && area.adjacentSilos.length
@@ -418,8 +418,10 @@ function buildHtml(area) {
         '@type': ['LocalBusiness', 'Electrician'],
         '@id': url + '#business',
         name: COMPANY.name,
+        legalName: 'Carter Electrical Contracting Ltd',
         url: url,
         telephone: COMPANY.phone,
+        email: 'ian@carterelec.co.uk',
         priceRange: '££',
         address: {
           '@type': 'PostalAddress',
@@ -429,6 +431,22 @@ function buildHtml(area) {
           addressRegion: COMPANY.region,
           addressCountry: COMPANY.country
         },
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: 53.1836,
+          longitude: -2.8377
+        },
+        openingHoursSpecification: [
+          {
+            '@type': 'OpeningHoursSpecification',
+            dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+            opens: '07:30',
+            closes: '17:30'
+          }
+        ],
+        sameAs: [
+          'https://facebook.com/carter.electrical.chester'
+        ],
         areaServed: [
           { '@type': 'City', name: area.name },
           ...area.neighbourhoods.map(n => ({ '@type': 'Place', name: n + ', ' + area.name }))
