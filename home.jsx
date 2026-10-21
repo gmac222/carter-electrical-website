@@ -117,6 +117,9 @@ function Intro() {
             <p className="lede" style={{ marginTop: '16px' }}>
               Typical projects include full rewires, replacement consumer units, socket and light fitting installation, and electrical repairs - from a single socket to a full commercial electrical fit-out or fault repair, all delivered to the same certified standard.
             </p>
+            <p className="lede" style={{ marginTop: '16px' }}>
+              Whether you need a professional electrician to fix a fault in your home electrics or a new electrical installation for your business, our qualified and knowledgeable team gives honest, expert advice from the first visit. We book a free site survey, explain what the work involves and provide a clear fixed-price quote at reasonable rates, so you know the cost before we start. Customers across Chester trust us for friendly, reliable service and quality workmanship, with an excellent finish whether it is domestic electrical work in a family home or a commercial project.
+            </p>
           </div>
 
           {/* Right: image */}
@@ -157,9 +160,9 @@ function Services() {
             <div className="eyebrow">One contractor · The full electrical scope</div>
             <h2 className="h-1">Electrical Services in Chester<span className="accent">.</span></h2>
             <p className="lede">
-              From a single board upgrade to a full commercial fit-out. Certified,
-              compliant and delivered by an in-house team that owns the job end
-              to end.
+              A full range of electrical services, from a single board upgrade to
+              a commercial fit-out. Certified, compliant and delivered by an
+              in-house team that owns the job end to end.
             </p>
           </div>
         </div>

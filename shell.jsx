@@ -215,6 +215,7 @@ window.Footer = function Footer() {
             <a href="/sitemap.html" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none', transition: 'color .15s ease' }} onMouseEnter={e => e.target.style.color = 'var(--accent)'} onMouseLeave={e => e.target.style.color = 'rgba(255,255,255,0.4)'}>Sitemap</a>
             <a href="/privacy-policy.html" rel="nofollow" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none', transition: 'color .15s ease' }} onMouseEnter={e => e.target.style.color = 'var(--accent)'} onMouseLeave={e => e.target.style.color = 'rgba(255,255,255,0.4)'}>Privacy Policy</a>
             <a href="/terms.html" rel="nofollow" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none', transition: 'color .15s ease' }} onMouseEnter={e => e.target.style.color = 'var(--accent)'} onMouseLeave={e => e.target.style.color = 'rgba(255,255,255,0.4)'}>Terms of Use</a>
+            <span style={{ color: 'rgba(255,255,255,0.4)' }}>Office: 01244 738493</span>
             <span style={{ color: 'rgba(255,255,255,0.4)' }}>carterelec.co.uk</span>
           </div>
         </div>

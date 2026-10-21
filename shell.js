@@ -381,6 +381,10 @@ window.Footer = function Footer() {
     style: {
       color: 'rgba(255,255,255,0.4)'
     }
+  }, "Office: 01244 738493"), /*#__PURE__*/React.createElement("span", {
+    style: {
+      color: 'rgba(255,255,255,0.4)'
+    }
   }, "carterelec.co.uk")))), /*#__PURE__*/React.createElement(CookieBanner, null));
 };
 function CookieBanner() {
