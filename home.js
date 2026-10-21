@@ -12,7 +12,7 @@ const {
 const HERO_HEADLINES = {
   outcome: {
     eyebrow: 'NICEIC · Chester · Est. 2019',
-    h1: /*#__PURE__*/React.createElement(React.Fragment, null, "Electricians in Chester", /*#__PURE__*/React.createElement("span", {
+    h1: /*#__PURE__*/React.createElement(React.Fragment, null, "Electricians Chester", /*#__PURE__*/React.createElement("span", {
       className: "accent"
     }, ".")),
     strapline: /*#__PURE__*/React.createElement(React.Fragment, null, "NICEIC-", /*#__PURE__*/React.createElement("span", {

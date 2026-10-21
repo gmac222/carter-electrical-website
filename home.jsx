@@ -5,7 +5,7 @@ const { Header, Footer, TrustBar, Logo, useScrollReveal, StatNumber, TweaksPanel
 const HERO_HEADLINES = {
   outcome: {
     eyebrow: 'NICEIC · Chester · Est. 2019',
-    h1: <>Electricians in Chester<span className="accent">.</span></>,
+    h1: <>Electricians Chester<span className="accent">.</span></>,
     strapline: (
       <>
         NICEIC-<span className="accent">approved<span style={{ color: 'var(--white)' }}>.</span></span>
