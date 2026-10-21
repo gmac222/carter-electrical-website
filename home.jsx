@@ -123,7 +123,7 @@ function Intro() {
           <div className="area-image" style={{ height: '100%', width: '100%', position: 'relative', minHeight: '300px' }}>
             <img
               src="electricians-chester.jpg"
-              alt="Electricians in Chester"
+              alt="Electricians Chester"
               style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', borderRadius: '4px', boxShadow: '0 8px 32px rgba(0,0,0,0.12)' }}
             />
           </div>

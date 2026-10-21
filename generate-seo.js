@@ -394,7 +394,7 @@ function esc(str) {
 
 function buildHtml(area) {
   const url = `${COMPANY.site}/electricians-${area.slug}.html`;
-  const title = `Electricians in ${area.name} | NICEIC-Approved | Carter Electrical Contracting`;
+  const title = `Electricians ${area.name} | NICEIC-Approved | Carter Electrical Contracting`;
   const faqs = buildFaqs(area);
   const chesterObj = { name: 'Chester', slug: 'chester' };
   const adjacentList = area.adjacentSilos && area.adjacentSilos.length
@@ -483,7 +483,7 @@ function buildHtml(area) {
       <nav aria-label="Breadcrumb">
         <a href="/">Home</a> &rsaquo; <a href="/areas.html">Areas We Cover</a> &rsaquo; Electricians in ${esc(area.name)}
       </nav>
-      <h1>Electricians in ${esc(area.name)} - NICEIC-approved</h1>
+      <h1>Electricians ${esc(area.name)} - NICEIC-approved</h1>
       <h2>Approved electricians in ${esc(area.name)}, done properly the first time</h2>
       <p>${esc(area.intro)}</p>
 

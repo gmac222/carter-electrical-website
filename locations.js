@@ -103,7 +103,7 @@ function LocationPage({
     }
   }, /*#__PURE__*/React.createElement("img", {
     src: `electricians-${area.slug}.jpg`,
-    alt: `Electricians in ${locationName}`,
+    alt: `Electricians ${locationName}`,
     style: {
       width: '100%',
       height: '100%',
@@ -941,7 +941,7 @@ function LocationPage({
     current: "areas",
     theme: "dark"
   }), /*#__PURE__*/React.createElement(PageHero, {
-    title: `Electricians in ${locationName}`,
+    title: `Electricians ${locationName}`,
     titleAccent: " - NICEIC-approved.",
     subtext: area.heroSubtext || `NICEIC-approved commercial, industrial and domestic electrical contractor serving ${locationName}.`,
     ctas: /*#__PURE__*/React.createElement("div", {

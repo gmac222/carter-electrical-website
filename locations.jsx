@@ -79,7 +79,7 @@ function LocationPage({ locationName }) {
           <div className="area-image" style={{ height: '100%', width: '100%', position: 'relative', minHeight: '300px' }}>
             <img 
               src={`electricians-${area.slug}.jpg`} 
-              alt={`Electricians in ${locationName}`} 
+              alt={`Electricians ${locationName}`} 
               style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block', borderRadius: '16px', boxShadow: '0 8px 32px rgba(0,0,0,0.15)' }} 
             />
           </div>
@@ -540,7 +540,7 @@ function LocationPage({ locationName }) {
       <Header current="areas" theme="dark" />
 
       <PageHero
-        title={`Electricians in ${locationName}`}
+        title={`Electricians ${locationName}`}
         titleAccent=" - NICEIC-approved."
         subtext={area.heroSubtext || `NICEIC-approved commercial, industrial and domestic electrical contractor serving ${locationName}.`}
         ctas={

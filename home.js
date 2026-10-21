@@ -207,7 +207,7 @@ function Intro() {
     }
   }, /*#__PURE__*/React.createElement("img", {
     src: "electricians-chester.jpg",
-    alt: "Electricians in Chester",
+    alt: "Electricians Chester",
     style: {
       width: '100%',
       height: '100%',
