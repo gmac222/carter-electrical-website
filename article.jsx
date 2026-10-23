@@ -2,7 +2,7 @@
 
 const { Header, Footer, TweaksPanel, useScrollReveal, MobileStickyCTA } = window;
 
-const { useState, useEffect } = React;
+// useState / useEffect come from the global declaration in shell.js
 
 function ArticleHeader({ post }) {
   const dateStr = new Date(post.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });

@@ -9,9 +9,10 @@ const { useState, useEffect, useRef } = React;
   if (typeof document === 'undefined' || document.head.dataset.carterHeadInjected) return;
   document.head.dataset.carterHeadInjected = '1';
   const links = [
-    { rel: 'icon',             type: 'image/png', sizes: '32x32', href: 'uploads/favicon-32x32-1.png' },
-    { rel: 'shortcut icon',    type: 'image/png',                 href: 'uploads/favicon-32x32-1.png' },
-    { rel: 'apple-touch-icon',                                    href: 'uploads/favicon-32x32-1.png' },
+    { rel: 'icon',                                   sizes: '48x48',   href: '/favicon.ico' },
+    { rel: 'icon',             type: 'image/png',    sizes: '96x96',   href: '/uploads/favicon-96x96.png' },
+    { rel: 'icon',             type: 'image/png',    sizes: '192x192', href: '/uploads/favicon-192x192.png' },
+    { rel: 'apple-touch-icon',                                         href: '/uploads/apple-touch-icon.png' },
   ];
   links.forEach(attrs => {
     const el = document.createElement('link');
@@ -251,7 +252,7 @@ function CookieBanner() {
     <div className="cookie-banner" role="dialog" aria-label="Cookie consent">
       <div className="cookie-banner-content">
         <p style={{ margin: 0, fontSize: '13.5px', color: 'rgba(255,255,255,0.85)', lineHeight: 1.5 }}>
-          We use cookies to optimise your experience on our website. Read our <a href="privacy-policy.html" style={{ color: 'var(--accent)', textDecoration: 'underline' }}>Privacy Policy</a> to learn more.
+          We use cookies to optimise your experience on our website. Read our <a href="/privacy-policy.html" style={{ color: 'var(--accent)', textDecoration: 'underline' }}>Privacy Policy</a> to learn more.
         </p>
         <div className="cookie-banner-actions" style={{ display: 'flex', gap: '8px', flexShrink: 0 }}>
           <button onClick={handleAccept} className="btn btn-primary btn-sm" style={{ padding: '6px 12px', fontSize: '12px', minHeight: '32px' }}>Accept</button>
@@ -332,7 +333,7 @@ window.MobileStickyCTA = function MobileStickyCTA() {
 
   return (
     <div className={`mobile-sticky-cta ${visible ? 'is-visible' : ''} ${hidden ? 'is-hidden' : ''}`} role="navigation" aria-label="Quick contact">
-      <a href="contact.html" className="mobile-sticky-cta__quote">
+      <a href="/contact.html" className="mobile-sticky-cta__quote">
         Get a Free Quote
         <span dangerouslySetInnerHTML={{ __html: CARTER.svg.arrow }} />
       </a>

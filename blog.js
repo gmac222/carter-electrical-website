@@ -8,10 +8,9 @@ const {
   PageHero,
   MobileStickyCTA
 } = window;
-const {
-  useState,
-  useEffect
-} = React;
+
+// useState / useEffect come from the global declaration in shell.js
+
 function BlogHero() {
   return /*#__PURE__*/React.createElement(PageHero, {
     section: "Insights & Advice",

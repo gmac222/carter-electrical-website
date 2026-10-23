@@ -44,6 +44,10 @@ function generateArticleHtml(post) {
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"/>
+  <link rel="icon" href="/favicon.ico" sizes="48x48"/>
+  <link rel="icon" type="image/png" sizes="96x96" href="/uploads/favicon-96x96.png"/>
+  <link rel="icon" type="image/png" sizes="192x192" href="/uploads/favicon-192x192.png"/>
+  <link rel="apple-touch-icon" href="/uploads/apple-touch-icon.png"/>
   <link rel="stylesheet" href="/styles.css"/>
 
   <script type="application/ld+json">
@@ -64,7 +68,7 @@ function generateArticleHtml(post) {
       "name": "Carter Electrical Contracting",
       "logo": {
         "@type": "ImageObject",
-        "url": "${SITE_URL}/uploads/logo.png"
+        "url": "${SITE_URL}/uploads/logo-original.png"
       }
     },
     "description": "${jsonSafe(excerpt)}"
@@ -85,18 +89,15 @@ function generateArticleHtml(post) {
   <div id="root"></div>
   <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
   <script src="/shared.js"></script>
-  
   <script>
-    // Inject the post data globally so React can pick it up
-    window.CURRENT_POST = ${JSON.stringify({ ...post.data, slug, html: post.html })};
+    // Post data used to hydrate the pre-rendered article
+    window.CURRENT_POST = ${JSON.stringify({ ...post.data, slug, html: post.html }).replace(/</g, '\\u003c')};
   </script>
-
-  <script type="text/babel" src="/shell.jsx"></script>
-  <script type="text/babel" src="/tweaks.jsx"></script>
-  <script type="text/babel" src="/article.jsx"></script>
-  <script type="text/babel">ReactDOM.createRoot(document.getElementById('root')).render(<ArticlePage />);</script>
+  <script src="/shell.js"></script>
+  <script src="/tweaks.js"></script>
+  <script src="/article.js"></script>
+  <script>ReactDOM.hydrateRoot(document.getElementById('root'), React.createElement(ArticlePage));</script>
 </body>
 </html>`;
   return html;
@@ -123,6 +124,10 @@ function generateBlogIndexHtml(posts) {
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"/>
+  <link rel="icon" href="/favicon.ico" sizes="48x48"/>
+  <link rel="icon" type="image/png" sizes="96x96" href="/uploads/favicon-96x96.png"/>
+  <link rel="icon" type="image/png" sizes="192x192" href="/uploads/favicon-192x192.png"/>
+  <link rel="apple-touch-icon" href="/uploads/apple-touch-icon.png"/>
   <link rel="stylesheet" href="/styles.css"/>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18182294304"></script>
@@ -139,17 +144,14 @@ function generateBlogIndexHtml(posts) {
   <div id="root"></div>
   <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
   <script src="/shared.js"></script>
-  
   <script>
-    window.BLOG_POSTS = ${JSON.stringify(posts.map(p => ({ ...p.data, slug: p.slug })))};
+    window.BLOG_POSTS = ${JSON.stringify(posts.map(p => ({ ...p.data, slug: p.slug }))).replace(/</g, '\\u003c')};
   </script>
-
-  <script type="text/babel" src="/shell.jsx"></script>
-  <script type="text/babel" src="/tweaks.jsx"></script>
-  <script type="text/babel" src="/blog.jsx"></script>
-  <script type="text/babel">ReactDOM.createRoot(document.getElementById('root')).render(<BlogIndex />);</script>
+  <script src="/shell.js"></script>
+  <script src="/tweaks.js"></script>
+  <script src="/blog.js"></script>
+  <script>ReactDOM.hydrateRoot(document.getElementById('root'), React.createElement(BlogIndex));</script>
 </body>
 </html>`;
   return html;
@@ -157,8 +159,9 @@ function generateBlogIndexHtml(posts) {
 
 // Generate sitemap.xml
 function generateSitemap(posts) {
+  // Only indexable pages belong here (privacy-policy and terms are noindex)
   const staticPages = [
-    '',
+    '/',
     '/about.html',
     '/services.html',
     '/commercial.html',
@@ -168,12 +171,21 @@ function generateSitemap(posts) {
     '/case-studies.html',
     '/contact.html',
     '/blog/',
-    '/sitemap.html',
-    '/privacy-policy.html',
-    '/terms.html'
+    '/sitemap.html'
   ];
-  
-  const today = new Date().toISOString().split('T')[0];
+
+  // lastmod = date of the last commit that touched the page's file
+  const { execSync } = require('child_process');
+  const lastmodFor = (page) => {
+    let file = page === '/' ? 'index.html' : page.replace(/^\//, '');
+    if (file.endsWith('/')) file += 'index.html';
+    try {
+      const d = execSync(`git log -1 --format=%cs -- "${file}"`, { cwd: __dirname }).toString().trim();
+      if (d) return d;
+    } catch (e) {}
+    return new Date().toISOString().split('T')[0];
+  };
+
 
   let xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -182,9 +194,9 @@ function generateSitemap(posts) {
   staticPages.forEach(page => {
     xml += `  <url>
     <loc>${SITE_URL}${page}</loc>
-    <lastmod>${today}</lastmod>
+    <lastmod>${lastmodFor(page)}</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>${page === '' ? '1.0' : '0.8'}</priority>
+    <priority>${page === '/' ? '1.0' : '0.8'}</priority>
   </url>\n`;
   });
 
@@ -194,7 +206,7 @@ function generateSitemap(posts) {
   locationPages.forEach(page => {
     xml += `  <url>
     <loc>${SITE_URL}/${page}</loc>
-    <lastmod>${today}</lastmod>
+    <lastmod>${lastmodFor('/' + page)}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>\n`;
@@ -205,7 +217,7 @@ function generateSitemap(posts) {
   casePages.forEach(page => {
     xml += `  <url>
     <loc>${SITE_URL}/${page}</loc>
-    <lastmod>${today}</lastmod>
+    <lastmod>${lastmodFor('/' + page)}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>\n`;
@@ -230,6 +242,40 @@ Allow: /
 
 Sitemap: ${SITE_URL}/sitemap.xml
 `;
+}
+
+
+// Pre-render a blog page so the HTML Google receives already holds the H1, copy and links.
+// Uses the compiled shell.js / tweaks.js / article.js / blog.js, as the root pages do.
+function prerender(htmlPath, componentName, globals) {
+  const { JSDOM } = require('jsdom');
+  const React = require('react');
+  const ReactDOMServer = require('react-dom/server');
+  const html = fs.readFileSync(htmlPath, 'utf8');
+  const dom = new JSDOM('<!doctype html><html><head></head><body><div id="root"></div></body></html>', { runScripts: 'outside-only', url: SITE_URL + '/' });
+  const w = dom.window;
+  w.React = React;
+  w.useState = React.useState; w.useEffect = React.useEffect; w.useRef = React.useRef;
+  w.ReactDOM = { createRoot: () => ({ render: () => {} }), hydrateRoot: () => {} };
+  Object.assign(w, globals);
+  ['shared.js', 'shell.js', 'tweaks.js', componentName === 'ArticlePage' ? 'article.js' : 'blog.js']
+    .forEach(f => w.eval(fs.readFileSync(path.join(__dirname, f), 'utf8')));
+  // Components read globals from window; run render with jsdom's window as global
+  const prev = { window: global.window, document: global.document };
+  global.window = w; global.document = w.document;
+  let markup;
+  try {
+    markup = ReactDOMServer.renderToString(React.createElement(w[componentName]));
+  } finally {
+    global.window = prev.window; global.document = prev.document;
+  }
+  // React 19's renderer puts resource hints (image preloads) at the top of the markup.
+  // The browser hydrates with React 18, so move them into <head> as convert-static.js does.
+  const hoisted = [];
+  markup = markup.replace(/^(?:<link [^>]*\/>)+/, m => { hoisted.push(m); return ''; });
+  let out = html.replace('</head>', () => hoisted.join('') + '\n</head>');
+  out = out.replace('<div id="root"></div>', () => `<div id="root">${markup}</div>`);
+  fs.writeFileSync(htmlPath, out);
 }
 
 function build() {
@@ -259,6 +305,7 @@ function build() {
     // Write article index.html
     const articleHtml = generateArticleHtml(post);
     fs.writeFileSync(path.join(articleDir, 'index.html'), articleHtml);
+    prerender(path.join(articleDir, 'index.html'), 'ArticlePage', { CURRENT_POST: { ...post.data, slug, html } });
   });
 
   // Sort posts by date (newest first)
@@ -267,6 +314,7 @@ function build() {
   // Write blog index.html
   const blogIndexHtml = generateBlogIndexHtml(posts);
   fs.writeFileSync(path.join(BLOG_DIR, 'index.html'), blogIndexHtml);
+  prerender(path.join(BLOG_DIR, 'index.html'), 'BlogIndex', { BLOG_POSTS: posts.map(p => ({ ...p.data, slug: p.slug })) });
 
   // Write sitemap and robots.txt
   fs.writeFileSync(path.join(__dirname, 'sitemap.xml'), generateSitemap(posts));

@@ -14,16 +14,21 @@ const {
   document.head.dataset.carterHeadInjected = '1';
   const links = [{
     rel: 'icon',
-    type: 'image/png',
-    sizes: '32x32',
-    href: 'uploads/favicon-32x32-1.png'
+    sizes: '48x48',
+    href: '/favicon.ico'
   }, {
-    rel: 'shortcut icon',
+    rel: 'icon',
     type: 'image/png',
-    href: 'uploads/favicon-32x32-1.png'
+    sizes: '96x96',
+    href: '/uploads/favicon-96x96.png'
+  }, {
+    rel: 'icon',
+    type: 'image/png',
+    sizes: '192x192',
+    href: '/uploads/favicon-192x192.png'
   }, {
     rel: 'apple-touch-icon',
-    href: 'uploads/favicon-32x32-1.png'
+    href: '/uploads/apple-touch-icon.png'
   }];
   links.forEach(attrs => {
     const el = document.createElement('link');
@@ -418,7 +423,7 @@ function CookieBanner() {
       lineHeight: 1.5
     }
   }, "We use cookies to optimise your experience on our website. Read our ", /*#__PURE__*/React.createElement("a", {
-    href: "privacy-policy.html",
+    href: "/privacy-policy.html",
     style: {
       color: 'var(--accent)',
       textDecoration: 'underline'
@@ -531,7 +536,7 @@ window.MobileStickyCTA = function MobileStickyCTA() {
     role: "navigation",
     "aria-label": "Quick contact"
   }, /*#__PURE__*/React.createElement("a", {
-    href: "contact.html",
+    href: "/contact.html",
     className: "mobile-sticky-cta__quote"
   }, "Get a Free Quote", /*#__PURE__*/React.createElement("span", {
     dangerouslySetInnerHTML: {

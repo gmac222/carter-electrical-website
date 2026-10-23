@@ -2,7 +2,7 @@
 
 const { Header, Footer, TweaksPanel, useScrollReveal, PageHero, MobileStickyCTA } = window;
 
-const { useState, useEffect } = React;
+// useState / useEffect come from the global declaration in shell.js
 
 function BlogHero() {
   return (

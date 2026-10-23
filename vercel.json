@@ -1,9 +1,43 @@
 {
   "redirects": [
-    {
-      "source": "/electricians-chester.html",
-      "destination": "/",
-      "permanent": true
-    }
+    { "source": "/electricians-chester.html", "destination": "/", "permanent": true },
+
+    { "source": "/about", "destination": "/about.html", "permanent": true },
+    { "source": "/about/", "destination": "/about.html", "permanent": true },
+    { "source": "/about-us/", "destination": "/about.html", "permanent": true },
+    { "source": "/services", "destination": "/services.html", "permanent": true },
+    { "source": "/services/", "destination": "/services.html", "permanent": true },
+    { "source": "/commercial", "destination": "/commercial.html", "permanent": true },
+    { "source": "/commercial/", "destination": "/commercial.html", "permanent": true },
+    { "source": "/industrial", "destination": "/industrial.html", "permanent": true },
+    { "source": "/industrial/", "destination": "/industrial.html", "permanent": true },
+    { "source": "/domestic", "destination": "/domestic.html", "permanent": true },
+    { "source": "/domestic/", "destination": "/domestic.html", "permanent": true },
+    { "source": "/areas", "destination": "/areas.html", "permanent": true },
+    { "source": "/areas/", "destination": "/areas.html", "permanent": true },
+    { "source": "/case-studies", "destination": "/case-studies.html", "permanent": true },
+    { "source": "/case-studies/", "destination": "/case-studies.html", "permanent": true },
+    { "source": "/contact", "destination": "/contact.html", "permanent": true },
+    { "source": "/contact/", "destination": "/contact.html", "permanent": true },
+    { "source": "/contact-us/", "destination": "/contact.html", "permanent": true },
+    { "source": "/careers", "destination": "/about.html", "permanent": true },
+    { "source": "/careers/", "destination": "/about.html", "permanent": true },
+    { "source": "/html-sitemap", "destination": "/sitemap.html", "permanent": true },
+    { "source": "/html-sitemap/", "destination": "/sitemap.html", "permanent": true },
+    { "source": "/privacy-policy", "destination": "/privacy-policy.html", "permanent": true },
+    { "source": "/privacy-policy/", "destination": "/privacy-policy.html", "permanent": true },
+    { "source": "/terms", "destination": "/terms.html", "permanent": true },
+    { "source": "/terms/", "destination": "/terms.html", "permanent": true },
+
+    { "source": "/electrician-:town(chester)/", "destination": "/", "permanent": true },
+    { "source": "/electrician-:town(chester)", "destination": "/", "permanent": true },
+    { "source": "/electrician-:town(deeside|ellesmere-port|frodsham|mold|northwich|tarporley|wirral|wrexham)/", "destination": "/electricians-:town.html", "permanent": true },
+    { "source": "/electrician-:town(deeside|ellesmere-port|frodsham|mold|northwich|tarporley|wirral|wrexham)", "destination": "/electricians-:town.html", "permanent": true },
+    { "source": "/electricians-:town(deeside|ellesmere-port|frodsham|mold|northwich|tarporley|wirral|wrexham)/", "destination": "/electricians-:town.html", "permanent": true },
+    { "source": "/electricians-:town(deeside|ellesmere-port|frodsham|mold|northwich|tarporley|wirral|wrexham)", "destination": "/electricians-:town.html", "permanent": true },
+
+    { "source": "/wp-content/uploads/:year/:month/:file", "destination": "/uploads/:file", "permanent": true },
+
+    { "source": "/blog/:slug/:page(about|areas|case-studies|commercial|contact|domestic|industrial|privacy-policy|services|sitemap|terms).html", "destination": "/:page.html", "permanent": true }
   ]
 }
