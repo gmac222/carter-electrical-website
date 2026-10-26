@@ -367,11 +367,11 @@ function Areas() {
         </div>
 
         <div className="areas-grid">
-          <div className="area-image" style={{ position: 'relative', borderRadius: '2px', overflow: 'hidden' }}>
+          <div className="area-image" style={{ position: 'relative', borderRadius: '16px', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <img 
               src="niceic-approved-electrician-chester.jpg" 
               alt="NICEIC approved electrician in Chester" 
-              style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} 
+              style={{ width: '100%', height: 'auto', maxWidth: '520px', maxHeight: '520px', aspectRatio: '1 / 1', objectFit: 'contain', display: 'block', borderRadius: '16px', boxShadow: '0 8px 32px rgba(0,0,0,0.35)' }} 
             />
           </div>
           <div className="area-detail">

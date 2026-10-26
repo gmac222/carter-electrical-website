@@ -529,17 +529,25 @@ function Areas() {
     className: "area-image",
     style: {
       position: 'relative',
-      borderRadius: '2px',
-      overflow: 'hidden'
+      borderRadius: '16px',
+      overflow: 'hidden',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center'
     }
   }, /*#__PURE__*/React.createElement("img", {
     src: "niceic-approved-electrician-chester.jpg",
     alt: "NICEIC approved electrician in Chester",
     style: {
       width: '100%',
-      height: '100%',
-      objectFit: 'cover',
-      display: 'block'
+      height: 'auto',
+      maxWidth: '520px',
+      maxHeight: '520px',
+      aspectRatio: '1 / 1',
+      objectFit: 'contain',
+      display: 'block',
+      borderRadius: '16px',
+      boxShadow: '0 8px 32px rgba(0,0,0,0.35)'
     }
   })), /*#__PURE__*/React.createElement("div", {
     className: "area-detail"
