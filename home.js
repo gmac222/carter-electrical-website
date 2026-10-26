@@ -11,7 +11,7 @@ const {
 } = window;
 const HERO_HEADLINES = {
   outcome: {
-    eyebrow: 'NICEIC · Chester · Est. 2019',
+    eyebrow: 'NICEIC · Est. 2019',
     h1: /*#__PURE__*/React.createElement(React.Fragment, null, "Electricians Chester", /*#__PURE__*/React.createElement("span", {
       className: "accent"
     }, ".")),
@@ -22,11 +22,11 @@ const HERO_HEADLINES = {
         color: 'var(--white)'
       }
     }, "."))),
-    sub: 'Chester-based commercial, industrial and domestic electrical services.'
+    sub: 'Looking for reliable electricians Chester? We deliver certified commercial, industrial and domestic electrical services across the region. You can trust our team for prompt advice, high quality workmanship, and transparent fixed quotes.'
   },
   credential: {
     eyebrow: 'NICEIC Approved · Est. 2019',
-    h1: /*#__PURE__*/React.createElement(React.Fragment, null, "NICEIC-approved electricians in Chester", /*#__PURE__*/React.createElement("span", {
+    h1: /*#__PURE__*/React.createElement(React.Fragment, null, "Electricians Chester", /*#__PURE__*/React.createElement("span", {
       className: "accent"
     }, ".")),
     strapline: /*#__PURE__*/React.createElement(React.Fragment, null, "Built to ", /*#__PURE__*/React.createElement("span", {
@@ -40,7 +40,7 @@ const HERO_HEADLINES = {
   },
   regional: {
     eyebrow: 'Christleton · CH3 6AH',
-    h1: /*#__PURE__*/React.createElement(React.Fragment, null, "Chester\u2019s electricians", /*#__PURE__*/React.createElement("span", {
+    h1: /*#__PURE__*/React.createElement(React.Fragment, null, "Electricians Chester", /*#__PURE__*/React.createElement("span", {
       className: "accent"
     }, ".")),
     strapline: /*#__PURE__*/React.createElement(React.Fragment, null, "Commercial-grade", /*#__PURE__*/React.createElement("span", {
@@ -180,29 +180,24 @@ function Intro() {
     }
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "eyebrow"
-  }, "Electrician in Chester"), /*#__PURE__*/React.createElement("h2", {
+  }, "Electrical Contractors"), /*#__PURE__*/React.createElement("h2", {
     className: "h-1",
     style: {
       marginTop: '12px'
     }
-  }, "NICEIC approved electrical contractor serving Chester and Cheshire West", /*#__PURE__*/React.createElement("span", {
+  }, "Approved electrical contractor for home and business", /*#__PURE__*/React.createElement("span", {
     className: "accent"
   }, "."))), /*#__PURE__*/React.createElement("p", {
     className: "lede",
     style: {
       marginTop: '28px'
     }
-  }, /*#__PURE__*/React.createElement("strong", null, "Carter Electrical"), " is an NICEIC approved electrical contractor serving Chester and Cheshire West and the wider Cheshire area. Our electrical services cover domestic, commercial and industrial electrical work across the local area. Every job is compliant with current building regulations and BS\xA07671, and signed off with full documentation."), /*#__PURE__*/React.createElement("p", {
+  }, "When property owners need to find a dependable electrician in Chester, Carter Electrical provides an unmatched standard of service. As an established NICEIC accredited firm, we carry out all types of electrical work across Cheshire and communities stretching into North Wales."), /*#__PURE__*/React.createElement("p", {
     className: "lede",
     style: {
       marginTop: '16px'
     }
-  }, "Typical projects include full rewires, replacement consumer units, socket and light fitting installation, and electrical repairs - from a single socket to a full commercial electrical fit-out or fault repair, all delivered to the same certified standard."), /*#__PURE__*/React.createElement("p", {
-    className: "lede",
-    style: {
-      marginTop: '16px'
-    }
-  }, "Whether you need a professional electrician to fix a fault in your home electrics or a new electrical installation for your business, our qualified and knowledgeable team gives honest, expert advice from the first visit. We book a free site survey, explain what the work involves and provide a clear fixed-price quote at reasonable rates, so you know the cost before we start. Customers across Chester trust us for friendly, reliable service and quality workmanship, with an excellent finish whether it is domestic electrical work in a family home or a commercial project.")), /*#__PURE__*/React.createElement("div", {
+  }, "Whether tackling major work on business units or domestic electrical work inside a private house, our expert tradespeople take ownership of every job, guaranteeing tidy work and clear communication. Our friendly team ensures safe electrics, helping each customer complete their project efficiently with reasonable rates.")), /*#__PURE__*/React.createElement("div", {
     className: "area-image",
     style: {
       height: '100%',
@@ -216,9 +211,9 @@ function Intro() {
     style: {
       width: '100%',
       height: '100%',
-      objectFit: 'cover',
+      objectFit: 'contain',
       display: 'block',
-      borderRadius: '4px',
+      borderRadius: '16px',
       boxShadow: '0 8px 32px rgba(0,0,0,0.12)'
     }
   }))), /*#__PURE__*/React.createElement("div", {
@@ -275,13 +270,13 @@ function Services() {
     className: "section-head reveal"
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "eyebrow"
-  }, "One contractor \xB7 The full electrical scope"), /*#__PURE__*/React.createElement("h2", {
+  }, "Comprehensive Capabilities"), /*#__PURE__*/React.createElement("h2", {
     className: "h-1"
-  }, "Electrical Services in Chester", /*#__PURE__*/React.createElement("span", {
+  }, "Professional Electrical Services", /*#__PURE__*/React.createElement("span", {
     className: "accent"
   }, ".")), /*#__PURE__*/React.createElement("p", {
     className: "lede"
-  }, "A full range of electrical services, from a single board upgrade to a commercial fit-out. Certified, compliant and delivered by an in-house team that owns the job end to end."))), /*#__PURE__*/React.createElement("div", {
+  }, "We provide a wide range of electrical services tailored to domestic households and commercial facilities. From full rewires in older properties to regular service visits, our qualified engineers complete every job in accordance with BS 7671 electrical regulation standards."))), /*#__PURE__*/React.createElement("div", {
     className: "services-grid"
   }, CARTER.services.map((s, idx) => {
     const num = String(idx + 1).padStart(2, '0');
@@ -780,4 +775,4 @@ function Home() {
     theme: "dark"
   }), /*#__PURE__*/React.createElement(Hero, null), /*#__PURE__*/React.createElement(Intro, null), /*#__PURE__*/React.createElement(Services, null), /*#__PURE__*/React.createElement(Cases, null), /*#__PURE__*/React.createElement(Testimonials, null), /*#__PURE__*/React.createElement(MapSection, null), /*#__PURE__*/React.createElement(FAQsSection, null), /*#__PURE__*/React.createElement(Areas, null), /*#__PURE__*/React.createElement(CTABand, null), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(MobileStickyCTA, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
 }
-ReactDOM.hydrateRoot(document.getElementById('root'), /*#__PURE__*/React.createElement(Home, null));
+ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/React.createElement(Home, null));

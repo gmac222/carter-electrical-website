@@ -4,18 +4,18 @@ const { Header, Footer, TrustBar, Logo, useScrollReveal, StatNumber, TweaksPanel
 
 const HERO_HEADLINES = {
   outcome: {
-    eyebrow: 'NICEIC · Chester · Est. 2019',
+    eyebrow: 'NICEIC · Est. 2019',
     h1: <>Electricians Chester<span className="accent">.</span></>,
     strapline: (
       <>
         NICEIC-<span className="accent">approved<span style={{ color: 'var(--white)' }}>.</span></span>
       </>
     ),
-    sub: 'Chester-based commercial, industrial and domestic electrical services.',
+    sub: 'Looking for reliable electricians Chester? We deliver certified commercial, industrial and domestic electrical services across the region. You can trust our team for prompt advice, high quality workmanship, and transparent fixed quotes.',
   },
   credential: {
     eyebrow: 'NICEIC Approved · Est. 2019',
-    h1: <>NICEIC-approved electricians in Chester<span className="accent">.</span></>,
+    h1: <>Electricians Chester<span className="accent">.</span></>,
     strapline: (
       <>
         Built to <span className="accent">last<span style={{ color: 'var(--white)' }}>.</span></span>
@@ -25,7 +25,7 @@ const HERO_HEADLINES = {
   },
   regional: {
     eyebrow: 'Christleton · CH3 6AH',
-    h1: <>Chester&rsquo;s electricians<span className="accent">.</span></>,
+    h1: <>Electricians Chester<span className="accent">.</span></>,
     strapline: (
       <>
         Commercial-grade<span className="accent">.</span> <span className="accent">Local accountability<span style={{ color: 'var(--white)' }}>.</span></span>
@@ -106,19 +106,16 @@ function Intro() {
           {/* Left: heading + body text */}
           <div className="section-head" style={{ marginBottom: 0, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <div>
-              <div className="eyebrow">Electrician in Chester</div>
+              <div className="eyebrow">Electrical Contractors</div>
               <h2 className="h-1" style={{ marginTop: '12px' }}>
-                NICEIC approved electrical contractor serving Chester and Cheshire West<span className="accent">.</span>
+                Approved electrical contractor for home and business<span className="accent">.</span>
               </h2>
             </div>
             <p className="lede" style={{ marginTop: '28px' }}>
-              <strong>Carter Electrical</strong> is an NICEIC approved electrical contractor serving Chester and Cheshire West and the wider Cheshire area. Our electrical services cover domestic, commercial and industrial electrical work across the local area. Every job is compliant with current building regulations and BS&nbsp;7671, and signed off with full documentation.
+              When property owners need to find a dependable electrician in Chester, Carter Electrical provides an unmatched standard of service. As an established NICEIC accredited firm, we carry out all types of electrical work across Cheshire and communities stretching into North Wales.
             </p>
             <p className="lede" style={{ marginTop: '16px' }}>
-              Typical projects include full rewires, replacement consumer units, socket and light fitting installation, and electrical repairs - from a single socket to a full commercial electrical fit-out or fault repair, all delivered to the same certified standard.
-            </p>
-            <p className="lede" style={{ marginTop: '16px' }}>
-              Whether you need a professional electrician to fix a fault in your home electrics or a new electrical installation for your business, our qualified and knowledgeable team gives honest, expert advice from the first visit. We book a free site survey, explain what the work involves and provide a clear fixed-price quote at reasonable rates, so you know the cost before we start. Customers across Chester trust us for friendly, reliable service and quality workmanship, with an excellent finish whether it is domestic electrical work in a family home or a commercial project.
+              Whether tackling major work on business units or domestic electrical work inside a private house, our expert tradespeople take ownership of every job, guaranteeing tidy work and clear communication. Our friendly team ensures safe electrics, helping each customer complete their project efficiently with reasonable rates.
             </p>
           </div>
 
@@ -127,7 +124,7 @@ function Intro() {
             <img
               src="electricians-chester.jpg"
               alt="Electricians Chester"
-              style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', borderRadius: '4px', boxShadow: '0 8px 32px rgba(0,0,0,0.12)' }}
+              style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block', borderRadius: '16px', boxShadow: '0 8px 32px rgba(0,0,0,0.12)' }}
             />
           </div>
         </div>
@@ -157,12 +154,10 @@ function Services() {
       <div className="wrap">
         <div className="section-head reveal">
           <div>
-            <div className="eyebrow">One contractor · The full electrical scope</div>
-            <h2 className="h-1">Electrical Services in Chester<span className="accent">.</span></h2>
+            <div className="eyebrow">Comprehensive Capabilities</div>
+            <h2 className="h-1">Professional Electrical Services<span className="accent">.</span></h2>
             <p className="lede">
-              A full range of electrical services, from a single board upgrade to
-              a commercial fit-out. Certified, compliant and delivered by an
-              in-house team that owns the job end to end.
+              We provide a wide range of electrical services tailored to domestic households and commercial facilities. From full rewires in older properties to regular service visits, our qualified engineers complete every job in accordance with BS 7671 electrical regulation standards.
             </p>
           </div>
         </div>
