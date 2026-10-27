@@ -6,7 +6,6 @@ const {
   Footer,
   TrustBar,
   CarterPlaceholder,
-  TweaksPanel,
   useScrollReveal,
   PageHero
 } = window;
@@ -1015,7 +1014,7 @@ function LocationPage({
       color: 'var(--muted-2)',
       textAlign: 'left'
     }
-  }, "100% Secure. No obligation. Your data is strictly protected."))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(MobileStickyCTA, null), /*#__PURE__*/React.createElement(TweaksPanel, null), /*#__PURE__*/React.createElement(ContactModal, {
+  }, "100% Secure. No obligation. Your data is strictly protected."))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(MobileStickyCTA, null), /*#__PURE__*/React.createElement(ContactModal, {
     isOpen: isContactModalOpen,
     onClose: () => setIsContactModalOpen(false)
   }));

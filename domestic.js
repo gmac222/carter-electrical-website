@@ -4,7 +4,6 @@ const {
   Header,
   Footer,
   TrustBar,
-  TweaksPanel,
   useScrollReveal,
   StatNumber,
   PageHero,
@@ -394,6 +393,6 @@ function Domestic() {
       color: 'var(--muted-2)',
       textAlign: 'left'
     }
-  }, "100% Secure. No obligation. Your data is strictly protected."))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(MobileStickyCTA, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
+  }, "100% Secure. No obligation. Your data is strictly protected."))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(MobileStickyCTA, null));
 }
-ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/React.createElement(Domestic, null));
+if (window.CARTER && window.Header) ReactDOM.hydrateRoot(document.getElementById('root'), /*#__PURE__*/React.createElement(Domestic, null));

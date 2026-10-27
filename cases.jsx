@@ -1,6 +1,6 @@
 // Case studies index + Old Dukes detail + other pages
 
-const { Header, Footer, TrustBar, TweaksPanel, useScrollReveal, PageHero, MobileStickyCTA } = window;
+const { Header, Footer, TrustBar, useScrollReveal, PageHero, MobileStickyCTA } = window;
 
 // ----- Case Studies Index -----
 function CaseIndex() {
@@ -48,7 +48,6 @@ function CaseIndex() {
       </section>
       <Footer />
       <MobileStickyCTA />
-      <TweaksPanel />
     </>
   );
 }
@@ -143,7 +142,6 @@ function OldDukes() {
       </section>
       <Footer />
       <MobileStickyCTA />
-      <TweaksPanel />
     </>
   );
 }
@@ -249,7 +247,6 @@ function PrentonWirral() {
       </section>
       <Footer />
       <MobileStickyCTA />
-      <TweaksPanel />
     </>
   );
 }
@@ -343,7 +340,6 @@ function CarbonaraNo49() {
       </section>
       <Footer />
       <MobileStickyCTA />
-      <TweaksPanel />
     </>
   );
 }
@@ -437,7 +433,6 @@ function BrynRhiw() {
       </section>
       <Footer />
       <MobileStickyCTA />
-      <TweaksPanel />
     </>
   );
 }

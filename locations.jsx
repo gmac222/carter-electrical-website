@@ -1,7 +1,7 @@
 // Location pages for targeted areas - long-form, unique per-city content to avoid
 // thin/duplicate-content penalties on service+location pages.
 
-const { Header, Footer, TrustBar, CarterPlaceholder, TweaksPanel, useScrollReveal, PageHero } = window;
+const { Header, Footer, TrustBar, CarterPlaceholder, useScrollReveal, PageHero } = window;
 
 function LocationPage({ locationName }) {
   useScrollReveal();
@@ -586,7 +586,6 @@ function LocationPage({ locationName }) {
 
       <Footer />
       <MobileStickyCTA />
-      <TweaksPanel />
       <ContactModal isOpen={isContactModalOpen} onClose={() => setIsContactModalOpen(false)} />
     </>
   );

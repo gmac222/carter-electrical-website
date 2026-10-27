@@ -4,7 +4,6 @@ const {
   Header,
   Footer,
   TrustBar,
-  TweaksPanel,
   useScrollReveal,
   PageHero,
   MobileStickyCTA
@@ -66,7 +65,7 @@ function CaseIndex() {
     dangerouslySetInnerHTML: {
       __html: CARTER.svg.arrow
     }
-  })))))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(MobileStickyCTA, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
+  })))))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(MobileStickyCTA, null));
 }
 
 // ----- Old Dukes Detail -----
@@ -278,7 +277,7 @@ function OldDukes() {
     dangerouslySetInnerHTML: {
       __html: CARTER.svg.arrow
     }
-  })))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(MobileStickyCTA, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
+  })))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(MobileStickyCTA, null));
 }
 function MetaTile({
   k,
@@ -519,7 +518,7 @@ function PrentonWirral() {
     dangerouslySetInnerHTML: {
       __html: CARTER.svg.arrow
     }
-  })))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(MobileStickyCTA, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
+  })))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(MobileStickyCTA, null));
 }
 
 // ----- Carbonara @ No. 49 Detail -----
@@ -731,7 +730,7 @@ function CarbonaraNo49() {
     dangerouslySetInnerHTML: {
       __html: CARTER.svg.arrow
     }
-  })))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(MobileStickyCTA, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
+  })))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(MobileStickyCTA, null));
 }
 
 // ----- Bryn Rhiw Detail -----
@@ -942,7 +941,7 @@ function BrynRhiw() {
     dangerouslySetInnerHTML: {
       __html: CARTER.svg.arrow
     }
-  })))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(MobileStickyCTA, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
+  })))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(MobileStickyCTA, null));
 }
 window.CaseIndex = CaseIndex;
 window.OldDukes = OldDukes;

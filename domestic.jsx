@@ -1,6 +1,6 @@
 // Domestic Electrical Services - dedicated landing page
 
-const { Header, Footer, TrustBar, TweaksPanel, useScrollReveal, StatNumber, PageHero, MobileStickyCTA, CarterPlaceholder } = window;
+const { Header, Footer, TrustBar, useScrollReveal, StatNumber, PageHero, MobileStickyCTA, CarterPlaceholder } = window;
 
 function DomesticHero() {
   return (
@@ -244,7 +244,6 @@ function Domestic() {
       </section>
       <Footer />
       <MobileStickyCTA />
-      <TweaksPanel />
     </>
   );
 }

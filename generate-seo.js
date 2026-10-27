@@ -1,9 +1,8 @@
-// Generates one HTML shell per target area with unique meta, OG/Twitter,
-// LocalBusiness + FAQPage + BreadcrumbList schema, and a noscript fallback
-// containing the core SEO copy (H1, intro, neighbourhoods, FAQs). The React
-// build renders the rich interactive version on top; the noscript block
-// ensures non-JS crawlers see substantial unique content and we avoid thin-
-// or duplicate-content penalties.
+// Generates one HTML shell per target area with unique meta, OG/Twitter and
+// LocalBusiness + Service + FAQPage + BreadcrumbList schema. convert-static.js
+// then pre-renders the LocationPage component into #root, so crawlers get the
+// full page content in the HTML without needing to run JavaScript.
+// Run the whole pipeline with `npm run build`.
 //
 // Source of truth for the per-area data is mirrored from shared.js. Keep in
 // sync when adding/removing areas or updating postcodes/neighbourhoods.
@@ -172,7 +171,7 @@ From three-phase industrial installations at Bromborough to retail fit-outs, lan
 ];
 
 // Per-location FAQs: same structure as window.CARTER.locationFaqs so the
-// noscript version mirrors what React renders.
+// FAQPage schema mirrors what React renders.
 const faqsMap = {
   'tarporley': [
     {
@@ -396,11 +395,6 @@ function buildHtml(area) {
   const url = `${COMPANY.site}/electricians-${area.slug}.html`;
   const title = `Electricians ${area.name} | NICEIC-Approved | Carter Electrical Contracting`;
   const faqs = buildFaqs(area);
-  const chesterObj = { name: 'Chester', slug: 'chester' };
-  const adjacentList = area.adjacentSilos && area.adjacentSilos.length
-    ? area.adjacentSilos.map(s => areas.find(a => a.slug === s)).filter(Boolean)
-    : areas.filter(a => a.slug !== area.slug);
-  const otherAreas = [chesterObj, ...adjacentList].filter(a => a && a.slug !== area.slug);
 
   // Schema: BreadcrumbList + LocalBusiness (Electrician) + Service + FAQPage.
   // The LocalBusiness uses the site-wide #business @id so every location page
@@ -491,64 +485,6 @@ function buildHtml(area) {
     ]
   };
 
-  // Noscript fallback: real, crawlable content for non-JS crawlers.
-  const noscript = `
-    <header>
-      <p><a href="${COMPANY.site}">${COMPANY.name}</a> · <a href="tel:+441244727291">${COMPANY.phone}</a></p>
-    </header>
-    <main>
-      <nav aria-label="Breadcrumb">
-        <a href="/">Home</a> &rsaquo; <a href="/areas.html">Areas We Cover</a> &rsaquo; Electricians in ${esc(area.name)}
-      </nav>
-      <h1>Electricians ${esc(area.name)} - NICEIC-approved</h1>
-      <h2>Approved electricians in ${esc(area.name)}, done properly the first time</h2>
-      <p>${esc(area.intro)}</p>
-
-      <h2>Coverage</h2>
-      <ul>
-        <li><strong>Postcodes:</strong> ${area.postcodes.map(esc).join(', ')}</li>
-        <li><strong>Response time:</strong> Within 48 hours</li>
-        <li><strong>Distance from Chester HQ:</strong> ${esc(area.distance)}</li>
-        <li><strong>County:</strong> ${esc(area.county)}</li>
-      </ul>
-
-      <h2>Commercial Electrical</h2>
-      <p>${esc(area.commercialAngle)}</p>
-
-      <h2>Domestic Electrical</h2>
-      <p>${esc(area.domesticAngle)}</p>
-
-      <h2>Areas we cover</h2>
-      <ul>
-        ${area.neighbourhoods.map(n => '<li>' + esc(n) + '</li>').join('\n        ')}
-      </ul>
-
-      <h2>Our electrical services</h2>
-      <ul>
-        <li>Commercial fit-outs, distribution, emergency lighting and fire alarm</li>
-        <li>Industrial three-phase, motor control and factory shutdowns</li>
-        <li>Full and partial domestic rewires, replacement consumer units</li>
-        <li>EICR testing, landlord safety reports and PAT testing</li>
-        <li>OZEV-approved EV charger installation and solar-PV integration</li>
-      </ul>
-
-      <h2>Local Area Map - Coverage in ${esc(area.name)}</h2>
-      <p>Interactive coverage map showing our service radius across ${esc(area.name)} and surrounding postcodes (${area.postcodes.map(esc).join(', ')}).</p>
-
-      <h2>Client Testimonials in ${esc(area.name)}</h2>
-      ${(area.testimonials || []).map(t => `<blockquote><p>"${esc(t.quote)}"</p><cite>- ${esc(t.author)}, ${esc(t.role)}</cite></blockquote>`).join('\n      ')}
-
-      <h2>Frequently asked questions</h2>
-      ${faqs.map(f => `<h3>${esc(f.q)}</h3><p>${esc(f.a)}</p>`).join('\n      ')}
-
-      <h2>Other areas we cover</h2>
-      <ul>
-        ${otherAreas.map(a => '<li><a href="' + (a.slug === 'chester' ? '/' : '/electricians-' + a.slug + '.html') + '">Electricians in ' + esc(a.name) + '</a></li>').join('\n        ')}
-      </ul>
-
-      <p><a href="/contact.html">Discuss your ${esc(area.name)} project</a> &middot; <a href="tel:+441244727291">Call ${esc(COMPANY.phone)}</a></p>
-    </main>`;
-
   return `<!doctype html>
 <html lang="en-GB">
 <head>
@@ -591,18 +527,14 @@ ${JSON.stringify(schema, null, 2)}
 <body>
   <div id="root"></div>
 
-  <noscript>${noscript}
-  </noscript>
 
   <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
   <script src="shared.js"></script>
-  <script type="text/babel" src="hero-bg.jsx"></script>
-  <script type="text/babel" src="shell.jsx"></script>
-  <script type="text/babel" src="tweaks.jsx"></script>
-  <script type="text/babel" src="locations.jsx"></script>
-  <script type="text/babel">ReactDOM.createRoot(document.getElementById('root')).render(<LocationPage locationName="${area.name.replace(/"/g, '\\"')}"/>);</script>
+  <script src="hero-bg.js" type="text/javascript"></script>
+  <script src="shell.js" type="text/javascript"></script>
+  <script src="locations.js" type="text/javascript"></script>
+  <script>ReactDOM.createRoot(document.getElementById('root')).render(React.createElement(LocationPage, { locationName: ${JSON.stringify(area.name)} }));</script>
 </body>
 </html>`;
 }

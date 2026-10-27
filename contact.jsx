@@ -1,6 +1,6 @@
 // Contact page with multi-step form + validation
 
-const { Header, Footer, TrustBar, TweaksPanel, useScrollReveal, MobileStickyCTA } = window;
+const { Header, Footer, TrustBar, useScrollReveal, MobileStickyCTA } = window;
 
 
 function ContactForm() {
@@ -258,7 +258,6 @@ function ContactPage() {
       </section>
       <Footer/>
       <MobileStickyCTA />
-      <TweaksPanel/>
     </>
   );
 }

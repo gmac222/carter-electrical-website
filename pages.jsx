@@ -1,6 +1,6 @@
 // About, Services, Areas - compact pages
 
-const { Header, Footer, TrustBar, TweaksPanel, useScrollReveal, PageHero } = window;
+const { Header, Footer, TrustBar, useScrollReveal, PageHero } = window;
 
 // ----- About -----
 function AboutPage() {
@@ -137,7 +137,6 @@ function AboutPage() {
       </section>
 
       <Footer/>
-      <TweaksPanel/>
     </>
   );
 }
@@ -230,7 +229,6 @@ function ServicesPage() {
         </div>
       </section>
       <Footer/>
-      <TweaksPanel/>
     </>
   );
 }
@@ -324,7 +322,6 @@ function AreasPage() {
       </section>
 
       <Footer/>
-      <TweaksPanel/>
     </>
   );
 }
@@ -407,7 +404,6 @@ function PrivacyPolicyPage() {
       </section>
 
       <Footer/>
-      <TweaksPanel/>
     </>
   );
 }
@@ -470,7 +466,6 @@ function TermsOfUsePage() {
       </section>
 
       <Footer/>
-      <TweaksPanel/>
     </>
   );
 }
@@ -543,7 +538,6 @@ function SitemapPage() {
       </section>
 
       <Footer/>
-      <TweaksPanel/>
     </>
   );
 }

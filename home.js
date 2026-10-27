@@ -6,8 +6,7 @@ const {
   TrustBar,
   Logo,
   useScrollReveal,
-  StatNumber,
-  TweaksPanel
+  StatNumber
 } = window;
 const HERO_HEADLINES = {
   outcome: {
@@ -56,18 +55,7 @@ const HERO_HEADLINES = {
   }
 };
 function Hero() {
-  const [variant, setVariant] = useState('outcome');
-  useEffect(() => {
-    const update = () => setVariant(document.body.dataset.heroHeadline || 'outcome');
-    update();
-    const obs = new MutationObserver(update);
-    obs.observe(document.body, {
-      attributes: true,
-      attributeFilter: ['data-hero-headline']
-    });
-    return () => obs.disconnect();
-  }, []);
-  const copy = HERO_HEADLINES[variant] || HERO_HEADLINES.outcome;
+  const copy = HERO_HEADLINES.outcome;
   return /*#__PURE__*/React.createElement("section", {
     className: "hero"
   }, /*#__PURE__*/React.createElement("div", {
@@ -781,6 +769,6 @@ function Home() {
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Header, {
     current: "home",
     theme: "dark"
-  }), /*#__PURE__*/React.createElement(Hero, null), /*#__PURE__*/React.createElement(Intro, null), /*#__PURE__*/React.createElement(Services, null), /*#__PURE__*/React.createElement(Cases, null), /*#__PURE__*/React.createElement(Testimonials, null), /*#__PURE__*/React.createElement(MapSection, null), /*#__PURE__*/React.createElement(FAQsSection, null), /*#__PURE__*/React.createElement(Areas, null), /*#__PURE__*/React.createElement(CTABand, null), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(MobileStickyCTA, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
+  }), /*#__PURE__*/React.createElement(Hero, null), /*#__PURE__*/React.createElement(Intro, null), /*#__PURE__*/React.createElement(Services, null), /*#__PURE__*/React.createElement(Cases, null), /*#__PURE__*/React.createElement(Testimonials, null), /*#__PURE__*/React.createElement(MapSection, null), /*#__PURE__*/React.createElement(FAQsSection, null), /*#__PURE__*/React.createElement(Areas, null), /*#__PURE__*/React.createElement(CTABand, null), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(MobileStickyCTA, null));
 }
-ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/React.createElement(Home, null));
+if (window.CARTER && window.Header) ReactDOM.hydrateRoot(document.getElementById('root'), /*#__PURE__*/React.createElement(Home, null));

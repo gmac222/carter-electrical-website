@@ -1,6 +1,6 @@
 // Single Article Page
 
-const { Header, Footer, TweaksPanel, useScrollReveal, MobileStickyCTA } = window;
+const { Header, Footer, useScrollReveal, MobileStickyCTA } = window;
 
 // useState / useEffect come from the global declaration in shell.js
 
@@ -124,7 +124,6 @@ function ArticlePage() {
       </main>
       <Footer />
       <MobileStickyCTA />
-      <TweaksPanel />
     </>
   );
 }
