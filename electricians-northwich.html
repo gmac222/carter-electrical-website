@@ -55,10 +55,12 @@
         "LocalBusiness",
         "Electrician"
       ],
-      "@id": "https://carterelec.co.uk/electricians-northwich.html#business",
+      "@id": "https://carterelec.co.uk/#business",
       "name": "Carter Electrical Contracting",
       "legalName": "Carter Electrical Contracting",
-      "url": "https://carterelec.co.uk/electricians-northwich.html",
+      "url": "https://carterelec.co.uk/",
+      "logo": "https://carterelec.co.uk/uploads/logo-original.png",
+      "image": "https://carterelec.co.uk/electricians-chester.jpg",
       "telephone": "01244 727291",
       "email": "ian@carterelec.co.uk",
       "priceRange": "££",
@@ -92,6 +94,26 @@
       "sameAs": [
         "https://facebook.com/carter.electrical.chester"
       ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "NICEIC Approved Contractor"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "OZEV-approved EV installer"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://carterelec.co.uk/electricians-northwich.html#service",
+      "name": "Electricians in Northwich",
+      "serviceType": "Electrician",
+      "url": "https://carterelec.co.uk/electricians-northwich.html",
+      "provider": {
+        "@id": "https://carterelec.co.uk/#business"
+      },
       "areaServed": [
         {
           "@type": "City",
@@ -142,53 +164,47 @@
           "name": "Kingsmead, Northwich"
         }
       ],
-      "makesOffer": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Commercial electrical services in Northwich"
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Electrical services in Northwich",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Commercial electrical services in Northwich"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Industrial electrical services in Northwich"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Domestic electrical services in Northwich"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "EICR testing and inspection in Northwich"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "OZEV-approved EV charger installation in Northwich"
+            }
           }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Industrial electrical services in Northwich"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Domestic electrical services in Northwich"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "EICR testing and inspection in Northwich"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "OZEV-approved EV charger installation in Northwich"
-          }
-        }
-      ],
-      "hasCredential": [
-        {
-          "@type": "EducationalOccupationalCredential",
-          "credentialCategory": "NICEIC Approved Contractor"
-        },
-        {
-          "@type": "EducationalOccupationalCredential",
-          "credentialCategory": "OZEV-approved EV installer"
-        }
-      ]
+        ]
+      }
     },
     {
       "@type": "FAQPage",

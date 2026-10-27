@@ -402,7 +402,10 @@ function buildHtml(area) {
     : areas.filter(a => a.slug !== area.slug);
   const otherAreas = [chesterObj, ...adjacentList].filter(a => a && a.slug !== area.slug);
 
-  // Schema: BreadcrumbList + LocalBusiness (Electrician) + FAQPage + Service
+  // Schema: BreadcrumbList + LocalBusiness (Electrician) + Service + FAQPage.
+  // The LocalBusiness uses the site-wide #business @id so every location page
+  // describes the same single entity; the area targeting lives on the Service.
+  const businessId = COMPANY.site + '/#business';
   const schema = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -416,10 +419,12 @@ function buildHtml(area) {
       },
       {
         '@type': ['LocalBusiness', 'Electrician'],
-        '@id': url + '#business',
+        '@id': businessId,
         name: COMPANY.name,
         legalName: 'Carter Electrical Contracting',
-        url: url,
+        url: COMPANY.site + '/',
+        logo: COMPANY.site + '/uploads/logo-original.png',
+        image: COMPANY.site + '/electricians-chester.jpg',
         telephone: COMPANY.phone,
         email: 'ian@carterelec.co.uk',
         priceRange: '££',
@@ -447,21 +452,33 @@ function buildHtml(area) {
         sameAs: [
           'https://facebook.com/carter.electrical.chester'
         ],
-        areaServed: [
-          { '@type': 'City', name: area.name },
-          ...area.neighbourhoods.map(n => ({ '@type': 'Place', name: n + ', ' + area.name }))
-        ],
-        makesOffer: [
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Commercial electrical services in ' + area.name } },
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Industrial electrical services in ' + area.name } },
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Domestic electrical services in ' + area.name } },
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'EICR testing and inspection in ' + area.name } },
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'OZEV-approved EV charger installation in ' + area.name } }
-        ],
         hasCredential: [
           { '@type': 'EducationalOccupationalCredential', credentialCategory: 'NICEIC Approved Contractor' },
           { '@type': 'EducationalOccupationalCredential', credentialCategory: 'OZEV-approved EV installer' }
         ]
+      },
+      {
+        '@type': 'Service',
+        '@id': url + '#service',
+        name: 'Electricians in ' + area.name,
+        serviceType: 'Electrician',
+        url: url,
+        provider: { '@id': businessId },
+        areaServed: [
+          { '@type': 'City', name: area.name },
+          ...area.neighbourhoods.map(n => ({ '@type': 'Place', name: n + ', ' + area.name }))
+        ],
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: 'Electrical services in ' + area.name,
+          itemListElement: [
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Commercial electrical services in ' + area.name } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Industrial electrical services in ' + area.name } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Domestic electrical services in ' + area.name } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'EICR testing and inspection in ' + area.name } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'OZEV-approved EV charger installation in ' + area.name } }
+          ]
+        }
       },
       {
         '@type': 'FAQPage',
