@@ -127,9 +127,8 @@ function generateArticleHtml(post) {
     window.CURRENT_POST = ${JSON.stringify({ ...post.data, slug, html: post.html }).replace(/</g, '\\u003c')};
   </script>
   <script src="/shell.js"></script>
-  <script src="/tweaks.js"></script>
   <script src="/article.js"></script>
-  <script>ReactDOM.hydrateRoot(document.getElementById('root'), React.createElement(ArticlePage));</script>
+  <script>if (window.CARTER && window.Header) ReactDOM.hydrateRoot(document.getElementById('root'), React.createElement(ArticlePage));</script>
 </body>
 </html>`;
   return html;
@@ -232,9 +231,8 @@ function generateBlogIndexHtml(posts) {
     window.BLOG_POSTS = ${JSON.stringify(posts.map(p => ({ ...p.data, slug: p.slug }))).replace(/</g, '\\u003c')};
   </script>
   <script src="/shell.js"></script>
-  <script src="/tweaks.js"></script>
   <script src="/blog.js"></script>
-  <script>ReactDOM.hydrateRoot(document.getElementById('root'), React.createElement(BlogIndex));</script>
+  <script>if (window.CARTER && window.Header) ReactDOM.hydrateRoot(document.getElementById('root'), React.createElement(BlogIndex));</script>
 </body>
 </html>`;
   return html;
@@ -329,7 +327,7 @@ Sitemap: ${SITE_URL}/sitemap.xml
 
 
 // Pre-render a blog page so the HTML Google receives already holds the H1, copy and links.
-// Uses the compiled shell.js / tweaks.js / article.js / blog.js, as the root pages do.
+// Uses the compiled shell.js / article.js / blog.js, as the root pages do.
 function prerender(htmlPath, componentName, globals) {
   const { JSDOM } = require('jsdom');
   const React = require('react');
@@ -341,7 +339,7 @@ function prerender(htmlPath, componentName, globals) {
   w.useState = React.useState; w.useEffect = React.useEffect; w.useRef = React.useRef;
   w.ReactDOM = { createRoot: () => ({ render: () => {} }), hydrateRoot: () => {} };
   Object.assign(w, globals);
-  ['shared.js', 'shell.js', 'tweaks.js', componentName === 'ArticlePage' ? 'article.js' : 'blog.js']
+  ['shared.js', 'shell.js', componentName === 'ArticlePage' ? 'article.js' : 'blog.js']
     .forEach(f => w.eval(fs.readFileSync(path.join(__dirname, f), 'utf8')));
   // Components read globals from window; run render with jsdom's window as global
   const prev = { window: global.window, document: global.document };

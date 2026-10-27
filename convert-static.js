@@ -14,6 +14,14 @@ global.useRef = React.useRef;
 
 const htmlFiles = fs.readdirSync(__dirname).filter(file => file.endsWith('.html'));
 
+// Only hydrate when the core scripts (shared.js, shell.js) actually loaded. If
+// one fails (as happened to Googlebot with tweaks.js), React would throw while
+// hydrating and wipe the pre-rendered HTML, leaving crawlers a blank page.
+const HYDRATE_GUARD = 'if (window.CARTER && window.Header) ';
+function guardHydrate(code) {
+  return code.replace(/(?<!window\.Header\) )ReactDOM\.hydrateRoot\(/g, HYDRATE_GUARD + 'ReactDOM.hydrateRoot(');
+}
+
 let capturedComponent = null;
 global.ReactDOM = {
   createRoot: () => ({
@@ -27,7 +35,6 @@ global.ReactDOM = {
 // Let's compile and require them first.
 const jsxFilesToCompile = [
   'shell.jsx',
-  'tweaks.jsx',
   'hero-bg.jsx',
   'home.jsx',
   'pages.jsx',
@@ -54,7 +61,7 @@ jsxFilesToCompile.forEach(file => {
       /ReactDOM\.createRoot\((document\.getElementById\('[^']+'\))\)\.render\(([\s\S]+)\);?/,
       'ReactDOM.hydrateRoot($1, $2);'
     );
-    fs.writeFileSync(outPath, outCode);
+    fs.writeFileSync(outPath, guardHydrate(outCode));
     console.log(`Compiled ${file} to ${outPath}`);
   }
 });
@@ -181,9 +188,30 @@ htmlFiles.forEach(htmlFile => {
     if (rootDiv) {
       rootDiv.innerHTML = renderedHtml;
       
-      const hoistedTags = rootDiv.querySelectorAll('link, meta, title, style');
+      // Leave <style> where the component rendered it: moving it to <head>
+      // makes the server HTML differ from what React renders on the client,
+      // which fails hydration and re-renders the whole page. Earlier runs
+      // hoisted (and duplicated) those styles, so strip them from <head>.
+      const head = dom.window.document.head;
+      const rootStyles = new Set(Array.from(rootDiv.querySelectorAll('style'), el => el.outerHTML));
+      head.querySelectorAll('style').forEach(el => {
+        if (rootStyles.has(el.outerHTML)) el.remove();
+      });
+      // Skip tags already hoisted by a previous run so rebuilding is idempotent.
+      // Also clear out duplicates that earlier runs left behind.
+      const existing = new Set();
+      head.querySelectorAll('link, meta, title').forEach(el => {
+        if (existing.has(el.outerHTML)) el.remove();
+        else existing.add(el.outerHTML);
+      });
+      const hoistedTags = rootDiv.querySelectorAll('link, meta, title');
       hoistedTags.forEach(tag => {
-        dom.window.document.head.appendChild(tag);
+        if (existing.has(tag.outerHTML)) {
+          tag.remove();
+        } else {
+          existing.add(tag.outerHTML);
+          head.appendChild(tag);
+        }
       });
     }
   } else {
@@ -222,6 +250,6 @@ htmlFiles.forEach(htmlFile => {
     }
   );
   
-  fs.writeFileSync(htmlPath, finalHtml);
+  fs.writeFileSync(htmlPath, guardHydrate(finalHtml));
   console.log(`Saved ${htmlFile}`);
 });

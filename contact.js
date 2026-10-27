@@ -4,7 +4,6 @@ const {
   Header,
   Footer,
   TrustBar,
-  TweaksPanel,
   useScrollReveal,
   MobileStickyCTA
 } = window;
@@ -401,6 +400,6 @@ function ContactPage() {
       padding: '6px 10px',
       pointerEvents: 'none'
     }
-  }, "CHRISTLETON \xB7 CHESTER \xB7 53\xB011\u2032N \xB7 02\xB050\u2032W")))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(MobileStickyCTA, null), /*#__PURE__*/React.createElement(TweaksPanel, null));
+  }, "CHRISTLETON \xB7 CHESTER \xB7 53\xB011\u2032N \xB7 02\xB050\u2032W")))))), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(MobileStickyCTA, null));
 }
-ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/React.createElement(ContactPage, null));
+if (window.CARTER && window.Header) ReactDOM.hydrateRoot(document.getElementById('root'), /*#__PURE__*/React.createElement(ContactPage, null));

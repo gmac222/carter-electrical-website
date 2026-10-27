@@ -1,6 +1,6 @@
 // Commercial Electrical Services - dedicated landing page
 
-const { Header, Footer, TrustBar, TweaksPanel, useScrollReveal, StatNumber, PageHero, MobileStickyCTA, CarterPlaceholder } = window;
+const { Header, Footer, TrustBar, useScrollReveal, StatNumber, PageHero, MobileStickyCTA, CarterPlaceholder } = window;
 
 function CommercialHero() {
   return (
@@ -242,7 +242,6 @@ function Commercial() {
       </section>
       <Footer />
       <MobileStickyCTA />
-      <TweaksPanel />
     </>
   );
 }

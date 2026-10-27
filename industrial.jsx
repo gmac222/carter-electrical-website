@@ -1,6 +1,6 @@
 // Industrial Electrical Services - dedicated landing page
 
-const { Header, Footer, TrustBar, TweaksPanel, useScrollReveal, StatNumber, PageHero, MobileStickyCTA, CarterPlaceholder } = window;
+const { Header, Footer, TrustBar, useScrollReveal, StatNumber, PageHero, MobileStickyCTA, CarterPlaceholder } = window;
 
 function IndustrialHero() {
   return (
@@ -248,7 +248,6 @@ function Industrial() {
       </section>
       <Footer />
       <MobileStickyCTA />
-      <TweaksPanel />
     </>
   );
 }

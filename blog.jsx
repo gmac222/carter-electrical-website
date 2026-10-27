@@ -1,6 +1,6 @@
 // Blog Index Page
 
-const { Header, Footer, TweaksPanel, useScrollReveal, PageHero, MobileStickyCTA } = window;
+const { Header, Footer, useScrollReveal, PageHero, MobileStickyCTA } = window;
 
 // useState / useEffect come from the global declaration in shell.js
 
@@ -72,7 +72,6 @@ function BlogIndex() {
       <BlogList />
       <Footer />
       <MobileStickyCTA />
-      <TweaksPanel />
     </>
   );
 }

@@ -1,6 +1,6 @@
 // Homepage - Carter Electrical Contracting
 
-const { Header, Footer, TrustBar, Logo, useScrollReveal, StatNumber, TweaksPanel } = window;
+const { Header, Footer, TrustBar, Logo, useScrollReveal, StatNumber } = window;
 
 const HERO_HEADLINES = {
   outcome: {
@@ -36,15 +36,7 @@ const HERO_HEADLINES = {
 };
 
 function Hero() {
-  const [variant, setVariant] = useState('outcome');
-  useEffect(() => {
-    const update = () => setVariant(document.body.dataset.heroHeadline || 'outcome');
-    update();
-    const obs = new MutationObserver(update);
-    obs.observe(document.body, { attributes: true, attributeFilter: ['data-hero-headline'] });
-    return () => obs.disconnect();
-  }, []);
-  const copy = HERO_HEADLINES[variant] || HERO_HEADLINES.outcome;
+  const copy = HERO_HEADLINES.outcome;
 
   return (
     <section className="hero">
@@ -548,7 +540,6 @@ function Home() {
       <CTABand />
       <Footer />
       <MobileStickyCTA />
-      <TweaksPanel />
     </>
   );
 }
