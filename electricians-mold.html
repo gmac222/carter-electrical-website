@@ -55,10 +55,12 @@
         "LocalBusiness",
         "Electrician"
       ],
-      "@id": "https://carterelec.co.uk/electricians-mold.html#business",
+      "@id": "https://carterelec.co.uk/#business",
       "name": "Carter Electrical Contracting",
       "legalName": "Carter Electrical Contracting",
-      "url": "https://carterelec.co.uk/electricians-mold.html",
+      "url": "https://carterelec.co.uk/",
+      "logo": "https://carterelec.co.uk/uploads/logo-original.png",
+      "image": "https://carterelec.co.uk/electricians-chester.jpg",
       "telephone": "01244 727291",
       "email": "ian@carterelec.co.uk",
       "priceRange": "££",
@@ -92,6 +94,26 @@
       "sameAs": [
         "https://facebook.com/carter.electrical.chester"
       ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "NICEIC Approved Contractor"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "OZEV-approved EV installer"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://carterelec.co.uk/electricians-mold.html#service",
+      "name": "Electricians in Mold",
+      "serviceType": "Electrician",
+      "url": "https://carterelec.co.uk/electricians-mold.html",
+      "provider": {
+        "@id": "https://carterelec.co.uk/#business"
+      },
       "areaServed": [
         {
           "@type": "City",
@@ -134,53 +156,47 @@
           "name": "Alltami, Mold"
         }
       ],
-      "makesOffer": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Commercial electrical services in Mold"
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Electrical services in Mold",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Commercial electrical services in Mold"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Industrial electrical services in Mold"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Domestic electrical services in Mold"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "EICR testing and inspection in Mold"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "OZEV-approved EV charger installation in Mold"
+            }
           }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Industrial electrical services in Mold"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Domestic electrical services in Mold"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "EICR testing and inspection in Mold"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "OZEV-approved EV charger installation in Mold"
-          }
-        }
-      ],
-      "hasCredential": [
-        {
-          "@type": "EducationalOccupationalCredential",
-          "credentialCategory": "NICEIC Approved Contractor"
-        },
-        {
-          "@type": "EducationalOccupationalCredential",
-          "credentialCategory": "OZEV-approved EV installer"
-        }
-      ]
+        ]
+      }
     },
     {
       "@type": "FAQPage",
