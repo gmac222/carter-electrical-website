@@ -4,7 +4,7 @@
   "description": "",
   "main": "generate-seo.js",
   "scripts": {
-    "build": "node build-jsx.js && node generate-seo.js && node convert-static.js && node build-blog.js && node clean-preloads.js",
+    "prerender": "node build-jsx.js && node generate-seo.js && node convert-static.js && node build-blog.js && node clean-preloads.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

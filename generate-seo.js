@@ -2,7 +2,7 @@
 // LocalBusiness + Service + FAQPage + BreadcrumbList schema. convert-static.js
 // then pre-renders the LocationPage component into #root, so crawlers get the
 // full page content in the HTML without needing to run JavaScript.
-// Run the whole pipeline with `npm run build`.
+// Run the whole pipeline with `npm run prerender`.
 //
 // Source of truth for the per-area data is mirrored from shared.js. Keep in
 // sync when adding/removing areas or updating postcodes/neighbourhoods.
