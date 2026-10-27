@@ -1,0 +1,229 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://carterelec.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Areas We Cover",
+          "item": "https://carterelec.co.uk/areas.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Electricians in Deeside",
+          "item": "https://carterelec.co.uk/electricians-deeside.html"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "LocalBusiness",
+        "Electrician"
+      ],
+      "@id": "https://carterelec.co.uk/#business",
+      "name": "Carter Electrical Contracting",
+      "legalName": "Carter Electrical Contracting",
+      "url": "https://carterelec.co.uk/",
+      "logo": "https://carterelec.co.uk/uploads/logo-original.png",
+      "image": "https://carterelec.co.uk/electricians-chester.jpg",
+      "telephone": "01244 727291",
+      "email": "ian@carterelec.co.uk",
+      "priceRange": "££",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Unit 5, White Lane Depot, White Lane, Christleton",
+        "addressLocality": "Chester",
+        "postalCode": "CH3 6AH",
+        "addressRegion": "Cheshire",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 53.1836,
+        "longitude": -2.8377
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "07:30",
+          "closes": "17:30"
+        }
+      ],
+      "sameAs": [
+        "https://facebook.com/carter.electrical.chester"
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "NICEIC Approved Contractor"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "OZEV-approved EV installer"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://carterelec.co.uk/electricians-deeside.html#service",
+      "name": "Electricians in Deeside",
+      "serviceType": "Electrician",
+      "url": "https://carterelec.co.uk/electricians-deeside.html",
+      "provider": {
+        "@id": "https://carterelec.co.uk/#business"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Deeside"
+        },
+        {
+          "@type": "Place",
+          "name": "Shotton, Deeside"
+        },
+        {
+          "@type": "Place",
+          "name": "Connah's Quay, Deeside"
+        },
+        {
+          "@type": "Place",
+          "name": "Queensferry, Deeside"
+        },
+        {
+          "@type": "Place",
+          "name": "Sealand, Deeside"
+        },
+        {
+          "@type": "Place",
+          "name": "Hawarden, Deeside"
+        },
+        {
+          "@type": "Place",
+          "name": "Garden City, Deeside"
+        },
+        {
+          "@type": "Place",
+          "name": "Sandycroft, Deeside"
+        },
+        {
+          "@type": "Place",
+          "name": "Mancot, Deeside"
+        },
+        {
+          "@type": "Place",
+          "name": "Ewloe, Deeside"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Electrical services in Deeside",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Commercial electrical services in Deeside"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Industrial electrical services in Deeside"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Domestic electrical services in Deeside"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "EICR testing and inspection in Deeside"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "OZEV-approved EV charger installation in Deeside"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What electrical compliance is required for commercial units on Deeside Industrial Park?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Under the Electricity at Work Regulations 1989, commercial and industrial duty holders must maintain electrical systems in a safe condition. This requires periodic EICR testing (typically every 3 years for industrial sites), annual emergency lighting testing to BS 5266, and regular PAT testing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if a commercial EICR inspection identifies C1 or C2 fault codes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "C1 indicates immediate danger and requires urgent isolation on site. C2 indicates potential danger requiring remedial work. By law, duty holders and landlords must rectify C1 and C2 defects within 28 days. Our Deeside team carries out fast remedial repairs and issues updated compliance paperwork."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a commercial or three-phase power installation take on Deeside?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Timeframes depend on installation scope, ranging from single-day sub-main additions to multi-week factory distribution upgrades. We conduct thorough site surveys across CH5 postcodes, offering out-of-hours working schedules to avoid production downtime."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are EICRs mandatory for private rented properties in Flintshire?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Landlords across Connah's Quay, Shotton, and Queensferry must possess a valid EICR covering the fixed electrical wiring. Inspections are required every 5 years, with copies provided to tenants and Flintshire County Council upon request."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do workplace EV chargers require load management systems on Deeside?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For commercial premises with multiple charging bays, dynamic load management prevents overloading the site main switchgear. We design custom EV charging infrastructures for Deeside businesses, managing grid capacity notifications with SP Energy Networks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which local postcodes and industrial zones do you cover around Deeside?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We cover all CH5 postcodes, serving Deeside Industrial Park, Sandycroft, Connah's Quay, Shotton, Queensferry, Garden City, Mancot, and Sealand."
+          }
+        }
+      ]
+    }
+  ]
+}

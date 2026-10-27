@@ -1,0 +1,225 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://carterelec.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Areas We Cover",
+          "item": "https://carterelec.co.uk/areas.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Electricians in Frodsham",
+          "item": "https://carterelec.co.uk/electricians-frodsham.html"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "LocalBusiness",
+        "Electrician"
+      ],
+      "@id": "https://carterelec.co.uk/#business",
+      "name": "Carter Electrical Contracting",
+      "legalName": "Carter Electrical Contracting",
+      "url": "https://carterelec.co.uk/",
+      "logo": "https://carterelec.co.uk/uploads/logo-original.png",
+      "image": "https://carterelec.co.uk/electricians-chester.jpg",
+      "telephone": "01244 727291",
+      "email": "ian@carterelec.co.uk",
+      "priceRange": "££",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Unit 5, White Lane Depot, White Lane, Christleton",
+        "addressLocality": "Chester",
+        "postalCode": "CH3 6AH",
+        "addressRegion": "Cheshire",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 53.1836,
+        "longitude": -2.8377
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "07:30",
+          "closes": "17:30"
+        }
+      ],
+      "sameAs": [
+        "https://facebook.com/carter.electrical.chester"
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "NICEIC Approved Contractor"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "OZEV-approved EV installer"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://carterelec.co.uk/electricians-frodsham.html#service",
+      "name": "Electricians in Frodsham",
+      "serviceType": "Electrician",
+      "url": "https://carterelec.co.uk/electricians-frodsham.html",
+      "provider": {
+        "@id": "https://carterelec.co.uk/#business"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Frodsham"
+        },
+        {
+          "@type": "Place",
+          "name": "Kingsley, Frodsham"
+        },
+        {
+          "@type": "Place",
+          "name": "Helsby, Frodsham"
+        },
+        {
+          "@type": "Place",
+          "name": "Overton, Frodsham"
+        },
+        {
+          "@type": "Place",
+          "name": "Alvanley, Frodsham"
+        },
+        {
+          "@type": "Place",
+          "name": "Manley, Frodsham"
+        },
+        {
+          "@type": "Place",
+          "name": "Mouldsworth, Frodsham"
+        },
+        {
+          "@type": "Place",
+          "name": "Norley, Frodsham"
+        },
+        {
+          "@type": "Place",
+          "name": "Crowton, Frodsham"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Electrical services in Frodsham",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Commercial electrical services in Frodsham"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Industrial electrical services in Frodsham"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Domestic electrical services in Frodsham"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "EICR testing and inspection in Frodsham"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "OZEV-approved EV charger installation in Frodsham"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I verify if an electrician in Frodsham is legally qualified?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Check their credentials on the Registered Competent Person Electrical register. Carter Electrical is fully NICEIC-approved. We self-certify all domestic and commercial work, automatically registering installations with local Building Control."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What emergency lighting regulations apply to commercial premises in Frodsham?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Under the Regulatory Reform (Fire Safety) Order 2005, commercial premises on Frodsham High Street and Main Street must maintain emergency escape lighting to BS 5266 standards. This requires monthly function checks and annual 3-hour battery discharge testing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to replace a consumer unit in a Frodsham property?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A complete consumer unit replacement takes approximately 4 to 6 hours. This includes isolating the supply, installing a modern metal RCBO board with Surge Protection (SPD), and performing 100% circuit safety testing before re-energising."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are EICR safety checks mandatory for private landlords in Frodsham and Helsby?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Private landlords must obtain an EICR every 5 years or at the start of any new tenancy. We carry out non-invasive testing across WA6 postcodes, identifying potential safety defects and delivering digital reports within 48 hours."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you install home EV chargers for rural properties around Frodsham?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We install smart wallboxes for homes in Frodsham, Helsby, Kingsley, and Alvanley. We evaluate your incoming mains supply and coordinate DNO approval with SP Energy Networks for seamless charging."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which postcodes and surrounding villages do your electricians cover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We cover WA6 postcodes, including Frodsham town centre, Helsby, Kingsley, Alvanley, Manley, Newton by Frodsham, and Dunham on the Hill."
+          }
+        }
+      ]
+    }
+  ]
+}

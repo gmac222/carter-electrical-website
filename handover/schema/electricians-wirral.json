@@ -1,0 +1,265 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://carterelec.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Areas We Cover",
+          "item": "https://carterelec.co.uk/areas.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Electricians in Wirral",
+          "item": "https://carterelec.co.uk/electricians-wirral.html"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "LocalBusiness",
+        "Electrician"
+      ],
+      "@id": "https://carterelec.co.uk/#business",
+      "name": "Carter Electrical Contracting",
+      "legalName": "Carter Electrical Contracting",
+      "url": "https://carterelec.co.uk/",
+      "logo": "https://carterelec.co.uk/uploads/logo-original.png",
+      "image": "https://carterelec.co.uk/electricians-chester.jpg",
+      "telephone": "01244 727291",
+      "email": "ian@carterelec.co.uk",
+      "priceRange": "££",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Unit 5, White Lane Depot, White Lane, Christleton",
+        "addressLocality": "Chester",
+        "postalCode": "CH3 6AH",
+        "addressRegion": "Cheshire",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 53.1836,
+        "longitude": -2.8377
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "07:30",
+          "closes": "17:30"
+        }
+      ],
+      "sameAs": [
+        "https://facebook.com/carter.electrical.chester"
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "NICEIC Approved Contractor"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "OZEV-approved EV installer"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://carterelec.co.uk/electricians-wirral.html#service",
+      "name": "Electricians in Wirral",
+      "serviceType": "Electrician",
+      "url": "https://carterelec.co.uk/electricians-wirral.html",
+      "provider": {
+        "@id": "https://carterelec.co.uk/#business"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Wirral"
+        },
+        {
+          "@type": "Place",
+          "name": "Birkenhead, Wirral"
+        },
+        {
+          "@type": "Place",
+          "name": "Prenton, Wirral"
+        },
+        {
+          "@type": "Place",
+          "name": "Wallasey, Wirral"
+        },
+        {
+          "@type": "Place",
+          "name": "New Brighton, Wirral"
+        },
+        {
+          "@type": "Place",
+          "name": "Bebington, Wirral"
+        },
+        {
+          "@type": "Place",
+          "name": "Heswall, Wirral"
+        },
+        {
+          "@type": "Place",
+          "name": "West Kirby, Wirral"
+        },
+        {
+          "@type": "Place",
+          "name": "Hoylake, Wirral"
+        },
+        {
+          "@type": "Place",
+          "name": "Bromborough, Wirral"
+        },
+        {
+          "@type": "Place",
+          "name": "Moreton, Wirral"
+        },
+        {
+          "@type": "Place",
+          "name": "Upton, Wirral"
+        },
+        {
+          "@type": "Place",
+          "name": "Greasby, Wirral"
+        },
+        {
+          "@type": "Place",
+          "name": "Port Sunlight, Wirral"
+        },
+        {
+          "@type": "Place",
+          "name": "Eastham, Wirral"
+        },
+        {
+          "@type": "Place",
+          "name": "Caldy, Wirral"
+        },
+        {
+          "@type": "Place",
+          "name": "Neston, Wirral"
+        },
+        {
+          "@type": "Place",
+          "name": "Willaston, Wirral"
+        },
+        {
+          "@type": "Place",
+          "name": "Ness, Wirral"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Electrical services in Wirral",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Commercial electrical services in Wirral"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Industrial electrical services in Wirral"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Domestic electrical services in Wirral"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "EICR testing and inspection in Wirral"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "OZEV-approved EV charger installation in Wirral"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I know if my house on the Wirral needs a complete rewire?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Common warning signs in older Wirral properties (especially period homes in Heswall, Caldy, or West Kirby) include original fabric or rubber insulated cables, fuse boxes with rewireable fuse wire, dimming lights, or a lack of earthing on metal switches."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What electrical certificate is legally required for rented properties on the Wirral?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Landlords across Wirral Council postcodes must possess a valid Electrical Installation Condition Report (EICR) issued by a registered electrician every 5 years. Failure to comply can result in local authority fines of up to £30,000."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is an NICEIC Approved Contractor required for commercial premises in Bromborough?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "While the law requires a \"competent person\", using an NICEIC Approved Contractor guarantees that the business meets rigorous annual technical assessments. We service retail units, offices, and industrial facilities in Bromborough and Birkenhead."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Part P building regulations compliance for domestic electrical work on the Wirral?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Part P requires that electrical installations in dwellings are designed and installed safely. Major additions, bathroom alterations, and fuse box upgrades must be notified to Building Control. We handle all notifications and issue official certificates automatically."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a domestic smart EV charger installation take on the Wirral?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A standard domestic wallbox installation takes between 3 and 4 hours. Our engineers verify your main fuse board capacity, install dedicated cable routing, configure smart app control, and notify SP Energy Networks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which postcodes and towns do you cover across the Wirral peninsula?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We cover the entire Wirral including CH47, CH48, CH60, CH61, CH62, and CH63 postcodes, serving Heswall, Caldy, West Kirby, Bromborough, Bebington, Neston, Parkgate, and Willaston."
+          }
+        }
+      ]
+    }
+  ]
+}

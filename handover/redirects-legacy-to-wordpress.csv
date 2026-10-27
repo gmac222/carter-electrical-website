@@ -1,0 +1,36 @@
+Legacy URL (pre-2026 site),Currently redirects to,Final WordPress URL
+/electricians-chester.html,/,https://carterelec.co.uk
+/about,/about.html,https://carterelec.co.uk/about/
+/about/,/about.html,https://carterelec.co.uk/about/
+/about-us/,/about.html,https://carterelec.co.uk/about/
+/services,/services.html,https://carterelec.co.uk/services/
+/services/,/services.html,https://carterelec.co.uk/services/
+/commercial,/commercial.html,https://carterelec.co.uk/commercial/
+/commercial/,/commercial.html,https://carterelec.co.uk/commercial/
+/industrial,/industrial.html,https://carterelec.co.uk/industrial/
+/industrial/,/industrial.html,https://carterelec.co.uk/industrial/
+/domestic,/domestic.html,https://carterelec.co.uk/domestic/
+/domestic/,/domestic.html,https://carterelec.co.uk/domestic/
+/areas,/areas.html,https://carterelec.co.uk/areas/
+/areas/,/areas.html,https://carterelec.co.uk/areas/
+/case-studies,/case-studies.html,https://carterelec.co.uk/case-studies/
+/case-studies/,/case-studies.html,https://carterelec.co.uk/case-studies/
+/contact,/contact.html,https://carterelec.co.uk/contact/
+/contact/,/contact.html,https://carterelec.co.uk/contact/
+/contact-us/,/contact.html,https://carterelec.co.uk/contact/
+/careers,/about.html,https://carterelec.co.uk/about/
+/careers/,/about.html,https://carterelec.co.uk/about/
+/html-sitemap,/sitemap.html,https://carterelec.co.uk/sitemap/
+/html-sitemap/,/sitemap.html,https://carterelec.co.uk/sitemap/
+/privacy-policy,/privacy-policy.html,https://carterelec.co.uk/privacy-policy/
+/privacy-policy/,/privacy-policy.html,https://carterelec.co.uk/privacy-policy/
+/terms,/terms.html,https://carterelec.co.uk/terms/
+/terms/,/terms.html,https://carterelec.co.uk/terms/
+/electrician-:town(chester)/,/,https://carterelec.co.uk
+/electrician-:town(chester),/,https://carterelec.co.uk
+/electrician-:town(deeside|ellesmere-port|frodsham|mold|northwich|tarporley|wirral|wrexham)/,/electricians-:town.html,(no WordPress page: /electricians-:town.html)
+/electrician-:town(deeside|ellesmere-port|frodsham|mold|northwich|tarporley|wirral|wrexham),/electricians-:town.html,(no WordPress page: /electricians-:town.html)
+/electricians-:town(deeside|ellesmere-port|frodsham|mold|northwich|tarporley|wirral|wrexham)/,/electricians-:town.html,(no WordPress page: /electricians-:town.html)
+/electricians-:town(deeside|ellesmere-port|frodsham|mold|northwich|tarporley|wirral|wrexham),/electricians-:town.html,(no WordPress page: /electricians-:town.html)
+/wp-content/uploads/:year/:month/:file,/uploads/:file,(no WordPress page: /uploads/:file)
+/blog/:slug/:page(about|areas|case-studies|commercial|contact|domestic|industrial|privacy-policy|services|sitemap|terms).html,/:page.html,(no WordPress page: /:page.html)

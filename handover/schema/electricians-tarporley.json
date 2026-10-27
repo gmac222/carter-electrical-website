@@ -1,0 +1,213 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://carterelec.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Areas We Cover",
+          "item": "https://carterelec.co.uk/areas.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Electricians in Tarporley",
+          "item": "https://carterelec.co.uk/electricians-tarporley.html"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "LocalBusiness",
+        "Electrician"
+      ],
+      "@id": "https://carterelec.co.uk/#business",
+      "name": "Carter Electrical Contracting",
+      "legalName": "Carter Electrical Contracting",
+      "url": "https://carterelec.co.uk/",
+      "logo": "https://carterelec.co.uk/uploads/logo-original.png",
+      "image": "https://carterelec.co.uk/electricians-chester.jpg",
+      "telephone": "01244 727291",
+      "email": "ian@carterelec.co.uk",
+      "priceRange": "££",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Unit 5, White Lane Depot, White Lane, Christleton",
+        "addressLocality": "Chester",
+        "postalCode": "CH3 6AH",
+        "addressRegion": "Cheshire",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 53.1836,
+        "longitude": -2.8377
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "07:30",
+          "closes": "17:30"
+        }
+      ],
+      "sameAs": [
+        "https://facebook.com/carter.electrical.chester"
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "NICEIC Approved Contractor"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "OZEV-approved EV installer"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://carterelec.co.uk/electricians-tarporley.html#service",
+      "name": "Electricians in Tarporley",
+      "serviceType": "Electrician",
+      "url": "https://carterelec.co.uk/electricians-tarporley.html",
+      "provider": {
+        "@id": "https://carterelec.co.uk/#business"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Tarporley"
+        },
+        {
+          "@type": "Place",
+          "name": "Tarporley Village (High Street, Portal Estate), Tarporley"
+        },
+        {
+          "@type": "Place",
+          "name": "Utkinton & Cotebrook, Tarporley"
+        },
+        {
+          "@type": "Place",
+          "name": "Bunbury & Alpraham, Tarporley"
+        },
+        {
+          "@type": "Place",
+          "name": "Tiverton & Huxley, Tarporley"
+        },
+        {
+          "@type": "Place",
+          "name": "Little Budworth, Tarporley"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Electrical services in Tarporley",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Commercial electrical services in Tarporley"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Industrial electrical services in Tarporley"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Domestic electrical services in Tarporley"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "EICR testing and inspection in Tarporley"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "OZEV-approved EV charger installation in Tarporley"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I know if a period property or barn conversion in Tarporley needs rewiring?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Warning signs include legacy rubber or lead-sheathed cabling, outdated timber-backed fuse boxes, round-pin sockets, or circuits that frequently trip. Many country homes and converted barns across Tarporley and the Eddisbury area feature extended wiring additions over decades. We conduct non-invasive EICR inspections to assess cabling condition and provide transparent recommendations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between an EICR and an Electrical Installation Certificate (EIC)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An Electrical Installation Certificate (EIC) is issued for new electrical installations, complete property rewires, or consumer unit replacements. An Electrical Installation Condition Report (EICR) is an in-depth safety inspection of existing fixed wiring, mandatory for landlords every 5 years and recommended for property buyers across CW6."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I replace sockets or light switches myself under UK Building Regulations?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Under Part P of the Building Regulations, minor straightforward replacements of existing accessories are permitted for DIY. However, any work in special locations (such as bathrooms), new circuit additions, or fuse box replacements must be completed and certified by a registered competent electrician like Carter Electrical to guarantee safety and compliance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often are landlords in Tarporley required to carry out EICR safety testing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Private landlords in Cheshire West and Chester must arrange an EICR inspection at least every 5 years or at the start of a new tenancy. We provide comprehensive landlord testing across Tarporley, Bunbury, and Little Budworth, issuing digital EICR certificates within 48 hours."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need DNO permission to install a fast EV charger in Tarporley?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Every grid-connected EV charger requires notification or prior consent from the local Distribution Network Operator (SP Energy Networks across Cheshire). As OZEV-approved installers, we handle all DNO applications and assess your main fuse capacity before installation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What makes an NICEIC Approved Contractor different from a basic installer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "NICEIC Approved Contractor status verifies that our engineers are independently assessed across complex domestic, commercial, and three-phase industrial installations. This ensures higher technical compliance and rigorous safety standards than basic single-phase domestic scheme registration."
+          }
+        }
+      ]
+    }
+  ]
+}

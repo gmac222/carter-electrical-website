@@ -1,0 +1,117 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://carterelec.co.uk/areas.html",
+      "url": "https://carterelec.co.uk/areas.html",
+      "name": "Areas We Cover | Carter Electrical Contracting",
+      "description": "Areas covered by Carter Electrical Contracting. NICEIC electricians serving Chester, Cheshire West, Wirral, Wrexham, Deeside, Mold, Northwich, Frodsham and Tarporley.",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://carterelec.co.uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Areas We Cover",
+            "item": "https://carterelec.co.uk/areas.html"
+          }
+        ]
+      },
+      "mainEntity": {
+        "@type": [
+          "LocalBusiness",
+          "Electrician"
+        ],
+        "@id": "https://carterelec.co.uk/#business",
+        "name": "Carter Electrical Contracting",
+        "legalName": "Carter Electrical Contracting",
+        "url": "https://carterelec.co.uk/",
+        "logo": "https://carterelec.co.uk/uploads/logo-original.png",
+        "image": "https://carterelec.co.uk/electricians-chester.jpg",
+        "telephone": "01244 727291",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "01244 738493",
+          "contactType": "office"
+        },
+        "email": "ian@carterelec.co.uk",
+        "priceRange": "££",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Unit 5, White Lane Depot, White Lane, Christleton",
+          "addressLocality": "Chester",
+          "postalCode": "CH3 6AH",
+          "addressRegion": "Cheshire",
+          "addressCountry": "GB"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 53.1836,
+          "longitude": -2.8377
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "07:30",
+            "closes": "17:30"
+          }
+        ],
+        "sameAs": [
+          "https://facebook.com/carter.electrical.chester"
+        ],
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Chester"
+          },
+          {
+            "@type": "City",
+            "name": "Ellesmere Port"
+          },
+          {
+            "@type": "City",
+            "name": "Wrexham"
+          },
+          {
+            "@type": "City",
+            "name": "Northwich"
+          },
+          {
+            "@type": "City",
+            "name": "Frodsham"
+          },
+          {
+            "@type": "City",
+            "name": "Tarporley"
+          },
+          {
+            "@type": "City",
+            "name": "Mold"
+          },
+          {
+            "@type": "City",
+            "name": "Deeside"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Wirral"
+          }
+        ]
+      }
+    }
+  ]
+}

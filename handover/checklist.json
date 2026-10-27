@@ -1,0 +1,468 @@
+[
+  {
+    "label": "Home",
+    "name": "index",
+    "slug": "/",
+    "title": "Electricians Chester | NICEIC Electrical Contractors | Carter Electrical Contracting",
+    "desc": "Electricians Chester delivering certified NICEIC commercial, industrial and domestic electrical services across Cheshire West. Fast, compliant, fixed quotes.",
+    "h1": "Electricians Chester.",
+    "sections": [
+      "Approved electrical contractor for home and business.",
+      "Professional Electrical Services.",
+      "Case Studies.",
+      "Client Testimonials.",
+      "Where We Serve.",
+      "Areas We Cover.",
+      "Start a Conversation."
+    ],
+    "notes": [
+      "has an iframe (Google Map embed)"
+    ],
+    "og": ""
+  },
+  {
+    "label": "About",
+    "name": "about",
+    "slug": "/about/",
+    "title": "About Carter Electrical Contracting | NICEIC-Approved Chester Electricians Since 2019",
+    "desc": "About Carter Electrical Contracting. NICEIC-approved electrical contractor based in Christleton, Chester, delivering in-house commercial, industrial and domestic works.",
+    "h1": "About Carter Electrical.",
+    "sections": [
+      "Our Story.",
+      "EV Charging & Renewables.",
+      "Fully accredited.Documented at handover.",
+      "How we run jobs."
+    ],
+    "notes": [],
+    "og": ""
+  },
+  {
+    "label": "Services",
+    "name": "services",
+    "slug": "/services/",
+    "title": "Electrical Services | Commercial, Industrial, Domestic, EICR, EV | Carter Electrical Contracting",
+    "desc": "Comprehensive electrical services from an NICEIC-approved contractor across Chester, Cheshire, North Wales and Wirral: commercial, industrial, domestic, EICRs and EV chargers.",
+    "h1": "One contractor.The full electrical scope.",
+    "sections": [
+      "Commercial Electrical Services",
+      "Industrial Electrical Services",
+      "Domestic Electrical Services",
+      "Testing & Inspection",
+      "Renewables & EV",
+      "Not sure which serviceyou need?"
+    ],
+    "notes": [],
+    "og": ""
+  },
+  {
+    "label": "Commercial",
+    "name": "commercial",
+    "slug": "/commercial/",
+    "title": "Commercial Electricians | Fit-outs, EICR, Fire Alarm | Carter Electrical Contracting",
+    "desc": "Commercial electricians providing NICEIC-approved electrical design, office and hospitality fit-outs, BS 5266 emergency lighting, fire alarms and EICR compliance.",
+    "h1": "Commercial ElectriciansNICEIC Approved Contractors.",
+    "sections": [
+      "Commercial electrical services you can trust.",
+      "Minimising downtime. Maximising safety.",
+      "A five-step processyou can brief your board on.",
+      "Recentcommercial work.",
+      "Common commercial questions.",
+      "Got a commercial projectto deliver?"
+    ],
+    "notes": [],
+    "og": ""
+  },
+  {
+    "label": "Industrial",
+    "name": "industrial",
+    "slug": "/industrial/",
+    "title": "Industrial Electricians | 3-Phase, PLC, Factory Maintenance | Carter Electrical Contracting",
+    "desc": "Industrial electricians providing NICEIC-approved three-phase power distribution networks, factory automation wiring, control panel design, machinery installs and PPM.",
+    "h1": "Industrial ElectriciansPower & Automation Engineering.",
+    "sections": [
+      "Industrial electrical services plant managers trust.",
+      "Built for continuous operation.",
+      "Our industrial delivery process.",
+      "Industrial installations.",
+      "Common industrial questions.",
+      "Got an industrial electrical scope to deliver?"
+    ],
+    "notes": [],
+    "og": ""
+  },
+  {
+    "label": "Domestic",
+    "name": "domestic",
+    "slug": "/domestic/",
+    "title": "Domestic Electricians | Rewires, Consumer Units, EV | Carter Electrical Contracting",
+    "desc": "Domestic electricians providing NICEIC-approved house rewires, RCD consumer unit upgrades, OZEV home EV chargers, smart home lighting and Part P building compliance.",
+    "h1": "Domestic ElectriciansSafe & Certified Home Wiring.",
+    "sections": [
+      "Domestic electrical services you can rely on.",
+      "Safe wiring. Clean homes.",
+      "Our household delivery process.",
+      "Residential installations.",
+      "Common domestic questions.",
+      "Need a trusted domestic electrician?"
+    ],
+    "notes": [],
+    "og": ""
+  },
+  {
+    "label": "Areas We Cover",
+    "name": "areas",
+    "slug": "/areas/",
+    "title": "Areas We Cover | Carter Electrical Contracting",
+    "desc": "Areas covered by Carter Electrical Contracting. NICEIC electricians serving Chester, Cheshire West, Wirral, Wrexham, Deeside, Mold, Northwich, Frodsham and Tarporley.",
+    "h1": "Regional coverageyou can rely on.",
+    "sections": [],
+    "notes": [],
+    "og": ""
+  },
+  {
+    "label": "Electricians Ellesmere Port",
+    "name": "electricians-ellesmere-port",
+    "slug": "/electricians-ellesmere-port/",
+    "title": "Electricians Ellesmere Port | NICEIC-Approved | Carter Electrical Contracting",
+    "desc": "NICEIC-approved electricians in Ellesmere Port (CH65, CH66). Industrial three-phase, retail fit-outs, domestic rewires, and OZEV EV chargers. Get a free quote.",
+    "h1": "Electricians Ellesmere Port - NICEIC-approved.",
+    "sections": [
+      "NICEIC-approved electrical contractor serving Ellesmere Port.",
+      "Commercial Standards & Safety First.",
+      "Our electrical services.",
+      "Where We Serve.",
+      "Sub-areas & postcodes covered.",
+      "Testimonials.",
+      "Frequently asked questions.",
+      "Nearby coverage.",
+      "Need an electrician in Ellesmere Port?Get in touch today."
+    ],
+    "notes": [
+      "has an iframe (Google Map embed)",
+      "has FAQ accordion"
+    ],
+    "og": ""
+  },
+  {
+    "label": "Electricians Wrexham",
+    "name": "electricians-wrexham",
+    "slug": "/electricians-wrexham/",
+    "title": "Electricians Wrexham | NICEIC-Approved | Carter Electrical Contracting",
+    "desc": "NICEIC-approved electricians in Wrexham (LL11–LL14). Industrial three-phase, commercial fit-outs, full rewires, and OZEV EV chargers. Contact us today.",
+    "h1": "Electricians Wrexham - NICEIC-approved.",
+    "sections": [
+      "NICEIC-approved electrical contractor serving Wrexham.",
+      "Testimonials.",
+      "Our electrical services.",
+      "Where We Serve.",
+      "Sub-areas & postcodes covered.",
+      "Frequently asked questions.",
+      "Nearby coverage.",
+      "Need an electrician in Wrexham?Get in touch today."
+    ],
+    "notes": [
+      "has an iframe (Google Map embed)",
+      "has FAQ accordion"
+    ],
+    "og": ""
+  },
+  {
+    "label": "Electricians Northwich",
+    "name": "electricians-northwich",
+    "slug": "/electricians-northwich/",
+    "title": "Electricians Northwich | NICEIC-Approved | Carter Electrical Contracting",
+    "desc": "NICEIC-approved electricians in Northwich (CW8, CW9). Industrial maintenance, retail fit-outs, full rewires, consumer units, and EV chargers. Request a quote.",
+    "h1": "Electricians Northwich - NICEIC-approved.",
+    "sections": [
+      "NICEIC-approved electrical contractor serving Northwich.",
+      "Testimonials.",
+      "Our electrical services.",
+      "Where We Serve.",
+      "Sub-areas & postcodes covered.",
+      "Frequently asked questions.",
+      "Nearby coverage.",
+      "Need an electrician in Northwich?Get in touch today."
+    ],
+    "notes": [
+      "has an iframe (Google Map embed)",
+      "has FAQ accordion"
+    ],
+    "og": ""
+  },
+  {
+    "label": "Electricians Frodsham",
+    "name": "electricians-frodsham",
+    "slug": "/electricians-frodsham/",
+    "title": "Electricians Frodsham | NICEIC-Approved | Carter Electrical Contracting",
+    "desc": "NICEIC-approved electricians in Frodsham (WA6). Commercial fit-outs, landlord EICRs, full rewires, and OZEV EV chargers. Contact us for a free quote.",
+    "h1": "Electricians Frodsham - NICEIC-approved.",
+    "sections": [
+      "NICEIC-approved electrical contractor serving Frodsham.",
+      "Our electrical services.",
+      "Sub-areas & postcodes covered.",
+      "Testimonials.",
+      "Where We Serve.",
+      "Frequently asked questions.",
+      "Nearby coverage.",
+      "Need an electrician in Frodsham?Get in touch today."
+    ],
+    "notes": [
+      "has an iframe (Google Map embed)",
+      "has FAQ accordion"
+    ],
+    "og": ""
+  },
+  {
+    "label": "Electricians Tarporley",
+    "name": "electricians-tarporley",
+    "slug": "/electricians-tarporley/",
+    "title": "Electricians Tarporley | NICEIC-Approved | Carter Electrical Contracting",
+    "desc": "NICEIC-approved electricians in Tarporley (CW6). Period property rewires, EV chargers, agricultural electrics, and RCD consumer unit upgrades. Get a free quote.",
+    "h1": "Electricians Tarporley - NICEIC-approved.",
+    "sections": [
+      "NICEIC-approved electrical contractor serving Tarporley.",
+      "Our electrical services.",
+      "Sub-areas & postcodes covered.",
+      "Testimonials.",
+      "Where We Serve.",
+      "Frequently asked questions.",
+      "Nearby coverage.",
+      "Need an electrician in Tarporley?Get in touch today."
+    ],
+    "notes": [
+      "has an iframe (Google Map embed)",
+      "has FAQ accordion"
+    ],
+    "og": ""
+  },
+  {
+    "label": "Electricians Mold",
+    "name": "electricians-mold",
+    "slug": "/electricians-mold/",
+    "title": "Electricians Mold | NICEIC-Approved | Carter Electrical Contracting",
+    "desc": "NICEIC-approved electricians in Mold (CH7). Commercial fit-outs, agricultural three-phase, outbuilding supplies, rewires, and EV chargers. Get a quote.",
+    "h1": "Electricians Mold - NICEIC-approved.",
+    "sections": [
+      "NICEIC-approved electrical contractor serving Mold.",
+      "Testimonials.",
+      "Our electrical services.",
+      "Where We Serve.",
+      "Sub-areas & postcodes covered.",
+      "Frequently asked questions.",
+      "Nearby coverage.",
+      "Need an electrician in Mold?Get in touch today."
+    ],
+    "notes": [
+      "has an iframe (Google Map embed)",
+      "has FAQ accordion"
+    ],
+    "og": ""
+  },
+  {
+    "label": "Electricians Deeside",
+    "name": "electricians-deeside",
+    "slug": "/electricians-deeside/",
+    "title": "Electricians Deeside | NICEIC-Approved | Carter Electrical Contracting",
+    "desc": "NICEIC-approved electricians in Deeside (CH5). Industrial three-phase, factory shutdowns, commercial fit-outs, full rewires, and EV chargers. Contact us.",
+    "h1": "Electricians Deeside - NICEIC-approved.",
+    "sections": [
+      "NICEIC-approved electrical contractor serving Deeside.",
+      "Commercial Standards & Safety First.",
+      "Our electrical services.",
+      "Where We Serve.",
+      "Sub-areas & postcodes covered.",
+      "Testimonials.",
+      "Frequently asked questions.",
+      "Nearby coverage.",
+      "Need an electrician in Deeside?Get in touch today."
+    ],
+    "notes": [
+      "has an iframe (Google Map embed)",
+      "has FAQ accordion"
+    ],
+    "og": ""
+  },
+  {
+    "label": "Electricians Wirral",
+    "name": "electricians-wirral",
+    "slug": "/electricians-wirral/",
+    "title": "Electricians Wirral | NICEIC-Approved | Carter Electrical Contracting",
+    "desc": "NICEIC-approved electricians in Wirral (CH41–CH49, CH60–CH64). Commercial fit-outs, industrial three-phase, EICRs & EV chargers. Contact us for a quote.",
+    "h1": "Electricians Wirral - NICEIC-approved.",
+    "sections": [
+      "NICEIC-approved electrical contractor serving Wirral.",
+      "Testimonials.",
+      "Our electrical services.",
+      "Where We Serve.",
+      "Sub-areas & postcodes covered.",
+      "Frequently asked questions.",
+      "Nearby coverage.",
+      "Need an electrician in Wirral?Get in touch today."
+    ],
+    "notes": [
+      "has an iframe (Google Map embed)",
+      "has FAQ accordion"
+    ],
+    "og": ""
+  },
+  {
+    "label": "Case Studies",
+    "name": "case-studies",
+    "slug": "/case-studies/",
+    "title": "Case Studies | Carter Electrical Contracting",
+    "desc": "Explore recent electrical case studies from Carter Electrical Contracting, including commercial bar fit-outs, industrial distribution upgrades and period rewires.",
+    "h1": "Case Studies.",
+    "sections": [],
+    "notes": [],
+    "og": ""
+  },
+  {
+    "label": "Case Study: Old Dukes",
+    "name": "case-old-dukes",
+    "slug": "/case-studies/old-dukes/",
+    "title": "Old Dukes - Case Study | Carter Electrical Contracting",
+    "desc": "Case study detailing our commercial electrical design and two-floor conversion for Old Dukes sports bar in Chester City Centre, delivered ahead of opening week.",
+    "h1": "Old Dukes",
+    "sections": [
+      "Running a fit-out?Bring us in at scoping."
+    ],
+    "notes": [],
+    "og": "https://carterelec.co.uk/uploads/dukes-1.jpg"
+  },
+  {
+    "label": "Case Study: Carbonara No 49",
+    "name": "case-carbonara-no-49",
+    "slug": "/case-studies/carbonara-no-49/",
+    "title": "Carbonara No.49 - Case Study | Carter Electrical Contracting",
+    "desc": "Case study covering our commercial restaurant electrical fit-out for Carbonara No.49 in Chester, including kitchen power distribution and dimmable lighting.",
+    "h1": "Carbonara No.49",
+    "sections": [
+      "Running a fit-out?Bring us in at scoping."
+    ],
+    "notes": [],
+    "og": "https://carterelec.co.uk/uploads/carbonara-1-scaled.jpg"
+  },
+  {
+    "label": "Case Study: Bryn Rhiw",
+    "name": "case-bryn-rhiw",
+    "slug": "/case-studies/bryn-rhiw/",
+    "title": "Bryn Rhiw, Lixwm - Case Study | Carter Electrical Contracting",
+    "desc": "Case study featuring a full domestic electrical upgrade at Bryn Rhiw in Lixwm, including full property rewire, outbuilding power runs and heat pump supply.",
+    "h1": "Bryn Rhiw",
+    "sections": [
+      "Running a fit-out?Bring us in at scoping."
+    ],
+    "notes": [],
+    "og": "https://carterelec.co.uk/uploads/bryn-1.jpg"
+  },
+  {
+    "label": "Case Study: Prenton, Wirral",
+    "name": "case-prenton-wirral",
+    "slug": "/case-studies/prenton-wirral/",
+    "title": "Prenton, Wirral - Case Study | Carter Electrical Contracting",
+    "desc": "Case study of a commercial mains distribution upgrade and 3-phase board installation executed in Prenton, Wirral following an EICR electrical inspection.",
+    "h1": "Prenton, Wirral",
+    "sections": [
+      "Running a fit-out?Bring us in at scoping."
+    ],
+    "notes": [],
+    "og": "https://carterelec.co.uk/uploads/prenton-wirral-1-EC916E4A923A40A2BF11CD68ACC35C5B.jpg"
+  },
+  {
+    "label": "Contact",
+    "name": "contact",
+    "slug": "/contact/",
+    "title": "Contact | Carter Electrical Contracting",
+    "desc": "Contact Carter Electrical Contracting in Christleton, Chester for fixed-price quotes, site surveys and project enquiries. Call 01244 727291 or message our team.",
+    "h1": "Tell usabout your project.",
+    "sections": [],
+    "notes": [
+      "has an iframe (Google Map embed)"
+    ],
+    "og": ""
+  },
+  {
+    "label": "Thank You",
+    "name": "thank-you",
+    "slug": "/thank-you/",
+    "title": "Thank You | Carter Electrical Contracting",
+    "desc": "Thank you for contacting Carter Electrical Contracting. Your enquiry has been received and our team will be in touch within 48 hours to discuss your project.",
+    "h1": "Thank You.",
+    "sections": [],
+    "notes": [],
+    "og": ""
+  },
+  {
+    "label": "Blog",
+    "name": "blog",
+    "slug": "/blog/",
+    "title": "Blog | Carter Electrical Contracting",
+    "desc": "Read the latest news, insights, and electrical safety advice from Carter Electrical Contracting.",
+    "h1": "Industry news &safety advice.",
+    "sections": [],
+    "notes": [],
+    "og": ""
+  },
+  {
+    "label": "Blog: The Importance of EICR Testing",
+    "name": "blog-the-importance-of-eicr-testing",
+    "slug": "/blog/the-importance-of-eicr-testing/",
+    "title": "The Importance of EICR Testing for Commercial Properties | Carter Electrical Contracting",
+    "desc": "Understanding the legal requirements and safety benefits of regular Electrical Installation Condition Reports (EICR) for businesses.",
+    "h1": "The Importance of EICR Testing for Commercial Properties",
+    "sections": [
+      "What is an EICR?",
+      "Benefits of Regular Testing",
+      "What Does an Inspection Involve?"
+    ],
+    "notes": [],
+    "og": "https://carterelec.co.uk/uploads/blog-placeholder.png"
+  },
+  {
+    "label": "Privacy Policy",
+    "name": "privacy-policy",
+    "slug": "/privacy-policy/",
+    "title": "Privacy Policy | Carter Electrical Contracting",
+    "desc": "Privacy Policy for Carter Electrical Contracting. Outlining how we collect, process and protect your data in compliance with UK GDPR and Data Protection Act 2018.",
+    "h1": "Privacy Policyyour data protection guaranteed.",
+    "sections": [
+      "1. Introduction",
+      "2. Information We Collect",
+      "3. How We Use Your Information",
+      "4. How We Secure Your Data",
+      "5. Your Rights",
+      "6. Cookies"
+    ],
+    "notes": [],
+    "og": ""
+  },
+  {
+    "label": "Terms of Use",
+    "name": "terms",
+    "slug": "/terms/",
+    "title": "Terms of Use | Carter Electrical Contracting",
+    "desc": "Terms of Use for Carter Electrical Contracting. Detailing website terms, service conditions, intellectual property rights and liability limits.",
+    "h1": "Terms of Usewebsite usage guidelines.",
+    "sections": [
+      "1. Agreement to Terms",
+      "2. Intellectual Property Rights",
+      "3. Acceptable Use",
+      "4. Disclaimer of Warranties",
+      "5. Limitation of Liability",
+      "6. Governing Law"
+    ],
+    "notes": [],
+    "og": ""
+  },
+  {
+    "label": "HTML Sitemap",
+    "name": "sitemap",
+    "slug": "/sitemap/",
+    "title": "Sitemap | Carter Electrical Contracting",
+    "desc": "Website sitemap for Carter Electrical Contracting. Access our commercial, industrial, domestic, renewable energy, case study and local service area pages.",
+    "h1": "HTML Sitemapexplore all pages on our site.",
+    "sections": [],
+    "notes": [],
+    "og": ""
+  }
+]

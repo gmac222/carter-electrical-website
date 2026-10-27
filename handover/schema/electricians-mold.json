@@ -1,0 +1,229 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://carterelec.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Areas We Cover",
+          "item": "https://carterelec.co.uk/areas.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Electricians in Mold",
+          "item": "https://carterelec.co.uk/electricians-mold.html"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "LocalBusiness",
+        "Electrician"
+      ],
+      "@id": "https://carterelec.co.uk/#business",
+      "name": "Carter Electrical Contracting",
+      "legalName": "Carter Electrical Contracting",
+      "url": "https://carterelec.co.uk/",
+      "logo": "https://carterelec.co.uk/uploads/logo-original.png",
+      "image": "https://carterelec.co.uk/electricians-chester.jpg",
+      "telephone": "01244 727291",
+      "email": "ian@carterelec.co.uk",
+      "priceRange": "££",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Unit 5, White Lane Depot, White Lane, Christleton",
+        "addressLocality": "Chester",
+        "postalCode": "CH3 6AH",
+        "addressRegion": "Cheshire",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 53.1836,
+        "longitude": -2.8377
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "07:30",
+          "closes": "17:30"
+        }
+      ],
+      "sameAs": [
+        "https://facebook.com/carter.electrical.chester"
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "NICEIC Approved Contractor"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "OZEV-approved EV installer"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://carterelec.co.uk/electricians-mold.html#service",
+      "name": "Electricians in Mold",
+      "serviceType": "Electrician",
+      "url": "https://carterelec.co.uk/electricians-mold.html",
+      "provider": {
+        "@id": "https://carterelec.co.uk/#business"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Mold"
+        },
+        {
+          "@type": "Place",
+          "name": "Buckley, Mold"
+        },
+        {
+          "@type": "Place",
+          "name": "New Brighton, Mold"
+        },
+        {
+          "@type": "Place",
+          "name": "Gwernaffield, Mold"
+        },
+        {
+          "@type": "Place",
+          "name": "Gwernymynydd, Mold"
+        },
+        {
+          "@type": "Place",
+          "name": "Leeswood, Mold"
+        },
+        {
+          "@type": "Place",
+          "name": "Nercwys, Mold"
+        },
+        {
+          "@type": "Place",
+          "name": "Pontblyddyn, Mold"
+        },
+        {
+          "@type": "Place",
+          "name": "Sychdyn, Mold"
+        },
+        {
+          "@type": "Place",
+          "name": "Alltami, Mold"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Electrical services in Mold",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Commercial electrical services in Mold"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Industrial electrical services in Mold"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Domestic electrical services in Mold"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "EICR testing and inspection in Mold"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "OZEV-approved EV charger installation in Mold"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is an EICR safety inspection mandatory before selling a property in Mold?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "While not legally mandatory for private home sellers, mortgage lenders and conveyancing solicitors in Flintshire increasingly request an up-to-date EICR. Having a satisfactory report avoids conveyancing delays and prevents buyers from negotiating price reductions due to outdated wiring."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the main warning signs that a property in Mold requires a consumer unit upgrade?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Key indicators include old rewireable fuse boxes with cast-iron or wooden backings, lack of residual current device (RCD) protection, flickering lights, or scorched socket outlets. Upgrading to a modern metal RCBO board with Surge Protection (SPD) ensures full BS 7671 safety compliance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What electrical regulations apply to private landlords in Flintshire under Welsh law?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Under the Renting Homes (Wales) Act and electrical safety regulations, landlords must ensure fixed wiring is inspected at least every 5 years, accompanied by an EICR certificate. Landlords must also ensure working smoke and carbon monoxide alarms are hardwired on every floor."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can Carter Electrical carry out commercial retail fit-outs on Mold High Street?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We work with local retailers, cafes, and offices in Mold town centre and surrounding commercial parks. We design energy-efficient LED lighting schemes, install emergency lighting to BS 5266, and perform commercial power distribution fit-outs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I know if my electrician in CH7 is fully registered and accredited?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can verify registration on the Registered Competent Person Electrical register. Carter Electrical is a fully NICEIC-approved contractor. All our work is self-certified with Building Control and backed by the NICEIC Platinum Promise warranty."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which villages surrounding Mold do your domestic electricians cover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We cover Mold (CH7) and surrounding areas including Gwernymynydd, Sychdyn, Mynydd Isa, Buckley, New Brighton, Loggerheads, and Llanferres."
+          }
+        }
+      ]
+    }
+  ]
+}

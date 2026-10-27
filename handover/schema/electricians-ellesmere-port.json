@@ -1,0 +1,225 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://carterelec.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Areas We Cover",
+          "item": "https://carterelec.co.uk/areas.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Electricians in Ellesmere Port",
+          "item": "https://carterelec.co.uk/electricians-ellesmere-port.html"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "LocalBusiness",
+        "Electrician"
+      ],
+      "@id": "https://carterelec.co.uk/#business",
+      "name": "Carter Electrical Contracting",
+      "legalName": "Carter Electrical Contracting",
+      "url": "https://carterelec.co.uk/",
+      "logo": "https://carterelec.co.uk/uploads/logo-original.png",
+      "image": "https://carterelec.co.uk/electricians-chester.jpg",
+      "telephone": "01244 727291",
+      "email": "ian@carterelec.co.uk",
+      "priceRange": "££",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Unit 5, White Lane Depot, White Lane, Christleton",
+        "addressLocality": "Chester",
+        "postalCode": "CH3 6AH",
+        "addressRegion": "Cheshire",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 53.1836,
+        "longitude": -2.8377
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "07:30",
+          "closes": "17:30"
+        }
+      ],
+      "sameAs": [
+        "https://facebook.com/carter.electrical.chester"
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "NICEIC Approved Contractor"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "OZEV-approved EV installer"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://carterelec.co.uk/electricians-ellesmere-port.html#service",
+      "name": "Electricians in Ellesmere Port",
+      "serviceType": "Electrician",
+      "url": "https://carterelec.co.uk/electricians-ellesmere-port.html",
+      "provider": {
+        "@id": "https://carterelec.co.uk/#business"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Ellesmere Port"
+        },
+        {
+          "@type": "Place",
+          "name": "Little Sutton, Ellesmere Port"
+        },
+        {
+          "@type": "Place",
+          "name": "Whitby, Ellesmere Port"
+        },
+        {
+          "@type": "Place",
+          "name": "Great Sutton, Ellesmere Port"
+        },
+        {
+          "@type": "Place",
+          "name": "Hooton, Ellesmere Port"
+        },
+        {
+          "@type": "Place",
+          "name": "Overpool, Ellesmere Port"
+        },
+        {
+          "@type": "Place",
+          "name": "Rivacre, Ellesmere Port"
+        },
+        {
+          "@type": "Place",
+          "name": "Strawberry, Ellesmere Port"
+        },
+        {
+          "@type": "Place",
+          "name": "Wolverham, Ellesmere Port"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Electrical services in Ellesmere Port",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Commercial electrical services in Ellesmere Port"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Industrial electrical services in Ellesmere Port"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Domestic electrical services in Ellesmere Port"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "EICR testing and inspection in Ellesmere Port"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "OZEV-approved EV charger installation in Ellesmere Port"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I choose a qualified commercial electrician in Ellesmere Port?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Look for NICEIC Approved Contractor status rather than basic domestic registration. Carter Electrical is fully NICEIC-approved, delivering compliant services for retail units at Cheshire Oaks, town centre offices, and industrial hubs along the M53 corridor."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you provide out-of-hours commercial electrical work around Cheshire Oaks?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We routinely carry out commercial shop fit-outs, display lighting installations, and emergency lighting testing (BS 5266) outside trading hours to ensure retail and hospitality businesses in CH65 suffer zero customer disruption."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is covered during a domestic electrical inspection in CH65 and CH66?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An EICR tests circuit insulation resistance, earth fault loop impedance, earthing bond adequacy, and RCD trip speeds across all fixed wiring. It identifies hidden hazards, degraded insulation, or overloaded circuits in residential properties."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often should landlords in Ellesmere Port order an EICR certificate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Private landlords must obtain a valid EICR at least every 5 years or before a new tenant moves in. We conduct fast inspections across Great Sutton, Little Sutton, and Whitby, supplying digital certificates within 48 hours."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you install workplace EV charging stations for corporate car parks in Ellesmere Port?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. As OZEV-approved installers, we engineer commercial EV charging hubs with multi-charger dynamic load balancing, payment integration options, and full DNO grid notification to SP Energy Networks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which local postcodes and villages do your engineers cover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We serve all CH65 and CH66 postcodes, including Great Sutton, Little Sutton, Whitby, Wolverham, Overpool, Hooton, Ledsham, and Capenhurst."
+          }
+        }
+      ]
+    }
+  ]
+}

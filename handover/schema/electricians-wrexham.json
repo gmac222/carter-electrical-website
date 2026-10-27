@@ -1,0 +1,237 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://carterelec.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Areas We Cover",
+          "item": "https://carterelec.co.uk/areas.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Electricians in Wrexham",
+          "item": "https://carterelec.co.uk/electricians-wrexham.html"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "LocalBusiness",
+        "Electrician"
+      ],
+      "@id": "https://carterelec.co.uk/#business",
+      "name": "Carter Electrical Contracting",
+      "legalName": "Carter Electrical Contracting",
+      "url": "https://carterelec.co.uk/",
+      "logo": "https://carterelec.co.uk/uploads/logo-original.png",
+      "image": "https://carterelec.co.uk/electricians-chester.jpg",
+      "telephone": "01244 727291",
+      "email": "ian@carterelec.co.uk",
+      "priceRange": "££",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Unit 5, White Lane Depot, White Lane, Christleton",
+        "addressLocality": "Chester",
+        "postalCode": "CH3 6AH",
+        "addressRegion": "Cheshire",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 53.1836,
+        "longitude": -2.8377
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "07:30",
+          "closes": "17:30"
+        }
+      ],
+      "sameAs": [
+        "https://facebook.com/carter.electrical.chester"
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "NICEIC Approved Contractor"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "OZEV-approved EV installer"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://carterelec.co.uk/electricians-wrexham.html#service",
+      "name": "Electricians in Wrexham",
+      "serviceType": "Electrician",
+      "url": "https://carterelec.co.uk/electricians-wrexham.html",
+      "provider": {
+        "@id": "https://carterelec.co.uk/#business"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Wrexham"
+        },
+        {
+          "@type": "Place",
+          "name": "Acton, Wrexham"
+        },
+        {
+          "@type": "Place",
+          "name": "Rhosddu, Wrexham"
+        },
+        {
+          "@type": "Place",
+          "name": "Rossett, Wrexham"
+        },
+        {
+          "@type": "Place",
+          "name": "Marford, Wrexham"
+        },
+        {
+          "@type": "Place",
+          "name": "Gwersyllt, Wrexham"
+        },
+        {
+          "@type": "Place",
+          "name": "Rhosllanerchrugog, Wrexham"
+        },
+        {
+          "@type": "Place",
+          "name": "Ruabon, Wrexham"
+        },
+        {
+          "@type": "Place",
+          "name": "Gresford, Wrexham"
+        },
+        {
+          "@type": "Place",
+          "name": "Coedpoeth, Wrexham"
+        },
+        {
+          "@type": "Place",
+          "name": "Borras, Wrexham"
+        },
+        {
+          "@type": "Place",
+          "name": "Hightown, Wrexham"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Electrical services in Wrexham",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Commercial electrical services in Wrexham"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Industrial electrical services in Wrexham"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Domestic electrical services in Wrexham"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "EICR testing and inspection in Wrexham"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "OZEV-approved EV charger installation in Wrexham"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are the electrical inspection duties for landlords under the Renting Homes (Wales) Act in Wrexham?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Landlords in Wrexham must ensure their rental properties pass an EICR test every 5 years. In addition, Welsh legislation requires mains-powered, interconnected smoke and heat alarms on each floor, alongside annual safety checks for all electrical accessories."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does three-phase electrical maintenance work for industrial units on Wrexham Industrial Estate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Industrial facilities require tailored maintenance routines to protect machinery and workforce safety. We provide thermal imaging inspections, sub-distribution board upgrades, motor control wiring, and periodic 3-year commercial EICR testing with minimal operational disturbance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is involved in a full domestic property rewire in Wrexham?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A full rewire replaces all hidden electrical cables, backboxes, socket outlets, switches, and the central consumer unit. Completed in two stages (first fix cabling and second fix accessory fitting), rewires bring older housing stock in Acton, Rhosddu, or Borras up to current BS 7671 standards."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need an RCD or RCBO consumer unit for an EV charger installation in Wrexham?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Modern smart EV wallboxes require individual Type A or Type B RCD protection alongside Surge Protection Devices (SPD). Our engineers assess your current fuse box capacity and install dedicated sub-boards if necessary to meet IET Wiring Regulations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should I do if an EICR report shows C2 defects on my Wrexham property?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "C2 indicates a potential danger requiring urgent attention. Property owners and landlords must instruct remedial repairs within 28 days. Once remedied, we issue a clear Electrical Installation Certificate confirming the installation is safe and compliant."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which neighbourhoods and postcodes do you serve across Wrexham?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We cover LL11, LL12, LL13, and LL14 postcodes, including Wrexham town centre, Acton, Borras, Rhosddu, Rossett, Marford, Gwersyllt, Rhosllanerchrugog, Ruabon, Gresford, and Coedpoeth."
+          }
+        }
+      ]
+    }
+  ]
+}
