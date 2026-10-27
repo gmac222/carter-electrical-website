@@ -334,7 +334,7 @@ window.Footer = function Footer() {
     }
   }, "Closed")))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h4", null, "Contact"), /*#__PURE__*/React.createElement("address", {
     className: "footer-address"
-  }, CARTER.company.address.map((l, i) => /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("div", null, CARTER.company.name), CARTER.company.address.map((l, i) => /*#__PURE__*/React.createElement("div", {
     key: i
   }, l)), /*#__PURE__*/React.createElement("div", {
     style: {
@@ -346,7 +346,7 @@ window.Footer = function Footer() {
     href: `mailto:${CARTER.company.email}`
   }, CARTER.company.email))))), /*#__PURE__*/React.createElement("div", {
     className: "footer-bottom"
-  }, /*#__PURE__*/React.createElement("div", null, "\xA9 ", new Date().getFullYear(), " Carter Electrical Contracting Ltd"), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("div", null, "\xA9 ", new Date().getFullYear(), " Carter Electrical Contracting"), /*#__PURE__*/React.createElement("div", {
     className: "footer-bottom-links",
     style: {
       display: 'flex',

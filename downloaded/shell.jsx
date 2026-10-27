@@ -141,7 +141,7 @@ window.Footer = function Footer() {
           </div>
         </div>
         <div className="footer-bottom">
-          <div>© {new Date().getFullYear()} Carter Electrical Contracting Ltd</div>
+          <div>© {new Date().getFullYear()} Carter Electrical Contracting</div>
           <div>carterelec.co.uk</div>
         </div>
       </div>

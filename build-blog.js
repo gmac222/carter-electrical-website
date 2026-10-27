@@ -53,25 +53,55 @@ function generateArticleHtml(post) {
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "${jsonSafe(title)}",
-    "image": [
-      "${SITE_URL}${image || '/uploads/blog-placeholder.png'}"
-    ],
-    "datePublished": "${date}",
-    "author": [{
-        "@type": "Organization",
-        "name": "${jsonSafe(author || 'Carter Electrical Contracting')}"
-    }],
-    "publisher": {
-      "@type": "Organization",
-      "name": "Carter Electrical Contracting",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "${SITE_URL}/uploads/logo-original.png"
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "${jsonSafe(title)}",
+        "image": [
+          "${SITE_URL}${image || '/uploads/blog-placeholder.png'}"
+        ],
+        "datePublished": "${date}",
+        "author": [{
+            "@type": "Organization",
+            "name": "${jsonSafe(author || 'Carter Electrical Contracting')}"
+        }],
+        "publisher": {
+          "@id": "${SITE_URL}/#business"
+        },
+        "description": "${jsonSafe(excerpt)}"
+      },
+      {
+        "@type": ["Organization", "LocalBusiness", "Electrician"],
+        "@id": "${SITE_URL}/#business",
+        "name": "Carter Electrical Contracting",
+        "legalName": "Carter Electrical Contracting",
+        "alternateName": "Carter Elec",
+        "url": "${SITE_URL}/",
+        "telephone": "01244 727291",
+        "contactPoint": { "@type": "ContactPoint", "telephone": "01244 738493", "contactType": "office" },
+        "email": "ian@carterelec.co.uk",
+        "priceRange": "££",
+        "foundingDate": "2019",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Unit 5, White Lane Depot, White Lane, Christleton",
+          "addressLocality": "Chester",
+          "postalCode": "CH3 6AH",
+          "addressRegion": "Cheshire",
+          "addressCountry": "GB"
+        },
+        "geo": { "@type": "GeoCoordinates", "latitude": 53.1836, "longitude": -2.8377 },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "07:30",
+            "closes": "17:30"
+          }
+        ],
+        "sameAs": ["https://facebook.com/carter.electrical.chester"]
       }
-    },
-    "description": "${jsonSafe(excerpt)}"
+    ]
   }
   </script>
 <!-- Google tag (gtag.js) -->
@@ -129,6 +159,55 @@ function generateBlogIndexHtml(posts) {
   <link rel="icon" type="image/png" sizes="192x192" href="/uploads/favicon-192x192.png"/>
   <link rel="apple-touch-icon" href="/uploads/apple-touch-icon.png"/>
   <link rel="stylesheet" href="/styles.css"/>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Blog",
+        "@id": "${canonicalUrl}#blog",
+        "url": "${canonicalUrl}",
+        "name": "Carter Electrical Contracting Blog",
+        "description": "Read the latest news, insights, and electrical safety advice from Carter Electrical Contracting.",
+        "publisher": {
+          "@id": "${SITE_URL}/#business"
+        }
+      },
+      {
+        "@type": ["Organization", "LocalBusiness", "Electrician"],
+        "@id": "${SITE_URL}/#business",
+        "name": "Carter Electrical Contracting",
+        "legalName": "Carter Electrical Contracting",
+        "alternateName": "Carter Elec",
+        "url": "${SITE_URL}/",
+        "telephone": "01244 727291",
+        "contactPoint": { "@type": "ContactPoint", "telephone": "01244 738493", "contactType": "office" },
+        "email": "ian@carterelec.co.uk",
+        "priceRange": "££",
+        "foundingDate": "2019",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Unit 5, White Lane Depot, White Lane, Christleton",
+          "addressLocality": "Chester",
+          "postalCode": "CH3 6AH",
+          "addressRegion": "Cheshire",
+          "addressCountry": "GB"
+        },
+        "geo": { "@type": "GeoCoordinates", "latitude": 53.1836, "longitude": -2.8377 },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "07:30",
+            "closes": "17:30"
+          }
+        ],
+        "sameAs": ["https://facebook.com/carter.electrical.chester"]
+      }
+    ]
+  }
+  </script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18182294304"></script>
 <script>

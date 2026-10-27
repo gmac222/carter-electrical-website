@@ -202,6 +202,7 @@ window.Footer = function Footer() {
           <div>
             <h4>Contact</h4>
             <address className="footer-address">
+              <div>{CARTER.company.name}</div>
               {CARTER.company.address.map((l, i) => <div key={i}>{l}</div>)}
               <div style={{ marginTop: 14 }}>
                 <a href={CARTER.company.phoneHref}>{CARTER.company.phone}</a>
@@ -211,7 +212,7 @@ window.Footer = function Footer() {
           </div>
         </div>
         <div className="footer-bottom">
-          <div>© {new Date().getFullYear()} Carter Electrical Contracting Ltd</div>
+          <div>© {new Date().getFullYear()} Carter Electrical Contracting</div>
           <div className="footer-bottom-links" style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
             <a href="/sitemap.html" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none', transition: 'color .15s ease' }} onMouseEnter={e => e.target.style.color = 'var(--accent)'} onMouseLeave={e => e.target.style.color = 'rgba(255,255,255,0.4)'}>Sitemap</a>
             <a href="/privacy-policy.html" rel="nofollow" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none', transition: 'color .15s ease' }} onMouseEnter={e => e.target.style.color = 'var(--accent)'} onMouseLeave={e => e.target.style.color = 'rgba(255,255,255,0.4)'}>Privacy Policy</a>

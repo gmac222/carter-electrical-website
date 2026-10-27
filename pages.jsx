@@ -339,7 +339,7 @@ function PrivacyPolicyPage() {
         sectionNum="05.1 / Policy"
         title="Privacy Policy"
         titleAccent={<>your data protection guaranteed<span className="dot-white">.</span></>}
-        subtext="This policy explains how Carter Electrical Contracting Ltd collects, uses, and safeguards your personal data when you interact with our website."
+        subtext="This policy explains how Carter Electrical Contracting collects, uses, and safeguards your personal data when you interact with our website."
       />
 
       <section className="section-y light reveal">
@@ -348,7 +348,7 @@ function PrivacyPolicyPage() {
             <div className="prose">
               <h2>1. Introduction</h2>
               <p>
-                Carter Electrical Contracting Ltd ("we", "us", or "our") is committed to protecting and respecting your privacy. We are fully compliant with the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018.
+                Carter Electrical Contracting ("we", "us", or "our") is committed to protecting and respecting your privacy. We are fully compliant with the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018.
               </p>
               <p>
                 Our registered address is Unit 5, White Lane Depot, White Lane, Christleton, Chester, CH3 6AH. For any data protection enquiries, you can contact us at <a href="mailto:ian@carterelec.co.uk">ian@carterelec.co.uk</a>.
@@ -436,7 +436,7 @@ function TermsOfUsePage() {
 
               <h2>2. Intellectual Property Rights</h2>
               <p>
-                Unless otherwise stated, Carter Electrical Contracting Ltd owns the intellectual property rights for all material on this website, including all photography, design layouts, graphics, logos, and written copy. All intellectual property rights are reserved.
+                Unless otherwise stated, Carter Electrical Contracting owns the intellectual property rights for all material on this website, including all photography, design layouts, graphics, logos, and written copy. All intellectual property rights are reserved.
               </p>
               <p>
                 You must not republish, sell, rent, sub-license, duplicate, or redistribute any content from this website without our prior written consent.
@@ -457,7 +457,7 @@ function TermsOfUsePage() {
 
               <h2>5. Limitation of Liability</h2>
               <p>
-                To the maximum extent permitted by UK law, Carter Electrical Contracting Ltd will not be liable for any direct, indirect, or consequential loss or damage arising under these terms or in connection with the use of our website.
+                To the maximum extent permitted by UK law, Carter Electrical Contracting will not be liable for any direct, indirect, or consequential loss or damage arising under these terms or in connection with the use of our website.
               </p>
 
               <h2>6. Governing Law</h2>

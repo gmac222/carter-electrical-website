@@ -418,7 +418,7 @@ function buildHtml(area) {
         '@type': ['LocalBusiness', 'Electrician'],
         '@id': url + '#business',
         name: COMPANY.name,
-        legalName: 'Carter Electrical Contracting Ltd',
+        legalName: 'Carter Electrical Contracting',
         url: url,
         telephone: COMPANY.phone,
         email: 'ian@carterelec.co.uk',
