@@ -6,7 +6,16 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { service, sector, scope, name, company, email, phone, postcode, timing, details } = req.body;
+    // Normalise the body: the WordPress (Breakdance) form webhook posts radio/checkbox
+    // fields as arrays, e.g. service[0]=Commercial. Flatten them to plain strings.
+    const raw = (req.body && typeof req.body === 'object') ? req.body : {};
+    const body = {};
+    for (const [rawKey, rawVal] of Object.entries(raw)) {
+      const key = rawKey.replace(/\[\d*\]$/, '');
+      const val = Array.isArray(rawVal) ? rawVal.filter(Boolean).join(', ') : (rawVal == null ? '' : String(rawVal));
+      body[key] = body[key] ? body[key] + ', ' + val : val;
+    }
+    const { service, sector, scope, name, company, email, phone, postcode, timing, details } = body;
 
     // 1. Send to Airtable
     if (process.env.AIRTABLE_BASE_ID && process.env.AIRTABLE_PAT && process.env.AIRTABLE_TABLE_ID) {
