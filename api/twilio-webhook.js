@@ -285,7 +285,7 @@ export default async function handler(req, res) {
       }
     }
 
-    const host = req.headers.host || 'carterelec.co.uk';
+    const host = req.headers.host || 'leads.carterelec.co.uk';
     const protocol = req.headers['x-forwarded-proto'] || 'https';
     const callbackUrl = `${protocol}://${host}/api/twilio-webhook?From=${encodeURIComponent(From || '')}&To=${encodeURIComponent(To || '')}`;
     const whisperUrl = `${protocol}://${host}/api/twilio-whisper`;
@@ -302,6 +302,6 @@ export default async function handler(req, res) {
     const forwardNumber = process.env.FORWARD_PHONE_NUMBER || '+447867807677';
     // Still return 200 and attempt to connect the call with whisper so we do not drop the caller
     res.setHeader('Content-Type', 'text/xml');
-    res.status(200).send(`<?xml version="1.0" encoding="UTF-8"?><Response><Dial><Number url="https://carterelec.co.uk/api/twilio-whisper">${forwardNumber}</Number></Dial></Response>`);
+    res.status(200).send(`<?xml version="1.0" encoding="UTF-8"?><Response><Dial><Number url="https://leads.carterelec.co.uk/api/twilio-whisper">${forwardNumber}</Number></Dial></Response>`);
   }
 }
