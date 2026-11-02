@@ -14,18 +14,31 @@ export default async function handler(req, res) {
   }
 
   try {
-    const response = await fetch(`https://api.airtable.com/v0/${process.env.AIRTABLE_BASE_ID}/${process.env.AIRTABLE_TABLE_ID}`, {
-      headers: {
-        'Authorization': `Bearer ${process.env.AIRTABLE_PAT}`
+    // Airtable returns at most 100 records per request, so follow the offset
+    // until every record has been fetched.
+    const records = [];
+    let offset;
+    do {
+      const url = new URL(`https://api.airtable.com/v0/${process.env.AIRTABLE_BASE_ID}/${process.env.AIRTABLE_TABLE_ID}`);
+      url.searchParams.set('pageSize', '100');
+      if (offset) url.searchParams.set('offset', offset);
+      const response = await fetch(url, {
+        headers: {
+          'Authorization': `Bearer ${process.env.AIRTABLE_PAT}`
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error(`Airtable error: ${response.status} ${response.statusText}`);
       }
-    });
 
-    if (!response.ok) {
-      throw new Error(`Airtable error: ${response.status} ${response.statusText}`);
-    }
+      const page = await response.json();
+      records.push(...(page.records || []));
+      offset = page.offset;
+    } while (offset);
 
-    const data = await response.json();
-    
+    const data = { records };
+
     const leads = data.records.map(record => {
       const notes = record.fields['Notes'] || '';
       const parsedFallback = {};
